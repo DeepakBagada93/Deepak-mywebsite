@@ -1,0 +1,101 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class PostSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $posts = [
+            [
+                'title' => 'Curro 1.0 Ships: An AI Content Studio That Writes Like Its Owner',
+                'slug' => 'curro-1-0-ai-content-studio',
+                'tag' => 'NEWS',
+                'excerpt' => 'Curro, the AI content-creation studio, launched this week. The pitch: hand it rough notes and get back posts that sound like you — because they were trained on you.',
+                'body' => "Curro, Deepak Bagada's AI content-creation studio, launched this week after a quiet year of building. The tool takes rough notes, recordings and prompts, and turns them into polished articles, scripts and social posts — in the writer's own voice.\n\nThe key idea is the voice model. Instead of generic 'professional' output, Curro learns from your past work: sentence rhythm, favourite phrases, where the humour goes. Early users report that drafts need roughly one edit pass instead of five.\n\n'Most AI writing tools make everyone sound like the same helpful robot,' Bagada said. 'Curro was built to make you sound like you — just faster, and with fewer typos.'\n\nCurro 1.0 is available now, with a free tier for personal writers and a studio plan for content teams.",
+                'published_at' => now()->subDays(2),
+            ],
+            [
+                'title' => 'From Code to AI: My Story So Far, in Six Chapters',
+                'slug' => 'from-code-to-ai-my-story-six-chapters',
+                'tag' => 'MY STORY',
+                'excerpt' => 'I didn\'t plan any of this. First there was code, then marketing, then AI. This is the honest version of how one led to the next.',
+                'body' => "Chapter one: 2018. I bought my first domain and built my first website. It was ugly, slow, and entirely mine — and I was hooked. HTML became CSS became JavaScript became PHP. Code was the start of everything.\n\nChapter two: 2020. I learned marketing — and it hurt my pride a little. Great code means nothing if nobody sees it. SEO, content, growth: these became my second language, and my unfair advantage.\n\nChapter three: 2021. I shipped my first paid Laravel website. Someone I had never met used something I made. That feeling has not worn off.\n\nChapter four: 2023. I started playing with large language models. I remember the exact moment a model answered a question I had not scripted. I knew the next decade of my career would be about this.\n\nChapter five: 2024. I launched Curro — my first product with an LLM under the hood, an AI content studio. Code, marketing and AI finally clicked into one person's job description.\n\nChapter six: today. I build wonderful websites, AI systems, and automation — end to end. The story is still being written, and this website is the journal I keep along the way.",
+                'published_at' => now()->subDays(5),
+            ],
+            [
+                'title' => 'Behind the Scenes: The 5 AI Automations That Run My Workflow',
+                'slug' => '5-ai-automations-run-my-workflow',
+                'tag' => 'AUTOMATION',
+                'excerpt' => 'From content drafts to outreach emails — a look at the small AI systems doing the boring work so I can do the interesting work.',
+                'body' => "The most valuable thing AI has done for me is not writing blog posts. It is quietly disappearing the boring parts of my day. Here are the five automations currently running in the background of this portfolio and my main projects.\n\n1. Content pipeline. Rough notes go in, a formatted first draft comes out — tagged, titled, and matched to my tone. I edit, never write from scratch.\n\n2. Idea-to-brief. Every news story on this site starts as a one-line idea. An automation expands it into a brief with angles, structure, and sources before I decide whether it is worth my time.\n\n3. Outreach drafts. Follow-up emails, pitch variations, and social posts are drafted from a single context file, so the voice never drifts between platforms.\n\n4. Monitoring. New tools and workflows are scanned daily and filed into DailyAIWorld's directory — the collection grows while I sleep.\n\n5. Chores. Meeting notes summarised, invoices chased, schedules triaged. None of it is glamorous. All of it is time returned.\n\nThe rule that keeps all five honest: automation drafts, humans decide. Every output passes through a human checkpoint before it touches the real world — that is the difference between a workflow and a mess.",
+                'published_at' => now()->subDays(3),
+            ],
+            [
+                'title' => 'SEO Is Not Dead — It Just Met AEO: Ranking in the AI Era',
+                'slug' => 'seo-meets-aeo-ranking-ai-era',
+                'tag' => 'SEO',
+                'excerpt' => 'Google answers, ChatGPT cites, and the top of the page is decided by machines. How to rank in both search engines and answer engines — and why it matters for Junagadh & Gujarat businesses.',
+                'body' => "The question I hear most from business owners in Junagadh and across Gujarat: if AI answers everything, why should I still care about SEO? The honest answer is that SEO is not dying — it is splitting into two jobs.\n\nSearch engine optimization (SEO) still decides who shows up when someone types 'best AI developer in Junagadh' into Google. But a new layer decides who gets quoted when the same question is asked to ChatGPT, Gemini, or shown in Google's AI Overviews. That layer is AEO — answer engine optimization.\n\nThe playbook for both is refreshingly similar:\n\n1. Answer the question directly. Clear, specific answers in the first paragraph beat clever marketing copy every time.\n2. Use structured data. Schema markup tells engines exactly what you are — a service, a person, an article. This site carries ProfessionalService markup for exactly that reason.\n3. Be locally grounded. For Junagadh and Gujarat businesses, the local angle is the unfair advantage: real address, real service area, real local pages. National competitors cannot fake that.\n4. Earn the citation. Answer engines love quotable, well-structured content. Write the passage you would want quoted — then make sure it is quotable.\n\nThe businesses that rank in 2026 will be the ones optimized for both humans and machines: fast pages, clear answers, local signals, and structured data. That is the work I do — and it is why this site is built the way it is.",
+                'published_at' => now()->subDays(4),
+            ],
+            [
+                'title' => 'Laravel 13 in Production: What 12 Months of Shipping Taught Me',
+                'slug' => 'laravel-13-production-12-months-lessons',
+                'tag' => 'WEB DEV',
+                'excerpt' => 'After a year of production Laravel apps, the boring parts turned out to be the valuable parts. A field report from the trenches.',
+                'body' => "Every few months, the industry asks whether PHP is dead. The answer, from someone who ships Laravel apps for a living: no — it is quietly doing the unglamorous work that keeps the internet running.\n\nTwelve months and several production apps later, here is what actually matters. Migrations and schema versioning save you from the scariest moment in development: the accidental schema drift between environments. Eloquent's query builder keeps SQL readable. Queues turn slow jobs into background noise instead of blocked requests.\n\nNone of this is exciting. That is precisely the point. The exciting frameworks of 2019 are abandoned now. Laravel keeps shipping, and the apps built on it keep running.\n\nMy honest advice for anyone choosing a stack in 2026: pick the one that gets out of your way. If you need forms, auth, a database, and an admin panel — Laravel gets you to a real product faster than almost anything else. The framework is not the product. The product is the product.",
+                'published_at' => now()->subDays(12),
+            ],
+            [
+                'title' => 'Fine-Tuning vs. RAG: What Actually Worked for Client Projects in 2026',
+                'slug' => 'fine-tuning-vs-rag-what-worked-2026',
+                'tag' => 'AI',
+                'excerpt' => 'Two approaches, one question: which one should you reach for first? Analysis of what moved the needle on real client deployments this year.',
+                'body' => "The most common question I get from clients is deceptively simple: should we fine-tune the model, or give it a knowledge base to search?\n\nAfter deploying both in production this year, the answer is usually: RAG first, fine-tuning second — and only when you know what behaviour you are actually changing.\n\nRetrieval-augmented generation grounds the model in your documents, which fixes the two failure modes that matter most: hallucinated facts and stale answers. It is also cheap to update — edit a document, and the behaviour changes overnight.\n\nFine-tuning, by contrast, is not a way to teach facts. It is a way to teach behaviour — tone, refusal style, output structure. My rule of thumb: facts live in retrieval, behaviour lives in the weights. Attempting to use one for the other's job is where projects go off the rails.\n\nOne more finding from the field: evaluation is the step everyone skips. Every project this year that shipped a test set of 100 edge cases before training finished with a better model than the one with the prettiest loss curve.",
+                'published_at' => now()->subDays(19),
+            ],
+            [
+                'title' => 'Case Study: How SaaS Next Tripled Organic Traffic in Six Months',
+                'slug' => 'case-study-saasnext-tripling-organic-traffic',
+                'tag' => 'MARKETING',
+                'excerpt' => 'No ads, no gimmicks: how a technical SEO overhaul, a content engine, and one honest piece of strategy took SaaS Next from 18k to 55k monthly organic sessions.',
+                'body' => "The brief was simple: SaaS Next's site was good, but it was invisible. Eighteen thousand organic sessions a month, and a growth plan that did not involve tripling the ad budget.\n\nPhase one was technical SEO — the unglamorous foundation. Schema markup, canonical hygiene, mobile rendering, and a Core Web Vitals pass that took page speed from 4.2 to 1.8 seconds. Conversion rate followed speed up by 22%.\n\nPhase two was the content engine. Instead of random blog posts, we mapped every buyer question to a page, then built programmatic landing pages for the long tail. Each page answered one question completely and linked to the next step in the journey.\n\nPhase three was the strategy: stop selling the tool, start selling the outcome. Every asset was built around one sentence — \"this is what your numbers look like after\" — and the demo request form followed the proof, not the other way around.\n\nSix months later: 55,000 organic sessions per month, 3x growth, and a cost per demo that fell 61%. The lesson is boring on purpose: growth is a loop of useful content, fast pages, and honest proof — repeated until it compounds.",
+                'published_at' => now()->subDays(26),
+            ],
+            [
+                'title' => 'The Load-Time Audit: SaaS Next From 6.8 Seconds to 1.9',
+                'slug' => 'load-time-audit-saasnext-6-8-to-1-9-seconds',
+                'tag' => 'WEB DEV',
+                'excerpt' => 'A field report on the four fixes that mattered most — and the painful truth that the design was never the problem.',
+                'body' => "The SaaS Next homepage was beautiful and slow: 6.8 seconds to first meaningful paint, and a bounce rate that reflected it. The design was fine. The backend was fine. The problem was everything in between.\n\nFix one: images. WebP conversion, real display-size resolution, and lazy loading below the fold. This alone cut load time by roughly 40%.\n\nFix two: fonts. A third-party font stack was downloading nearly a megabyte before a single letter rendered. Subsetted, self-hosted, and swapped — the typography got faster and looked identical.\n\nFix three: JavaScript. Forty render-blocking scripts became nine deferred ones. If it wasn't critical for first paint, it waited.\n\nFix four: caching. Correct cache headers turned repeat visits into near-instant loads.\n\nThe result: 1.9 seconds, a third less bounce, and more conversions. No rewrite was needed — just the deletion of everything the page didn't need. Performance is not a feature. It is the absence of neglect.",
+                'published_at' => now()->subDays(33),
+            ],
+            [
+                'title' => 'Why This Portfolio Looks Like a Magazine (And Why Yours Should Too)',
+                'slug' => 'why-this-portfolio-looks-like-a-magazine',
+                'tag' => 'DESIGN',
+                'excerpt' => 'The web forgot it could be fun. A short manifesto in favour of personality, ink lines, and design that has something to say.',
+                'body' => "Somewhere along the way, the web decided that every serious product must look like the same SaaS dashboard: white background, rounded corners, a purple gradient button. Boring is safe, the thinking goes. Boring converts.\n\nI do not believe it. People remember the sites that made them smile — and they trust the people who made them. This portfolio is my argument: white paper, ink lines, comic panels, and a speech bubble that says hello. It is a magazine that happens to run on Laravel.\n\nMinimalism and personality are not opposites. The design here is strict: black ink on white paper, one red accent, one yellow highlight. The comic elements are few — a burst, a speech bubble, panel frames — and everything else is whitespace and line.\n\nMy rule: make it legible first, make it memorable second, and never let the gimmicks get in the way of the content. Delight is a layer, not the foundation.",
+                'published_at' => now()->subDays(40),
+            ],
+        ];
+
+        foreach ($posts as $post) {
+            DB::table('posts')->insert([
+                'title' => $post['title'],
+                'slug' => $post['slug'],
+                'excerpt' => $post['excerpt'],
+                'body' => $post['body'],
+                'tag' => $post['tag'],
+                'cover_image' => null,
+                'published_at' => $post['published_at'],
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+    }
+}
