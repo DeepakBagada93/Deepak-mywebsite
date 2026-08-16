@@ -50,6 +50,12 @@ editing is ever needed. The layout that works (verified):
 > **hPanel → Websites → YOURDOMAIN.COM → PHP Configuration**, set PHP to **8.3 or 8.4**
 > before anything else — without it neither Composer nor the site will run.
 >
+> **`proc_open` must be enabled.** New Hostinger accounts disable it by default, which
+> breaks Composer with *"The Process class relies on proc_open, which is not available
+> on your PHP installation."* Fix it once, in
+> **hPanel → Websites → YOURDOMAIN.COM → PHP Configuration → PHP options → disableFunctions**,
+> remove **`proc_open`** from the list and **Save**.
+>
 > **If `composer install` still fails with "Your lock file does not contain a compatible
 > set of packages"** — the lock file was regenerated with Composer 2.7 (plugin-api 2.6.0)
 > to work on older Composer. If your server's Composer is very old, run `composer self-update`

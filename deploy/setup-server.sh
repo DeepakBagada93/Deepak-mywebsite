@@ -21,6 +21,32 @@ APP_ITEMS="app artisan bootstrap composer.json composer.lock config database pub
 
 echo "== Domain root: $DOMAIN_ROOT"
 
+# ---------- 0. Preflight: PHP version + proc_open (Composer needs both) ----------
+PHP_FULL="$(php -v 2>/dev/null | head -1)"
+echo "== PHP: ${PHP_FULL:-php not found}"
+PHP_MAJOR="$(php -r 'echo PHP_MAJOR_VERSION;' 2>/dev/null)"
+PHP_MINOR="$(php -r 'echo PHP_MINOR_VERSION;' 2>/dev/null)"
+
+if [ "$PHP_MAJOR" -lt 8 ] || { [ "$PHP_MAJOR" -eq 8 ] && [ "$PHP_MINOR" -lt 3 ]; }; then
+    echo ""
+    echo "ERROR: this project needs PHP 8.3+ (Laravel 13), found PHP $PHP_MAJOR.$PHP_MINOR."
+    echo "Fix in hPanel: Websites -> YOUR DOMAIN -> Advanced -> PHP Configuration ->"
+    echo "  change PHP version to 8.3 or 8.4, then log out/in of SSH and re-run."
+    exit 1
+fi
+
+if ! php -r 'exit(function_exists("proc_open") ? 0 : 1);' 2>/dev/null; then
+    echo ""
+    echo "ERROR: the PHP function 'proc_open' is DISABLED on this server. Composer depends"
+    echo "on it, so 'composer install' fails with:"
+    echo "  The Process class relies on proc_open, which is not available on your PHP installation."
+    echo ""
+    echo "Fix in hPanel: Websites -> YOUR DOMAIN -> Advanced -> PHP Configuration"
+    echo "  -> PHP options tab -> scroll to 'disableFunctions' -> remove 'proc_open' -> Save."
+    echo "Then re-run this script."
+    exit 1
+fi
+
 # ---------- 1. Find the app (three possible locations) ----------
 if [ -f "$DOMAIN_ROOT/$APP_DIR/public/index.php" ] && [ -d "$DOMAIN_ROOT/$APP_DIR/vendor" ]; then
     echo "== App found at ./$APP_DIR (ideal layout)"
