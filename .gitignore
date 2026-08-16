@@ -28,3 +28,6 @@ Thumbs.db
 
 # Local dev database (production uses MySQL)
 /database/database.sqlite
+
+# Local deploy package (upload this to Hostinger, do not commit)
+/deploy-portfolio.zip

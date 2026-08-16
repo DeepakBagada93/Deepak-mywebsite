@@ -1,10 +1,10 @@
 # Deepak Bagada — Portfolio (Issue Vol. 01)
 
 A single-page portfolio for **Deepak Bagada — AI Developer, Web Developer & Marketing Expert**.
-Built with **Laravel + Blade**, styled as **minimal comic + magazine**: Bebas Neue display
-type, ink panels, one comic burst and speech bubble, halftone texture, and a black-&-white
-palette with red/yellow pops. The content reads like a life story — code → marketing → AI —
-with a dated timeline and a news-desk journal, all animated with GSAP.
+Built with **Laravel + Blade**, styled as **editorial luxury**: Fraunces serif display type,
+hairlines, huge whitespace, and a strict black-&-white palette. The content reads like a
+life story — code → marketing → AI — with a dated timeline and a news-desk journal, all
+animated with restrained GSAP motion. SEO/AEO optimized for Junagadh, Gujarat.
 
 ## Stack
 
@@ -20,7 +20,7 @@ with a dated timeline and a news-desk journal, all animated with GSAP.
 ## What's on the page (single page, all sections)
 
 1. **Masthead** — sticky magazine header + nav
-2. **Hero** — big Bebas headline, 9:16 video reel (scroll-triggered shrink/dim), comic "HELLO!" burst, speech bubble, halftone texture
+2. **Hero** — huge serif name, 9:16 video reel (scroll-triggered shrink/dim), editorial rule
 3. **About** — life story (code → marketing → AI), pull quote, fact list, animated stat counters
 4. **Skills** — "power level" lists with animated bars
 5. **Main Projects** — Curro, SaaS Next, DailyAIWorld, read from the `projects` table

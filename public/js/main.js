@@ -59,7 +59,6 @@
         gsap.set(".masthead", { yPercent: -110 });
         gsap.set(".hero__title .word-inner", { yPercent: 115, rotate: 1.5 });
         gsap.set([".hero__kicker", ".hero__roles", ".hero__lede", ".hero__cta", ".hero__figure", ".hero__scroll"], { opacity: 0 });
-        gsap.set([".burst", ".speech--hero"], { opacity: 0 });
         gsap.set(".hero__rule", { scaleX: 0 });
 
         const intro = gsap.timeline({ delay: 1.95 });
@@ -82,8 +81,6 @@
             .fromTo(".hero__lede", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.5")
             .fromTo(".hero__cta", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.45")
             .fromTo(".hero__figure", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.85")
-            .fromTo(".burst", { scale: 0, rotate: -24 }, { scale: 1, rotate: -10, duration: 0.7, ease: "back.out(2.4)" }, "-=0.5")
-            .fromTo(".speech--hero", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, "-=0.35")
             .fromTo(".hero__scroll", { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.4")
             .add(() => {
                 document.body.classList.remove("no-scroll");
