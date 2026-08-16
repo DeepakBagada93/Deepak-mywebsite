@@ -1,19 +1,22 @@
 # Deepak Bagada — Portfolio (Issue Vol. 01)
 
 A single-page portfolio for **Deepak Bagada — AI Developer, Web Developer & Marketing Expert**.
-Built with **Laravel + Blade**, styled as **editorial luxury**: Fraunces serif display type,
-hairlines, huge whitespace, and a strict black-&-white palette. The content reads like a
-life story — code → marketing → AI — with a dated timeline and a news-desk journal, all
+Built with **pure PHP** (no framework, no database), styled as **editorial luxury**: Fraunces serif
+display type, hairlines, huge whitespace, and a strict black-&-white palette. The content reads
+like a life story — code → marketing → AI — with a dated timeline and a news-desk journal, all
 animated with restrained GSAP motion. SEO/AEO optimized for Junagadh, Gujarat.
+
+The whole repo **is** the website — its contents go straight into `public_html` on Hostinger.
+No Composer, no `proc_open`, no SQL. Content changes = edit a file → `git push`.
 
 ## Stack
 
 | Layer      | Choice                                          |
 |------------|-------------------------------------------------|
-| Backend    | Laravel (PHP 8.3+)                              |
-| Frontend   | Blade + plain CSS/JS in `public/` (no build step) |
+| Backend    | Pure PHP (no framework)                         |
+| Frontend   | Plain CSS/JS (no build step)                    |
+| Content    | Files in `data/` — no database                  |
 | Animation  | GSAP + ScrollTrigger (CDN)                      |
-| Database   | MySQL via phpMyAdmin (remote) — SQLite for local dev |
 | Hosting    | Hostinger / cPanel shared hosting               |
 | Versioning | GitHub                                          |
 
@@ -23,43 +26,38 @@ animated with restrained GSAP motion. SEO/AEO optimized for Junagadh, Gujarat.
 2. **Hero** — huge serif name, 9:16 video reel (scroll-triggered shrink/dim), editorial rule
 3. **About** — life story (code → marketing → AI), pull quote, fact list, animated stat counters
 4. **Skills** — "power level" lists with animated bars
-5. **Main Projects** — Curro, SaaS Next, DailyAIWorld, read from the `projects` table
-6. **The News** — journal entries from the `posts` table; each story opens as a full page in a new tab
-7. **Contact** — email card (`ceo@saasnext.in`), socials, no form
+5. **Main Projects** — Curro, SaaS Next, DailyAIWorld, read from `data/projects.php`
+6. **The News** — journal entries from `data/posts.php`; each story opens as a full page (`/journal/<slug>`) in a new tab
+7. **Contact** — email card, socials, no form
 
-## Local development (zero setup)
+## Files you'll actually edit
+
+| File                          | What it controls                          |
+|-------------------------------|-------------------------------------------|
+| `data/site.php`               | Name, domain, email, phone, socials       |
+| `data/posts.php`              | Journal / news entries (title, body, tag) |
+| `data/projects.php`           | Main projects (title, image, tags, link)  |
+| `partials/about.php`          | Bio text, timeline                        |
+| `partials/skills.php`         | Skill lists + percentages                 |
+| `css/app.css`                 | Colors (see `:root` variables)            |
+| `images/`                     | hero-video.mp4, about-portrait.png, etc.  |
+
+**Add a journal entry:** copy one block in `data/posts.php`, change the fields, give it a new
+`slug`, and set `published_at` to today's date. Push — it's live.
+
+## Local preview (no setup)
 
 ```bash
-composer install
-cp .env.example .env && php artisan key:generate   # local .env already points to SQLite
-php artisan migrate:fresh --seed                    # creates tables + demo content
-php artisan serve                                   # http://127.0.0.1:8000
+php -S localhost:8000          # from the repo root → http://localhost:8000
 ```
 
-No database server needed locally — it uses `database/database.sqlite`.
+## Deployment (Hostinger)
 
-## Database tables (manage via phpMyAdmin)
+1. Push to GitHub.
+2. Deploy the repo contents into `public_html` (git clone there, or upload, or your GitHub deploy tool).
+3. If you see Hostinger's default page: delete `public_html/default.php` or run `bash deploy/setup-server.sh`.
+4. Done — `https://deepakbagada.in` shows the portfolio. No composer, no database.
 
-| Table               | Purpose                                    | Managed where             |
-|---------------------|--------------------------------------------|---------------------------|
-| `posts`             | Journal / news entries (title, body, tag…) | **phpMyAdmin → posts**    |
-| `projects`          | Main projects (title, image, tags…)        | **phpMyAdmin → projects** |
+See **[DEPLOYMENT.md](DEPLOYMENT.md)** for the full walkthrough.
 
-> The `contact_messages` table still exists from the original form; it's unused while the form is removed.
-
-To add a journal entry in phpMyAdmin: insert a row into `posts` with `published_at` set
-(entries without `published_at` stay hidden). New posts appear on the page automatically.
-
-## Images
-
-Drop your own files into `public/images/` and reference them from the templates:
-
-- `public/images/hero-video.mp4` → 9:16 reel played in the hero (with scroll-trigger shrink/dim)
-- `public/images/hero-poster.png` → poster frame shown before the video loads
-- `public/images/about-portrait.png` → the about-section portrait
-- `public/images/projects/project-1.png` → Curro, `project-2.png` → SaaS Next, `project-3.png` → DailyAIWorld
-  (or update the `image` column in the `projects` table and drop files anywhere in `public/`)
-
-## Deployment
-
-Full step-by-step (Hostinger/cPanel + remote MySQL + GitHub push) is in **[DEPLOYMENT.md](DEPLOYMENT.md)**.
+> The previous Laravel version of this site is preserved in the `laravel-version` branch.
