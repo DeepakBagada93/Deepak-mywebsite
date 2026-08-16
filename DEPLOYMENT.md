@@ -14,8 +14,9 @@ git commit -m "update"
 git push
 ```
 
-> `database/database.sqlite` is only for local dev. On the server you use MySQL — the
-> SQLite file never reaches production.
+> A seeded `database/database.sqlite` is committed so the site works immediately, even
+> before you create the MySQL database. Once MySQL is ready, switch `.env` and migrate
+> (see "Run without the database yet" below).
 
 ---
 
@@ -45,10 +46,33 @@ editing is ever needed. The layout that works (verified):
     ├── css/  js/  images/
 ```
 
-> **If `composer install` fails with “Your lock file does not contain a compatible set
-> of packages”** — the project needs **PHP 8.3+** and a recent Composer. Either:
-> 1. In **hPanel → Websites → YOURDOMAIN.COM → PHP Configuration**, set PHP to **8.3 or 8.4**, and run `composer self-update` (or pick a newer Composer in hPanel), or
-> 2. Skip Composer entirely — use the **`deploy-portfolio.zip`** path below (it already includes `vendor/`).
+> **PHP version first:** this project needs **PHP 8.3+** (Laravel 13). In
+> **hPanel → Websites → YOURDOMAIN.COM → PHP Configuration**, set PHP to **8.3 or 8.4**
+> before anything else — without it neither Composer nor the site will run.
+>
+> **If `composer install` still fails with "Your lock file does not contain a compatible
+> set of packages"** — the lock file was regenerated with Composer 2.7 (plugin-api 2.6.0)
+> to work on older Composer. If your server's Composer is very old, run `composer self-update`
+> in the terminal, or skip Composer entirely using the **`deploy-portfolio.zip`** path
+> below (it already includes `vendor/`).
+
+### Run without the database yet (quick start)
+
+The committed `database/database.sqlite` is already seeded with the journal posts and
+main projects — so the site works with **zero database setup**:
+
+1. Deploy the files (either option below).
+2. Create `portfolio/.env` from `.env.example` and keep the defaults:
+   `DB_CONNECTION=sqlite` (plus `SESSION_DRIVER=database`, `CACHE_STORE=database`).
+3. Give the storage folders write permission:
+   ```bash
+   chmod -R 775 storage bootstrap/cache
+   ```
+4. Open the site — it shows the demo content immediately.
+
+**Later, when the MySQL database is ready:** edit `.env` → `DB_CONNECTION=mysql` +
+credentials → run `php artisan migrate --force` (and `php artisan db:seed --force` for
+the demo content). The SQLite file can then be deleted.
 
 ### Option B — cPanel File Manager (no SSH)
 
