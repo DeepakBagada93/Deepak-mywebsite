@@ -21,6 +21,8 @@ $ogImg   = $url . ($head['og_image'] ?? '/images/about-portrait.png');
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="<?= e($canon) ?>">
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <meta property="og:type" content="<?= e($ogType) ?>">
     <meta property="og:title" content="<?= e($ogTitle) ?>">
     <meta property="og:description" content="<?= e($desc) ?>">
