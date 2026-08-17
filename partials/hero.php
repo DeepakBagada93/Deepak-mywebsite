@@ -23,7 +23,7 @@
                 </div>
             </div>
             <figure class="hero__figure hero__video reveal" data-reveal>
-                <video class="hero__video-el" autoplay muted loop playsinline preload="metadata" poster="/images/hero-poster.png">
+                <video class="hero__video-el" autoplay muted loop playsinline controls preload="auto">
                     <source src="/images/hero-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

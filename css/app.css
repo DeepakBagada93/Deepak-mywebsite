@@ -196,9 +196,10 @@ code { font-family: var(--mono); font-size: 0.85em; }
     width: 100%;
     aspect-ratio: 9 / 16;
     object-fit: cover;
-    background: var(--ink);
+    background: #000000;
     display: block;
-    will-change: transform, opacity;
+    border: none;
+    outline: none;
 }
 .hero__figure figcaption {
     font-family: var(--mono);
