@@ -7,7 +7,6 @@ return [
     'email'         => 'ceo@saasnext.in',
     'location'      => 'Junagadh, Gujarat, India',
     'socials'       => [
-        'GitHub'     => 'https://github.com/',
         'LinkedIn'   => 'https://www.linkedin.com/in/deepak-bagada-910292169/',
         'X'          => 'https://x.com/deeepakbagada',
         'Instagram'  => 'https://www.instagram.com/deeepak_bagada/',
