@@ -28,10 +28,15 @@ if [ ! -f ./artisan ]; then
 fi
 
 if [ ! -d ./vendor ]; then
-    echo "== Installing Composer dependencies..."
-    composer install --no-dev --optimize-autoloader --no-interaction
+    echo ""
+    echo "!! vendor/ is missing."
+    echo "!! Hostinger disables proc_open, so composer install cannot run here."
+    echo "!! Build locally instead:"
+    echo "!!     composer install --no-dev --optimize-autoloader"
+    echo "!! then upload the repo (including vendor/) via File Manager / FTP and re-run this script."
+    exit 1
 else
-    echo "== vendor/ present, skipping composer install (re-run 'composer install --no-dev' to refresh)."
+    echo "== vendor/ present — skipping composer install (build/upload vendor locally; see DEPLOYMENT.md)."
 fi
 
 # ---------- 2. .env ----------

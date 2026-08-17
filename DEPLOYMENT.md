@@ -11,7 +11,7 @@ folder — that is the only directory exposed to the web.
 | Requirement | Value |
 |-------------|-------|
 | PHP | **8.3+** (Laravel 13) — set in hPanel → Websites → your domain → PHP Configuration |
-| Composer | Required on the server (or build locally and upload `vendor/`) |
+| Composer | **Run locally, not on the server.** Hostinger shared hosting disables `proc_open`, so `composer install` fails on the server (`The Process class relies on proc_open`). Build `vendor/` on your machine and upload it — Laravel itself does not need `proc_open` |
 | Database | Remote MySQL already configured in `.env` (Hostinger / phpMyAdmin) |
 | Document root | Must point at `<repo>/public` |
 
@@ -32,29 +32,52 @@ folder — that is the only directory exposed to the web.
 
 ## 3. Deploy to Hostinger
 
-### Option A — Hostinger hPanel Git Auto-Deploy
+### Step 1 — Build locally (this replaces `composer install` on the server)
 
-1. Push to GitHub: `git push origin main`.
-2. hPanel → **Websites** → `deepakbagada.in` → **Advanced → Git**: link the repo
-   (`https://github.com/DeepakBagada93/Deepak-mywebsite.git`, branch `main`).
+Hostinger's shared PHP has `proc_open` disabled, so Composer can never run there.
+Instead, prepare the app **on your machine**:
+
+```bash
+# from the repo root on your Mac/PC
+composer install --no-dev --optimize-autoloader   # production vendor (optional — the existing vendor/ works too)
+```
+
+Then zip the app **including `vendor/`** but excluding junk:
+
+```bash
+zip -r deploy.zip . -x ".git/*" -x ".env" -x "storage/logs/*" -x "storage/framework/cache/*" -x "storage/framework/sessions/*" -x "storage/framework/views/*"
+```
+
+> If you only added code files since the last deploy, just upload the changed
+> files instead of re-uploading the whole 86 MB `vendor/`.
+
+### Step 2 — Upload & extract
+
+1. hPanel → **File Manager** → go to where the app will live (e.g. `public_html`).
+2. Upload `deploy.zip`, right-click → **Extract**.
 3. **Set the document root:** hPanel → Websites → `deepakbagada.in` →
-   **Advanced → Document Root** → set it to the repo's `public` folder
-   (e.g. `public_html/public` if the repo installs into `public_html`).
-4. Run the server setup once (hPanel → Advanced → **Terminal**, or SSH):
+   **Advanced → Document Root** → point it at the repo's `public` folder
+   (e.g. `public_html/public`).
 
-   ```bash
-   cd <repo-path-on-server>
-   bash deploy/setup-server.sh
-   ```
+### Step 3 — Server setup (one time, and after each content migration)
 
-   This installs Composer deps, generates an app key if missing, runs
-   `php artisan migrate --force`, and builds the config/route/view caches.
+hPanel → Advanced → **Terminal** (or SSH):
 
-### Option B — Manual upload
+```bash
+cd <repo-path-on-server>
+bash deploy/setup-server.sh
+```
 
-Upload the repo (excluding `vendor/`) to the server, `composer install --no-dev`,
-copy `.env` (with your MySQL creds + `APP_KEY`), set the document root to `public/`,
-and run the same setup script.
+This generates an app key if missing, checks `.env`, runs
+`php artisan migrate --force`, and builds the config/route/view caches.
+It **skips Composer** when `vendor/` is present (which it is, since you uploaded it).
+
+### Alternative — try enabling `proc_open`
+
+Some Hostinger plans let you edit **hPanel → Websites → your domain → PHP
+Configuration → disable_functions**: if `proc_open` is listed, remove it and
+save. If that sticks, `composer install` works on the server and you can use
+Hostinger's Git Auto-Deploy instead. If it doesn't, stick with build-locally.
 
 ---
 
