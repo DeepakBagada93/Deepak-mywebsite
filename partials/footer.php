@@ -50,7 +50,7 @@
 
         <div class="footer__bottom mono">
             <p>© 2026 <?= e($site['name']) ?> — <?= e($site['location']) ?></p>
-            <p>Built with PHP, GSAP &amp; too much coffee ☕</p>
+            <p>Powered by curious mind &amp; too much coffee ☕</p>
         </div>
     </div>
 </footer>
