@@ -81,6 +81,7 @@ $head = [
                         'addressRegion'   => 'Gujarat',
                         'addressCountry'  => 'IN',
                     ],
+                    'sameAs'      => array_values($site['socials']),
                 ],
             ],
             [

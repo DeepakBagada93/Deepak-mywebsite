@@ -14,7 +14,9 @@
                 </p>
                 <ul class="contact__list mono reveal" data-reveal>
                     <li><span>Email</span><a href="mailto:<?= e($site['email']) ?>"><?= e($site['email']) ?></a></li>
-                    <li><span>Phone</span><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $site['phone'])) ?>"><?= e($site['phone']) ?></a></li>
+                    <?php if (!empty($site['phone'])): ?>
+                        <li><span>Phone</span><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $site['phone'])) ?>"><?= e($site['phone']) ?></a></li>
+                    <?php endif; ?>
                     <li><span>Base</span><?= e($site['location']) ?></li>
                 </ul>
                 <div class="contact__socials mono reveal" data-reveal>

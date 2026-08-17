@@ -12,9 +12,9 @@ Deepak Bagada is an AI developer, web developer and SEO/AEO expert from Junagadh
 
 ## Projects
 
-- [Curro](https://deepakbagada.in/): AI content creation studio — turns rough notes into published posts in the writer's own voice.
-- [SaaS Next](https://deepakbagada.in/): Product and marketing website built on Laravel; content engine tripled organic traffic in six months.
-- [DailyAIWorld](https://deepakbagada.in/): Daily directory of AI tools and workflows.
+- [Curro](https://curro.in/): AI content creation studio — turns rough notes into published posts in the writer's own voice.
+- [SaaS Next](https://saasnext.in/): Product and marketing website built on Laravel; content engine tripled organic traffic in six months.
+- [DailyAIWorld](https://dailyaiworld.com/): Daily directory of AI tools and workflows.
 
 ## Journal
 
@@ -32,5 +32,6 @@ Deepak Bagada is an AI developer, web developer and SEO/AEO expert from Junagadh
 
 - [Email Deepak Bagada](mailto:ceo@saasnext.in): ceo@saasnext.in
 - [GitHub](https://github.com/)
-- [LinkedIn](https://www.linkedin.com/)
-- [X / Twitter](https://x.com/)
+- [LinkedIn](https://www.linkedin.com/in/deepak-bagada-910292169/)
+- [X / Twitter](https://x.com/deeepakbagada)
+- [Instagram](https://www.instagram.com/deeepak_bagada/)
