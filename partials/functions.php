@@ -110,8 +110,8 @@ function render_post_body(string $body): string
         $para = trim($para);
         if ($para === '') continue;
 
-        // Convert ## Headings
-        if (preg_match('/^###?\s+(.+)$/', $para, $m)) {
+        // Convert ## and ### Headings
+        if (preg_match('/^#{1,4}\s+(.+)$/', $para, $m)) {
             $html .= '<h3>' . e($m[1]) . '</h3>' . "\n";
             continue;
         }
