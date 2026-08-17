@@ -31,36 +31,32 @@ Change the file, commit, push, deploy. No phpMyAdmin, no database.
 
 The repository root is the web root. Three equivalent ways to get it there:
 
-### Option A — GitHub deploy tool (recommended)
+### Option A — Hostinger hPanel Git Auto-Deploy (Recommended - Zero Setup)
 
-Point your deploy tool (hPanel Git / GitHub Deploy / DeployHQ, etc.) at this repo with
-**main** branch and the target directory **`public_html`**. It clones the files and stops —
-there is no `composer.json` anymore, so nothing extra runs.
+Hostinger supports automatic deployment directly from GitHub on every `git push`:
 
-### Option B — git clone / SSH terminal
+1. Log in to **Hostinger hPanel** → Go to **Websites** → Select `deepakbagada.in`.
+2. Open **Advanced** → **Git**.
+3. Create a new repository link:
+   - **Repository:** `https://github.com/DeepakBagada93/Deepak-mywebsite.git`
+   - **Branch:** `main`
+   - **Install Directory:** `public_html`
+4. Click **Create** then click **Deploy**.
+5. Enable **Auto-Deployment** (or copy the Webhook URL and paste it in **GitHub Repo Settings → Webhooks**).
+6. **Result:** Every time you run `git push`, Hostinger automatically syncs the changes to `public_html` instantly!
 
-```bash
-cd ~/domains/YOURDOMAIN.COM
-# replace whatever is already in public_html first
-rm -rf public_html/*
-git clone https://github.com/DeepakBagada93/Deepak-mywebsite.git public_html
-```
+---
 
-### Option C — File Manager
+### Option B — GitHub Actions Automated FTP/SFTP Deploy
 
-Upload a zip of the repo, extract it inside `public_html`, done.
+We have added `.github/workflows/deploy.yml` to the repository:
 
-### Clean-up on the server (only if needed)
-
-Hostinger creates a `default.php` / `index.html` placeholder on new accounts that can shadow
-the site. Remove them, or run the included script from inside `public_html`:
-
-```bash
-cd ~/domains/YOURDOMAIN.COM/public_html
-bash deploy/setup-server.sh
-```
-
-The script removes the placeholders and double-checks the key files are present. Safe to re-run.
+1. Go to **GitHub Repository** (`DeepakBagada93/Deepak-mywebsite`) → **Settings** → **Secrets and variables** → **Actions**.
+2. Add three Repository Secrets from your Hostinger FTP details (found in **hPanel → Files → FTP Accounts**):
+   - `FTP_SERVER`: e.g. `ftp.deepakbagada.in` or `193.203.184.64`
+   - `FTP_USERNAME`: your Hostinger FTP username
+   - `FTP_PASSWORD`: your Hostinger FTP password
+3. Every time you push to `main`, GitHub Actions will automatically upload updated files into `public_html`.
 
 ### PHP version
 
