@@ -21,7 +21,7 @@
                 </ul>
                 <div class="contact__socials mono reveal" data-reveal>
                     <?php foreach ($site['socials'] as $label => $href): ?>
-                        <a href="<?= e($href) ?>" target="_blank" rel="noopener"><?= e($label) ?></a>
+                        <a href="<?= e($href) ?>"><?= e($label) ?></a>
                     <?php endforeach; ?>
                 </div>
             </div>

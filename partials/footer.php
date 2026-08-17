@@ -40,7 +40,7 @@
                 <p class="mono footer__col-title">Follow</p>
                 <ul class="footer__col-list footer__col-list--socials">
                     <?php foreach ($site['socials'] as $label => $href): ?>
-                        <li><a href="<?= e($href) ?>" target="_blank" rel="noopener"><?= e($label) ?></a></li>
+                        <li><a href="<?= e($href) ?>"><?= e($label) ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
