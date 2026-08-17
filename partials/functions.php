@@ -45,6 +45,42 @@ function projects(): array
     return $projects;
 }
 
+function services(): array
+{
+    static $services = null;
+    if ($services === null) {
+        $services = require __DIR__ . '/../data/services.php';
+    }
+
+    return $services;
+}
+
+function service_by_slug(string $slug): ?array
+{
+    foreach (services() as $service) {
+        if (($service['slug'] ?? null) === $slug) {
+            return $service;
+        }
+    }
+
+    return null;
+}
+
+function service_url(string $slug): string
+{
+    return '/services/' . $slug;
+}
+
+function faqs(): array
+{
+    static $faqs = null;
+    if ($faqs === null) {
+        $faqs = require __DIR__ . '/../data/faq.php';
+    }
+
+    return $faqs;
+}
+
 function e(?string $value): string
 {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');

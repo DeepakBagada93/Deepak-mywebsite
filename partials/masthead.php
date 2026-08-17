@@ -3,6 +3,7 @@
         <a class="masthead__logo" href="#top" data-scroll><?= e($site['name']) ?></a>
 
         <nav class="masthead__nav" id="nav">
+            <a href="/services">Services</a>
             <a href="#about" data-scroll>About</a>
             <a href="#skills" data-scroll>Skills</a>
             <a href="#projects" data-scroll>Work</a>
@@ -20,11 +21,12 @@
 <?php // Mobile menu ?>
 <div class="mmenu" id="mmenu">
     <ul class="mmenu__list">
-        <li><a href="#about" data-scroll><span class="mono mmenu__num">01</span>About</a></li>
-        <li><a href="#skills" data-scroll><span class="mono mmenu__num">02</span>Skills</a></li>
-        <li><a href="#projects" data-scroll><span class="mono mmenu__num">03</span>Work</a></li>
-        <li><a href="#journal" data-scroll><span class="mono mmenu__num">04</span>Journal</a></li>
-        <li><a href="#contact" data-scroll><span class="mono mmenu__num">05</span>Contact</a></li>
+        <li><a href="/services"><span class="mono mmenu__num">01</span>Services</a></li>
+        <li><a href="#about" data-scroll><span class="mono mmenu__num">02</span>About</a></li>
+        <li><a href="#skills" data-scroll><span class="mono mmenu__num">03</span>Skills</a></li>
+        <li><a href="#projects" data-scroll><span class="mono mmenu__num">04</span>Work</a></li>
+        <li><a href="#journal" data-scroll><span class="mono mmenu__num">05</span>Journal</a></li>
+        <li><a href="#contact" data-scroll><span class="mono mmenu__num">06</span>Contact</a></li>
     </ul>
     <p class="mmenu__foot mono"><?= e($site['name']) ?> — Portfolio Vol. 01</p>
 </div>

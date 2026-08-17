@@ -1,0 +1,36 @@
+> Deepak Bagada — AI developer, web developer and SEO/AEO expert based in Junagadh, Gujarat, India. Builds websites, AI systems, AI agents, automation and high-ranking digital presence.
+
+# Deepak Bagada — Portfolio
+
+Deepak Bagada is an AI developer, web developer and SEO/AEO expert from Junagadh, Gujarat, India. He builds websites (Laravel/PHP), AI systems, AI agents and workflow automation, and optimizes everything he builds to rank on Google and in AI answers. He works with clients across India and remotely.
+
+## Services
+
+- [Web Development](https://deepakbagada.in/services/web-development): Website development in Junagadh, Gujarat and India — Laravel, PHP, fast editorial design, built to convert.
+- [AI Development](https://deepakbagada.in/services/ai-development): AI development, AI agents, multi-agent systems and automation in Junagadh, Gujarat and India.
+- [SEO & AEO](https://deepakbagada.in/services/seo-aeo): SEO and answer engine optimization (AEO) expert in Junagadh, Gujarat — rank on Google and get cited by AI.
+
+## Projects
+
+- [Curro](https://deepakbagada.in/): AI content creation studio — turns rough notes into published posts in the writer's own voice.
+- [SaaS Next](https://deepakbagada.in/): Product and marketing website built on Laravel; content engine tripled organic traffic in six months.
+- [DailyAIWorld](https://deepakbagada.in/): Daily directory of AI tools and workflows.
+
+## Journal
+
+- [Curro 1.0 Ships: An AI Content Studio That Writes Like Its Owner](https://deepakbagada.in/journal/curro-1-0-ai-content-studio): Curro's launch — AI writing trained on your own voice.
+- [From Code to AI: My Story So Far, in Six Chapters](https://deepakbagada.in/journal/from-code-to-ai-my-story-six-chapters): Code → marketing → AI, the honest version.
+- [Behind the Scenes: The 5 AI Automations That Run My Workflow](https://deepakbagada.in/journal/5-ai-automations-run-my-workflow): Small AI systems doing the boring work.
+- [SEO Is Not Dead — It Just Met AEO: Ranking in the AI Era](https://deepakbagada.in/journal/seo-meets-aeo-ranking-ai-era): How to rank in search engines and answer engines, for Junagadh & Gujarat businesses.
+- [Laravel 13 in Production: What 12 Months of Shipping Taught Me](https://deepakbagada.in/journal/laravel-13-production-12-months-lessons): Field report on shipping Laravel apps.
+- [Fine-Tuning vs. RAG: What Actually Worked for Client Projects in 2026](https://deepakbagada.in/journal/fine-tuning-vs-rag-what-worked-2026): RAG first, fine-tuning second.
+- [Case Study: How SaaS Next Tripled Organic Traffic in Six Months](https://deepakbagada.in/journal/case-study-saasnext-tripling-organic-traffic): 18k to 55k monthly organic sessions.
+- [The Load-Time Audit: SaaS Next From 6.8 Seconds to 1.9](https://deepakbagada.in/journal/load-time-audit-saasnext-6-8-to-1-9-seconds): The four performance fixes that mattered.
+- [Why This Portfolio Looks Like a Magazine (And Why Yours Should Too)](https://deepakbagada.in/journal/why-this-portfolio-looks-like-a-magazine): Editorial design manifesto.
+
+## Contact
+
+- [Email Deepak Bagada](mailto:ceo@saasnext.in): ceo@saasnext.in
+- [GitHub](https://github.com/)
+- [LinkedIn](https://www.linkedin.com/)
+- [X / Twitter](https://x.com/)

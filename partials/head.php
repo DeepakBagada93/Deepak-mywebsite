@@ -20,6 +20,7 @@ $ogImg   = $url . ($head['og_image'] ?? '/images/about-portrait.png');
     <meta name="author" content="<?= e($site['name']) ?>">
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="<?= e($canon) ?>">
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt">
     <meta property="og:type" content="<?= e($ogType) ?>">
     <meta property="og:title" content="<?= e($ogTitle) ?>">
     <meta property="og:description" content="<?= e($desc) ?>">

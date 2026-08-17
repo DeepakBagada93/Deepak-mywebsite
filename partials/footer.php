@@ -9,6 +9,7 @@
             <div class="footer__col">
                 <p class="mono footer__col-title">Explore</p>
                 <ul class="footer__col-list">
+                    <li><a href="/services">Services — web, AI &amp; SEO/AEO</a></li>
                     <li><a href="#about" data-scroll>About — my story</a></li>
                     <li><a href="#skills" data-scroll>AI skills &amp; services</a></li>
                     <li><a href="#projects" data-scroll>Main projects</a></li>

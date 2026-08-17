@@ -1,7 +1,7 @@
 <section class="section contact" id="contact">
     <div class="container">
         <header class="section__head reveal" data-reveal>
-            <p class="mono section__label">05 — Contact</p>
+            <p class="mono section__label">06 — Contact</p>
             <h2 class="section__title split-lines"><span>Get in touch</span></h2>
             <div class="section__rule" aria-hidden="true"></div>
         </header>

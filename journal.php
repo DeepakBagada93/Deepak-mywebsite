@@ -42,11 +42,38 @@ if ($post === null) {
     exit;
 }
 
+$canonical = rtrim($site['url'], '/') . '/journal/' . $post['slug'];
+
 $head = [
     'title'       => $post['title'] . ' — ' . $site['name'] . ', Junagadh Gujarat',
     'description' => $post['excerpt'],
-    'canonical'   => rtrim($site['url'], '/') . '/journal/' . $post['slug'],
+    'canonical'   => $canonical,
     'og_type'     => 'article',
+    'json_ld'     => json_encode([
+        '@context' => 'https://schema.org',
+        '@graph'   => [
+            [
+                '@type'          => 'Article',
+                'headline'       => $post['title'],
+                'description'    => $post['excerpt'],
+                'datePublished'  => $post['published_at'] ?? null,
+                'dateModified'   => $post['published_at'] ?? null,
+                'author'         => ['@type' => 'Person', 'name' => $site['name'], 'url' => rtrim($site['url'], '/') . '/'],
+                'publisher'      => ['@type' => 'Person', 'name' => $site['name'], 'url' => rtrim($site['url'], '/') . '/'],
+                'mainEntityOfPage' => $canonical,
+                'image'          => rtrim($site['url'], '/') . '/images/about-portrait.png',
+                'url'            => $canonical,
+            ],
+            [
+                '@type'           => 'BreadcrumbList',
+                'itemListElement' => [
+                    ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => rtrim($site['url'], '/') . '/'],
+                    ['@type' => 'ListItem', 'position' => 2, 'name' => 'Journal', 'item' => rtrim($site['url'], '/') . '/#journal'],
+                    ['@type' => 'ListItem', 'position' => 3, 'name' => $post['title'], 'item' => $canonical],
+                ],
+            ],
+        ],
+    ], JSON_UNESCAPED_SLASHES),
 ];
 
 require __DIR__ . '/partials/head.php';

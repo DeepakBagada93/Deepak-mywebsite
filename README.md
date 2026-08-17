@@ -28,7 +28,20 @@ No Composer, no `proc_open`, no SQL. Content changes = edit a file → `git push
 4. **Skills** — "power level" lists with animated bars
 5. **Main Projects** — Curro, SaaS Next, DailyAIWorld, read from `data/projects.php`
 6. **The News** — journal entries from `data/posts.php`; each story opens as a full page (`/journal/<slug>`) in a new tab
-7. **Contact** — email card, socials, no form
+7. **Questions, answered** — FAQ section (`data/faq.php`), emitted as FAQPage schema for AI engines
+8. **Contact** — email card, socials, no form
+
+Plus dedicated **service pages** (one per SEO keyword cluster), each with `Service` + `FAQPage`
+schema and a FAQ block:
+
+- `/services/web-development` — website developer Junagadh / Gujarat
+- `/services/ai-development` — AI developer & AI agents
+- `/services/seo-aeo` — SEO & AEO expert
+- `/services` — hub page listing all three
+
+**SEO / AEO:** the site ships with Person + ProfessionalService + FAQPage schema on the
+homepage, Article schema on every journal post, `llms.txt` (AI-agent content map), a
+sitemap covering all pages, and the full strategy in [`SEO-AEO-PLAN.md`](SEO-AEO-PLAN.md).
 
 ## Files you'll actually edit
 
@@ -37,6 +50,8 @@ No Composer, no `proc_open`, no SQL. Content changes = edit a file → `git push
 | `data/site.php`               | Name, domain, email, phone, socials       |
 | `data/posts.php`              | Journal / news entries (title, body, tag) |
 | `data/projects.php`           | Main projects (title, image, tags, link)  |
+| `data/services.php`           | Service pages (title, copy, offerings, FAQ)| 
+| `data/faq.php`                | Homepage FAQ Q&As (also feed FAQPage schema) |
 | `partials/about.php`          | Bio text, timeline                        |
 | `partials/skills.php`         | Skill lists + percentages                 |
 | `css/app.css`                 | Colors (see `:root` variables)            |
