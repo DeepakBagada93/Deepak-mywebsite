@@ -131,6 +131,21 @@ function render_post_body(string $body): string
             return '<em>' . e($m[1]) . '</em>';
         }, $para);
 
+        // Convert bullet lists (- or *)
+        if (preg_match('/^(?:[-*]\s+.+(?:\n|$))+/', $para)) {
+            $items = preg_split('/\n/', $para);
+            $list_html = '<ul style="margin: 16px 0; padding-left: 24px;">' . "\n";
+            foreach ($items as $item) {
+                $item = trim($item);
+                if (preg_match('/^[-*]\s+(.+)$/', $item, $im)) {
+                    $list_html .= '  <li>' . $im[1] . '</li>' . "\n";
+                }
+            }
+            $list_html .= '</ul>' . "\n";
+            $html .= $list_html;
+            continue;
+        }
+
         $html .= '<p>' . nl2br($para) . '</p>' . "\n";
     }
 
