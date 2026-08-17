@@ -100,3 +100,40 @@ function post_url(string $slug): string
 {
     return '/journal/' . $slug;
 }
+
+function render_post_body(string $body): string
+{
+    $paras = preg_split('/\n\n+/', trim($body));
+    $html = '';
+
+    foreach ($paras as $para) {
+        $para = trim($para);
+        if ($para === '') continue;
+
+        // Convert ## Headings
+        if (preg_match('/^###?\s+(.+)$/', $para, $m)) {
+            $html .= '<h3>' . e($m[1]) . '</h3>' . "\n";
+            continue;
+        }
+
+        // Convert Markdown links [text](url) -> HTML <a href="url">text</a>
+        $para = preg_replace_callback('/\[([^\]]+)\]\(([^)]+)\)/', static function ($m) {
+            return '<a href="' . e($m[2]) . '">' . e($m[1]) . '</a>';
+        }, $para);
+
+        // Convert Bold **text** -> <strong>text</strong>
+        $para = preg_replace_callback('/\*\*([^*]+)\*\*/', static function ($m) {
+            return '<strong>' . e($m[1]) . '</strong>';
+        }, $para);
+
+        // Convert Italic *text* -> <em>text</em>
+        $para = preg_replace_callback('/\*([^*]+)\*/', static function ($m) {
+            return '<em>' . e($m[1]) . '</em>';
+        }, $para);
+
+        $html .= '<p>' . nl2br($para) . '</p>' . "\n";
+    }
+
+    return $html;
+}
+

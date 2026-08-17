@@ -60,3 +60,8 @@
   - Slug: `2026-local-seo-aeo-playbook-junagadh-gujarat`
   - Tag: `LOCAL SEO`
   - Published: `2026-08-16`
+
+- **5 AI Workflow Automations That Saved 30+ Hours/Week for Indian SMEs in 2026**
+  - Slug: `5-ai-workflow-automations-saved-hours-indian-smes-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-17`

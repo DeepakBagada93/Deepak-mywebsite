@@ -93,9 +93,7 @@ require __DIR__ . '/partials/head.php';
                 <h1 class="article__title"><?= e($post['title']) ?></h1>
                 <div class="article__rule"></div>
                 <div class="article__body">
-                    <?php foreach (preg_split('/\n\n+/', (string) $post['body']) as $para): ?>
-                        <p><?= nl2br(e($para)) ?></p>
-                    <?php endforeach; ?>
+                    <?= render_post_body((string) $post['body']) ?>
                 </div>
                 <div class="article__foot">
                     <a class="btn btn--ghost" href="/#journal">← Back to the desk</a>
