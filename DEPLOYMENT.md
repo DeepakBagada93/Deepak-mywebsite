@@ -31,7 +31,7 @@ Change the file, commit, push, deploy. No phpMyAdmin, no database.
 
 The repository root is the web root. Three equivalent ways to get it there:
 
-### Option A — Hostinger hPanel Git Auto-Deploy (Recommended - Zero Setup)
+### Hostinger hPanel Git Auto-Deploy (Recommended - Zero Setup)
 
 Hostinger supports automatic deployment directly from GitHub on every `git push`:
 
@@ -42,21 +42,8 @@ Hostinger supports automatic deployment directly from GitHub on every `git push`
    - **Branch:** `main`
    - **Install Directory:** `public_html`
 4. Click **Create** then click **Deploy**.
-5. Enable **Auto-Deployment** (or copy the Webhook URL and paste it in **GitHub Repo Settings → Webhooks**).
+5. Enable **Auto-Deployment** (copy the Webhook URL and paste it into **GitHub Repo Settings → Webhooks**).
 6. **Result:** Every time you run `git push`, Hostinger automatically syncs the changes to `public_html` instantly!
-
----
-
-### Option B — GitHub Actions Automated FTP/SFTP Deploy
-
-We have added `.github/workflows/deploy.yml` to the repository:
-
-1. Go to **GitHub Repository** (`DeepakBagada93/Deepak-mywebsite`) → **Settings** → **Secrets and variables** → **Actions**.
-2. Add three Repository Secrets from your Hostinger FTP details (found in **hPanel → Files → FTP Accounts**):
-   - `FTP_SERVER`: e.g. `ftp.deepakbagada.in` or `193.203.184.64`
-   - `FTP_USERNAME`: your Hostinger FTP username
-   - `FTP_PASSWORD`: your Hostinger FTP password
-3. Every time you push to `main`, GitHub Actions will automatically upload updated files into `public_html`.
 
 ### PHP version
 
