@@ -50,3 +50,13 @@
   - Slug: `5-signs-website-costing-customers`
   - Tag: `WEB DEV`
   - Published: `2026-07-15`
+
+- **How to Build a Multi-Agent AI System for Indian SMEs in 2026 (Architecture & Cost Guide)**
+  - Slug: `build-multi-agent-ai-system-indian-smes-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-17`
+
+- **The 2026 Local SEO & AEO Playbook for Businesses in Junagadh & Gujarat**
+  - Slug: `2026-local-seo-aeo-playbook-junagadh-gujarat`
+  - Tag: `LOCAL SEO`
+  - Published: `2026-08-16`
