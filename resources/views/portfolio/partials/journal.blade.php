@@ -7,9 +7,8 @@
         </header>
 
         <p class="journal__lede reveal" data-reveal>
-            News and notes from the desk of Deepak Bagada — shipped projects, industry
-            analysis, and the occasional personal entry. Click any story — it opens in
-            a new tab.
+            News, architectural breakdowns, and field notes from Deepak Bagada — shipped AI agents,
+            web engineering, and founder stories.
         </p>
 
         <div class="journal__list">
@@ -17,9 +16,9 @@
                 <p class="mono">No entries yet. Add posts in <code>data/posts.php</code>.</p>
             @else
                 @foreach ($posts as $post)
-                    <a class="entry reveal" data-reveal href="{{ route('journal.show', $post->slug) }}" target="_blank" rel="noopener">
+                    <a class="entry reveal" data-reveal href="{{ route('journal.show', $post->slug) }}">
                         <div class="entry__meta mono">
-                            <span class="entry__tag">{{ strtoupper(($post->category ?? '') ?: 'NEWS') }}</span>
+                            <span class="entry__tag">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
                             <span class="entry__date">{{ $post->date?->format('d M Y') ?? '' }}</span>
                         </div>
                         <div class="entry__main">
@@ -33,7 +32,7 @@
         </div>
 
         <p class="journal__footnote mono reveal" data-reveal>
-            New stories land here — add your own in <code>data/posts.php</code>
+            Continuous insights published weekly from Junagadh, Gujarat.
         </p>
     </div>
 </section>

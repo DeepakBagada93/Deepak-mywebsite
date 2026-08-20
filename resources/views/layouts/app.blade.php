@@ -68,7 +68,9 @@
 </head>
 <body>
 
-    @include('partials.preloader')
+    @if (request()->is('/'))
+        @include('partials.preloader')
+    @endif
 
     @include('partials.masthead')
 
