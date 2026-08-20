@@ -2,15 +2,15 @@
 name: deepak-blog
 description: >
   Autonomous SEO & AEO journal blog generator for Deepak Bagada (deepakbagada.in).
-  Researches high-CTR trending topics in AI News & Agents, Day-in-the-Life Founder Stories,
-  Web Dev, Automation, and SEO/AEO. Enforces 1,000+ words, answer-first AEO intro, 3-5 strategic
-  internal links, 3-4 FAQ items, clean formatting (zero raw ## or ** symbol leaks), anti-duplication
-  via memory.md, subagent content audit, and dual-publishing to local data/posts.php and Hostinger MySQL database.
+  Produces 1,200+ word in-depth articles across 5 pillars (AI News & Agents, Founder Stories,
+  Web Dev, Automation, SEO/AEO). Enforces answer-first AEO intro, 3-5 strategic internal links,
+  3-4 FAQ items, clean formatting (zero raw ## or ** symbol leaks), anti-duplication via memory.md,
+  mandatory subagent content & SEO/AEO quality audit, and dual-publishing to local data/posts.php and Hostinger MySQL.
 ---
 
-# 🚀 Deepak Bagada SEO & AEO Journal Creator Skill (`deepak-blog` v3.1)
+# 🚀 Deepak Bagada SEO & AEO Journal Creator Skill (`deepak-blog` v3.2)
 
-This skill creates high-CTR, deeply authentic, and search-optimized journal posts for **Deepak Bagada** (Leading AI Expert, AI Agent Architect, Web Developer, and Marketing Automation Specialist based in Junagadh, Gujarat, India).
+This skill creates 1,200+ word, high-CTR, deeply authentic, and search-optimized journal posts for **Deepak Bagada** (Leading AI Expert, AI Agent Architect, Web Developer, and Marketing Automation Specialist based in Junagadh, Gujarat, India).
 
 ---
 
@@ -35,25 +35,25 @@ Select topics dynamically across these 5 core editorial pillars:
 
 ---
 
-## ✍️ Content, SEO & AEO Standards
+## ✍️ Strict Content, SEO & AEO Standards
 
 Every post MUST strictly fulfill these quality standards:
 
-### 1. Word Count & Tone
-- **Depth**: **1,000 to 1,500+ words** of practical, high-value, and actionable content.
+### 1. Mandatory Word Count & Tone
+- **Depth**: **Strictly 1,200 to 1,600+ words** with comprehensive explanations, actionable breakdowns, real-world numbers, and code/architecture snippets.
 - **Voice**: Authentic first-person perspective of Deepak Bagada (*"founder of SaaS Next, builder of Curro, AI agent developer based in Junagadh, Gujarat"*). Zero generic filler or AI fluff.
 
 ### 2. High-CTR Meta Title & Description
-- **Title**: Under 60 characters, high-CTR curiosity gap, includes power keywords and year (`2026`).
-- **Excerpt / Meta Description**: 140–160 characters, direct answer-first summary for search snippets and AI citation.
+- **Title**: Under 60 characters, high-CTR curiosity gap, includes power keywords, geographic angle, and year (`2026`).
+- **Excerpt / Meta Description**: 140–160 characters, direct answer-first summary for Google snippets and AI search citation.
 - **Tag**: `AI DEV`, `AI NEWS`, `MY STORY`, `AUTOMATION`, `WEB DEV`, `AEO`, or `LOCAL SEO`.
 
 ### 3. Answer-First Intro (AEO Core Trigger)
 - The opening 2–3 sentences **MUST directly answer** the primary question/topic in clear, authoritative language.
-- Engineered specifically for quotation in Google AI Overviews, Perplexity, Claude, and ChatGPT Search.
+- Formatted to be extracted verbatim by Google AI Overviews, Perplexity, Claude, and ChatGPT Search.
 
 ### 4. Mandatory Strategic Internal Links (3 to 5 Links)
-Every post MUST include 3–5 contextual markdown links mapped to:
+Every post MUST include **3–5 contextual markdown links** mapped to active site routes:
 - **AI Services**: `[AI Development & Autonomous Agents](/services/ai-development)`
 - **Automation Services**: `[Business Workflow Automation](/services/automation-expert)`
 - **Web Development**: `[Website Development & Laravel Architecture](/services/web-development)`
@@ -75,23 +75,38 @@ Every post MUST conclude with a dedicated `## Frequently Asked Questions` block 
 ```
 
 ### 6. Clean Formatting & Zero Raw Markdown Leaks
-To ensure flawless rendering across frontend Blade templates:
-- **Headings**: Either use `### Heading Text` with explicit double newlines (`\n\n`) before and after, or use clean HTML `<h3>Heading Text</h3>`.
+- **Headings**: Use `### Heading Text` with explicit double newlines (`\n\n`) before and after, or clean HTML `<h3>Heading Text</h3>`.
 - **Inline Bold**: Ensure all bold tags `**text**` are properly opened and closed on the same line.
-- **No Raw Symbol Leaks**: Never leave loose `#`, `##`, `###`, or `**` in body paragraphs.
+- **No Raw Symbol Leaks**: Zero stray `#`, `##`, `###`, or `**` in body paragraphs.
 - **Lists**: Format lists as clean `- item` or `* item` on separate lines.
 
 ---
 
-## 🔍 MANDATORY STEP 2: Content & SEO Subagent Audit
+## 🔍 MANDATORY STEP 2: Subagent Content Quality & SEO/AEO Audit
 
-Before updating any files, invoke or execute a comprehensive content audit:
-- [ ] Word count verified (>= 1,000 words).
-- [ ] Meta Title verified (< 60 chars, high-CTR).
-- [ ] Excerpt verified (140–160 chars, answer-first).
-- [ ] 3 to 5 working internal links present.
-- [ ] Frequently Asked Questions section with 3–4 Q&As included.
-- [ ] **Zero unclosed or leaking raw markdown symbols (`##`, `###`, `**`).**
+Before writing to `data/posts.php`, invoke the **`content-quality-auditor`** subagent (or audit rigorously against this rubric):
+
+### Subagent Audit Prompt / Instructions:
+```text
+You are the Content Quality & AEO/SEO Auditor for Deepak Bagada (deepakbagada.in).
+Inspect the provided journal post draft and audit strictly against these criteria:
+
+1. [WORD COUNT]: Count all words in the article body. It MUST be >= 1,200 words. (Reject if < 1,200 words).
+2. [AEO INTRO]: Verify opening 2-3 sentences provide an immediate, definitive answer for Google AI Overviews.
+3. [INTERNAL LINKS]: Verify exactly 3 to 5 valid internal markdown links are present (e.g. /services/ai-development, /services/web-development, /services/seo-aeo, /#projects, /#contact).
+4. [AEO FAQ]: Verify dedicated '## Frequently Asked Questions' section with 3-4 high-intent Q&As.
+5. [META TAGS]: Title < 60 chars (high CTR), Excerpt 140-160 chars (answer-first).
+6. [ZERO SYMBOL LEAKS]: Confirm 0% raw unrendered markdown leaks (no unclosed **, no unparsed ###).
+
+Return your structured report:
+- Word Count: [Number] (PASS/FAIL)
+- AEO Intro: PASS/FAIL
+- Internal Links: [Count] (PASS/FAIL)
+- FAQ Section: [Count] (PASS/FAIL)
+- Meta Tags: PASS/FAIL
+- Zero Symbol Leaks: PASS/FAIL
+- Final Verdict: STATUS: AUDIT PASS or STATUS: AUDIT FAIL
+```
 
 ---
 
@@ -137,8 +152,9 @@ git add . && git commit -m "Publish journal post: <title>" && git push origin ma
 
 ## 🎯 Verification Checklist
 - [ ] Topic passed anti-duplication check against `memory.md`.
-- [ ] Word count is 1,000+ words with rich subheadings.
-- [ ] 3–5 strategic internal links are present and working.
+- [ ] Subagent content quality audit returned `STATUS: AUDIT PASS`.
+- [ ] Word count strictly verified (**>= 1,200 words**).
+- [ ] 3–5 strategic internal links are present and verified.
 - [ ] 3–4 AEO FAQs are included.
 - [ ] Zero raw markdown symbol leaks verified.
 - [ ] `php -l data/posts.php` passes with zero errors.
