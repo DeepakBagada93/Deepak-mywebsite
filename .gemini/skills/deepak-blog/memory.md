@@ -6,6 +6,24 @@
 
 ## Existing Posts Ledger
 
+- **The 2026 AI Agent Shift: Why MCP Is Replacing Custom APIs**
+  - Slug: `ai-agent-shift-why-mcp-is-replacing-custom-apis`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-20`
+  - Words: 1,227
+
+- **Today I Built a Custom MCP Server with FastAPI for AI Agents**
+  - Slug: `building-custom-mcp-server-fastapi-ai-agents`
+  - Tag: `MY STORY`
+  - Published: `2026-08-20`
+  - Words: 1,268
+
+- **Frontier AI Models in 2026: What They Mean for Indian Devs**
+  - Slug: `frontier-ai-models-2026-impact-indian-developers`
+  - Tag: `AI DEV`
+  - Published: `2026-08-20`
+  - Words: 1,220
+
 - **Building Multi-Agent AI Systems for Indian SMEs in 2026: Complete Guide**
   - Slug: `building-multi-agent-ai-systems-indian-smes-2026`
   - Tag: `AI DEV`
