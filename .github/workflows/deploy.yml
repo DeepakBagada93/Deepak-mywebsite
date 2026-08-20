@@ -23,16 +23,19 @@ jobs:
       - name: Install Composer Dependencies
         run: composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction
 
-      - name: Setup SSH Key
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
+
+      - name: Add Known Hosts
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -p 65002 -H 86.38.243.124 >> ~/.ssh/known_hosts
 
       - name: Deploy Files to Hostinger
         run: |
-          rsync -avz -e "ssh -i ~/.ssh/deploy_key -p 65002" \
+          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='node_modules' \
@@ -44,4 +47,4 @@ jobs:
 
       - name: Clear and Rebuild Laravel Caches on Hostinger
         run: |
-          ssh -i ~/.ssh/deploy_key -p 65002 u775719140@86.38.243.124 "cd domains/deepakbagada.in/public_html && chmod -R 775 storage bootstrap/cache && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+          ssh -p 65002 -o StrictHostKeyChecking=no u775719140@86.38.243.124 "cd domains/deepakbagada.in/public_html && chmod -R 775 storage bootstrap/cache && php artisan config:cache && php artisan route:cache && php artisan view:cache"
