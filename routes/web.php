@@ -11,6 +11,7 @@ Route::get('/', [PortfolioController::class, 'index'])->name('home');
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
 
+Route::get('/journal', [PostController::class, 'index'])->name('journal.index');
 Route::get('/journal/{post:slug}', [PostController::class, 'show'])->name('journal.show');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'show'])->name('sitemap');

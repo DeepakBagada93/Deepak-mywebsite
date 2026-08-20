@@ -11,6 +11,11 @@
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+    <url>
+        <loc>{{ $url }}/journal</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
     @foreach ($services as $service)
     <url>
         <loc>{{ $url }}/services/{{ $service->slug }}</loc>

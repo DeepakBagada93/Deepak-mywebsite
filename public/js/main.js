@@ -251,6 +251,26 @@
         });
     }
 
+    /* ---------- Smooth Anchor Scrolling (Homepage) ---------- */
+    const isHomePage = window.location.pathname === "/" || window.location.pathname === "";
+    if (isHomePage) {
+        $$('a[href^="/#"], a[href^="#"]').forEach((link) => {
+            link.addEventListener("click", (e) => {
+                const href = link.getAttribute("href");
+                const hashIndex = href.indexOf("#");
+                if (hashIndex === -1) return;
+                const targetId = href.substring(hashIndex);
+                if (targetId === "#" || targetId === "") return;
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+                    history.pushState(null, "", targetId);
+                }
+            });
+        });
+    }
+
     // Refresh triggers once page is fully loaded
     window.addEventListener("load", () => {
         if (window.ScrollTrigger) ScrollTrigger.refresh();
