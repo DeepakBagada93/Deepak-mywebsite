@@ -28,3 +28,4 @@ Thumbs.db
 
 # local deployment archive (contains .env — never commit)
 deploy.zip
+hostinger_key.txt
