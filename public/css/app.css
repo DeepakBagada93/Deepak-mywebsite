@@ -330,7 +330,7 @@ code { font-family: var(--mono); font-size: 0.85em; }
    Skills
    ========================================================================== */
 .skills { border-top: 1px solid var(--hair); }
-.skills__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+.skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; }
 .skillcol { border-top: 1px solid var(--ink); padding-top: 22px; }
 .skillcol__title { margin-bottom: 30px; font-weight: 500; }
 .skillcol__list { display: grid; }

@@ -1,36 +1,58 @@
 @php
     $site = config('site');
     $url = rtrim($site['url'], '/');
-    $title = $head['title'] ?? $site['name'];
-    $desc = $head['description'] ?? $site['tagline'];
+    $title = $head['title'] ?? $site['name'] . ' — ' . $site['tagline'];
+    $desc = $head['description'] ?? $site['description'];
     $canon = $head['canonical'] ?? $url . '/';
     $ogType = $head['og_type'] ?? 'website';
     $ogTitle = $head['og_title'] ?? $title;
     $ogImg = $url . ($head['og_image'] ?? '/images/about-portrait.png');
+    $ogImgAlt = $head['og_image_alt'] ?? 'Deepak Bagada — Best Web Developer, AI Expert, Social Media Marketer & Automation Expert';
 @endphp
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ $title }}</title>
     <meta name="description" content="{{ $desc }}">
-    <meta name="keywords" content="best AI developer Junagadh, AI development Gujarat, AI agents Junagadh, multi-agent AI, AI automation Gujarat, SEO expert Junagadh, AEO expert, premium web developer Gujarat, Deepak Bagada, SaaS Next">
-    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="best web developer, expert web developer, AI expert, social media marketer, automation expert, best AI developer Junagadh, AI agents developer Gujarat, Laravel developer India, multi-agent AI systems, business workflow automation, SEO expert Junagadh, AEO expert India, social media marketing strategist, Deepak Bagada">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="{{ $site['name'] }}">
+    <meta name="publisher" content="{{ $site['name'] }}">
     <meta name="theme-color" content="#ffffff">
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Junagadh, Gujarat, India">
+
+    {{-- Canonical & Discovery --}}
     <link rel="canonical" href="{{ $canon }}">
-    <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt">
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt (AI Grounding Context)">
+    <link rel="author" href="{{ $url }}/#person">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    {{-- Open Graph / Facebook (Multi-Modal Image Rich for AI Snippets) --}}
+    <meta property="og:site_name" content="{{ $site['name'] }}">
     <meta property="og:type" content="{{ $ogType }}">
     <meta property="og:title" content="{{ $ogTitle }}">
     <meta property="og:description" content="{{ $desc }}">
     <meta property="og:url" content="{{ $canon }}">
     <meta property="og:image" content="{{ $ogImg }}">
+    <meta property="og:image:secure_url" content="{{ $ogImg }}">
+    <meta property="og:image:alt" content="{{ $ogImgAlt }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:locale" content="en_US">
+
+    {{-- Twitter / X Cards --}}
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@deeepakbagada">
+    <meta name="twitter:creator" content="@deeepakbagada">
     <meta name="twitter:title" content="{{ $ogTitle }}">
     <meta name="twitter:description" content="{{ $desc }}">
-    <title>{{ $title }}</title>
+    <meta name="twitter:image" content="{{ $ogImg }}">
+    <meta name="twitter:image:alt" content="{{ $ogImgAlt }}">
 
     @if (!empty($head['json_ld']))
     <script type="application/ld+json">{!! $head['json_ld'] !!}</script>
