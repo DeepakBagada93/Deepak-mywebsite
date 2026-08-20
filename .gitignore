@@ -29,3 +29,4 @@ Thumbs.db
 # local deployment archive (contains .env — never commit)
 deploy.zip
 hostinger_key.txt
+GITHUB_ACTION_SECRET_KEY.md
