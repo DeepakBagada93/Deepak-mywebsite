@@ -1,4 +1,4 @@
-# Deepak Bagada Journal Blog Memory Ledger
+# Deepak Bagada Journal Blog Memory Ledger (`deepak-blog`)
 
 > [!IMPORTANT]
 > This ledger tracks all past topics, titles, and slugs for deepakbagada.in journal posts.
@@ -6,9 +6,19 @@
 
 ## Existing Posts Ledger
 
+- **Building Multi-Agent AI Systems for Indian SMEs in 2026: Complete Guide**
+  - Slug: `building-multi-agent-ai-systems-indian-smes-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-17`
+
+- **How Much Does a Custom Website Cost in Junagadh & Gujarat? (2026 Guide)**
+  - Slug: `custom-website-cost-junagadh-gujarat-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-17`
+
 - **Curro 1.0 Ships: An AI Content Studio That Writes Like Its Owner**
   - Slug: `curro-1-0-ai-content-studio`
-  - Tag: `NEWS`
+  - Tag: `AI NEWS`
   - Published: `2026-08-14`
 
 - **From Code to AI: My Story So Far, in Six Chapters**
@@ -43,35 +53,10 @@
 
 - **The Junagadh Stack: What It Takes to Ship Fast From a Tier-3 City**
   - Slug: `junagadh-stack-shipping-from-tier-3`
-  - Tag: `BUILDING`
+  - Tag: `MY STORY`
   - Published: `2026-07-20`
 
 - **5 Signs Your Business Website Is Costing You Customers**
   - Slug: `5-signs-website-costing-customers`
   - Tag: `WEB DEV`
   - Published: `2026-07-15`
-
-- **How to Build a Multi-Agent AI System for Indian SMEs in 2026 (Architecture & Cost Guide)**
-  - Slug: `build-multi-agent-ai-system-indian-smes-2026`
-  - Tag: `AI DEV`
-  - Published: `2026-08-17`
-
-- **The 2026 Local SEO & AEO Playbook for Businesses in Junagadh & Gujarat**
-  - Slug: `2026-local-seo-aeo-playbook-junagadh-gujarat`
-  - Tag: `LOCAL SEO`
-  - Published: `2026-08-16`
-
-- **5 AI Workflow Automations That Saved 30+ Hours/Week for Indian SMEs in 2026**
-  - Slug: `5-ai-workflow-automations-saved-hours-indian-smes-2026`
-  - Tag: `AUTOMATION`
-  - Published: `2026-08-17`
-
-- **How Much Does a Custom Website Cost in Junagadh & Gujarat? (2026 Guide)**
-  - Slug: `custom-website-cost-junagadh-gujarat-2026`
-  - Tag: `WEB DEV`
-  - Published: `2026-08-17`
-
-- **Building Multi-Agent AI Systems for Indian SMEs in 2026: Complete Guide**
-  - Slug: `building-multi-agent-ai-systems-indian-smes-2026`
-  - Tag: `AI DEV`
-  - Published: `2026-08-17`
