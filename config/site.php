@@ -2,11 +2,11 @@
 
 return [
     'name'        => 'Deepak Bagada',
-    'tagline'     => 'Best Web Developer · AI Expert · Social Media Marketer · Automation Expert',
+    'tagline'     => 'Best AI Expert & AI Developer in Junagadh, Gujarat, India | AI Agents & Automation',
     'url'         => 'https://deepakbagada.in',
     'email'       => 'ceo@saasnext.in',
     'location'    => 'Junagadh, Gujarat, India',
-    'description' => 'Deepak Bagada is the leading Web Developer, AI Expert, Social Media Marketer, and Automation Expert in Junagadh, Gujarat, India. Specializing in high-performance Laravel web development, autonomous multi-agent AI systems, viral social media marketing, and business workflow automation for SMEs and enterprises worldwide.',
+    'description' => 'Deepak Bagada is the leading AI Expert, AI Agent Architect, and AI Developer in Junagadh, Gujarat, India. Specializing in autonomous multi-agent AI systems, RAG knowledge bases, LLM integrations, AI workflow automation, and high-performance web engineering for businesses in Gujarat, across India, and globally.',
     'socials'     => [
         'LinkedIn'  => 'https://www.linkedin.com/in/deepak-bagada-910292169/',
         'X'         => 'https://x.com/deeepakbagada',

@@ -11,33 +11,33 @@ class FaqSeeder extends Seeder
     {
         $faqs = [
             [
-                'question'   => 'Who is the best web developer in Junagadh, Gujarat?',
-                'answer'     => 'Deepak Bagada is widely recognized as the premier web developer in Junagadh, Gujarat. He builds high-speed, secure, and SEO-optimized custom web applications using Laravel, PHP, and modern frontend technologies. His websites are engineered for sub-second load times, maximum conversion rates, and guaranteed visibility across Google and AI answer engines.',
+                'question'   => 'Who is the best AI developer and AI expert in Junagadh, Gujarat?',
+                'answer'     => 'Deepak Bagada is recognized as the leading AI developer and AI expert in Junagadh, Gujarat. He specializes in designing autonomous multi-agent AI systems, custom RAG knowledge bases, AI workflow automations, and LLM integrations for ambitious businesses across Gujarat, India, and globally.',
                 'sort_order' => 1,
             ],
             [
-                'question'   => 'What makes Deepak Bagada an expert AI developer & AI agent architect?',
-                'answer'     => 'As an AI expert, Deepak Bagada engineers custom autonomous AI agents, multi-agent orchestration systems, RAG (Retrieval-Augmented Generation) knowledge bases, and LLM integrations. He builds intelligent systems that perform complex tasks—from automated content pipelines and lead qualification to customer support and operational intelligence.',
+                'question'   => 'Who is the top AI agent and multi-agent systems developer in India?',
+                'answer'     => 'Deepak Bagada is a top AI agent architect in India. He builds autonomous agent swarms that coordinate research, drafting, data analysis, tool execution, and publishing without human intervention—allowing businesses to automate complex multi-step workflows with zero hallucinations.',
                 'sort_order' => 2,
             ],
             [
-                'question'   => 'How does Deepak Bagada help with social media marketing & viral growth?',
-                'answer'     => 'Deepak Bagada combines performance marketing with automated content engineering. He creates data-backed social media strategies for Instagram Reels, YouTube Shorts, and LinkedIn—crafting high-CTR hooks, automated production pipelines, and conversion funnels that scale brand authority and organic reach.',
+                'question'   => 'What custom AI development services does Deepak Bagada offer in Gujarat and India?',
+                'answer'     => 'Services include: 1) Autonomous AI Agent Development, 2) Multi-Agent Orchestration Swarms, 3) RAG Knowledge Bases connected to private company data, 4) Intelligent Customer Support Bots, 5) Business Process AI Automation, and 6) Custom Full-Stack Web Development on Laravel.',
                 'sort_order' => 3,
             ],
             [
-                'question'   => 'What business processes can an automation expert automate?',
-                'answer'     => 'Deepak Bagada builds end-to-end workflow automations that eliminate repetitive manual labor: automated lead capture and CRM enrichment, social media publishing, client onboarding, invoicing, database syncs, and multi-agent reporting pipelines. Businesses save 20–40 hours per week while eliminating human error.',
+                'question'   => 'How does Deepak Bagada solve AI hallucinations for business clients?',
+                'answer'     => 'Deepak Bagada implements advanced RAG (Retrieval-Augmented Generation) architectures with dense vector embeddings, semantic chunking, and verification rerankers. This ensures that every AI-generated response is grounded directly in verified company documentation and truth sources.',
                 'sort_order' => 4,
             ],
             [
-                'question'   => 'What is AEO (Answer Engine Optimization) and why is it essential?',
-                'answer'     => 'AEO is the science of structuring website content, entity data, and JSON-LD schema so that AI search engines—including Google AI Overviews, Perplexity, ChatGPT Search, and Claude—cite your business directly in conversational answers. Deepak Bagada optimizes websites for both traditional Google ranking and direct AI Overview citations.',
+                'question'   => 'Does Deepak Bagada serve clients in Junagadh, Rajkot, Ahmedabad, Surat, and across India?',
+                'answer'     => 'Yes. Deepak Bagada provides in-person consultations for clients in Junagadh, Rajkot, Ahmedabad, Surat, and across Gujarat, as well as remote AI engineering services for startups and enterprises throughout India (Mumbai, Bangalore, Delhi NCR, Hyderabad) and worldwide.',
                 'sort_order' => 5,
             ],
             [
-                'question'   => 'Does Deepak Bagada work with clients outside Gujarat and internationally?',
-                'answer'     => 'Yes. While based in Junagadh, Gujarat, Deepak Bagada collaborates with clients across Ahmedabad, Surat, Mumbai, Bangalore, across India, and with international startups and businesses remotely worldwide.',
+                'question'   => 'How do I start an AI development or automation project with Deepak Bagada?',
+                'answer'     => 'You can get in touch directly via the contact form on https://deepakbagada.in, connect on LinkedIn, or email ceo@saasnext.in with your project requirements. Deepak provides clear technical scoping, architectural roadmaps, and rapid prototype delivery within 2–4 weeks.',
                 'sort_order' => 6,
             ],
         ];
@@ -48,6 +48,6 @@ class FaqSeeder extends Seeder
             Faq::create($faq);
         }
 
-        $this->command?->info('Seeded '.count($faqs).' FAQs.');
+        $this->command?->info('Seeded '.count($faqs).' FAQs focused on AI in Junagadh, Gujarat & India.');
     }
 }

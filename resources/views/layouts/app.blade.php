@@ -7,7 +7,7 @@
     $ogType = $head['og_type'] ?? 'website';
     $ogTitle = $head['og_title'] ?? $title;
     $ogImg = $url . ($head['og_image'] ?? '/images/about-portrait.png');
-    $ogImgAlt = $head['og_image_alt'] ?? 'Deepak Bagada — Best Web Developer, AI Expert, Social Media Marketer & Automation Expert';
+    $ogImgAlt = $head['og_image_alt'] ?? 'Deepak Bagada — Best AI Expert & AI Developer in Junagadh, Gujarat, India';
 @endphp
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
@@ -16,13 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $desc }}">
-    <meta name="keywords" content="best web developer, expert web developer, AI expert, social media marketer, automation expert, best AI developer Junagadh, AI agents developer Gujarat, Laravel developer India, multi-agent AI systems, business workflow automation, SEO expert Junagadh, AEO expert India, social media marketing strategist, Deepak Bagada">
+    <meta name="keywords" content="best AI developer in Junagadh, AI expert Gujarat, AI developer India, best AI agent developer Gujarat, multi-agent AI systems India, AI automation Junagadh, AI consultant Gujarat, top AI expert India, RAG AI developer India, generative AI expert Gujarat, Deepak Bagada AI, AI agency Junagadh, AI solutions Gujarat">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="{{ $site['name'] }}">
     <meta name="publisher" content="{{ $site['name'] }}">
     <meta name="theme-color" content="#ffffff">
     <meta name="geo.region" content="IN-GJ">
     <meta name="geo.placename" content="Junagadh, Gujarat, India">
+    <meta name="geo.position" content="21.5222;70.4579">
+    <meta name="ICBM" content="21.5222, 70.4579">
 
     {{-- Canonical & Discovery --}}
     <link rel="canonical" href="{{ $canon }}">
@@ -32,7 +34,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
     {{-- Open Graph / Facebook (Multi-Modal Image Rich for AI Snippets) --}}
-    <meta property="og:site_name" content="{{ $site['name'] }}">
+    <meta property="og:site_name" content="{{ $site['name'] }} — AI Expert & Developer">
     <meta property="og:type" content="{{ $ogType }}">
     <meta property="og:title" content="{{ $ogTitle }}">
     <meta property="og:description" content="{{ $desc }}">
