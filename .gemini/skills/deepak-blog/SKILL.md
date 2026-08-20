@@ -4,11 +4,11 @@ description: >
   Autonomous SEO & AEO journal blog generator for Deepak Bagada (deepakbagada.in).
   Researches high-CTR trending topics in AI News & Agents, Day-in-the-Life Founder Stories,
   Web Dev, Automation, and SEO/AEO. Enforces 1,000+ words, answer-first AEO intro, 3-5 strategic
-  internal links, 3-4 FAQ items, anti-duplication via memory.md, subagent content audit, and dual-publishing
-  to local data/posts.php and Hostinger MySQL database.
+  internal links, 3-4 FAQ items, clean formatting (zero raw ## or ** symbol leaks), anti-duplication
+  via memory.md, subagent content audit, and dual-publishing to local data/posts.php and Hostinger MySQL database.
 ---
 
-# 🚀 Deepak Bagada SEO & AEO Journal Creator Skill (`deepak-blog` v3.0)
+# 🚀 Deepak Bagada SEO & AEO Journal Creator Skill (`deepak-blog` v3.1)
 
 This skill creates high-CTR, deeply authentic, and search-optimized journal posts for **Deepak Bagada** (Leading AI Expert, AI Agent Architect, Web Developer, and Marketing Automation Specialist based in Junagadh, Gujarat, India).
 
@@ -74,9 +74,12 @@ Every post MUST conclude with a dedicated `## Frequently Asked Questions` block 
 [Clear explanation linking to /services or /#contact]
 ```
 
-### 6. Clean Formatting (Zero Markdown Symbol Leaks)
-- Ensure all markdown formatting (`##`, `###`, `**bold**`, `[link](url)`, `- list`) is clean and properly closed.
-- Fully compatible with `app/Support/Markdown.php`.
+### 6. Clean Formatting & Zero Raw Markdown Leaks
+To ensure flawless rendering across frontend Blade templates:
+- **Headings**: Either use `### Heading Text` with explicit double newlines (`\n\n`) before and after, or use clean HTML `<h3>Heading Text</h3>`.
+- **Inline Bold**: Ensure all bold tags `**text**` are properly opened and closed on the same line.
+- **No Raw Symbol Leaks**: Never leave loose `#`, `##`, `###`, or `**` in body paragraphs.
+- **Lists**: Format lists as clean `- item` or `* item` on separate lines.
 
 ---
 
@@ -88,7 +91,7 @@ Before updating any files, invoke or execute a comprehensive content audit:
 - [ ] Excerpt verified (140–160 chars, answer-first).
 - [ ] 3 to 5 working internal links present.
 - [ ] Frequently Asked Questions section with 3–4 Q&As included.
-- [ ] Zero unclosed or leaking raw markdown symbols.
+- [ ] **Zero unclosed or leaking raw markdown symbols (`##`, `###`, `**`).**
 
 ---
 
@@ -137,6 +140,7 @@ git add . && git commit -m "Publish journal post: <title>" && git push origin ma
 - [ ] Word count is 1,000+ words with rich subheadings.
 - [ ] 3–5 strategic internal links are present and working.
 - [ ] 3–4 AEO FAQs are included.
+- [ ] Zero raw markdown symbol leaks verified.
 - [ ] `php -l data/posts.php` passes with zero errors.
 - [ ] `php artisan db:seed --class=PostSeeder --force` synced successfully.
 - [ ] `memory.md` updated.

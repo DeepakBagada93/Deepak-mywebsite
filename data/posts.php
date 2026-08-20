@@ -34,7 +34,7 @@ Combining custom web engineering from our <a href="/services/web-development">We
 <h3>How long does it take to build a multi-agent AI system?</h3>
 Custom multi-agent workflows with RAG integration are typically built, evaluated, and deployed into production within 3 to 4 weeks.
 
-### How are API costs kept low for small businesses?
+<h3>How are API costs kept low for small businesses?</h3>
 By utilizing semantic caching, model tiering (using fast lightweight models for routing and larger models for complex logic), and structured outputs, monthly API costs average under Rs 2,000.
 BODY,
         'published_at' => '2026-08-17',
@@ -66,7 +66,7 @@ Standard business websites are completed in 2 to 3 weeks, while complex custom L
 <h3>Why choose custom PHP or Laravel over WordPress templates?</h3>
 Custom PHP and Laravel builds deliver sub-2-second load times, consume minimal server resources, eliminate security plugin vulnerabilities, and rank significantly higher on Google Search.
 
-### Do you provide ongoing maintenance in Gujarat?
+<h3>Do you provide ongoing maintenance in Gujarat?</h3>
 Yes. Annual maintenance covers server monitoring, security updates, canonical hygiene checks, and content updates.
 BODY,
         'published_at' => '2026-08-17',

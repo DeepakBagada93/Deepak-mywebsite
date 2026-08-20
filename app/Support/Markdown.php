@@ -3,66 +3,121 @@
 namespace App\Support;
 
 /**
- * Lightweight markdown renderer ported verbatim from the pure-PHP
- * `render_post_body()` helper so journal post bodies render identically.
+ * Robust Markdown & Content Renderer for Deepak Bagada Journal.
+ * Parses standard markdown (headings, bold, italics, links, lists, blockquotes)
+ * and preserves valid HTML tags without leaking raw markdown symbols like ## or **.
  */
 class Markdown
 {
     public static function render(string $body): string
     {
-        $paras = preg_split('/\n\n+/', trim($body));
-        $html = '';
-
-        foreach ($paras as $para) {
-            $para = trim($para);
-            if ($para === '') {
-                continue;
-            }
-
-            // Convert ## and ### Headings
-            if (preg_match('/^#{1,4}\s+(.+)$/', $para, $m)) {
-                $html .= '<h3>' . self::e($m[1]) . '</h3>' . "\n";
-                continue;
-            }
-
-            // Convert Markdown links [text](url) -> HTML <a href="url">text</a>
-            $para = preg_replace_callback('/\[([^\]]+)\]\(([^)]+)\)/', static function ($m) {
-                return '<a href="' . self::e($m[2]) . '">' . self::e($m[1]) . '</a>';
-            }, $para);
-
-            // Convert Bold **text** -> <strong>text</strong>
-            $para = preg_replace_callback('/\*\*([^*]+)\*\*/', static function ($m) {
-                return '<strong>' . self::e($m[1]) . '</strong>';
-            }, $para);
-
-            // Convert Italic *text* -> <em>text</em>
-            $para = preg_replace_callback('/\*([^*]+)\*/', static function ($m) {
-                return '<em>' . self::e($m[1]) . '</em>';
-            }, $para);
-
-            // Convert bullet lists (- or *)
-            if (preg_match('/^(?:[-*]\s+.+(?:\n|$))+/', $para)) {
-                $items = preg_split('/\n/', $para);
-                $list_html = '<ul style="margin: 16px 0; padding-left: 24px;">' . "\n";
-                foreach ($items as $item) {
-                    $item = trim($item);
-                    if (preg_match('/^[-*]\s+(.+)$/', $item, $im)) {
-                        $list_html .= '  <li>' . $im[1] . '</li>' . "\n";
-                    }
-                }
-                $list_html .= '</ul>' . "\n";
-                $html .= $list_html;
-                continue;
-            }
-
-            $html .= '<p>' . nl2br($para) . '</p>' . "\n";
+        $text = trim($body);
+        if ($text === '') {
+            return '';
         }
 
-        return $html;
+        // Standardize line endings
+        $text = str_replace(["\r\n", "\r"], "\n", $text);
+
+        // Pre-process headings on standalone lines (# Heading, ## Heading, ### Heading, #### Heading)
+        $text = preg_replace_callback('/^(#{1,6})\s+(.+)$/m', static function ($m) {
+            $headingText = trim($m[2]);
+            return "\n\n<h3>" . self::inlineFormat($headingText) . "</h3>\n\n";
+        }, $text);
+
+        // Split into block sections by two or more newlines
+        $blocks = preg_split('/\n\n+/', trim($text));
+        $output = '';
+
+        foreach ($blocks as $block) {
+            $block = trim($block);
+            if ($block === '') {
+                continue;
+            }
+
+            // If block is already a clean HTML heading, preserve it
+            if (preg_match('/^<h[1-6]>.*<\/h[1-6]>$/is', $block)) {
+                $output .= $block . "\n";
+                continue;
+            }
+
+            // If block is a blockquote
+            if (preg_match('/^>(.+)$/s', $block)) {
+                $quoteContent = preg_replace('/^>\s*/m', '', $block);
+                $output .= '<blockquote><p>' . self::inlineFormat(trim($quoteContent)) . '</p></blockquote>' . "\n";
+                continue;
+            }
+
+            // If block is an unordered list (- item or * item)
+            if (preg_match('/^(?:[-*]\s+.+(?:\n|$))+/m', $block)) {
+                $lines = explode("\n", $block);
+                $listHtml = '<ul style="margin: 16px 0; padding-left: 24px;">' . "\n";
+                foreach ($lines as $line) {
+                    $line = trim($line);
+                    if (preg_match('/^[-*]\s+(.+)$/', $line, $lm)) {
+                        $listHtml .= '  <li>' . self::inlineFormat($lm[1]) . '</li>' . "\n";
+                    }
+                }
+                $listHtml .= '</ul>' . "\n";
+                $output .= $listHtml;
+                continue;
+            }
+
+            // If block is an ordered list (1. item, 2. item)
+            if (preg_match('/^(?:\d+\.\s+.+(?:\n|$))+/m', $block)) {
+                $lines = explode("\n", $block);
+                $listHtml = '<ol style="margin: 16px 0; padding-left: 24px;">' . "\n";
+                foreach ($lines as $line) {
+                    $line = trim($line);
+                    if (preg_match('/^\d+\.\s+(.+)$/', $line, $lm)) {
+                        $listHtml .= '  <li>' . self::inlineFormat($lm[1]) . '</li>' . "\n";
+                    }
+                }
+                $listHtml .= '</ol>' . "\n";
+                $output .= $listHtml;
+                continue;
+            }
+
+            // Format inline elements and wrap in <p> tag
+            $formatted = self::inlineFormat($block);
+            $output .= '<p>' . nl2br($formatted) . '</p>' . "\n";
+        }
+
+        return $output;
     }
 
-    private static function e(string $value): string
+    /**
+     * Parse inline markdown tokens: bold (** or __), italic (* or _), links [text](url), inline code.
+     */
+    private static function inlineFormat(string $text): string
     {
-        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        // Convert Markdown links: [text](url) -> <a href="url">text</a>
+        $text = preg_replace_callback('/\[([^\]]+)\]\(([^)]+)\)/', static function ($m) {
+            $label = self::stripMarkdown($m[1]);
+            $url = htmlspecialchars($m[2], ENT_QUOTES, 'UTF-8');
+            return '<a href="' . $url . '">' . $label . '</a>';
+        }, $text);
+
+        // Convert Bold: **text** or __text__ -> <strong>text</strong>
+        $text = preg_replace('/(\*\*|__)(.*?)\1/s', '<strong>$2</strong>', $text);
+
+        // Convert Italic: *text* or _text_ -> <em>text</em>
+        $text = preg_replace('/(\*|_)(.*?)\1/s', '<em>$2</em>', $text);
+
+        // Convert Inline code: `code` -> <code>code</code>
+        $text = preg_replace('/`([^`]+)`/', '<code>$1</code>', $text);
+
+        // Strip any accidental dangling/escaped markdown symbols at start/end of lines
+        $text = preg_replace('/^#{1,6}\s*/m', '', $text);
+
+        return $text;
+    }
+
+    /**
+     * Strips residual markdown formatting markers from text.
+     */
+    private static function stripMarkdown(string $text): string
+    {
+        return str_replace(['**', '__', '`', '#'], '', $text);
     }
 }
