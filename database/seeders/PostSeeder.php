@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 
 class PostSeeder extends Seeder
@@ -17,8 +18,10 @@ class PostSeeder extends Seeder
     {
         $posts = require base_path('data/posts.php');
 
-        DB::table('posts')->truncate();
-
+        // Atomic sync: upsert every post and delete only rows that no longer
+        // exist in data/posts.php. Never truncate — a truncate leaves the posts
+        // table empty for the duration of the insert, which makes the live
+        // journal briefly show stale/missing posts until the next refresh.
         $rows = array_map(static function (array $item) {
             return [
                 'id'         => $item['slug'],
@@ -35,8 +38,23 @@ class PostSeeder extends Seeder
             ];
         }, $posts);
 
-        DB::table('posts')->insert($rows);
+        DB::transaction(static function () use ($rows): void {
+            $keepIds = array_column($rows, 'id');
 
-        $this->command?->info('Synced '.count($rows).' posts from data/posts.php.');
+            DB::table('posts')
+                ->whereNotIn('id', $keepIds)
+                ->delete();
+
+            DB::table('posts')->upsert(
+                $rows,
+                ['id'],
+                ['title', 'slug', 'excerpt', 'content', 'author', 'date', 'category', 'read_time', 'image', 'tags'],
+            );
+        });
+
+        // Keep rendered views in sync so fresh content shows immediately.
+        Artisan::call('view:clear');
+
+        $this->command?->info('Synced '.count($rows).' posts from data/posts.php (atomic upsert).');
     }
 }
