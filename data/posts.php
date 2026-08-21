@@ -564,4 +564,204 @@ My rule: make it legible first, make it memorable second, and never let the gimm
 BODY,
         'published_at' => '2026-07-07',
     ],
+    [
+        'title'        => 'AI Coding Agents in 2026: What They Actually Ship vs What They Promise',
+        'slug'         => 'ai-coding-agents-2026-what-they-ship-vs-promise',
+        'tag'          => 'AI NEWS',
+        'excerpt'      => 'Claude Code, Codex and Cursor now write real production code. After a year of using agents daily, here is where they genuinely accelerate a build — and where they quietly waste your budget.',
+        'body'         => <<<'BODY'
+In 2026, AI coding agents are no longer a demo. Claude Code, OpenAI Codex and Cursor's background agents plan tasks, edit dozens of files, run tests, and open pull requests with a human reviewing instead of typing. But the gap between the launch videos and a real production codebase is still wide. Here is the honest scorecard after a year of building with agents every day.
+
+### Where agents genuinely win
+
+<strong>Boilerplate and repetition.</strong> CRUD endpoints, migrations, seeders, form validation, config files — the 60% of every web project that is mechanical. An agent generates this in minutes at near-human quality, because it has seen millions of examples. When I scaffold a Laravel service page or a data sync script, the agent's first draft is usually 80% correct.
+
+<strong>Test writing and refactors.</strong> Agents excel at mechanical refactors: renaming across a codebase, extracting a service class, backfilling test coverage before a risky change. The agent does not get bored writing the fortieth test case — you do.
+
+<strong>Learning unfamiliar territory.</strong> Point an agent at a legacy file and ask it to explain the data flow before you touch anything. This has replaced hours of manual tracing.
+
+### Where they still lose
+
+<strong>Architecture decisions.</strong> Agents optimize for the immediate diff, not the three-year maintenance story. Given free rein, they will happily add a fourth way to do something your codebase already does three ways. Keep the system design with humans.
+
+<strong>Novel integrations.</strong> Anything touching a niche API, an undocumented behavior, or your specific business logic — agents hallucinate confidently. Every MCP server or custom integration we build still needs a human who reads the actual docs.
+
+<strong>Security review.</strong> Agents will write the SQL query you asked for, including the injectable one. Automated scanning catches some of it; a human catches the rest.
+
+### The workflow that works
+
+1. Small, verifiable tasks — never "build the feature," always "add this endpoint with these tests."
+2. Tests as the guardrail — the agent loops until the suite passes.
+3. Human review on every PR — agents write code fast; they do not take responsibility for it.
+
+### Bottom line
+
+AI coding agents are a force multiplier for a developer who can review the output, and a liability for one who cannot. The teams winning in 2026 are not the ones using the most AI — they are the ones with the tightest review loops. If you want agent-assisted development done with production discipline, that is exactly how we approach every <a href="/services/web-development">web development project</a>.
+BODY,
+        'published_at' => '2026-07-21',
+    ],
+    [
+        'title'        => 'The 2026 Answer Engine Optimization Checklist: Get Cited by ChatGPT, Perplexity and AI Overviews',
+        'slug'         => 'answer-engine-optimization-checklist-2026',
+        'tag'          => 'SEO',
+        'excerpt'      => 'AI answer engines now decide which businesses get mentioned when buyers ask questions. A practical AEO checklist — schema, llms.txt, quotable structure — that any business can run this week.',
+        'body'         => <<<'BODY'
+When a potential client asks ChatGPT "who is the best website developer in Junagadh," there is no blue link to click. The answer engine either cites you or cites your competitor. Answer Engine Optimization (AEO) — also called GEO, generative engine optimization — is the practice of making your site the source those engines quote. Here is the checklist we run for every client, distilled.
+
+### 1. Say the answer out loud, in the first 100 words
+
+AI engines extract quotable passages. Structure every key page so the direct answer to the query appears early, in plain sentences, before any storytelling. "We build Laravel websites for businesses in Junagadh, Gujarat" is machine-citable. "We craft digital experiences" is not.
+
+### 2. Add entity-rich structured data
+
+JSON-LD schema is how you tell machines <em>who</em> you are, not just what the page says. Minimum viable set for a service business:
+
+- <strong>Person + ProfessionalService</strong> on the homepage, with your real name, city, and area served
+- <strong>Service</strong> schema on every service page
+- <strong>FAQPage</strong> on any page with questions
+- <strong>Article</strong> schema on every blog post, with author and date
+
+### 3. Publish an llms.txt
+
+A <code>llms.txt</code> file at your root gives AI crawlers a curated map of your site — who you are, what you offer, which URLs matter most. It costs ten minutes and almost no one in local markets has one yet.
+
+### 4. Build quotable content blocks
+
+Answer engines lift tables, numbered lists, definition-style paragraphs, and "bottom line" summaries. Every article should contain at least one block a machine can quote verbatim without context loss.
+
+### 5. Prove experience, not just opinion
+
+E-E-A-T matters doubly for AI citation. Named author, real client outcomes with numbers, dated first-person accounts — "when we rebuilt this checkout flow, conversion rose 31%" — these are the passages engines trust and reuse.
+
+### 6. Keep technical hygiene tight
+
+Fast pages, clean crawl paths, an accurate XML sitemap, and no crawler-blocking mistakes. AI engines still depend on crawling; a site they cannot fetch is a site they cannot cite.
+
+### Bottom line
+
+Ranking on Google and being cited by AI are two overlapping games with different rules. If you only have budget for one, do the schema, the direct-answer structure, and the llms.txt first — they compound across every engine. That is precisely the work covered by our <a href="/services/seo-aeo">SEO &amp; AEO services</a>.
+BODY,
+        'published_at' => '2026-07-28',
+    ],
+    [
+        'title'        => 'WhatsApp AI Chatbots for Local Business: What Indian SMEs Are Actually Deploying in 2026',
+        'slug'         => 'whatsapp-ai-chatbots-indian-smes-2026',
+        'tag'          => 'AI BUILD',
+        'excerpt'      => 'In India, the customer is on WhatsApp — not your website. How small businesses in Gujarat are deploying AI agents that answer orders, pricing and support on the app customers already use.',
+        'body'         => <<<'BODY'
+Ask an Indian small business owner where customers actually message them, and the answer is never "the contact form." It is WhatsApp. In 2026, the most practical AI deployment for local businesses is not a fancy website chatbot — it is a WhatsApp AI agent that answers order status, pricing, store hours, and product availability instantly, in the language the customer typed in.
+
+### Why WhatsApp is the real storefront
+
+WhatsApp has over 500 million users in India, and for millions of buyers it <em>is</em> the internet. A shop in Junagadh gets ten WhatsApp messages for every one form submission. Every unanswered message after business hours is a customer who opens the next shop's chat.
+
+### What an AI agent on WhatsApp actually handles
+
+- <strong>Pre-sales questions:</strong> price ranges, availability, delivery areas, timings — answered in seconds, in Gujarati, Hindi or English.
+- <strong>Order status:</strong> the agent queries your inventory or order database directly (via a tool-calling layer or an MCP server) instead of guessing.
+- <strong>Lead capture:</strong> collects name, requirement and phone number, then hands off to a human when the conversation turns commercial.
+- <strong>After-hours coverage:</strong> the 60% of messages that arrive when the shop is closed.
+
+### The architecture, briefly
+
+A typical stack is the WhatsApp Business API, an LLM with tool-calling, and a thin server that connects the model to your real data — inventory, price lists, CRM. The critical design decision is the same as any agent: give the model <strong>read access to facts</strong> and keep <strong>actions</strong> (refunds, cancellations) behind human approval.
+
+### Honest limits
+
+An AI agent does not close high-trust deals, does not handle angry escalations gracefully, and will hallucinate discounts if you let it improvise pricing. The deployments that work treat it as a tireless first responder, not a replacement for the owner.
+
+### Bottom line
+
+For an Indian SME, a WhatsApp AI agent is usually the fastest AI investment to pay for itself — often within weeks — because it meets customers where they already are. If you want one built against your real inventory and workflows, that is a core <a href="/services/ai-development">AI development</a> engagement for us.
+BODY,
+        'published_at' => '2026-08-04',
+    ],
+    [
+        'title'        => 'When to Redesign Your Website: The 2026 Checklist for Small Businesses',
+        'slug'         => 'when-to-redesign-your-website-2026-checklist',
+        'tag'          => 'WEB DEV',
+        'excerpt'      => 'A redesign is expensive; a bad website is more expensive. Nine signals — from load time to AI crawlability — that tell you whether 2026 is the year to rebuild.',
+        'body'         => <<<'BODY'
+Every business owner asks the question eventually: "do I need a new website, or just fixes to this one?" A full redesign is a real investment, so the answer should come from evidence, not boredom. Here is the checklist we walk clients through in 2026.
+
+### 1. It loads in more than 3 seconds on a phone
+
+Mobile load time is still the single biggest lever on bounce rate. If your hero page takes 4+ seconds on 4G, you are losing a third of visitors before they see anything. Sometimes this is a fix, not a rebuild — but old themes often cannot be fixed cheaply.
+
+### 2. It is not usable on a phone at all
+
+Pinch-to-zoom, broken menus, cut-off buttons. In 2026 a majority of local traffic is mobile; a desktop-only site is functionally invisible.
+
+### 3. You cannot edit it yourself
+
+If every text change means emailing a developer (or a 2014-era admin panel), your content goes stale, and stale content loses both Google rankings and AI citations.
+
+### 4. It does not answer real customer questions
+
+Modern buying research is questions: pricing ranges, timelines, "do you serve my area." If your site is five brochures and zero answers, both humans and AI engines skip it.
+
+### 5. No schema, no citable structure
+
+If your pages lack structured data and direct-answer content, AI answer engines cannot cite you even when they find you.
+
+### 6. It looks untrustworthy next to competitors
+
+Fair or not, design quality is read as business quality. Compare your site with your top three competitors' — if yours reads as the oldest, that costs you quotes.
+
+### 7. It has no analytics signal
+
+No GA4 or equivalent means you are redesigning (or not) blind. Instrument first, decide second.
+
+### 8. Security is behind
+
+No HTTPS, outdated PHP or CMS versions, plugins from dead vendors — these are liabilities, not cosmetic issues.
+
+### 9. Business reality changed
+
+New services, new city, new positioning. When the business has moved and the site tells the old story, a redesign is a marketing necessity, not vanity.
+
+### Bottom line
+
+Score yourself honestly: 0–2 yeses means targeted fixes; 3 or more usually means a rebuild pays for itself in recovered leads. And a redesign done right is not just prettier — it is faster, structured for search and AI, and editable by you. That standard is exactly what we build into every <a href="/services/web-development">custom website project</a>.
+BODY,
+        'published_at' => '2026-08-11',
+    ],
+    [
+        'title'        => 'Zero-Click Search in 2026: What to Do When AI Takes the Clicks',
+        'tag'          => 'SEO',
+        'slug'         => 'zero-click-search-2026-what-to-do',
+        'excerpt'      => 'Google AI Overviews and answer engines answer the question on the results page, so fewer people click. The traffic strategy that still works when clicks shrink.',
+        'body'         => <<<'BODY'
+More searches than ever end without a click. Google's AI Overviews, ChatGPT, Perplexity and Gemini increasingly answer the question directly on the results page or in the chat. For businesses that built their growth on "rank #1, collect the click," this feels like the floor disappearing. It is not — but the strategy has to change.
+
+### Accept the new math
+
+Informational queries — "what is," "how does," "best X for Y" — are losing the most clicks, because those are exactly the queries AI answers well. But <strong>commercial and local intent has not gone away</strong>. "Website developer in Junagadh," "Laravel agency cost," "hire AI developer" — these still convert to visits, calls, and chats. The game shifts from winning every query to winning the ones that matter.
+
+### 1. Optimize to be cited, not just ranked
+
+In a zero-click world, being <em>mentioned</em> in the AI answer is the new ranking. That means direct answers early on the page, structured data, an llms.txt, and quotable blocks with real proof. (We cover the full checklist in our post on <a href="/journal/answer-engine-optimization-checklist-2026">AEO in 2026</a>.)
+
+### 2. Publish the content AI needs to cite
+
+AI engines synthesize from sources. Original data, first-person case studies with numbers, comparison tables, clear definitions — content that exists nowhere else. The site that published the actual benchmark gets cited; the site that rephrased everyone else's post does not.
+
+### 3. Own your demand-generation channels
+
+Search sends you traffic; it does not send loyalty. An email list, a LinkedIn presence, and repeat clients are click-proof. Every business that survived previous Google upheavals shared one trait: a meaningful share of demand did not come from Google.
+
+### 4. Win the clicks that remain
+
+The clicks that survive zero-click are high intent: branded searches, "near me," pricing, contact. Make those pages conversion machines — clear offer, obvious next step, fast load, mobile-perfect.
+
+### 5. Measure mentions, not just sessions
+
+Track when your brand appears in AI answers — Perplexity citations, ChatGPT recommendations, AI Overview attributions. The businesses that will win the next five years are the ones that noticed this shift early and adapted their <a href="/services/seo-aeo">SEO strategy for the AI era</a>.
+
+### Bottom line
+
+Zero-click search does not end search marketing — it splits it. Clicks concentrate at the bottom of the funnel, and citations at the top. Build to be cited where you cannot be clicked, and to convert hard where you can.
+BODY,
+        'published_at' => '2026-08-18',
+    ],
 ];
