@@ -6,10 +6,31 @@
     "use strict";
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!window.gsap || prefersReduced) {
+    const lockScroll = () => {
+        document.documentElement.classList.add("no-scroll");
+        document.body.classList.add("no-scroll");
+    };
+    const unlockScroll = () => {
+        document.documentElement.classList.remove("no-scroll");
         document.body.classList.remove("no-scroll");
+    };
+    const refreshScrollTriggers = () => {
+        if (!window.ScrollTrigger) return;
+        // double-rAF ensures layout has settled after display:none + scrollbar return
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                ScrollTrigger.refresh();
+            });
+        });
+    };
+
+    if (!window.gsap || prefersReduced) {
+        unlockScroll();
         const preloader = document.getElementById("preloader");
-        if (preloader) preloader.style.display = "none";
+        if (preloader) {
+            preloader.classList.add("is-hidden");
+            preloader.style.display = "none";
+        }
         return;
     }
 
@@ -28,8 +49,9 @@
 
     /* ---------- Ensure scroll is always unlocked on non-homepage / reload ---------- */
     if (!isHomePageWithPreloader) {
-        document.body.classList.remove("no-scroll");
+        unlockScroll();
         if (preloaderEl) {
+            preloaderEl.classList.add("is-hidden");
             preloaderEl.style.display = "none";
         }
     }
@@ -56,15 +78,22 @@
         const counter = { v: 0 };
         const countEl = $("#preloader-count");
         const fillEl = $("#preloader-fill");
-        
-        document.body.classList.add("no-scroll");
 
-        // Failsafe timer to guarantee scroll is never permanently locked
+        lockScroll();
+        // prevent scroll bleed / touchmove while locked (iOS)
+        const preventTouch = (e) => e.preventDefault();
+        document.addEventListener("touchmove", preventTouch, { passive: false });
+
+        // Failsafe: only fires if intro somehow stalls — keep until intro truly ends
         const unlockFailsafe = setTimeout(() => {
-            document.body.classList.remove("no-scroll");
-            if (preloaderEl) preloaderEl.style.display = "none";
-            if (window.ScrollTrigger) ScrollTrigger.refresh();
-        }, 2600);
+            unlockScroll();
+            document.removeEventListener("touchmove", preventTouch);
+            if (preloaderEl) {
+                preloaderEl.classList.add("is-hidden");
+                preloaderEl.style.display = "none";
+            }
+            refreshScrollTriggers();
+        }, 5000);
 
         gsap.to(counter, {
             v: 100,
@@ -86,16 +115,27 @@
             delay: 1.6,
             onComplete: () => {
                 clearTimeout(unlockFailsafe);
-                document.body.classList.remove("no-scroll");
-                if (window.ScrollTrigger) ScrollTrigger.refresh();
+                document.removeEventListener("touchmove", preventTouch);
+                if (preloaderEl) {
+                    preloaderEl.classList.add("is-hidden");
+                    preloaderEl.style.display = "none";
+                }
+                unlockScroll();
+                // Force layout settle then refresh all ScrollTriggers — eliminates post-preloader "tuck"
+                refreshScrollTriggers();
+                // extra refresh after hero stagger settles
+                setTimeout(refreshScrollTriggers, 280);
             }
         });
 
         intro
             .to(preloaderEl, { opacity: 0, duration: 0.5, ease: "power2.inOut" })
             .add(() => {
-                if (preloaderEl) preloaderEl.style.display = "none";
-                document.body.classList.remove("no-scroll");
+                // hide preloader visually but KEEP scroll locked until timeline fully completes
+                if (preloaderEl) {
+                    preloaderEl.classList.add("is-hidden");
+                    preloaderEl.style.display = "none";
+                }
             })
             .to(".masthead", { yPercent: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, "-=0.2")
             .to(".hero__kicker", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, "-=0.3")
@@ -113,7 +153,7 @@
 
     } else {
         /* ---------- Smooth Subpage Entrance ---------- */
-        document.body.classList.remove("no-scroll");
+        unlockScroll();
         gsap.set(".masthead", { yPercent: -100, opacity: 0 });
         gsap.to(".masthead", { yPercent: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
         gsap.fromTo("main", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.08 });
@@ -228,7 +268,9 @@
             mmenu.classList.toggle("is-open", open);
             burger.setAttribute("aria-expanded", String(open));
             burger.textContent = open ? "Close" : "Menu";
-            document.body.classList.toggle("no-scroll", open);
+            if (open) lockScroll();
+            else unlockScroll();
+            if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
         };
         burger.addEventListener("click", () => toggleMenu());
         $$(".mmenu a").forEach((a) => a.addEventListener("click", () => toggleMenu(false)));
@@ -271,8 +313,15 @@
         });
     }
 
-    // Refresh triggers once page is fully loaded
+    // Refresh triggers once page is fully loaded — double-rAF for post-preloader settle
     window.addEventListener("load", () => {
-        if (window.ScrollTrigger) ScrollTrigger.refresh();
+        refreshScrollTriggers();
+        // iOS address-bar collapse changes viewport height — refresh after 400ms
+        setTimeout(refreshScrollTriggers, 400);
+    });
+    // Handle bfcache / back-forward restore where preloader may be cached
+    window.addEventListener("pageshow", () => {
+        unlockScroll();
+        refreshScrollTriggers();
     });
 })();
