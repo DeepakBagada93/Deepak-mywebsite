@@ -20,6 +20,9 @@
                         <div class="entry__meta mono">
                             <span class="entry__tag">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
                             <span class="entry__date">{{ $post->date?->format('d M Y') ?? '' }}</span>
+                            @if (!empty($post->read_time))
+                                <span class="entry__readtime" style="color: var(--muted); font-size: 0.64rem;">{{ $post->read_time }}</span>
+                            @endif
                         </div>
                         <div class="entry__main">
                             <h3 class="entry__title">{{ $post->title }}</h3>
@@ -31,8 +34,12 @@
             @endif
         </div>
 
-        <p class="journal__footnote mono reveal" data-reveal>
-            Continuous insights published weekly from Junagadh, Gujarat.
-        </p>
+        <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 20px;">
+            <a class="btn btn--ghost" href="{{ route('journal.index') }}">View all {{ count($posts) }} journal articles →</a>
+            <p class="journal__footnote mono reveal" data-reveal style="margin-top: 0;">
+                Continuous insights published weekly from Junagadh, Gujarat.
+            </p>
+        </div>
     </div>
 </section>
+

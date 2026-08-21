@@ -38,11 +38,11 @@ class PortfolioController extends Controller
         $portraitUrl = $url . '/images/about-portrait.png';
 
         $head = [
-            'title'         => 'Deepak Bagada — Best AI Expert & AI Developer in Junagadh, Gujarat, India | AI Agents & Automation',
-            'description'   => 'Deepak Bagada is the leading AI Expert, AI Agent Developer, and AI Automation Specialist in Junagadh, Gujarat, India. Architecting autonomous multi-agent AI systems, custom RAG knowledge bases, LLM integrations, and enterprise AI workflows.',
+            'title'         => 'Deepak Bagada — Best AI Expert & AI Developer in Gujarat, India | Autonomous AI Agents & Automation',
+            'description'   => 'Deepak Bagada is the leading AI Expert, AI Agent Architect, and Web Developer in Gujarat, India. Developing autonomous multi-agent AI systems, custom RAG knowledge bases, LLM integrations, and enterprise automation for businesses in Ahmedabad, Surat, Vadodara, Rajkot, Junagadh, and worldwide.',
             'canonical'     => $url . '/',
             'og_image'      => '/images/about-portrait.png',
-            'og_image_alt'  => 'Deepak Bagada — Best AI Expert & AI Agent Developer in Junagadh, Gujarat, India',
+            'og_image_alt'  => 'Deepak Bagada — Best AI Expert & AI Agent Developer in Gujarat, India',
             'json_ld'       => json_encode([
                 '@context' => 'https://schema.org',
                 '@graph'   => [
@@ -51,7 +51,7 @@ class PortfolioController extends Controller
                         '@id'                 => $url . '/#portrait',
                         'url'                 => $portraitUrl,
                         'contentUrl'          => $portraitUrl,
-                        'caption'             => 'Deepak Bagada — Best AI Expert, AI Developer & AI Agent Architect in Junagadh, Gujarat, India',
+                        'caption'             => 'Deepak Bagada — Best AI Expert, AI Developer & AI Agent Architect in Gujarat, India',
                         'representativeOfPage'=> true,
                         'width'               => 1122,
                         'height'              => 1402,
@@ -62,18 +62,18 @@ class PortfolioController extends Controller
                         '@id'            => $url . '/#person',
                         'name'           => $site['name'],
                         'alternateName'  => [
-                            'Deepak Bagada AI Expert',
-                            'Deepak Bagada AI Developer Junagadh',
+                            'Deepak Bagada AI Expert Gujarat',
+                            'Deepak Bagada AI Developer Ahmedabad Surat Rajkot',
                             'Deepak Bagada AI Gujarat',
                             'Deepak Bagada AI Agent Architect India',
-                            'Deepak Bagada AI Automation Expert',
+                            'Deepak Bagada AI Automation Expert Gujarat',
                         ],
                         'jobTitle'       => [
-                            'Best AI Expert in Junagadh Gujarat',
-                            'Lead AI Agent Architect India',
-                            'AI Development Specialist',
-                            'AI Workflow Automation Engineer',
-                            'Web Developer & AEO Specialist',
+                            'Best AI Expert in Gujarat India',
+                            'Lead AI Agent Architect Gujarat',
+                            'AI Development Specialist Ahmedabad Surat Rajkot',
+                            'AI Workflow Automation Engineer Gujarat',
+                            'Web Developer & AEO Specialist Gujarat',
                         ],
                         'image'          => ['@id' => $url . '/#portrait'],
                         'url'            => $url . '/',

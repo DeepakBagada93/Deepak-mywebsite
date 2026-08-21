@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $desc }}">
-    <meta name="keywords" content="best AI developer in Junagadh, AI expert Gujarat, AI developer India, best AI agent developer Gujarat, multi-agent AI systems India, AI automation Junagadh, AI consultant Gujarat, top AI expert India, RAG AI developer India, generative AI expert Gujarat, Deepak Bagada AI, AI agency Junagadh, AI solutions Gujarat">
+    <meta name="keywords" content="best AI developer Gujarat, AI expert Gujarat, best AI agent developer Gujarat, AI consultant Gujarat, AI development Ahmedabad Surat Rajkot Vadodara Junagadh, multi-agent AI systems Gujarat, enterprise AI automation Gujarat, top AI expert India, RAG AI developer Gujarat, generative AI expert Gujarat, Deepak Bagada AI, web developer Gujarat, Laravel developer Gujarat, AEO expert Gujarat">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="{{ $site['name'] }}">
     <meta name="publisher" content="{{ $site['name'] }}">

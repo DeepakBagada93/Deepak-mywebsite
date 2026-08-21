@@ -22,6 +22,9 @@
                             <div class="entry__meta mono">
                                 <span class="entry__tag">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
                                 <span class="entry__date">{{ $post->date?->format('d M Y') ?? '' }}</span>
+                                @if (!empty($post->read_time))
+                                    <span class="entry__readtime" style="color: var(--muted); font-size: 0.64rem;">{{ $post->read_time }}</span>
+                                @endif
                             </div>
                             <div class="entry__main">
                                 <h2 class="entry__title">{{ $post->title }}</h2>
@@ -40,3 +43,4 @@
         </div>
     </article>
 @endsection
+
