@@ -22,11 +22,8 @@
                     <a class="btn btn--ghost" href="#contact" data-scroll>Build with AI</a>
                 </div>
             </div>
-            <figure class="hero__figure hero__video reveal" data-reveal>
-                <video class="hero__video-el" autoplay muted loop playsinline controls preload="auto" title="Deepak Bagada — AI Developer & AI Expert in Junagadh, Gujarat, India">
-                    <source src="/images/hero-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <figure class="hero__figure reveal" data-reveal style="justify-self: end; width: 100%; max-width: 440px;">
+                <img src="/images/hero-portrait.png" alt="Deepak Bagada — Best AI Expert & AI Developer in Gujarat, India" width="440" height="586" loading="eager" fetchpriority="high">
                 <figcaption class="mono">Deepak Bagada — AI Systems 2026</figcaption>
             </figure>
         </div>

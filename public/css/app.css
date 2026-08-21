@@ -189,8 +189,8 @@ code { font-family: var(--mono); font-size: 0.85em; }
 .hero__lede { max-width: 46ch; font-size: 1.12rem; line-height: 1.8; color: #333; margin-bottom: 38px; }
 .hero__cta { display: flex; gap: 16px; flex-wrap: wrap; }
 
-.hero__figure { border: 1px solid var(--hair); }
-.hero__figure img { width: 100%; height: auto; }
+.hero__figure { border: 1px solid var(--hair); background: var(--paper); overflow: hidden; }
+.hero__figure img { width: 100%; height: auto; display: block; object-fit: cover; }
 .hero__video { justify-self: end; width: 100%; max-width: 440px; }
 .hero__video-el {
     width: 100%;
