@@ -102,3 +102,56 @@
 - **The Production AI Content & Media Stack**
   - URL: `https://deepakbagada.in/stack`
   - Description: Complete end-to-end multi-agent pipeline specification: SearXNG topical scanner, Gemini/Claude drafting engine, PHP/CQ subagent auditor, and omni-channel distribution swarms.
+- **OpenClaw Personal AI Assistant & ClawHub Skill Registry**
+  - Slug: `openclaw-personal-ai-assistant`
+  - Category: `Agent Architecture (agent-architecture)`
+  - Difficulty: `advanced`
+  - Version: `1.0.0`
+  - Published: `2026-08-23`
+  - URL: `https://deepakbagada.in/library/openclaw-personal-ai-assistant`
+  - Stars: `362000`
+
+- **n8n MCP Workflow Automation — 400 Integrations**
+  - Slug: `n8n-mcp-workflow-automation`
+  - Category: `Automation & Workflow (automation)`
+  - Difficulty: `intermediate`
+  - Version: `1.0.0`
+  - Published: `2026-08-23`
+  - URL: `https://deepakbagada.in/library/n8n-mcp-workflow-automation`
+  - Stars: `190545`
+
+- **Warp Terminal Agent Environment — The Agentic IDE**
+  - Slug: `warp-terminal-agent-environment`
+  - Category: `Automation & Workflow (automation)`
+  - Difficulty: `intermediate`
+  - Version: `1.0.0`
+  - Published: `2026-08-23`
+  - URL: `https://deepakbagada.in/library/warp-terminal-agent-environment`
+  - Stars: `28400`
+
+- **Browser-Use AI Web Automation — 91k Stars**
+  - Slug: `browser-use-ai-web-automation`
+  - Category: `Automation & Workflow (automation)`
+  - Difficulty: `intermediate`
+  - Version: `1.0.0`
+  - Published: `2026-08-23`
+  - URL: `https://deepakbagada.in/library/browser-use-ai-web-automation`
+  - Stars: `91422`
+
+- **RAG-Anything Local RAG — No OpenAI Needed**
+  - Slug: `rag-anything-local-rag-framework`
+  - Category: `Agent Architecture (agent-architecture)`
+  - Difficulty: `intermediate`
+  - Version: `1.0.0`
+  - Published: `2026-08-23`
+  - URL: `https://deepakbagada.in/library/rag-anything-local-rag-framework`
+  - Stars: `7143`
+
+- **Awesome Claude Skills — 1,000+ Production Skills**
+  - Slug: `awesome-claude-skills-collection`
+  - Category: `Model Context Protocol (mcp)`
+  - Difficulty: `beginner`
+  - Version: `1.0.0`
+  - Published: `2026-08-23`
+  - URL: `https://deepakbagada.in/library/awesome-claude-skills-collection`
+  - Stars: `18400`
