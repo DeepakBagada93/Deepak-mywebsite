@@ -14,4 +14,31 @@ Route::get('/services/{service:slug}', [ServiceController::class, 'show'])->name
 Route::get('/journal', [PostController::class, 'index'])->name('journal.index');
 Route::get('/journal/{post:slug}', [PostController::class, 'show'])->name('journal.show');
 
+Route::prefix('library')->group(function () {
+    Route::get('/', [\App\Http\Controllers\SkillController::class, 'index'])->name('library.index');
+    Route::get('/category/{category:slug}', [\App\Http\Controllers\SkillController::class, 'category'])->name('library.category');
+    Route::get('/{skill:slug}', [\App\Http\Controllers\SkillController::class, 'show'])->name('library.show');
+});
+
+Route::prefix('blueprints')->group(function () {
+    Route::get('/', [\App\Http\Controllers\BlueprintController::class, 'index'])->name('blueprints.index');
+    Route::get('/{id}', [\App\Http\Controllers\BlueprintController::class, 'show'])->name('blueprints.show');
+});
+
+Route::prefix('repos')->group(function () {
+    Route::get('/', [\App\Http\Controllers\CuratedRepoController::class, 'index'])->name('repos.index');
+    Route::get('/category/{category}', [\App\Http\Controllers\CuratedRepoController::class, 'category'])->name('repos.category');
+});
+
+Route::get('/stack', function () {
+    $site = config('site');
+    $url = rtrim($site['url'], '/');
+    $head = [
+        'title'       => 'The Production AI Content & Media Stack — ' . $site['name'],
+        'description' => 'Architecture documentation for the autonomous content and video generation pipeline.',
+        'canonical'   => $url . '/stack',
+    ];
+    return view('stack.index', compact('site', 'head'));
+})->name('stack.index');
+
 Route::get('/sitemap.xml', [SitemapController::class, 'show'])->name('sitemap');

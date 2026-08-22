@@ -37,6 +37,16 @@
             </div>
 
             <div class="footer__col">
+                <p class="mono footer__col-title">Open Source</p>
+                <ul class="footer__col-list">
+                    <li><a href="{{ route('library.index') }}">Skills &amp; MCP library</a></li>
+                    <li><a href="{{ route('blueprints.index') }}">Architecture blueprints</a></li>
+                    <li><a href="{{ route('repos.index') }}">Curated AI repositories</a></li>
+                    <li><a href="https://github.com/DeepakBagada93" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
                 <p class="mono footer__col-title">Follow</p>
                 <ul class="footer__col-list footer__col-list--socials">
                     @foreach ($site['socials'] as $label => $href)

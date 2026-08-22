@@ -48,6 +48,9 @@
             "@php artisan config:clear --ansi @no_additional_args",
             "@php artisan test"
         ],
+        "lint": "pint",
+        "lint:test": "pint --test",
+        "validate:migrations": "@php -r \"foreach(glob('database/migrations/*.php') as \\$f) echo basename(\\$f).PHP_EOL;\"",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"

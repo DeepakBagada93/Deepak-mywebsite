@@ -313,6 +313,27 @@
         });
     }
 
+    /* ---------- GA4 / DataLayer Custom Events ---------- */
+    document.addEventListener("click", (e) => {
+        const target = e.target.closest("[data-event]");
+        if (target) {
+            const eventName = target.getAttribute("data-event");
+            const eventLabel = target.getAttribute("data-event-label") || target.innerText.trim();
+            if (typeof window.gtag === "function") {
+                window.gtag("event", eventName, {
+                    event_category: "open_source_community",
+                    event_label: eventLabel,
+                });
+            }
+            if (window.dataLayer && Array.isArray(window.dataLayer)) {
+                window.dataLayer.push({
+                    event: eventName,
+                    event_label: eventLabel,
+                });
+            }
+        }
+    });
+
     // Refresh triggers once page is fully loaded — double-rAF for post-preloader settle
     window.addEventListener("load", () => {
         refreshScrollTriggers();

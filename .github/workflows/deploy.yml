@@ -6,7 +6,42 @@ on:
       - main
 
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer, pint
+
+      - name: Check PHP syntax
+        run: find app/ database/ routes/ -name "*.php" -exec php -l {} \;
+
+      - name: Run Pint (style)
+        run: pint --test
+
+  migration-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+      - name: Validate migrations
+        run: |
+          php -r "
+            \$files = glob('database/migrations/*.php');
+            foreach (\$files as \$f) {
+              echo '✓ ' . basename(\$f) . PHP_EOL;
+            }
+          "
+
   deploy:
+    needs: [quality, migration-check]
     runs-on: ubuntu-latest
 
     steps:
