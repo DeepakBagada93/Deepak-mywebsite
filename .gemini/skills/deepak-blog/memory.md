@@ -78,3 +78,63 @@
   - Slug: `5-signs-website-costing-customers`
   - Tag: `WEB DEV`
   - Published: `2026-07-15`
+
+- **MCP Servers in Production: Enterprise Architecture Guide**
+  - Slug: `mcp-server-enterprise-architecture-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-22`
+  - Words: 1611
+
+- **Hybrid Reasoning Models: Claude 3.7 & DeepSeek R1**
+  - Slug: `hybrid-reasoning-models-claude-deepseek-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-22`
+  - Words: 1267
+
+- **Local LLMs Offline in India: 70B Models on Your Laptop**
+  - Slug: `local-llms-offline-india-2026-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-08-22`
+  - Words: 1218
+
+- **RAG 2.0 to GraphRAG: What Actually Works in Production**
+  - Slug: `rag-2-graphrag-production-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-22`
+  - Words: 1297
+
+- **Building AI Products from Junagadh: Real Playbook**
+  - Slug: `building-ai-products-junagadh-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-08-22`
+  - Words: 1290
+
+- **A Day in My Life: AI Developer Routine Gujarat 2026**
+  - Slug: `ai-developer-daily-routine-gujarat-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-08-22`
+  - Words: 2072
+
+- **Autonomous QA Swarms Cut Bugs 87% in CI/CD 2026**
+  - Slug: `autonomous-qa-swarms-cicd-87-percent-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-22`
+  - Words: 1713
+
+- **Zero-Hallucination RAG with Pydantic + pgvector**
+  - Slug: `zero-hallucination-rag-pydantic-pgvector-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-22`
+  - Words: 1835
+
+- **AI Swarms for Indian SMEs: 30-Day ROI Architecture**
+  - Slug: `ai-swarms-indian-smes-30day-roi-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-22`
+  - Words: 1732
+
+- **Laravel 13 in 2026: 98 Lighthouse Without a Single SPA**
+  - Slug: `laravel-13-lighthouse-98-without-spa-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-22`
+  - Words: 1758
