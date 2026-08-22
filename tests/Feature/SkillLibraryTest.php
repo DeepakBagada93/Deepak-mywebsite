@@ -2,10 +2,28 @@
 
 namespace Tests\Feature;
 
+use Database\Seeders\CuratedRepoSeeder;
+use Database\Seeders\ProjectSeeder;
+use Database\Seeders\SkillCategorySeeder;
+use Database\Seeders\SkillSeeder;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class SkillLibraryTest extends TestCase
 {
+    use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->seed([
+            ProjectSeeder::class,
+            SkillCategorySeeder::class,
+            SkillSeeder::class,
+            CuratedRepoSeeder::class,
+        ]);
+    }
+
     public function test_library_page_loads(): void
     {
         $response = $this->get('/library');

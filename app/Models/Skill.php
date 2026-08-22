@@ -27,8 +27,8 @@ class Skill extends Model
     protected function casts(): array
     {
         return [
-            'stars'        => 'integer',
-            'sort_order'   => 'integer',
+            'stars' => 'integer',
+            'sort_order' => 'integer',
             'published_at' => 'datetime',
         ];
     }

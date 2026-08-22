@@ -5,11 +5,11 @@
 
 return [
     [
-        'title'        => 'Multi-AI Agent Architecture in 2026: Orchestrating Autonomous Swarms with MCP, LangGraph and State Machines',
-        'slug'         => 'multi-ai-agent-architecture-swarm-orchestration-guide-2026',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'A production engineering guide to multi-agent AI swarms in 2026: hierarchical supervisor routing, Model Context Protocol (MCP) integration, persistent state machines, and conflict resolution.',
-        'body'         => <<<'BODY'
+        'title' => 'Multi-AI Agent Architecture in 2026: Orchestrating Autonomous Swarms with MCP, LangGraph and State Machines',
+        'slug' => 'multi-ai-agent-architecture-swarm-orchestration-guide-2026',
+        'tag' => 'AI DEV',
+        'excerpt' => 'A production engineering guide to multi-agent AI swarms in 2026: hierarchical supervisor routing, Model Context Protocol (MCP) integration, persistent state machines, and conflict resolution.',
+        'body' => <<<'BODY'
 In 2026, building enterprise AI applications has shifted definitively from single-prompt LLM wrappers to **sovereign multi-agent systems**. When a complex business operation spans data extraction, database validation, external API calls, business rule enforcement, and final human verification, a single model prompt fails under context degradation and tool hallucination. Multi-agent architectures solve this by decomposing massive workflows into specialized, isolated, and deterministic agents orchestrated through explicit state machines and standardized interfaces like the **Model Context Protocol (MCP)**.
 
 As an AI engineer and full-stack architect building autonomous systems for businesses across India and internationally, I have designed and deployed multi-agent swarms in production across logistics, finance, manufacturing, and SaaS. In this comprehensive technical guide, I share the architectural patterns, state persistence models, MCP tool integrations, and production-tested error recovery strategies necessary to build robust multi-agent swarms in 2026.
@@ -155,11 +155,11 @@ BODY,
         'published_at' => '2026-08-27',
     ],
     [
-        'title'        => 'Modern Web Architecture in 2026: Why Monoliths, Edge SSR & Sub-Second LCP Beat Micro-Frontend Bloat',
-        'slug'         => 'modern-website-architecture-guide-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'An engineering blueprint for high-performance web architecture in 2026: monolithic simplicity with Laravel 13, Edge SSR, sub-500ms TTFB, SQLite/Postgres pgvector, and JSON-LD AEO markup.',
-        'body'         => <<<'BODY'
+        'title' => 'Modern Web Architecture in 2026: Why Monoliths, Edge SSR & Sub-Second LCP Beat Micro-Frontend Bloat',
+        'slug' => 'modern-website-architecture-guide-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'An engineering blueprint for high-performance web architecture in 2026: monolithic simplicity with Laravel 13, Edge SSR, sub-500ms TTFB, SQLite/Postgres pgvector, and JSON-LD AEO markup.',
+        'body' => <<<'BODY'
 In 2026, the modern web development pendulum has swung back decisively from over-engineered micro-frontend sprawl to **clean, monolithic architectures augmented with Edge Server-Side Rendering (SSR) and reactive islands**. For years, teams broke simple web applications into dozens of microservices, separate single-page application (SPA) frontends, and fragmented API gateways—only to suffer from crippling latency, synchronization bugs, massive deployment overhead, and poor Core Web Vitals.
 
 In 2026, the highest-performing digital products are built on refined, sovereign monolithic frameworks like **Laravel 13**, **Next.js/Remix with Edge caching**, and **FastAPI**. By pairing a unified backend with modern asset bundling (Vite), atomic database transactions, and semantic Schema.org architectures, web applications can achieve sub-300ms Time to First Byte (TTFB) and sub-1.0s Largest Contentful Paint (LCP) while drastically reducing server overhead.
@@ -282,11 +282,11 @@ BODY,
         'published_at' => '2026-08-26',
     ],
     [
-        'title'        => 'A Day in the Life of an AI & Full-Stack Developer in Gujarat (2026): From 6 AM Code to Autonomous Agent Swarms',
-        'slug'         => 'day-in-the-life-ai-fullstack-developer-gujarat-2026',
-        'tag'          => 'FOUNDER',
-        'excerpt'      => 'An authentic behind-the-scenes look at my daily engineering workflow in Junagadh, Gujarat: shipping MCP tools, managing autonomous agent pipelines, deep work protocols, and client builds.',
-        'body'         => <<<'BODY'
+        'title' => 'A Day in the Life of an AI & Full-Stack Developer in Gujarat (2026): From 6 AM Code to Autonomous Agent Swarms',
+        'slug' => 'day-in-the-life-ai-fullstack-developer-gujarat-2026',
+        'tag' => 'FOUNDER',
+        'excerpt' => 'An authentic behind-the-scenes look at my daily engineering workflow in Junagadh, Gujarat: shipping MCP tools, managing autonomous agent pipelines, deep work protocols, and client builds.',
+        'body' => <<<'BODY'
 What does a high-output engineering day actually look like in 2026 when you build autonomous AI agents, custom Model Context Protocol (MCP) servers, and full-stack web platforms from Junagadh, Gujarat?
 
 There is plenty of hype surrounding AI coding tools, vibe coding, and autonomous swarms. But in production, building software that businesses rely on for their daily operations requires disciplined focus, rigorous testing, deep architecture design, and direct client collaboration.
@@ -366,11 +366,11 @@ BODY,
         'published_at' => '2026-08-25',
     ],
     [
-        'title'        => 'Latest AI News & 2026 Breakthroughs: Frontier Reasoning Models, DeepSeek R1, Claude 3.7 & What Engineers Need to Know',
-        'slug'         => 'latest-ai-news-breakthroughs-frontier-reasoning-models-2026',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'An analytical breakdown of 2026 AI breakthroughs: hybrid reasoning models, open-weight reasoning frontiers, SLM edge deployments, and the universal standardization of Model Context Protocol (MCP).',
-        'body'         => <<<'BODY'
+        'title' => 'Latest AI News & 2026 Breakthroughs: Frontier Reasoning Models, DeepSeek R1, Claude 3.7 & What Engineers Need to Know',
+        'slug' => 'latest-ai-news-breakthroughs-frontier-reasoning-models-2026',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'An analytical breakdown of 2026 AI breakthroughs: hybrid reasoning models, open-weight reasoning frontiers, SLM edge deployments, and the universal standardization of Model Context Protocol (MCP).',
+        'body' => <<<'BODY'
 The artificial intelligence landscape in 2026 has crossed a monumental inflection point. We have transitioned from the era of simple next-token prediction models to **hybrid reasoning architectures**, **open-weight reasoning breakthroughs (like DeepSeek R1 and V3)**, **frontier multimodal reasoning models (such as Claude 3.7 Sonnet)**, and the industry-wide standardization of **Model Context Protocol (MCP)**.
 
 For software developers, CTOs, and business founders, these breakthroughs fundamentally change how software is architected, how coding agents operate, and how enterprises build sovereign automation.
@@ -468,11 +468,11 @@ BODY,
         'published_at' => '2026-08-24',
     ],
     [
-        'title'        => 'Autonomous Code Review & QA Swarms: How Multi-Agent AI Pipelines Eliminate Bugs Before Production',
-        'slug'         => 'autonomous-qa-multi-agent-code-review-pipelines-2026',
-        'tag'          => 'AI AGENTS',
-        'excerpt'      => 'How to build an automated multi-agent CI/CD pipeline: orchestrating AST linters, security auditors, test generators, and auto-patching agents to protect production software.',
-        'body'         => <<<'BODY'
+        'title' => 'Autonomous Code Review & QA Swarms: How Multi-Agent AI Pipelines Eliminate Bugs Before Production',
+        'slug' => 'autonomous-qa-multi-agent-code-review-pipelines-2026',
+        'tag' => 'AI AGENTS',
+        'excerpt' => 'How to build an automated multi-agent CI/CD pipeline: orchestrating AST linters, security auditors, test generators, and auto-patching agents to protect production software.',
+        'body' => <<<'BODY'
 Manual Pull Request (PR) reviews have long been the primary bottleneck in modern software engineering. Senior engineers spend hours reviewing boilerplate code, catching syntax discrepancies, checking for SQL injection vectors, and verifying test coverage. In 2026, leading engineering teams are deploying **autonomous multi-agent QA swarms** directly into their CI/CD pipelines to catch bugs, audit security vulnerabilities, and propose verified code fixes before human review begins.
 
 Unlike naive single-prompt AI reviewers that produce noisy, generic commentary ("consider adding comments here"), a **multi-agent QA swarm** operates with specialized roles, concrete Abstract Syntax Tree (AST) analysis, live sandboxed test execution, and strict confidence thresholds.
@@ -603,11 +603,11 @@ BODY,
         'published_at' => '2026-08-23',
     ],
     [
-        'title'        => 'Building AI-Native Web Applications in 2026: Architecture, Streaming UX, and Server-Sent Agent Workflows',
-        'slug'         => 'building-ai-native-web-applications-architecture-ux-2026',
-        'tag'          => 'WEB & AI',
-        'excerpt'      => 'A complete blueprint for engineering AI-native web apps: Server-Sent Events (SSE), real-time agent state management, vector cache layers, optimistic UI, and human-in-the-loop checkpoints.',
-        'body'         => <<<'BODY'
+        'title' => 'Building AI-Native Web Applications in 2026: Architecture, Streaming UX, and Server-Sent Agent Workflows',
+        'slug' => 'building-ai-native-web-applications-architecture-ux-2026',
+        'tag' => 'WEB & AI',
+        'excerpt' => 'A complete blueprint for engineering AI-native web apps: Server-Sent Events (SSE), real-time agent state management, vector cache layers, optimistic UI, and human-in-the-loop checkpoints.',
+        'body' => <<<'BODY'
 In 2026, user expectations for web applications have fundamentally transformed. Adding a generic chat bubble in the bottom right corner of a legacy website does not make it an "AI application." Modern users expect **AI-native web platforms**: applications where generative intelligence, autonomous tool execution, and multi-step reasoning are deeply woven into the core user interface and data flow.
 
 Building an AI-native web application introduces complex engineering challenges: handling high-throughput streaming text, managing asynchronous agent step transitions, implementing optimistic client UI, caching expensive vector embeddings, and maintaining robust security against prompt injection.
@@ -730,11 +730,11 @@ BODY,
         'published_at' => '2026-08-22',
     ],
     [
-        'title'        => 'Why Gujarat Businesses Are Deploying Autonomous AI Agents in 2026: The Complete Implementation Guide',
-        'slug'         => 'gujarat-businesses-deploying-ai-agents-2026-guide',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'A strategic 2026 guide for Gujarat businesses on deploying custom AI agents, MCP servers, and LLM automation to cut operational costs by 65% while scaling.',
-        'body'         => <<<'BODY'
+        'title' => 'Why Gujarat Businesses Are Deploying Autonomous AI Agents in 2026: The Complete Implementation Guide',
+        'slug' => 'gujarat-businesses-deploying-ai-agents-2026-guide',
+        'tag' => 'AI DEV',
+        'excerpt' => 'A strategic 2026 guide for Gujarat businesses on deploying custom AI agents, MCP servers, and LLM automation to cut operational costs by 65% while scaling.',
+        'body' => <<<'BODY'
 In 2026, businesses across Gujarat—from manufacturing hubs in Ahmedabad and Rajkot to textile exporters in Surat, chemical giants in Vadodara, and service firms in Junagadh—are deploying custom autonomous AI agents to automate complex operations, process multi-format business documents, and reduce routine workflow costs by over 65%. Rather than relying on rigid, one-size-fits-all SaaS subscriptions, Gujarat enterprises are building sovereign, multi-agent AI ecosystems orchestrated via Model Context Protocol (MCP) and custom Retrieval-Augmented Generation (RAG) knowledge bases.
 
 As an AI expert and agent architect building systems from Gujarat, India, I work closely with founders, industrial leaders, and tech teams throughout our state. The industrial landscape in Gujarat is uniquely characterized by high-volume commercial transactions, diverse supplier networks, regional multilingual communications in Gujarati and Hindi, and an uncompromising focus on practical return on investment (ROI). In this comprehensive 2026 guide, I break down why Gujarat businesses are transitioning from basic chatbots to autonomous agent swarms, the exact technical architectures powering these systems, real-world case implementations across our major industrial corridors, and the step-by-step roadmap to deploy your first custom AI agent swarm.
@@ -860,11 +860,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'The 2026 AI Agent Shift: Why MCP Is Replacing Custom APIs',
-        'slug'         => 'ai-agent-shift-why-mcp-is-replacing-custom-apis',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'How Model Context Protocol (MCP) became the universal standard in 2026 for connecting autonomous AI agents to enterprise software, tools, and databases.',
-        'body'         => <<<'BODY'
+        'title' => 'The 2026 AI Agent Shift: Why MCP Is Replacing Custom APIs',
+        'slug' => 'ai-agent-shift-why-mcp-is-replacing-custom-apis',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'How Model Context Protocol (MCP) became the universal standard in 2026 for connecting autonomous AI agents to enterprise software, tools, and databases.',
+        'body' => <<<'BODY'
 The Model Context Protocol (MCP) in 2026 has transformed AI agent development by standardizing how LLMs interface with databases, enterprise software, and third-party tools through a universal client-server protocol. Instead of engineering fragmented, one-off REST API wrappers for each LLM, developers in India and globally are deploying standardized MCP servers to connect autonomous agents directly to secure business data with zero vendor lock-in.
 
 When founders and tech teams in Junagadh, Gujarat, and across India evaluate AI adoption in 2026, the bottleneck is rarely model intelligence. The real bottleneck has always been context: giving an intelligent model safe, real-time access to the exact data, files, and actions it needs to perform real work. In this comprehensive breakdown, we examine why MCP has rapidly replaced legacy API wrappers, how the protocol architecture functions under the hood, and how Indian businesses are saving hundreds of development hours by standardizing their agent infrastructure.
@@ -967,11 +967,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Today I Built a Custom MCP Server with FastAPI for AI Agents',
-        'slug'         => 'building-custom-mcp-server-fastapi-ai-agents',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'A behind-the-scenes engineering log from Junagadh, Gujarat: building a sub-50ms asynchronous MCP server using Python and FastAPI for autonomous AI agents.',
-        'body'         => <<<'BODY'
+        'title' => 'Today I Built a Custom MCP Server with FastAPI for AI Agents',
+        'slug' => 'building-custom-mcp-server-fastapi-ai-agents',
+        'tag' => 'MY STORY',
+        'excerpt' => 'A behind-the-scenes engineering log from Junagadh, Gujarat: building a sub-50ms asynchronous MCP server using Python and FastAPI for autonomous AI agents.',
+        'body' => <<<'BODY'
 Building a custom Model Context Protocol (MCP) server using Python and FastAPI allows developers to expose proprietary business APIs, database queries, and custom automations directly to AI agents with asynchronous sub-50ms latency. Today from my desk in Junagadh, Gujarat, I built a production FastAPI MCP server that enables autonomous agent swarms to query client MySQL databases and execute automated reporting without human intervention.
 
 When building real AI products rather than toy demos, execution speed, error resilience, and memory footprints matter. Here is the complete behind-the-scenes engineering breakdown of why and how I built this server today, the architectural choices made, the exact code patterns implemented, the performance benchmarks achieved, and the lessons learned from shipping it into production.
@@ -1085,11 +1085,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Frontier AI Models in 2026: What They Mean for Indian Devs',
-        'slug'         => 'frontier-ai-models-2026-impact-indian-developers',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'An analysis of 2026 frontier reasoning models, open weights, and multimodal architectures — and how Indian developers can leverage them for 70% lower costs.',
-        'body'         => <<<'BODY'
+        'title' => 'Frontier AI Models in 2026: What They Mean for Indian Devs',
+        'slug' => 'frontier-ai-models-2026-impact-indian-developers',
+        'tag' => 'AI DEV',
+        'excerpt' => 'An analysis of 2026 frontier reasoning models, open weights, and multimodal architectures — and how Indian developers can leverage them for 70% lower costs.',
+        'body' => <<<'BODY'
 The latest 2026 frontier AI models—combining native test-time reasoning architectures, multimodal vision-audio pipelines, and efficient open-weight alternatives—have reduced enterprise AI deployment costs by over 70% while enabling multi-step autonomous agent execution. For businesses and software developers in Gujarat and across India, this shift means complex business automations that previously required expensive custom fine-tuning can now be orchestrated reliably using prompt reasoning and RAG vector systems.
 
 As an AI developer building systems from Junagadh, Gujarat, I track these model breakthroughs daily. The speed of innovation in 2026 is unprecedented, but understanding how to practically apply these models to real-world commercial problems is what separates high-ROI implementations from wasted tech budgets. In this deep dive, we analyze the frontier landscape, benchmark reasoning architectures, explore regional language reasoning in Gujarati and Hindi, compare token economics, and share the exact blueprint for maximizing output while drastically reducing API token costs.
@@ -1186,11 +1186,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Building Multi-Agent AI Systems for Indian SMEs in 2026: Complete Guide',
-        'slug'         => 'building-multi-agent-ai-systems-indian-smes-2026',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'Learn how Indian SMEs are using practical multi-agent AI architectures and RAG pipelines in 2026 to automate complex operations and reduce API token costs by 60%.',
-        'body'         => <<<'BODY'
+        'title' => 'Building Multi-Agent AI Systems for Indian SMEs in 2026: Complete Guide',
+        'slug' => 'building-multi-agent-ai-systems-indian-smes-2026',
+        'tag' => 'AI DEV',
+        'excerpt' => 'Learn how Indian SMEs are using practical multi-agent AI architectures and RAG pipelines in 2026 to automate complex operations and reduce API token costs by 60%.',
+        'body' => <<<'BODY'
 Deploying a multi-agent AI system for an Indian SME in 2026 costs between Rs 40,000 to Rs 150,000 depending on agent orchestration complexity, knowledge base vector size, and API token management. Multi-agent architectures divide complex business workflows into specialized role-based agents—such as customer support, document parsing, lead qualification, and reporting—reducing LLM hallucinations and cutting token overhead by up to 60% compared to single prompts.
 
 When business leaders in Junagadh, Gujarat, and across India seek AI solutions, they need digital employees that perform multi-step tasks reliably, handle regional language nuances, and integrate securely with existing software. Here is the operational blueprint for deploying multi-agent AI in 2026.
@@ -1221,11 +1221,11 @@ BODY,
         'published_at' => '2026-08-17',
     ],
     [
-        'title'        => 'How Much Does a Custom Website Cost in Junagadh & Gujarat? (2026 Guide)',
-        'slug'         => 'custom-website-cost-junagadh-gujarat-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'A transparent 2026 pricing and strategy guide for business websites in Junagadh and Gujarat — covering custom PHP/Laravel builds, Core Web Vitals speed, SEO, and maintenance.',
-        'body'         => <<<'BODY'
+        'title' => 'How Much Does a Custom Website Cost in Junagadh & Gujarat? (2026 Guide)',
+        'slug' => 'custom-website-cost-junagadh-gujarat-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'A transparent 2026 pricing and strategy guide for business websites in Junagadh and Gujarat — covering custom PHP/Laravel builds, Core Web Vitals speed, SEO, and maintenance.',
+        'body' => <<<'BODY'
 Developing a custom business website in Junagadh and Gujarat in 2026 costs between Rs 25,000 to Rs 80,000 depending on scope, feature complexity, and performance tuning. Simple brochure sites sit at the baseline, while custom Laravel web applications and automated AI integrations represent top-tier investments.
 
 When business owners in Junagadh consult me regarding website costs, the discussion is rarely about raw code. It is about return on investment, page speed performance, and Google rankings. A slow template website costs more in lost clients than a custom, fast build costs upfront. Here is the full breakdown of what goes into a high-converting business website.
@@ -1253,11 +1253,11 @@ BODY,
         'published_at' => '2026-08-17',
     ],
     [
-        'title'        => 'Curro 1.0 Ships: An AI Content Studio That Writes Like Its Owner',
-        'slug'         => 'curro-1-0-ai-content-studio',
-        'tag'          => 'NEWS',
-        'excerpt'      => 'Curro, the AI content-creation studio, launched this week. The pitch: hand it rough notes and get back posts that sound like you — because they were trained on you.',
-        'body'         => <<<'BODY'
+        'title' => 'Curro 1.0 Ships: An AI Content Studio That Writes Like Its Owner',
+        'slug' => 'curro-1-0-ai-content-studio',
+        'tag' => 'NEWS',
+        'excerpt' => 'Curro, the AI content-creation studio, launched this week. The pitch: hand it rough notes and get back posts that sound like you — because they were trained on you.',
+        'body' => <<<'BODY'
 Curro, Deepak Bagada's AI content-creation studio, launched this week after a quiet year of building. The tool takes rough notes, recordings and prompts, and turns them into polished articles, scripts and social posts — in the writer's own voice.
 
 The key idea is the voice model. Instead of generic 'professional' output, Curro learns from your past work: sentence rhythm, favourite phrases, where the humour goes. Early users report that drafts need roughly one edit pass instead of five.
@@ -1269,11 +1269,11 @@ BODY,
         'published_at' => '2026-08-14',
     ],
     [
-        'title'        => 'From Code to AI: My Story So Far, in Six Chapters',
-        'slug'         => 'from-code-to-ai-my-story-six-chapters',
-        'tag'          => 'MY STORY',
-        'excerpt'      => "I didn't plan any of this. First there was code, then marketing, then AI. This is the honest version of how one led to the next.",
-        'body'         => <<<'BODY'
+        'title' => 'From Code to AI: My Story So Far, in Six Chapters',
+        'slug' => 'from-code-to-ai-my-story-six-chapters',
+        'tag' => 'MY STORY',
+        'excerpt' => "I didn't plan any of this. First there was code, then marketing, then AI. This is the honest version of how one led to the next.",
+        'body' => <<<'BODY'
 Chapter one: 2018. I bought my first domain and built my first website. It was ugly, slow, and entirely mine — and I was hooked. HTML became CSS became JavaScript became PHP. Code was the start of everything.
 
 Chapter two: 2020. I learned marketing — and it hurt my pride a little. Great code means nothing if nobody sees it. SEO, content, growth: these became my second language, and my unfair advantage.
@@ -1289,11 +1289,11 @@ BODY,
         'published_at' => '2026-08-11',
     ],
     [
-        'title'        => 'Behind the Scenes: The 5 AI Automations That Run My Workflow',
-        'slug'         => '5-ai-automations-run-my-workflow',
-        'tag'          => 'AUTOMATION',
-        'excerpt'      => 'From content drafts to outreach emails — a look at the small AI systems doing the boring work so I can do the interesting work.',
-        'body'         => <<<'BODY'
+        'title' => 'Behind the Scenes: The 5 AI Automations That Run My Workflow',
+        'slug' => '5-ai-automations-run-my-workflow',
+        'tag' => 'AUTOMATION',
+        'excerpt' => 'From content drafts to outreach emails — a look at the small AI systems doing the boring work so I can do the interesting work.',
+        'body' => <<<'BODY'
 The most valuable thing AI has done for me is not writing blog posts. It is quietly disappearing the boring parts of my day. Here are the five automations currently running in the background of this portfolio and my main projects.
 
 1. Content pipeline. Rough notes go in, a formatted first draft comes out — tagged, titled, and matched to my tone. I edit, never write from scratch.
@@ -1311,11 +1311,11 @@ BODY,
         'published_at' => '2026-08-13',
     ],
     [
-        'title'        => 'SEO Is Not Dead — It Just Met AEO: Ranking in the AI Era',
-        'slug'         => 'seo-meets-aeo-ranking-ai-era',
-        'tag'          => 'SEO',
-        'excerpt'      => 'Google answers, ChatGPT cites, and the top of the page is decided by machines. How to rank in both search engines and answer engines — and why it matters for Junagadh & Gujarat businesses.',
-        'body'         => <<<'BODY'
+        'title' => 'SEO Is Not Dead — It Just Met AEO: Ranking in the AI Era',
+        'slug' => 'seo-meets-aeo-ranking-ai-era',
+        'tag' => 'SEO',
+        'excerpt' => 'Google answers, ChatGPT cites, and the top of the page is decided by machines. How to rank in both search engines and answer engines — and why it matters for Junagadh & Gujarat businesses.',
+        'body' => <<<'BODY'
 The question I hear most from business owners in Junagadh and across Gujarat: if AI answers everything, why should I still care about SEO? The honest answer is that SEO is not dying — it is splitting into two jobs.
 
 Search engine optimization (SEO) still decides who shows up when someone types 'best AI developer in Junagadh' into Google. But a new layer decides who gets quoted when the same question is asked to ChatGPT, Gemini, or shown in Google's AI Overviews. That layer is AEO — answer engine optimization.
@@ -1332,11 +1332,11 @@ BODY,
         'published_at' => '2026-08-12',
     ],
     [
-        'title'        => 'Laravel 13 in Production: What 12 Months of Shipping Taught Me',
-        'slug'         => 'laravel-13-production-12-months-lessons',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'After a year of production Laravel apps, the boring parts turned out to be the valuable parts. A field report from the trenches.',
-        'body'         => <<<'BODY'
+        'title' => 'Laravel 13 in Production: What 12 Months of Shipping Taught Me',
+        'slug' => 'laravel-13-production-12-months-lessons',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'After a year of production Laravel apps, the boring parts turned out to be the valuable parts. A field report from the trenches.',
+        'body' => <<<'BODY'
 Every few months, the industry asks whether PHP is dead. The answer, from someone who ships Laravel apps for a living: no — it is quietly doing the unglamorous work that keeps the internet running.
 
 Twelve months and several production apps later, here is what actually matters. Migrations and schema versioning save you from the scariest moment in development: the accidental schema drift between environments. Eloquent's query builder keeps SQL readable. Queues turn slow jobs into background noise instead of blocked requests.
@@ -1348,11 +1348,11 @@ BODY,
         'published_at' => '2026-08-04',
     ],
     [
-        'title'        => 'Fine-Tuning vs. RAG: What Actually Worked for Client Projects in 2026',
-        'slug'         => 'fine-tuning-vs-rag-what-worked-2026',
-        'tag'          => 'AI',
-        'excerpt'      => 'Two approaches, one question: which one should you reach for first? Analysis of what moved the needle on real client deployments this year.',
-        'body'         => <<<'BODY'
+        'title' => 'Fine-Tuning vs. RAG: What Actually Worked for Client Projects in 2026',
+        'slug' => 'fine-tuning-vs-rag-what-worked-2026',
+        'tag' => 'AI',
+        'excerpt' => 'Two approaches, one question: which one should you reach for first? Analysis of what moved the needle on real client deployments this year.',
+        'body' => <<<'BODY'
 The most common question I get from clients is deceptively simple: should we fine-tune the model, or give it a knowledge base to search?
 
 After deploying both in production this year, the answer is usually: RAG first, fine-tuning second — and only when you know what behaviour you are actually changing.
@@ -1366,11 +1366,11 @@ BODY,
         'published_at' => '2026-07-28',
     ],
     [
-        'title'        => 'Case Study: How SaaS Next Tripled Organic Traffic in Six Months',
-        'slug'         => 'case-study-saasnext-tripling-organic-traffic',
-        'tag'          => 'MARKETING',
-        'excerpt'      => 'No ads, no gimmicks: how a technical SEO overhaul, a content engine, and one honest piece of strategy took SaaS Next from 18k to 55k monthly organic sessions.',
-        'body'         => <<<'BODY'
+        'title' => 'Case Study: How SaaS Next Tripled Organic Traffic in Six Months',
+        'slug' => 'case-study-saasnext-tripling-organic-traffic',
+        'tag' => 'MARKETING',
+        'excerpt' => 'No ads, no gimmicks: how a technical SEO overhaul, a content engine, and one honest piece of strategy took SaaS Next from 18k to 55k monthly organic sessions.',
+        'body' => <<<'BODY'
 The brief was simple: SaaS Next's site was good, but it was invisible. Eighteen thousand organic sessions a month, and a growth plan that did not involve tripling the ad budget.
 
 Phase one was technical SEO — the unglamorous foundation. Schema markup, canonical hygiene, mobile rendering, and a Core Web Vitals pass that took page speed from 4.2 to 1.8 seconds. Conversion rate followed speed up by 22%.
@@ -1384,11 +1384,11 @@ BODY,
         'published_at' => '2026-07-21',
     ],
     [
-        'title'        => 'The Load-Time Audit: SaaS Next From 6.8 Seconds to 1.9',
-        'slug'         => 'load-time-audit-saasnext-6-8-to-1-9-seconds',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'A field report on the four fixes that mattered most — and the painful truth that the design was never the problem.',
-        'body'         => <<<'BODY'
+        'title' => 'The Load-Time Audit: SaaS Next From 6.8 Seconds to 1.9',
+        'slug' => 'load-time-audit-saasnext-6-8-to-1-9-seconds',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'A field report on the four fixes that mattered most — and the painful truth that the design was never the problem.',
+        'body' => <<<'BODY'
 The SaaS Next homepage was beautiful and slow: 6.8 seconds to first meaningful paint, and a bounce rate that reflected it. The design was fine. The backend was fine. The problem was everything in between.
 
 Fix one: images. WebP conversion, real display-size resolution, and lazy loading below the fold. This alone cut load time by roughly 40%.
@@ -1404,11 +1404,11 @@ BODY,
         'published_at' => '2026-07-14',
     ],
     [
-        'title'        => 'Why This Portfolio Looks Like a Magazine (And Why Yours Should Too)',
-        'slug'         => 'why-this-portfolio-looks-like-a-magazine',
-        'tag'          => 'DESIGN',
-        'excerpt'      => 'The web forgot it could be fun. A short manifesto in favour of personality, ink lines, and design that has something to say.',
-        'body'         => <<<'BODY'
+        'title' => 'Why This Portfolio Looks Like a Magazine (And Why Yours Should Too)',
+        'slug' => 'why-this-portfolio-looks-like-a-magazine',
+        'tag' => 'DESIGN',
+        'excerpt' => 'The web forgot it could be fun. A short manifesto in favour of personality, ink lines, and design that has something to say.',
+        'body' => <<<'BODY'
 Somewhere along the way, the web decided that every serious product must look like the same SaaS dashboard: white background, rounded corners, a purple gradient button. Boring is safe, the thinking goes. Boring converts.
 
 I do not believe it. People remember the sites that made them smile — and they trust the people who made them. This portfolio is my argument: white paper, ink lines, comic panels, and a speech bubble that says hello. It is a magazine that happens to run on Laravel.
@@ -1420,11 +1420,11 @@ BODY,
         'published_at' => '2026-07-07',
     ],
     [
-        'title'        => 'AI Coding Agents in 2026: What They Actually Ship vs What They Promise',
-        'slug'         => 'ai-coding-agents-2026-what-they-ship-vs-promise',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'Claude Code, Codex and Cursor now write real production code. After a year of using agents daily, here is where they genuinely accelerate a build — and where they quietly waste your budget.',
-        'body'         => <<<'BODY'
+        'title' => 'AI Coding Agents in 2026: What They Actually Ship vs What They Promise',
+        'slug' => 'ai-coding-agents-2026-what-they-ship-vs-promise',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'Claude Code, Codex and Cursor now write real production code. After a year of using agents daily, here is where they genuinely accelerate a build — and where they quietly waste your budget.',
+        'body' => <<<'BODY'
 In 2026, AI coding agents are no longer a demo. Claude Code, OpenAI Codex and Cursor's background agents plan tasks, edit dozens of files, run tests, and open pull requests with a human reviewing instead of typing. But the gap between the launch videos and a real production codebase is still wide. Here is the honest scorecard after a year of building with agents every day.
 
 ### Where agents genuinely win
@@ -1456,11 +1456,11 @@ BODY,
         'published_at' => '2026-07-21',
     ],
     [
-        'title'        => 'The 2026 Answer Engine Optimization Checklist: Get Cited by ChatGPT, Perplexity and AI Overviews',
-        'slug'         => 'answer-engine-optimization-checklist-2026',
-        'tag'          => 'SEO',
-        'excerpt'      => 'AI answer engines now decide which businesses get mentioned when buyers ask questions. A practical AEO checklist — schema, llms.txt, quotable structure — that any business can run this week.',
-        'body'         => <<<'BODY'
+        'title' => 'The 2026 Answer Engine Optimization Checklist: Get Cited by ChatGPT, Perplexity and AI Overviews',
+        'slug' => 'answer-engine-optimization-checklist-2026',
+        'tag' => 'SEO',
+        'excerpt' => 'AI answer engines now decide which businesses get mentioned when buyers ask questions. A practical AEO checklist — schema, llms.txt, quotable structure — that any business can run this week.',
+        'body' => <<<'BODY'
 When a potential client asks ChatGPT "who is the best website developer in Junagadh," there is no blue link to click. The answer engine either cites you or cites your competitor. Answer Engine Optimization (AEO) — also called GEO, generative engine optimization — is the practice of making your site the source those engines quote. Here is the checklist we run for every client, distilled.
 
 ### 1. Say the answer out loud, in the first 100 words
@@ -1499,11 +1499,11 @@ BODY,
         'published_at' => '2026-07-28',
     ],
     [
-        'title'        => 'WhatsApp AI Chatbots for Local Business: What Indian SMEs Are Actually Deploying in 2026',
-        'slug'         => 'whatsapp-ai-chatbots-indian-smes-2026',
-        'tag'          => 'AI BUILD',
-        'excerpt'      => 'In India, the customer is on WhatsApp — not your website. How small businesses in Gujarat are deploying AI agents that answer orders, pricing and support on the app customers already use.',
-        'body'         => <<<'BODY'
+        'title' => 'WhatsApp AI Chatbots for Local Business: What Indian SMEs Are Actually Deploying in 2026',
+        'slug' => 'whatsapp-ai-chatbots-indian-smes-2026',
+        'tag' => 'AI BUILD',
+        'excerpt' => 'In India, the customer is on WhatsApp — not your website. How small businesses in Gujarat are deploying AI agents that answer orders, pricing and support on the app customers already use.',
+        'body' => <<<'BODY'
 Ask an Indian small business owner where customers actually message them, and the answer is never "the contact form." It is WhatsApp. In 2026, the most practical AI deployment for local businesses is not a fancy website chatbot — it is a WhatsApp AI agent that answers order status, pricing, store hours, and product availability instantly, in the language the customer typed in.
 
 ### Why WhatsApp is the real storefront
@@ -1532,11 +1532,11 @@ BODY,
         'published_at' => '2026-08-04',
     ],
     [
-        'title'        => 'When to Redesign Your Website: The 2026 Checklist for Small Businesses',
-        'slug'         => 'when-to-redesign-your-website-2026-checklist',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'A redesign is expensive; a bad website is more expensive. Nine signals — from load time to AI crawlability — that tell you whether 2026 is the year to rebuild.',
-        'body'         => <<<'BODY'
+        'title' => 'When to Redesign Your Website: The 2026 Checklist for Small Businesses',
+        'slug' => 'when-to-redesign-your-website-2026-checklist',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'A redesign is expensive; a bad website is more expensive. Nine signals — from load time to AI crawlability — that tell you whether 2026 is the year to rebuild.',
+        'body' => <<<'BODY'
 Every business owner asks the question eventually: "do I need a new website, or just fixes to this one?" A full redesign is a real investment, so the answer should come from evidence, not boredom. Here is the checklist we walk clients through in 2026.
 
 ### 1. It loads in more than 3 seconds on a phone
@@ -1582,11 +1582,11 @@ BODY,
         'published_at' => '2026-08-11',
     ],
     [
-        'title'        => 'Zero-Click Search in 2026: What to Do When AI Takes the Clicks',
-        'tag'          => 'SEO',
-        'slug'         => 'zero-click-search-2026-what-to-do',
-        'excerpt'      => 'Google AI Overviews and answer engines answer the question on the results page, so fewer people click. The traffic strategy that still works when clicks shrink.',
-        'body'         => <<<'BODY'
+        'title' => 'Zero-Click Search in 2026: What to Do When AI Takes the Clicks',
+        'tag' => 'SEO',
+        'slug' => 'zero-click-search-2026-what-to-do',
+        'excerpt' => 'Google AI Overviews and answer engines answer the question on the results page, so fewer people click. The traffic strategy that still works when clicks shrink.',
+        'body' => <<<'BODY'
 More searches than ever end without a click. Google's AI Overviews, ChatGPT, Perplexity and Gemini increasingly answer the question directly on the results page or in the chat. For businesses that built their growth on "rank #1, collect the click," this feels like the floor disappearing. It is not — but the strategy has to change.
 
 ### Accept the new math
@@ -1620,11 +1620,11 @@ BODY,
         'published_at' => '2026-08-18',
     ],
     [
-        'title'        => 'AI Agents vs ChatGPT in 2026: Why Gujarat SMEs Are Switching to Autonomous Agents',
-        'slug'         => 'ai-agents-vs-chatgpt-gujarat-smes-2026',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'ChatGPT answers questions. AI agents do work. Why businesses in Gujarat and India are moving from chatbots to autonomous agents that query databases, send WhatsApp updates, and close workflows in 2026.',
-        'body'         => <<<'BODY'
+        'title' => 'AI Agents vs ChatGPT in 2026: Why Gujarat SMEs Are Switching to Autonomous Agents',
+        'slug' => 'ai-agents-vs-chatgpt-gujarat-smes-2026',
+        'tag' => 'AI DEV',
+        'excerpt' => 'ChatGPT answers questions. AI agents do work. Why businesses in Gujarat and India are moving from chatbots to autonomous agents that query databases, send WhatsApp updates, and close workflows in 2026.',
+        'body' => <<<'BODY'
 ChatGPT answers questions. AI agents do work — they query your MySQL inventory, check GST invoices, update CRMs, and send WhatsApp confirmations without a human in the loop. In 2026, businesses across Gujarat — Ahmedabad, Surat, Rajkot, Vadodara, and Junagadh — are switching from passive chatbots to autonomous AI agents because the ROI is no longer theoretical: per MoogleLabs' 2026 automation review, enterprises moving to agentic workflows report faster execution and measurable cost savings as AI becomes core infrastructure.
 
 As an AI agent architect building from Junagadh, Gujarat, I have deployed both. Here is the honest comparison, the architecture, and when to use each — so you do not pay for hype you cannot ship.
@@ -1687,11 +1687,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'n8n + AI Agents: The No-Code Automation Stack Saving Gujarat Businesses 30 Hours/Week in 2026',
-        'slug'         => 'n8n-ai-agents-automation-stack-gujarat-sme-2026',
-        'tag'          => 'AUTOMATION',
-        'excerpt'      => 'The viral 2026 stack for Indian SMEs: n8n + MCP + AI agents. How Gujarat businesses automate lead response, GST invoicing, and WhatsApp follow-ups without hiring developers.',
-        'body'         => <<<'BODY'
+        'title' => 'n8n + AI Agents: The No-Code Automation Stack Saving Gujarat Businesses 30 Hours/Week in 2026',
+        'slug' => 'n8n-ai-agents-automation-stack-gujarat-sme-2026',
+        'tag' => 'AUTOMATION',
+        'excerpt' => 'The viral 2026 stack for Indian SMEs: n8n + MCP + AI agents. How Gujarat businesses automate lead response, GST invoicing, and WhatsApp follow-ups without hiring developers.',
+        'body' => <<<'BODY'
 In 2026, the most copied automation stack among Gujarat SMEs is not a big enterprise suite. It is n8n + AI agents + MCP connectors — a no-code workflow builder that connects IndiaMART, WhatsApp, MySQL, Google Sheets, and LLMs into one autonomous pipeline that saves 25-35 hours per week.
 
 Per GInfomedia's July 2026 review of AI automation trends for India, WhatsApp-first automation and no-code agentic workflows are the two trends with the fastest payback for SMEs — because they automate the leaky buckets: lead response, follow-ups, and invoicing.
@@ -1763,11 +1763,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Voice AI Agents in India 2026: Cost, ROI & How They Replace Call Centers',
-        'slug'         => 'voice-ai-agents-replacing-call-centers-india-2026',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'Voice AI agents now handle 70% of Indian SME calls at 1/5th the cost of a call center. Full 2026 breakdown: pricing, Hindi/Gujarati support, and deployment in Gujarat.',
-        'body'         => <<<'BODY'
+        'title' => 'Voice AI Agents in India 2026: Cost, ROI & How They Replace Call Centers',
+        'slug' => 'voice-ai-agents-replacing-call-centers-india-2026',
+        'tag' => 'AI DEV',
+        'excerpt' => 'Voice AI agents now handle 70% of Indian SME calls at 1/5th the cost of a call center. Full 2026 breakdown: pricing, Hindi/Gujarati support, and deployment in Gujarat.',
+        'body' => <<<'BODY'
 Voice AI agents in India in 2026 handle 70% of routine customer calls — order status, appointment booking, payment reminders, and lead qualification — at roughly one-fifth the cost of a traditional call center, with fluent Hindi, Gujarati, and English support.
 
 With over 500M WhatsApp users and voice as the default for tier-2/3 India, voice agents are the viral AI trend of 2026 for Junagadh, Ahmedabad, Surat, and Rajkot businesses that live on phone inquiries.
@@ -1838,11 +1838,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Vibe Coding with Cursor & Claude Code in 2026: I Built a Production App — Honest Review',
-        'slug'         => 'vibe-coding-cursor-claude-code-production-review-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Vibe coding is viral for a reason: I shipped a production Laravel + AI app using Cursor and Claude Code. What was magical, what broke, and the workflow that actually ships.',
-        'body'         => <<<'BODY'
+        'title' => 'Vibe Coding with Cursor & Claude Code in 2026: I Built a Production App — Honest Review',
+        'slug' => 'vibe-coding-cursor-claude-code-production-review-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Vibe coding is viral for a reason: I shipped a production Laravel + AI app using Cursor and Claude Code. What was magical, what broke, and the workflow that actually ships.',
+        'body' => <<<'BODY'
 I vibe-coded a production Laravel 13 + AI agent app in 2026 using Cursor and Claude Code — no Stack Overflow tabs, just intent prompts, agent diffs, and a ruthless test suite. The result shipped in 40% fewer hours, but required human architecture at every critical turn.
 
 Vibe coding — "expressing intent and letting agents write the code" — is the #1 AI-native engineering trend of 2026 per MoogleLabs. Here is the brutally honest field report from Junagadh, Gujarat.
@@ -1911,11 +1911,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Google AI Overviews Stole My Traffic: The AEO Recovery Playbook That Worked in 2026',
-        'slug'         => 'google-ai-overviews-traffic-recovery-aeo-playbook-2026',
-        'tag'          => 'SEO',
-        'excerpt'      => 'When Google AI Overviews cut my informational traffic by 41%, I did not buy ads — I rebuilt for AEO. The 6-step retrieval recovery that restored citations and conversions.',
-        'body'         => <<<'BODY'
+        'title' => 'Google AI Overviews Stole My Traffic: The AEO Recovery Playbook That Worked in 2026',
+        'slug' => 'google-ai-overviews-traffic-recovery-aeo-playbook-2026',
+        'tag' => 'SEO',
+        'excerpt' => 'When Google AI Overviews cut my informational traffic by 41%, I did not buy ads — I rebuilt for AEO. The 6-step retrieval recovery that restored citations and conversions.',
+        'body' => <<<'BODY'
 In early 2026, Google AI Overviews cut our informational traffic by 41% in 6 weeks. The clicks did not disappear — they were answered without a click. Instead of buying ads, we rebuilt for AEO (Answer Engine Optimization) and recovered — not just traffic, but citations across ChatGPT, Perplexity, and Gemini.
 
 This is the exact 6-step playbook we ran for our Gujarat client sites and for deepakbagada.in.
@@ -1984,11 +1984,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Small Language Models (SLMs) vs LLMs: Why Gujarat SMEs Save 80% on AI Costs in 2026',
-        'slug'         => 'slm-vs-llm-small-language-models-gujarat-sme-cost-2026',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'In 2026, Gujarat SMEs are ditching giant LLMs for Small Language Models (SLMs) fine-tuned on Gujarati/Hindi data — 80% cheaper, faster, and private. Full cost breakdown.',
-        'body'         => <<<'BODY'
+        'title' => 'Small Language Models (SLMs) vs LLMs: Why Gujarat SMEs Save 80% on AI Costs in 2026',
+        'slug' => 'slm-vs-llm-small-language-models-gujarat-sme-cost-2026',
+        'tag' => 'AI DEV',
+        'excerpt' => 'In 2026, Gujarat SMEs are ditching giant LLMs for Small Language Models (SLMs) fine-tuned on Gujarati/Hindi data — 80% cheaper, faster, and private. Full cost breakdown.',
+        'body' => <<<'BODY'
 In 2026, Gujarat SMEs are saving 70-80% on AI operating costs by switching from giant LLMs to Small Language Models (SLMs) — compact models fine-tuned on their own Gujarati/Hindi data and invoices, running privately on a Rs 6k/month GPU.
 
 Per MoogleLabs' 2026 trend #8, the era of "only GPT-4 for everything" is over for enterprise. Custom SLMs over generic LLMs is now a board-level cost strategy — faster, cheaper, and keeping secrets inside the firewall.
@@ -2066,11 +2066,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'WhatsApp + UPI + AI: The 3-Tool Automation Every Rajkot & Surat Store Needs in 2026',
-        'slug'         => 'whatsapp-upi-ai-automation-surat-rajkot-store-2026',
-        'tag'          => 'AUTOMATION',
-        'excerpt'      => 'The viral Gujarat retail stack of 2026: WhatsApp AI for orders + UPI autopay + inventory sync. How Surat textile and Rajkot brass stores automate sales while owners sleep.',
-        'body'         => <<<'BODY'
+        'title' => 'WhatsApp + UPI + AI: The 3-Tool Automation Every Rajkot & Surat Store Needs in 2026',
+        'slug' => 'whatsapp-upi-ai-automation-surat-rajkot-store-2026',
+        'tag' => 'AUTOMATION',
+        'excerpt' => 'The viral Gujarat retail stack of 2026: WhatsApp AI for orders + UPI autopay + inventory sync. How Surat textile and Rajkot brass stores automate sales while owners sleep.',
+        'body' => <<<'BODY'
 Every store in Surat and Rajkot has the same 2 AM problem: a customer messages "Bhai, price of 60 Tex cotton?" on WhatsApp, you reply 9 hours later, they already bought from the next shop. In 2026, the viral fix for Gujarat retail is three tools glued by an AI agent: WhatsApp AI + UPI + live inventory — selling while the owner sleeps.
 
 With 500M+ WhatsApp users in India and UPI turning every payment into structured data AI can act on, this stack is the highest-ROI automation for Gujarat retail per GInfomedia's 2026 India SME review — and it costs less than one salesman.
@@ -2140,11 +2140,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Hiring an AI Developer in Gujarat in 2026? 7 Questions That Expose Fake Experts',
-        'slug'         => 'hiring-ai-developer-gujarat-7-questions-2026',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'Every freelancer now claims "AI expert" in 2026. Seven battle-tested questions — with the answers a real AI developer must give — to hire safely in Gujarat and India.',
-        'body'         => <<<'BODY'
+        'title' => 'Hiring an AI Developer in Gujarat in 2026? 7 Questions That Expose Fake Experts',
+        'slug' => 'hiring-ai-developer-gujarat-7-questions-2026',
+        'tag' => 'AI DEV',
+        'excerpt' => 'Every freelancer now claims "AI expert" in 2026. Seven battle-tested questions — with the answers a real AI developer must give — to hire safely in Gujarat and India.',
+        'body' => <<<'BODY'
 In 2026, every freelancer profile in Gujarat says "AI expert." Most have wrapped a SaaS API and added "ChatGPT inside." Hiring the wrong one costs months and lakhs in hallucinated invoices, leaked data, and agents that cannot ship beyond a demo.
 
 As an AI developer hiring and being hired across Ahmedabad, Surat, Rajkot, Vadodara, and Junagadh, here are the 7 questions that expose fake experts — and what a real answer sounds like.
@@ -2208,11 +2208,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Zero to 1 Lakh Views: How AI Reels + SEO Compound to Grow Gujarat Brands in 2026',
-        'slug'         => 'ai-reels-seo-zero-to-lakh-views-2026',
-        'tag'          => 'MARKETING',
-        'excerpt'      => 'Reels get attention, SEO keeps it. The 2026 compounding loop Gujarat brands use: one AI-generated reel → one quotable article → rank + citations + DMs.',
-        'body'         => <<<'BODY'
+        'title' => 'Zero to 1 Lakh Views: How AI Reels + SEO Compound to Grow Gujarat Brands in 2026',
+        'slug' => 'ai-reels-seo-zero-to-lakh-views-2026',
+        'tag' => 'MARKETING',
+        'excerpt' => 'Reels get attention, SEO keeps it. The 2026 compounding loop Gujarat brands use: one AI-generated reel → one quotable article → rank + citations + DMs.',
+        'body' => <<<'BODY'
 A Rajkot D2C brand hit 1 lakh organic views in 67 days in 2026 not by going viral once, but by compounding: one AI-generated reel → one quotable article → one search/AI citation — repeated weekly. Reels rent attention. SEO and AEO own it.
 
 Here is the loop Gujarat brands copy, and how to run it without a large team, from Junagadh to Surat.
@@ -2276,11 +2276,11 @@ BODY,
         'published_at' => '2026-08-21',
     ],
     [
-        'title'        => 'Agentic RAG Blueprint 2026: How to Stop AI Hallucinations on Business Data',
-        'slug'         => 'agentic-rag-blueprint-stop-ai-hallucinations-2026',
-        'tag'          => 'AI BUILD',
-        'excerpt'      => 'Hallucinations cost money. The 2026 Agentic RAG blueprint that grounds AI agents in your PDFs, sheets, and MySQL — with citations, not guesses — for Gujarat businesses.',
-        'body'         => <<<'BODY'
+        'title' => 'Agentic RAG Blueprint 2026: How to Stop AI Hallucinations on Business Data',
+        'slug' => 'agentic-rag-blueprint-stop-ai-hallucinations-2026',
+        'tag' => 'AI BUILD',
+        'excerpt' => 'Hallucinations cost money. The 2026 Agentic RAG blueprint that grounds AI agents in your PDFs, sheets, and MySQL — with citations, not guesses — for Gujarat businesses.',
+        'body' => <<<'BODY'
 An AI that hallucinates your pricing loses more than a chat — it loses a deal. In 2026, the fix for business hallucinations is not a bigger model. It is Agentic RAG — retrieval where agents *plan* what to fetch, validate citations, and refuse to answer without evidence.
 
 Deploying it for Gujarat SMEs across Ahmedabad, Surat, Rajkot, and Junagadh, we cut hallucinated pricing from 12% to <2% and made every answer citable.

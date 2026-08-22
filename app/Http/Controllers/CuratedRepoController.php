@@ -11,7 +11,7 @@ class CuratedRepoController extends Controller
     {
         $site = config('site');
         $url = rtrim($site['url'], '/');
-        $canonical = $url . '/repos';
+        $canonical = $url.'/repos';
 
         $category = $request->query('category');
         $query = CuratedRepo::orderBy('featured', 'desc')->orderBy('sort_order', 'asc');
@@ -24,33 +24,33 @@ class CuratedRepoController extends Controller
         $categories = CuratedRepo::select('category')->distinct()->whereNotNull('category')->pluck('category');
 
         $head = [
-            'title'       => 'Curated Open-Source AI Repositories & Tools — ' . $site['name'],
+            'title' => 'Curated Open-Source AI Repositories & Tools — '.$site['name'],
             'description' => 'A vetted directory of top open-source AI frameworks, LLM libraries, multi-agent tools, and media generation pipelines with engineering commentary.',
-            'canonical'   => $canonical,
-            'og_type'     => 'website',
-            'og_image'    => '/images/about-portrait.png',
-            'json_ld'     => json_encode([
+            'canonical' => $canonical,
+            'og_type' => 'website',
+            'og_image' => '/images/about-portrait.png',
+            'json_ld' => json_encode([
                 '@context' => 'https://schema.org',
-                '@graph'   => [
+                '@graph' => [
                     [
-                        '@type'        => 'CollectionPage',
-                        'name'         => 'Curated Open-Source AI Repositories',
-                        'description'  => 'Vetted AI repos, agent frameworks, and developer tools curated by Deepak Bagada.',
-                        'url'          => $canonical,
-                        'mainEntity'   => [
-                            '@type'           => 'ItemList',
+                        '@type' => 'CollectionPage',
+                        'name' => 'Curated Open-Source AI Repositories',
+                        'description' => 'Vetted AI repos, agent frameworks, and developer tools curated by Deepak Bagada.',
+                        'url' => $canonical,
+                        'mainEntity' => [
+                            '@type' => 'ItemList',
                             'itemListElement' => $repos->map(static fn (CuratedRepo $repo, int $index) => [
-                                '@type'    => 'ListItem',
+                                '@type' => 'ListItem',
                                 'position' => $index + 1,
-                                'name'     => $repo->title,
-                                'url'      => $repo->url,
+                                'name' => $repo->title,
+                                'url' => $repo->url,
                             ])->values()->all(),
                         ],
                     ],
                     [
-                        '@type'           => 'BreadcrumbList',
+                        '@type' => 'BreadcrumbList',
                         'itemListElement' => [
-                            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $url . '/'],
+                            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $url.'/'],
                             ['@type' => 'ListItem', 'position' => 2, 'name' => 'Repos', 'item' => $canonical],
                         ],
                     ],

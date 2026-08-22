@@ -22,9 +22,9 @@ class Service extends Model
     protected function casts(): array
     {
         return [
-            'offerings'  => 'array',
-            'faq'        => 'array',
-            'area_served'=> 'array',
+            'offerings' => 'array',
+            'faq' => 'array',
+            'area_served' => 'array',
         ];
     }
 }

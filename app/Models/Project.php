@@ -21,7 +21,7 @@ class Project extends Model
     protected function casts(): array
     {
         return [
-            'featured'   => 'boolean',
+            'featured' => 'boolean',
             'sort_order' => 'integer',
         ];
     }

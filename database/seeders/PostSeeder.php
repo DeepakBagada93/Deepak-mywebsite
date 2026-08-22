@@ -24,17 +24,17 @@ class PostSeeder extends Seeder
         // journal briefly show stale/missing posts until the next refresh.
         $rows = array_map(static function (array $item) {
             return [
-                'id'         => $item['slug'],
-                'title'      => $item['title'],
-                'slug'       => $item['slug'],
-                'excerpt'    => $item['excerpt'] ?? '',
-                'content'    => $item['body'] ?? '',
-                'author'     => 'Deepak Bagada',
-                'date'       => $item['published_at'] ?? null,
-                'category'   => $item['tag'] ?? null,
-                'read_time'  => '4 min read',
-                'image'      => '',
-                'tags'       => json_encode($item['tags'] ?? []),
+                'id' => $item['slug'],
+                'title' => $item['title'],
+                'slug' => $item['slug'],
+                'excerpt' => $item['excerpt'] ?? '',
+                'content' => $item['body'] ?? '',
+                'author' => 'Deepak Bagada',
+                'date' => $item['published_at'] ?? null,
+                'category' => $item['tag'] ?? null,
+                'read_time' => '4 min read',
+                'image' => '',
+                'tags' => json_encode($item['tags'] ?? []),
             ];
         }, $posts);
 

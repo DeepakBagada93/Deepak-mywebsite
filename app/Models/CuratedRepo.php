@@ -22,9 +22,9 @@ class CuratedRepo extends Model
     protected function casts(): array
     {
         return [
-            'tags'       => 'array',
-            'stars'      => 'integer',
-            'featured'   => 'boolean',
+            'tags' => 'array',
+            'stars' => 'integer',
+            'featured' => 'boolean',
             'sort_order' => 'integer',
         ];
     }

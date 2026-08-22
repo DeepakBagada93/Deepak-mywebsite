@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Models\Project;
-use App\Support\Markdown;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
