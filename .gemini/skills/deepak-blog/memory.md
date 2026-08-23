@@ -138,3 +138,123 @@
   - Tag: `WEB DEV`
   - Published: `2026-08-22`
   - Words: 1758
+
+- **DeepSeek Harness: 95K Stars in 48h — Everything Is a Plugin**
+  - Slug: `deepseek-harness-everything-is-plugin-runtime-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-23`
+  - Words: 1666
+
+- **Google ADK vs LangGraph vs CrewAI: Which to Pick in 2026**
+  - Slug: `google-adk-vs-langgraph-vs-crewai-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1707
+
+- **Google ADK Multi-Agent Patterns: 8 Designs That Ship**
+  - Slug: `google-adk-multi-agent-patterns-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1217
+
+- **Microsoft Agent Framework 1.0: Harness Goes GA**
+  - Slug: `microsoft-agent-framework-1-0-harness-ga-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1226
+
+- **Best AI Agent Frameworks August 2026: Ranked by Alice Labs**
+  - Slug: `best-ai-agent-frameworks-august-2026-ranked`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-23`
+  - Words: 1206
+
+- **Deploy Google ADK to Cloud Run & Vertex AI: Ship Sunday**
+  - Slug: `deploy-google-adk-cloud-run-vertex-ai-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1214
+
+- **Sunday Setup: 5 ADK Agents That Make Monday Easy**
+  - Slug: `sunday-setup-5-adk-agents-monday-automation-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-23`
+  - Words: 1202
+
+- **Sovereign AI in India: Offline 70B + MCP + DPDP 2026**
+  - Slug: `sovereign-ai-india-offline-70b-mcp-dpdp-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1213
+
+- **Pydantic AI 2.0 + Harness: Type-Safe Agents That Ship**
+  - Slug: `pydantic-ai-2-0-type-safe-harness-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1209
+
+- **Frontier Model Routing 2026: Mistral vs Gemini vs Claude**
+  - Slug: `frontier-model-routing-mistral-gemini-claude-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-23`
+  - Words: 1334
+
+- **Hermes Agent 234K Stars: Self-Improving AI That Learns**
+  - Slug: `hermes-agent-234k-stars-self-improving-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-23`
+  - Words: 1222
+
+- **Claude Agent SDK: 5-Level Hierarchical Subagents Ship**
+  - Slug: `claude-agent-sdk-hierarchical-subagents-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1210 words
+
+- **Strands Agents AWS: Model-Driven SDK for Any Cloud**
+  - Slug: `strands-agents-aws-model-driven-sdk-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1246 words
+
+- **LlamaIndex Workflows 1.0: Event-Driven Engine Left RAG**
+  - Slug: `llamaindex-workflows-1-0-event-driven-engine-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1215 words
+
+- **Mastra 300K Weekly: TypeScript Agent Framework Scales**
+  - Slug: `mastra-typescript-300k-weekly-agent-framework-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-23`
+  - Words: 1327 words
+
+- **OpenAI Agents SDK GA: Sandbox Harness for 7 Providers**
+  - Slug: `openai-agents-sdk-sandbox-harness-ga-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1304 words
+
+- **Zero-Trust AI Agents: JWT, OPA & HITL in Production**
+  - Slug: `zero-trust-ai-agents-jwt-opa-hitl-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1325 words
+
+- **Vibe Coding 2.0: Cursor vs Claude vs Codex in Prod**
+  - Slug: `vibe-coding-cursor-claude-code-ships-2026-update`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1366 words
+
+- **Agentic AI Pricing 2026: $0.002 per Call vs $0.08 Local**
+  - Slug: `agentic-ai-pricing-per-invocation-local-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-23`
+  - Words: 1313 words
+
+- **Gujarat SME Automation: WhatsApp + UPI + n8n in 30 Days**
+  - Slug: `gujarat-sme-automation-whatsapp-upi-n8n-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-23`
+  - Words: 1366 words
