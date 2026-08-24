@@ -318,3 +318,63 @@
   - Tag: `AI DEV`
   - Published: `2026-08-24`
   - Words: 1468
+
+- **Veo 3 AI Video 2026: Text to Viral Reels That Ship**
+  - Slug: `veo-3-ai-video-generation-viral-reels-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-24`
+  - Words: 1417
+
+- **DPDP Act AI Compliance 2026: Enterprise Playbook**
+  - Slug: `dpdp-act-ai-compliance-enterprise-playbook-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-24`
+  - Words: 1413
+
+- **ONDC + AI Agents 2026: Agentic Commerce for Bharat**
+  - Slug: `ondc-ai-agents-agentic-commerce-bharat-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-24`
+  - Words: 1358
+
+- **UPI AutoPay 2.0 & Credit-on-UPI 2026: SaaS Billing**
+  - Slug: `upi-autopay-credit-on-upi-saas-billing-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-24`
+  - Words: 1336
+
+- **SLM & Edge AI 2026: Phi-4 Mini & Gemma on Pi 5**
+  - Slug: `slm-edge-ai-phi4-gemma-pi5-router-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-24`
+  - Words: 1351
+
+- **IndiaAI Mission 2026: 38K GPUs & BharatGen Stack**
+  - Slug: `indiaai-mission-38k-gpus-bharatgen-sarvam-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-24`
+  - Words: 1302
+
+- **India SME Tipping Point 2026: Response Speed Wins**
+  - Slug: `india-sme-tipping-point-response-speed-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-24`
+  - Words: 1341
+
+- **WhatsApp Pay + UPI 2026: Zero-Friction Chat Checkout**
+  - Slug: `whatsapp-pay-upi-chat-commerce-zero-friction-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-24`
+  - Words: 1320
+
+- **AEO vs GEO 2026: Rank in ChatGPT & Perplexity Search**
+  - Slug: `aeo-vs-geo-rank-chatgpt-perplexity-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-24`
+  - Words: 1314
+
+- **Building from Junagadh: My 90-Day DPDP Sprint**
+  - Slug: `building-junagadh-90day-dpdp-sprint-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-08-24`
+  - Words: 1243
