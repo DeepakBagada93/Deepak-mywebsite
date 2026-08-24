@@ -34,10 +34,10 @@
             @endif
         </div>
 
-        <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 20px;">
-            <a class="btn btn--ghost" href="{{ route('journal.index') }}">View all {{ count($posts) }} journal articles →</a>
+        <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <a class="btn btn--ghost" href="{{ route('journal.index') }}">View all {{ $postsTotal ?? count($posts) }} journal articles →</a>
             <p class="journal__footnote mono reveal" data-reveal style="margin-top: 0;">
-                Continuous insights published weekly from Junagadh, Gujarat.
+                Showing latest {{ count($posts) }} — continuous insights weekly from Junagadh, Gujarat.
             </p>
         </div>
     </div>

@@ -14,7 +14,8 @@ class PortfolioController extends Controller
         $site = config('site');
         $url = rtrim($site['url'], '/');
 
-        $posts = Post::published()->get();
+        $posts = Post::published()->take(9)->get();
+        $postsTotal = Post::published()->count();
         $projects = Project::orderBy('sort_order')->get();
         $faqs = Faq::orderBy('sort_order')->get();
         $services = Service::orderBy('id')->get();
@@ -165,6 +166,6 @@ class PortfolioController extends Controller
             ], JSON_UNESCAPED_SLASHES),
         ];
 
-        return view('portfolio.index', compact('site', 'url', 'posts', 'projects', 'faqs', 'services', 'head'));
+        return view('portfolio.index', compact('site', 'url', 'posts', 'postsTotal', 'projects', 'faqs', 'services', 'head'));
     }
 }
