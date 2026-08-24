@@ -258,3 +258,63 @@
   - Tag: `AUTOMATION`
   - Published: `2026-08-23`
   - Words: 1366 words
+
+- **Computer-Use Agents 2026: Browser Automation Without APIs**
+  - Slug: `computer-use-agents-browser-automation-no-api-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-24`
+  - Words: 1438
+
+- **Google AI Overviews 2026: Rank & Get Cited Playbook**
+  - Slug: `google-ai-overviews-rank-cited-aeo-playbook-2026-v2`
+  - Tag: `AEO`
+  - Published: `2026-08-24`
+  - Words: 1288
+
+- **Laravel 13 AI SDK 2026: pgvector Search in Eloquent**
+  - Slug: `laravel-13-ai-sdk-pgvector-semantic-search-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-24`
+  - Words: 1515
+
+- **Token Crisis 2026: FinOps for AI Agents When Bills Hit ₹15L**
+  - Slug: `token-crisis-finops-ai-agents-bills-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-24`
+  - Words: 1537
+
+- **WhatsApp-First Automation 2026: 98% Opens vs 12% Email**
+  - Slug: `whatsapp-first-automation-india-98-opens-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-24`
+  - Words: 1563
+
+- **Voice AI Vernacular India 2026: Hindi & Gujarati Agents Win**
+  - Slug: `voice-ai-vernacular-india-hindi-gujarati-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-24`
+  - Words: 1439
+
+- **No-Code Agent Builders 2026: n8n vs Lindy vs Relevance**
+  - Slug: `no-code-agent-builders-n8n-lindy-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-24`
+  - Words: 1505
+
+- **AI Coding Agents 2026: From Autocomplete to PR That Ships**
+  - Slug: `ai-coding-agents-autocomplete-to-pr-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-24`
+  - Words: 1491
+
+- **MCP Security 2026: OAuth, Scoped JWT & Catalog Governance**
+  - Slug: `mcp-security-oauth-jwt-catalog-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-24`
+  - Words: 1531
+
+- **Agentic Governance 2026: Audit Logs & HITL Before Breach**
+  - Slug: `agentic-governance-audit-logs-hitl-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-24`
+  - Words: 1468
