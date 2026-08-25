@@ -31,7 +31,7 @@ class SkillExtraSeeder extends Seeder
         ];
         foreach ($extra as $i => $e) {
             Skill::updateOrCreate(['slug' => $e['slug']], [
-                'title' => $e['title'], 'summary' => $e['summary'], 'content' => '# '.$e['title']."\n\n".$e['summary']."\n\nSee library for full blueprint. Category: ".$e['slug']." — production-tested 2026.",
+                'title' => $e['title'], 'summary' => $e['summary'], 'content' => '# '.$e['title']."\n\n".$e['summary']."\n\nSee library for full blueprint. Category: ".$e['slug'].' — production-tested 2026.',
                 'category_id' => $e['cat'], 'difficulty' => $e['diff'], 'github_url' => 'https://github.com/DeepakBagada93',
                 'version' => $e['ver'], 'stars' => $e['stars'], 'status' => 'published', 'sort_order' => 20 + $i, 'published_at' => now(),
             ]);
