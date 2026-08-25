@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             FaqSeeder::class,
             SkillCategorySeeder::class,
             SkillSeeder::class,
+            SkillExtraSeeder::class,
             CuratedRepoSeeder::class,
         ]);
     }
