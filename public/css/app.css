@@ -1085,7 +1085,7 @@ code { font-family: var(--mono); font-size: 0.85em; }
     text-decoration: none; font-size: 0.78rem;
 }
 .pagination-arrow:first-child, .pagination-page:first-child { border-left: none; }
-.pagination-arrow { padding: 0 10px; color: var(--ink); }
+.pagination-arrow { padding: 0 16px; color: var(--ink); font-weight: 500; letter-spacing: 0.04em; }
 .pagination-arrow:hover, .pagination-page:hover { background: var(--ink); color: var(--paper); }
 .pagination-arrow.is-disabled, .pagination-page.is-disabled { color: var(--muted); background: #f7f7f7; cursor: not-allowed; pointer-events: none; }
 .pagination-page.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 600; }

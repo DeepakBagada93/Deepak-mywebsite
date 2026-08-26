@@ -29,19 +29,11 @@
             </p>
 
             <span class="pagination-links mono" role="list">
-                {{-- Previous --}}
+                {{-- Previous — text button (arrow SVG removed) --}}
                 @if ($paginator->onFirstPage())
-                    <span aria-disabled="true" aria-label="{{ __('pagination.previous') }}" class="pagination-arrow is-disabled" role="listitem">
-                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display:block">
-                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </span>
+                    <span aria-disabled="true" aria-label="{{ __('pagination.previous') }}" class="pagination-arrow is-disabled" role="listitem">Previous</span>
                 @else
-                    <a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="{{ __('pagination.previous') }}" class="pagination-arrow" role="listitem">
-                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display:block">
-                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
+                    <a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="{{ __('pagination.previous') }}" class="pagination-arrow" role="listitem">Previous</a>
                 @endif
 
                 @foreach ($elements as $element)
@@ -59,19 +51,11 @@
                     @endif
                 @endforeach
 
-                {{-- Next — this is the arrow you flagged --}}
+                {{-- Next — text button --}}
                 @if ($paginator->hasMorePages())
-                    <a href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="{{ __('pagination.next') }}" class="pagination-arrow" role="listitem">
-                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display:block">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
+                    <a href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="{{ __('pagination.next') }}" class="pagination-arrow" role="listitem">Next</a>
                 @else
-                    <span aria-disabled="true" aria-label="{{ __('pagination.next') }}" class="pagination-arrow is-disabled" role="listitem">
-                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display:block">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </span>
+                    <span aria-disabled="true" aria-label="{{ __('pagination.next') }}" class="pagination-arrow is-disabled" role="listitem">Next</span>
                 @endif
             </span>
         </div>
