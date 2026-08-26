@@ -20,7 +20,7 @@ class CuratedRepoController extends Controller
             $query->where('category', $category);
         }
 
-        $repos = $query->get();
+        $repos = $query->paginate(16)->withQueryString();
         $categories = CuratedRepo::select('category')->distinct()->whereNotNull('category')->pluck('category');
 
         $head = [

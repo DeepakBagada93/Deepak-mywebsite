@@ -66,6 +66,12 @@
                 @endif
             </div>
 
+            @if ($repos->hasPages())
+                <div class="pagination-wrapper" style="margin-top: 48px;">
+                    {{ $repos->links() }}
+                </div>
+            @endif
+
             <div class="article__foot">
                 <a class="btn btn--solid" href="{{ route('library.index') }}">← AI Skills Library</a>
                 <a class="btn btn--ghost" href="{{ route('blueprints.index') }}">Architecture Blueprints →</a>
