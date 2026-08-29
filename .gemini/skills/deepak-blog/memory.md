@@ -378,3 +378,63 @@
   - Tag: `MY STORY`
   - Published: `2026-08-24`
   - Words: 1243
+
+- **YouTube Owns 23% of AI Overviews: Win Citations 2026**
+  - Slug: `ai-overviews-youtube-citations-2026-fresh`
+  - Tag: `AEO`
+  - Published: `2026-08-29`
+  - Words: 1179
+
+- **RBI E-Mandate 2026: UPI AutoPay Compliance Playbook**
+  - Slug: `rbi-e-mandate-2026-upi-autopay-compliance-fresh`
+  - Tag: `FINTECH`
+  - Published: `2026-08-29`
+  - Words: 1005
+
+- **Laravel 13 Passkeys + AI SDK: Ship Auth & AI in 10 Min**
+  - Slug: `laravel-13-passkeys-ai-sdk-2026-fresh`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-29`
+  - Words: 946
+
+- **Shopify AI Referrals Up 197%: Convert 2x Better in 2026**
+  - Slug: `shopify-ai-referrals-197pct-2026-fresh`
+  - Tag: `AEO`
+  - Published: `2026-08-29`
+  - Words: 926
+
+- **ONDC + AI Agents 2026: Agentic Commerce for Bharat**
+  - Slug: `ondc-ai-agents-agentic-commerce-2026-fresh`
+  - Tag: `AI DEV`
+  - Published: `2026-08-29`
+  - Words: 882
+
+- **Veo 3 AI Video 2026: Text to Viral Reels in 43 Seconds**
+  - Slug: `veo-3-video-generation-viral-reels-2026-fresh`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-29`
+  - Words: 875
+
+- **UPI Cross-Border 2026: 15 Countries, One QR for Global**
+  - Slug: `upi-cross-border-15-countries-2026-fresh`
+  - Tag: `FINTECH`
+  - Published: `2026-08-29`
+  - Words: 874
+
+- **GraphRAG vs RAG 2026: What Actually Works in Production**
+  - Slug: `graphrag-vs-rag-production-2026-fresh`
+  - Tag: `AI DEV`
+  - Published: `2026-08-29`
+  - Words: 836
+
+- **MCP Security 2026: OAuth, Scoped JWT & Catalog Governance**
+  - Slug: `mcp-security-oauth-jwt-catalog-2026-fresh`
+  - Tag: `AI DEV`
+  - Published: `2026-08-29`
+  - Words: 916
+
+- **SME Automation 2026: 5 Gujarat Workflows Pay in 30 Days**
+  - Slug: `sme-automation-5-workflows-gujarat-2026-fresh`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-29`
+  - Words: 903
