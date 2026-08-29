@@ -192,3 +192,18 @@ Published: 2026-08-23 via opensource-library skill, live at https://deepakbagada
   - Published: `2026-08-23`
   - URL: `https://deepakbagada.in/library/awesome-claude-skills-collection`
   - Stars: `18400`
+
+## Curated Repositories — Batch 4 (10 New, Trending Aug 29 2026 — LIVE sync)
+
+46. `zhaoxuya520/reverse-skill` — Agent Frameworks — 8,920 stars — Trending #1 Aug 1 (skill router for RE/CTF)
+47. `different-ai/openwork` — Automation — 7,450 stars — Trending #2 Aug 1 (desktop cowork for MCP)
+48. `msitarzewski/agency-agents` — Agent Frameworks — 143,953 stars — Trending #1 Aug 12 (AI agency personas)
+49. `semantica-agi/semantica` — RAG & Vector Search — 5,229 stars — Trending #1 Aug 11 (graph-native context)
+50. `addyosmani/agent-skills` — Agent Frameworks — 86,386 stars — Trending #4 Aug 12 (prod engineering skills)
+51. `vitali87/code-graph-rag` — RAG & Vector Search — 3,251 stars — Trending #6 Aug 12 (Tree-sitter + Memgraph)
+52. `github/copilot-sdk` — LLM Tooling — 21,400 stars — Trending #6 Aug 1 (Copilot agent SDK)
+53. `harveyai/harvey-labs` — Agent Frameworks — 1,137 stars — Trending #13 Aug 12 (legal agent benchmark)
+54. `calesthio/OpenMontage` — Video & Media — 4,870 stars — Trending #15 Aug 12 (agentic video 12 pipelines)
+55. `chatwoot/chatwoot` — Automation — 38,500 stars — Trending #7 Aug 1 (omnichannel support, self-hosted)
+
+Published: 2026-08-29 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 75 repos (65→75)
