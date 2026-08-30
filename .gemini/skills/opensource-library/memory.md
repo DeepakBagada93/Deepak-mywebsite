@@ -207,3 +207,24 @@ Published: 2026-08-23 via opensource-library skill, live at https://deepakbagada
 55. `chatwoot/chatwoot` — Automation — 38,500 stars — Trending #7 Aug 1 (omnichannel support, self-hosted)
 
 Published: 2026-08-29 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 75 repos (65→75)
+
+## Curated Repositories — Batch 5 (10 New, Trending Aug 29 2026 — LIVE sync)
+
+56. `apache/maka` — Agent Frameworks — 4,045 stars — ASF incubating TUI + Runtime Host + eval (Repo Radar #1 Aug 28, +1,978 week, 3,848)
+57. `AlexsJones/llmfit` — LLM Tooling — 34,423 stars — One-command hardware fit scorer Q8_0→Q2_K (Repo Radar #2, 34.5k)
+58. `akitaonrails/ai-memory` — RAG & Vector Search — 5,055 stars — Rust binary cross-agent memory SQLite+Markdown (Repo Radar #3)
+59. `Tencent/AI-Infra-Guard` — Automation — 6,032 stars — Red-team MCP/skills, 146 components 2K CVEs (Repo Radar #4, v4.6.0 Aug 26)
+60. `vllm-project/semantic-router` — LLM Tooling — 5,376 stars — Neural semantic router Go, multi-backend (Repo Radar #5)
+61. `anthropics/claude-plugins-official` — Agent Frameworks — 35,300 stars — Official Claude Plugins marketplace (GitHub Trending Aug 29, 3,438 commits)
+62. `K-Dense-AI/scientific-agent-skills` — Agent Frameworks — 3,927 stars — Scientific skills pack research→paper (GitHub Trending Aug 29 #2)
+63. `tt-a1i/archify` — Video & Media — 3,927 stars — 38 diagram types HTML+SVG self-contained (Trending8 #1, 3,927 today)
+64. `VectifyAI/OpenKB` — RAG & Vector Search — 4,000 stars — Open LLM Knowledge Base + RAG eval (GitTrend #1 AI Memory +930 today)
+65. `thedotmack/claude-mem` — RAG & Vector Search — 92,500 stars — Persistent context across every agent (GitTrend #4, 92.5k, +218 today)
+
+Published: 2026-08-29 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 83 repos (75→83) — verified via CuratedRepo::count()
+
+- **Day-in-Life Stack: Website, WebApp & MCP Builder**
+  - Slug: `day-in-life-website-webapp-mcp-builder`
+  - Type: `skill`
+  - Published: `2026-08-30`
+  - Words: 2333
