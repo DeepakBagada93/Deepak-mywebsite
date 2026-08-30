@@ -438,3 +438,93 @@
   - Tag: `AUTOMATION`
   - Published: `2026-08-29`
   - Words: 903
+
+- **MCP Stateless at 30 Days: Tasks & Skills 2026**
+  - Slug: `mcp-stateless-30-days-tasks-skills-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-29`
+  - Words: 1259
+
+- **August 2026 Google Spam Update: AEO Shift**
+  - Slug: `august-2026-google-spam-update-aeo-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-29`
+  - Words: 1203
+
+- **Search Console Generative AI Report 2026**
+  - Slug: `search-console-generative-ai-report-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-29`
+  - Words: 1150
+
+- **Workload Identity DPoP & Federation 2026**
+  - Slug: `workload-identity-dpop-federation-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-29`
+  - Words: 1174
+
+- **Laravel 13 AI Agents in PHP: No Python 2026**
+  - Slug: `laravel-13-ai-agents-no-python-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-29`
+  - Words: 1145
+
+- **Gemini 3 Powers 48% of Google Searches in 2026**
+  - Slug: `gemini-3-powers-48pct-google-searches-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-30`
+  - Words: 1088
+
+- **Top-10 Overlap Collapses 76% to 38% in 2026**
+  - Slug: `top-10-overlap-collapse-76-to-38-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-30`
+  - Words: 961
+
+- **Schema Markup 2.3x Citations: AEO Guide 2026**
+  - Slug: `schema-markup-2-3x-citations-aeo-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-30`
+  - Words: 932
+
+- **Laravel 13 MCP + Boost: AI-Native in 10 Minutes**
+  - Slug: `laravel-13-mcp-boost-ai-native-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 972
+
+- **UPI AutoPay Windows & Retry Caps 2026 Compliance**
+  - Slug: `upi-autopay-windows-retry-caps-2026`
+  - Tag: `FINTECH`
+  - Published: `2026-08-30`
+  - Words: 990
+
+- **Veo 3.1 Lite at $0.05/s: Enterprise Video 2026**
+  - Slug: `veo-3-1-lite-005-enterprise-video-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 1007
+
+- **BharatGen 17B & Sarvam 105B: Sovereign AI India**
+  - Slug: `bharatgen-sarvam-sovereign-ai-india-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 972
+
+- **Phi-4 Mini 3.8B at 300 tok/s: Edge AI on 3GB**
+  - Slug: `phi-4-mini-300toks-edge-ai-3gb-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 1002
+
+- **MCP Tasks for Long Runs: Non-Blocking Agents 2026**
+  - Slug: `mcp-tasks-long-runs-nonblocking-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-30`
+  - Words: 1018
+
+- **WhatsApp Pay Inside Chat: Zero-Friction UPI 2026**
+  - Slug: `whatsapp-pay-inside-chat-zero-friction-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-30`
+  - Words: 920

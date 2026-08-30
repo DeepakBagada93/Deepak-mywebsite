@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-08-30",
+  "niche": "ALL",
+  "dedup_slugs": 150,
+  "queue": [
+    {
+      "rank": 1,
+      "title": "Autonomous QA Swarms: How We Cut Production Bugs by 87% with Multi-Agent CI/CD",
+      "slug": "autonomous-qa-swarms-how-we-cut-production-bugs-by-87-with-m",
+      "keyword": "autonomous QA multi-agent",
+      "intent": "Commercial",
+      "pillar": "AI Agents & Autonomous Swarms",
+      "pillarId": "ai-agents",
+      "viral_signal": "Engineering Twitter viral thread 15K likes",
+      "score": 93,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 2,
+      "title": "Zero-Hallucination RAG: The Pydantic + pgvector Pattern We Use in Production",
+      "slug": "zero-hallucination-rag-the-pydantic-pgvector-pattern-we-use-",
+      "keyword": "hallucination-free RAG pgvector",
+      "intent": "Commercial",
+      "pillar": "AI Agents & Autonomous Swarms",
+      "pillarId": "ai-agents",
+      "viral_signal": "Technical SEO gap — high intent, low competition",
+      "score": 92,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 3,
+      "title": "AI Swarms for Indian SMEs: Architecture That Pays for Itself in 30 Days",
+      "slug": "ai-swarms-for-indian-smes-architecture-that-pays-for-itself-",
+      "keyword": "AI automation Indian SMEs",
+      "intent": "Commercial",
+      "pillar": "AI Agents & Autonomous Swarms",
+      "pillarId": "ai-agents",
+      "viral_signal": "India SME automation searches +210% YoY",
+      "score": 83,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 4,
+      "title": "How to Rank on Google AI Overviews & Perplexity: The AEO Playbook for 2026",
+      "slug": "how-to-rank-on-google-ai-overviews-perplexity-the-aeo-playbo",
+      "keyword": "rank Google AI Overviews 2026",
+      "intent": "Commercial",
+      "pillar": "SEO, AEO & AI Overviews",
+      "pillarId": "seo-aeo",
+      "viral_signal": "AEO searches +420% YoY, emerging low-competition goldmine",
+      "score": 95,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 5,
+      "title": "JSON-LD Schema That Gets You Cited by ChatGPT: A Developer's Guide",
+      "slug": "json-ld-schema-that-gets-you-cited-by-chatgpt-a-developer-s-",
+      "keyword": "JSON-LD AEO schema ChatGPT",
+      "intent": "Informational",
+      "pillar": "SEO, AEO & AI Overviews",
+      "pillarId": "seo-aeo",
+      "viral_signal": "Technical AEO gap — few cover implementation",
+      "score": 85,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 6,
+      "title": "Local SEO for Gujarat Businesses: The 2026 Map Pack + AI Citation System",
+      "slug": "local-seo-for-gujarat-businesses-the-2026-map-pack-ai-citati",
+      "keyword": "local SEO Gujarat 2026",
+      "intent": "Commercial",
+      "pillar": "SEO, AEO & AI Overviews",
+      "pillarId": "seo-aeo",
+      "viral_signal": "Local SEO local pack trending, Junagadh geo-modifier",
+      "score": 84,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 7,
+      "title": "Laravel 13 in 2026: How We Hit 98 Lighthouse Scores Without a Single SPA",
+      "slug": "laravel-13-in-2026-how-we-hit-98-lighthouse-scores-without-a",
+      "keyword": "Laravel 13 performance 2026",
+      "intent": "Commercial",
+      "pillar": "High-Speed Web Dev & Laravel",
+      "pillarId": "web-dev",
+      "viral_signal": "Laravel News trending #1, HN discussion 340 comments",
+      "score": 75,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 8,
+      "title": "How Much Does a Website Cost in Gujarat in 2026? Honest Breakdown",
+      "slug": "how-much-does-a-website-cost-in-gujarat-in-2026-honest-break",
+      "keyword": "website cost Gujarat 2026",
+      "intent": "Commercial",
+      "pillar": "High-Speed Web Dev & Laravel",
+      "pillarId": "web-dev",
+      "viral_signal": "Google PAA volume 1.2K/mo, local intent spike",
+      "score": 85,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 9,
+      "title": "Monolith vs Microservices in 2026: Why We Went Back to Monoliths",
+      "slug": "monolith-vs-microservices-in-2026-why-we-went-back-to-monoli",
+      "keyword": "monolith vs microservices 2026",
+      "intent": "Informational",
+      "pillar": "High-Speed Web Dev & Laravel",
+      "pillarId": "web-dev",
+      "viral_signal": "Engineering debate viral — 450K impressions on X",
+      "score": 79,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    },
+    {
+      "rank": 10,
+      "title": ": Complete 2026 Guide — What Works, What Doesn't & What's Next",
+      "slug": "complete-2026-guide-what-works-what-doesn-t-what-s-next",
+      "keyword": "",
+      "intent": "Informational",
+      "pillar": "AI Workflows & Business Automation",
+      "pillarId": "automation",
+      "viral_signal": "Custom niche — agent must validate with real SERP",
+      "score": 84,
+      "status": "🔬 RESEARCH SCAFFOLD — verify with live SERP/trends before approval"
+    }
+  ]
+}
