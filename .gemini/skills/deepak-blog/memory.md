@@ -528,3 +528,63 @@
   - Tag: `AUTOMATION`
   - Published: `2026-08-30`
   - Words: 920
+
+- **GPT-5.6 Sol Terra Luna: Enterprise Pick 2026**
+  - Slug: `gpt-5-6-sol-terra-luna-enterprise-pick-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 1029
+
+- **Claude Opus 5 at Half Price: Fable 5 Quality 2026**
+  - Slug: `claude-opus-5-half-price-fable-quality-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 983
+
+- **Claude Sonnet 5 $2: Most Agentic Sonnet Yet 2026**
+  - Slug: `claude-sonnet-5-agentic-2-dollars-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 926
+
+- **Gemini 3.1 vs Claude vs GPT: Benchmarks 2026**
+  - Slug: `gemini-3-1-vs-claude-vs-gpt-benchmarks-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-30`
+  - Words: 898
+
+- **GPT-5 vs Sonnet 4.5: Pricing & Context 2026**
+  - Slug: `gpt-5-vs-sonnet-4-5-pricing-context-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-30`
+  - Words: 859
+
+- **Next.js 15.5 Turbopack Beta: 5x Faster Builds 2026**
+  - Slug: `nextjs-15-5-turbopack-beta-5x-faster-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 947
+
+- **Next.js 15.5 Typed Routes & Node Middleware 2026**
+  - Slug: `nextjs-15-5-typed-routes-node-middleware-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 912
+
+- **Next.js 16 Deprecations: next lint & AMP Gone 2026**
+  - Slug: `nextjs-16-deprecations-next-lint-amp-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 882
+
+- **Next.js Aug 2026 Security: AVIF RCE Fix 15.5.24**
+  - Slug: `nextjs-aug-2026-security-avif-rce-15-5-24`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 846
+
+- **Next.js 16 Cache & PPR: Modern Web Stack 2026**
+  - Slug: `nextjs-16-cache-ppr-modern-stack-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 907
