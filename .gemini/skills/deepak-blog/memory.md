@@ -588,3 +588,123 @@
   - Tag: `WEB DEV`
   - Published: `2026-08-30`
   - Words: 907
+
+- **JSON-LD Schema That Gets You Cited by ChatGPT 2026**
+  - Slug: `json-ld-schema-cited-chatgpt-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-30`
+  - Words: 929
+
+- **NVIDIA SkillSpector: Scan 26% Vulnerable Skills 2026**
+  - Slug: `nvidia-skillspector-scan-agent-skills-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-30`
+  - Words: 820
+
+- **Next.js 16 Cache Components & PPR: TTFB 700→60ms**
+  - Slug: `nextjs-16-cache-components-ppr-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 824
+
+- **Rank on Google AI Overviews & Perplexity 2026 Guide**
+  - Slug: `rank-google-ai-overviews-perplexity-2026`
+  - Tag: `AEO`
+  - Published: `2026-08-30`
+  - Words: 859
+
+- **Laravel 13 Zero Breaking Changes & AI SDK 2026**
+  - Slug: `laravel-13-zero-breaking-ai-sdk-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 841
+
+- **MCP Server Architecture Scaling to 70K Modules 2026**
+  - Slug: `mcp-server-architecture-scale-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-30`
+  - Words: 770
+
+- **Zero-Hallucination RAG: Pydantic + pgvector 2026**
+  - Slug: `zero-hallucination-rag-pydantic-pgvector-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-30`
+  - Words: 792
+
+- **Firecrawl 170K Stars: One API Replaces 4 Tools 2026**
+  - Slug: `firecrawl-one-api-web-stack-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-30`
+  - Words: 772
+
+- **Laravel 13 Vector Search: pgvector Semantic 2026**
+  - Slug: `laravel-13-vector-search-pgvector-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 704
+
+- **n8n + MCP: 400 Integrations Workflow 2026**
+  - Slug: `n8n-mcp-400-integrations-workflow-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-30`
+  - Words: 750
+
+- **Multi-Agent Swarm Handoff Protocol 2026 Guide**
+  - Slug: `multi-agent-swarm-handoff-protocol-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-30`
+  - Words: 730
+
+- **Local SEO Gujarat 2026: Map Pack + AI Citations**
+  - Slug: `local-seo-gujarat-map-pack-ai-2026`
+  - Tag: `LOCAL SEO`
+  - Published: `2026-08-30`
+  - Words: 810
+
+- **Monolith vs Microservices 2026: Why Monolith Wins**
+  - Slug: `monolith-vs-microservices-2026-why-monolith`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 731
+
+- **awesome-claude-skills 73K + SkillKit 46 Agents 2026**
+  - Slug: `awesome-claude-skills-skillkit-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-30`
+  - Words: 749
+
+- **Browser-Use + Agent-Reach: Cross-Platform 2026**
+  - Slug: `browser-use-agent-reach-research-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-30`
+  - Words: 686
+
+- **Autonomous QA Swarms: Cut Bugs 87% CI/CD 2026**
+  - Slug: `autonomous-qa-swarms-cut-bugs-87-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-30`
+  - Words: 687
+
+- **Content Repurposing: 1 Idea to 20 Assets 2026**
+  - Slug: `content-repurposing-hub-1-to-20-assets-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-30`
+  - Words: 730
+
+- **Building AI Products from Junagadh Playbook 2026**
+  - Slug: `building-ai-products-junagadh-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-08-30`
+  - Words: 796
+
+- **Laravel 13 Passkeys + PreventRequestForgery 2026**
+  - Slug: `laravel-13-passkeys-auth-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 694
+
+- **Website Cost Gujarat 2026: Honest Breakdown**
+  - Slug: `website-cost-gujarat-2026-honest-breakdown`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-30`
+  - Words: 740
