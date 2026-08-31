@@ -30,3 +30,11 @@ Thumbs.db
 deploy.zip
 hostinger_key.txt
 GITHUB_ACTION_SECRET_KEY.md
+
+# generated audits & research briefs (local only — never commit)
+blog-audit*.md
+live-audit*.md
+research-brief*.md
+research-brief*.json
+seo-brief*.md
+blog-audit.md

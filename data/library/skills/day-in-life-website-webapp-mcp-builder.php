@@ -1,9 +1,10 @@
 <?php
+
 return [
-    'title'        => 'Day-in-Life Stack: Website, WebApp & MCP Builder',
-    'slug'         => 'day-in-life-website-webapp-mcp-builder',
-    'summary'      => 'My daily 6 AM–midnight pipeline for shipping websites, web apps & custom MCP servers from Junagadh — Laravel 13 + Next.js 15.5 + MCP with audit gates.',
-    'content'      => <<<'CONTENT'
+    'title' => 'Day-in-Life Stack: Website, WebApp & MCP Builder',
+    'slug' => 'day-in-life-website-webapp-mcp-builder',
+    'summary' => 'My daily 6 AM–midnight pipeline for shipping websites, web apps & custom MCP servers from Junagadh — Laravel 13 + Next.js 15.5 + MCP with audit gates.',
+    'content' => <<<'CONTENT'
 # Day-in-Life Builder Stack: Website + WebApp + Custom MCP — 6 AM to Midnight Pipeline
 
 My daily builder stack ships a business website by noon, a SaaS web app by evening, and a custom MCP server by midnight — all from Junagadh, Gujarat. I built this pipeline to answer one question: how does a solo developer in a Tier-3 city compete with metro teams on speed, quality, and AEO — without burning out?
@@ -250,10 +251,10 @@ Three levers: no commute + async Loom (saves 2 hrs/day), Hostinger + Vapor + Ver
 - [Building AI Products from Junagadh Playbook](/journal/building-ai-products-junagadh-playbook-2026) · [Cost Breakdown](/journal/website-cost-gujarat-2026-honest-breakdown) · [MCP Security](/journal/mcp-security-oauth-jwt-catalog-2026)
 
 CONTENT,
-    'category'     => 'automation',
-    'difficulty'   => 'intermediate',
-    'github_url'   => 'https://github.com/DeepakBagada93/day-in-life-builder-stack',
-    'version'      => '1.0.0',
-    'stars'        => 0,
+    'category' => 'automation',
+    'difficulty' => 'intermediate',
+    'github_url' => 'https://github.com/DeepakBagada93/day-in-life-builder-stack',
+    'version' => '1.0.0',
+    'stars' => 0,
     'published_at' => '2026-08-30',
 ];
