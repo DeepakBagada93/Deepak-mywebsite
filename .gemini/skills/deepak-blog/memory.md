@@ -738,3 +738,93 @@
   - Tag: `AI NEWS`
   - Published: `2026-08-31`
   - Words: 1368
+
+- **Google AI Overviews India 2026: AEO Rank Guide**
+  - Slug: `google-ai-overviews-india-2026-aeo-guide`
+  - Tag: `AEO`
+  - Published: `2026-08-31`
+  - Words: 1487
+
+- **MCP Server India 2026: GST/Razorpay/Zoho Stack**
+  - Slug: `mcp-server-india-gst-razorpay-zoho-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-31`
+  - Words: 1494
+
+- **Website Cost India 2026: Gujarat Honest Breakdown**
+  - Slug: `website-cost-india-gujarat-2026-honest`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-31`
+  - Words: 1375
+
+- **AI Automation India SMEs 2026: 30-Day ROI**
+  - Slug: `ai-automation-indian-smes-2026-roi-30days`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-31`
+  - Words: 1371
+
+- **MCP Agent Builder India Stack 2026**
+  - Slug: `mcp-agent-builder-india-stack-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-31`
+  - Words: 1296
+
+- **Best AI Developer India 2026: Hiring Skills Guide**
+  - Slug: `best-ai-developer-india-2026-hiring-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-08-31`
+  - Words: 1407
+
+- **Laravel Developer India 2026: 98 Lighthouse**
+  - Slug: `laravel-developer-india-2026-performance`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-31`
+  - Words: 1300
+
+- **UPI AutoPay India SaaS 2026: ₹15K Limit Guide**
+  - Slug: `upi-autopay-india-saas-15k-2026`
+  - Tag: `FINTECH`
+  - Published: `2026-08-31`
+  - Words: 1303
+
+- **Local LLMs India Offline: 70B on Laptop 2026**
+  - Slug: `local-llm-india-offline-70b-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-08-31`
+  - Words: 1279
+
+- **RAG Anything India: Local RAG No OpenAI 2026**
+  - Slug: `rag-anything-local-rag-india-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-31`
+  - Words: 1267
+
+- **RAG GraphRAG India 2026: What Actually Works**
+  - Slug: `rag-graphrag-india-2026-production`
+  - Tag: `AI DEV`
+  - Published: `2026-08-31`
+  - Words: 1255
+
+- **n8n+MCP India 2026: 400 Integrations Workflow**
+  - Slug: `n8n-mcp-automation-india-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-31`
+  - Words: 1210
+
+- **Building from Junagadh Tier-3 Playbook India**
+  - Slug: `building-ai-products-junagadh-india-tier3-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-08-31`
+  - Words: 1210
+
+- **Browser-Use India: Web AI Automation 2026**
+  - Slug: `browser-use-india-automation-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-08-31`
+  - Words: 1234
+
+- **OpenKB India: Open LLM Knowledge Base 2026**
+  - Slug: `openkb-india-knowledge-base-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-31`
+  - Words: 1259
