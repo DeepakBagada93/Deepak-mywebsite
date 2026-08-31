@@ -708,3 +708,33 @@
   - Tag: `WEB DEV`
   - Published: `2026-08-30`
   - Words: 740
+
+- **Next.js Aug 2026 Security: AVIF RCE Patch 15.5.24**
+  - Slug: `nextjs-aug-2026-security-avif-rce-patch-2026-08-31`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-31`
+  - Words: 1526
+
+- **Gujarat AI Action Plan 2025-30: MSME Panchvarshiya**
+  - Slug: `gujarat-ai-action-plan-2025-30-panchvarshiya-2026-08-31`
+  - Tag: `AEO`
+  - Published: `2026-08-31`
+  - Words: 1481
+
+- **MCP = USB-C of AI 2026: 40% Enterprise Apps**
+  - Slug: `mcp-usb-c-ai-2026-enterprise-40pct-2026-08-31`
+  - Tag: `AI AGENTS`
+  - Published: `2026-08-31`
+  - Words: 1510
+
+- **Laravel 13 AI SDK Stable: Zero Breaking 10min**
+  - Slug: `laravel-13-ai-sdk-stable-zero-breaking-2026-08-31`
+  - Tag: `WEB DEV`
+  - Published: `2026-08-31`
+  - Words: 1329
+
+- **IndiaAI Mission 2026: 10k GPUs + YuVerse MSME**
+  - Slug: `indiaai-mission-10k-gpus-msme-gap-2026-08-31`
+  - Tag: `AI NEWS`
+  - Published: `2026-08-31`
+  - Words: 1368
