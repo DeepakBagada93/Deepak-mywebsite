@@ -145,72 +145,6 @@ BODY,
         'published_at' => '2026-08-30',
     ],
     [
-        'title' => 'Building AI Products from Junagadh Playbook 2026',
-        'slug' => 'building-ai-products-junagadh-playbook-2026',
-        'tag' => 'MY STORY',
-        'excerpt' => 'Building AI products from Junagadh — Tier-3 playbook: ₹27K vs ₹1.1L, 4G Pi 5 62 tok/s, 90-day ledger.',
-        'body' => <<<'BODY'
-# Building AI Products from Junagadh Playbook 2026
-
-**Author: Deepak Bagada — AI Developer & Architect, Junagadh, Gujarat** — Founder SaaS Next, builder of Curro. Connect [linkedin.com/in/deepak-bagada](https://linkedin.com/in/deepak-bagada) · [deepakbagada.in](https://deepakbagada.in) — Last reviewed 2026-08-30.
-
-Building AI products from Junagadh playbook no one talks about is the Tier-3 advantage: ₹27K/mo edge tier versus ₹1.1-1.8L team, 3B SLM at 62 tok/s on Pi 5 NVMe handles 78% triage, 32B at 38 tok/s escalations, 14B at 44 tok/s keeps 80% inside VPC when 4G drops, 90-day JSONL ledger passes DPDP without re-instrumentation. I am Deepak Bagada, founder SaaS Next, builder of Curro, AI agent developer in Junagadh, Gujarat — I built enterprise stacks that compete globally from Tier-3 because the product is harness and ledger, model is plugin.
-
-I run [AI Development & Autonomous Agents](/services/ai-development) where the previous bias was you must be in Bangalore to do frontier AI. The 2026 reality is local 14B at 44 tok/s plus router to Sol/Terra/Luna plus OTel governance ships same as metro — catalog pointer flip in 2 seconds rollback, 100% signed zero latest in prod. See [featured projects](/#projects) for Curro tracings and [get in touch](/#contact) if you want to build from Tier-3 without vendor lock-in.
-
-## Numbers No One Shares
-
-**Cost:** ₹27K edge tier runs versus ₹1.1L+ team — payback 30 days codified workflows, zero on Cloud Run when stateless.
-**Offline:** 3B 62 tok/s Pi 5 local triage 78%, 32B 38 tok/s escalations, ledger stays VPC until back online.
-**Audit:** 90-day JSONL 500 samples weekly, 2% downgrade rule — same file passed Surat GST and Rajkot vendor audit.
-
-> **Bottom Line**: Tier-3 is not handicap — it is moat: lower cost + 4G offline + DPDP-native ledger = global trust from Junagadh.
-
-For [Website Development & Laravel Architecture](/services/web-development) the same edge serves LCP 1.9s on 4G without metro DC.
-
-
-For Junagadh builders the invariant is the same across GPT-5.6, Claude Sonnet 5, Gemini 3 and Next.js 15.5. Every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms or error rate exceeds 1% for five minutes. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds. That is why the same 90-day JSONL that passed a Surat GST audit also passes a Rajkot foundry vendor audit without re-instrumentation, and why a local 14B at 44 tokens per second keeps 80% of calls inside the VPC when the 4G link drops.
-
-I keep the same 90-day replay — 500 samples weekly, 2% downgrade rule — across all harnesses in this batch, because the product is the harness and ledger, the model is a plugin. When a new open-weight model drops, I retrain the router, not the product, and the ledger proves the downgrade held without hallucination rising above 0.3%.
-
-## Frequently Asked Questions
-
-### What is the core idea here and why does it matter for Gujarat SMEs?
-The core idea is governed execution — typed schemas, tenant-scoped auth, HITL for irreversible, and an append-only ledger — so a Junagadh-built stack passes DPDP audits locally and scales without 4G or vendor lock-in.
-
-### How does Deepak implement this from Junagadh for clients?
-From Junagadh I wrap every tool with Pydantic validation, mint short-lived JWTs with tenant_id, enforce OPA isolation at the gateway, keep HITL before any write, and trace via OTel to Postgres with 90-day JSONL export.
-
-### How much does this stack cost vs traditional hiring in Gujarat?
-The edge or local tier runs at ₹27K per month versus ₹1.1-1.8L for a manual team, with payback in 30 days for codified workflows, and scales to zero on Cloud Run when stateless.
-
-### Can this run offline or on 4G in rural Gujarat?
-Yes — 3B SLM at 62 tokens per second on Pi 5 with NVMe handles 78% of triage locally, only escalations hit 32B at 38 tok/s, and the ledger stays inside VPC until back online.
-
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-BODY,
-        'published_at' => '2026-08-30',
-    ],
-    [
         'title' => 'Content Repurposing: 1 Idea to 20 Assets 2026',
         'slug' => 'content-repurposing-hub-1-to-20-assets-2026',
         'tag' => 'AUTOMATION',
@@ -917,84 +851,6 @@ BODY,
         'published_at' => '2026-08-30',
     ],
     [
-        'title' => 'Zero-Hallucination RAG: Pydantic + pgvector 2026',
-        'slug' => 'zero-hallucination-rag-pydantic-pgvector-2026',
-        'tag' => 'AI AGENTS',
-        'excerpt' => 'Zero-hallucination RAG with Pydantic + pgvector — grounded, tenant-isolated, HITL. Junagadh prod pattern inside.',
-        'body' => <<<'BODY'
-# Zero-Hallucination RAG: Pydantic + pgvector 2026
-
-**Author: Deepak Bagada — AI Developer & Architect, Junagadh, Gujarat** — Founder SaaS Next, builder of Curro. Connect [linkedin.com/in/deepak-bagada](https://linkedin.com/in/deepak-bagada) · [deepakbagada.in](https://deepakbagada.in) — Last reviewed 2026-08-30.
-
-Zero-hallucination RAG with Pydantic and pgvector in production is grounded generation where every retrieval is validated, tenant-isolated and ledger-audited — because hallucination is the #1 RAG failure and most tutorials show retrieval without governance, no typed schemas, no auth, no HITL, no replay. I run this for Surat textile GST ledger and Rajkot foundry vendor audit from Junagadh — same 90-day JSONL passed both without re-instrumentation, 3B SLM at 62 tok/s handles 78% triage locally, 32B at 38 tok/s escalations.
-
-I run [AI Development & Autonomous Agents](/services/ai-development) where the previous RAG was naive vector search → LLM without validation. The 2026 stack replaces that with: Pydantic BaseModel for every tool contract, pgvector/Qdrant/Chroma similarity with tenant_id filter, JWT scopes per agent session, OPA at gateway, HITL before payment/initiate, OTel trace_id/tenant_id/tool_name/latency/tokens/policy_decision to Postgres, 90-day JSONL export. See [Website Development & Laravel Architecture](/services/web-development) for Laravel pgvector sibling and [get in touch](/#contact) for ledger replay demo.
-
-## Pattern
-
-**Experience:** I built this for 2,400 invoices/day — Luna extraction 0 budget, Terra math 1K, Sol audit 32K, 1.5B classifier 18ms.
-
-**Expertise:** Pydantic rejects malformed tool args before execution; OPA enforces tenant isolation; HITL brake at 40 loops matches MAF spec.
-
-```python
-from pydantic import BaseModel
-class Retrieval(BaseModel):
-    query: str; tenant_id: str; k: int = 5
-def grounded(prompt, tenant):
-    docs = pgvector.similarity_search(prompt, filter={"tenant": tenant})
-    validated = [Retrieval.model_validate(d) for d in docs]
-    return llm.generate(prompt, context=validated, hitl=True)
-```
-
-> **Bottom Line**: Pydantic + pgvector + tenant JWT + OPA + HITL + OTel ledger = hallucination <0.3% and audit-passing RAG.
-
-For [Business Workflow Automation](/services/automation-expert) the same harness keeps 80% calls inside VPC when 4G drops.
-
-
-For Junagadh builders the invariant is the same across GPT-5.6, Claude Sonnet 5, Gemini 3 and Next.js 15.5. Every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms or error rate exceeds 1% for five minutes. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds. That is why the same 90-day JSONL that passed a Surat GST audit also passes a Rajkot foundry vendor audit without re-instrumentation, and why a local 14B at 44 tokens per second keeps 80% of calls inside the VPC when the 4G link drops.
-
-I keep the same 90-day replay — 500 samples weekly, 2% downgrade rule — across all harnesses in this batch, because the product is the harness and ledger, the model is a plugin. When a new open-weight model drops, I retrain the router, not the product, and the ledger proves the downgrade held without hallucination rising above 0.3%.
-
-## Frequently Asked Questions
-
-### What is the core idea here and why does it matter for Gujarat SMEs?
-The core idea is governed execution — typed schemas, tenant-scoped auth, HITL for irreversible, and an append-only ledger — so a Junagadh-built stack passes DPDP audits locally and scales without 4G or vendor lock-in.
-
-### How does Deepak implement this from Junagadh for clients?
-From Junagadh I wrap every tool with Pydantic validation, mint short-lived JWTs with tenant_id, enforce OPA isolation at the gateway, keep HITL before any write, and trace via OTel to Postgres with 90-day JSONL export.
-
-### How much does this stack cost vs traditional hiring in Gujarat?
-The edge or local tier runs at ₹27K per month versus ₹1.1-1.8L for a manual team, with payback in 30 days for codified workflows, and scales to zero on Cloud Run when stateless.
-
-### Can this run offline or on 4G in rural Gujarat?
-Yes — 3B SLM at 62 tokens per second on Pi 5 with NVMe handles 78% of triage locally, only escalations hit 32B at 38 tok/s, and the ledger stays inside VPC until back online.
-
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-
-For Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds.
-BODY,
-        'published_at' => '2026-08-30',
-    ],
-    [
         'title' => 'MCP Server Architecture Scaling to 70K Modules 2026',
         'slug' => 'mcp-server-architecture-scale-2026',
         'tag' => 'AI AGENTS',
@@ -1441,7 +1297,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-08-30',
     ],
-
     [
         'title' => 'Next.js 16 Cache & PPR: Modern Web Stack 2026',
         'slug' => 'nextjs-16-cache-ppr-modern-stack-2026',
@@ -2184,7 +2039,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-08-30',
     ],
-
     [
         'title' => 'WhatsApp Pay Inside Chat: Zero-Friction UPI 2026',
         'slug' => 'whatsapp-pay-inside-chat-zero-friction-2026',
@@ -2940,7 +2794,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-08-30',
     ],
-
     [
         'title' => 'Laravel 13 AI Agents in PHP: No Python 2026',
         'slug' => 'laravel-13-ai-agents-no-python-2026',
@@ -3360,7 +3213,6 @@ Yes — 3B SLM at 62 tokens per second on Pi 5 with NVMe handles 78% of triage l
 BODY,
         'published_at' => '2026-08-29',
     ],
-
     [
         'title' => 'SME Automation 2026: 5 Gujarat Workflows Pay in 30 Days',
         'slug' => 'sme-automation-5-workflows-gujarat-2026-fresh',
@@ -4142,7 +3994,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-08-29',
     ],
-
     [
         'title' => 'Local SEO Gujarat 2026: 15-Step Map Pack Playbook',
         'slug' => 'local-seo-gujarat-15step-2026',
@@ -5962,7 +5813,6 @@ Service-based sabse fast — client ko direct result. Product/Affiliate long-ter
 BODY,
         'published_at' => '2026-08-25',
     ],
-
     [
         'title' => 'Website Developer in Gujarat 2026: Cost & Hire Checklist (Junagadh to Ahmedabad)',
         'slug' => 'website-developer-gujarat-cost-hire-2026',
@@ -7799,7 +7649,6 @@ Yes — 3B SLM at 62 tokens per second on Pi 5 with NVMe handles 78% of triage l
 BODY,
         'published_at' => '2026-08-24',
     ],
-
     [
         'title' => 'Agentic Governance 2026: Audit Logs & HITL Before Breach',
         'slug' => 'agentic-governance-audit-logs-hitl-2026',
@@ -8660,7 +8509,6 @@ Yes — 3B SLM at 62 tokens per second on Pi 5 with NVMe handles 78% of triage l
 BODY,
         'published_at' => '2026-08-24',
     ],
-
     [
         'title' => 'Gujarat SME Automation: WhatsApp + UPI + n8n in 30 Days',
         'slug' => 'gujarat-sme-automation-whatsapp-upi-n8n-2026',
@@ -8719,7 +8567,6 @@ For Junagadh builders the takeaway is not the tool but the ledger. Every call �
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Agentic AI Pricing 2026: $0.002 per Call vs $0.08 Local',
         'slug' => 'agentic-ai-pricing-per-invocation-local-2026',
@@ -8781,7 +8628,6 @@ For Junagadh builders the takeaway is not the tool but the ledger. Every call �
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Vibe Coding 2.0: Cursor vs Claude vs Codex in Prod',
         'slug' => 'vibe-coding-cursor-claude-code-ships-2026-update',
@@ -8848,7 +8694,6 @@ For Junagadh builders the takeaway is not the tool but the ledger. Every call �
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Zero-Trust AI Agents: JWT, OPA & HITL in Production',
         'slug' => 'zero-trust-ai-agents-jwt-opa-hitl-2026',
@@ -8912,7 +8757,6 @@ For Junagadh builders the takeaway is not the tool but the ledger. Every call �
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'OpenAI Agents SDK GA: Sandbox Harness for 7 Providers',
         'slug' => 'openai-agents-sdk-sandbox-harness-ga-2026',
@@ -8977,7 +8821,6 @@ For Junagadh builders the takeaway is not the tool but the ledger. Every call �
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Mastra 300K Weekly: TypeScript Agent Framework Scales',
         'slug' => 'mastra-typescript-300k-weekly-agent-framework-2026',
@@ -9039,7 +8882,6 @@ For Junagadh builders the takeaway is not the tool but the ledger. Every call �
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'LlamaIndex Workflows 1.0: Event-Driven Engine Left RAG',
         'slug' => 'llamaindex-workflows-1-0-event-driven-engine-2026',
@@ -9099,7 +8941,6 @@ No — Workflows is standalone. Both `llama_index` and `LlamaIndexTS` re-export 
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Strands Agents AWS: Model-Driven SDK for Any Cloud',
         'slug' => 'strands-agents-aws-model-driven-sdk-2026',
@@ -9158,7 +8999,6 @@ Choose Strands for AWS autonomous agents with any-model flexibility; LangGraph f
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Claude Agent SDK: 5-Level Hierarchical Subagents Ship',
         'slug' => 'claude-agent-sdk-hierarchical-subagents-2026',
@@ -9212,7 +9052,6 @@ Choose Claude SDK when your stack is Anthropic-native and you need deepest MCP p
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Hermes Agent 234K Stars: Self-Improving AI That Learns',
         'slug' => 'hermes-agent-234k-stars-self-improving-2026',
@@ -9270,7 +9109,6 @@ Hermes learns skills and remembers you; DeepSeek Harness wins auditability with 
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Frontier Model Routing 2026: Mistral vs Gemini vs Claude',
         'slug' => 'frontier-model-routing-mistral-gemini-claude-2026',
@@ -9370,7 +9208,6 @@ Yes — 14B Q4 at 44 tokens per second on an M3 Max and 32B EXL2 at 42 tokens pe
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Pydantic AI 2.0 + Harness: Type-Safe Agents That Ship',
         'slug' => 'pydantic-ai-2-0-type-safe-harness-2026',
@@ -9456,7 +9293,6 @@ Choose Pydantic AI for Python-native, validation-heavy domains — GSTIN, HSN, C
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Sovereign AI in India: Offline 70B + MCP + DPDP 2026',
         'slug' => 'sovereign-ai-india-offline-70b-mcp-dpdp-2026',
@@ -9536,7 +9372,6 @@ Hybrid routing with a 1.5B SLM classifier in 18ms, budgets 0–64K per task, dis
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Sunday Setup: 5 ADK Agents That Make Monday Easy',
         'slug' => 'sunday-setup-5-adk-agents-monday-automation-2026',
@@ -9610,7 +9445,6 @@ Yes — `adk web` runs locally at localhost:8000 for tracing; deploy to Cloud Ru
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Deploy Google ADK to Cloud Run & Vertex AI: Ship Sunday',
         'slug' => 'deploy-google-adk-cloud-run-vertex-ai-2026',
@@ -9702,7 +9536,6 @@ Use Cloud Run for stateless pipelines where you own containers. Use Vertex AI Ag
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Best AI Agent Frameworks August 2026: Ranked by Alice Labs',
         'slug' => 'best-ai-agent-frameworks-august-2026-ranked',
@@ -9766,7 +9599,6 @@ Hermes Agent by Nous Research reached ~220K stars by late July 2026 on the watch
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Microsoft Agent Framework 1.0: Harness Goes GA',
         'slug' => 'microsoft-agent-framework-1-0-harness-ga-2026',
@@ -9842,7 +9674,6 @@ From Junagadh I run the migration assistant to YAML, enable harness brake at 40 
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Google ADK Multi-Agent Patterns: 8 Designs That Ship',
         'slug' => 'google-adk-multi-agent-patterns-2026',
@@ -9932,7 +9763,6 @@ From Junagadh I start every client pipeline as Parallel→Sequential — three s
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'Google ADK vs LangGraph vs CrewAI: Which to Pick in 2026',
         'slug' => 'google-adk-vs-langgraph-vs-crewai-2026',
@@ -10006,7 +9836,6 @@ From Junagadh I classify workload by uncertainty, state complexity and governanc
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'DeepSeek Harness: 95K Stars in 48h — Everything Is a Plugin',
         'slug' => 'deepseek-harness-everything-is-plugin-runtime-2026',
@@ -10099,7 +9928,6 @@ Claude Code still wins immediate productivity, Codex CLI wins strict kernel sand
 BODY,
         'published_at' => '2026-08-23',
     ],
-
     [
         'title' => 'How to Build Multi-AI Agents with Google ADK: A Sunday Day-in-the-Life (Zero to Deployed)',
         'slug' => 'build-multi-ai-agents-google-adk-sunday-tutorial',
@@ -10434,7 +10262,6 @@ ADK requires Python 3.9+; 3.10+ recommended for full type-hint support (Techsy A
 BODY,
         'published_at' => '2026-08-24',
     ],
-
     [
         'title' => 'MCP Servers in Production: Enterprise Architecture Guide',
         'slug' => 'mcp-server-enterprise-architecture-2026',
@@ -13543,7 +13370,7 @@ BODY,
         'title' => 'From Code to AI: My Story So Far, in Six Chapters',
         'slug' => 'from-code-to-ai-my-story-six-chapters',
         'tag' => 'MY STORY',
-        'excerpt' => "I didn't plan any of this. First there was code, then marketing, then AI. This is the honest version of how one led to the next.",
+        'excerpt' => 'I didn\'t plan any of this. First there was code, then marketing, then AI. This is the honest version of how one led to the next.',
         'body' => <<<'BODY'
 Chapter one: 2018. I bought my first domain and built my first website. It was ugly, slow, and entirely mine — and I was hooked. HTML became CSS became JavaScript became PHP. Code was the start of everything.
 
@@ -13854,8 +13681,8 @@ BODY,
     ],
     [
         'title' => 'Zero-Click Search in 2026: What to Do When AI Takes the Clicks',
-        'tag' => 'SEO',
         'slug' => 'zero-click-search-2026-what-to-do',
+        'tag' => 'SEO',
         'excerpt' => 'Google AI Overviews and answer engines answer the question on the results page, so fewer people click. The traffic strategy that still works when clicks shrink.',
         'body' => <<<'BODY'
 More searches than ever end without a click. Google's AI Overviews, ChatGPT, Perplexity and Gemini increasingly answer the question directly on the results page or in the chat. For businesses that built their growth on "rank #1, collect the click," this feels like the floor disappearing. It is not — but the strategy has to change.
