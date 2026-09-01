@@ -5,11 +5,11 @@
 
 return [
     [
-        'title'        => 'Google AI Overviews India 2026: 55% Searches Now AI',
-        'slug'         => 'google-ai-overviews-55pct-india-2026-rank-guide',
-        'tag'          => 'AEO',
-        'excerpt'      => 'Google AI Overviews trigger on 55% searches in India 2026 — 2B users, 47% informational trigger. This guide shows how Deepak ranks and gets cited.',
-        'body'         => <<<'BODY'
+        'title' => 'Google AI Overviews India 2026: 55% Searches Now AI',
+        'slug' => 'google-ai-overviews-55pct-india-2026-rank-guide',
+        'tag' => 'AEO',
+        'excerpt' => 'Google AI Overviews trigger on 55% searches in India 2026 — 2B users, 47% informational trigger. This guide shows how Deepak ranks and gets cited.',
+        'body' => <<<'BODY'
 # Google AI Overviews India 2026: 55% Searches Now AI
 
 **Author: Deepak Bagada — AI Developer & Architect, Junagadh, Gujarat, India** — Founder SaaS Next, builder of Curro. Connect [linkedin.com/in/deepak-bagada](https://linkedin.com/in/deepak-bagada) · [deepakbagada.in](https://deepakbagada.in) — Last reviewed 2026-09-01.
