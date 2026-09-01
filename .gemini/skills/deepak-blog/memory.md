@@ -839,4 +839,51 @@
   - Tag: `AI AGENTS`
   - Published: `2026-09-01`
   - Words: 1598
+- **Next.js 16 Cache Components: TTFB 700→60ms**
+  - Slug: `nextjs-16-cache-components-ttfb-60ms-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-01`
+  - Words: 1600
+
+- **Laravel 13 in 2026: Zero Breaking, AI SDK Stable**
+  - Slug: `laravel-13-zero-breaking-ai-sdk-stable-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-01`
+  - Words: 1588
+
+- **n8n + MCP 2026: 400 Integrations, Stateless Spec**
+  - Slug: `n8n-mcp-400-integrations-stateless-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-01`
+  - Words: 1520
+
+- **Hybrid Reasoning Models: Claude 3.7 & DeepSeek R1**
+  - Slug: `hybrid-reasoning-models-claude-deepseek-r1-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-01`
+  - Words: 1596
+
+- **Zero-Hallucination RAG: Pydantic + pgvector India**
+  - Slug: `zero-hallucination-rag-pydantic-pgvector-india-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-09-01`
+  - Words: 1541
+
+- **Local LLMs Offline India: 70B on Laptop, Pi 5**
+  - Slug: `local-llms-offline-70b-pi5-india-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-01`
+  - Words: 1506
+
+- **AI Swarms Indian SMEs: 30-Day ROI, ₹27K vs ₹1.1L**
+  - Slug: `ai-swarms-indian-smes-30day-roi-india-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-01`
+  - Words: 1598
+
+- **Building from Junagadh: Tier-3 Playbook India**
+  - Slug: `building-from-junagadh-tier3-playbook-india-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-01`
+  - Words: 1561
 
