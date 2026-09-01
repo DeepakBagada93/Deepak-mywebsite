@@ -19,9 +19,9 @@ rsync -avz -e "ssh -i $HOME/.ssh/hostinger_deepak -p 65002" \
     --exclude='deploy.zip' \
     ./ u775719140@86.38.243.124:domains/deepakbagada.in/public_html/
 
-echo "🔧 Step 3: Setting permissions and building Laravel caches on server..."
+echo "🔧 Step 3: Syncing posts to MySQL + building Laravel caches on server..."
 ssh -i $HOME/.ssh/hostinger_deepak -p 65002 u775719140@86.38.243.124 \
-    "cd domains/deepakbagada.in/public_html && chmod -R 775 storage bootstrap/cache && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+    "cd domains/deepakbagada.in/public_html && chmod -R 775 storage bootstrap/cache && php artisan db:seed --class=PostSeeder --force && php artisan config:cache && php artisan route:cache && php artisan view:cache"
 
 echo "✅ Step 4: Verifying website..."
 curl -s -o /dev/null -w "HTTP Response Code: %{http_code}\n" https://deepakbagada.in/
