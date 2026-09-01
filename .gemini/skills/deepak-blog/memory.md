@@ -834,3 +834,9 @@
   - Tag: `AEO`
   - Published: `2026-09-01`
   - Words: 1684
+- **MCP is USB-C of AI 2026: 80% Apps Ship Agents**
+  - Slug: `mcp-usb-c-ai-agents-80pct-enterprise-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-09-01`
+  - Words: 1598
+
