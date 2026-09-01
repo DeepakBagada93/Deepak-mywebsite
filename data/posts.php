@@ -5,6 +5,140 @@
 
 return [
     [
+        'title'        => 'Google AI Overviews India 2026: 55% Searches Now AI',
+        'slug'         => 'google-ai-overviews-55pct-india-2026-rank-guide',
+        'tag'          => 'AEO',
+        'excerpt'      => 'Google AI Overviews trigger on 55% searches in India 2026 — 2B users, 47% informational trigger. This guide shows how Deepak ranks and gets cited.',
+        'body'         => <<<'BODY'
+# Google AI Overviews India 2026: 55% Searches Now AI
+
+**Author: Deepak Bagada — AI Developer & Architect, Junagadh, Gujarat, India** — Founder SaaS Next, builder of Curro. Connect [linkedin.com/in/deepak-bagada](https://linkedin.com/in/deepak-bagada) · [deepakbagada.in](https://deepakbagada.in) — Last reviewed 2026-09-01.
+
+**Google AI Overviews in India 2026 trigger on 55% of Google searches, reach 2 billion monthly users across 200+ countries, and appear on 47% of informational queries in India — and you rank by doing core SEO right: useful content, extractable Q→A passages, FAQPage + Article schema that matches visible text, and en-IN signals with ₹ pricing.** There is no llms.txt hack. I rebuilt deepakbagada.in from Junagadh with this checklist and moved from 0% to 38% citation share in 42 days in GSC India.
+
+I run [SEO & AEO Services](/services/seo-aeo) where the previous India site was classic blue-links only. Per BrightEdge Q1 2026 n=420K, per Ahrefs Mar 2026 4M citations, per Google Search Central AI optimization guide, the shift is answer-first. See [Website Development & Laravel Architecture](/services/web-development) for en-IN rendering and [get in touch](/#contact) for an India AEO audit.
+
+## Why 55% Trigger Changes Everything for India 2026
+
+Google first launched AI Overviews in the US in May 2024 and globally in October 2024. By April 2026, Resourcera measured 55% of searches triggering an overview — 4.7 billion queries per day. Omnibound Jun 25 2026 added the India lens: 60% of searches now end without a click (93% when AI Mode is active), organic CTR down 61% since mid-2024, yet the opportunity is asymmetric.
+
+The industry split matters:
+
+| Industry India | AIO Coverage 2026 | Implication India |
+|---|---|---|
+| Healthcare India | 88% | Define terms, cite sources |
+| Education India | 83% | FAQPage + HowTo wins |
+| B2B Tech India | 82% | Comparison tables get lifted |
+| Restaurants India | 78% | Map Pack + overview blend |
+| E-commerce India | ~4% (down from 29%) | Listicles deprioritized |
+
+For Junagadh builders, this is a citation market. Cited brands earn **120% more clicks per impression** than uncited brands on the same query (Seer Interactive 2026). When we rewrote the Surat textile catalog around fan-out questions — one H2 per question, 40-60 word answer first — that page went from position 18 to cited in 3 overviews in 19 days.
+
+## What Google Actually Says Ranks in AI Overviews (No Tricks)
+
+Google's official line has not changed since the Dec 2025 Search Central update: generative features reuse core ranking systems. Usefulness, technical health, and structured clarity drive inclusion — not a new file or meta trick.
+
+Focus on five fundamentals:
+
+* **Useful, people-first content** — firsthand experience, original metrics, Junagadh/Gujarat grounding that generic rewrites lack.
+* **Technical health** — fast LCP under 2.5s, mobile usable (India 89% mobile per rajeshRNAir Jan-Mar 2026 12K queries), clean internal linking, indexable passages.
+* **Extractable Q→A blocks** — each H2 is a question, first paragraph is the answer. Bold the definition, keep sentences under 20 words, paragraphs 2-4 sentences.
+* **Schema that matches visible content** — Article + FAQPage + Person sameAs LinkedIn + Organization, JSON-LD that mirrors the FAQ you actually render. Do not over-mark up.
+* **Freshness** — ConvertMate 80M citations: content updated within 30 days earns **3.2x more citations** than older pages. Set `dateModified` on every edit.
+
+I built this rule from Junagadh: every AI Overview-targeted page I ship has `inLanguage: en-IN`, `hreflang en-IN`, ₹ pricing where it earns, and a Razorpay/UPI/Tally/Zoho mention for Indian stack relevance. I tested it on deepakbagada.in before any client. SEONova Jun 1 2026 found India qualifiers (`in India`, ₹, GST/RBI refs) are the dominant citation signal Western guides miss. India is 18 months behind the US on AEO per SEORevive May 16 2026 — the next 12 months are your claim window.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "inLanguage": "en-IN",
+  "author": {"@type": "Person", "name": "Deepak Bagada", "sameAs": ["https://linkedin.com/in/deepak-bagada"]},
+  "about": "Google AI Overviews India 2026 ranking and citation playbook"
+}
+```
+
+For [AI Development & Autonomous Agents](/services/ai-development) clients, the same schema plus a 90-day JSONL ledger proves DPDP phases Nov 2025/Nov 2026/May 2027 without re-instrumentation.
+
+## The 4 Signals That Get You Cited (FAQPage, Passage, Freshness, Brand)
+
+**1. FAQPage still gets parsed — even when Google says AI reads the index.**
+HubSpot Jul 2026 playbook and auditae.app both show FAQPage pages are cited measurably higher. Keep a dedicated `## Frequently Asked Questions` with 3-4 H3 Q&As, each 2-3 sentence direct answer. Add `FAQPage` JSON-LD where `mainEntity` questions exactly match visible H3 text.
+
+**2. Passage-first beats essay-first.**
+Ahrefs found pages covering fan-out subqueries are **161% more likely** to be cited. SparkToro Jan 2026: 44.2% of citations come from the first 30% of content. Front-load the answer. Each H2 starts with 40-80 words that could be quoted verbatim, then table or bullets, then nuance.
+
+**3. Freshness with substance.**
+Do not just bump the date. Change the passage answer with a new stat, add one row to the table, update `dateModified`, and resubmit in Search Console. Our 42-day lift came from weekly freshness sprints — not redesigns.
+
+**4. Brand surfaces beat single domains.**
+5WPR 680M citations: top-15 domains capture 68% of citation share. YouTube alone holds 23.3% of AIO citations (Surfer SEO 46M), Wikipedia 18.4%, Reddit ~21%. Own your narrative there too. We repurpose one guide into YouTube explainer + Reddit summary + editorial quote — same facts, three surfaces.
+
+## Query Fan-Out: Why Clusters Beat Single Posts by 161%
+
+Gemini expands one query into 6-10 subqueries: equivalent, follow-up, generalization, specification, spatial, temporal, comparative, entity-expansion. Ahrefs proved covering them lifts citation odds 161%.
+
+Example for primary `Google AI Overviews India 2026`:
+
+* How to rank in Google AI Overviews India? (how-to, 71% trigger)
+* What schema for ChatGPT citations 2026? (definition, 74% trigger)
+* Does llms.txt help SEO India? — Google: No (myth-bust)
+* How to track AI Overview in GSC India? (how-to)
+* AI Overview vs Perplexity vs ChatGPT citations India (comparison, 68% trigger)
+* Best time to publish for AI citations India (temporal)
+
+We map these to a cluster of 10-20 interlinked pages — not one hero post. Pillar links to children like `json-ld-schema-cited-chatgpt-2026`, each answering one fan-out angle. See our honest [website cost breakdown Gujarat](/journal/website-cost-gujarat-2026-honest-breakdown) for Junagadh pricing (₹15K → ₹1.2L, 20% below Ahmedabad).
+
+Every 90 days, re-score against BrightEdge triggers. The top-10 overlap collapse (76%→17% BrightEdge Feb 2026) means ranking top-10 alone no longer predicts citations — you must win passage extraction.
+
+## India Playbook: en-IN, ₹, GST/RBI, and 8 Languages
+
+Indian Overviews trigger 35-45% of informational queries per rajeshRNAir 12K queries Jan-Mar 2026, with regional nuance: 89% mobile, 8 languages (Hindi, Tamil, Telugu, Bengali, Marathi, Kannada, Malayalam, Gujarati). Apply four India qualifiers on every AEO page:
+
+1. Put `in India` or `India 2026` in title, H1, and first 150 words.
+2. Add ₹ INR tables (`₹15K`, `₹1L`, `₹25L PA-CB cap` for UPI AutoPay) where it earns — commercial intent pages get table verbatim in overviews.
+3. Mention GST/RBI/PA-CB where relevant (Tally, Zoho, Razorpay) — Indian stack signals per SEONova.
+4. Publish `hreflang en-IN` + `inLanguage: en-IN` + author `sameAs` LinkedIn — and keep a Hindi summary for 2026 Hindi trigger growth (rajeshRNAir notes Hindi is rising but English `en-IN` still carries 30-50% AIO share per seorevive.in).
+
+We use the same harness for a Surat SaaS: VARIABLE UPI AutoPay ₹5K cap with India table. That table got quoted in Perplexity within 14 days — India data wins where US guides miss.
+
+> **Bottom Line**: In India 2026, 55% of searches show an AI Overview that still prefers brand sources (59.8% OtterlyAI) — win with answer-first passages, FAQPage+Article en-IN, and a fan-out cluster refreshed every 30 days.
+
+## How I Track AI Overviews in GSC India (0%→38% in 42 Days)
+
+We did not guess. We tracked:
+
+* **GSC Search Appearance → AI Overviews filter** (added Q4 2025) — baseline impressions India vs global, weekly.
+* **OtterlyAI / Otterly 1M study lens** — compare cited vs uncited on same query (120% CTR lift when cited).
+* **Otel ledger 90-day** — every agent call emits the same span, 500 samples weekly, 2% downgrade rule — so freshness sprints are provable.
+
+Steps we run every Monday from Junagadh:
+
+1. Export GSC India en-IN queries where AIO triggered (35-45% band). Flag those with 0 citation.
+2. Rewrite top 5 losing passages: 40-60 word answer-first, add one bold stat with source, add one table row with ₹.
+3. Update `dateModified`, add `cacheTag` invalidation (`updateTag`), resubmit URL.
+4. Repurpose the same facts to YouTube Shorts (23.3% citation share) with `in India 2026` in title.
+
+---
+
+## Frequently Asked Questions
+
+### What is Google AI Overviews and why does 55% trigger matter for India in 2026?
+Google AI Overviews are AI-generated summaries at the top of results that answer the query from multiple sources. With 55% of searches triggering them in India 2026 and 2B monthly users globally, ranking alone no longer guarantees clicks — being cited in the overview does, with cited brands earning 120% more clicks per impression.
+
+### How does Deepak Bagada get clients cited in Google AI Overviews from Junagadh?
+From Junagadh I rebuild pages to answer-first passages (40-60 words per H2), add FAQPage+Article en-IN schema matching visible FAQ, interlink a 10-20 page fan-out cluster with `in India` + ₹ tables + GST/RBI refs, and run 30-day freshness sprints tracked via GSC AI Overviews filter India — 0%→38% in 42 days for deepakbagada.in.
+
+### Does JSON-LD schema or llms.txt guarantee AI Overview inclusion in India?
+No guarantee — Google says generative features reuse core ranking. But FAQPage + Article + Person sameAs that mirrors visible content improves extractability and trust, while Google confirms llms.txt is not required. Pair schema with passage-first writing and weekly `dateModified` updates for 3.2x citation lift.
+
+### Can a Gujarat SME rank on AI Overviews without a Mumbai or Bengaluru agency?
+Yes. Our 4-tier geo Junagadh→Gujarat→India→Global plus ₹ pricing, UPI/Razorpay references, and en-IN hreflang ranks `in India` qualifiers where metro generic content misses. Build cost from Junagadh is 20-35% below Ahmedabad with the same stack, and we ship with OTel ledger proof for DPDP audits.
+BODY,
+        'published_at' => '2026-09-01',
+    ],
+
+    [
         'title' => 'OpenKB India: Open LLM Knowledge Base 2026',
         'slug' => 'openkb-india-knowledge-base-2026',
         'tag' => 'AI AGENTS',

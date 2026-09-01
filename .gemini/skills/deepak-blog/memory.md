@@ -828,3 +828,9 @@
   - Tag: `AI AGENTS`
   - Published: `2026-08-31`
   - Words: 1259
+
+- **Google AI Overviews India 2026: 55% Searches Now AI**
+  - Slug: `google-ai-overviews-55pct-india-2026-rank-guide`
+  - Tag: `AEO`
+  - Published: `2026-09-01`
+  - Words: 1684
