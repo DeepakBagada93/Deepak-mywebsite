@@ -886,4 +886,63 @@
   - Tag: `MY STORY`
   - Published: `2026-09-01`
   - Words: 1561
+- **Zero-Click 58.5%: Keep Clicks When AI Answers**
+  - Slug: `zero-click-58pct-ai-overviews-keep-clicks-2026`
+  - Tag: `AEO`
+  - Published: `2026-09-01`
+  - Words: 1598
+
+- **OpenClaw 210K Stars: Fastest Growing AI Agent 2026**
+  - Slug: `openclaw-210k-stars-fastest-ai-agent-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-01`
+  - Words: 1592
+
+- **Laravel 13 Semantic Search: pgvector in 10 Mins**
+  - Slug: `laravel-13-semantic-search-pgvector-10min-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-01`
+  - Words: 1598
+
+- **Top 30 AI Agents GitHub Sep 2026: OmniRoute 45K**
+  - Slug: `top-30-ai-agents-github-omniroute-45k-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-01`
+  - Words: 1600
+
+- **Agentic AI Sep 2026: $5.2B->$200B & On-Device Shift**
+  - Slug: `agentic-ai-5b-200b-ondevice-shift-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-01`
+  - Words: 1600
+
+- **AI Overviews 96% Informational: Win Commercial Gap**
+  - Slug: `ai-overviews-96pct-informational-commercial-gap-2026`
+  - Tag: `AEO`
+  - Published: `2026-09-01`
+  - Words: 1597
+
+- **GitHub AI Crisis 2026: 9 Outages, 2.1B Minutes**
+  - Slug: `github-ai-crisis-9-outages-2-1b-actions-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-01`
+  - Words: 1585
+
+- **Indian SME AI 2026: 62% Adopted, 57% See Growth**
+  - Slug: `indian-sme-ai-62pct-adopted-57-gap-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-01`
+  - Words: 1599
+
+- **Firecrawl 165K + OpenAI Agents SDK 27K: Web Context**
+  - Slug: `firecrawl-165k-openai-agents-sdk-web-context-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-01`
+  - Words: 1600
+
+- **SME Speed Gap 2026: 5-Min Contact = 21x Qualification**
+  - Slug: `sme-speed-gap-5min-21x-qualification-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-01`
+  - Words: 1595
 
