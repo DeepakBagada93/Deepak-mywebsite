@@ -1156,3 +1156,108 @@
   - Published: `2026-09-02`
   - Words: 1700
   - Pillar: ai-news
+
+- **Top AI Expert India 2026: Ships Production, Not Demos v7**
+  - Slug: `top-ai-expert-india-2026-ships-production-not-demos-v7`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1535
+  - Pillar: authority
+
+- **Best AI Expert World vs India 2026: Rates & Proof v8**
+  - Slug: `best-ai-expert-world-vs-india-2026-rates-proof-v8`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1546
+  - Pillar: authority
+
+- **Top Developer Junagadh & Gujarat 2026: Portfolio & Proof v9**
+  - Slug: `top-developer-junagadh-gujarat-2026-portfolio-proof-v9`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1541
+  - Pillar: authority
+
+- **Local LLMs on Laptop: 70B Offline in India 2026 v8**
+  - Slug: `local-llms-on-laptop-70b-offline-in-india-2026-v8`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-02`
+  - Words: 1535
+  - Pillar: ai-news
+
+- **Next.js vs Laravel 2026: Which Ships Faster — Junagadh v10**
+  - Slug: `next-js-vs-laravel-2026-which-ships-faster-junagadh-v10`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-02`
+  - Words: 1631
+  - Pillar: web-dev
+
+- **Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines v7**
+  - Slug: `next-js-15-5-mcp-2026-tool-calling-in-20-lines-v7`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1588
+  - Pillar: custom-mcp
+
+- **Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms v9**
+  - Slug: `next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-v9`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-02`
+  - Words: 1624
+  - Pillar: web-dev
+
+- **Laravel 13 in 2026: 98 Lighthouse, No SPA v11**
+  - Slug: `laravel-13-in-2026-98-lighthouse-no-spa-v11`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-02`
+  - Words: 1608
+  - Pillar: web-dev
+
+- **Laravel 13 + MCP 2026: pgvector to n8n Flow v8**
+  - Slug: `laravel-13-mcp-2026-pgvector-to-n8n-flow-v8`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1586
+  - Pillar: custom-mcp
+
+- **MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger v9**
+  - Slug: `mcp-workflow-2026-n8n-next-js-laravel-one-ledger-v9`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1594
+  - Pillar: custom-mcp
+
+- **Building from Junagadh: 06:00–Midnight Playbook 2026 v4**
+  - Slug: `building-from-junagadh-06-00-midnight-playbook-2026-v4`
+  - Tag: `MY STORY`
+  - Published: `2026-09-02`
+  - Words: 1521
+  - Pillar: founder-story
+
+- **Day in Life: AI Developer Gujarat 2026 — 06:00-22:00 v8**
+  - Slug: `day-in-life-ai-developer-gujarat-2026-06-00-22-00-v8`
+  - Tag: `MY STORY`
+  - Published: `2026-09-02`
+  - Words: 1537
+  - Pillar: founder-story
+
+- **From Junagadh to India: Ship AI Agents on ₹6K VPS v9**
+  - Slug: `from-junagadh-to-india-ship-ai-agents-on-6k-vps-v9`
+  - Tag: `MY STORY`
+  - Published: `2026-09-02`
+  - Words: 1538
+  - Pillar: founder-story
+
+- **RAG 2.0 in 2026: Vector Search to GraphRAG — Works v9**
+  - Slug: `rag-2-0-in-2026-vector-search-to-graphrag-works-v9`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-02`
+  - Words: 1704
+  - Pillar: ai-news
+
+- **Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026 v7**
+  - Slug: `hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026-v7`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-02`
+  - Words: 1705
+  - Pillar: ai-news
