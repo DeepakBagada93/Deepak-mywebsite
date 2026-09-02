@@ -1051,3 +1051,108 @@
   - Published: `2026-09-02`
   - Words: 1701
   - Pillar: ai-news
+
+- **Top Developer Junagadh & Gujarat 2026: Portfolio & Proof**
+  - Slug: `top-developer-junagadh-gujarat-2026-portfolio-proof`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1537
+  - Pillar: authority
+
+- **Best Website Developer India 2026: Junagadh vs Metro**
+  - Slug: `best-website-developer-india-2026-junagadh-vs-metro`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1527
+  - Pillar: authority
+
+- **Best AI Developer India 2026: Skills & Hire v6**
+  - Slug: `best-ai-developer-in-india-2026-skills-costs-hire-variant-6`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1531
+  - Pillar: authority
+
+- **Best Website Developer Gujarat 2026: Proof v7**
+  - Slug: `best-website-developer-gujarat-2026-costs-proof-variant-7`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-02`
+  - Words: 1614
+  - Pillar: web-dev
+
+- **Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 8**
+  - Slug: `website-cost-gujarat-2026-honest-breakdown-variant-8`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-02`
+  - Words: 1612
+  - Pillar: web-dev
+
+- **Custom MCP Server 2026: 30 Mins Build v6**
+  - Slug: `custom-mcp-server-2026-build-in-30-mins-next-laravel-variant`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1584
+  - Pillar: custom-mcp
+
+- **Laravel 13 in 2026: 98 Lighthouse, No SPA — Variant 6**
+  - Slug: `laravel-13-in-2026-98-lighthouse-no-spa-variant-6`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-02`
+  - Words: 1616
+  - Pillar: web-dev
+
+- **MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger**
+  - Slug: `mcp-workflow-2026-n8n-next-js-laravel-one-ledger`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1592
+  - Pillar: custom-mcp
+
+- **MCP Security 2026: Auth & JWT for Both Stacks**
+  - Slug: `mcp-security-2026-auth-jwt-for-both-stacks`
+  - Tag: `AI DEV`
+  - Published: `2026-09-02`
+  - Words: 1588
+  - Pillar: custom-mcp
+
+- **From Junagadh: Ship AI Agents ₹6K VPS v6**
+  - Slug: `from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-6`
+  - Tag: `MY STORY`
+  - Published: `2026-09-02`
+  - Words: 1529
+  - Pillar: founder-story
+
+- **AI News Sep 2026: Top 30 Agents — OmniRoute 45K Leads**
+  - Slug: `ai-news-sep-2026-top-30-agents-omniroute-45k-leads`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-02`
+  - Words: 1538
+  - Pillar: ai-news
+
+- **Building from Junagadh: Midnight Playbook v4**
+  - Slug: `building-from-junagadh-midnight-playbook-variant-4-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-02`
+  - Words: 1520
+  - Pillar: founder-story
+
+- **Day in Life: AI Developer Gujarat v5 2026**
+  - Slug: `day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-5`
+  - Tag: `MY STORY`
+  - Published: `2026-09-02`
+  - Words: 1534
+  - Pillar: founder-story
+
+- **MCP 2026: Why AI Agents Speak One Protocol v6**
+  - Slug: `mcp-in-2026-why-every-ai-agent-speaks-one-protocol-variant-6`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-02`
+  - Words: 1699
+  - Pillar: ai-news
+
+- **RAG 2.0 in 2026: Vector Search to GraphRAG — Works**
+  - Slug: `rag-2-0-in-2026-vector-search-to-graphrag-works`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-02`
+  - Words: 1700
+  - Pillar: ai-news
