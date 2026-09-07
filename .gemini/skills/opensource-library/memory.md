@@ -228,3 +228,33 @@ Published: 2026-08-29 via opensource-library skill, live at https://deepakbagada
   - Type: `skill`
   - Published: `2026-08-30`
   - Words: 2333
+
+## Curated Repositories — Batch 6 (10 New, Trending Sep 1-3 2026 — LIVE sync via opensource-library)
+
+66. `THU-MAIC/OpenMAIC` — Agent Frameworks — 27700 stars — Trending Sep 1-3 2026 (Tsinghua MAIC multi-agent interactive classroom — v1.0.0 Aug 27 2026, MIT TypeScript, rank #1 Sep 1 Trends MCP.)
+67. `jingyaogong/minimind` — LLM Tooling — 15200 stars — Trending Sep 1-3 2026 (Tiny LLM series from scratch — 0.1B omni model (115M, Apache-2.0) to 3B, trains on consumer GPU in hours.)
+68. `Osmantic/ODS` — Infrastructure — 8400 stars — Trending Sep 1-3 2026 (Local AI stack installer — wires Ollama + Open WebUI + adjacent services in one command instead of hand assembly.)
+69. `teng-lin/notebooklm-py` — Agent Frameworks — 19121 stars — Trending Sep 1-3 2026 (Unofficial Python API + agentic skill for Google Gemini NotebookLM — full programmatic access to notebooks, sources, audio overviews.)
+70. `nikolai-vysotskyi/trace-mcp` — MCP & Tooling — 103 stars — Trending Sep 1-3 2026 (MCP server for Claude Code + Codex — one tool call replaces ~42 minutes of agent exploration with traced codebase context.)
+71. `Zhonghao1995/agentic-swmm-workflow` — Agent Frameworks — 25 stars — Trending Sep 1-3 2026 (Agentic SWMM — automated, auditable, memory-informed stormwater modelling with Pydantic + HITL ledger (25 stars, trending Sep 3).)
+72. `k1tbyte/Wand-Enhancer` — Automation — 2100 stars — Trending Sep 1-3 2026 (Community UX + local config extension for Wand (WeMod) client — trending #4 Sep 1, local-first enhancement.)
+73. `cody-hutson/pmo-platform` — Automation — 87 stars — Trending Sep 1-3 2026 (Modular PMO & release-management platform for Claude Code — 13-stage release pipe, governance disciplines, skills.)
+74. `affaan-m/ECC` — RAG & Vector Search — 1480 stars — Trending Sep 1-3 2026 (Agent skills + memory + performance system — trending #10 Sep 1, skills with persistent memory and eval.)
+75. `rokokol/super-productivity-skill` — Automation — 12 stars — Trending Sep 1-3 2026 (Claude Code skill for Super Productivity — manage tasks, scheduling, time-tracking via Local REST API.)
+
+Published: 2026-09-07 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 93 repos (83→93) — verified via CuratedRepo::count()
+
+## Curated Repositories — Batch 7 (10 New, Trending Sep 6-7 2026 — LIVE sync via opensource-library)
+
+76. `mksglu/context-mode` — LLM Tooling — 20660 stars — Trending Sep 6-7 2026 (Context window optimization for AI coding agents — sandboxes tool output (98% reduction), persists session memory, enforces routing across 17 platforms via MCP + hooks.)
+77. `jo-inc/camofox-browser` — Automation — 9460 stars — Trending Sep 6-7 2026 (Stealth headless browser for AI agents — bypass Cloudflare, bot detection, anti-scraping. Drop-in Puppeteer/Playwright replacement for agent browsing.)
+78. `lightpanda-io/browser` — Automation — 34715 stars — Trending Sep 6-7 2026 (Lightpanda: the headless browser designed for AI and automation — Zig-built, fast, low-memory, 34.7k stars, 1.6k growth Sep 6.)
+79. `coreyhaines31/marketingskills` — Agent Frameworks — 47951 stars — Trending Sep 6-7 2026 (Marketing skills for Claude Code and AI agents — CRO, copywriting, SEO, analytics, growth engineering. 47.9k stars, +602 today, trending Sep 6.)
+80. `bytedance/deer-flow` — Agent Frameworks — 81740 stars — Trending Sep 6-7 2026 (Open-source SuperAgent harness that researches, codes, and creates with sandboxes, memories, tools, skills, subagents and message gateway — handles minutes-to-hours tasks.)
+81. `openai/skills` — Agent Frameworks — 25888 stars — Trending Sep 6-7 2026 (Official Skills Catalog for Codex — OpenAI-curated agentic skills for the Codex harness, 25.8k stars, 372 today. Trending Sep 6.)
+82. `magnitudedev/magnitude` — Infrastructure — 4000 stars — Trending Sep 6-7 2026 (Open source inference server that runs best local models for your hardware — profiles chip/RAM, recommends quant, plugged into Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code.)
+83. `The-Swarm-Corporation/AutoHedge` — Agent Frameworks — 5095 stars — Trending Sep 6-7 2026 (Build your autonomous hedge fund in minutes — swarm intelligence + AI agents automate market analysis, risk management, trade execution. 5k stars, +541 week.)
+84. `Masriyan/Claude-Code-CyberSecurity-Skill` — Agent Frameworks — 399 stars — Trending Sep 6-7 2026 (22 production Claude Code Skills for cybersecurity — offensive, defensive, RE, threat hunting, CSOC, AI/LLM security, GRC, supply chain. 399 stars, v3.1.)
+85. `BraveOPotato/FckSignups` — LLM Tooling — 3671 stars — Trending Sep 6-7 2026 (A list of open-source, in-browser, no-signup tools — 3,671 stars, 497 today. Trending Sep 6, complements local-first stack.)
+
+Published: 2026-09-07 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 103 repos (93→103) — verified via CuratedRepo::count()
