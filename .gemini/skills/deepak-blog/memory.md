@@ -1576,3 +1576,108 @@
   - Published: `2026-09-08`
   - Words: 1584
   - Pillar: ai-news
+
+- **Best AI Developer in India 2026: Skills, Costs & Hire — Variant 11**
+  - Slug: `best-ai-developer-in-india-2026-skills-costs-hire-variant-11`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1548
+  - Pillar: authority
+
+- **Best AI Expert World vs India 2026: Rates & Proof — Variant 13**
+  - Slug: `best-ai-expert-world-vs-india-2026-rates-proof-variant-13`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1554
+  - Pillar: authority
+
+- **Best AI Developer in India 2026: Skills, Costs & Hire — Variant 16**
+  - Slug: `best-ai-developer-in-india-2026-skills-costs-hire-variant-16`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1548
+  - Pillar: authority
+
+- **Local LLMs on Laptop: 70B Offline in India 2026 — Variant 13**
+  - Slug: `local-llms-on-laptop-70b-offline-in-india-2026-variant-13`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-08`
+  - Words: 1543
+  - Pillar: ai-news
+
+- **Best Website Developer Gujarat 2026: Costs & Proof — Variant 22**
+  - Slug: `best-website-developer-gujarat-2026-costs-proof-variant-22`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-08`
+  - Words: 1630
+  - Pillar: web-dev
+
+- **Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms — Variant 19**
+  - Slug: `next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-variant-19`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-08`
+  - Words: 1632
+  - Pillar: web-dev
+
+- **Day in Life: AI Developer Gujarat 2026 — 06:00-22:00 — Variant 14**
+  - Slug: `day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-14`
+  - Tag: `MY STORY`
+  - Published: `2026-09-08`
+  - Words: 1541
+  - Pillar: founder-story
+
+- **MCP Security 2026: Auth & JWT for Both Stacks — Variant 20**
+  - Slug: `mcp-security-2026-auth-jwt-for-both-stacks-variant-20`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1594
+  - Pillar: custom-mcp
+
+- **MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger — Variant 19**
+  - Slug: `mcp-workflow-2026-n8n-next-js-laravel-one-ledger-variant-19`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1598
+  - Pillar: custom-mcp
+
+- **From Junagadh to India: Ship AI Agents on ₹6K VPS — Variant 12**
+  - Slug: `from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-12`
+  - Tag: `MY STORY`
+  - Published: `2026-09-08`
+  - Words: 1544
+  - Pillar: founder-story
+
+- **Laravel 13 in 2026: 98 Lighthouse, No SPA — Variant 21**
+  - Slug: `laravel-13-in-2026-98-lighthouse-no-spa-variant-21`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-08`
+  - Words: 1616
+  - Pillar: web-dev
+
+- **Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines — Variant 22**
+  - Slug: `next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-22`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1592
+  - Pillar: custom-mcp
+
+- **Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026 — Variant 12**
+  - Slug: `hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026-variant-12`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-08`
+  - Words: 1581
+  - Pillar: ai-news
+
+- **From Junagadh to India: Ship AI Agents on ₹6K VPS — Variant 15**
+  - Slug: `from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-15`
+  - Tag: `MY STORY`
+  - Published: `2026-09-08`
+  - Words: 1544
+  - Pillar: founder-story
+
+- **RAG 2.0 in 2026: Vector Search to GraphRAG — Works — Variant 14**
+  - Slug: `rag-2-0-in-2026-vector-search-to-graphrag-works-variant-14`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-08`
+  - Words: 1580
+  - Pillar: ai-news
