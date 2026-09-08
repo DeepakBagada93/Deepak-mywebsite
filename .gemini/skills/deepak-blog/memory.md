@@ -1471,3 +1471,108 @@
   - Published: `2026-09-07`
   - Words: 1620
   - Pillar: web-dev
+
+- **Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 18**
+  - Slug: `website-cost-gujarat-2026-honest-breakdown-variant-18`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-08`
+  - Words: 1612
+  - Pillar: web-dev
+
+- **Laravel 13 + MCP 2026: pgvector to n8n Flow — Variant 18**
+  - Slug: `laravel-13-mcp-2026-pgvector-to-n8n-flow-variant-18`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1590
+  - Pillar: custom-mcp
+
+- **MCP Security 2026: Auth & JWT for Both Stacks — Variant 10**
+  - Slug: `mcp-security-2026-auth-jwt-for-both-stacks-variant-10`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1594
+  - Pillar: custom-mcp
+
+- **Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026 — Variant 7**
+  - Slug: `hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026-variant-7`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-08`
+  - Words: 1581
+  - Pillar: ai-news
+
+- **Top AI Expert India 2026: Ships Production, Not Demos — Variant 7**
+  - Slug: `top-ai-expert-india-2026-ships-production-not-demos-variant-`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1543
+  - Pillar: authority
+
+- **Top Developer Junagadh & Gujarat 2026: Portfolio & Proof — Variant 9**
+  - Slug: `top-developer-junagadh-gujarat-2026-portfolio-proof-variant-`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1549
+  - Pillar: authority
+
+- **Best Website Developer India 2026: Junagadh vs Metro — Variant 10**
+  - Slug: `best-website-developer-india-2026-junagadh-vs-metro-variant-`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1539
+  - Pillar: authority
+
+- **Best Website Developer Gujarat 2026: Costs & Proof — Variant 17**
+  - Slug: `best-website-developer-gujarat-2026-costs-proof-variant-17`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-08`
+  - Words: 1630
+  - Pillar: web-dev
+
+- **Next.js vs Laravel 2026: Which Ships Faster — Junagadh — Variant 10**
+  - Slug: `next-js-vs-laravel-2026-which-ships-faster-junagadh-variant-`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-08`
+  - Words: 1639
+  - Pillar: web-dev
+
+- **Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines — Variant 17**
+  - Slug: `next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-17`
+  - Tag: `AI DEV`
+  - Published: `2026-09-08`
+  - Words: 1592
+  - Pillar: custom-mcp
+
+- **Building from Junagadh: 06:00–Midnight Playbook 2026 — Variant 4**
+  - Slug: `building-from-junagadh-06-00-midnight-playbook-2026-variant-`
+  - Tag: `MY STORY`
+  - Published: `2026-09-08`
+  - Words: 1525
+  - Pillar: founder-story
+
+- **Day in Life: AI Developer Gujarat 2026 — 06:00-22:00 — Variant 11**
+  - Slug: `day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-11`
+  - Tag: `MY STORY`
+  - Published: `2026-09-08`
+  - Words: 1541
+  - Pillar: founder-story
+
+- **From Junagadh to India: Ship AI Agents on ₹6K VPS — Variant 9**
+  - Slug: `from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-9`
+  - Tag: `MY STORY`
+  - Published: `2026-09-08`
+  - Words: 1544
+  - Pillar: founder-story
+
+- **RAG 2.0 in 2026: Vector Search to GraphRAG — Works — Variant 9**
+  - Slug: `rag-2-0-in-2026-vector-search-to-graphrag-works-variant-9`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-08`
+  - Words: 1580
+  - Pillar: ai-news
+
+- **MCP in 2026: Why Every AI Agent Speaks One Protocol — Variant 11**
+  - Slug: `mcp-in-2026-why-every-ai-agent-speaks-one-protocol-variant-1`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-08`
+  - Words: 1584
+  - Pillar: ai-news
