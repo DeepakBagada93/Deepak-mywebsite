@@ -258,3 +258,28 @@ Published: 2026-09-07 via opensource-library skill, live at https://deepakbagada
 85. `BraveOPotato/FckSignups` — LLM Tooling — 3671 stars — Trending Sep 6-7 2026 (A list of open-source, in-browser, no-signup tools — 3,671 stars, 497 today. Trending Sep 6, complements local-first stack.)
 
 Published: 2026-09-07 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 103 repos (93→103) — verified via CuratedRepo::count()
+
+## Curated Repositories — Batch 8 (20 New, Trending Sep 8 2026 — LIVE sync via opensource-library)
+
+104. `debpalash/VoiceStudio` — LLM Tooling — 19100 stars — Trending Sep 8 2026 (VoiceStudio — AI voice studio for TTS, voice cloning, and dubbing. Python, Sep 2026 #6 trending +7.8k stars (19.1k total).)
+105. `blader/humanizer` — LLM Tooling — 43600 stars — Trending Sep 8 2026 (Humanizer — AI text humanizer that bypasses detection with style transfer. Python, Sep 2026 #9 +5.3k (43.6k total).)
+106. `bilawalsidhu/gods-eye-view` — Infrastructure — 18100 stars — Trending Sep 8 2026 (Gods Eye View — geospatial God-view dashboard with satellite + vector search. JS, Sep 2026 #10 +4.6k (18.1k total).)
+107. `h4ckf0r0day/obscura` — Infrastructure — 25900 stars — Trending Sep 8 2026 (Obscura — Rust security obfuscation & deobfuscation toolkit. Sep 2026 #13 +3.7k (25.9k total).)
+108. `cathrynlavery/diagram-design` — Content — 31800 stars — Trending Sep 8 2026 (Diagram Design — HTML diagram gallery for architecture, workflow, and data-flow. Sep 2026 #15 +3.7k (31.8k total).)
+109. `google-research/timesfm` — LLM Tooling — 31400 stars — Trending Sep 8 2026 (TimesFM — Google Time Series Foundation Model for forecasting. Python, Sep 2026 #17 +3.3k (31.4k total).)
+110. `omacom/omarchy` — Infrastructure — 38400 stars — Trending Sep 8 2026 (Omarchy — opinionated Arch + Hyprland setup with AI agent hooks. Shell, Sep 2026 #19 +3.0k (38.4k total).)
+111. `Natively-AI-assistant/natively-cluely-ai-assistant` — Agent Frameworks — 2449 stars — Trending Sep 8 2026 (Natively — free open-source Cluely alternative: meeting assistant, interview copilot, note taker. TS, Sep 7 #24 (2449 stars).)
+112. `fengaiyunzi/Skills-Manager` — Agent Frameworks — 2 stars — Trending Sep 8 2026 (Skills-Manager — sync AI coding assistant skills across Claude Code, Codex, Gemini, Cursor, OpenCode. Trending #1 Sep 7.)
+113. `wagneripjr/skills` — Agent Frameworks — 0 stars — Trending Sep 8 2026 (Wagner Skills — 8 engineering + 14 RE pipeline skills (marketplace). JS, trending #2 Sep 7.)
+114. `kazhuki7/agentskills-proxy` — MCP & Tooling — 0 stars — Trending Sep 8 2026 (AgentSkills Proxy — secure remote proxy for Agent Skills discovery, execution, isolation. TS, trending #3 Sep 7.)
+115. `martinambrus/haive` — Automation — 5 stars — Trending Sep 8 2026 (Haive — project orchestration + agentic workflow utility. TS, trending #5 Sep 7 (5 stars).)
+116. `patrickserrano/lacquer` — Automation — 3 stars — Trending Sep 8 2026 (Lacquer — Go CLI + profile templates that standardize Claude Code across every project. Go, trending #7 Sep 7.)
+117. `mohahasan/ios-agentic-skills` — Agent Frameworks — 4 stars — Trending Sep 8 2026 (iOS Agentic Skills — audit skills + playbooks for iOS/watchOS QA. JS, trending #8 Sep 7 (4 stars).)
+118. `sachinrai308/Unity-Skills` — Automation — 8 stars — Trending Sep 8 2026 (Unity-Skills — automate Unity Editor via JSON commands (scene, GameObject, materials). Trending #9 Sep 7 (8 stars).)
+119. `Edward0l1/skill-flare-discover` — LLM Tooling — 1 stars — Trending Sep 8 2026 (Skill Flare Discover — best AI Agent Skill Finder 2026 with multi-registry install + security labels. HTML, trending #10 Sep 7.)
+120. `stbarbe/agent-skills-cli` — LLM Tooling — 12 stars — Trending Sep 8 2026 (agent-skills-cli — install 50,000+ skills for AI agents with one command. TS, trending #20 Sep 7 (12 stars).)
+121. `CeAlthubaiti/agents` — Agent Frameworks — 4 stars — Trending Sep 8 2026 (Agents — automate Polymarket trading via AI agents for strategy + opportunity. Python, trending #21 Sep 7 (4 stars).)
+122. `arpita612/Awesome-AI-resources` — LLM Tooling — 5 stars — Trending Sep 8 2026 (Awesome AI Resources — curated AI tools, frameworks, resources for dev productivity. Java, trending #23 Sep 7 (5 stars).)
+123. `JonathanBeck1/claude-studio-toolkit` — Automation — 0 stars — Trending Sep 8 2026 (Claude Studio Toolkit — agent skills + workflows for Claude Studio MLOps. Trending #25 Sep 7.)
+
+Published: 2026-09-08 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 123 repos (103→123) — verified via CuratedRepo::count()
