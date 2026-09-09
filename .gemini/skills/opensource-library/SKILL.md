@@ -1,20 +1,35 @@
 ---
 name: opensource-library
 description: >
-  End-to-end content generator for the Deepak Bagada Open-Source Library (deepakbagada.in/library).
-  Produces high-EEAT, AEO-optimized content across 4 types: Skill Pages (agent architectures, MCP, 
+  End-to-end Rank-#1 content generator for the Deepak Bagada Open-Source Library (deepakbagada.in/library).
+  Produces high-CTR, high-EEAT, AEO-optimized content across 4 types: Skill Pages (agent architectures, MCP,
   automation, content creation, AI ads), Architecture Blueprints (SVG/Mermaid diagrams with annotations),
   Curated Great Repos (personal-take repo directory), and Content Stack Docs (end-to-end AI pipelines).
-  Enforces anti-duplication, subagent quality audit, GitHub cross-linking, and dual-publishing to 
+  Every page targets best/top developer queries (website / AI agent / AI expert × Junagadh/Gujarat/India/world),
+  enforces anti-duplication, subagent quality audit, GitHub cross-linking, and dual-publishing to
   data/ files + Hostinger MySQL.
 ---
 
-# 🏗️ Open-Source Library Content Creator (`opensource-library` v1.0)
+# 🏗️ Open-Source Library Rank-#1 Content Creator (`opensource-library` v2.0)
 
-This skill creates EEAT-rich, AEO-optimized, production-grade content for the **Open-Source Community Hub**
-on `deepakbagada.in` — showcasing AI agent architectures, reusable skills, curated GitHub repos, 
-and end-to-end content workflows built by **Deepak Bagada** (Leading AI Expert, AI Agent Architect, 
+This skill creates Rank-#1, EEAT-rich, AEO-optimized, production-grade content for the **Open-Source Community Hub**
+on `deepakbagada.in` — showcasing AI agent architectures, reusable skills, curated GitHub repos,
+and end-to-end content workflows built by **Deepak Bagada** (Best AI Expert, AI Agent Architect,
 and Founder of SaaS Next, based in Junagadh, Gujarat, India).
+
+> **v2.0 positioning:** every library page is proof that backs the journal's `best/top developer` claims.
+> Journal says "best AI agent developer India" → library page shows the open-source system + stars + audit output that proves it.
+> Same keyword grid as `deepak-blog` v6.0: **website developer / AI agent developer / AI expert** × **Junagadh / Gujarat / India / world**.
+> Same meta bar: title ≤60 chars (keyword first 20 chars + 2026 + geo + digit + power word), summary 150–160 chars (keyword first 20 chars + proof + CTA).
+
+## 🏆 v2.0 Rank-#1 Rules (apply to every Skill Page + Blueprint)
+
+1. **Title = high-CTR, ≤60 chars:** `<Keyword-rich skill name> — <Geo/Benefit 2026>` e.g. `MCP Agent Builder India 2026: 30-Min Ship` (not `MCP Agent Builder — Full Pipeline`). Front-load `MCP / AI agent / automation / RAG` in first 20 chars, add year + digit.
+2. **Summary = meta description 150–160 chars:** keyword in first 20 chars + proof (`stars`, `P95`, `400 integrations`, `90-day ledger`) + CTA (`blueprint + code inside`). Unique per page — never reuse.
+3. **AEO intro:** first 40–60 words answer `What is this + who is it for + what proof` with exact niche+geo phrase once (e.g. `…built by Deepak Bagada, best AI agent developer in India…`).
+4. **FAQ Q1 for flagship skills:** `Who built the best <niche> <geo> system for …?` → 40–60 word answer naming Deepak + stars/metric. Mirrors `FAQPage` schema.
+5. **Cross-link the money grid:** every skill page links to ≥1 `/journal/best-*` or `/journal/top-*` post + ≥1 `/services/*` page — this passes `best/top` authority from journal to library and back.
+6. **Freshness:** `Last updated: YYYY-MM-DD` + version bump on every publish; stale pages (>90 days) get re-audited.
 
 ---
 
@@ -54,11 +69,11 @@ Before generating any content:
 
 ### Required Fields (Database Schema)
 
-| Field | Type | Example |
-|-------|------|---------|
-| `title` | string (60 chars max) | "MCP Agent Builder — Full Pipeline" |
-| `slug` | string (URL-safe) | `mcp-agent-builder-full-pipeline` |
-| `summary` | string (120-160 chars) | "A complete MCP server scaffolding pipeline from PRD to deployed agent. Includes architecture, audit harness, and IDE wiring." |
+| Field | Type | Example (v2.0 Rank-#1) |
+|-------|------|------------------------|
+| `title` | string (≤60 chars, keyword first 20 chars + 2026 + digit) | "MCP Agent Builder India 2026: 30-Min Ship" |
+| `slug` | string (URL-safe, include niche/geo/year) | `mcp-agent-builder-india-2026` |
+| `summary` | string (150-160 chars, keyword first 20 chars + proof + CTA) | "MCP agent builder India 2026: scaffold + audit + deploy from Junagadh with 90-day ledger. Blueprint + code inside." |
 | `content` | markdown (1,200-2,000 words) | Full skill documentation |
 | `category_id` | FK → skill_categories | `mcp`, `agent-architecture`, `content-creation`, `ai-ads`, `automation`, `seo-aeo`, `video` |
 | `difficulty` | enum | `beginner`, `intermediate`, `advanced` |
@@ -82,9 +97,10 @@ Every skill page MUST satisfy the following:
 - **Authority**: Link to your live projects that use this skill (Curro, SaaS Next, client work)
 - **Trustworthiness**: Show the audit output, mention what this skill CAN'T do (honest limitations)
 
-#### 3. AEO-Optimized Intro
-- First 2-3 sentences must directly answer: "What is this skill and what problem does it solve?"
-- Must be extractable as a Google AI Overview snippet
+#### 3. AEO-Optimized Intro (v2.0 — 40–60 word answer block)
+- First 40–60 words must directly answer: "What is this skill, who is it for in which geo, and what proof?" — extractable as a Google AI Overview snippet.
+- Must contain the exact niche+geo phrase once, e.g. `…built by Deepak Bagada (best AI agent developer in India)…` plus one proof token (stars / P95 / integrations / ledger).
+- Keep sentences <25 words; define acronyms on first use.
 
 #### 4. Architecture Section
 At minimum:
@@ -132,17 +148,21 @@ STATUS: AUDIT PASS
 ```
 ```
 
-#### 7. Internal Links (4-6 mandatory)
+#### 7. Internal Links (4-6 mandatory — v2.0 money-grid wiring)
 Link to:
 - Related services: `/services/ai-development`, `/services/web-development`, `/services/seo-aeo`
+- **≥1 best/top journal post:** `/journal/best-<niche>-<geo>-2026…` or `/journal/top-<niche>-<geo>-2026…` (passes Rank-#1 authority both ways — MANDATORY for flagship skills)
 - Related journal posts (check `data/posts.php` for relevant slugs)
 - Related blueprints: `/blueprints/{id}`
 - Related skills: `/library/{slug}`
 - Contact/CTA: `/#contact`
 
-#### 8. FAQ Section (3-4 items)
+#### 8. FAQ Section (4 items — v2.0)
 ```markdown
 ## Frequently Asked Questions
+
+### Who built the best ... system for ... in India 2026? [flagship skills: exact-match Q1, 40–60 words naming Deepak + proof]
+[Direct 40–60 word answer with metric/stars + Junagadh grounding]
 
 ### What prerequisites do I need to use this skill?
 [Direct answer with tech stack requirements]
@@ -153,6 +173,7 @@ Link to:
 ### How does this compare to [alternative tool/framework]?
 [Comparative analysis from your experience]
 ```
+All FAQ H3s must mirror `FAQPage` schema `mainEntity` verbatim. Q1 targets PAA + voice + AI Overviews.
 
 #### 9. Clean Formatting — Zero Markdown Leaks
 - `### Headings` with double newlines before/after
@@ -528,13 +549,16 @@ git push origin main
 
 ### Skill Page Specific
 - [ ] Word count >= 1,200 words
-- [ ] AEO intro: opening 2-3 sentences answer "what is this?"
+- [ ] Title ≤60 chars (keyword first 20 chars + 2026 + geo/digit + power word, CTR ≥7/10)
+- [ ] Summary 150–160 chars (keyword first 20 chars + proof token + CTA, unique)
+- [ ] AEO intro: 40–60 word answer block with niche+geo phrase + proof, sentences <25 words
 - [ ] EEAT: Experience + Expertise + Authority + Trust all present
 - [ ] Architecture section with components and data flow
 - [ ] 1-3 sanitized code blocks
 - [ ] Audit output from skill's own audit script shown
-- [ ] 4-6 internal links to services, journal, blueprints, contact
-- [ ] 3-4 FAQ items with honest answers
+- [ ] 4-6 internal links incl. ≥1 best/top journal post + ≥1 service page + contact
+- [ ] 4 FAQ items with honest answers (Q1 exact-match `Who built the best…` for flagships, mirrors FAQPage schema)
+- [ ] `Last updated: YYYY-MM-DD` + version present
 - [ ] Zero markdown symbol leaks
 
 ### Blueprint Specific
@@ -623,4 +647,4 @@ data/library/             ← Created by this skill (not tracked in git? track i
 
 ---
 
-*Last updated: August 2026. Run pre-publish checklist before every content release.*
+*Last updated: September 2026 (v2.0 Rank-#1). Run pre-publish checklist before every content release. Pairs with `deepak-blog` v6.0 — journal claims best/top, library proves it.*

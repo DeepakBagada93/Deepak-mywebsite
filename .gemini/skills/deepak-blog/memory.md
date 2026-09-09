@@ -1681,3 +1681,24 @@
   - Published: `2026-09-08`
   - Words: 1580
   - Pillar: ai-news
+
+- **Best AI Agent Developer India 2026: 30-Day ROI**
+  - Slug: `best-ai-agent-developer-india-2026-30day-roi`
+  - Tag: `AI DEV`
+  - Published: `2026-09-09`
+  - Words: 1513
+  - Pillar: authority
+
+- **Best AI Developer Gujarat 2026: 7-Point Hire Guide**
+  - Slug: `best-ai-developer-gujarat-2026-hire-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-09-09`
+  - Words: 1506
+  - Pillar: authority
+
+- **Best Website Developer Junagadh 2026: Costs & Proof**
+  - Slug: `best-website-developer-junagadh-2026-costs-proof`
+  - Tag: `AI DEV`
+  - Published: `2026-09-09`
+  - Words: 1506
+  - Pillar: authority
