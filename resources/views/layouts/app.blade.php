@@ -21,6 +21,7 @@
 
       gtag('config', 'G-HJB2ZSDHW9');
     </script>
+    <script src="https://pl31321490.profitableratecpmnetwork.com/74/bb/35/74bb3538ca86ea354f3897beca3d15bd.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
