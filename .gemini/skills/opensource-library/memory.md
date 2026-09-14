@@ -283,3 +283,33 @@ Published: 2026-09-07 via opensource-library skill, live at https://deepakbagada
 123. `JonathanBeck1/claude-studio-toolkit` — Automation — 0 stars — Trending Sep 8 2026 (Claude Studio Toolkit — agent skills + workflows for Claude Studio MLOps. Trending #25 Sep 7.)
 
 Published: 2026-09-08 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 123 repos (103→123) — verified via CuratedRepo::count()
+
+## Curated Repositories — Batch 9 (10 New, Trending Sep 9-13 2026 — LIVE sync via opensource-library)
+
+124. `chopratejas/headroom` — Agent Frameworks — 15400 stars — Trending Sep 9-13 2026 (Headroom — compress tool outputs, logs, files and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Weekly #2 trending Sep 2026 (15.4k stars).)
+125. `DeusData/codebase-memory-mcp` — MCP & Tooling — 6300 stars — Trending Sep 9-13 2026 (Codebase Memory MCP — high-performance code intelligence MCP server. Indexes codebases into persistent knowledge graph in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Weekly #3 trending (6.3k stars).)
+126. `santifer/career-ops` — Automation — 66689 stars — Trending Sep 9-13 2026 (Career Ops — open-source AI job search: scan portals, score listings A-F rubric, tailor CV, track applications. Runs locally in Claude Code, Codex, OpenCode. Daily trending 816 stars today (66.6k total).)
+127. `volcengine/OpenViking` — RAG & Vector Search — 31000 stars — Trending Sep 9-13 2026 (OpenViking — self-evolving context database for AI agents. Unifies agent memory, knowledge RAG and skills in one store. Python, daily trending (31k stars).)
+128. `langchain-ai/openwiki` — LLM Tooling — 12900 stars — Trending Sep 9-13 2026 (OpenWiki — CLI from LangChain that writes and maintains agent-readable documentation for your codebase. Monthly trending +915 (12.9k stars).)
+129. `Zackriya-Solutions/meetily` — Automation — 13300 stars — Trending Sep 9-13 2026 (Meetily — privacy-first AI meeting assistant, 4x faster Parakeet/Whisper live transcription + speaker diarization + Ollama summaries. 100% local, Rust. Monthly trending +1.4k (13.3k stars).)
+130. `iOfficeAI/OfficeCLI` — Automation — 12700 stars — Trending Sep 9-13 2026 (OfficeCLI — first Office suite purpose-built for AI agents: read, edit, automate Word, Excel, PowerPoint. Free, single binary, no Office install. Monthly trending +816 (12.7k stars).)
+131. `openai/codex-plugin-cc` — Agent Frameworks — 7900 stars — Trending Sep 9-13 2026 (Codex Plugin CC — use Codex from Claude Code to review code or delegate tasks. Monthly trending +679 (7.9k stars).)
+132. `chaitanyagiri/munder-difflin` — Agent Frameworks — 3133 stars — Trending Sep 9-13 2026 (Munder Difflin — local multi-agent harness in TypeScript. Daily trending 507 stars today (3.1k total).)
+133. `agent-substrate/substrate` — Agent Frameworks — 1397 stars — Trending Sep 9-13 2026 (Substrate — agent substrate core system in Go. Daily trending 252 stars today (1.4k total).)
+
+Published: 2026-09-13 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 133 repos (123→133) — verified via CuratedRepo::count()
+
+## Curated Repositories — Batch 10 (10 New, Trending Sep 13-14 2026 — LIVE sync via opensource-library)
+
+134. `JustVugg/colibri` — LLM Tooling — 27500 stars — Trending Sep 13-14 2026 (Colibri — run frontier MoE models on hardware you already own. Pure C, zero deps, experts streamed from disk. TopGit daily #1 Sep 14 2026 (27.5k stars).)
+135. `tech-leads-club/agent-skills` — MCP & Tooling — 5200 stars — Trending Sep 13-14 2026 (Agent Skills — the secure, validated skill registry for professional AI coding agents. Extends Antigravity, Claude Code, Cursor, Copilot. TopGit daily trending Sep 14 2026 (5.2k stars).)
+136. `alibaba/open-code-review` — Automation — 23600 stars — Trending Sep 13-14 2026 (Open Code Review — hybrid architecture code review: deterministic pipelines + LLM agent, precise line-level comments, multi-language ruleset. Battle-tested at Alibaba scale. TopGit trending Sep 14 2026 (23.6k stars).)
+137. `asgeirtj/system_prompts_leaks` — LLM Tooling — 66100 stars — Trending Sep 13-14 2026 (System Prompts Leaks — extracted system prompts from Claude Fable 5.1/Opus 5, GPT-6-Astra, Codex, Gemini 3.8, Grok and more. Updated regularly. TopGit trending Sep 14 2026 (66.1k stars).)
+138. `vxcontrol/pentagi` — Agent Frameworks — 24000 stars — Trending Sep 13-14 2026 (Pentagi — fully autonomous AI agents system for complex penetration testing tasks. Go. TopGit trending Sep 14 2026 (24k stars).)
+139. `tinyhumansai/openhuman` — Agent Frameworks — 38700 stars — Trending Sep 13-14 2026 (OpenHuman — your personal AI superintelligence. Local-first memory of your life, orchestrator of agent fleets and workflows, deep researcher. Rust. Weekly trending +2.3k Aug 2026 (38.7k stars).)
+140. `melgarafael/DeskcommCRM` — Automation — 1400 stars — Trending Sep 13-14 2026 (DeskcommCRM — open-source AI sales OS. Self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo/Octadesk for businesses that sell by chat. TopGit trending Sep 14 2026 (1.4k stars).)
+141. `MadsLorentzen/ai-job-search` — Automation — 40900 stars — Trending Sep 13-14 2026 (AI Job Search — the job search that runs on your machine. AI application framework on Claude Code: eval postings, tailor CVs, prep interviews. Weekly +2.7k Sep 2026 (40.9k stars).)
+142. `cactus-compute/needle` — LLM Tooling — 8000 stars — Trending Sep 13-14 2026 (Needle — 14MB foundation model for tiny devices: phones, wearables, smart home, robots. GitHub weekly trending +3.8k Sep 2026 (8k stars).)
+143. `cloudflare/computer` — Agent Frameworks — 5700 stars — Trending Sep 13-14 2026 (Cloudflare Computer — give your agent a computer. Browser + OS automation primitive for AI agents. Weekly trending Sep 2026 (5.7k stars).)
+
+Published: 2026-09-14 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 143 repos (133→143) — verified via CuratedRepo::count()
