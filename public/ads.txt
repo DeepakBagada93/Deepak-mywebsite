@@ -1,0 +1,3 @@
+# Deepak Bagada (deepakbagada.in) - ads.txt
+# Google AdSense
+google.com, pub-4764950179214862, DIRECT, f08c47fec0942fa0

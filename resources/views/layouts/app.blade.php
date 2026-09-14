@@ -13,6 +13,7 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-4764950179214862">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4764950179214862"
      crossorigin="anonymous"></script>
 

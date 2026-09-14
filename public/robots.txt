@@ -5,6 +5,16 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
+# Google AdSense & AdsBot
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Google-adstxt
+Allow: /
+
 User-agent: Googlebot-Image
 Allow: /
 

@@ -46,3 +46,8 @@ Route::get('/stack', function () {
 })->name('stack.index');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'show'])->name('sitemap');
+
+Route::get('/ads.txt', function () {
+    return response("google.com, pub-4764950179214862, DIRECT, f08c47fec0942fa0\n", 200)
+        ->header('Content-Type', 'text/plain; charset=utf-8');
+});

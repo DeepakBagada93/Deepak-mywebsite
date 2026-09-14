@@ -23,6 +23,9 @@ class PostSeeder extends Seeder
         // table empty for the duration of the insert, which makes the live
         // journal briefly show stale/missing posts until the next refresh.
         $rows = array_map(static function (array $item) {
+            $words = str_word_count(strip_tags($item['body'] ?? ''));
+            $mins = max(1, (int) ceil($words / 200));
+
             return [
                 'id' => $item['slug'],
                 'title' => $item['title'],
@@ -32,7 +35,7 @@ class PostSeeder extends Seeder
                 'author' => 'Deepak Bagada',
                 'date' => $item['published_at'] ?? null,
                 'category' => $item['tag'] ?? null,
-                'read_time' => '4 min read',
+                'read_time' => $mins.' min read',
                 'image' => '',
                 'tags' => json_encode($item['tags'] ?? []),
             ];
