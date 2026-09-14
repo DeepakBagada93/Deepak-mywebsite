@@ -1702,3 +1702,38 @@
   - Published: `2026-09-09`
   - Words: 1506
   - Pillar: authority
+
+- **Local LLMs on Laptop: 70B Offline in India 2026 — Variant 18**
+  - Slug: `local-llms-on-laptop-70b-offline-in-india-2026-variant-18`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-13`
+  - Words: 1522
+  - Pillar: ai-news
+
+- **Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 23**
+  - Slug: `website-cost-gujarat-2026-honest-breakdown-variant-23`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-13`
+  - Words: 1593
+  - Pillar: web-dev
+
+- **Laravel 13 in 2026: 98 Lighthouse, No SPA — Variant 26**
+  - Slug: `laravel-13-in-2026-98-lighthouse-no-spa-variant-26`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-13`
+  - Words: 1597
+  - Pillar: web-dev
+
+- **Laravel 13 + MCP 2026: pgvector to n8n Flow — Variant 23**
+  - Slug: `laravel-13-mcp-2026-pgvector-to-n8n-flow-variant-23`
+  - Tag: `AI DEV`
+  - Published: `2026-09-13`
+  - Words: 1571
+  - Pillar: custom-mcp
+
+- **MCP Security 2026: Auth & JWT for Both Stacks — Variant 25**
+  - Slug: `mcp-security-2026-auth-jwt-for-both-stacks-variant-25`
+  - Tag: `AI DEV`
+  - Published: `2026-09-13`
+  - Words: 1573
+  - Pillar: custom-mcp
