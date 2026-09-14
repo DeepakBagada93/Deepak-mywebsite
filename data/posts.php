@@ -1,5 +1,8 @@
 <?php
 
+// Journal posts — edit/add/remove entries here, then commit & push to GitHub.
+// Fields: title, slug (URL: /journal/<slug>), tag, excerpt, body, published_at (YYYY-MM-DD).
+
 return [
     [
         'title' => 'MCP Security 2026: Auth & JWT for Both Stacks — Variant 25',
