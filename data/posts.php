@@ -1,8 +1,5 @@
 <?php
 
-// Journal posts — edit/add/remove entries here, then commit & push to GitHub.
-// Fields: title, slug (URL: /journal/<slug>), tag, excerpt, body, published_at (YYYY-MM-DD).
-
 return [
     [
         'title' => 'MCP Security 2026: Auth & JWT for Both Stacks — Variant 25',
@@ -58,6 +55,16 @@ Same n8n workflow handles Next.js chat widget and Laravel RFQ inbox — Webhook 
 
 26% of MCP skills request broad permissions (my audit of 50 trending skills). Fix: sandbox per tenant, short JWT with scope, OPA deny before exec, HITL card for irreversible. Deploy: stateless MCP (no Redis, no stickiness) — `<Mcp-Method>/<Mcp-Name>` headers route, any instance handles retry. Rollback 2s.
 
+## Security Matrix — Both Stacks, One Pattern
+
+| Layer | Next.js 15.5 | Laravel 13 | Junagadh default |
+|---|---|---|---|
+| Auth | Scoped JWT (60s TTL) | Sanctum scoped token | Short-lived, tenant-bound |
+| Policy gate | OPA sidecar deny-before-exec | OPA gate in MCP client | Deny by default |
+| Human control | HITL card > Rs 15K | HITL approval action | Pause irreversible |
+| Ledger | OTel to Tempo 90-day | OTel JSONL 90-day | Same trace_id |
+| Deploy | Stateless, any instance retries | Stateless, no Redis stickiness | 2s rollback |
+
 ---
 
 ## Frequently Asked Questions
@@ -97,7 +104,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-13',
     ],
-
     [
         'title' => 'Laravel 13 + MCP 2026: pgvector to n8n Flow — Variant 23',
         'slug' => 'laravel-13-mcp-2026-pgvector-to-n8n-flow-variant-23',
@@ -152,6 +158,16 @@ Same n8n workflow handles Next.js chat widget and Laravel RFQ inbox — Webhook 
 
 26% of MCP skills request broad permissions (my audit of 50 trending skills). Fix: sandbox per tenant, short JWT with scope, OPA deny before exec, HITL card for irreversible. Deploy: stateless MCP (no Redis, no stickiness) — `<Mcp-Method>/<Mcp-Name>` headers route, any instance handles retry. Rollback 2s.
 
+## Flow Matrix — pgvector to n8n, Both Stacks
+
+| Stage | Laravel 13 | Next.js 15.5 | Metric |
+|---|---|---|---|
+| Retrieve | whereVectorSimilarTo HNSW | pgvector RPC via gateway | P95 42ms |
+| Tools | FastMCP PHP class | Route handler 20 lines | 30-min build |
+| Fan-out | n8n webhook | Same n8n workflow | 400 nodes |
+| Gate | OPA + HITL > Rs 15K | Same OPA | 0 breaches |
+| Ledger | 90-day OTel JSONL | Same trace_id | Weekly 500-sample replay |
+
 ---
 
 ## Frequently Asked Questions
@@ -191,7 +207,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-13',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: 98 Lighthouse, No SPA — Variant 26',
         'slug' => 'laravel-13-in-2026-98-lighthouse-no-spa-variant-26',
@@ -269,7 +284,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-13',
     ],
-
     [
         'title' => 'Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 23',
         'slug' => 'website-cost-gujarat-2026-honest-breakdown-variant-23',
@@ -347,7 +361,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-13',
     ],
-
     [
         'title' => 'Local LLMs on Laptop: 70B Offline in India 2026 — Variant 18',
         'slug' => 'local-llms-on-laptop-70b-offline-in-india-2026-variant-18',
@@ -442,7 +455,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-13',
     ],
-
     [
         'title' => 'Best Website Developer Junagadh 2026: Costs & Proof',
         'slug' => 'best-website-developer-junagadh-2026-costs-proof',
@@ -537,7 +549,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-09',
     ],
-
     [
         'title' => 'Best AI Developer Gujarat 2026: 7-Point Hire Guide',
         'slug' => 'best-ai-developer-gujarat-2026-hire-guide',
@@ -632,7 +643,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-09',
     ],
-
     [
         'title' => 'Best AI Agent Developer India 2026: 30-Day ROI',
         'slug' => 'best-ai-agent-developer-india-2026-30day-roi',
@@ -727,7 +737,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-09',
     ],
-
     [
         'title' => 'RAG 2.0 in 2026: Vector Search to GraphRAG — Works — Variant 14',
         'slug' => 'rag-2-0-in-2026-vector-search-to-graphrag-works-variant-14',
@@ -809,7 +818,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'From Junagadh to India: Ship AI Agents on ₹6K VPS — Variant 15',
         'slug' => 'from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-15',
@@ -893,7 +901,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026 — Variant 12',
         'slug' => 'hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026-variant-12',
@@ -975,7 +982,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines — Variant 22',
         'slug' => 'next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-22',
@@ -1071,7 +1077,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: 98 Lighthouse, No SPA — Variant 21',
         'slug' => 'laravel-13-in-2026-98-lighthouse-no-spa-variant-21',
@@ -1151,7 +1156,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'From Junagadh to India: Ship AI Agents on ₹6K VPS — Variant 12',
         'slug' => 'from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-12',
@@ -1235,7 +1239,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger — Variant 19',
         'slug' => 'mcp-workflow-2026-n8n-next-js-laravel-one-ledger-variant-19',
@@ -1331,7 +1334,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'MCP Security 2026: Auth & JWT for Both Stacks — Variant 20',
         'slug' => 'mcp-security-2026-auth-jwt-for-both-stacks-variant-20',
@@ -1427,7 +1429,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Day in Life: AI Developer Gujarat 2026 — 06:00-22:00 — Variant 14',
         'slug' => 'day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-14',
@@ -1511,7 +1512,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms — Variant 19',
         'slug' => 'next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-variant-19',
@@ -1591,7 +1591,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Best Website Developer Gujarat 2026: Costs & Proof — Variant 22',
         'slug' => 'best-website-developer-gujarat-2026-costs-proof-variant-22',
@@ -1671,7 +1670,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Local LLMs on Laptop: 70B Offline in India 2026 — Variant 13',
         'slug' => 'local-llms-on-laptop-70b-offline-in-india-2026-variant-13',
@@ -1768,7 +1766,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Best AI Developer in India 2026: Skills, Costs & Hire — Variant 16',
         'slug' => 'best-ai-developer-in-india-2026-skills-costs-hire-variant-16',
@@ -1865,7 +1862,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Best AI Expert World vs India 2026: Rates & Proof — Variant 13',
         'slug' => 'best-ai-expert-world-vs-india-2026-rates-proof-variant-13',
@@ -1962,7 +1958,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Best AI Developer in India 2026: Skills, Costs & Hire — Variant 11',
         'slug' => 'best-ai-developer-in-india-2026-skills-costs-hire-variant-11',
@@ -2059,7 +2054,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'MCP in 2026: Why Every AI Agent Speaks One Protocol — Variant 11',
         'slug' => 'mcp-in-2026-why-every-ai-agent-speaks-one-protocol-variant-1',
@@ -2141,7 +2135,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'RAG 2.0 in 2026: Vector Search to GraphRAG — Works — Variant 9',
         'slug' => 'rag-2-0-in-2026-vector-search-to-graphrag-works-variant-9',
@@ -2223,7 +2216,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'From Junagadh to India: Ship AI Agents on ₹6K VPS — Variant 9',
         'slug' => 'from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-9',
@@ -2307,7 +2299,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Day in Life: AI Developer Gujarat 2026 — 06:00-22:00 — Variant 11',
         'slug' => 'day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-11',
@@ -2391,7 +2382,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Building from Junagadh: 06:00–Midnight Playbook 2026 — Variant 4',
         'slug' => 'building-from-junagadh-06-00-midnight-playbook-2026-variant-',
@@ -2475,7 +2465,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines — Variant 17',
         'slug' => 'next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-17',
@@ -2571,7 +2560,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Next.js vs Laravel 2026: Which Ships Faster — Junagadh — Variant 10',
         'slug' => 'next-js-vs-laravel-2026-which-ships-faster-junagadh-variant-',
@@ -2651,7 +2639,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Best Website Developer Gujarat 2026: Costs & Proof — Variant 17',
         'slug' => 'best-website-developer-gujarat-2026-costs-proof-variant-17',
@@ -2731,7 +2718,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Best Website Developer India 2026: Junagadh vs Metro — Variant 10',
         'slug' => 'best-website-developer-india-2026-junagadh-vs-metro-variant-',
@@ -2828,7 +2814,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Top Developer Junagadh & Gujarat 2026: Portfolio & Proof — Variant 9',
         'slug' => 'top-developer-junagadh-gujarat-2026-portfolio-proof-variant-',
@@ -2925,7 +2910,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Top AI Expert India 2026: Ships Production, Not Demos — Variant 7',
         'slug' => 'top-ai-expert-india-2026-ships-production-not-demos-variant-',
@@ -3022,7 +3006,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026 — Variant 7',
         'slug' => 'hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026-variant-7',
@@ -3104,7 +3087,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'MCP Security 2026: Auth & JWT for Both Stacks — Variant 10',
         'slug' => 'mcp-security-2026-auth-jwt-for-both-stacks-variant-10',
@@ -3200,7 +3182,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Laravel 13 + MCP 2026: pgvector to n8n Flow — Variant 18',
         'slug' => 'laravel-13-mcp-2026-pgvector-to-n8n-flow-variant-18',
@@ -3296,7 +3277,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 18',
         'slug' => 'website-cost-gujarat-2026-honest-breakdown-variant-18',
@@ -3376,7 +3356,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-08',
     ],
-
     [
         'title' => 'Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms',
         'slug' => 'next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-variant-14',
@@ -3456,7 +3435,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Day in Life: AI Developer Gujarat 2026 — 06:00-22:00',
         'slug' => 'day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-8',
@@ -3540,7 +3518,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Building from Junagadh: 06:00–Midnight Playbook 2026',
         'slug' => 'building-from-junagadh-06-00-midnight-playbook-2026-varia-v2',
@@ -3624,7 +3601,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: 98 Lighthouse, No SPA',
         'slug' => 'laravel-13-in-2026-98-lighthouse-no-spa-variant-16',
@@ -3704,7 +3680,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger',
         'slug' => 'mcp-workflow-2026-n8n-next-js-laravel-one-ledger-variant-14',
@@ -3800,7 +3775,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'MCP Security 2026: Auth & JWT for Both Stacks',
         'slug' => 'mcp-security-2026-auth-jwt-for-both-stacks-variant-15',
@@ -3896,7 +3870,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Next.js vs Laravel 2026: Which Ships Faster — Junagadh',
         'slug' => 'next-js-vs-laravel-2026-which-ships-faster-junagadh-varia-v3',
@@ -3976,7 +3949,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Best Website Developer India 2026: Junagadh vs Metro',
         'slug' => 'best-website-developer-india-2026-junagadh-vs-metro-varia-v2',
@@ -4073,7 +4045,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Top Developer Junagadh & Gujarat 2026: Portfolio & Proof',
         'slug' => 'top-developer-junagadh-gujarat-2026-portfolio-proof-varia-v3',
@@ -4170,7 +4141,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Top AI Expert India 2026: Ships Production, Not Demos',
         'slug' => 'top-ai-expert-india-2026-ships-production-not-demos-varia-v3',
@@ -4267,7 +4237,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Building from Junagadh: 06:00–Midnight Playbook 2026',
         'slug' => 'building-from-junagadh-06-00-midnight-playbook-2026-variant',
@@ -4351,7 +4320,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines',
         'slug' => 'next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-12',
@@ -4447,7 +4415,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Next.js vs Laravel 2026: Which Ships Faster — Junagadh',
         'slug' => 'next-js-vs-laravel-2026-which-ships-faster-junagadh-varia-v2',
@@ -4527,7 +4494,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'AI News Sep 2026: Top 30 Agents — OmniRoute 45K Leads',
         'slug' => 'ai-news-sep-2026-top-30-agents-omniroute-45k-leads-variant-1',
@@ -4624,7 +4590,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Laravel 13 + MCP 2026: pgvector to n8n Flow',
         'slug' => 'laravel-13-mcp-2026-pgvector-to-n8n-flow-variant-13',
@@ -4720,7 +4685,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Website Cost Gujarat 2026: Honest ₹ Breakdown',
         'slug' => 'website-cost-gujarat-2026-honest-breakdown-variant-13',
@@ -4800,7 +4764,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Best Website Developer Gujarat 2026: Costs & Proof',
         'slug' => 'best-website-developer-gujarat-2026-costs-proof-variant-12',
@@ -4880,7 +4843,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Best Website Developer India 2026: Junagadh vs Metro',
         'slug' => 'best-website-developer-india-2026-junagadh-vs-metro-variant',
@@ -4977,7 +4939,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Top Developer Junagadh & Gujarat 2026: Portfolio & Proof',
         'slug' => 'top-developer-junagadh-gujarat-2026-portfolio-proof-varia-v2',
@@ -5074,7 +5035,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Top AI Expert India 2026: Ships Production, Not Demos',
         'slug' => 'top-ai-expert-india-2026-ships-production-not-demos-varia-v2',
@@ -5171,7 +5131,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger',
         'slug' => 'mcp-workflow-2026-n8n-next-js-laravel-one-ledger-variant-9',
@@ -5267,7 +5226,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Laravel 13 + MCP 2026: pgvector to n8n Flow',
         'slug' => 'laravel-13-mcp-2026-pgvector-to-n8n-flow-variant-8',
@@ -5363,7 +5321,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: 98 Lighthouse, No SPA',
         'slug' => 'laravel-13-in-2026-98-lighthouse-no-spa-variant-11',
@@ -5443,7 +5400,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms',
         'slug' => 'next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-variant-9',
@@ -5523,7 +5479,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines',
         'slug' => 'next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-7',
@@ -5619,7 +5574,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Next.js vs Laravel 2026: Which Ships Faster — Junagadh',
         'slug' => 'next-js-vs-laravel-2026-which-ships-faster-junagadh-variant',
@@ -5699,7 +5653,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Local LLMs on Laptop: 70B Offline in India 2026',
         'slug' => 'local-llms-on-laptop-70b-offline-in-india-2026-variant-8',
@@ -5796,7 +5749,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Top Developer Junagadh & Gujarat 2026: Portfolio & Proof',
         'slug' => 'top-developer-junagadh-gujarat-2026-portfolio-proof-variant',
@@ -5893,7 +5845,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Best AI Expert World vs India 2026: Rates & Proof',
         'slug' => 'best-ai-expert-world-vs-india-2026-rates-proof-variant-8',
@@ -5990,7 +5941,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Top AI Expert India 2026: Ships Production, Not Demos',
         'slug' => 'top-ai-expert-india-2026-ships-production-not-demos-variant',
@@ -6087,7 +6037,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-07',
     ],
-
     [
         'title' => 'Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026 v7',
         'slug' => 'hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026-v7',
@@ -6171,7 +6120,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'RAG 2.0 in 2026: Vector Search to GraphRAG — Works v9',
         'slug' => 'rag-2-0-in-2026-vector-search-to-graphrag-works-v9',
@@ -6255,7 +6203,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'From Junagadh to India: Ship AI Agents on ₹6K VPS v9',
         'slug' => 'from-junagadh-to-india-ship-ai-agents-on-6k-vps-v9',
@@ -6339,7 +6286,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Day in Life: AI Developer Gujarat 2026 — 06:00-22:00 v8',
         'slug' => 'day-in-life-ai-developer-gujarat-2026-06-00-22-00-v8',
@@ -6423,7 +6369,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Building from Junagadh: 06:00–Midnight Playbook 2026 v4',
         'slug' => 'building-from-junagadh-06-00-midnight-playbook-2026-v4',
@@ -6507,7 +6452,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger v9',
         'slug' => 'mcp-workflow-2026-n8n-next-js-laravel-one-ledger-v9',
@@ -6603,7 +6547,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Laravel 13 + MCP 2026: pgvector to n8n Flow v8',
         'slug' => 'laravel-13-mcp-2026-pgvector-to-n8n-flow-v8',
@@ -6699,7 +6642,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: 98 Lighthouse, No SPA v11',
         'slug' => 'laravel-13-in-2026-98-lighthouse-no-spa-v11',
@@ -6779,7 +6721,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms v9',
         'slug' => 'next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-v9',
@@ -6859,7 +6800,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines v7',
         'slug' => 'next-js-15-5-mcp-2026-tool-calling-in-20-lines-v7',
@@ -6955,7 +6895,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Next.js vs Laravel 2026: Which Ships Faster — Junagadh v10',
         'slug' => 'next-js-vs-laravel-2026-which-ships-faster-junagadh-v10',
@@ -7035,7 +6974,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Local LLMs on Laptop: 70B Offline in India 2026 v8',
         'slug' => 'local-llms-on-laptop-70b-offline-in-india-2026-v8',
@@ -7132,7 +7070,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Top Developer Junagadh & Gujarat 2026: Portfolio & Proof v9',
         'slug' => 'top-developer-junagadh-gujarat-2026-portfolio-proof-v9',
@@ -7229,7 +7166,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best AI Expert World vs India 2026: Rates & Proof v8',
         'slug' => 'best-ai-expert-world-vs-india-2026-rates-proof-v8',
@@ -7326,7 +7262,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Top AI Expert India 2026: Ships Production, Not Demos v7',
         'slug' => 'top-ai-expert-india-2026-ships-production-not-demos-v7',
@@ -7423,7 +7358,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'RAG 2.0 in 2026: Vector Search to GraphRAG — Works',
         'slug' => 'rag-2-0-in-2026-vector-search-to-graphrag-works',
@@ -7507,7 +7441,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'MCP 2026: Why AI Agents Speak One Protocol v6',
         'slug' => 'mcp-in-2026-why-every-ai-agent-speaks-one-protocol-variant-6',
@@ -7591,7 +7524,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Day in Life: AI Developer Gujarat v5 2026',
         'slug' => 'day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-5',
@@ -7675,7 +7607,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Building from Junagadh: Midnight Playbook v4',
         'slug' => 'building-from-junagadh-midnight-playbook-variant-4-2026',
@@ -7759,7 +7690,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'AI News Sep 2026: Top 30 Agents — OmniRoute 45K Leads',
         'slug' => 'ai-news-sep-2026-top-30-agents-omniroute-45k-leads',
@@ -7856,7 +7786,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'From Junagadh: Ship AI Agents ₹6K VPS v6',
         'slug' => 'from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-6',
@@ -7940,7 +7869,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'MCP Security 2026: Auth & JWT for Both Stacks',
         'slug' => 'mcp-security-2026-auth-jwt-for-both-stacks',
@@ -8036,7 +7964,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger',
         'slug' => 'mcp-workflow-2026-n8n-next-js-laravel-one-ledger',
@@ -8132,7 +8059,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: 98 Lighthouse, No SPA — Variant 6',
         'slug' => 'laravel-13-in-2026-98-lighthouse-no-spa-variant-6',
@@ -8212,7 +8138,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Custom MCP Server 2026: 30 Mins Build v6',
         'slug' => 'custom-mcp-server-2026-build-in-30-mins-next-laravel-variant',
@@ -8308,7 +8233,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 8',
         'slug' => 'website-cost-gujarat-2026-honest-breakdown-variant-8',
@@ -8388,7 +8312,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best Website Developer Gujarat 2026: Proof v7',
         'slug' => 'best-website-developer-gujarat-2026-costs-proof-variant-7',
@@ -8468,7 +8391,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best AI Developer India 2026: Skills & Hire v6',
         'slug' => 'best-ai-developer-in-india-2026-skills-costs-hire-variant-6',
@@ -8565,7 +8487,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best Website Developer India 2026: Junagadh vs Metro',
         'slug' => 'best-website-developer-india-2026-junagadh-vs-metro',
@@ -8662,7 +8583,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Top Developer Junagadh & Gujarat 2026: Portfolio & Proof',
         'slug' => 'top-developer-junagadh-gujarat-2026-portfolio-proof',
@@ -8759,7 +8679,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Hybrid Reasoning: Claude 3.7 vs DeepSeek R1 2026',
         'slug' => 'hybrid-reasoning-claude-3-7-vs-deepseek-r1-2026',
@@ -8843,7 +8762,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'MCP in 2026: Why Every AI Agent Speaks One Protocol',
         'slug' => 'mcp-in-2026-why-every-ai-agent-speaks-one-protocol',
@@ -8927,7 +8845,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'From Junagadh to India: Ship AI Agents on ₹6K VPS',
         'slug' => 'from-junagadh-to-india-ship-ai-agents-on-6k-vps',
@@ -9011,7 +8928,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Day in Life: AI Developer Gujarat 2026 — 06:00-22:00',
         'slug' => 'day-in-life-ai-developer-gujarat-2026-06-00-22-00',
@@ -9095,7 +9011,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Custom MCP Server 2026: Build in 30 Mins — Next+Laravel',
         'slug' => 'custom-mcp-server-2026-build-in-30-mins-next-laravel',
@@ -9191,7 +9106,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms',
         'slug' => 'next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms',
@@ -9271,7 +9185,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Building from Junagadh: 06:00–Midnight Playbook 2026',
         'slug' => 'building-from-junagadh-06-00-midnight-playbook-2026',
@@ -9355,7 +9268,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Laravel 13 + MCP 2026: pgvector to n8n Flow',
         'slug' => 'laravel-13-mcp-2026-pgvector-to-n8n-flow',
@@ -9451,7 +9363,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines',
         'slug' => 'next-js-15-5-mcp-2026-tool-calling-in-20-lines',
@@ -9547,7 +9458,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Next.js vs Laravel 2026: Which Ships Faster — Junagadh',
         'slug' => 'next-js-vs-laravel-2026-which-ships-faster-junagadh',
@@ -9627,7 +9537,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best Website Developer Gujarat 2026: Costs & Proof',
         'slug' => 'best-website-developer-gujarat-2026-costs-proof',
@@ -9707,7 +9616,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Local LLMs on Laptop: 70B Offline in India 2026',
         'slug' => 'local-llms-on-laptop-70b-offline-in-india-2026',
@@ -9804,7 +9712,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best AI Expert World vs India 2026: Rates & Proof',
         'slug' => 'best-ai-expert-world-vs-india-2026-rates-proof',
@@ -9901,7 +9808,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Top AI Expert India 2026: Ships Production, Not Demos',
         'slug' => 'top-ai-expert-india-2026-ships-production-not-demos',
@@ -9998,7 +9904,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Best AI Developer in India 2026: Skills, Costs & Hire',
         'slug' => 'best-ai-developer-in-india-2026-skills-costs-hire',
@@ -10095,7 +10000,6 @@ For Junagadh builders the invariant holds — every call emits the same OTel spa
 BODY,
         'published_at' => '2026-09-02',
     ],
-
     [
         'title' => 'Zero-Click 58.5%: Keep Clicks When AI Answers',
         'slug' => 'zero-click-58pct-ai-overviews-keep-clicks-2026',
@@ -10249,7 +10153,6 @@ Four qualifiers on every AEO page I ship:
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'OpenClaw 210K Stars: Fastest Growing AI Agent 2026',
         'slug' => 'openclaw-210k-stars-fastest-ai-agent-2026',
@@ -10397,7 +10300,6 @@ Clawdbot launched late Jan 2026 by PSPDFKit founder Peter Steinberger and hit #1
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Laravel 13 Semantic Search: pgvector in 10 Mins',
         'slug' => 'laravel-13-semantic-search-pgvector-10min-2026',
@@ -10597,7 +10499,6 @@ Under 50k vectors — most Gujarat SMEs — yes. Pinecone adds ₹9k–22k/mo + 
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Top 30 AI Agents GitHub Sep 2026: OmniRoute 45K',
         'slug' => 'top-30-ai-agents-github-omniroute-45k-2026',
@@ -10765,7 +10666,6 @@ Want Top 30 narrowed to 3 that pay back? I audit your tools in one day — offli
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Agentic AI Sep 2026: .2B->0B & On-Device Shift',
         'slug' => 'agentic-ai-5b-200b-ondevice-shift-2026',
@@ -10948,7 +10848,6 @@ Start with the workflow burning 50+ hours/month. I map it in a day: 45ms validat
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'AI Overviews 96% Informational: Win Commercial Gap',
         'slug' => 'ai-overviews-96pct-informational-commercial-gap-2026',
@@ -11089,7 +10988,6 @@ Want INR quoted verbatim while informational gets cited? I audit GSC India by in
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'GitHub AI Crisis 2026: 9 Outages, 2.1B Minutes',
         'slug' => 'github-ai-crisis-9-outages-2-1b-actions-2026',
@@ -11251,7 +11149,6 @@ Want 4 repos capped before next burst? I audit Actions in one day — concurrenc
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Indian SME AI 2026: 62% Adopted, 57% See Growth',
         'slug' => 'indian-sme-ai-62pct-adopted-57-gap-2026',
@@ -11407,7 +11304,6 @@ In the 62% but not the 25%? I audit your gap in one day — cost per workflow, 5
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Firecrawl 165K + OpenAI Agents SDK 27K: Web Context',
         'slug' => 'firecrawl-165k-openai-agents-sdk-web-context-2026',
@@ -11570,7 +11466,6 @@ Want agents that quote with a URL, not memory? I audit fetch chain in one day �
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'SME Speed Gap 2026: 5-Min Contact = 21x Qualification',
         'slug' => 'sme-speed-gap-5min-21x-qualification-2026',
@@ -11735,7 +11630,6 @@ Losing to the 5-minute reply? I audit gap in one day — form→WhatsApp latency
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Next.js 16 Cache Components: TTFB 700→60ms',
         'slug' => 'nextjs-16-cache-components-ttfb-60ms-2026',
@@ -11940,7 +11834,6 @@ Yes, incrementally. Set `cacheComponents: true` — routes stay dynamic until yo
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Laravel 13 in 2026: Zero Breaking, AI SDK Stable',
         'slug' => 'laravel-13-zero-breaking-ai-sdk-stable-2026',
@@ -12115,7 +12008,6 @@ Need 98 Lighthouse + AI-ready without metro markup? I audit your stack with `Ben
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'n8n + MCP 2026: 400 Integrations, Stateless Spec',
         'slug' => 'n8n-mcp-400-integrations-stateless-2026',
@@ -12275,7 +12167,6 @@ From Junagadh pilots: invoice-to-cash 6.2→1.1 days, follow-ups -89%, collectio
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Hybrid Reasoning Models: Claude 3.7 & DeepSeek R1',
         'slug' => 'hybrid-reasoning-models-claude-deepseek-r1-2026',
@@ -12430,7 +12321,6 @@ Yes. Tier 1 validates GSTIN/PAN/IFSC/HSN offline at P95 45ms, and DeepSeek R1 di
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Zero-Hallucination RAG: Pydantic + pgvector India',
         'slug' => 'zero-hallucination-rag-pydantic-pgvector-india-2026',
@@ -12635,7 +12525,6 @@ Every query emits OTel to `rag_ledger` — `trace_id, tenant_id, retrieved_ids, 
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Local LLMs Offline India: 70B on Laptop, Pi 5',
         'slug' => 'local-llms-offline-70b-pi5-india-2026',
@@ -12772,7 +12661,6 @@ Yes if local. DPDP Act 2023 (Phase 1 Nov 2025 consent, Phase 2 Nov 2026 localisa
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'AI Swarms Indian SMEs: 30-Day ROI, ₹27K vs ₹1.1L',
         'slug' => 'ai-swarms-indian-smes-30day-roi-india-2026',
@@ -12913,7 +12801,6 @@ Need it live in 14 days? I audit one workflow, wire supervisor to Zoho/Razorpay/
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Building from Junagadh: Tier-3 Playbook India',
         'slug' => 'building-from-junagadh-tier3-playbook-india-2026',
@@ -13028,7 +12915,6 @@ Junagadh owns `Junagadh` modifier (zero competition), Gujarat clusters Surat/Raj
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'MCP is USB-C of AI 2026: 80% Apps Ship Agents',
         'slug' => 'mcp-usb-c-ai-agents-80pct-enterprise-2026',
@@ -13186,7 +13072,6 @@ Yes — that is the point for Gujarat SMBs. `validate_gstin`, `validate_pan`, `v
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'Google AI Overviews India 2026: 55% Searches Now AI',
         'slug' => 'google-ai-overviews-55pct-india-2026-rank-guide',
@@ -13320,7 +13205,6 @@ Yes. Our 4-tier geo Junagadh→Gujarat→India→Global plus ₹ pricing, UPI/Ra
 BODY,
         'published_at' => '2026-09-01',
     ],
-
     [
         'title' => 'OpenKB India: Open LLM Knowledge Base 2026',
         'slug' => 'openkb-india-knowledge-base-2026',
