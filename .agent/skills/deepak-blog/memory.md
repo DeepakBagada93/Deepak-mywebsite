@@ -1744,3 +1744,101 @@
   - Published: `2026-09-15`
   - Words: 1513
   - Pillar: authority
+
+- **Best AI Developer Junagadh 2026: Hire Guide**
+  - Slug: `best-ai-developer-junagadh-2026-hire-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1503
+  - Pillar: authority
+
+- **Top AI Expert Gujarat 2026: Production Proof**
+  - Slug: `top-ai-expert-gujarat-2026-production-proof`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1503
+  - Pillar: authority
+
+- **OpenAI Agents API Sep 2026: Codex Harness Beta**
+  - Slug: `openai-agents-api-codex-harness-beta-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-15`
+  - Words: 1679
+  - Pillar: ai-news
+
+- **MCP Stateless Jul-28 2026: No Sessions Scale**
+  - Slug: `mcp-stateless-jul28-no-sessions-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-15`
+  - Words: 1670
+  - Pillar: ai-news
+
+- **Laravel 13 Aug 2026: Vectors + Scout Hybrid**
+  - Slug: `laravel-13-aug-2026-vectors-scout-hybrid`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-15`
+  - Words: 1587
+  - Pillar: web-dev
+
+- **Website Cost India 2026: Rs 15K vs 1.5L Truth**
+  - Slug: `website-cost-india-2026-15k-vs-1-5l`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-15`
+  - Words: 1589
+  - Pillar: web-dev
+
+- **MCP Auth 2026: CIMD, Not DCR Guide**
+  - Slug: `mcp-auth-cimd-oauth-guide-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1561
+  - Pillar: custom-mcp
+
+- **LangChain MCPAdapter 2026: Elicitation+Cache**
+  - Slug: `langchain-mcpadapter-elicitation-cache-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1551
+  - Pillar: custom-mcp
+
+- **Laravel MCP + Scout 2026: Vectors to n8n**
+  - Slug: `laravel-mcp-scout-vectors-n8n-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1567
+  - Pillar: custom-mcp
+
+- **Junagadh to World 2026: Rs 6K VPS Agent Stack**
+  - Slug: `junagadh-to-world-6k-vps-agent-stack-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-15`
+  - Words: 1507
+  - Pillar: founder-story
+
+- **Day in Life Sep 2026: Shipping Agents 06-22**
+  - Slug: `day-in-life-sep-2026-shipping-agents-06-22`
+  - Tag: `MY STORY`
+  - Published: `2026-09-15`
+  - Words: 1510
+  - Pillar: founder-story
+
+- **GitHub HydraFusion Sep 2026: Multi-Model Agents**
+  - Slug: `github-hydrafusion-multi-model-agents-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-15`
+  - Words: 1666
+  - Pillar: ai-news
+
+- **Next.js 16.3 in 2026: 90% Less RAM, PPR GA**
+  - Slug: `next-js-16-3-90pct-ram-ppr-ga-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-15`
+  - Words: 1605
+  - Pillar: web-dev
+
+- **90-Day Ledger 2026: P95 42ms Proof System**
+  - Slug: `90-day-ledger-p95-proof-system-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-15`
+  - Words: 1504
+  - Pillar: founder-story
