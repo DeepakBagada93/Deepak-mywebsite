@@ -31,13 +31,14 @@ class Markdown
         // Inject loading="lazy" and decoding="async" into images if not already present
         return preg_replace_callback('/<img\b([^>]*?)>/i', static function ($matches) {
             $attrs = $matches[1];
-            if (!str_contains($attrs, 'loading=')) {
+            if (! str_contains($attrs, 'loading=')) {
                 $attrs .= ' loading="lazy"';
             }
-            if (!str_contains($attrs, 'decoding=')) {
+            if (! str_contains($attrs, 'decoding=')) {
                 $attrs .= ' decoding="async"';
             }
-            return '<img' . $attrs . '>';
+
+            return '<img'.$attrs.'>';
         }, $html);
     }
 }
