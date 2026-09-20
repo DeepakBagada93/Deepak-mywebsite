@@ -36,7 +36,7 @@
         <div class="tool-ledger-card">
             <div class="tool-stat-card" style="background: transparent; border: none; padding: 0;">
                 <span class="tool-stat-label">MONTHLY EMI</span>
-                <span class="tool-stat-val" id="res-emi" style="color: #34d399; font-size: 2.4rem;">₹20,517</span>
+                <span class="tool-stat-val" id="res-emi" style="color: #047857; font-size: 2.4rem;">₹20,517</span>
             </div>
 
             <div class="tool-slider-group" style="margin: 10px 0;">
@@ -45,8 +45,8 @@
                     <div id="bar-interest" style="background: #f59e0b; width: 30%;" title="Interest"></div>
                 </div>
                 <div style="display: flex; justify-content: space-between; font-size: 0.75rem;" class="mono text-muted">
-                    <span><strong style="color: #10b981;">■</strong> Principal: <span id="pct-principal">70%</span></span>
-                    <span><strong style="color: #f59e0b;">■</strong> Interest: <span id="pct-interest">30%</span></span>
+                    <span><strong style="color: #047857;">■</strong> Principal: <span id="pct-principal">70%</span></span>
+                    <span><strong style="color: #b45309;">■</strong> Interest: <span id="pct-interest">30%</span></span>
                 </div>
             </div>
 

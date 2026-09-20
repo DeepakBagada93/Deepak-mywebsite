@@ -94,7 +94,7 @@
             if (saved > 0) {
                 const pct = Math.round((saved / originalFileSize) * 100);
                 savingsEl.textContent = `(-${pct}%)`;
-                savingsEl.style.color = '#10b981';
+                savingsEl.style.color = '#047857';
             } else {
                 savingsEl.textContent = '(0%)';
                 savingsEl.style.color = 'var(--muted)';

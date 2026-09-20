@@ -176,24 +176,24 @@ document.addEventListener('DOMContentLoaded', function() {
         entropyText.textContent = `~${entropy} bits entropy`;
 
         let pct = 0;
-        let color = '#ef4444';
+        let color = '#b91c1c';
         let label = 'Very Weak';
 
         if (entropy >= 80) {
             pct = 100;
-            color = '#10b981';
+            color = '#047857';
             label = 'Very Strong';
         } else if (entropy >= 60) {
             pct = 75;
-            color = '#06b6d4';
+            color = '#0e7490';
             label = 'Strong';
         } else if (entropy >= 45) {
             pct = 50;
-            color = '#f59e0b';
+            color = '#b45309';
             label = 'Moderate';
         } else {
             pct = 25;
-            color = '#ef4444';
+            color = '#b91c1c';
             label = 'Weak';
         }
 

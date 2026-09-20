@@ -9,6 +9,10 @@
     --ink: #161616;
     --muted: #6f6f6f;
     --hair: rgba(22, 22, 22, 0.16);
+    /* Surfaces for the interactive tool components */
+    --surface: #faf8f5;
+    --surface-alt: #f4f1ec;
+    --surface-hover: #efeae2;
     --serif: "Fraunces", Georgia, serif;
     --sans: "Inter", "Helvetica Neue", sans-serif;
     --mono: "IBM Plex Mono", "Courier New", monospace;
@@ -1951,22 +1955,22 @@ code { font-family: var(--mono); font-size: 0.85em; }
 }
 .tool-status-bar--success {
     border-color: #10b981;
-    color: #34d399;
+    color: #047857;
     background: rgba(16, 185, 129, 0.08);
 }
 .tool-status-bar--error {
     border-color: #ef4444;
-    color: #f87171;
+    color: #b91c1c;
     background: rgba(239, 68, 68, 0.08);
 }
 .tool-status-bar--warning {
     border-color: #f59e0b;
-    color: #fbbf24;
-    background: rgba(245, 158, 11, 0.08);
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.1);
 }
 .tool-status-bar--info {
     border-color: #3b82f6;
-    color: #60a5fa;
+    color: #1d4ed8;
     background: rgba(59, 130, 246, 0.08);
 }
 
@@ -2324,9 +2328,10 @@ code { font-family: var(--mono); font-size: 0.85em; }
 .password-strength-bar {
     width: 100%;
     height: 6px;
-    background: #222;
+    background: var(--hair);
     overflow: hidden;
 }
+.password-strength-meta strong { font-weight: 600; }
 .password-strength-fill {
     height: 100%;
     transition: width 0.3s ease, background-color 0.3s ease;
@@ -2385,10 +2390,82 @@ code { font-family: var(--mono); font-size: 0.85em; }
     font-size: 0.88rem;
 }
 
+/* Tool form labels, groups & action rows */
+.tool-label {
+    display: block;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+.tool-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.tool-controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.tool-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 180px;
+}
+.tool-quick-presets {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.tool-presets-label {
+    color: var(--muted);
+    margin-right: 4px;
+}
+.tool-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+.tool-qr-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 200px;
+    background: #ffffff;
+    border: 1px solid var(--hair);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.tool-qr-display img,
+.tool-qr-display canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.tool-workspace-controls,
+.tool-result {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tool-keyword-density { margin-top: 32px; }
+
+/* Text utility helpers used inside the tool partials */
+.text-muted { color: var(--muted); }
+.text-white { color: var(--ink); font-weight: 600; }
+.mb-sm { margin-bottom: 8px; }
+
 /* Button micro utilities */
 .btn--xs {
     padding: 4px 10px;
     font-size: 0.72rem;
+}
+.pill-btn--sm {
+    padding: 6px 14px;
+    font-size: 0.6rem;
 }
 
 /* --- Responsive: Tools --- */

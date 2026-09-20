@@ -15,7 +15,7 @@
         <div class="tool-ledger-card">
             <div class="tool-stat-card" style="background: transparent; border: none; padding: 0;">
                 <span class="tool-stat-label">YOUR EXACT AGE</span>
-                <span class="tool-stat-val" id="res-exact-age" style="font-size: 2.2rem; color: #34d399;">--</span>
+                <span class="tool-stat-val" id="res-exact-age" style="font-size: 2.2rem; color: #047857;">--</span>
             </div>
 
             <div class="tool-ledger-row">

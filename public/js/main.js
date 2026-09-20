@@ -38,6 +38,10 @@
     const { gsap } = window;
     if (window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
+    } else {
+        // Failsafe: `.js [data-reveal]` starts hidden, so without ScrollTrigger
+        // nothing would ever reveal them and the page would render blank.
+        gsap.set("[data-reveal]", { opacity: 1, y: 0 });
     }
 
     const $ = (sel, ctx) => (ctx || document).querySelector(sel);

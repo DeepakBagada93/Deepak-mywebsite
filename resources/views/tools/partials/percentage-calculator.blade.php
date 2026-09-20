@@ -11,7 +11,7 @@
             </div>
             <div class="tool-ledger-row tool-ledger-row--total" style="margin-top: 10px;">
                 <span>Result:</span>
-                <span class="mono" id="p1-res" style="color: #34d399;">900</span>
+                <span class="mono" id="p1-res" style="color: #047857;">900</span>
             </div>
         </div>
 
@@ -26,7 +26,7 @@
             </div>
             <div class="tool-ledger-row tool-ledger-row--total" style="margin-top: 10px;">
                 <span>Result:</span>
-                <span class="mono" id="p2-res" style="color: #34d399;">25%</span>
+                <span class="mono" id="p2-res" style="color: #047857;">25%</span>
             </div>
         </div>
 
@@ -41,7 +41,7 @@
             </div>
             <div class="tool-ledger-row tool-ledger-row--total" style="margin-top: 10px;">
                 <span>Result:</span>
-                <span class="mono" id="p3-res" style="color: #34d399;">+50.00% (Increase)</span>
+                <span class="mono" id="p3-res" style="color: #047857;">+50.00% (Increase)</span>
             </div>
         </div>
 
@@ -60,7 +60,7 @@
             </div>
             <div class="tool-ledger-row tool-ledger-row--total" style="margin-top: 10px;">
                 <span>Result:</span>
-                <span class="mono" id="p4-res" style="color: #34d399;">1,650</span>
+                <span class="mono" id="p4-res" style="color: #047857;">1,650</span>
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pct = (diff / Math.abs(x)) * 100;
         const sign = pct >= 0 ? '+' : '';
         const label = pct >= 0 ? 'Increase' : 'Decrease';
-        const color = pct >= 0 ? '#34d399' : '#f87171';
+        const color = pct >= 0 ? '#047857' : '#b91c1c';
         p3Res.textContent = `${sign}${pct.toFixed(2)}% (${label})`;
         p3Res.style.color = color;
     }
