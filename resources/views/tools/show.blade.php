@@ -115,26 +115,27 @@
         @endif
 
         {{-- Schema Markup --}}
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "{{ $tool['name'] }}",
-            "url": "{{ config('site.url') }}/tools/{{ $tool['slug'] }}",
-            "applicationCategory": "Utility",
-            "operatingSystem": "Web Browser",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "INR"
-            },
-            "author": {
-                "@type": "Person",
-                "name": "Deepak Bagada",
-                "url": "https://deepakbagada.in"
-            }
-        }
-        </script>
+        @php
+            $schema = [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebApplication',
+                'name' => $tool['name'],
+                'url' => config('site.url') . '/tools/' . $tool['slug'],
+                'applicationCategory' => 'Utility',
+                'operatingSystem' => 'Web Browser',
+                'offers' => [
+                    '@type' => 'Offer',
+                    'price' => '0',
+                    'priceCurrency' => 'INR',
+                ],
+                'author' => [
+                    '@type' => 'Person',
+                    'name' => 'Deepak Bagada',
+                    'url' => 'https://deepakbagada.in',
+                ],
+            ];
+        @endphp
+        <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
     </div>
 </section>
 @endsection

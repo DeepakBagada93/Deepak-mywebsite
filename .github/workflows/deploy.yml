@@ -75,7 +75,7 @@ jobs:
           ssh-keyscan -p 65002 -H 86.38.243.124 >> ~/.ssh/known_hosts
 
           # Sync files directly to Hostinger
-          rsync -avz -e "ssh -i ~/.ssh/deploy_key -p 65002 -o StrictHostKeyChecking=no" \
+          rsync -avz --no-owner --no-group -e "ssh -i ~/.ssh/deploy_key -p 65002 -o StrictHostKeyChecking=no" \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='node_modules' \
