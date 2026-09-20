@@ -263,17 +263,35 @@
     const burger = $("#burger");
     const mmenu = $("#mmenu");
     if (burger && mmenu) {
+        const mmenuClose = $("#mmenu-close");
         const toggleMenu = (force) => {
-            const open = typeof force === "boolean" ? force : !mmenu.classList.contains("is-open");
-            mmenu.classList.toggle("is-open", open);
-            burger.setAttribute("aria-expanded", String(open));
-            burger.textContent = open ? "Close" : "Menu";
-            if (open) lockScroll();
-            else unlockScroll();
+            const open = force !== undefined ? force : !mmenu.classList.contains("is-open");
+            if (open) {
+                mmenu.style.display = "flex";
+                // Trigger reflow for smooth transition
+                mmenu.offsetHeight;
+                mmenu.classList.add("is-open");
+                burger.setAttribute("aria-expanded", "true");
+                burger.textContent = "Close";
+                lockScroll();
+            } else {
+                mmenu.classList.remove("is-open");
+                burger.setAttribute("aria-expanded", "false");
+                burger.textContent = "Menu";
+                unlockScroll();
+                setTimeout(() => {
+                    if (!mmenu.classList.contains("is-open")) {
+                        mmenu.style.display = "none";
+                    }
+                }, 300);
+            }
             if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
         };
         burger.addEventListener("click", () => toggleMenu());
-        
+        if (mmenuClose) {
+            mmenuClose.addEventListener("click", () => toggleMenu(false));
+        }
+
         // Close menu on any link click inside mmenu
         mmenu.addEventListener("click", (e) => {
             const link = e.target.closest("a");
@@ -310,82 +328,71 @@
         });
     }
 
-    /* ---------- Desktop Mega Menu (Tools) ---------- */
+    /* ---------- Desktop Floating Tools Popover ---------- */
     const toolsTrigger = $("#tools-trigger");
-    const toolsMega = $("#tools-mega");
-    const megaBackdrop = $("#megamenu-backdrop");
+    const toolsPopover = $("#tools-popover");
+    const toolsPopoverClose = $("#tools-popover-close");
     const toolsNavItem = $("#tools-nav-item");
 
-    if (toolsTrigger && toolsMega && megaBackdrop) {
-        let closeTimeout = null;
-
-        const openMega = () => {
+    if (toolsTrigger && toolsPopover) {
+        const openPopover = () => {
             if (window.innerWidth <= 1024) return;
-            clearTimeout(closeTimeout);
-            toolsMega.classList.add("is-active");
-            toolsMega.setAttribute("aria-hidden", "false");
+            toolsPopover.classList.add("is-active");
             toolsTrigger.classList.add("is-active");
             toolsTrigger.setAttribute("aria-expanded", "true");
-            megaBackdrop.classList.add("is-active");
-            megaBackdrop.setAttribute("aria-hidden", "false");
         };
 
-        const closeMega = () => {
-            clearTimeout(closeTimeout);
-            toolsMega.classList.remove("is-active");
-            toolsMega.setAttribute("aria-hidden", "true");
+        const closePopover = () => {
+            toolsPopover.classList.remove("is-active");
             toolsTrigger.classList.remove("is-active");
             toolsTrigger.setAttribute("aria-expanded", "false");
-            megaBackdrop.classList.remove("is-active");
-            megaBackdrop.setAttribute("aria-hidden", "true");
         };
 
-        const scheduleClose = () => {
-            clearTimeout(closeTimeout);
-            closeTimeout = setTimeout(closeMega, 180);
-        };
-
-        // Hover interactions with debounce
-        if (toolsNavItem) {
-            toolsNavItem.addEventListener("mouseenter", openMega);
-            toolsNavItem.addEventListener("mouseleave", scheduleClose);
-        }
-        toolsMega.addEventListener("mouseenter", () => clearTimeout(closeTimeout));
-        toolsMega.addEventListener("mouseleave", scheduleClose);
-
-        // Click/tap toggle on desktop
+        // Click to toggle
         toolsTrigger.addEventListener("click", (e) => {
-            if (window.innerWidth > 1024) {
-                e.preventDefault();
-                if (toolsMega.classList.contains("is-active")) {
-                    closeMega();
-                } else {
-                    openMega();
-                }
+            e.preventDefault();
+            e.stopPropagation();
+            if (toolsPopover.classList.contains("is-active")) {
+                closePopover();
+            } else {
+                openPopover();
             }
         });
 
-        // Backdrop click closes
-        megaBackdrop.addEventListener("click", closeMega);
+        // Close button inside popover
+        if (toolsPopoverClose) {
+            toolsPopoverClose.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                closePopover();
+            });
+        }
+
+        // Clicking anywhere outside closes popover
+        document.addEventListener("click", (e) => {
+            if (!toolsPopover.contains(e.target) && !toolsTrigger.contains(e.target)) {
+                closePopover();
+            }
+        });
 
         // Escape key closes
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && toolsMega.classList.contains("is-active")) {
-                closeMega();
+            if (e.key === "Escape" && toolsPopover.classList.contains("is-active")) {
+                closePopover();
             }
         });
 
-        // Clicking any link inside mega menu closes it
-        toolsMega.addEventListener("click", (e) => {
+        // Clicking any link inside closes popover
+        toolsPopover.addEventListener("click", (e) => {
             if (e.target.closest("a")) {
-                closeMega();
+                closePopover();
             }
         });
 
-        // Auto-close on resize
+        // Close on resize
         window.addEventListener("resize", () => {
-            if (window.innerWidth <= 1024 && toolsMega.classList.contains("is-active")) {
-                closeMega();
+            if (window.innerWidth <= 1024 && toolsPopover.classList.contains("is-active")) {
+                closePopover();
             }
         });
     }
