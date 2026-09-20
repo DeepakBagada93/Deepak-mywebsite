@@ -273,11 +273,33 @@
             if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
         };
         burger.addEventListener("click", () => toggleMenu());
-        $$(".mmenu a").forEach((a) => a.addEventListener("click", () => toggleMenu(false)));
+        
+        // Close menu on any link click inside mmenu
+        mmenu.addEventListener("click", (e) => {
+            const link = e.target.closest("a");
+            if (link) {
+                toggleMenu(false);
+            }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && mmenu.classList.contains("is-open")) {
+                toggleMenu(false);
+            }
+        });
+
+        // Close menu if viewport resized to desktop width (> 1024px)
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 1024 && mmenu.classList.contains("is-open")) {
+                toggleMenu(false);
+            }
+        });
 
         /* ---------- Mobile menu: expandable Tools submenu ---------- */
         $$(".mmenu__expand-btn").forEach((btn) => {
             btn.addEventListener("click", (e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 const parent = btn.closest(".mmenu__expandable");
                 if (!parent) return;
