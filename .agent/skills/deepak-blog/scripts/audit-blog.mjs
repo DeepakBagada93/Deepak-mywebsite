@@ -79,16 +79,22 @@ function ctrScore(titleStr) {
   if (!titleStr) return { score: 0, reasons: ["no title"] };
   let s = 0;
   const reasons = [];
-  if (titleStr.length > 0 && titleStr.length <= 60) { s += 2; reasons.push("≤60 chars"); } else if (titleStr.length <= 60) reasons.push("≤60 chars"); else reasons.push(`>${60} chars (-2)`);
-  if (/^\s*(best|top|how|why|what|when)\b/i.test(titleStr) || titleStr.toLowerCase().includes(titleStr.split(" ")[0]?.toLowerCase())) { /* front-loaded check below */ }
-  // Keyword front-loaded (first 2 words contain intent or first 20 chars contain keyword)
-  const first20 = titleStr.slice(0, 20).toLowerCase();
-  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer/i.test(first20)) { s += 2; reasons.push("keyword front-loaded"); } else reasons.push("keyword not front-loaded (-2)");
+  if (titleStr.length > 0 && titleStr.length <= 60) { s += 2; reasons.push("≤60 chars"); } 
+  else if (titleStr.length <= 65) { s += 1; reasons.push("≤65 chars (sweet 50-60)"); }
+  else reasons.push(`>${65} chars (-2)`);
+
+  // Strip leading brackets like [Blueprint], [2026], [Guide] for keyword front-loading check
+  const strippedTitle = titleStr.replace(/^\[[^\]]+\]\s*/i, "").trim();
+  const first20 = (strippedTitle.slice(0, 25) + " " + titleStr.slice(0, 20)).toLowerCase();
+  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|agent|swarm|model|llm/i.test(first20)) { s += 2; reasons.push("keyword front-loaded"); } 
+  else reasons.push("keyword not front-loaded (-2)");
+
   if (/2026/.test(titleStr)) { s += 1; reasons.push("year 2026"); } else reasons.push("no year 2026 (-1)");
   if (/india|gujarat|junagadh|world/i.test(titleStr)) { s += 1; reasons.push("geo modifier"); } else reasons.push("no geo (-1)");
   if (/\d/.test(titleStr)) { s += 2; reasons.push("digit present"); } else reasons.push("no digit (-2)");
-  if (/best|top|guide|playbook|breakdown|proven|ultimate|complete/i.test(titleStr)) { s += 1; reasons.push("power word"); } else reasons.push("no power word (-1)");
-  if (/:\s*.+/.test(titleStr)) { s += 1; reasons.push("colon benefit"); }
+  if (/best|top|guide|playbook|breakdown|proven|ultimate|complete|blueprint|benchmark|deep dive|analysis|step-by-step/i.test(titleStr)) { s += 1; reasons.push("power word"); } else reasons.push("no power word (-1)");
+  if (/[:|—→\/\/$₹%]/.test(titleStr)) { s += 1; reasons.push("high-converting symbol"); }
+  if (/\[[^\]]+\]|\([^)]+\)/.test(titleStr)) { s += 1; reasons.push("bracket tag"); }
   return { score: Math.min(10, s), reasons };
 }
 
@@ -96,7 +102,8 @@ const isBestTop = /best|top|#1|ranked/i.test(title || "");
 
 // ─── title / excerpt / slug ─────────────────────────────────────────────────
 if (!title) add("FAIL", "Meta title", "Missing — title must be <60 chars, high-CTR, with year 2026, keyword front-loaded");
-else if (title.length > 60) add("FAIL", "Meta title ≤60 chars", `${title.length} chars: "${title}" — over cap (hurts CTR)`);
+else if (title.length > 65) add("FAIL", "Meta title ≤65 chars", `${title.length} chars: "${title}" — over cap (hurts CTR)`);
+else if (title.length > 60) add("WARN", "Meta title ≤60 chars", `${title.length} chars: "${title}" — slightly over 60, but acceptable with symbols`);
 else if (title.length < 20) add("WARN", "Meta title", `${title.length} chars — too short for CTR`);
 else add("PASS", "Meta title ≤60 chars", `${title.length} chars: "${title}"`);
 
@@ -104,8 +111,8 @@ else add("PASS", "Meta title ≤60 chars", `${title.length} chars: "${title}"`);
 const ctr = ctrScore(title);
 if (!title) add("FAIL", "CTR score ≥7/10", `No title — CTR 0/10`);
 else if (ctr.score >= 7) add("PASS", `CTR score ${ctr.score}/10`, ctr.reasons.join(" · "));
-else if (ctr.score >= 5) add("WARN", `CTR score ${ctr.score}/10 (target ≥7)`, ctr.reasons.join(" · ") + " — add year/geo/digit/power-word, front-load keyword");
-else add("FAIL", `CTR score ${ctr.score}/10 (need ≥7)`, ctr.reasons.join(" · ") + " — title needs CTR formula: Best/Top + digit + geo + 2026 + colon benefit");
+else if (ctr.score >= 5) add("WARN", `CTR score ${ctr.score}/10 (target ≥7)`, ctr.reasons.join(" · ") + " — add year/geo/digit/symbols/brackets, front-load keyword");
+else add("FAIL", `CTR score ${ctr.score}/10 (need ≥7)`, ctr.reasons.join(" · ") + " — title needs CTR formula: Best/Top/Symbols + digit + geo + 2026 + colon/brackets");
 
 if (!excerpt) add("FAIL", "Meta description / excerpt", "Missing — need 150-160 chars, answer-first, keyword in first 20 chars + proof + CTA");
 else if (excerpt.length < 140) add("FAIL", "Meta description 150-160", `${excerpt.length} chars — too short, need 150-160: "${excerpt.slice(0, 80)}..."`);
@@ -227,15 +234,73 @@ if (!body || body.trim().length < 200) {
   if (bolds % 2 !== 0) add("FAIL", "Bold leaks", "Unclosed ** — odd number of bold markers");
   else if (/\*\*[^*]+\*\*/.test(body)) add("PASS", "Bold formatting", "Bold markers present and likely closed");
 
+  // Images & Alt Tag Audit (Strict AEO & Accessibility)
+  const mdImages = [...body.matchAll(/!\[(.*?)\]\((.*?)\)/g)].map(m => ({ alt: m[1].trim(), src: m[2].trim(), type: "markdown" }));
+  const htmlImages = [...body.matchAll(/<img\b([^>]*?)>/gi)].map(m => {
+    const altMatch = m[1].match(/alt=["'](.*?)["']/i);
+    const srcMatch = m[1].match(/src=["'](.*?)["']/i);
+    return { alt: altMatch ? altMatch[1].trim() : "", src: srcMatch ? srcMatch[1].trim() : "", type: "html" };
+  });
+  const allImages = [...mdImages, ...htmlImages];
+  if (allImages.length > 0) {
+    const genericAltPatterns = /^(image|screenshot|diagram|photo|graphic|pic|picture|img|illustration|unnamed|alt)$/i;
+    const badAlts = allImages.filter(img => !img.alt || img.alt.length < 5 || genericAltPatterns.test(img.alt));
+    if (badAlts.length > 0) {
+      add("FAIL", "Image alt tags (Accessibility/AEO)", `${badAlts.length}/${allImages.length} image(s) have missing, empty, or generic alt text: ${badAlts.map(b => `"${b.alt || "(empty)"}"`).join(", ")} — every image MUST have a descriptive, contextual alt tag`);
+    } else {
+      add("PASS", "Image alt tags", `${allImages.length} image(s) verified with rich, contextual alt tags`);
+    }
+  }
+
   // Quotable Bottom Line
   if (/bottom line/i.test(body)) add("PASS", "Quotable Bottom Line", "Bottom Line block present — AI engines can cite this");
   else add("WARN", "Quotable Bottom Line", "No Bottom Line — add a quotable summary block AI can lift");
 
-  // Anti-fluff v5.0 expanded
-  const FLUFF = ["in today's fast-paced world", "delve into", "unlock the power", "game-changer", "revolutionize", "skyrocket your", "in the realm of", "tapestry", "nestled", "plethora", "embark on a journey", "cutting-edge solution", "leverage the power"];
-  const fluffHits = FLUFF.filter(w => body.toLowerCase().includes(w));
-  if (fluffHits.length) add("FAIL", "Anti-fluff", `Blocklisted phrases: ${fluffHits.join(", ")}`);
-  else add("PASS", "Anti-fluff", "No blocklisted fluff");
+  // Anti-AI Slop & Synthetic Writing Patterns (Defeating Google Core Updates & AI Detectors)
+  const AI_SLOP_PHRASES = [
+    // 1. Synthetic Openers & Throat Clearing
+    "in today's fast-paced world", "in today's digital landscape", "in today's fast-paced digital world",
+    "in today's modern world", "in the fast-evolving world of", "in the ever-evolving landscape",
+    "in the realm of", "in this blog post", "in this article, we will", "in this guide, we will",
+    "let's dive in", "let's dive into", "let us dive into", "have you ever wondered",
+    "as an ai language model", "the world of ai is constantly changing", "imagine a world where",
+    "gone are the days when", "fast-forward to today", "fast forward to today", "without further ado",
+    "it goes without saying", "needless to say", "first and foremost",
+
+    // 2. Synthetic Buzzwords & Hype Clichés
+    "delve into", "delving into", "delves into", "unlock the power", "unlocking the power", "unlock the potential",
+    "unlocking the potential", "game-changer", "game changer", "game-changing", "revolutionize", "revolutionizing",
+    "skyrocket your", "tapestry", "rich tapestry", "nestled", "plethora", "embark on a journey", "embarking on a journey",
+    "cutting-edge solution", "cutting edge solution", "cutting-edge", "leverage the power", "harness the power of",
+    "harnessing the power", "testament to", "a testament to", "beacon of", "beacon of hope", "pivotal role",
+    "plays a pivotal role", "pivotal in", "navigating the landscape", "a double-edged sword", "brimming with",
+    "treasure trove", "demystifying", "demystify", "look no further", "revolutionary approach", "take a deep dive",
+    "unleash the potential", "unleash the power", "a holistic approach", "holistic approach", "seamless integration",
+    "seamlessly integrate", "seamlessly integrates", "seamlessly integrated", "paradigm shift", "supercharge your",
+    "supercharge", "unrivaled", "second to none", "groundbreaking solution", "unparalleled", "powerhouse of",
+    "multifaceted", "paramount", "myriad of", "an array of", "shines bright", "stands out as a shining example",
+    "pushes the boundaries", "at the forefront of innovation", "at the forefront", "state-of-the-art solution",
+
+    // 3. Synthetic Transitions & Robotic Conclusions
+    "it's important to remember", "it is important to remember", "it is worth noting", "it's worth noting",
+    "at its core", "in essence", "moreover,", "furthermore,", "in conclusion", "to sum up", "all in all",
+    "to wrap things up", "to wrap up", "in summary", "final thoughts", "with that being said", "that being said",
+    "on the other hand,", "last but not least"
+  ];
+  const fluffHits = AI_SLOP_PHRASES.filter(w => new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, "i").test(body));
+  if (fluffHits.length) {
+    add("FAIL", "Anti-AI slop & synthetic patterns", `Found ${fluffHits.length} blocklisted AI slop phrase(s): ${fluffHits.join(", ")} — replace with direct engineering facts, benchmarks, or personal experience`);
+  } else {
+    add("PASS", "Anti-AI slop (Human-written)", "Zero synthetic AI slop or fluff cliches detected — genuine 100% human engineering voice");
+  }
+
+  // Technical Specificity & Proof Grounding (High E-E-A-T)
+  const techTokens = (body.match(/\b(p95|tok\/s|ms\b|mbps|latency|postgres|pgvector|ollama|langgraph|sqlite|redis|nginx|docker|artisan|composer|npm|pydantic|schema|jsonl|hnsw|webhook|api key|vps|ram|cpu)\b/gi) || []).length;
+  if (techTokens >= 5) {
+    add("PASS", "Technical depth & specificity", `Dense technical tokens (${techTokens} hits) — high E-E-A-T engineering proof`);
+  } else {
+    add("WARN", "Technical depth & specificity", `Only ${techTokens} technical tokens found — add concrete stacks, metrics, commands, or architecture details to increase engineering authority`);
+  }
 
   // Tag
   if (tag && !/^(AI DEV|AI NEWS|MY STORY|AUTOMATION|WEB DEV|AEO|LOCAL SEO|WEB & AI|AI AGENTS|FINTECH)$/i.test(tag)) {

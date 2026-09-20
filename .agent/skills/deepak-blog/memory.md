@@ -1842,3 +1842,633 @@
   - Published: `2026-09-15`
   - Words: 1504
   - Pillar: founder-story
+
+- **Best AI Agent Developer Junagadh 2026: 7 Checks**
+  - Slug: `best-ai-agent-developer-junagadh-2026-hire-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1513
+  - Pillar: authority
+
+- **Best Website Developer World 2026: India Rs Wins**
+  - Slug: `best-website-developer-world-vs-india-2026-proof`
+  - Tag: `AI DEV`
+  - Published: `2026-09-15`
+  - Words: 1506
+  - Pillar: authority
+
+- **Chalk MCP Server Sep 2026: Agentic ML Loop**
+  - Slug: `chalk-mcp-server-agentic-ml-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-15`
+  - Words: 1679
+  - Pillar: ai-news
+
+- **Next.js 16.3 Instant Navigations: PPR in 2026**
+  - Slug: `next-js-16-3-partial-prefetching-instant-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-15`
+  - Words: 1602
+  - Pillar: web-dev
+
+- **Laravel Cloud 2026: Read-Through FS in 10 Min**
+  - Slug: `laravel-cloud-facade-readthrough-fs-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-15`
+  - Words: 1584
+  - Pillar: web-dev
+
+- **Website Cost Gujarat 2026: Honest ₹ Breakdown — Variant 28**
+  - Slug: `website-cost-gujarat-2026-honest-breakdown-variant-28`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-16`
+  - Words: 1593
+  - Pillar: web-dev
+
+- **Best AI Expert World 2026: India Rates & Proof**
+  - Slug: `best-ai-expert-world-vs-india-2026-rates-proof-variant-18`
+  - Tag: `AI DEV`
+  - Published: `2026-09-16`
+  - Words: 1515
+  - Pillar: authority
+
+- **Best AI Developer India 2026: 30-Day Hire ROI**
+  - Slug: `best-ai-developer-in-india-2026-skills-costs-hire-variant-21`
+  - Tag: `AI DEV`
+  - Published: `2026-09-16`
+  - Words: 1506
+  - Pillar: authority
+
+- **Best AI Expert World 2026: Rupee vs Dollar Proof**
+  - Slug: `best-ai-expert-world-vs-india-2026-rates-proof-variant-23`
+  - Tag: `AI DEV`
+  - Published: `2026-09-16`
+  - Words: 1515
+  - Pillar: authority
+
+- **Best Website Developer Gujarat 2026: ₹55K Proof**
+  - Slug: `best-website-developer-gujarat-2026-costs-proof-variant-27`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-16`
+  - Words: 1594
+  - Pillar: web-dev
+
+- **Next.js MCP 2026: Tool Calling in 20 Lines**
+  - Slug: `next-js-15-5-mcp-2026-tool-calling-in-20-lines-variant-27`
+  - Tag: `AI DEV`
+  - Published: `2026-09-16`
+  - Words: 1561
+  - Pillar: custom-mcp
+
+- **Next.js 15.5 2026: Turbopack 5x, TTFB 60ms**
+  - Slug: `next-js-15-5-in-2026-turbopack-5x-ttfb-700-60ms-variant-24`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-16`
+  - Words: 1596
+  - Pillar: web-dev
+
+- **Day in Life Gujarat 2026: AI Developer 06-22**
+  - Slug: `day-in-life-ai-developer-gujarat-2026-06-00-22-00-variant-20`
+  - Tag: `MY STORY`
+  - Published: `2026-09-16`
+  - Words: 1510
+  - Pillar: founder-story
+
+- **AI News Sep 2026: 30 Agents, OmniRoute 45K**
+  - Slug: `ai-news-sep-2026-top-30-agents-omniroute-45k-leads-variant-2`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-16`
+  - Words: 1682
+  - Pillar: ai-news
+
+- **AI Developer Junagadh 2026: Ship on ₹6K VPS**
+  - Slug: `from-junagadh-to-india-ship-ai-agents-on-6k-vps-variant-18`
+  - Tag: `MY STORY`
+  - Published: `2026-09-16`
+  - Words: 1505
+  - Pillar: founder-story
+
+- **[2026] Google Home MCP: Agents Act in 1.8s (Guide)**
+  - Slug: `google-home-mcp-smart-home-agents-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-17`
+  - Words: 1518
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/google-home-mcp-smart-home-agents-sep-2026
+
+- **[2026] GPT-6 Astra vs Fable 5.1: $10 vs $0.75 (Guide)**
+  - Slug: `frontier-models-sep-wave-astra-fable-flash-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-17`
+  - Words: 1934
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/frontier-models-sep-wave-astra-fable-flash-2026
+
+- **[2026] LangChain MCPAdapter: Stateless + Cache (How-To)**
+  - Slug: `langchain-mcp-stateless-elicitation-cache-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1657
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/langchain-mcp-stateless-elicitation-cache-2026
+
+- **[2026] Next.js 16.3: 90% Less RAM + Instant Nav (Proof)**
+  - Slug: `nextjs-16-3-partial-prefetch-instant-nav-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-17`
+  - Words: 1425
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-16-3-partial-prefetch-instant-nav-2026
+
+- **[2026] Laravel VPS: Zero-Downtime Releases in 20 Min**
+  - Slug: `laravel-cloud-turbopack-zero-downtime-vps-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-17`
+  - Words: 1638
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/laravel-cloud-turbopack-zero-downtime-vps-2026
+
+- **Best AI Developer India 2026: Hire in 30 Days [Guide]**
+  - Slug: `hire-best-ai-developer-india-sep-2026-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1876
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/hire-best-ai-developer-india-sep-2026-guide
+
+- **Top Website Developer Junagadh 2026: ₹55K Proof [Guide]**
+  - Slug: `top-website-developer-junagadh-gujarat-sep-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-17`
+  - Words: 1462
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/top-website-developer-junagadh-gujarat-sep-2026
+
+- **[2026] MCP Security: OAuth + JWT + HITL (Checklist)**
+  - Slug: `mcp-security-home-oauth-jwt-hitl-sep-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1732
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-security-home-oauth-jwt-hitl-sep-2026
+
+- **[2026] Junagadh Lab: Shipping Agents at 01:00 (Story)**
+  - Slug: `junagadh-lab-shipping-home-agents-midnight-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-17`
+  - Words: 1417
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/junagadh-lab-shipping-home-agents-midnight-2026
+
+- **[2026] Day in Life: Building MCP + Next.js 06–22 (Log)**
+  - Slug: `day-in-life-building-nextjs-mcp-sep-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-17`
+  - Words: 1485
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/day-in-life-building-nextjs-mcp-sep-2026
+
+- **[2026] MCP Stateless Migration: Lambda + MRTR (Guide)**
+  - Slug: `mcp-stateless-migration-lambda-mrtr-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1636
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-stateless-migration-lambda-mrtr-2026
+
+- **[2026] MCP Apps: Server-Rendered UI for Agents (Proof)**
+  - Slug: `mcp-apps-server-rendered-ui-agents-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1489
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-apps-server-rendered-ui-agents-2026
+
+- **[2026] MCP Tasks: Long Runs Without Sessions (Guide)**
+  - Slug: `mcp-tasks-extension-long-running-agents-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1468
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-tasks-extension-long-running-agents-2026
+
+- **[2026] ChatGPT MCP Calls Up 98x: Agent Tooling (Analysis)**
+  - Slug: `chatgpt-mcp-tool-calls-98x-agents-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-17`
+  - Words: 1509
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/chatgpt-mcp-tool-calls-98x-agents-2026
+
+- **[2026] AI Devs: Next.js 16.3 TS7 10x Builds (Guide)**
+  - Slug: `nextjs-16-3-typescript-7-faster-builds-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-17`
+  - Words: 1332
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-16-3-typescript-7-faster-builds-2026
+
+- **[2026] AI Sites: Next.js Immutable Assets Cut 24% Data**
+  - Slug: `nextjs-immutable-assets-cdn-deploy-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-17`
+  - Words: 1292
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-immutable-assets-cdn-deploy-2026
+
+- **Hire AI Agent Developers India 2026: $31K vs $306K (Guide)**
+  - Slug: `hire-ai-agent-developer-india-cost-guide-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1414
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/hire-ai-agent-developer-india-cost-guide-2026
+
+- **Best AI Developers India 2026: 7-Point Vetting (Proof)**
+  - Slug: `best-ai-developer-hiring-india-2026-vetting-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-09-17`
+  - Words: 1287
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-developer-hiring-india-2026-vetting-guide
+
+- **[2026] Junagadh Lab: Shipping MCP Apps at 01:00 (Story)**
+  - Slug: `junagadh-lab-mcp-apps-ship-story-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-17`
+  - Words: 1217
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/junagadh-lab-mcp-apps-ship-story-2026
+
+- **Day in Life: AI Developer Upgrades MCP 06–22 [2026]**
+  - Slug: `day-in-life-langchain-mcp-upgrade-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-17`
+  - Words: 1264
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/day-in-life-langchain-mcp-upgrade-2026
+
+- **Best AI Expert World vs India 2026: Rates & Proof [Ledger]**
+  - Slug: `best-ai-expert-world-india-rates-hiring-ledger-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1399
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-expert-world-india-rates-hiring-ledger-2026
+
+- **Best AI Developer India 2026: Skills, Costs & Hire [Guide]**
+  - Slug: `best-ai-developer-india-skills-costs-hire-guide-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1388
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-developer-india-skills-costs-hire-guide-2026
+
+- **Best AI Expert India vs World 2026: ₹ vs $ [Proof]**
+  - Slug: `best-ai-expert-india-world-cost-gap-proof-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1399
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-expert-india-world-cost-gap-proof-2026
+
+- **Best Website Developer Gujarat 2026: Costs & Proof [Table]**
+  - Slug: `best-website-developer-gujarat-costs-proof-ledger-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-18`
+  - Words: 1588
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-website-developer-gujarat-costs-proof-ledger-2026
+
+- **Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms**
+  - Slug: `nextjs-turbopack-ttfb-cache-components-junagadh-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-18`
+  - Words: 1602
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-turbopack-ttfb-cache-components-junagadh-2026
+
+- **Website Cost Gujarat 2026: Honest ₹ Breakdown [Table]**
+  - Slug: `website-cost-gujarat-honest-rupee-breakdown-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-18`
+  - Words: 1577
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/website-cost-gujarat-honest-rupee-breakdown-2026
+
+- **Day in Life: AI Developer Gujarat 2026 — 06:00-22:00**
+  - Slug: `day-life-ai-developer-gujarat-routine-ledger-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-18`
+  - Words: 1268
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/day-life-ai-developer-gujarat-routine-ledger-2026
+
+- **AI News Sep 2026: Top 30 Agents — OmniRoute 45K [Rank]**
+  - Slug: `ai-agents-github-omniroute-top-thirty-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-18`
+  - Words: 1396
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-agents-github-omniroute-top-thirty-sep-2026
+
+- **From Junagadh to India: Ship AI Agents ₹6K VPS [Guide]**
+  - Slug: `junagadh-india-ship-ai-agents-vps-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-18`
+  - Words: 1275
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/junagadh-india-ship-ai-agents-vps-playbook-2026
+
+- **Day in Life Gujarat 2026: AI Routine 06:00→22:00 [Log]**
+  - Slug: `day-life-gujarat-ai-developer-timestamps-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-18`
+  - Words: 1266
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/day-life-gujarat-ai-developer-timestamps-playbook-2026
+
+- **RAG 2.0 in 2026: Vector to GraphRAG That Works [Guide]**
+  - Slug: `rag-graphrag-vector-to-production-junagadh-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-18`
+  - Words: 1703
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/rag-graphrag-vector-to-production-junagadh-2026
+
+- **Hybrid Reasoning 2026: Claude 3.7 vs DeepSeek R1 [Test]**
+  - Slug: `hybrid-reasoning-claude-deepseek-r1-junagadh-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-18`
+  - Words: 1703
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/hybrid-reasoning-claude-deepseek-r1-junagadh-2026
+
+- **Best AI Expert World vs India 2026: Rates & Proof [Ledger]**
+  - Slug: `best-ai-expert-world-india-rates-hiring-ledger-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1399
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-expert-world-india-rates-hiring-ledger-2026
+
+- **Best AI Developer India 2026: Skills, Costs & Hire [Guide]**
+  - Slug: `best-ai-developer-india-skills-costs-hire-guide-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1388
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-developer-india-skills-costs-hire-guide-2026
+
+- **Best AI Expert India vs World 2026: ₹ vs $ [Proof]**
+  - Slug: `best-ai-expert-india-world-cost-gap-proof-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1399
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-expert-india-world-cost-gap-proof-2026
+
+- **Best Website Developer Gujarat 2026: Costs & Proof [Table]**
+  - Slug: `best-website-developer-gujarat-costs-proof-ledger-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-18`
+  - Words: 1588
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-website-developer-gujarat-costs-proof-ledger-2026
+
+- **Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms**
+  - Slug: `nextjs-turbopack-ttfb-cache-components-junagadh-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-18`
+  - Words: 1602
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-turbopack-ttfb-cache-components-junagadh-2026
+
+- **Website Cost Gujarat 2026: Honest ₹ Breakdown [Table]**
+  - Slug: `website-cost-gujarat-honest-rupee-breakdown-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-18`
+  - Words: 1577
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/website-cost-gujarat-honest-rupee-breakdown-2026
+
+- **Day in Life: AI Developer Gujarat 2026 — 06:00-22:00**
+  - Slug: `day-life-ai-developer-gujarat-routine-ledger-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-18`
+  - Words: 1268
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/day-life-ai-developer-gujarat-routine-ledger-2026
+
+- **AI News Sep 2026: Top 30 Agents — OmniRoute 45K [Rank]**
+  - Slug: `ai-agents-github-omniroute-top-thirty-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-18`
+  - Words: 1396
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-agents-github-omniroute-top-thirty-sep-2026
+
+- **From Junagadh to India: Ship AI Agents ₹6K VPS [Guide]**
+  - Slug: `junagadh-india-ship-ai-agents-vps-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-18`
+  - Words: 1275
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/junagadh-india-ship-ai-agents-vps-playbook-2026
+
+- **Day in Life Gujarat 2026: AI Routine 06:00→22:00 [Log]**
+  - Slug: `day-life-gujarat-ai-developer-timestamps-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-18`
+  - Words: 1266
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/day-life-gujarat-ai-developer-timestamps-playbook-2026
+
+- **RAG 2.0 in 2026: Vector to GraphRAG That Works [Guide]**
+  - Slug: `rag-graphrag-vector-to-production-junagadh-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-18`
+  - Words: 1703
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/rag-graphrag-vector-to-production-junagadh-2026
+
+- **Hybrid Reasoning 2026: Claude 3.7 vs DeepSeek R1 [Test]**
+  - Slug: `hybrid-reasoning-claude-deepseek-r1-junagadh-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-18`
+  - Words: 1703
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/hybrid-reasoning-claude-deepseek-r1-junagadh-2026
+
+- **Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines [Code]**
+  - Slug: `nextjs-mcp-tool-calling-twenty-lines-gateway-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1580
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-mcp-tool-calling-twenty-lines-gateway-2026
+
+- **MCP Workflow 2026: n8n + Next.js + Laravel [Ledger]**
+  - Slug: `mcp-workflow-n8n-nextjs-laravel-ledger-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1585
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-workflow-n8n-nextjs-laravel-ledger-2026
+
+- **Laravel 13 + MCP 2026: pgvector to n8n Flow [Code]**
+  - Slug: `laravel-mcp-pgvector-n8n-flow-junagadh-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-18`
+  - Words: 1577
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/laravel-mcp-pgvector-n8n-flow-junagadh-2026
+
+- **Best AI Agent Developer India 2026: ₹85K Proof [Guide]**
+  - Slug: `best-ai-agent-developer-india-toolstack-proof-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-19`
+  - Words: 2008
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-agent-developer-india-toolstack-proof-2026
+
+- **[2026] State of AI Agents: 252 Tools, 1032K Stars**
+  - Slug: `state-of-ai-agents-252-tools-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-19`
+  - Words: 1489
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/state-of-ai-agents-252-tools-sep-2026
+
+- **WhatsApp AI + n8n + UPI: ₹30K Stack Wins [2026]**
+  - Slug: `n8n-whatsapp-business-ai-upi-stack-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-19`
+  - Words: 1312
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/n8n-whatsapp-business-ai-upi-stack-2026
+
+- **GPT-5.6 Sol vs Claude Fable 5: 80 vs 77.2 [2026]**
+  - Slug: `gpt-5-6-sol-vs-claude-fable-mythos-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-19`
+  - Words: 1253
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/gpt-5-6-sol-vs-claude-fable-mythos-sep-2026
+
+- **Next.js 16.3 Turbopack: -90% Memory, 4.9x Dev [2026]**
+  - Slug: `nextjs-16-3-turbopack-memory-eviction-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-19`
+  - Words: 1657
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-16-3-turbopack-memory-eviction-2026
+
+- **Best Website Developer Gujarat 2026: ₹55K Proof**
+  - Slug: `best-website-developer-gujarat-nextjs16-laravel-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-19`
+  - Words: 1237
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-website-developer-gujarat-nextjs16-laravel-2026
+
+- **LangGraph Deep Agents vs CrewAI 450M: Pick [2026]**
+  - Slug: `langgraph-deep-agents-vs-crewai-autogen-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-19`
+  - Words: 1234
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/langgraph-deep-agents-vs-crewai-autogen-2026
+
+- **GLM Flash $0.15 vs Sonnet: 16.8x Cheaper [2026]**
+  - Slug: `glm-flash-kimi-k3-cheap-frontier-sep-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-09-19`
+  - Words: 1219
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/glm-flash-kimi-k3-cheap-frontier-sep-2026
+
+- **Next.js use cache vs Laravel: 60ms TTFB [2026]**
+  - Slug: `nextjs-16-cache-components-laravel-12-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-19`
+  - Words: 1210
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-16-cache-components-laravel-12-2026
+
+- **Top AI Expert Junagadh 2026: WhatsApp Proof**
+  - Slug: `top-ai-expert-junagadh-whatsapp-upi-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-19`
+  - Words: 1218
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/top-ai-expert-junagadh-whatsapp-upi-2026
+
+- **MCP 69% Self-Key Risk: Secure JWT Guide [2026]**
+  - Slug: `mcp-auto-credential-risk-sep-2026-secure`
+  - Tag: `AI DEV`
+  - Published: `2026-09-19`
+  - Words: 1296
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-auto-credential-risk-sep-2026-secure
+
+- **Next.js Devtools MCP + Laravel Boost: 10 Min [2026]**
+  - Slug: `nextjs-devtools-mcp-laravel-boost-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-19`
+  - Words: 1200
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-devtools-mcp-laravel-boost-2026
+
+- **Junagadh Lab, September Day: 06:00-22:00 [2026]**
+  - Slug: `junagadh-lab-september-2026-shipping-day`
+  - Tag: `MY STORY`
+  - Published: `2026-09-19`
+  - Words: 1251
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/junagadh-lab-september-2026-shipping-day
+
+- **AutoGen to Agent Framework: ₹6K Move [2026]**
+  - Slug: `tier3-vps-agent-framework-migration-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-19`
+  - Words: 1200
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/tier3-vps-agent-framework-migration-2026
+
+- **WhatsApp Business AI 14 Days: 30% Lift Gujarat [2026]**
+  - Slug: `whatsapp-business-ai-free-experiment-junagadh-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-19`
+  - Words: 1243
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/whatsapp-business-ai-free-experiment-junagadh-2026
+
+- **Laravel MCP 1.0 Stable: Tool Search Cuts 70% Tokens [2026]**
+  - Slug: `laravel-mcp-1-0-stable-tool-search-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-20`
+  - Words: 1877
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/laravel-mcp-1-0-stable-tool-search-2026
+
+- **Next.js AGENTS.md + MCP: Agents Read Real Docs [2026]**
+  - Slug: `nextjs-agents-md-mcp-real-docs-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-20`
+  - Words: 1481
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/nextjs-agents-md-mcp-real-docs-2026
+
+- **AI Engineer Salary India 2026: ₹8L–₹80L Bands [Hire Guide]**
+  - Slug: `ai-engineer-salary-india-2026-hiring-benchmark`
+  - Tag: `AI DEV`
+  - Published: `2026-09-20`
+  - Words: 1603
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-engineer-salary-india-2026-hiring-benchmark
+
+- **Diwali 2026 SME Playbook: WhatsApp + UPI Wins [Guide]**
+  - Slug: `diwali-2026-sme-ai-playbook-whatsapp-upi`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-20`
+  - Words: 1223
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/diwali-2026-sme-ai-playbook-whatsapp-upi
+
+- **Get Cited by ChatGPT & Perplexity: AEO Playbook [2026]**
+  - Slug: `aeo-cited-chatgpt-perplexity-playbook-2026`
+  - Tag: `AEO`
+  - Published: `2026-09-20`
+  - Words: 1236
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/aeo-cited-chatgpt-perplexity-playbook-2026
+
+- **RAG Eval Harness: 200 Questions That Catch 31% Gaps [2026]**
+  - Slug: `rag-eval-harness-200-questions-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-20`
+  - Words: 1354
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/rag-eval-harness-200-questions-2026
+
+- **October Code Freeze: Ship Safe Before Diwali Rush [2026]**
+  - Slug: `october-code-freeze-festive-maintenance-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-20`
+  - Words: 1217
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/october-code-freeze-festive-maintenance-2026
+
+- **Post-Diwali 2026: Festive Buyers to Repeat Sales [Guide]**
+  - Slug: `post-diwali-retention-repeat-buyers-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-20`
+  - Words: 1202
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/post-diwali-retention-repeat-buyers-2026
+
+- **WhatsApp Templates 2026: Utility vs Marketing Wins [Guide]**
+  - Slug: `whatsapp-template-approval-utility-marketing-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-09-20`
+  - Words: 1220
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/whatsapp-template-approval-utility-marketing-2026
+
+- **Diwali Footfall 2026: Win the Map Pack in 30 Days [Guide]**
+  - Slug: `festive-map-pack-near-me-diwali-2026`
+  - Tag: `LOCAL SEO`
+  - Published: `2026-09-20`
+  - Words: 1211
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/festive-map-pack-near-me-diwali-2026
+
+- **SME Tech Budget 2027: Gujarat Planning Guide [₹ Costs]**
+  - Slug: `sme-tech-budget-2027-gujarat-planning`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-20`
+  - Words: 1205
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/sme-tech-budget-2027-gujarat-planning
+
+- **Search Console 2026: SME Owner Reading Guide [Rank]**
+  - Slug: `search-console-sme-owners-reading-guide-2026`
+  - Tag: `AEO`
+  - Published: `2026-09-20`
+  - Words: 1209
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/search-console-sme-owners-reading-guide-2026
+
+- **Catalog Photos 2026: WebP Speed Without Reshoots [Guide]**
+  - Slug: `catalog-photos-webp-speed-sme-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-20`
+  - Words: 1203
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/catalog-photos-webp-speed-sme-2026

@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\ToolController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PortfolioController::class, 'index'])->name('home');
@@ -31,6 +32,11 @@ Route::prefix('blueprints')->group(function () {
 Route::prefix('repos')->group(function () {
     Route::get('/', [CuratedRepoController::class, 'index'])->name('repos.index');
     Route::get('/category/{category}', [CuratedRepoController::class, 'category'])->name('repos.category');
+});
+
+Route::prefix('tools')->group(function () {
+    Route::get('/', [ToolController::class, 'index'])->name('tools.index');
+    Route::get('/{slug}', [ToolController::class, 'show'])->name('tools.show');
 });
 
 Route::get('/stack', function () {

@@ -1,22 +1,12 @@
 #!/usr/bin/env node
-// audit-live-url.mjs — Stage 6 of deepak-blog v4.0
-// Audits a LIVE journal URL after deployment: content format, rendering, SEO/AEO, links.
-//
-// Checks: HTTP 200, title, meta description, headings, word count, internal links,
-// FAQ section, JSON-LD schema, OG tags, canonical, mobile viewport, code blocks, leaks.
-//
-// Usage:
-//   node scripts/audit-live-url.mjs --url https://deepakbagada.in/journal/my-slug
-//   node scripts/audit-live-url.mjs --url https://deepakbagada.in/journal/my-slug --out live-audit.md
-//   node scripts/audit-live-url.mjs --slug my-slug --base https://deepakbagada.in
-//
-// Exit: 0 = PASS (all critical checks pass), 1 = FAIL (any critical FAIL), 2 = usage error
+// audit-live-url.mjs — Stage 6 of deepak-blog v5.0
+// Audits a LIVE journal URL after deployment: content format, rendering, SEO/AEO, links, CTR, EEAT-Pro.
 
 import { writeFileSync } from "node:fs";
 import { resolve, basename } from "node:path";
 
 const BRAND = "═".repeat(58);
-console.log(`\n${BRAND}\n  🔍 deepak-blog v4.0 — audit-live-url.mjs\n  Live URL Format & Content Audit\n${BRAND}\n`);
+console.log(`\n${BRAND}\n  🔍 deepak-blog v5.0 — audit-live-url.mjs\n  Live URL Format & Content Audit (CTR + EEAT-Pro)\n${BRAND}\n`);
 
 const args = process.argv.slice(2);
 const opt = (name, fallback) => {
@@ -47,7 +37,7 @@ let status = 0;
 let headers = {};
 try {
   const res = await fetch(url, {
-    headers: { "User-Agent": "deepak-blog-live-auditor/4.0 (+https://deepakbagada.in)" },
+    headers: { "User-Agent": "deepak-blog-live-auditor/5.0 (+https://deepakbagada.in)" },
     redirect: "follow",
   });
   status = res.status;
@@ -69,6 +59,19 @@ const extract = (re, group = 1) => {
   return m ? m[group].trim() : "";
 };
 
+function ctrScoreLive(titleStr) {
+  if (!titleStr) return { score: 0, reasons: ["no title"] };
+  let s = 0; const reasons = [];
+  if (titleStr.length <= 60 && titleStr.length >= 15) { s += 2; reasons.push("≤60 chars"); } else reasons.push(titleStr.length > 60 ? `>${60} chars` : "too short");
+  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer/i.test(titleStr.slice(0, 20).toLowerCase())) { s += 2; reasons.push("keyword front-loaded"); } else reasons.push("keyword not front-loaded");
+  if (/2026/.test(titleStr)) { s += 1; reasons.push("year 2026"); } else reasons.push("no year");
+  if (/india|gujarat|junagadh|world/i.test(titleStr)) { s += 1; reasons.push("geo"); } else reasons.push("no geo");
+  if (/\d/.test(titleStr)) { s += 2; reasons.push("digit"); } else reasons.push("no digit");
+  if (/best|top|guide|playbook|breakdown|proven|complete/i.test(titleStr)) { s += 1; reasons.push("power word"); }
+  if (/:\s*.+/.test(titleStr)) { s += 1; reasons.push("colon benefit"); }
+  return { score: Math.min(10, s), reasons };
+}
+
 // ─── 1. HTTP & basics ──────────────────────────────────────────────────────
 if (status === 200) add("PASS", "HTTP 200", "Live URL returns 200 OK");
 else if (status >= 300 && status < 400) add("FAIL", "HTTP 200", `Redirect ${status} — check canonical/HTACCESS`);
@@ -77,12 +80,23 @@ else add("FAIL", "HTTP 200", `Status ${status} — page not live or blocked`);
 if (html.length < 2000) add("FAIL", "Page body size", `${html.length} bytes — page looks empty or blocked`);
 else add("PASS", "Page body size", `${html.length.toLocaleString()} bytes`);
 
-// ─── 2. Meta title & description ───────────────────────────────────────────
+// ─── 2. Meta title & description + CTR snippet ──────────────────────────────
 const title = extract(/<title[^>]*>([^<]+)<\/title>/i);
+const ctrLive = ctrScoreLive(title);
 if (!title) add("FAIL", "Meta title", "No <title> tag found");
-else if (title.length > 60) add("WARN", "Meta title ≤60 chars", `${title.length} chars: "${title.slice(0, 60)}..." — slightly long but OK`);
+else if (title.length > 60) add("WARN", "Meta title ≤60 chars", `${title.length} chars: "${title.slice(0, 60)}..." — slightly long but OK (CTR ${ctrLive.score}/10)`);
 else if (title.length < 15) add("WARN", "Meta title", `${title.length} chars — too short for CTR`);
-else add("PASS", "Meta title", `${title.length} chars: "${title}"`);
+else add("PASS", "Meta title", `${title.length} chars: "${title}" (CTR ${ctrLive.score}/10)`);
+
+if (ctrLive.score >= 7) add("PASS", `CTR snippet ${ctrLive.score}/10`, ctrLive.reasons.join(" · "));
+else if (ctrLive.score >= 5) add("WARN", `CTR snippet ${ctrLive.score}/10 (target ≥7)`, ctrLive.reasons.join(" · ") + " — front-load keyword, add 2026/geo/digit/power-word");
+else add("FAIL", `CTR snippet ${ctrLive.score}/10`, ctrLive.reasons.join(" · ") + " — low CTR hurts best/top ranking");
+// Snippet preview
+if (title) {
+  const metaDescPreview = extract(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i) || extract(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']description["']/i);
+  console.log(`  📱 Snippet preview: ${title.slice(0, 60)} ${title.length > 60 ? "…" : ""}`);
+  if (metaDescPreview) console.log(`     ${metaDescPreview.slice(0, 155)}${metaDescPreview.length > 155 ? "…" : ""}`);
+}
 
 const metaDesc = extract(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i) || extract(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']description["']/i);
 if (!metaDesc) add("FAIL", "Meta description", "No meta description found — critical for SEO/AEO snippets");
@@ -138,6 +152,7 @@ else add("WARN", "Internal links", `${uniqueInternal.length} internal links — 
 
 // ─── 8. JSON-LD schema ─────────────────────────────────────────────────────
 const jsonLdBlocks = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)].map(m => m[1]);
+const isBestTopLive = /best|top|#1|ranked/i.test(title);
 if (jsonLdBlocks.length === 0) add("FAIL", "JSON-LD schema", "No JSON-LD found — AEO/SEO schema required (Article + FAQPage + Person)");
 else {
   add("PASS", "JSON-LD blocks", `${jsonLdBlocks.length} JSON-LD block(s)`);
@@ -148,12 +163,21 @@ else {
   else add("WARN", "FAQPage schema", "No FAQPage schema — FAQ section won't get rich results");
   if (/Person|author/i.test(joined)) add("PASS", "Person/Author schema", "Person/author in schema");
   else add("WARN", "Person/Author schema", "No Person/author — weak EEAT signal");
+  // EEAT-Pro for best/top live
+  if (isBestTopLive) {
+    // Check for table in HTML
+    const hasLiveTable = count(/<table[^>]*>/gi) > 0;
+    if (hasLiveTable) add("PASS", "EEAT-Pro live: proof table", "Table rendered live — best/top claim has proof");
+    else add("FAIL", "EEAT-Pro live: proof table", "Title has best/top but no <table> live — E-E-A-T violation, add comparison/pricing table");
+    // Check for ₹ or metric
+    if (/₹|Rs\.|INR|P95|tok\/s|latency|ledger/i.test(html)) add("PASS", "EEAT-Pro live: pricing/metric", "Pricing ₹ or metric present live");
+    else add("WARN", "EEAT-Pro live: pricing/metric", "best/top live page missing ₹ pricing or metric (P95/tok/s) — add for commercial proof");
+  }
 }
 
 // ─── 9. Content format / leak checks ───────────────────────────────────────
 if (has(/undefined|null|NaN.*render/i)) add("WARN", "Render leaks", "Possible JS render leak (undefined/null in HTML)");
-if (count(/\*\*.*\*\*/) > 20) { /* markdown bold is OK if rendered — but raw ** in HTML is a leak */
-  // Check if ** appears outside code blocks — likely unrendered markdown
+if (count(/\*\*.*\*\*/) > 20) {
   const withoutCode = html.replace(/<code[\s\S]*?<\/code>/gi, "").replace(/<pre[\s\S]*?<\/pre>/gi, "");
   if (/\*\*[^<]{5,}\*\*/.test(withoutCode)) add("WARN", "Raw markdown leaks", "Raw **bold** markers in HTML — markdown not rendered");
 }
@@ -163,12 +187,28 @@ if (count(/<pre[^>]*>/gi) > 0 || count(/<code[^>]*>/gi) > 2) add("PASS", "Code b
 else if (has(/```|<\s*code/i)) { /* has code intent but not rendered */ }
 else add("WARN", "Code blocks", "No <pre>/<code> blocks — if article has code, ensure rendering");
 
-// ─── 10. Images & alt ──────────────────────────────────────────────────────
-const imgs = count(/<img[^>]*>/gi);
-if (imgs > 0) {
-  const imgsWithAlt = count(/<img[^>]+alt=["'][^"']+["']/gi);
-  if (imgsWithAlt === imgs) add("PASS", "Image alt text", `${imgs} image(s), all with alt`);
-  else add("WARN", "Image alt text", `${imgsWithAlt}/${imgs} images have alt — fill missing alts`);
+// ─── 10. Images & Alt Text Audit (Accessibility, AEO, Image Search) ────────
+const imgTags = [...html.matchAll(/<img\b([^>]*?)>/gi)].map(m => {
+  const alt = (m[1].match(/alt=["'](.*?)["']/i) || [])[1] || "";
+  const src = (m[1].match(/src=["'](.*?)["']/i) || [])[1] || "";
+  return { tag: m[0], alt: alt.trim(), src: src.trim() };
+});
+if (imgTags.length > 0) {
+  const genericAlt = /^(image|screenshot|diagram|photo|graphic|pic|picture|img|illustration|unnamed|alt)$/i;
+  const badAlts = imgTags.filter(img => !img.alt || img.alt.length < 5 || genericAlt.test(img.alt));
+  if (badAlts.length > 0) {
+    add("FAIL", "Image alt tags (Accessibility & AEO)", `${badAlts.length}/${imgTags.length} live image(s) missing descriptive alt text: ${badAlts.map(b => `"${b.alt || "(empty)"}" [${b.src.slice(0, 30)}]`).join("; ")}`);
+  } else {
+    add("PASS", "Image alt tags", `${imgTags.length} image(s) live with valid, descriptive alt tags`);
+  }
+} else {
+  add("PASS", "Images check", "No images embedded in article (all text/code/tables render cleanly)");
+}
+
+// ─── 11. Tables & Responsive Layout ─────────────────────────────────────────
+const tables = count(/<table[^>]*>/gi);
+if (tables > 0) {
+  add("PASS", "Table rendering", `${tables} table(s) rendered in HTML`);
 }
 
 // ─── report ─────────────────────────────────────────────────────────────────
@@ -185,22 +225,32 @@ for (const r of results) {
 console.log("─".repeat(58));
 const verdict = fails.length === 0 ? "PASS" : "FAIL";
 console.log(`\n  Verdict: ${verdict} ${fails.length ? "— fix FAILs before moving to next topic" : "— live URL looks good, proceed to next topic"}\n`);
+if (isBestTopLive) console.log(`  🏆 EEAT-Pro: best/top detected — ensure proof table + pricing/metric live above is PASS\n`);
 
 // ─── markdown report ────────────────────────────────────────────────────────
 if (outPath) {
   const reportPath = resolve(process.cwd(), outPath);
   const L = [];
-  L.push(`# 🔍 Live URL Audit — ${url}`);
+  L.push(`# 🔍 Live URL Audit v5.0 — ${url}`);
   L.push("");
-  L.push(`**Audited:** ${new Date().toISOString().slice(0, 10)} · **HTTP:** ${status} · **Size:** ${html.length.toLocaleString()} bytes · **Words:** ~${words} · **Verdict:** **${verdict}**`);
+  L.push(`**Audited:** ${new Date().toISOString().slice(0, 10)} · **HTTP:** ${status} · **Size:** ${html.length.toLocaleString()} bytes · **Words:** ~${words} · **CTR:** ${ctrLive.score}/10 · **EEAT-Pro:** ${isBestTopLive ? "REQUIRED (best/top)" : "standard"} · **Verdict:** **${verdict}**`);
   L.push("");
   L.push(`| Status | Check | Detail |`);
   L.push(`|---|---|---|`);
   for (const r of results) L.push(`| ${r.status} | ${r.check} | ${r.detail} |`);
   L.push("");
+  L.push(`## CTR Snippet Preview`);
+  L.push(`- **Title:** \`${title || "—"}\` (${title?.length || 0} chars, CTR ${ctrLive.score}/10)`);
+  L.push(`- **CTR reasons:** ${ctrLive.reasons.join(" · ")}`);
+  L.push(`- **Snippet:** ${title ? title.slice(0, 60) : "—"}${title && title.length > 60 ? "…" : ""}`);
+  L.push(`- **Meta desc:** ${(extract(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i) || "—").slice(0, 120)}`);
+  L.push("");
   L.push(`## Summary`);
   L.push(`- **${passes.length} PASS** · **${warns.length} WARN** · **${fails.length} FAIL**`);
   L.push(`- **Verdict:** **${verdict}**${fails.length ? " — fix FAIL items and re-audit before proceeding to next topic in queue" : " — format & content OK, safe to continue queue"}`);
+  if (isBestTopLive) {
+    L.push(`- **EEAT-Pro (best/top):** Title has best/top — live page must have proof table + ₹/metric + Person schema — check above`);
+  }
   L.push("");
   if (uniqueInternal.length) {
     L.push(`## Internal links found (${uniqueInternal.length})`);
@@ -209,6 +259,8 @@ if (outPath) {
   }
   L.push(`## What to fix if FAIL`);
   L.push(`- HTTP ≠ 200 → check deploy, .htaccess, Hostinger cache`);
+  L.push(`- CTR <7/10 → front-load keyword, add year 2026, geo (India/Gujarat/Junagadh), digit, power word (Best/Top/Guide), colon benefit`);
+  L.push(`- EEAT-Pro FAIL (best/top without table) → add markdown comparison/pricing table with 3-5 rows + ₹ or P95 metric`);
   L.push(`- Missing FAQ/FAQPage → re-check body formatting and schema injection in journal rendering`);
   L.push(`- Raw markdown leaks (\`##\`, \`**\`, \`\`\`) → fix body markdown rendering (CommonMark → HTML)`);
   L.push(`- No JSON-LD → verify Article + FAQPage schema in page template`);

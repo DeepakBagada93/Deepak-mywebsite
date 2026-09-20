@@ -274,6 +274,18 @@
         };
         burger.addEventListener("click", () => toggleMenu());
         $$(".mmenu a").forEach((a) => a.addEventListener("click", () => toggleMenu(false)));
+
+        /* ---------- Mobile menu: expandable Tools submenu ---------- */
+        $$(".mmenu__expand-btn").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const parent = btn.closest(".mmenu__expandable");
+                if (!parent) return;
+                const isOpen = parent.getAttribute("data-open") === "true";
+                parent.setAttribute("data-open", String(!isOpen));
+                btn.setAttribute("aria-expanded", String(!isOpen));
+            });
+        });
     }
 
     /* ---------- Magnetic buttons (Desktop) ---------- */

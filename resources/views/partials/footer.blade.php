@@ -47,6 +47,17 @@
             </div>
 
             <div class="footer__col">
+                <p class="mono footer__col-title">Free Tools</p>
+                <ul class="footer__col-list">
+                    <li><a href="{{ route('tools.index') }}">All Tools</a></li>
+                    <li><a href="{{ route('tools.index') }}?category=pdf-document">PDF Tools</a></li>
+                    <li><a href="{{ route('tools.index') }}?category=image">Image Tools</a></li>
+                    <li><a href="{{ route('tools.index') }}?category=developer">Developer Tools</a></li>
+                    <li><a href="{{ route('tools.index') }}?category=calculator">Calculators</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
                 <p class="mono footer__col-title">Follow</p>
                 <ul class="footer__col-list footer__col-list--socials">
                     @foreach ($site['socials'] as $label => $href)

@@ -313,3 +313,183 @@ Published: 2026-09-13 via opensource-library skill, live at https://deepakbagada
 143. `cloudflare/computer` — Agent Frameworks — 5700 stars — Trending Sep 13-14 2026 (Cloudflare Computer — give your agent a computer. Browser + OS automation primitive for AI agents. Weekly trending Sep 2026 (5.7k stars).)
 
 Published: 2026-09-14 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 143 repos (133→143) — verified via CuratedRepo::count()
+
+- `ayghri/i-have-adhd` — Agent Frameworks — 46866 stars — (2026-09-16)
+  - URL: https://github.com/ayghri/i-have-adhd
+  - Why Great: I installed this in my Junagadh lab after agents kept dumping 400-line answers on small fixes. Responses got scannable in one day. It pairs well with my P95 ledger reviews where I skim 20 agent runs fast.
+
+- `Tencent/teamai-cli` — Automation — 4660 stars — (2026-09-16)
+  - URL: https://github.com/Tencent/teamai-cli
+  - Why Great: I test team CLIs for Gujarat SME rollouts where 5-10 staff share one agent setup. This one standardizes the entry point instead of everyone hand-rolling prompts. I run it on a Rs 6K VPS with shared Valkey cache.
+
+- `earthtojake/text-to-cad` — Automation — 15975 stars — (2026-09-16)
+  - URL: https://github.com/earthtojake/text-to-cad
+  - Why Great: I keep an eye on CAD skills for Rajkot engineering clients who quote sheet-metal jobs. Drafting a bracket concept in minutes instead of hours changes quoting speed. I verify outputs against FreeCAD before showing clients.
+
+- `TauricResearch/TradingAgents` — Agent Frameworks — 106987 stars — (2026-09-16)
+  - URL: https://github.com/TauricResearch/TradingAgents
+  - Why Great: I ran the paper-trading loop for a Surat client who wanted research summaries, not auto-orders. The debate logs read like an analyst desk. I cap it at end-of-day reports on the VPS, never live execution.
+
+- `rohitg00/ai-engineering-from-scratch` — LLM Tooling — 54801 stars — (2026-09-16)
+  - URL: https://github.com/rohitg00/ai-engineering-from-scratch
+  - Why Great: I point Junagadh interns here before touching my client stack. Rebuilding tokenizers and retrievers by hand removes magic. Two interns shipped MCP tools within a month after this.
+
+- `vastsa/PI-Desktop` — Automation — 4022 stars — (2026-09-16)
+  - URL: https://github.com/vastsa/PI-Desktop
+  - Why Great: I prefer local-first desktops for client demos with patchy internet in Gujarat. Running the harness on-device keeps P95 stable when the line drops. I test it against my Rs 6K VPS setup for parity.
+
+- `davila7/claude-code-templates` — Agent Frameworks — 30760 stars — (2026-09-16)
+  - URL: https://github.com/davila7/claude-code-templates
+  - Why Great: I use this as a starter shelf for new Claude Code seats, then trim hard. The Postgres and GitHub MCP entries saved me an hour per setup. My rule: read before install, keep the analytics dashboard on.
+
+- `jastfan/github-trending` — LLM Tooling — 5 stars — (2026-09-16)
+  - URL: https://github.com/jastfan/github-trending
+  - Why Great: I query this radar from my lab before adding anything to this library. Velocity plus the MCP-skill taxonomy beats raw trending for agent work. I wired its MCP server into Cursor for morning scans.
+
+- `JonusNattapong/MCPSearch` — MCP & Tooling — 1 stars — (2026-09-16)
+  - URL: https://github.com/JonusNattapong/MCPSearch
+  - Why Great: I self-host research stacks so client queries never leak to third parties. The trending and compare tools feed my brief pipeline directly. I run it with Hishel caching to keep re-crawls cheap.
+
+- `open-gitagent/gitagent` — Agent Frameworks — 686 stars — (2026-09-16)
+  - URL: https://github.com/open-gitagent/gitagent
+  - Why Great: I keep agent memory in git in my Junagadh lab, so git log on memory beats any dashboard. Branching a personality to test a hunch feels natural. I run it in-process with file and Postgres MCP servers attached.
+
+- `RightNow-AI/openfang` — Agent Frameworks — 18152 stars — (2026-09-17)
+  - URL: https://github.com/RightNow-AI/openfang
+  - Why Great: I run OpenClaw-style assistants for Gujarat SME clients where agents need memory plus sandboxed tools without a Python dependency mess. OpenFang ships one 32MB Rust binary with cold start under 200ms from my Junagadh lab tests, and its WASM dual-metered sandbox is the pre-deploy gate I enforce before any agent touches Razorpay keys.
+
+- `lsdefine/GenericAgent` — Agent Frameworks — 14114 stars — (2026-09-17)
+  - URL: https://github.com/lsdefine/GenericAgent
+  - Why Great: I test minimal harnesses on a Rs 6K VPS where every extra dependency breaks deploys. GenericAgent runs under 30K context where others burn 200K-1M, and its crystallize-each-task-into-skill loop matches how I grow my 41-skill Junagadh catalog after every client rollout.
+
+- `JuliusBrussee/caveman` — LLM Tooling — 105701 stars — (2026-09-17)
+  - URL: https://github.com/JuliusBrussee/caveman
+  - Why Great: I track token burn per agent run in my P95 ledger where verbose tool outputs eat margin on fixed-price Gujarat SME builds. Caveman cut my Claude Code review loops by roughly half in Junagadh trials, and I keep it as a proxy gate in front of expensive reasoning calls on the VPS.
+
+- `simular-ai/Agent-S` — Agent Frameworks — 12222 stars — (2026-09-17)
+  - URL: https://github.com/simular-ai/Agent-S
+  - Why Great: I ship browser-use automation for Rajkot RFQ inboxes where agents stall on logins and Cloudflare. Agent S3 beating human OSWorld at 72.6 percent is the first computer-use result I trust for unattended runs, and I study its ACI grounding loop from Junagadh before wiring any GUI step into client pipelines.
+
+- `razzant/ouroboros` — Agent Frameworks — 1258 stars — (2026-09-17)
+  - URL: https://github.com/razzant/ouroboros
+  - Why Great: I keep agent memory in git in my Junagadh lab so git log beats any dashboard. Ouroboros carrying identity plus durable memory across restarts is the exact continuity pattern I prototype for Curro, and I run it lab-only with file plus Postgres MCP servers attached for evals.
+
+- `MoonshotAI/Kimi-K3` — LLM Tooling — 8798 stars — (2026-09-17)
+  - URL: https://github.com/moonshotai/Kimi-K3
+  - Why Great: I benchmark 70B offline on laptop where long-horizon repo sessions die from context loss. Kimi K3 holding 1M context with native vision for CAD plus kernel work is the open-weight I point Surat clients to for overnight agent runs, and I pair it with my trace-MCP harness to keep tool calls inside budget.
+
+- `Tencent/TencentDB-Agent-Memory` — RAG & Vector Search — 25268 stars — (2026-09-17)
+  - URL: https://github.com/Tencent/TencentDB-Agent-Memory
+  - Why Great: I roll out shared agent setups for 5-10 staff Gujarat SME teams where everyone hand-rolls prompts and context dies per seat. TencentDB extracting reusable Skills plus CodeGraph from past sessions is the cold-start fix I prescribe from Junagadh, and I test its proxy mode on the Rs 6K VPS with zero-code client switching.
+
+- `FlowElement-xinliuyuansu/m_flow` — RAG & Vector Search — 4505 stars — (2026-09-17)
+  - URL: https://github.com/FlowElement-xinliuyuansu/m_flow
+  - Why Great: I run RAG for Junagadh client docs where plain vector search misses multi-hop answers across invoices plus specs. M-flow scoring evidence paths instead of chunk similarity matches how I debug retrieval misses in my lab, and its MCP-server mode plugs straight into my Cursor morning-scan pipeline.
+
+- `gengirish/skills-mcp` — MCP & Tooling — 9 stars — (2026-09-17)
+  - URL: https://github.com/gengirish/skills-mcp
+  - Why Great: I maintain a 41-skill Junagadh catalog where discovery across 11 scattered repos wastes an hour per seat setup. Skills-mcp collapsing 9000 skills into one searchable MCP call is the index shape I want in front of my library pages, and I run it with tight install approvals to block broad-permission skills.
+
+- `yantrikos/yantrikdb-server` — RAG & Vector Search — 171 stars — (2026-09-17)
+  - URL: https://github.com/yantrikos/yantrikdb-server
+  - Why Great: I watch recall degrade past 10K memories in long-running Junagadh agents where stale facts crowd out live decisions. YantrikDB adding temporal decay plus contradiction detection on top of HNSW is the maintenance loop my memory layer lacks, and its 87ms p50 skill recall fits my Rs 6K VPS latency budget.
+
+## Curated Repositories — Batch 11 (10 New, Trending Sep 17 2026 — LIVE sync via opensource-library)
+
+144. `RightNow-AI/openfang` — Agent Frameworks — 18152 stars — Rust Agent OS, 32MB binary, WASM sandbox
+145. `lsdefine/GenericAgent` — Agent Frameworks — 14114 stars — minimal self-evolving, 3K lines, skill tree
+146. `JuliusBrussee/caveman` — LLM Tooling — 105701 stars — token-saving proxy, cuts 65 percent, #1 Trending July 2026
+147. `simular-ai/Agent-S` — Agent Frameworks — 12222 stars — computer-use SOTA, OSWorld 72.6 percent
+148. `razzant/ouroboros` — Agent Frameworks — 1258 stars — self-creating agent, persistent identity + swarm
+149. `MoonshotAI/Kimi-K3` — LLM Tooling — 8798 stars — open-weight 2.8T MoE, 1M context agentic model
+150. `Tencent/TencentDB-Agent-Memory` — RAG & Vector Search — 25268 stars — team memory hub, Skills + Wiki + CodeGraph
+151. `FlowElement-xinliuyuansu/m_flow` — RAG & Vector Search — 4505 stars — bio-inspired GraphRAG, path-cost retrieval
+152. `gengirish/skills-mcp` — MCP & Tooling — 9 stars — 9000-skill MCP index across 11 ecosystems
+153. `yantrikos/yantrikdb-server` — RAG & Vector Search — 171 stars — cognitive memory DB with decay + dedup
+
+Published: 2026-09-17 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 163 repos (153→163) — live audit PASS (HTTP 200, 10 PASS / 1 WARN / 0 FAIL) — zero git push
+
+- `openai/plugins` — Agent Frameworks — 6949 stars — (2026-09-18)
+  - URL: https://github.com/openai/plugins
+  - Why Great: I wire Codex seats for Gujarat SME pilots from Junagadh, and reference plugins beat hand-rolled prompts for repeatable deploys. I copied the Notion capture pattern for a Rajkot client site docs setup and had capture running the same evening on the Rs 6K VPS. I keep the Figma plugin disabled by default — design tokens without a reviewer in the loop produced three off-brand landing drafts before I gated it.
+
+- `heygen-com/hyperframes` — Video & Media — 51265 stars — (2026-09-18)
+  - URL: https://github.com/heygen-com/hyperframes
+  - Why Great: I render launch videos for Surat D2C drops where 100 creative variants beat one perfect cut. Deterministic re-renders saved a Diwali campaign when the client changed pricing at midnight — same HTML, new numbers, re-render, no editor awake. I run renders on the VPS with P95 under 4 minutes per 30-second clip.
+
+- `microsoft/markitdown` — LLM Tooling — 185309 stars — (2026-09-18)
+  - URL: https://github.com/microsoft/markitdown
+  - Why Great: I feed Gujarat SME quotations, invoices, and spec sheets into pgvector from Junagadh, and MarkItDown sits at the front of that pipe. A Rajkot RFQ inbox with mixed PDF and XLS attachments went from manual copy-paste to indexed with 42ms P95 HNSW search. I still hand-check scanned Gujarati PDFs — OCR misses cost me one wrong line item in April.
+
+- `get-vix/vix` — Agent Frameworks — 279 stars — (2026-09-18)
+  - URL: https://github.com/get-vix/vix
+  - Why Great: I track token burn per run in my P95 ledger on fixed-price builds, so a 20-50 percent read saving is margin. I trialed Vix plan mode on a Laravel RFQ module in Junagadh and the stem-agent cache reuse across explore plus plan phases cut one review loop from $3.65 to $1.86. The 3,000-line-file case in their own benchmark still lags — I keep big-file refactors on my standard harness.
+
+- `anthropics/skills` — Agent Frameworks — 176985 stars — (2026-09-18)
+  - URL: https://github.com/anthropics/skills
+  - Why Great: I maintain a 41-skill Junagadh catalog, and the official spec is what I measure third-party skills against. The document-skills section standardized how my Curro pipeline handles DOCX briefs for two Surat clients. I install with tight approvals after auditing trending skills for broad permission requests — the same gate I run before any skill touches payment keys.
+
+- `Shubhamsaboo/awesome-llm-apps` — LLM Tooling — 138799 stars — (2026-09-18)
+  - URL: https://github.com/Shubhamsaboo/awesome-llm-apps
+  - Why Great: I point Junagadh interns here before they touch my client stack — rebuilding one single-file RAG starter removes magic faster than any lecture. Two interns shipped MCP tools within a month after working through the retrieval examples. For client work I vendor exactly one pattern per build and pin model versions.
+
+- `garrytan/gstack` — Agent Frameworks — 133527 stars — (2026-09-18)
+  - URL: https://github.com/garrytan/gstack
+  - Why Great: I run a small team from Junagadh, so a staged sprint in slash commands fits how we already ship. The QA-lead command caught a broken UPI retry path before a Surat launch — P95 held 780ms because the checklist forced a load pass. I trimmed the CEO persona on day one; strategy prompts without profit-and-loss context generated noise for my fixed-price quotes.
+
+- `samber/cc-skills-golang` — Agent Frameworks — 3280 stars — (2026-09-18)
+  - URL: https://github.com/samber/cc-skills-golang
+  - Why Great: I keep one Go service (the telemetry collector fronting my ledger) beside a PHP and Python stack, and generic agents write unidiomatic Go without guardrails. The testing skill standardized table tests across that service in one sitting from Junagadh. I load these only inside the Go repo via directory-scoped config so Python work never pays the context tax.
+
+- `tetherto/qvac` — Infrastructure — 616 stars — (2026-09-18)
+  - URL: https://github.com/tetherto/qvac
+  - Why Great: I ship for Gujarat shops with patchy 4G where cloud calls die mid-quotation, so on-device GGUF plus peer delegation is a real deployment shape. I tested the OpenAI-compatible server as a drop-in for my Pi 5 harness at 62 tok/s and kept 80 percent of calls inside the VPC. I still route final drafting to cloud models — small quants draft, frontier models close.
+
+- `petergyang/no-ai-slop` — LLM Tooling — 10484 stars — (2026-09-18)
+  - URL: https://github.com/petergyang/no-ai-slop
+  - Why Great: I run a 90-pattern blocklist as an automated audit gate before anything goes live from Junagadh, so a standalone slop remover slots into my pipeline as first pass. It flagged three throat-clearers in one founder-story draft last week that my own pass missed. Final sign-off stays human — no filter can verify a P95 number or a rupee price.
+
+## Curated Repositories — Batch 12 (10 New, Trending Sep 13-18 2026 — LIVE sync via opensource-library)
+
+154. `openai/plugins` — Agent Frameworks — 6949 stars — Trending Sep 6-13 2026 (Official Codex plugin examples, successor to deprecated skills catalog — Neodrop weekly #3, +1,181/wk.)
+155. `heygen-com/hyperframes` — Video & Media — 51265 stars — Trending Sep 6-13 2026 (HTML-to-video deterministic renderer for agents — Neodrop weekly #9, +5,146/wk.)
+156. `microsoft/markitdown` — LLM Tooling — 185309 stars — Trending Sep 6-13 2026 (Doc-to-Markdown for RAG ingestion — Neodrop weekly #10, +5,191/wk; Sep 17 scraper +2,733/wk.)
+157. `get-vix/vix` — Agent Frameworks — 279 stars — Trending Sep 2026 (Token-efficient coding agent, Tree-sitter minified FS, plan-mode $6.64 vs $12.44.)
+158. `anthropics/skills` — Agent Frameworks — 176985 stars — Trending Sep 2026 (Official Anthropic Agent Skills collection + authoring spec.)
+159. `Shubhamsaboo/awesome-llm-apps` — LLM Tooling — 138799 stars — Trending Sep 2026 (100+ tested agents, skills, RAG apps across 6 model families.)
+160. `garrytan/gstack` — Agent Frameworks — 133527 stars — Trending Sep 2026 (23 slash-command sprint personas + 8 power tools for Claude Code.)
+161. `samber/cc-skills-golang` — Agent Frameworks — 3280 stars — Trending Sep 2026 (Human-reviewed Go agentic skills, testing + observability.)
+162. `tetherto/qvac` — Infrastructure — 616 stars — Trending Sep 2026 (Local-first P2P AI SDK, GGUF on-device, OpenAI-compatible server.)
+163. `petergyang/no-ai-slop` — LLM Tooling — 10484 stars — Trending Sep 17 2026 (20+ AI-slop pattern remover — Sep 17 scraper trending.)
+
+Published: 2026-09-18 via opensource-library skill, live at https://deepakbagada.in/repos?page=11 — DB now 173 repos (163→173) — verified via CuratedRepo::count() + page-11 HTML render — zero git push
+
+## Curated Repositories — Batch 13 (10 New, Trending Sep 17-19 2026 — LIVE sync via opensource-library)
+
+174. `koala73/worldmonitor` — Infrastructure — 75986 stars — Trending Sep 17-19 2026 (WorldMonitor — real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, infrastructure tracking in one situational awareness interface. TS, weekly #1 +12k Sep 18 2026 (76k stars).)
+175. `ruvnet/ruflo` — Agent Frameworks — 70967 stars — Trending Sep 17-19 2026 (Ruflo — the original agent meta-harness. Deploy multi-player swarms, coordinate autonomous workflows, conversational AI systems. Adaptive memory, self-learning, RAG, Claude Code / Codex / Hermes native. TS (71k stars).)
+176. `ruvnet/RuView` — Infrastructure — 87316 stars — Trending Sep 17-19 2026 (RuView — turns commodity WiFi signals into real-time spatial intelligence, vital-sign monitoring, presence detection. Zero video pixels. Rust, 87.3k stars, +5k week Sep 18 2026.)
+177. `bojieli/ai-agent-book` — LLM Tooling — 24713 stars — Trending Sep 17-19 2026 (AI Agent Book — full open book on agent design principles plus engineering practice: complete text, compiled PDF, per-chapter code. Python, +10.6k stars week Sep 18 2026 (24.7k total).)
+178. `tirth8205/code-review-graph` — MCP & Tooling — 27347 stars — Trending Sep 17-19 2026 (Code Review Graph — local-first code intelligence graph for MCP and CLI. Persistent codebase map so agents read only what matters, benchmarked context cuts on reviews and large repos. Python, +3k week (27.3k stars).)
+179. `every-app/open-seo` — LLM Tooling — 15826 stars — Trending Sep 17-19 2026 (Open SEO — open-source alternative to Semrush and Ahrefs. TS, weekly trending +2.3-2.8k Sep 2026 (15.8k stars).)
+180. `tashfeenahmed/freellmapi` — LLM Tooling — 23374 stars — Trending Sep 17-19 2026 (FreeLLMAPI — 7.4 billion tokens per month across 34 free LLM providers. TS, weekly trending +3.6k Sep 2026 (23.3k stars).)
+181. `1jehuang/jcode` — Agent Frameworks — 12875 stars — Trending Sep 17-19 2026 (JCode — the most RAM-efficient harness. Rust, 12.8k stars, +2.5k week Sep 18 2026.)
+182. `CoreBunch/Instatic` — Automation — 6471 stars — Trending Sep 17-19 2026 (Instatic — open-source alternative to Webflow, Framer and WordPress. Agentic self-hosted visual CMS outputting clean static pages: users, roles, plugins, content, database. TS, +2.8k week (6.4k stars).)
+183. `aipoch/open-science` — RAG & Vector Search — 3834 stars — Trending Sep 17-19 2026 (Open Science — open-source, local-first, model-agnostic AI research workbench for macOS, Windows, Linux. Scientific agents, Python/R notebooks, data connectors, reproducible provenance. TS (3.8k stars).)
+
+Published: 2026-09-19 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 183 repos (173→183) — verified via CuratedRepo::count()
+
+## Curated Repositories — Batch 14 (10 New, Trending Sep 17-19 2026 — LIVE sync via opensource-library)
+
+184. `1Panel-dev/1Panel` — Infrastructure — 36975 stars — Trending Sep 17-19 2026 (1Panel — modern open-source Linux server management panel and lightweight AI management platform. Go, 37k stars (verified via API Sep 19 2026).)
+185. `shiyu-coder/Kronos` — LLM Tooling — 34847 stars — Trending Sep 17-19 2026 (Kronos — foundation model for the language of financial markets. Python, 34.8k stars, +2.5k week Sep 18 2026.)
+186. `AprilNEA/OpenLogi` — Infrastructure — 18209 stars — Trending Sep 17-19 2026 (OpenLogi — native, local-first alternative stack. Rust, 18.2k stars, +2.5k week Sep 18 2026.)
+187. `ConardLi/garden-skills` — Agent Frameworks — 12515 stars — Trending Sep 17-19 2026 (Garden Skills — open-source skills collection: web design, knowledge retrieval, image generation and more. 12.5k stars (verified via API Sep 19 2026).)
+188. `OpenWhispr/openwhispr` — Automation — 7315 stars — Trending Sep 17-19 2026 (OpenWhispr — voice-to-text dictation app with local Parakeet/Whisper plus cloud BYOK. Privacy-first, cross-platform. JS, 7.3k stars.)
+189. `cursor/plugins` — Agent Frameworks — 6396 stars — Trending Sep 17-19 2026 (Cursor plugins — official plugin specification plus plugins. TS, 6.3k stars, +1.4k week Sep 18 2026.)
+190. `likec4/likec4` — Content — 5239 stars — Trending Sep 17-19 2026 (LikeC4 — architecture diagrams as code. TS, 5.2k stars, +1.2k week Sep 18 2026.)
+191. `asciimoo/hister` — RAG & Vector Search — 3459 stars — Trending Sep 17-19 2026 (Hister — your own search engine. Go, 3.4k stars, trending Sep 18 2026.)
+192. `agegr/pi-web` — Automation — 3126 stars — Trending Sep 17-19 2026 (Pi-Web — web UI for the pi coding agent. TS, 3.1k stars, +1.4k week Sep 18 2026.)
+193. `humanlayer/skills` — Agent Frameworks — 3113 stars — Trending Sep 17-19 2026 (HumanLayer skills — approval workflows for AI agents. TS, 3.1k stars, trending Sep 2026.)
+
+Published: 2026-09-19 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 193 repos (183→193) — verified via CuratedRepo::count()

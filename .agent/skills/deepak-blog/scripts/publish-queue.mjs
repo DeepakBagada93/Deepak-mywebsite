@@ -289,75 +289,38 @@ for (const q of queue) {
     continue;
   }
 
-  // Prepend to data/posts.php
-  let php = readFileSync(postsPath, "utf8");
-  const insertPos = php.indexOf("return [");
-  if (insertPos === -1) { console.error("❌ data/posts.php missing 'return ['"); process.exit(1); }
-  const header = php.slice(0, insertPos + "return [".length);
-  const footer = php.slice(insertPos + "return [".length);
-  const titleEsc = escPHP(title);
-  const entry = `    [\n        'title' => '${titleEsc}',\n        'slug' => '${slug}',\n        'tag' => '${tag}',\n        'excerpt' => '${excerpt}',\n        'body' => <<<'BODY'\n${body}\nBODY,\n        'published_at' => '${today}',\n    ],\n`;
-  const newPhp = header + "\n" + entry + footer;
-  writeFileSync(postsPath, newPhp, "utf8");
+  // Step-by-step one-by-one live DB push & audit
+  console.log(`  🚀 Pushing ${slug} directly to Live Hostinger MySQL DB & updating data/posts.php...`);
+  const singlePubScript = resolve(process.cwd(), `${skillDir}/scripts/publish-single-post.php`);
+  const tmpJson = resolve(process.cwd(), `.agent/skills/deepak-blog/scripts/tmp-post-${Date.now()}.json`);
+  writeFileSync(tmpJson, JSON.stringify({
+    title,
+    slug,
+    tag,
+    excerpt,
+    body,
+    published_at: today,
+  }, null, 2), "utf8");
 
-  // Verify php syntax
-  const lint = spawnSync("php", ["-l", postsPath], { encoding: "utf8" });
-  if (lint.status !== 0 || !lint.stdout.includes("No syntax errors")) {
-    console.error(`❌ PHP lint failed for ${slug}:`, lint.stdout, lint.stderr);
-    process.exit(1);
+  const pushRes = spawnSync("php", [singlePubScript, `--json=${tmpJson}`], { encoding: "utf8" });
+  try { if (existsSync(tmpJson)) spawnSync("rm", ["-f", tmpJson]); } catch (e) {}
+
+  if (pushRes.status !== 0) {
+    console.error(`  ❌ Failed to push ${slug} to Live DB:`, pushRes.stderr || pushRes.stdout);
+    if (!force) {
+      skipped.push({ slug, title, reason: "live DB push error" });
+      continue;
+    }
+  } else {
+    console.log(pushRes.stdout);
+    published.push({ slug, title, words });
   }
-
-  // Update memory.md
-  if (existsSync(memoryPath)) {
-    let mem = readFileSync(memoryPath, "utf8");
-    const entryMem = `\n- **${title}**\n  - Slug: \`${slug}\`\n  - Tag: \`${tag}\`\n  - Published: \`${today}\`\n  - Words: ${words}\n  - Pillar: ${q.pillarId}\n`;
-    writeFileSync(memoryPath, mem + entryMem, "utf8");
-  }
-
-  console.log(`  ✅ Pushed to data/posts.php + memory.md`);
-  published.push({ slug, title, words });
-}
-
-// ─── sync to live DB ───────────────────────────────────────────────────────
-if (dryRun) {
-  console.log(`\n${BRAND}\n  🧪 DRY RUN — ${published.length} would publish, ${skipped.length} skipped — no DB sync\n${BRAND}`);
-  console.log(`  Next: run with --yes to push live, or remove --dry-run`);
-  process.exit(0);
-}
-
-if (published.length === 0) {
-  console.log(`\n${BRAND}\n  ⚠️ Nothing published — ${skipped.length} skipped\n${BRAND}`);
-  if (skipped.length) console.log(skipped);
-  process.exit(0);
-}
-
-console.log(`\n${BRAND}\n  🔄 Syncing ${published.length} new posts to live DB…\n${BRAND}`);
-
-let synced = false;
-// Try artisan first
-let artisan = spawnSync("php", ["artisan", "db:seed", "--class=PostSeeder", "--force"], { encoding: "utf8" });
-if (artisan.status === 0) {
-  console.log("✅ Synced via php artisan db:seed --class=PostSeeder --force");
-  synced = true;
-} else {
-  console.log("  artisan not available/fallback → python publish_blog.py");
-  const pyScript = resolve(process.cwd(), `${skillDir}/scripts/publish_blog.py`);
-  let py = spawnSync("python3", [pyScript], { encoding: "utf8" });
-  console.log(py.stdout || "");
-  if (py.stderr) console.log(py.stderr);
-  synced = py.status === 0;
-}
-
-if (synced) {
-  // clear caches if artisan available
-  spawnSync("php", ["artisan", "view:clear"], { stdio: "ignore" });
-  spawnSync("php", ["artisan", "cache:clear"], { stdio: "ignore" });
 }
 
 console.log(`\n${BRAND}`);
-console.log(`  ✅ Done: ${published.length} published, ${skipped.length} skipped`);
-for (const p of published) console.log(`     • ${p.slug} — ${p.title} (${p.words} words)`);
+console.log(`  ✅ Done: ${published.length} published one-by-one to Live DB, ${skipped.length} skipped`);
+for (const p of published) console.log(`     • ${p.slug} — ${p.title} (${p.words} words) -> LIVE`);
 if (skipped.length) for (const s of skipped) console.log(`     ⊘ ${s.slug} — ${s.reason}`);
+console.log(`  🔒 ZERO GIT PUSH: Content is live immediately on https://deepakbagada.in/journal`);
 console.log(`${BRAND}\n`);
-if (synced) console.log(`  Live: https://deepakbagada.in/journal/<slug> — verify with audit-live-url.mjs`);
-else console.log(`  ⚠️ DB sync may have failed — check publish_blog.py output above, then deploy: git push / ./deploy.sh`);
+

@@ -46,6 +46,21 @@ switch ($command) {
         echo "UNIQUE: Slug '$slug' is available\n";
         exit(0);
 
+    case 'audit':
+        $file = $argv[2] ?? '';
+        $nodeScript = __DIR__ . '/audit-library.mjs';
+        $cmd = "node " . escapeshellarg($nodeScript) . ($file ? " --file " . escapeshellarg($file) : "");
+        passthru($cmd, $code);
+        exit($code);
+
+    case 'audit-live':
+        $slug = $argv[2] ?? '';
+        $type = $argv[3] ?? 'library';
+        $nodeScript = __DIR__ . '/audit-live-library.mjs';
+        $cmd = "node " . escapeshellarg($nodeScript) . " --slug " . escapeshellarg($slug) . " --type " . escapeshellarg($type);
+        passthru($cmd, $code);
+        exit($code);
+
     case 'memory-add':
         $title  = $argv[2] ?? '';
         $slug   = $argv[3] ?? '';
@@ -57,11 +72,36 @@ switch ($command) {
         echo "✓ Added to memory.md: $title\n";
         break;
 
+    case 'publish-item':
+        $json = $argv[2] ?? '';
+        if (!$json) {
+            echo "Usage: php sync.php publish-item <item.json>\n";
+            exit(1);
+        }
+        $script = __DIR__ . '/publish-single-item.php';
+        $cmd = "php " . escapeshellarg($script) . " --json=" . escapeshellarg($json);
+        passthru($cmd, $code);
+        exit($code);
+
+    case 'check-collision':
+        $term = $argv[2] ?? '';
+        if (!$term) {
+            echo "Usage: php sync.php check-collision <query>\n";
+            exit(1);
+        }
+        $script = __DIR__ . '/check-collision.php';
+        $cmd = "php " . escapeshellarg($script) . " " . escapeshellarg($term);
+        passthru($cmd, $code);
+        exit($code);
+
     default:
         echo "opensource-library sync helper\n";
         echo "Usage:\n";
-        echo "  php sync.php validate <file>    — PHP syntax check\n";
-        echo "  php sync.php check-duplicate <slug> — Duplicate check vs memory.md\n";
+        echo "  php sync.php validate <file>         — PHP syntax check\n";
+        echo "  php sync.php audit [file]            — Pre-publish EEAT/Alt audit via audit-library.mjs\n";
+        echo "  php sync.php audit-live <slug> [type]— Live URL and image alt audit\n";
+        echo "  php sync.php check-collision <query> — Live DB + memory collision check\n";
+        echo "  php sync.php publish-item <item.json>— Direct push to Live DB + local file + audit\n";
         echo "  php sync.php memory-add <title> <slug> <type> <words> — Add to memory.md\n";
         break;
 }
