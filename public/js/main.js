@@ -310,6 +310,86 @@
         });
     }
 
+    /* ---------- Desktop Mega Menu (Tools) ---------- */
+    const toolsTrigger = $("#tools-trigger");
+    const toolsMega = $("#tools-mega");
+    const megaBackdrop = $("#megamenu-backdrop");
+    const toolsNavItem = $("#tools-nav-item");
+
+    if (toolsTrigger && toolsMega && megaBackdrop) {
+        let closeTimeout = null;
+
+        const openMega = () => {
+            if (window.innerWidth <= 1024) return;
+            clearTimeout(closeTimeout);
+            toolsMega.classList.add("is-active");
+            toolsMega.setAttribute("aria-hidden", "false");
+            toolsTrigger.classList.add("is-active");
+            toolsTrigger.setAttribute("aria-expanded", "true");
+            megaBackdrop.classList.add("is-active");
+            megaBackdrop.setAttribute("aria-hidden", "false");
+        };
+
+        const closeMega = () => {
+            clearTimeout(closeTimeout);
+            toolsMega.classList.remove("is-active");
+            toolsMega.setAttribute("aria-hidden", "true");
+            toolsTrigger.classList.remove("is-active");
+            toolsTrigger.setAttribute("aria-expanded", "false");
+            megaBackdrop.classList.remove("is-active");
+            megaBackdrop.setAttribute("aria-hidden", "true");
+        };
+
+        const scheduleClose = () => {
+            clearTimeout(closeTimeout);
+            closeTimeout = setTimeout(closeMega, 180);
+        };
+
+        // Hover interactions with debounce
+        if (toolsNavItem) {
+            toolsNavItem.addEventListener("mouseenter", openMega);
+            toolsNavItem.addEventListener("mouseleave", scheduleClose);
+        }
+        toolsMega.addEventListener("mouseenter", () => clearTimeout(closeTimeout));
+        toolsMega.addEventListener("mouseleave", scheduleClose);
+
+        // Click/tap toggle on desktop
+        toolsTrigger.addEventListener("click", (e) => {
+            if (window.innerWidth > 1024) {
+                e.preventDefault();
+                if (toolsMega.classList.contains("is-active")) {
+                    closeMega();
+                } else {
+                    openMega();
+                }
+            }
+        });
+
+        // Backdrop click closes
+        megaBackdrop.addEventListener("click", closeMega);
+
+        // Escape key closes
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && toolsMega.classList.contains("is-active")) {
+                closeMega();
+            }
+        });
+
+        // Clicking any link inside mega menu closes it
+        toolsMega.addEventListener("click", (e) => {
+            if (e.target.closest("a")) {
+                closeMega();
+            }
+        });
+
+        // Auto-close on resize
+        window.addEventListener("resize", () => {
+            if (window.innerWidth <= 1024 && toolsMega.classList.contains("is-active")) {
+                closeMega();
+            }
+        });
+    }
+
     /* ---------- Magnetic buttons (Desktop) ---------- */
     if (window.matchMedia("(pointer: fine)").matches) {
         $$(".btn").forEach((btn) => {

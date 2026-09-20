@@ -5,32 +5,10 @@
         <nav class="masthead__nav" id="nav">
             <a href="{{ route('services.index') }}">Services</a>
             <a href="/#about">About</a>
-            <div class="masthead__dropdown" id="tools-dropdown">
-                <a href="{{ route('tools.index') }}" class="masthead__dropdown-trigger">
-                    Tools <span class="masthead__dropdown-arrow">▾</span>
+            <div class="masthead__nav-item" id="tools-nav-item">
+                <a href="{{ route('tools.index') }}" class="masthead__nav-trigger" id="tools-trigger" aria-expanded="false" aria-controls="tools-mega">
+                    Tools <span class="masthead__nav-arrow" aria-hidden="true">▾</span>
                 </a>
-                <div class="masthead__dropdown-panel">
-                    <div class="masthead__dropdown-inner">
-                        @php $toolCategories = collect(config('tools'))->groupBy('category'); @endphp
-                        @foreach ($toolCategories as $categoryName => $categoryTools)
-                        <div class="masthead__dropdown-col">
-                            <p class="mono masthead__dropdown-cat">{{ $categoryTools->first()['category_icon'] }} {{ $categoryName }}</p>
-                            <ul class="masthead__dropdown-list">
-                                @foreach ($categoryTools->take(5) as $t)
-                                <li><a href="{{ route('tools.show', $t['slug']) }}">{{ $t['icon'] }} {{ $t['name'] }}</a></li>
-                                @endforeach
-                                @if ($categoryTools->count() > 5)
-                                <li><a href="{{ route('tools.index') }}?category={{ $categoryTools->first()['category_slug'] }}" class="masthead__dropdown-more">View all {{ $categoryTools->count() }} →</a></li>
-                                @endif
-                            </ul>
-                        </div>
-                        @endforeach
-                        <div class="masthead__dropdown-foot">
-                            <a href="{{ route('tools.index') }}" class="btn btn--solid masthead__dropdown-cta">Browse All Tools →</a>
-                            <span class="mono masthead__dropdown-note">100% free · No sign-up · Browser-based</span>
-                        </div>
-                    </div>
-                </div>
             </div>
             <a href="{{ route('library.index') }}">Library</a>
             <a href="{{ route('journal.index') }}">Journal</a>
@@ -42,14 +20,47 @@
             <button class="masthead__burger mono" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button>
         </div>
     </div>
+
+    {{-- Desktop Mega Menu (Edge-to-Edge, Structured 6 Columns) --}}
+    <div class="megamenu" id="tools-mega" aria-hidden="true">
+        <div class="megamenu__inner">
+            <div class="megamenu__grid">
+                @php $toolCategories = collect(config('tools'))->groupBy('category'); @endphp
+                @foreach ($toolCategories as $categoryName => $categoryTools)
+                <div class="megamenu__col">
+                    <p class="mono megamenu__cat">{{ $categoryTools->first()['category_icon'] }} {{ $categoryName }}</p>
+                    <ul class="megamenu__list">
+                        @foreach ($categoryTools->take(4) as $t)
+                        <li><a href="{{ route('tools.show', $t['slug']) }}">{{ $t['icon'] }} {{ $t['name'] }}</a></li>
+                        @endforeach
+                    </ul>
+                    <a href="{{ route('tools.index') }}?category={{ $categoryTools->first()['category_slug'] }}" class="megamenu__more mono">All {{ $categoryTools->count() }} →</a>
+                </div>
+                @endforeach
+            </div>
+            <div class="megamenu__bar">
+                <div class="megamenu__bar-info mono">
+                    <span>34 Free Tools</span>
+                    <span class="megamenu__bar-dot">·</span>
+                    <span>100% Browser-Based</span>
+                    <span class="megamenu__bar-dot">·</span>
+                    <span>Zero Server Uploads</span>
+                </div>
+                <a href="{{ route('tools.index') }}" class="btn btn--solid megamenu__bar-btn">Browse Hub →</a>
+            </div>
+        </div>
+    </div>
 </header>
+
+{{-- Backdrop for Desktop Mega Menu --}}
+<div class="megamenu-backdrop" id="megamenu-backdrop" aria-hidden="true"></div>
 
 {{-- Mobile menu --}}
 <div class="mmenu" id="mmenu">
     <ul class="mmenu__list">
         <li><a href="{{ route('services.index') }}"><span class="mono mmenu__num">01</span>Services</a></li>
         <li class="mmenu__expandable">
-            <button class="mmenu__expand-btn" aria-expanded="false">
+            <button class="mmenu__expand-btn" aria-expanded="false" type="button">
                 <span class="mono mmenu__num">02</span>Tools <span class="mmenu__expand-icon">+</span>
             </button>
             <ul class="mmenu__sub">
