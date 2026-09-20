@@ -49,6 +49,27 @@ class ToolsTest extends TestCase
         }
     }
 
+    public function test_removed_ai_content_tools_are_no_longer_available(): void
+    {
+        $removedSlugs = [
+            'career-roadmap-generator',
+            'ai-prompt-builder',
+            'markdown-editor',
+            'fancy-text-generator',
+            'instagram-bio-generator',
+            'hashtag-generator',
+        ];
+
+        foreach ($removedSlugs as $slug) {
+            $this->get("/tools/{$slug}")->assertStatus(404);
+        }
+
+        $this->get('/tools')
+            ->assertStatus(200)
+            ->assertDontSee('Career Roadmap')
+            ->assertDontSee('AI & Content Tools');
+    }
+
     public function test_non_existent_tool_returns_404(): void
     {
         $response = $this->get('/tools/non-existent-tool-slug');

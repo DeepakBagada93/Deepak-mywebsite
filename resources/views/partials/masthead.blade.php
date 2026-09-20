@@ -1,3 +1,4 @@
+@php $toolsCount = count(config('tools')); @endphp
 <header class="masthead" id="masthead">
     <div class="masthead__row">
         <a class="masthead__logo" href="/">{{ $site['name'] }}</a>
@@ -15,7 +16,7 @@
                     <div class="tools-popover__head">
                         <div class="tools-popover__head-meta">
                             <span class="mono tools-popover__title">Free Developer &amp; Creator Tools</span>
-                            <span class="tools-popover__badge mono">34 Tools · 100% In-Browser</span>
+                            <span class="tools-popover__badge mono">{{ $toolsCount }} Tools · 100% In-Browser</span>
                         </div>
                         <button type="button" class="tools-popover__close" id="tools-popover-close" aria-label="Close menu">✕</button>
                     </div>
@@ -95,7 +96,7 @@
 
                     <div class="tools-popover__foot">
                         <span class="mono tools-popover__foot-text">🔒 100% Client-Side · Zero Server Uploads</span>
-                        <a href="{{ route('tools.index') }}" class="tools-popover__foot-btn mono">All 34 Tools →</a>
+                        <a href="{{ route('tools.index') }}" class="tools-popover__foot-btn mono">All {{ $toolsCount }} Tools →</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +140,7 @@
                     <a href="{{ route('tools.show', 'lorem-ipsum-generator') }}" class="mmenu__sub-quick-link">📝 Lorem Ipsum</a>
                 </div>
                 <div class="mmenu__sub-all">
-                    <a href="{{ route('tools.index') }}" class="btn btn--sm btn--primary">Browse All 34 Tools →</a>
+                    <a href="{{ route('tools.index') }}" class="btn btn--sm btn--primary">Browse All {{ $toolsCount }} Tools →</a>
                 </div>
             </div>
         </li>
