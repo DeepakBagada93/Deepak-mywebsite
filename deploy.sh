@@ -9,7 +9,7 @@ echo "🚀 Step 1: Installing production dependencies locally..."
 composer install --no-dev --optimize-autoloader --quiet
 
 echo "📦 Step 2: Syncing files to Hostinger server (domains/deepakbagada.in/public_html)..."
-rsync -avz -e "ssh -i $HOME/.ssh/hostinger_deepak -p 65002" \
+rsync -avz --no-owner --no-group -e "ssh -i $HOME/.ssh/hostinger_deepak -p 65002" \
     --exclude='.git' \
     --exclude='node_modules' \
     --exclude='storage/logs/*' \
