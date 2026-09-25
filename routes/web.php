@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlueprintController;
 use App\Http\Controllers\CuratedRepoController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
@@ -38,6 +39,13 @@ Route::prefix('tools')->group(function () {
     Route::get('/', [ToolController::class, 'index'])->name('tools.index');
     Route::get('/{slug}', [ToolController::class, 'show'])->name('tools.show');
 });
+
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])
+    ->middleware('throttle:15,1')
+    ->name('newsletter.subscribe');
+
+Route::get('/newsletter/unsubscribe/{token}', [NewsletterController::class, 'unsubscribe'])
+    ->name('newsletter.unsubscribe');
 
 Route::get('/stack', function () {
     $site = config('site');

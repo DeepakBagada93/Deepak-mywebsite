@@ -36,6 +36,16 @@
                 @endif
             </div>
 
+            <div style="margin-top: 50px;">
+                @include('partials.newsletter', [
+                    'theme' => 'light',
+                    'source' => 'journal_index',
+                    'label' => '// THE JOURNAL DISPATCH',
+                    'title' => 'Get New Field Notes In Your Inbox',
+                    'description' => 'Subscribe to receive deep architectural breakdowns, autonomous agent workflows, and production web engineering dispatches as soon as they drop.',
+                ])
+            </div>
+
             <div class="article__foot">
                 <a class="btn btn--ghost" href="/#contact">Get in touch →</a>
                 <a class="btn btn--ghost" href="/">← Back home</a>

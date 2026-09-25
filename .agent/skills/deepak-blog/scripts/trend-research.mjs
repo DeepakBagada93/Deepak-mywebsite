@@ -31,7 +31,8 @@ const has = (name) => args.includes(`--${name}`);
 const niche = opt("niche", "");
 const all = has("all");
 const preset = opt("preset", "");
-let count = parseInt(opt("count", "10"), 10) || 10;
+const autoPhase = has("auto");
+let count = parseInt(opt("count", "3"), 10) || 3;
 const outPath = resolve(process.cwd(), opt("out", "research-brief.md"));
 const jsonOut = opt("json", "");
 const autoPublish = has("auto-publish");
@@ -41,30 +42,63 @@ const skillDir = existsSync(resolve(process.cwd(), ".agent/skills/deepak-blog"))
 const memoryPath = resolve(process.cwd(), opt("memory", `${skillDir}/memory.md`));
 const postsPath = resolve(process.cwd(), opt("posts", "data/posts.php"));
 
-if (!niche && !all && !preset) {
-  console.error("Usage: node trend-research.mjs --niche \"AI agents\" --count 10 --out research-brief.md");
-  console.error("   or: node trend-research.mjs --all --count 15 --out research-brief.md");
-  console.error("   or: node trend-research.mjs --preset deepak-15 --out research-brief.md  (3+3+3+3+3 mix)");
-  console.error("  --niche <pillar>  Single pillar or commercial seed (e.g. 'best AI developer India')");
+// Progressive Date-Driven Scaling Presets
+const PRESETS = {
+  // Automatic progressive scaling phases:
+  "phase-1": { "authority": 1, "ai-agents": 1, "web-dev": 1 }, // Days 1–20 (3 dispatches: Safe Crawl Budget & Peak Quality)
+  "phase-2": { "authority": 1, "ai-agents": 1, "ai-news": 1, "web-dev": 1, "founder-story": 1 }, // Days 21–50 (5 dispatches)
+  "phase-3": { "authority": 2, "ai-agents": 2, "ai-news": 1, "web-dev": 1, "founder-story": 1 }, // Days 51–80 (7 dispatches)
+  "phase-4": { "authority": 2, "ai-agents": 2, "ai-news": 2, "web-dev": 2, "founder-story": 2 }, // Days 81+ (10 dispatches)
+
+  // Explicit aliases
+  "crawl-budget-3": { "authority": 1, "ai-agents": 1, "web-dev": 1 },
+  "budget-3": { "authority": 1, "ai-agents": 1, "web-dev": 1 },
+  "deepak-3": { "authority": 1, "ai-agents": 1, "web-dev": 1 },
+  "viral-10": { "ai-agents": 2, "ai-news": 2, "web-dev": 2, "custom-mcp": 2, "authority": 2 },
+  "deepak-15": { "authority": 3, "founder-story": 3, "ai-news": 3, "web-dev": 3, "custom-mcp": 3 },
+  "deepak-12": { "authority": 3, "founder-story": 3, "ai-news": 3, "web-dev": 3 },
+  "deepak-18": { "authority": 3, "founder-story": 3, "ai-news": 3, "web-dev": 3, "custom-mcp": 3, "ai-agents": 3 },
+};
+
+function getAutoPhase(anchorStr = "2026-09-22") {
+  const anchor = new Date(anchorStr + "T00:00:00Z");
+  const now = new Date();
+  const diffDays = Math.max(1, Math.floor((now.getTime() - anchor.getTime()) / (1000 * 60 * 60 * 24)) + 1);
+  if (diffDays <= 20) {
+    return { phase: 1, name: "Phase 1: Safe Crawl Budget & Ultra-High Quality", days: `Day ${diffDays} of Days 1–20`, count: 3, presetKey: "phase-1" };
+  } else if (diffDays <= 50) {
+    return { phase: 2, name: "Phase 2: Gradual Velocity Scale", days: `Day ${diffDays} of Days 21–50`, count: 5, presetKey: "phase-2" };
+  } else if (diffDays <= 80) {
+    return { phase: 3, name: "Phase 3: High Authority Expansion", days: `Day ${diffDays} of Days 51–80`, count: 7, presetKey: "phase-3" };
+  } else {
+    return { phase: 4, name: "Phase 4: Enterprise Authority Scale", days: `Day ${diffDays} of Days 81+`, count: 10, presetKey: "phase-4" };
+  }
+}
+
+if (!niche && !all && !preset && !autoPhase) {
+  console.error("Usage: node trend-research.mjs --auto --out research-brief.md  (Auto date-driven progressive phase)");
+  console.error("   or: node trend-research.mjs --preset phase-1 --out research-brief.md  (Days 1-20: 3 dispatches Crawl Budget Safe)");
+  console.error("   or: node trend-research.mjs --preset crawl-budget-3 --out research-brief.md");
+  console.error("   or: node trend-research.mjs --niche \"AI agents\" --count 3 --out research-brief.md");
+  console.error("   or: node trend-research.mjs --all --count 3 --out research-brief.md");
+  console.error("  --auto             Automatically determine phase and quota based on calendar date (Days 1-20: 3)");
+  console.error("  --preset <name>    Preset mix: 'phase-1' (3), 'phase-2' (5), 'phase-3' (7), 'phase-4' (10), 'crawl-budget-3'");
+  console.error("  --niche <pillar>   Single pillar or commercial seed (e.g. 'best AI developer India')");
   console.error("  --all              Research all 6-7 pillars (incl. Authority best/top)");
-  console.error("  --preset deepak-15 Preset mix: 3 Authority +3 Day-in-Life +3 AI News +3 WebDev (Next.js+Laravel) +3 Custom MCP/Workflow");
-  console.error("  --preset deepak-12 Preset mix: 3 Authority +3 Day-in-Life +3 AI News +3 WebDev");
-  console.error("  --count <n>        Topics to generate (default 10, overridden by preset)");
+  console.error("  --count <n>        Topics to generate (default 3, overridden by preset/phase)");
   console.error("  --out <file>       Markdown brief output");
   console.error("  --json <file>      Optional JSON queue for automation");
   console.error("  --auto-publish     After brief, auto-run publish-queue (requires approval or --yes)");
   process.exit(2);
 }
 
-// Handle presets — user request: 3 blogs(SEO/Authority) +3 day-in-life +3 AI News +3 web-dev +3 custom MCP/Workflow (Next.js+Laravel)
-const PRESETS = {
-  "viral-10": { "ai-agents": 2, "ai-news": 2, "web-dev": 2, "custom-mcp": 2, "authority": 2 },
-  "deepak-15": { "authority": 3, "founder-story": 3, "ai-news": 3, "web-dev": 3, "custom-mcp": 3 },
-  "deepak-12": { "authority": 3, "founder-story": 3, "ai-news": 3, "web-dev": 3 },
-  "deepak-18": { "authority": 3, "founder-story": 3, "ai-news": 3, "web-dev": 3, "custom-mcp": 3, "ai-agents": 3 },
-};
 let presetCounts = null;
-if (preset) {
+if (autoPhase) {
+  const activePhase = getAutoPhase();
+  presetCounts = PRESETS[activePhase.presetKey];
+  count = activePhase.count;
+  console.log(`📅 Auto Date-Driven Phase: ${activePhase.name} (${activePhase.days}) → ${count} dispatches: ${Object.entries(presetCounts).map(([k,v])=>`${k}:${v}`).join(" + ")}`);
+} else if (preset) {
   if (!PRESETS[preset]) { console.error(`❌ Unknown preset: ${preset} — available: ${Object.keys(PRESETS).join(", ")}`); process.exit(2); }
   presetCounts = PRESETS[preset];
   count = Object.values(presetCounts).reduce((a, b) => a + b, 0);

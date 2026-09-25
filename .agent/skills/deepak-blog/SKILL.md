@@ -4,27 +4,52 @@ description: >
   Autonomous Rank-#1 SEO, AEO & Viral Content Publishing Engine for Deepak Bagada (deepakbagada.in/journal).
   Engineered to eliminate synthetic AI writing patterns, defeat Google Helpful Content & Core Updates,
   and generate millions of views with viral, trending technical dispatches.
-  Executes a strict 10-DISPATCH SEQUENTIAL ONE-BY-ONE loop (Search One → Anti-Duplication Pre-Check → Write One →
-  Pre-Publish Audit → Direct Push to Live DB + Frontend data/posts.php → Verify Live URL → Log Memory → Repeat 10x).
+  Executes a strict SEQUENTIAL ONE-BY-ONE loop (Search One → Anti-Duplication Pre-Check → Write One →
+  Pre-Publish Audit → Direct Push to Live DB + Frontend data/posts.php → Verify Live URL → Log Memory → Repeat).
+  Features an automated date-driven progressive scaling engine:
+  - Phase 1: Days 1–20 (Sep 22 – Oct 11, 2026) at 3 Dispatches/run for Safe Crawl Budget Protection & maximum high-EEAT quality.
+  - Phase 2: Days 21–50 (Oct 12 – Nov 10, 2026) at 5 Dispatches/run for gradual velocity scale.
+  - Phase 3: Days 51–80 (Nov 11 – Dec 10, 2026) at 7 Dispatches/run for topical authority expansion.
+  - Phase 4: Days 81+ (Dec 11, 2026 onwards) at 10 Dispatches/run for enterprise authority scale.
   Features high-converting symbols and brackets ([ ], ( ), :, |, —, //, $, ₹, %, →, &).
   Strict word count: 1,200 to 1,600+ words per article (high-EEAT, runnable code, ₹ pricing/metrics, zero AI fluff).
   ZERO git commits/pushes needed — content goes live instantly via remote MySQL database.
 ---
 
-# 🚀 Deepak Bagada Viral & Rank-#1 Autonomous Journal Engine (`deepak-blog` v8.0)
-### (10 Trending Viral Dispatches Loop · High-CTR Symbols Edition · Zero Git Push Needed)
+# 🚀 Deepak Bagada Viral & Rank-#1 Autonomous Journal Engine (`deepak-blog` v10.0)
+### (Progressive Crawl Budget Scaling Engine · High-CTR Symbols Edition · Zero Git Push Needed)
 
 > [!IMPORTANT]
-> **CORE ARCHITECTURE: 10 TRENDING VIRAL DISPATCHES — STRICT ONE-BY-ONE CLOSED LOOP**:
-> When invoked, this skill executes a strict sequential loop across **10 high-CTR trending dispatches**:
-> 1. **Dispatches 1–2: AI Agents & Autonomous Swarms** (Reasoning models, MCP, LangGraph, Pydantic, Self-Healing, OPA)
-> 2. **Dispatches 3–4: Breaking AI News & Frontier Benchmarks** (Claude 3.7/4, DeepSeek, GPT-5/6, Gemini 3, Local MoE)
-> 3. **Dispatches 5–6: High-Performance Web Dev & Systems** (Next.js 15.5 App Router + Laravel 13 AI SDK, pgvector, Turbopack)
-> 4. **Dispatches 7–8: Authority Best/Top Rank-#1 Playbooks** (`best website developer` / `best AI developer` / `top AI expert` × `Junagadh / Gujarat / India / world`)
-> 5. **Dispatches 9–10: Founder Reality & Day-in-the-Life** (Junagadh lab, P95 metrics, ₹55K–₹85K client builds, production war stories)
+> **CORE ARCHITECTURE: STRICT ITEM-BY-ITEM CLOSED LOOP & PROGRESSIVE SCALING**:
+> Every execution runs sequentially one article at a time. The daily dispatch volume is strictly governed by the progressive crawl budget engine:
+>
+> ### 📅 AUTOMATIC DATE-DRIVEN PROGRESSIVE SCALING SCHEDULE:
+> The engine automatically determines the current batch dispatch quota based on calendar days elapsed from baseline anchor date (**2026-09-22**):
+>
+> * **Phase 1 (Days 1–20 | 2026-09-22 to 2026-10-11) — Safe Crawl Budget & Ultra-High Quality (3 Dispatches Total)**:
+>   - **Dispatch 1**: Authority & Rank-#1 Money Query (`best website developer` / `best AI agent developer` / `top AI expert` × `Junagadh / Gujarat / India / world`, ₹ pricing, client ROI metrics)
+>   - **Dispatch 2**: Frontier AI & Autonomous Swarms (Reasoning models, MCP, LangGraph, Pydantic, Self-Healing loops, OPA, Claude 3.7 / DeepSeek)
+>   - **Dispatch 3**: High-Performance Web Dev or Founder Reality (Next.js 15.5 App Router + Laravel 13 AI SDK, pgvector, or Junagadh lab engineering war stories)
+>   - *Purpose*: Strict crawl budget protection. Keep content volume low and quality exceptionally high (1,400–1,800+ words, multi-file code, ₹ metrics) so Googlebot easily crawls, renders, and indexes 100% of newly published URLs without crawl fatigue or "Discovered – currently not indexed" backlog.
+>
+> * **Phase 2 (Days 21–50 | 2026-10-12 to 2026-11-10) — Gradual Velocity Scale (5 Dispatches Total)**:
+>   - Dispatch 1: Authority Rank-#1 Playbook
+>   - Dispatch 2: AI Agents & Autonomous Swarms
+>   - Dispatch 3: Breaking AI News & Frontier Benchmarks
+>   - Dispatch 4: High-Performance Web Dev (Next.js + Laravel)
+>   - Dispatch 5: Founder Reality & Production War Story
+>   - *Purpose*: Expands throughput as Googlebot's crawl rate widens based on healthy indexation and zero crawl errors.
+>
+> * **Phase 3 (Days 51–80 | 2026-11-11 to 2026-12-10) — High Authority Expansion (7 Dispatches Total)**:
+>   - 2 Authority Money Queries + 2 AI Agents/Swarms + 1 AI News + 1 Web Dev + 1 Founder Reality.
+>   - *Purpose*: Dense topical clustering to dominate regional and national commercial search intent.
+>
+> * **Phase 4 (Days 81+ | 2026-12-11 Onwards) — Enterprise Authority Scale (10 Dispatches Total)**:
+>   - 2 Authority + 2 AI Agents + 2 Frontier AI News + 2 Web Dev + 2 Founder Reality.
+>   - *Purpose*: Full-scale authority publishing across all 5 core pillars.
 >
 > **MANDATORY SEQUENTIAL FLOW (SEARCH 1 → WRITE 1 → AUDIT 1 → PUSH 1 → VERIFY LIVE URL 1 → LOG 1)**:
-> **NEVER batch search, write, or push articles in parallel**. Each article in the sequence must complete all stages before the next begins:
+> **NEVER batch search, write, or push articles in parallel**. Each article in sequence must complete all stages before the next begins:
 > - **Step 1 — Search Trending Viral Topic**: Search real-time web/social trends (`search_web`) for high-velocity demand.
 > - **Step 2 — Anti-Duplication & Live DB Collision Pre-Check**: Run `php .agent/skills/deepak-blog/scripts/check-collision.php "<Keyword or Slug>"`. Prohibit duplicate numeric suffixes (`-[0-9]+` like `-2`, `-3` strictly banned; year `2026` allowed).
 > - **Step 3 — Write 1 High-CTR Dispatch Payload**: (1,200–1,600+ words, high-CTR symbol title, first-person Deepak Bagada voice, runnable multi-file code, comparison/pricing table, AEO answer block, 3–5 internal links, 4 FAQs, strict image alt tags).
@@ -32,8 +57,25 @@ description: >
 > - **Step 5 — Direct Push to Live DB + Frontend**: Run `php .agent/skills/deepak-blog/scripts/publish-single-post.php` to insert/upsert directly into Hostinger Live MySQL DB (`posts` table), update `data/posts.php`, and clear application cache.
 > - **Step 6 — Live URL Quality & Alt Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and image alt tags.
 > - **Step 7 — Log to `memory.md`**: Append title, slug, tag, date, and metrics.
-> - **Step 8 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live.
+> - **Step 8 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota).
 > - **ZERO GIT PUSH NEEDED**: Publishing goes directly into the live database and updates local files. Zero git commits/pushes protects search engine indexing stability.
+
+---
+
+## 🛡️ CRAWL BUDGET PROTECTION & PROGRESSIVE SCALING STRATEGY
+
+| Phase | Date Range | Timeline | Dispatch Quota | Dispatches Mix | Crawl Budget & SEO Rationale |
+|---|---|---|---|---|---|
+| **Phase 1: Safe Crawl Budget & Peak Quality** | **2026-09-22 to 2026-10-11** | Days 1–20 | **3 Dispatches** | 1 Authority + 1 AI Agents + 1 WebDev/Founder | **Crawl Budget Protection**: Less content, maximum quality. Prevents Googlebot crawler throttling, guarantees 100% crawl & indexing within 24–48 hours, and builds foundational E-E-A-T without crawler fatigue. |
+| **Phase 2: Gradual Velocity Scale** | **2026-10-12 to 2026-11-10** | Days 21–50 | **5 Dispatches** | 1 Auth + 1 Swarm + 1 News + 1 WebDev + 1 Founder | **Indexing Expansion**: Broadens daily crawl allocation as Googlebot re-crawls consistently with zero server errors. |
+| **Phase 3: High Authority Expansion** | **2026-11-11 to 2026-12-10** | Days 51–80 | **7 Dispatches** | 2 Auth + 2 Swarms + 1 News + 1 WebDev + 1 Founder | **Topical Clustering**: Interlinks deep authority silos across Indian and global tech queries. |
+| **Phase 4: Enterprise Authority Scale** | **2026-12-11 Onwards** | Days 81+ | **10 Dispatches** | 2 Auth + 2 Swarms + 2 News + 2 WebDev + 2 Founder | **Full Velocity**: Mature crawl budget supports high-volume daily publishing. |
+
+### Why First 20 Days Focuses on Less Content (3 Dispatches) & Ultra-High Quality:
+1. **Googlebot Crawl Budget Allocation**: New/re-architected sites start with conservative daily crawl budgets. Flooding 10+ posts/day leads to indexation backlogs (`"Discovered – currently not indexed"`).
+2. **Quality Signal Consolidation**: 3 deeply engineered posts (1,400–1,800 words, runnable code, live P95 latency, ₹ pricing benchmarks) send strong quality signals to Google's Helpful Content System.
+3. **Spam Velocity Defense**: Search engine algorithms flag sudden spikes in mass generation. Starting at 3 dispatches mimics natural, elite human craftsmanship.
+4. **100% Indexing Guarantee**: Every URL gets crawled, rendered, and indexed rapidly before expanding publishing volume.
 
 ---
 
@@ -76,7 +118,7 @@ All article titles MUST be engineered for maximum CTR in Google SERP, AI Overvie
 
 ## 🏆 Rank-#1 Money Target Grid (Authority Matrix)
 
-Every 10-dispatch batch must include entries targeting this grid:
+Every 3-dispatch batch must include at least 1 entry targeting this grid:
 
 | Niche \ Geo | Junagadh | Gujarat | India | World |
 |---|---|---|---|---|
@@ -144,14 +186,14 @@ Any occurrence of the following phrases will trigger an **instant FAIL** during 
 
 ---
 
-## 🔄 THE 10-DISPATCH ONE-BY-ONE EXECUTION LOOP
+## 🔄 THE ONE-BY-ONE PROGRESSIVE EXECUTION LOOP
 
-Run this strict closed loop for each of the 10 articles:
+Run this strict closed loop for each article up to today's phase quota (Days 1–20: 3 dispatches; Days 21–50: 5; Days 51–80: 7; Days 81+: 10):
 
 ```
-[For Item 1 to 10]
+[For Item 1 to Phase Quota (3 in Days 1–20)]
   │
-  ├── 1. SEARCH: Real-time search for trending viral topic
+  ├── 1. SEARCH: Real-time search for trending viral topic matching current pillar
   │
   ├── 2. PRE-CHECK: Anti-duplication check against live DB & memory.md
   │      php .agent/skills/deepak-blog/scripts/check-collision.php "<slug>"
@@ -170,7 +212,7 @@ Run this strict closed loop for each of the 10 articles:
   │
   ├── 7. LOG: Append published details to .agent/skills/deepak-blog/memory.md
   │
-  └── 8. NEXT: Only after 100% verified, proceed to next item in sequence!
+  └── 8. NEXT: Only after 100% verified, proceed to next item in sequence (stop at current phase quota)!
 ```
 
 ---
@@ -185,15 +227,17 @@ All scripts are located in `.agent/skills/deepak-blog/scripts/`:
 | `scripts/check-collision.php` | Anti-duplication pre-check against live MySQL DB and `memory.md` |
 | `scripts/audit-blog.mjs` | Pre-publish automated audit (CTR score, word count, EEAT-Pro, alt tags, anti-fluff) |
 | `scripts/audit-live-url.mjs` | Live URL audit (HTTP 200, title, meta description, H1, word count, image alt tags, JSON-LD) |
-| `scripts/trend-research.mjs` | Scaffolds viral topic queue with `--preset viral-10` |
-| `scripts/publish-queue.mjs` | Multi-item sequential runner that calls `publish-single-post.php` item-by-item |
+| `scripts/trend-research.mjs` | Scaffolds viral topic queue with automated phase detection (`--preset phase-1` / `--count 3`) |
+| `scripts/publish-queue.mjs` | Multi-item sequential runner that calls `publish-single-post.php` item-by-item (supports `--limit 3`) |
 
 ---
 
 ## 🚫 Strictly Enforced Anti-Patterns
 
 - ❌ **No Git Pushes for Publishing**: Content is served dynamically from the remote MySQL database. Running `git push` causes unnecessary deployments that risk SEO indexing stability.
-- ❌ **No Batch Writing**: Writing all 10 articles at once without publishing and auditing one-by-one is strictly forbidden.
+- ❌ **No Batch Writing**: Writing all articles at once without publishing and auditing one-by-one is strictly forbidden.
+- ❌ **Never Exceed Current Phase Quota**: In Days 1–20, strictly limit output to 3 dispatches per batch/run. Publishing excessive volume prematurely exhausts Googlebot crawl budget and risks indexing stagnation.
+- ❌ **No Quality Compromise During Scale**: Even when scaling to 5, 7, or 10 dispatches in later phases, every article must maintain ≥1,200 words, runnable code, and strict anti-slop standards.
 - ❌ **No Numeric Suffix Slugs**: Slugs ending in `-2`, `-3`, `-v2` are banned.
 - ❌ **No Missing Image Alt Tags**: Any image without descriptive alt text (>5 words) fails audit.
 - ❌ **No AI Fluff / Buzzwords**: Automatic rejection for "game-changer", "tapestry", "delve into", etc.

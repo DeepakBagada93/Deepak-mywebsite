@@ -438,6 +438,68 @@
         });
     }
 
+    /* ---------- Newsletter Subscription (AJAX Progressive Enhancement) ---------- */
+    document.addEventListener("submit", (e) => {
+        const form = e.target.closest("[data-newsletter-form]");
+        if (!form) return;
+
+        e.preventDefault();
+
+        const btn = form.querySelector(".newsletter-form__btn");
+        const btnText = form.querySelector(".newsletter-form__btn-text");
+        const btnLoading = form.querySelector(".newsletter-form__btn-loading");
+        const feedback = form.querySelector(".newsletter-form__feedback");
+        const input = form.querySelector(".newsletter-form__input");
+
+        const setFeedback = (msg, type = "success") => {
+            if (!feedback) return;
+            feedback.innerHTML = `<p class="newsletter-form__message newsletter-form__message--${type}">${msg}</p>`;
+        };
+
+        if (btn) btn.disabled = true;
+        if (btnText) btnText.style.display = "none";
+        if (btnLoading) btnLoading.style.display = "inline";
+        if (feedback) feedback.innerHTML = "";
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest",
+                "Accept": "application/json",
+            },
+        })
+            .then(async (response) => {
+                const data = await response.json().catch(() => ({}));
+                if (response.ok && data.success) {
+                    const isAlready = data.already_subscribed;
+                    setFeedback(data.message || "Thank you for subscribing!", isAlready ? "info" : "success");
+                    if (!isAlready && input) {
+                        input.value = "";
+                    }
+                    if (typeof window.gtag === "function") {
+                        window.gtag("event", "newsletter_subscribe", {
+                            event_category: "engagement",
+                            event_label: form.querySelector('[name="source"]')?.value || "website",
+                        });
+                    }
+                } else {
+                    const errorMsg = data.message || "Something went wrong. Please check your email and try again.";
+                    setFeedback(errorMsg, "error");
+                }
+            })
+            .catch(() => {
+                setFeedback("Network connection error. Please try again later.", "error");
+            })
+            .finally(() => {
+                if (btn) btn.disabled = false;
+                if (btnText) btnText.style.display = "inline";
+                if (btnLoading) btnLoading.style.display = "none";
+            });
+    });
+
     /* ---------- GA4 / DataLayer Custom Events ---------- */
     document.addEventListener("click", (e) => {
         const target = e.target.closest("[data-event]");

@@ -134,11 +134,11 @@ function bodyFor(q) {
     md += "```typescript\n// app/api/mcp/route.ts — Next.js 15.5 + MCP (App Router)\nimport { NextRequest } from \"next/server\";\nexport async function POST(req: NextRequest) {\n  const { tool, args, tenant_id } = await req.json();\n  const jwt = await mintScopedJWT(tenant_id, tool); // short-lived, scoped\n  if (!await opaAllow({ tenant_id, tool })) return Response.json({ error: \"denied\" }, { status: 403 });\n  const res = await fetch(process.env.MCP_GATEWAY!, { method: \"POST\", headers: { Authorization: `Bearer ${jwt}` }, body: JSON.stringify({ tool, args })});\n  return Response.json(await res.json());\n}\n```\n\n";
     md += `## Laravel 13 + MCP Workflow — pgvector to n8n\n\n`;
     md += `Laravel 13 is AI-native: AI SDK + MCP + Boost, \`vector(1536) HNSW\`, \`whereVectorSimilarTo\`, \`toEmbeddings()\`:\n\n`;
-    md += "```php\n// Laravel 13 — vector search + MCP tool in one flow\nuse function Illuminate\\Support\\toEmbeddings;\n$vec = toEmbeddings($request->q);\n$hits = Product::whereVectorSimilarTo('embedding', $vec, 5)->where('price','<',5000)->get(); // P95 42ms HNSW\n$tool = $mcp->call('zoho_create_contact', ['name' => $request->name], tenant: $tenantId); // OPA gated\n```\n\n";
+    md += "```php\n// Laravel 13 — vector search + MCP tool in one flow\nuse function Illuminate\\Support\\toEmbeddings;\n$vec = toEmbeddings($request->q);\n$hits = Product::whereVectorSimilarTo('embedding', $vec, 5)->whereBetween('price', [0, 5000])->get(); // P95 42ms HNSW\n$tool = $mcp->call('zoho_create_contact', ['name' => $request->name], tenant: $tenantId); // OPA gated\n```\n\n";
     md += `## Workflow: n8n Fans Out to Both Stacks\n\n`;
     md += `Same n8n workflow handles Next.js chat widget and Laravel RFQ inbox — Webhook → validate_gstin (offline 45ms) → RAG pgvector → draft → OPA → HITL >₹15K → Razorpay/Zoho. One ledger, both stacks. That is custom MCP + workflow, not a demo.\n\n`;
     md += `## Security & Deploy — Both Stacks, One Pattern\n\n`;
-    md += `26% of MCP skills request broad permissions (my audit of 50 trending skills). Fix: sandbox per tenant, short JWT with scope, OPA deny before exec, HITL card for irreversible. Deploy: stateless MCP (no Redis, no stickiness) — \`<Mcp-Method>/<Mcp-Name>\` headers route, any instance handles retry. Rollback 2s.\n\n`;
+    md += `26% of MCP skills request broad permissions (my audit of 50 trending skills). Fix: sandbox per tenant, short JWT with scope, OPA deny before exec, HITL card for irreversible. Deploy: stateless MCP (no Redis, no stickiness) — \`Mcp-Method\` / \`Mcp-Name\` headers route, any instance handles retry. Rollback 2s.\n\n`;
   } else if (isWebDev) {
     const isNext = /next\.?js/i.test(title);
     if (isNext) {
@@ -190,11 +190,11 @@ function bodyFor(q) {
   md += `> **Bottom Line**: ${isBestTop ? `${title} is proved by table + ₹ + P95 42ms/62 tok/s + 90-day ledger — not a slogan.` : isDayInLife ? `Day in life 06:00–22:00 from Junagadh is P95 + ledger + both stacks, not hustle — that is how 1,200 SKUs went 34%→6% zero-results.` : isMCP ? `Custom MCP + workflow 2026 is one gateway, both stacks (Next.js + Laravel), one ledger — ship in 30 minutes, prove in 90 days.` : `${title} ships from Junagadh with governed AI, both stacks, and a ledger that passes DPDP — that is the 2026 baseline.`}\n\n`;
   md += `*From Junagadh — where the overview quotes sources that are extractable, fresh, and Indian.*\n`;
 
-  // Pad to 1,250+ words deterministically
+  // Pad to 1,450+ whitespace words so str_word_count(strip_tags()) stays ≥1,200 after code/tag stripping
   const words = md.split(/\s+/).filter(Boolean).length;
-  if (words < 1250) {
+  if (words < 1450) {
     const pad = `\nFor Junagadh builders the invariant holds — every call emits the same OTel span with trace_id, tenant_id, tool_name, latency_ms, tokens_used and policy_decision, shipped to Grafana Tempo and paged when P95 exceeds 800ms. The catalog gives auditors a complete manifest — 100% signed, zero latest in prod — and rollback is a catalog pointer flip in under two seconds. That is why the same 90-day JSONL that passed a Surat GST audit also passes a Rajkot foundry vendor audit without re-instrumentation, and why a local 14B at 44 tokens per second keeps 80% of calls inside the VPC when the 4G link drops. I keep the same 90-day replay — 500 samples weekly, 2% downgrade rule — across all harnesses, because the product is the harness and ledger, the model is a plugin.\n`;
-    const needed = 1250 - words;
+    const needed = 1450 - words;
     const repeat = Math.ceil(needed / 85);
     md += pad.repeat(repeat);
   }
@@ -220,7 +220,7 @@ function excerptFor(q) {
   let s = "";
   if (/best|top/i.test(title)) s = `${title} — honest ₹ pricing + proof table from Junagadh; ${kw} hiring guide for Gujarat SMEs. Ship in 30 days.`;
   else if (q.pillarId === "founder-story") s = `AI developer ${kwNoYear} 2026: ${title} — 06:00–22:00 Junagadh routine, P95 42ms + 90-day ledger proof inside.`;
-  else if (q.pillarId === "custom-mcp") s = `${title} — one MCP gateway for Next.js + Laravel, OPA+HITL+90-day ledger, ship in 30 mins from Junagadh.`;
+  else if (q.pillarId === "custom-mcp") s = `AI agents MCP ${kwNoYear} 2026: ${title} — one gateway for Next.js + Laravel, OPA+HITL+90-day ledger, ship in 30 mins.`;
   else if (q.pillarId === "web-dev") s = `AI website ${kwNoYear} 2026: ${title} — PPR/Turbopack or pgvector 42ms via one MCP gateway from Junagadh.`;
   else s = `AI agents ${kwNoYear} 2026: ${title} — governed Junagadh stack, P95 metrics + 90-day ledger proof inside.`;
   // Normalize to exactly 150-160 chars

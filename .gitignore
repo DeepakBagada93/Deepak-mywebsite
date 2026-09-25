@@ -38,3 +38,6 @@ research-brief*.md
 research-brief*.json
 seo-brief*.md
 blog-audit.md
+.agent/**/scratch/
+.agent/**/schedule/
+

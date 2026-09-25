@@ -5,6 +5,16 @@
             <p class="footer__tagline">AI developer · Web developer · SEO &amp; AEO expert — building websites, AI systems and automation from {{ $site['location'] }}.</p>
         </div>
 
+        <div class="footer__newsletter">
+            @include('partials.newsletter', [
+                'theme' => 'dark',
+                'source' => 'footer',
+                'label' => '// THE WEEKLY DISPATCH',
+                'title' => 'Stay Ahead of the Autonomous AI Frontier',
+                'description' => 'Real-world agent architectures, MCP integrations, and web engineering field notes shipped weekly from Junagadh, Gujarat. Zero spam.',
+            ])
+        </div>
+
         <div class="footer__grid">
             <div class="footer__col">
                 <p class="mono footer__col-title">Explore</p>

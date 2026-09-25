@@ -16,6 +16,17 @@
             <div class="article__body">
                 @markdown($post->content)
             </div>
+
+            <div style="margin-top: 50px;">
+                @include('partials.newsletter', [
+                    'theme' => 'light',
+                    'source' => 'journal_post',
+                    'label' => '// NEVER MISS A BREAKDOWN',
+                    'title' => 'Enjoyed this engineering dispatch?',
+                    'description' => 'Join the private subscriber list. Weekly unvarnished analyses on AI architectures, multi-agent systems, and scalable web engineering.',
+                ])
+            </div>
+
             <div class="article__foot">
                 <a class="btn btn--ghost" href="{{ route('journal.index') }}">← All journal articles</a>
                 <a class="btn btn--ghost" href="/#contact">Get in touch →</a>

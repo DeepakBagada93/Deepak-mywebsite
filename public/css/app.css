@@ -912,6 +912,196 @@ code { font-family: var(--mono); font-size: 0.85em; }
 }
 
 /* ==========================================================================
+   Newsletter Component
+   ========================================================================== */
+.newsletter-block {
+    margin: 40px 0 52px;
+    border-radius: 0;
+    transition: border-color 0.25s ease;
+}
+.footer__newsletter {
+    margin-bottom: 48px;
+}
+.footer__newsletter .newsletter-block {
+    margin: 0;
+}
+
+/* Dark theme (inside dark footer) */
+.newsletter-block--dark {
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--paper);
+    padding: 36px 32px;
+}
+.newsletter-block--dark .newsletter-block__label {
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-bottom: 10px;
+}
+.newsletter-block--dark .newsletter-block__title {
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+.newsletter-block--dark .newsletter-block__desc {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 65ch;
+    margin-bottom: 24px;
+}
+.newsletter-block--dark .newsletter-form__input {
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+}
+.newsletter-block--dark .newsletter-form__input:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 1px #ffffff;
+}
+.newsletter-block--dark .newsletter-form__input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+.newsletter-block--dark .newsletter-form__subtext {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Light theme (journal, articles, content pages) */
+.newsletter-block--light {
+    background: var(--surface, #faf8f5);
+    border: 1px solid var(--hair, rgba(22, 22, 22, 0.16));
+    color: var(--ink);
+    padding: 36px 32px;
+}
+.newsletter-block--light .newsletter-block__label {
+    color: var(--muted);
+    display: block;
+    margin-bottom: 10px;
+}
+.newsletter-block--light .newsletter-block__title {
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+.newsletter-block--light .newsletter-block__desc {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 65ch;
+    margin-bottom: 24px;
+}
+.newsletter-block--light .newsletter-form__input {
+    background: var(--paper, #ffffff);
+    border: 1px solid var(--hair, rgba(22, 22, 22, 0.2));
+    color: var(--ink);
+}
+.newsletter-block--light .newsletter-form__input:focus {
+    border-color: var(--ink);
+    box-shadow: 0 0 0 1px var(--ink);
+}
+.newsletter-block--light .newsletter-form__input::placeholder {
+    color: var(--muted);
+}
+.newsletter-block--light .newsletter-form__subtext {
+    color: var(--muted);
+}
+
+/* Common form layout */
+.newsletter-form__group {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.newsletter-form__input {
+    flex: 1 1 280px;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    padding: 14px 18px;
+    outline: none;
+    border-radius: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.newsletter-form__btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn--newsletter-light {
+    background: #ffffff;
+    color: #161616;
+    border-color: #ffffff;
+}
+.btn--newsletter-light:hover {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.newsletter-form__hp {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+.newsletter-form__subtext {
+    margin-top: 14px;
+    font-size: 0.65rem;
+}
+.newsletter-form__feedback {
+    margin-top: 12px;
+    min-height: 20px;
+    transition: all 0.2s ease;
+}
+.newsletter-form__message {
+    font-size: 0.76rem;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 0;
+}
+.newsletter-form__message--success {
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    color: #22c55e;
+}
+.newsletter-form__message--info {
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #3b82f6;
+}
+.newsletter-form__message--error {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #ef4444;
+}
+
+@media (max-width: 640px) {
+    .newsletter-block--dark,
+    .newsletter-block--light {
+        padding: 28px 20px;
+    }
+    .newsletter-form__group {
+        flex-direction: column;
+    }
+    .newsletter-form__input,
+    .newsletter-form__btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
    Reveal (JS-gated initial state for GSAP)
    ========================================================================== */
 .js [data-reveal] { opacity: 0; transform: translateY(24px); }
