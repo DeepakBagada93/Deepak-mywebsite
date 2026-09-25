@@ -36,6 +36,7 @@ class ListSubscribersCommand extends Command
 
         if ($subscribers->isEmpty()) {
             $this->info("No subscribers found (filter: {$status}).");
+
             return 0;
         }
 

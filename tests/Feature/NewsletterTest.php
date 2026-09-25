@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Mail\NewsletterWelcomeMail;
-use App\Models\Post;
 use App\Models\Subscriber;
 use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;

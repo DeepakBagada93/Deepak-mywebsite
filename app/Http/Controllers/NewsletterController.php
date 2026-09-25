@@ -25,6 +25,7 @@ class NewsletterController extends Controller
             if ($request->expectsJson() || $request->ajax()) {
                 return response()->json(['success' => true, 'message' => $msg]);
             }
+
             return back()->with('newsletter_success', $msg);
         }
 
@@ -55,7 +56,7 @@ class NewsletterController extends Controller
 
         if ($subscriber) {
             if ($subscriber->isActive()) {
-                $msg = "You are already subscribed to the dispatch! Stay tuned for upcoming notes.";
+                $msg = 'You are already subscribed to the dispatch! Stay tuned for upcoming notes.';
                 if ($request->expectsJson() || $request->ajax()) {
                     return response()->json([
                         'success' => true,
@@ -63,6 +64,7 @@ class NewsletterController extends Controller
                         'message' => $msg,
                     ]);
                 }
+
                 return back()->with('newsletter_info', $msg);
             }
 
@@ -74,13 +76,14 @@ class NewsletterController extends Controller
                 Log::warning('Failed to send newsletter welcome email on resubscribe: '.$e->getMessage());
             }
 
-            $msg = "Welcome back! Your newsletter subscription has been reactivated.";
+            $msg = 'Welcome back! Your newsletter subscription has been reactivated.';
             if ($request->expectsJson() || $request->ajax()) {
                 return response()->json([
                     'success' => true,
                     'message' => $msg,
                 ]);
             }
+
             return back()->with('newsletter_success', $msg);
         }
 
@@ -97,7 +100,7 @@ class NewsletterController extends Controller
             Log::warning('Failed to send newsletter welcome email on new subscription: '.$e->getMessage());
         }
 
-        $msg = "Thank you for subscribing! You will receive future technical dispatches & architectural breakdowns.";
+        $msg = 'Thank you for subscribing! You will receive future technical dispatches & architectural breakdowns.';
 
         if ($request->expectsJson() || $request->ajax()) {
             return response()->json([
@@ -129,7 +132,7 @@ class NewsletterController extends Controller
                 $message = "You have been successfully unsubscribed from {$site['name']}'s newsletter.";
             } else {
                 $status = 'already_unsubscribed';
-                $message = "You have already been unsubscribed from this mailing list.";
+                $message = 'You have already been unsubscribed from this mailing list.';
             }
         }
 
