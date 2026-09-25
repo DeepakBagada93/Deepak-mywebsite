@@ -174,10 +174,14 @@ class NewsletterTest extends TestCase
         $home->assertStatus(200);
         $home->assertSee('newsletter-form');
         $home->assertSee('Stay Ahead of the Autonomous AI Frontier');
+        $home->assertSee('data-newsletter-trigger');
+        $home->assertSee('newsletter-modal');
 
         $journal = $this->get('/journal');
         $journal->assertStatus(200);
         $journal->assertSee('newsletter-form');
         $journal->assertSee('Get New Field Notes In Your Inbox');
+        $journal->assertSee('data-newsletter-trigger');
+        $journal->assertSee('newsletter-modal');
     }
 }

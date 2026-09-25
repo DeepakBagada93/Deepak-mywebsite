@@ -438,6 +438,57 @@
         });
     }
 
+    /* ---------- Newsletter Modal Popup ---------- */
+    const newsletterModal = $("#newsletter-modal");
+    if (newsletterModal) {
+        const openModal = () => {
+            if (mmenu && mmenu.classList.contains("is-open")) {
+                mmenu.classList.remove("is-open");
+                if (burger) {
+                    burger.setAttribute("aria-expanded", "false");
+                    burger.textContent = "Menu";
+                }
+                setTimeout(() => {
+                    mmenu.style.display = "none";
+                }, 300);
+            }
+            newsletterModal.style.display = "flex";
+            newsletterModal.offsetHeight;
+            newsletterModal.classList.add("is-active");
+            lockScroll();
+            const input = newsletterModal.querySelector(".newsletter-form__input");
+            if (input) {
+                setTimeout(() => input.focus(), 150);
+            }
+        };
+
+        const closeModal = () => {
+            newsletterModal.classList.remove("is-active");
+            unlockScroll();
+            setTimeout(() => {
+                if (!newsletterModal.classList.contains("is-active")) {
+                    newsletterModal.style.display = "none";
+                }
+            }, 250);
+        };
+
+        document.addEventListener("click", (e) => {
+            if (e.target.closest("[data-newsletter-trigger]")) {
+                e.preventDefault();
+                openModal();
+            } else if (e.target.closest("[data-newsletter-close]")) {
+                e.preventDefault();
+                closeModal();
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && newsletterModal.classList.contains("is-active")) {
+                closeModal();
+            }
+        });
+    }
+
     /* ---------- Newsletter Subscription (AJAX Progressive Enhancement) ---------- */
     document.addEventListener("submit", (e) => {
         const form = e.target.closest("[data-newsletter-form]");

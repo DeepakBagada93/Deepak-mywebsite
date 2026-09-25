@@ -106,6 +106,9 @@
         </nav>
 
         <div class="masthead__meta">
+            <button type="button" class="btn btn--sm btn--primary masthead__subscribe-btn mono" data-newsletter-trigger aria-haspopup="dialog" aria-controls="newsletter-modal">
+                Subscribe
+            </button>
             <span class="masthead__issue mono">Vol. 01 — 2026</span>
             <button class="masthead__burger mono" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button>
         </div>
@@ -151,6 +154,29 @@
         <li><a href="/#projects"><span class="mono mmenu__num">07</span>Work</a></li>
         <li><a href="{{ route('journal.index') }}"><span class="mono mmenu__num">08</span>Journal</a></li>
         <li><a href="/#contact"><span class="mono mmenu__num">09</span>Contact</a></li>
+        <li>
+            <button type="button" class="mmenu__subscribe-trigger mono" data-newsletter-trigger>
+                <span class="mono mmenu__num">10</span>Subscribe to Dispatch →
+            </button>
+        </li>
     </ul>
     <p class="mmenu__foot mono">{{ $site['name'] }} — Portfolio Vol. 01</p>
+</div>
+
+{{-- Newsletter Subscription Modal --}}
+<div class="newsletter-modal" id="newsletter-modal" role="dialog" aria-modal="true" aria-label="Newsletter Subscription" style="display: none;">
+    <div class="newsletter-modal__backdrop" data-newsletter-close></div>
+    <div class="newsletter-modal__dialog">
+        <button type="button" class="newsletter-modal__close" data-newsletter-close aria-label="Close modal">✕</button>
+        
+        <div class="newsletter-modal__content">
+            @include('partials.newsletter', [
+                'theme' => 'light',
+                'source' => 'navbar_modal',
+                'label' => '// THE PRIVATE DISPATCH',
+                'title' => 'Stay Ahead of the Autonomous AI Frontier',
+                'description' => 'Real-world agent architectures, MCP integrations, and web engineering field notes shipped weekly from Junagadh, Gujarat. Zero spam.',
+            ])
+        </div>
+    </div>
 </div>
