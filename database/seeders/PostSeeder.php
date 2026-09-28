@@ -6,6 +6,7 @@ use App\Support\WordCount;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
+
 class PostSeeder extends Seeder
 {
     /**
