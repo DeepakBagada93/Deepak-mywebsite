@@ -1,7 +1,7 @@
 # Meta Pack — autonomous QA swarms multi-agent 2026
 
 **Meta title:** Autonomous QA Swarms Multi-Agent 2026: CI/CD Guide
-**Meta description:** Learn how autonomous QA swarms cut CI/CD bugs 87% and keep control with a HITL ledger. See steps, tools and fixes. Read the guide.
+**Meta description:** Learn how autonomous QA swarms cut CI/CD bugs 87% and keep control with a HITL ledger. See steps, tools and fixes. Read the guide. See swarm roles, ledger desig
 **Slug:** /qa-swarms-autonomous-ci-cd-2026/
 **Canonical:** /qa-swarms-autonomous-ci-cd-2026/
 **Publish date:** 2026-08-25
@@ -9,10 +9,10 @@
 
 ## Internal links (descriptive anchors, 4)
 
-- `multi-agent CI/CD workflow` → /blog/multi-agent-cicd-patterns/ (anchor: see our multi-agent CI/CD patterns)
-- `HITL ledger design` → /blog/hitl-ledger-audit-trail/ (anchor: HITL ledger design we use for audit trails)
-- `flaky test triage` → /blog/flaky-test-triage-guide/ (anchor: flaky test triage guide)
-- `QA automation checklist` → /blog/qa-automation-checklist-2026/ (anchor: QA automation checklist for 2026)
+- `multi-agent CI/CD workflow` → /services/ai-development/ (anchor: see our AI agent development services)
+- `HITL ledger design` → /services/automation-expert/ (anchor: HITL ledger design we use for audit trails)
+- `flaky test triage guide` → /journal/ (anchor: flaky test triage guide in our engineering journal)
+- `QA automation checklist 2026` → /services/web-development/ (anchor: QA automation checklist for 2026)
 
 ## External authority links (3)
 

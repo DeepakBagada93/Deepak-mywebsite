@@ -36,6 +36,22 @@
                 @endif
             </div>
 
+            @if ($posts instanceof \Illuminate\Pagination\LengthAwarePaginator && $posts->hasPages())
+                <nav class="mono" style="margin-top:32px;display:flex;gap:16px;align-items:center;" aria-label="Journal pages">
+                    @if ($posts->onFirstPage())
+                        <span style="opacity:.4;">← Prev</span>
+                    @else
+                        <a href="{{ $posts->previousPageUrl() }}">← Prev</a>
+                    @endif
+                    <span>Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}</span>
+                    @if ($posts->hasMorePages())
+                        <a href="{{ $posts->nextPageUrl() }}">Next →</a>
+                    @else
+                        <span style="opacity:.4;">Next →</span>
+                    @endif
+                </nav>
+            @endif
+
             <div style="margin-top: 50px;">
                 @include('partials.newsletter', [
                     'theme' => 'light',

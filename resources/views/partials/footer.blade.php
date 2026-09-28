@@ -20,11 +20,11 @@
                 <p class="mono footer__col-title">Explore</p>
                 <ul class="footer__col-list">
                     <li><a href="{{ route('services.index') }}">Services — web, AI &amp; SEO/AEO</a></li>
-                    <li><a href="#about" data-scroll>About — my story</a></li>
+                    <li><a href="{{ route('legal.about') }}">About — my story</a></li>
                     <li><a href="#skills" data-scroll>AI skills &amp; services</a></li>
                     <li><a href="#projects" data-scroll>Main projects</a></li>
                     <li><a href="#journal" data-scroll>The news &amp; journal</a></li>
-                    <li><a href="#contact" data-scroll>Contact</a></li>
+                    <li><a href="{{ route('legal.contact') }}">Contact</a></li>
                 </ul>
             </div>
 
@@ -64,6 +64,17 @@
                     <li><a href="{{ route('tools.index') }}?category=image">Image Tools</a></li>
                     <li><a href="{{ route('tools.index') }}?category=developer">Developer Tools</a></li>
                     <li><a href="{{ route('tools.index') }}?category=calculator">Calculators</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <p class="mono footer__col-title">Legal</p>
+                <ul class="footer__col-list">
+                    <li><a href="{{ route('legal.about') }}">About</a></li>
+                    <li><a href="{{ route('legal.contact') }}">Contact</a></li>
+                    <li><a href="{{ route('legal.privacy') }}">Privacy Policy</a></li>
+                    <li><a href="{{ route('legal.terms') }}">Terms of Service</a></li>
+                    <li><a href="{{ route('legal.disclaimer') }}">Disclaimer &amp; Ads</a></li>
                 </ul>
             </div>
 

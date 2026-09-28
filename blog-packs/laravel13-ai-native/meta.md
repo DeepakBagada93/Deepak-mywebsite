@@ -1,7 +1,7 @@
 # Meta — laravel 13 performance 2026
 
 **Meta title:** Laravel 13 in 2026: 98 Lighthouse No SPA
-**Meta description:** Laravel 13 in 2026: PHP 8.3, AI SDK pgvector, Reverb no Redis + 98 Lighthouse. Upgrade guide + Gujarat cost. Start today.
+**Meta description:** Laravel 13 in 2026: PHP 8.3, AI SDK pgvector, Reverb no Redis + 98 Lighthouse. Upgrade guide + Gujarat cost. Start today. With OPcache tuning list, snippets and
 **Slug:** /laravel-13-in-2026-98-lighthouse-no-spa/
 **Target word count:** 1600–1800
 **Author:** Deepak Bagada — Laravel 13 + pgvector — linkedin.com/in/deepak-bagada

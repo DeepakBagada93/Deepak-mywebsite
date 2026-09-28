@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Support\WordCount;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
-
 class PostSeeder extends Seeder
 {
     /**
@@ -23,7 +23,8 @@ class PostSeeder extends Seeder
         // table empty for the duration of the insert, which makes the live
         // journal briefly show stale/missing posts until the next refresh.
         $rows = array_map(static function (array $item) {
-            $words = str_word_count(strip_tags($item['body'] ?? ''));
+            // WordCount mirrors the JS auditor (strip_tags undercounts code/tables).
+            $words = WordCount::count($item['body'] ?? '');
             $mins = max(1, (int) ceil($words / 200));
 
             return [
@@ -33,7 +34,7 @@ class PostSeeder extends Seeder
                 'excerpt' => $item['excerpt'] ?? '',
                 'content' => $item['body'] ?? '',
                 'author' => 'Deepak Bagada',
-                'date' => $item['published_at'] ?? null,
+                'date' => $item['published_at'] ?? $item['date'] ?? null,
                 'category' => $item['tag'] ?? null,
                 'read_time' => $mins.' min read',
                 'image' => '',

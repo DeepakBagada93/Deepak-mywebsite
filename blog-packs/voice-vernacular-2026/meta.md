@@ -1,7 +1,7 @@
 # Meta — voice ai hindi gujarati gujarat 2026
 
 **Meta title:** Voice AI Gujarat 2026: Hindi Gujarati at ₹27K/mo
-**Meta description:** Voice AI Hindi Gujarati Gujarat 2026: Hindi agents 2x bookings at ₹27K/mo — BharatGen 22 langs + VPC Pi 5 62 tok/s. Start today.
+**Meta description:** Voice AI Hindi Gujarati Gujarat 2026: Hindi agents 2x bookings at ₹27K/mo — BharatGen 22 langs + VPC Pi 5 62 tok/s. Start today. With ASR accuracy tables, BOM l
 **Slug:** /voice-ai-vernacular-gujarat-hindi-2026-v3/
 **Target word count:** 1700–1900
 **Author:** Deepak Bagada — Voice AI Junagadh — linkedin.com/in/deepak-bagada

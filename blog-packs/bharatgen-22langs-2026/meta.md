@@ -1,7 +1,7 @@
 # Meta — bharatgen india 2026
 
 **Meta title:** BharatGen India 2026: 22 Langs + ₹988Cr Stack
-**Meta description:** BharatGen India 2026: 22 langs, 4 families, ₹988Cr + 38K GPUs @₹65/hr. Gujarat SME VPC guide + Hindi voice. Start today.
+**Meta description:** BharatGen India 2026: 22 langs, 4 families, ₹988Cr + 38K GPUs @₹65/hr. Gujarat SME VPC guide + Hindi voice. Start today. Covers 4 model families, GPU cost and l
 **Slug:** /bharatgen-india-2026-22-langs-988cr/
 **Target word count:** 1700–1900
 **Author:** Deepak Bagada — AI Developer Junagadh — linkedin.com/in/deepak-bagada

@@ -8,6 +8,7 @@
     $ogTitle = $head['og_title'] ?? $title;
     $ogImg = $url . ($head['og_image'] ?? '/images/about-portrait.png');
     $ogImgAlt = $head['og_image_alt'] ?? 'Deepak Bagada — Best AI Expert & AI Developer in Junagadh, Gujarat, India';
+    $robots = $head['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 @endphp
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
@@ -31,8 +32,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $desc }}">
-    <meta name="keywords" content="best AI developer Gujarat, AI expert Gujarat, best AI agent developer Gujarat, AI consultant Gujarat, AI development Ahmedabad Surat Rajkot Vadodara Junagadh, multi-agent AI systems Gujarat, enterprise AI automation Gujarat, top AI expert India, RAG AI developer Gujarat, generative AI expert Gujarat, Deepak Bagada AI, web developer Gujarat, Laravel developer Gujarat, AEO expert Gujarat">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="keywords" content="AI developer Gujarat, AI expert Junagadh, AI agent development India, enterprise AI automation, Deepak Bagada">
+    <meta name="robots" content="{{ $robots }}">
     <meta name="author" content="{{ $site['name'] }}">
     <meta name="publisher" content="{{ $site['name'] }}">
     <meta name="theme-color" content="#ffffff">

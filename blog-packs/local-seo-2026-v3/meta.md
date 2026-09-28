@@ -1,7 +1,7 @@
 # Meta — local SEO Gujarat 2026
 
 **Meta title:** Local SEO Gujarat 2026: 15-Step Map Pack Guide
-**Meta description:** Local SEO Gujarat 2026: Map Pack + GBP + NAP citations Justdial/IndiaMART/Sulekha. Junagadh 40% easier. Get the 15-step checklist now.
+**Meta description:** Local SEO Gujarat 2026: Map Pack + GBP + NAP citations Justdial/IndiaMART/Sulekha. Junagadh 40% easier. Get the 15-step checklist now. Covers Map Pack triggers,
 **Slug:** local-seo-gujarat-15step-2026
 **Target word count:** 1700–1900
 **Author:** Deepak Bagada — AI Developer & Automation Specialist, Junagadh, Gujarat — linkedin.com/in/deepak-bagada

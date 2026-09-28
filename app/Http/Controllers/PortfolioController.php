@@ -14,7 +14,9 @@ class PortfolioController extends Controller
         $site = config('site');
         $url = rtrim($site['url'], '/');
 
-        $posts = Post::published()->take(20)->get();
+        $posts = Post::published()->take(30)->get()
+            ->reject(fn (Post $p) => (bool) preg_match('/-(variant-\d+|v\d+)$/', $p->slug))
+            ->take(20)->values();
         $postsTotal = Post::published()->count();
         $projects = Project::orderBy('sort_order')->get();
         $faqs = Faq::orderBy('sort_order')->get();

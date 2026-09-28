@@ -540,7 +540,7 @@ code { font-family: var(--mono); font-size: 0.85em; }
     margin-bottom: 14px;
 }
 .work__summary { font-size: 1.05rem; line-height: 1.7; color: #333; max-width: 52ch; margin-bottom: 14px; }
-.work__desc { color: var(--muted); max-width: 56ch; font-size: 0.97rem; margin-bottom: 22px; }
+.work__desc { color: var(--muted); max-width: 56ch; font-size: 0.97rem; margin-bottom: 22px; display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
 .work__link {
     display: inline-block;
     font-size: 0.68rem;

@@ -1,7 +1,7 @@
 # Meta — mcp server workflows 2026
 
 **Meta title:** MCP in 2026: Every AI Agent Same Protocol
-**Meta description:** MCP server workflows 2026 explained: architecture, FastMCP build in 60min + Junagadh governed pattern (JWT+OPA+HITL). Start today.
+**Meta description:** MCP server workflows 2026 explained: architecture, FastMCP build in 60min + Junagadh governed pattern (JWT+OPA+HITL). Start today. With FastMCP examples, schema
 **Slug:** /mcp-in-2026-every-ai-agent-same-protocol/
 **Target word count:** 1600–1800
 **Author:** Deepak Bagada — AI Developer Junagadh — linkedin.com/in/deepak-bagada

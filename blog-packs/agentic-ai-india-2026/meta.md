@@ -3,7 +3,7 @@
 **Primary keyword:** `agentic AI India 2026`
 
 **Meta title:** Agentic AI India 2026: 5 Shifts for Gujarat SMEs
-**Meta description:** Agentic AI India 2026: $635M→$15.2B market, 5 shifts + MCP + 5 Gujarat workflows at ₹25k-80k. Junagadh pattern inside. Start in 14 days.
+**Meta description:** Agentic AI India 2026: $635M→$15.2B market, 5 shifts + MCP + 5 Gujarat workflows at ₹25k-80k. Junagadh pattern inside. Start in 14 days. With pilots and pricing
 **Slug:** /agentic-ai-india-2026-5-shifts-gujarat-sme/
 
 **Canonical:** https://deepakbagada.in/journal/agentic-ai-india-2026-5-shifts-gujarat-sme

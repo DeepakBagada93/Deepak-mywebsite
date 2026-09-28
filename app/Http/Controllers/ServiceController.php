@@ -37,6 +37,7 @@ class ServiceController extends Controller
         $site = config('site');
         $url = rtrim($site['url'], '/');
         $canonical = $url.'/services/'.$service->slug;
+        $services = Service::orderBy('id')->get();
 
         $faqJson = collect($service->faq)->map(static fn (string $answer, string $question) => [
             '@type' => 'Question',
@@ -92,6 +93,6 @@ class ServiceController extends Controller
             ], JSON_UNESCAPED_SLASHES),
         ];
 
-        return view('services.show', compact('site', 'service', 'head'));
+        return view('services.show', compact('site', 'service', 'services', 'head'));
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlueprintController;
 use App\Http\Controllers\CuratedRepoController;
+use App\Http\Controllers\LegalController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\PostController;
@@ -58,6 +59,12 @@ Route::get('/stack', function () {
 
     return view('stack.index', compact('site', 'head'));
 })->name('stack.index');
+
+Route::get('/about', [LegalController::class, 'about'])->name('legal.about');
+Route::get('/contact', [LegalController::class, 'contact'])->name('legal.contact');
+Route::get('/privacy-policy', [LegalController::class, 'privacy'])->name('legal.privacy');
+Route::get('/terms', [LegalController::class, 'terms'])->name('legal.terms');
+Route::get('/disclaimer', [LegalController::class, 'disclaimer'])->name('legal.disclaimer');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'show'])->name('sitemap');
 

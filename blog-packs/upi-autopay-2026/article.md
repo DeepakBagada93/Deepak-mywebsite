@@ -134,19 +134,19 @@ Also avoid the non-RuPay trap: only **RuPay** credit cards link to UPI — Visa/
 
 ## FAQ
 
-**What is the RBI limit for UPI AutoPay in 2026?**
+### What is the RBI limit for UPI AutoPay in 2026?
 Per [RBI 21 Apr 2026](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13374), recurring debits **up to ₹15,000 per transaction clear without AFA**; above needs fresh AFA each debit. Insurance premiums, mutual fund subscriptions, and credit card bills clear without AFA up to **₹1,00,000**.
 
-**What is the difference between RuPay Credit on UPI and Credit Line on UPI?**
+### What is the difference between RuPay Credit on UPI and Credit Line on UPI?
 RuPay Credit on UPI links your RuPay card to a UPI app for QR payments with card billing; Credit Line on UPI is a bank line attached to your UPI ID with no card at all per [RBI Sep 4 2023](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12532&Mode=0). Since Jun 23 2026, credit lines follow the same prudential norms as base loans.
 
-**When do UPI AutoPay debits actually run after Aug 1 2025?**
+### When do UPI AutoPay debits actually run after Aug 1 2025?
 Only in non-peak windows — **before 10:00, 13:00–17:00, after 21:30 IST** per [Times of India NPCI rules](https://timesofindia.indiatimes.com/business/india-business/upi-system-changes-new-npci-rules-kick-in-from-august-1-all-you-need-to-know/articleshow/123025161.cms). One initial attempt plus up to three retries.
 
-**Can a Laravel SaaS use UPI AutoPay for usage billing?**
+### Can a Laravel SaaS use UPI AutoPay for usage billing?
 Yes — use a **variable mandate with a ceiling** per [Paytm Mar 19 2026](https://paytm.com/blog/bill-payments/upi-autopay/variable-payments-made-easy-upi-autopay/). Each cycle you debit the actual usage within that ceiling; the 24h notice carries the exact amount.
 
-**Does canceling a subscription auto-revoke the mandate?**
+### Does canceling a subscription auto-revoke the mandate?
 No. Per [Finin2min Jun 7 2026](https://finin2min.com/articles/upi-autopay-and-mandates-convenience-or-silent-leakage.html), you must cancel with the merchant and also revoke the UPI mandate in the UPI app (or via upihelp.npci.org.in), then keep the mandate ID and revocation proof.
 
 ---

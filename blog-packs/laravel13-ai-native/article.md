@@ -93,10 +93,10 @@ This is how we hit **98 Lighthouse without a SPA**: server-driven Blade/Livewire
 **Zero-headache upgrade (battle-tested):**
 ```bash
 composer outdated --direct # audit packages first — #1 blocker
-# composer.json
+// composer.json — require section
 "php": "^8.3", "laravel/framework": "^13.0"
 composer update && php artisan config:clear && php artisan cache:clear && php artisan view:clear
-# run tests + benchmark + check deprecations on staging before prod
+// NOTE: run tests + benchmark + check deprecations on staging before prod
 ```
 Per XCO, modern PHP tools smooth this: **PHPantom** language server, **phpm** Rust Composer, **phpustik** MCP server, **Pest AI-native tests**, **PhpStorm 2026.2** with Laravel 13 AI support.
 

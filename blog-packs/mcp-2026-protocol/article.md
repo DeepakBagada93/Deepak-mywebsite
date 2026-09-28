@@ -66,7 +66,7 @@ class SearchDocsTool {
 
 **Step 2 — expose via FastMCP (Python) or phpustik (PHP):**
 ```python
-# FastMCP — 15 lines
+## FastMCP — 15 lines
 from fastmcp import FastMCP
 mcp = FastMCP("gujarat-docs")
 @mcp.tool()
@@ -79,8 +79,8 @@ Per **Pluralsight — FastMCP Foundations (Nov 2025 + Aug 2026 lab)**, FastMCP h
 **Step 3 — connect and verify:**
 ```bash
 php artisan dev # starts vite, queue, phpustik MCP server // Trends Jul 20
-# in agent config: add mcpServers.gujarat-docs = { command: "python mcp.py" }
-# test: agent calls search_docs({"query":"DPDP ledger export","tenant_id":"junagadh-001"})
+// in agent config: add mcpServers.gujarat-docs = { command: "python mcp.py" }
+// test: agent calls search_docs({"query":"DPDP ledger export","tenant_id":"junagadh-001"})
 ```
 
 Per Pluralsight’s Guided Lab (1h), you will have a working MCP server in under an hour — the rest is governance, not plumbing.

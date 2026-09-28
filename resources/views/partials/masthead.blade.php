@@ -5,7 +5,7 @@
 
         <nav class="masthead__nav" id="nav">
             <a href="{{ route('services.index') }}">Services</a>
-            <a href="/#about">About</a>
+            <a href="{{ route('legal.about') }}">About</a>
             <div class="masthead__nav-item" id="tools-nav-item">
                 <button type="button" class="masthead__nav-trigger" id="tools-trigger" aria-expanded="false" aria-controls="tools-popover">
                     Tools <span class="masthead__nav-arrow" aria-hidden="true">▾</span>
@@ -102,7 +102,7 @@
             </div>
             <a href="{{ route('library.index') }}">Library</a>
             <a href="{{ route('journal.index') }}">Journal</a>
-            <a href="/#contact">Contact</a>
+            <a href="{{ route('legal.contact') }}">Contact</a>
         </nav>
 
         <div class="masthead__meta">

@@ -1,7 +1,7 @@
 # Meta — google ai overviews aeo 2026
 
 **Meta title:** Google AI Overviews AEO 2026: 58% CTR Playbook
-**Meta description:** Google AI Overviews AEO 2026: survive 58% CTR drop (Ahrefs 300K + Seer 3K). SEO vs AEO vs GEO + Gujarat checklist. Start today.
+**Meta description:** Google AI Overviews AEO 2026: survive 58% CTR drop (Ahrefs 300K + Seer 3K). SEO vs AEO vs GEO + Gujarat checklist. Start today. Plus CTR tables and rollout plan
 **Slug:** /google-ai-overviews-aeo-2026-ctr-playbook/
 **Target word count:** 1700–1900
 **Author:** Deepak Bagada — SEO/AEO Expert Junagadh — linkedin.com/in/deepak-bagada

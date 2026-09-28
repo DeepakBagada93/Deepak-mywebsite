@@ -23,6 +23,7 @@ $app = require __DIR__ . '/../../../../bootstrap/app.php';
 $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
 
 use App\Models\Post;
+use App\Support\WordCount;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 
@@ -70,7 +71,7 @@ foreach ($duePosts as $p) {
         continue;
     }
 
-    $words = str_word_count(strip_tags($p->content));
+    $words = WordCount::count($p->content);
     $readTime = max(1, (int) ceil($words / 200)) . ' min read';
 
     // 1. Direct upsert into `posts` table
@@ -111,8 +112,7 @@ foreach ($duePosts as $p) {
                 . "        'title' => '{$escapedTitle}',\n"
                 . "        'slug' => '{$p->slug}',\n"
                 . "        'tag' => '{$escapedTag}',\n"
-                . "        'date' => '{$postDate}',\n"
-                . "        'read_time' => '{$readTime}',\n"
+                . "        'published_at' => '{$postDate}',\n"
                 . "        'excerpt' => '{$escapedExcerpt}',\n"
                 . "        'body' => <<<'BODY'\n"
                 . $p->content . "\n"

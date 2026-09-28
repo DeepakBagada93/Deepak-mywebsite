@@ -1,7 +1,7 @@
 # Meta — UPI AutoPay Credit on UPI Gujarat 2026
 
 **Meta title:** UPI AutoPay Credit on UPI Gujarat 2026: SaaS Guide
-**Meta description:** UPI AutoPay Credit on UPI Gujarat 2026: 18.5B txns, AutoPay 2.0 dynamic, RuPay vs Credit Line, RBI ₹15k rule + Laravel billing. Build it.
+**Meta description:** UPI AutoPay Credit on UPI Gujarat 2026: 18.5B txns, AutoPay 2.0 dynamic, RuPay vs Credit Line, RBI ₹15k rule + Laravel billing. Build it. Covers RBI limits, man
 **Slug:** upi-autopay-credit-on-upi-2026-gujarat-v3
 **Target word count:** 1600–1800
 **Author:** Deepak Bagada — Laravel SaaS Builder & UPI Billing Specialist, Junagadh, Gujarat — linkedin.com/in/deepak-bagada
