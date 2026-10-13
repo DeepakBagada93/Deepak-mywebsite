@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "developer": "Deepak Bagada",
             "skills": ["Laravel", "Next.js", "AI Engineering", "Automation"],
             "metrics": {
-                "active_tools": 34,
+                "active_tools": 28,
                 "monthly_visitors": 250000,
                 "rating": 4.98
             },

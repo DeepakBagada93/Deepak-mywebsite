@@ -49,6 +49,8 @@
 
     let selectedFiles = [];
 
+    const escapeHtml = (s) => s.replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+
     const formatBytes = (bytes) => {
         if (bytes === 0) return '0 B';
         const k = 1024;
@@ -72,7 +74,7 @@
             li.className = 'tool-file-item';
             li.innerHTML = `
                 <span class="tool-file-item__order mono">${String(index + 1).padStart(2, '0')}</span>
-                <span class="tool-file-item__name">${file.name}</span>
+                <span class="tool-file-item__name">${escapeHtml(file.name)}</span>
                 <span class="tool-file-item__size mono">${formatBytes(file.size)}</span>
                 <button type="button" class="tool-file-item__del" data-index="${index}" title="Remove file">×</button>
             `;

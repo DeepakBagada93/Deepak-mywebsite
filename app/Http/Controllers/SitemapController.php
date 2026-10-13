@@ -24,9 +24,10 @@ class SitemapController extends Controller
         $services = Service::orderBy('id')->get();
         $skills = Skill::published()->get();
         $blueprints = SkillArchitecture::orderBy('sort_order', 'asc')->get();
+        $tools = config('tools');
 
         return response()
-            ->view('sitemap', compact('url', 'posts', 'services', 'skills', 'blueprints'))
+            ->view('sitemap', compact('url', 'posts', 'services', 'skills', 'blueprints', 'tools'))
             ->header('Content-Type', 'application/xml');
     }
 }

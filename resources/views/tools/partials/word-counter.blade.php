@@ -114,11 +114,19 @@
 
     copyBtn.addEventListener('click', () => {
         if (!textarea.value) return;
-        navigator.clipboard.writeText(textarea.value).then(() => {
-            const originalText = copyBtn.textContent;
-            copyBtn.textContent = 'Copied!';
-            setTimeout(() => copyBtn.textContent = originalText, 1500);
-        });
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textarea.value).then(() => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => copyBtn.textContent = originalText, 1500);
+            }).catch(() => {
+                textarea.select();
+                document.execCommand('copy');
+            });
+        } else {
+            textarea.select();
+            document.execCommand('copy');
+        }
     });
 
     clearBtn.addEventListener('click', () => {

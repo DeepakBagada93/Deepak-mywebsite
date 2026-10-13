@@ -118,20 +118,47 @@
         @php
             $schema = [
                 '@context' => 'https://schema.org',
-                '@type' => 'WebApplication',
-                'name' => $tool['name'],
-                'url' => config('site.url') . '/tools/' . $tool['slug'],
-                'applicationCategory' => 'Utility',
-                'operatingSystem' => 'Web Browser',
-                'offers' => [
-                    '@type' => 'Offer',
-                    'price' => '0',
-                    'priceCurrency' => 'INR',
-                ],
-                'author' => [
-                    '@type' => 'Person',
-                    'name' => 'Deepak Bagada',
-                    'url' => 'https://deepakbagada.in',
+                '@graph' => [
+                    [
+                        '@type' => 'WebApplication',
+                        'name' => $tool['name'],
+                        'url' => config('site.url') . '/tools/' . $tool['slug'],
+                        'applicationCategory' => 'Utility',
+                        'operatingSystem' => 'Web Browser',
+                        'offers' => [
+                            '@type' => 'Offer',
+                            'price' => '0',
+                            'priceCurrency' => 'INR',
+                        ],
+                        'author' => [
+                            '@type' => 'Person',
+                            'name' => 'Deepak Bagada',
+                            'url' => 'https://deepakbagada.in',
+                        ],
+                    ],
+                    [
+                        '@type' => 'BreadcrumbList',
+                        'itemListElement' => [
+                            [
+                                '@type' => 'ListItem',
+                                'position' => 1,
+                                'name' => 'Tools',
+                                'item' => config('site.url') . '/tools',
+                            ],
+                            [
+                                '@type' => 'ListItem',
+                                'position' => 2,
+                                'name' => $tool['category'],
+                                'item' => config('site.url') . '/tools?category=' . $tool['category_slug'],
+                            ],
+                            [
+                                '@type' => 'ListItem',
+                                'position' => 3,
+                                'name' => $tool['name'],
+                                'item' => config('site.url') . '/tools/' . $tool['slug'],
+                            ],
+                        ],
+                    ],
                 ],
             ];
         @endphp

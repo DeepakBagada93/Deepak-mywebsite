@@ -32,6 +32,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>{{ $url }}/tools</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>{{ $url }}/stack</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -82,6 +87,13 @@
         <lastmod>{{ $bp->updated_at->toDateString() }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
+    </url>
+    @endforeach
+    @foreach ($tools as $tool)
+    <url>
+        <loc>{{ $url }}/tools/{{ $tool['slug'] }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     @endforeach
     @foreach ($posts as $post)
