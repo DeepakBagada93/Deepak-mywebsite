@@ -11,9 +11,19 @@
 
 ## 📊 Summary of Outreach & Newsletter Dispatches
 
-| Batch ID | Date | Subject Line | Target Segment | Count | Status | Notes |
+| Batch ID | Date | Subject Line | Target Segment | Count | St  tus | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | *INIT* | 2026-09-25 | Welcome & Initial Setup | System Verification | 1 | Verified | Brevo live SMTP verified to `ceo@saasnext.in` |
+| **BATCH-01** | 2026-09-25 | // [Blueprint] Why 80% of Multi-Agent Swarms Fail in Prod | US, Australia, Dubai (AI Agencies & Tech Leads) | 30 | Dispatched | Logged in `follow-ups.json`; follow-ups due 2026-09-29 |
+| **US-50-PROPOSED** | 2026-09-26 | // [Blueprint] 62 tok/s local RAG cuts $40K burn | US-only (SF, NYC, Austin, Seattle, Boston, Chicago, Miami, Denver/LA) | 50 | Proposed — NOT SENT | Leads in `leads-50-us.json`; proposal in `us-50-email-proposal.md`; tracker `us-50-followups.json`; audit PASS; awaiting approval |
+| **BATCH-US-50-S1** | 2026-09-26 | // [Blueprint] 62 tok/s local RAG cuts $40K burn | US Bay Area S1 (US-001–US-010) | 10 | Dispatched 10/10 | Draft `dispatch-us50-s1.html`; source `outreach_us_50_2026`; follow-ups due 2026-09-30 |
+| **BATCH-US-50-S2** | 2026-09-26 | // [Blueprint] 62 tok/s local RAG cuts $40K burn | US NYC/Boston S2 (US-011–US-020) | 10 | Dispatched 10/10 | Same draft; 3s throttle; follow-ups due 2026-09-30 |
+| **BATCH-US-50-S3** | 2026-09-26 | // [Blueprint] 62 tok/s local RAG cuts $40K burn | US Texas S3 (US-021–US-030) | 10 | Dispatched 10/10 | Same draft; 3s throttle; follow-ups due 2026-09-30 |
+| **BATCH-US-50-S4** | 2026-09-26 | // [Blueprint] 62 tok/s local RAG cuts $40K burn | US Central S4 (US-031–US-040) | 10 | Dispatched 10/10 | Incl. pattern-verified US-034 OK; follow-ups due 2026-09-30 |
+| **BATCH-US-50-S5** | 2026-09-26 | // [Blueprint] 62 tok/s local RAG cuts $40K burn | US Sunbelt/West S5 (US-041–US-050) | 10 | Dispatched 10/10 after 3 retries | SMTP timeout + 2x DB retry recovered; all logged in `us-50-followups.json` 50/50 sent |
+| **BATCH-MCP-60-S1** | 2026-09-27 | [MCP Teardown] 60% faster tools for Claude + GPT | US fresh S1 (MCP-001–MCP-010: Austin/Seattle/Boston) | 10 | Dispatched 10/10 | Draft `dispatch-mcp-60-s1.html`; source `mcp_60_2026`; audit PASS 0 issues; DB pre-check 32/32 eligible, zero overlap vs prior 80; leads pool `leads-60-mcp.json` (32 verified + 28 query-slots); tracker `mcp-60-followups.json`; follow-ups due 2026-10-01 |
+| **BATCH-MCP-60-S2** | 2026-09-27 | [MCP Teardown] 60% faster tools for Claude + GPT | US-tail + AU S2 (MCP-011–MCP-020) | 10 | Dispatched 10/10 | Same draft; 3s throttle; follow-ups due 2026-10-01 |
+| **BATCH-MCP-60-S3** | 2026-09-27 | [MCP Teardown] 60% faster tools for Claude + GPT | AU + Dubai S3 (MCP-021–MCP-032) | 12 | Dispatched 12/12 | Same draft; 3s throttle; 32/32 verified pool complete; MCP-033..060 remain query-slots (verify website before any send); follow-ups due 2026-10-01 |
 
 ---
 

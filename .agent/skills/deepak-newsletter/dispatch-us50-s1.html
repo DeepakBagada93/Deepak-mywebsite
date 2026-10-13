@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><body style="font-family:Arial,sans-serif;line-height:1.6;color:#111;max-width:640px;margin:0 auto;padding:20px;">
+<p>Hey {{NAME}} — Deepak here, founder building production AI agents from Junagadh, India.</p>
+<p>Last month I watched a US voice-agent team burn $40K/mo on cloud tokens for 200+ calls/day — same loop I see in SF and Bay Area builds: brittle prompt chains, no tool timeouts, vector search without reciprocal rank fusion.</p>
+<p>The reality: most multi-agent swarms don't fail on models. They fail on orchestration — no OPA policy gate, no typed Pydantic tool schemas, no human-in-the-loop checkpoint before refunds or charges.</p>
+<p><b>The governed stack I ship (Laravel 12 + Next.js + LangGraph):</b></p>
+<pre style="background:#f5f5f5;padding:12px;border-radius:6px;">user -&gt; orchestrator -&gt; [retriever: BM25 + pgvector + RRF]
+      -&gt; tool_gate (OPA: allow/deny) -&gt; executor (PydanticAI)
+      -&gt; HITL if confidence &lt; 0.82 -&gt; audit_log</pre>
+<p><b>Numbers from my bench (Pi 5 + Ollama vs cloud):</b></p>
+<ul>
+<li>Local RAG: 62 tok/s, 42ms P95 retrieval, ~$0/query</li>
+<li>GPT-4o-mini: ~$0.0002/q | Claude 3.7: ~$0.005/q | GPT-4.1: ~$0.007/q</li>
+<li>Hybrid BM25 + pgvector + rerank: +31% recall on support docs</li>
+<li>MCP schema shrink: -60% tool latency</li>
+</ul>
+<p>Full teardown + runnable 10-line FastAPI MCP pattern in my open library:<br><a href="https://deepakbagada.in/library">deepakbagada.in/library</a></p>
+<p>Quick question to earn your reply: how are you handling tool timeout fallbacks in your agent loop right now? Hit reply — I read every response.</p>
+<hr>
+<p style="font-size:12px;color:#555;">— Deepak Bagada, Junagadh, Gujarat 362001, India<br>
+ceo@saasnext.in | <a href="https://deepakbagada.in">deepakbagada.in</a><br>
+You received this because your team builds AI agents in the US. <a href="{{UNSUBSCRIBE_URL}}">Unsubscribe one-click</a> | {{EMAIL}}</p>
+</body></html>

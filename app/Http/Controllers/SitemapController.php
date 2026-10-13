@@ -17,8 +17,8 @@ class SitemapController extends Controller
         // Exclude thin posts (<900 words, auditor-consistent count) so Google
         // focuses crawl budget on substantial pages (AdSense low-value fix).
         // Also exclude duplicate-variant slugs (canonical consolidation).
-        $posts = Post::published()->get()
-            ->reject(fn (Post $p) => (bool) preg_match('/-(variant-\d+|v\d+)$/', $p->slug))
+        $posts = Post::published()->canonical()->get()
+            ->reject(fn (Post $p) => Post::isVariantSlug($p->slug))
             ->reject(fn (Post $p) => WordCount::count($p->content) < 900)
             ->values();
         $services = Service::orderBy('id')->get();

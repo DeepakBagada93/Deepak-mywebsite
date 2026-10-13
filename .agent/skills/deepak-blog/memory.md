@@ -2666,3 +2666,475 @@
   - Words: 709
   - Scheduled Slot: `09:30 AM IST`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 15.5 PPR & Cache: TTFB Sub-60ms in Production [2026]**
+  - Slug: `nextjs-15-ppr-cache-sub-60ms-ttfb-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-25`
+  - Words: 699
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Developer Gujarat 2026: 7-Point Vetting [Guide]**
+  - Slug: `best-ai-developer-gujarat-vetting-checklist-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-26`
+  - Words: 725
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Zero-Trust Agent Gateways: OPA, Scoped JWT & Logs [2026]**
+  - Slug: `zero-trust-agent-gateways-opa-jwt-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-09-26`
+  - Words: 711
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Day in Life: AI Developer Gujarat Routine 06:00–22:00 [2026]**
+  - Slug: `day-in-life-ai-developer-routine-junagadh-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-26`
+  - Words: 715
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Expert World 2026: India Rates vs Metro [Proof]**
+  - Slug: `best-ai-expert-world-india-roi-proof-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-27`
+  - Words: 729
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Local LLMs Offline in India: 70B Quantized on VPS [2026]**
+  - Slug: `local-llms-offline-india-edge-vps-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-27`
+  - Words: 715
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel 13 Passkeys: Passwordless Auth in 10 Mins [2026]**
+  - Slug: `laravel-13-passkeys-webauthn-full-code-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-27`
+  - Words: 693
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best Website Developer Gujarat 2026: Next.js + PHP [Proof]**
+  - Slug: `best-website-developer-gujarat-nextjs-laravel-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-28`
+  - Words: 727
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Pydantic AI + LangGraph: Type-Safe Agents That Ship [2026]**
+  - Slug: `pydantic-ai-langgraph-type-safe-agents-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-09-28`
+  - Words: 711
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Building Curro 1.0 from Junagadh: AI Studio Metrics [2026]**
+  - Slug: `building-curro-ai-studio-junagadh-metrics-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-09-28`
+  - Words: 1441
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Agent Developer India 2026: 7-Point Vetting [Hire]**
+  - Slug: `best-ai-agent-developer-india-vetting-sla-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-29`
+  - Words: 1435
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Stateful MCP Agent Clusters: Tasks & Skills Guide [2026]**
+  - Slug: `stateful-mcp-agent-clusters-tasks-skills-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-09-29`
+  - Words: 1414
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel 13 + Valkey Cache: Sub-10ms Session Store [2026]**
+  - Slug: `laravel-13-valkey-cache-sub-10ms-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-29`
+  - Words: 1384
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best Website Developer Junagadh 2026: ₹55K Proof [Guide]**
+  - Slug: `best-website-developer-junagadh-99-lighthouse-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-30`
+  - Words: 1416
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Self-Healing Agent Loops in Production: Auto-Retry [2026]**
+  - Slug: `self-healing-agent-loops-production-rollback-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-09-30`
+  - Words: 1422
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js Turbopack vs Vite 6: Build Benchmarks [2026]**
+  - Slug: `nextjs-turbopack-vs-vite-benchmarks-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-09-30`
+  - Words: 1372
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best Website Developer World 2026: India Dev Rates [Comparison]**
+  - Slug: `best-website-developer-world-rates-comparison-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-01`
+  - Words: 1493
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **[Blueprint] MCP Stream Multiplexing: SSE Agents in Production [2026]**
+  - Slug: `mcp-stream-multiplexing-sse-production-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-01`
+  - Words: 1502
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why We Ditched Vector SaaS: ₹1.2L Saved with pgvector [Proof]**
+  - Slug: `why-we-ditched-vector-saas-pgvector-savings-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-01`
+  - Words: 1495
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Agent Developer Gujarat 2026: 7-Point Vetting [Guide]**
+  - Slug: `best-ai-agent-developer-gujarat-vetting-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-02`
+  - Words: 1382
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Browser-Use Agents with Playwright: Zero-Flake Automation [2026]**
+  - Slug: `browser-use-agents-playwright-automation-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-02`
+  - Words: 1430
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel 13 AI SDK: Streaming Responses & Tool Calling [Full Code]**
+  - Slug: `laravel-13-ai-sdk-streaming-tool-calling-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-02`
+  - Words: 1493
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Top AI Expert Gujarat 2026: P95 42ms & WhatsApp Agents [Proof]**
+  - Slug: `top-ai-expert-gujarat-whatsapp-p95-proof-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-03`
+  - Words: 1436
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Multi-Agent Consensus: Debate Protocols with LangGraph [2026 Guide]**
+  - Slug: `multi-agent-consensus-debate-protocols-langgraph-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-03`
+  - Words: 1335
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Solo Dev Hardware Stack 2026: Mac Studio + VPS Fleet [Junagadh Lab]**
+  - Slug: `solo-dev-hardware-stack-mac-studio-vps-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-03`
+  - Words: 1388
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Developer India 2026: ₹85K Production Builds [Hire]**
+  - Slug: `best-ai-developer-india-production-builds-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-04`
+  - Words: 1441
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Real-Time Voice Agents: WebSockets & Sub-300ms Audio [2026 Blueprint]**
+  - Slug: `real-time-voice-agents-websockets-sub-300ms-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-04`
+  - Words: 1445
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 15.5 Server Actions vs API Routes: Cold-Start Benchmarks [2026]**
+  - Slug: `nextjs-15-server-actions-vs-api-routes-benchmarks-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-04`
+  - Words: 1485
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Agent Developer Junagadh 2026: Local SME ROI [Proof Table]**
+  - Slug: `best-ai-agent-developer-junagadh-sme-roi-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-05`
+  - Words: 1536
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Production Agent Tracing: OpenTelemetry & Phoenix Ledgers [2026]**
+  - Slug: `production-agent-tracing-opentelemetry-phoenix-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-05`
+  - Words: 1371
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Post-Mortem: When an Agent Loop Spent $400 in 2 Hours [Lessons]**
+  - Slug: `post-mortem-agent-infinite-loop-cost-leak-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-05`
+  - Words: 1499
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Hire Full Stack Developer Gujarat 2026: Next.js + Laravel [Guide]**
+  - Slug: `hire-full-stack-developer-gujarat-rates-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-06`
+  - Words: 1336
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Enterprise RAG Evaluation: Ragas & DeepEval Pipelines [2026 Guide]**
+  - Slug: `enterprise-rag-evaluation-ragas-deepeval-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-06`
+  - Words: 1370
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Postgres Row-Level Security: Multi-Tenant Agent Databases [Full Code]**
+  - Slug: `postgres-rls-multi-tenant-agent-databases-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-06`
+  - Words: 1438
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Expert Junagadh 2026: ₹85K Agent Architectures [Guide]**
+  - Slug: `best-ai-expert-junagadh-agent-architectures-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-07`
+  - Words: 1377
+  - Scheduled Slot: `06:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Agentic SQL Generation: OPA Guards & Zero Injection [2026 Blueprint]**
+  - Slug: `agentic-sql-generation-opa-guards-safety-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-07`
+  - Words: 1470
+  - Scheduled Slot: `09:30 AM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Building AI Outreach Engines: 42% Reply Rate Without Spam [Playbook]**
+  - Slug: `building-ai-outreach-engine-reply-rate-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-07`
+  - Words: 1495
+  - Scheduled Slot: `06:30 PM IST`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Agent Developer World 2026: SV vs India [Proof]**
+  - Slug: `best-ai-agent-developer-world-rates-comparison-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-08`
+  - Words: 1544
+  - Scheduled Slot: `06:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Model Fine-Tuning India: 16GB Unsloth LoRA [2026 Guide]**
+  - Slug: `fine-tuning-reasoning-models-unsloth-lora-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-08`
+  - Words: 1478
+  - Scheduled Slot: `09:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Workers on Tailscale: Zero-Public IP [India 2026]**
+  - Slug: `tailscale-mesh-distributed-agent-workers-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-08`
+  - Words: 1472
+  - Scheduled Slot: `06:30 PM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js Developer India 2026: ₹55K Rates vs Agencies [Guide]**
+  - Slug: `nextjs-developer-india-sme-rates-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-09`
+  - Words: 1484
+  - Scheduled Slot: `06:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Memory Trees in India: Mem0 + Qdrant [2026 Guide]**
+  - Slug: `hierarchical-memory-trees-mem0-qdrant-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-09`
+  - Words: 1507
+  - Scheduled Slot: `09:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Developer Bootstrapping Junagadh: ₹4.2L ARR [2026 Playbook]**
+  - Slug: `bootstrapping-saasnext-junagadh-arr-metrics-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-09`
+  - Words: 1507
+  - Scheduled Slot: `06:30 PM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel AI Developer India 2026: P95 40ms Stack [Playbook]**
+  - Slug: `laravel-ai-developer-india-vetting-checklist-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-10`
+  - Words: 1504
+  - Scheduled Slot: `06:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Reflexion Loops India: Self-Correction [2026 Guide]**
+  - Slug: `self-reflecting-agent-swarms-reflexion-langgraph-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-10`
+  - Words: 1560
+  - Scheduled Slot: `09:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Web Developer SQLite: Sub-5ms Reads [India 2026 Guide]**
+  - Slug: `sqlite-litestream-production-sub-5ms-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-10`
+  - Words: 1496
+  - Scheduled Slot: `06:30 PM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Hire AI Developer India 2026: 90-Day SLA Proof [Playbook]**
+  - Slug: `hire-ai-developer-india-90-day-guarantee-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-11`
+  - Words: 1498
+  - Scheduled Slot: `06:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Model vLLM on Hetzner: Sub-$50/Mo Inference [India 2026]**
+  - Slug: `dockerizing-vllm-hetzner-cheap-inference-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-11`
+  - Words: 1474
+  - Scheduled Slot: `09:30 AM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Developer Remote Deals: $12K Contracts [Junagadh 2026 Guide]**
+  - Slug: `junagadh-to-global-clients-closing-deals-remotely-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-11`
+  - Words: 1484
+  - Scheduled Slot: `06:30 PM IST (Phase 1)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Top Website Developer India 2026: 99 Scores & ₹55K [Proof]**
+  - Slug: `top-website-developer-india-lighthouse-proof-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-12`
+  - Words: 1463
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Human-in-the-Loop: Slack Gates [India 2026 Guide]**
+  - Slug: `human-in-the-loop-agent-approval-gates-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-12`
+  - Words: 1503
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Model Claude 3.7 vs Gemini 2.5: Pricing [India 2026]**
+  - Slug: `claude-3-7-vs-gemini-2-5-flash-benchmark-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-12`
+  - Words: 1471
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Web Developer Turso Edge DB: Sub-20ms Reads [India 2026]**
+  - Slug: `turso-edge-database-nextjs-worldwide-reads-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-12`
+  - Words: 1478
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Developer Inquiries: Why I Turn Down 80% [Junagadh 2026]**
+  - Slug: `why-i-turn-down-client-inquiries-scope-lock-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-12`
+  - Words: 1473
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Architect India 2026: SME Systems [Playbook]**
+  - Slug: `best-ai-solutions-architect-india-sme-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-13`
+  - Words: 1488
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Swarms Event-Driven: Redis + Celery [India 2026]**
+  - Slug: `event-driven-agent-swarms-redis-streams-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-13`
+  - Words: 1475
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Model DeepSeek V4 Architecture: Multi-Token [India 2026]**
+  - Slug: `deepseek-v4-architecture-multi-token-prediction-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-13`
+  - Words: 1461
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Web Developer Next.js 15 Dynamic IO: Caching [India 2026]**
+  - Slug: `nextjs-dynamic-io-cache-life-guide-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-13`
+  - Words: 1478
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Developer Shipping System: Git & Cron [Junagadh 2026 Guide]**
+  - Slug: `daily-shipping-operating-system-notion-cron-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-13`
+  - Words: 1476
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

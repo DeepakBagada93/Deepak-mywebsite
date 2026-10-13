@@ -14,15 +14,19 @@ class PostSeeder extends Seeder
      * syncs it into the `posts` table using the exact same shape as
      * publish_blog.py: id = slug, body in `content`, tag in `category`,
      * published date in `date`.
+     *
+     * NON-DESTRUCTIVE by design: upsert-only, never deletes. The blog
+     * pipeline publishes directly to the live DB without a git commit, so
+     * a deploy-time reseed must never wipe those newer live-only rows.
+     * To remove a post, delete it explicitly (phpMyAdmin or a dedicated
+     * command) — never via this seeder.
      */
     public function run(): void
     {
         $posts = require base_path('data/posts.php');
 
-        // Atomic sync: upsert every post and delete only rows that no longer
-        // exist in data/posts.php. Never truncate — a truncate leaves the posts
-        // table empty for the duration of the insert, which makes the live
-        // journal briefly show stale/missing posts until the next refresh.
+        // Upsert-only sync (no truncate, no delete): rows are matched by
+        // id (= slug), so re-running is idempotent and safe on live.
         $rows = array_map(static function (array $item) {
             // WordCount mirrors the JS auditor (strip_tags undercounts code/tables).
             $words = WordCount::count($item['body'] ?? '');
@@ -44,12 +48,10 @@ class PostSeeder extends Seeder
         }, $posts);
 
         DB::transaction(static function () use ($rows): void {
-            $keepIds = array_column($rows, 'id');
-
-            DB::table('posts')
-                ->whereNotIn('id', $keepIds)
-                ->delete();
-
+            // Upsert-only: never delete rows missing from data/posts.php.
+            // Live posts published directly to the DB (zero-git-push flow)
+            // are newer than the last committed file — deleting them here
+            // is what made /journal lose its latest entries after deploys.
             DB::table('posts')->upsert(
                 $rows,
                 ['id'],

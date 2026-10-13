@@ -14,10 +14,10 @@ class PortfolioController extends Controller
         $site = config('site');
         $url = rtrim($site['url'], '/');
 
-        $posts = Post::published()->take(30)->get()
-            ->reject(fn (Post $p) => (bool) preg_match('/-(variant-\d+|v\d+)$/', $p->slug))
+        $posts = Post::published()->canonical()->take(30)->get()
+            ->reject(fn (Post $p) => Post::isVariantSlug($p->slug))
             ->take(20)->values();
-        $postsTotal = Post::published()->count();
+        $postsTotal = Post::published()->canonical()->count();
         $projects = Project::orderBy('sort_order')->get();
         $faqs = Faq::orderBy('sort_order')->get();
         $services = Service::orderBy('id')->get();

@@ -1,9 +1,12 @@
 #!/usr/bin/env php
 <?php
+// All slot times are IST wall-clock — force IST so `scheduled_for <= NOW()`
+// comparisons fire on time regardless of server/PHP default timezone (UTC).
+date_default_timezone_set('Asia/Kolkata');
 /**
  * process-scheduled-posts.php — Autonomous Scheduled Post Processor
  *
- * Runs automatically at preferred times (06:30, 09:30, 18:30 IST) to:
+ * Runs automatically at preferred times (06:30, 09:30, 12:30, 15:30, 18:30 IST — Phase 2) to:
  * 1. Read pending dispatches from `scheduled_posts` table where `scheduled_for <= NOW()`
  * 2. Push due dispatches directly to Hostinger Live MySQL DB `posts` table
  * 3. Update local data/posts.php and clear application cache
@@ -21,6 +24,9 @@
 require __DIR__ . '/../../../../vendor/autoload.php';
 $app = require __DIR__ . '/../../../../bootstrap/app.php';
 $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+// Re-assert IST AFTER Laravel bootstrap (config/app.php hardcodes UTC,
+// which would skew `scheduled_for <= NOW()` slot comparisons by 5.5h).
+date_default_timezone_set('Asia/Kolkata');
 
 use App\Models\Post;
 use App\Support\WordCount;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><body style="font-family:Arial,sans-serif;line-height:1.6;color:#111;max-width:640px;margin:0 auto;padding:20px;">
+<p>Hey {{NAME}} — Deepak here, founder building production MCP servers from Junagadh, India.</p>
+<p>Last week I audited a US team's Claude agent with 27 tools loading on every call — 4.2s P95, $18K/mo burn, and two credential leaks via a community MCP server. Same pattern I see in Sydney and Dubai builds: bloated schemas, no timeouts, no policy gate.</p>
+<p>The reality: MCP doesn't fail on models. It fails on tool governance — no schema shrink, no OPA allow/deny, no HITL before shell/DB writes.</p>
+<p><b>The teardown I ship (FastAPI + JSON-RPC 2.0 + OPA):</b></p>
+<pre style="background:#f5f5f5;padding:12px;border-radius:6px;">host (Claude/GPT) -&gt; mcp_gateway [tool discovery]
+  -&gt; schema_shrink (drop 60% fields) -&gt; opa_gate (allow/deny)
+  -&gt; executor (FastAPI, 5s timeout, 5 retries max)
+  -&gt; HITL if write/conf &lt; 0.82 -&gt; audit_log</pre>
+<p><b>Numbers from my bench:</b></p>
+<ul>
+<li>MCP schema shrink: -60% tool latency (4.2s -&gt; 1.7s P95)</li>
+<li>Local RAG + MCP: 62 tok/s, 42ms P95 retrieval, ~$0/query</li>
+<li>Hybrid BM25 + pgvector + RRF rerank: +31% recall</li>
+<li>Scoped tools (2-3 per subagent) + circuit breaker: zero runaway bills in 90 days</li>
+</ul>
+<p><b>Open GitHub + blueprints to share with your team:</b></p>
+<ul>
+<li>GitHub: <a href="https://github.com/DeepakBagada93">github.com/DeepakBagada93</a> — MCP builder, agent skills, automation pipelines</li>
+<li>Blueprint: <a href="https://deepakbagada.in/library/mcp-agent-builder">MCP Agent Builder &amp; Protocol Server Pipeline</a> (schema contracts, FastAPI, verification audits)</li>
+<li>Arch diagram: <a href="https://deepakbagada.in/blueprints">MCP Server Architecture — FastAPI/AsyncIO via JSON-RPC 2.0</a></li>
+<li>All repos: <a href="https://deepakbagada.in/repos">deepakbagada.in/repos</a> | Journal: <a href="https://deepakbagada.in/journal">MCP in 2026 field notes</a></li>
+</ul>
+<p>Runnable 10-line FastAPI MCP pattern + 10-point security checklist (sandbox, ephemeral tokens, audit source first) is in the blueprint above — no opt-in. Forward this to one founder wrestling with tool latency — they'll thank you.</p>
+<p>Quick question to earn your reply: how are you handling tool timeout fallbacks + permission scoping in your MCP loop right now? Hit reply — I read every response.</p>
+<p>Want the weekly dispatch? <a href="https://deepakbagada.in/library">Join here</a> — zero spam, one-click unsubscribe.</p>
+<hr>
+<p style="font-size:12px;color:#555;">— Deepak Bagada, Junagadh, Gujarat 362001, India<br>
+ceo@saasnext.in | <a href="https://deepakbagada.in">deepakbagada.in</a><br>
+You received this because your team builds AI agents/MCP in US/AU/UAE. <a href="{{UNSUBSCRIBE_URL}}">Unsubscribe one-click</a> | {{EMAIL}}</p>
+</body></html>

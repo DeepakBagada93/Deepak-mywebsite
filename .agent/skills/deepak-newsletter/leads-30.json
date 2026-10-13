@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Microcis Team",
+    "company": "Microcis",
+    "email": "info@microcis.net",
+    "region": "us",
+    "niche": "agents"
+  },
+  {
+    "name": "AI Superior Team",
+    "company": "AI Superior",
+    "email": "info@aisuperior.com",
+    "region": "us",
+    "niche": "agents"
+  },
+  {
+    "name": "Ichelon Team",
+    "company": "Ichelon Consulting",
+    "email": "contact@ichelonconsulting.com",
+    "region": "us",
+    "niche": "agents"
+  },
+  {
+    "name": "Kiwisoft NYC Team",
+    "company": "Kiwisoft Services",
+    "email": "nyc@kiwisoftservices.com",
+    "region": "us",
+    "niche": "web"
+  },
+  {
+    "name": "Kiwisoft Austin Team",
+    "company": "Kiwisoft Services",
+    "email": "austin@kiwisoftservices.com",
+    "region": "us",
+    "niche": "agents"
+  },
+  {
+    "name": "Innowise US Team",
+    "company": "Innowise Group",
+    "email": "info@innowise.us",
+    "region": "us",
+    "niche": "rag"
+  },
+  {
+    "name": "Neoteric AI Team",
+    "company": "Automation by AI",
+    "email": "info@aibyneoteric.com",
+    "region": "us",
+    "niche": "agents"
+  },
+  {
+    "name": "Markovate Team",
+    "company": "Markovate",
+    "email": "info@markovate.com",
+    "region": "us",
+    "niche": "agents"
+  },
+  {
+    "name": "LeewayHertz Team",
+    "company": "LeewayHertz",
+    "email": "sales@leewayhertz.com",
+    "region": "us",
+    "niche": "mcp"
+  },
+  {
+    "name": "10Clouds Team",
+    "company": "10Clouds",
+    "email": "reception@10clouds.com",
+    "region": "us",
+    "niche": "web"
+  },
+  {
+    "name": "Enterprise Monkey Team",
+    "company": "Enterprise Monkey",
+    "email": "sales@enterprisemonkey.com.au",
+    "region": "australia",
+    "niche": "web"
+  },
+  {
+    "name": "IOTAI Team",
+    "company": "IOTAI Australia",
+    "email": "contact@iotai.com.au",
+    "region": "australia",
+    "niche": "agents"
+  },
+  {
+    "name": "Nimbull Team",
+    "company": "Nimbull Digital",
+    "email": "contact@nimbull.com",
+    "region": "australia",
+    "niche": "web"
+  },
+  {
+    "name": "Nomad AI Team",
+    "company": "Nomad AI",
+    "email": "info@nomadai.com.au",
+    "region": "australia",
+    "niche": "agents"
+  },
+  {
+    "name": "AIPragmatists Team",
+    "company": "AIPragmatists",
+    "email": "info@aipragmatists.com.au",
+    "region": "australia",
+    "niche": "rag"
+  },
+  {
+    "name": "AI Automation AU Team",
+    "company": "AI Automation",
+    "email": "hello@ai-automation.au",
+    "region": "australia",
+    "niche": "agents"
+  },
+  {
+    "name": "Solium AI Team",
+    "company": "Solium AI",
+    "email": "admin@solium.ai",
+    "region": "australia",
+    "niche": "agents"
+  },
+  {
+    "name": "Web Video Digital Team",
+    "company": "Web Video Digital",
+    "email": "info@webvideodigital.com.au",
+    "region": "australia",
+    "niche": "web"
+  },
+  {
+    "name": "Bhalekar Team",
+    "company": "Bhalekar Consulting",
+    "email": "info@bhalekar.com.au",
+    "region": "australia",
+    "niche": "agents"
+  },
+  {
+    "name": "AI Automation Agency Team",
+    "company": "AI Automation Agency",
+    "email": "info@aiautomationagency.com.au",
+    "region": "australia",
+    "niche": "agents"
+  },
+  {
+    "name": "HYVE Labs Team",
+    "company": "HYVE AI Labs",
+    "email": "ai@hyve.ae",
+    "region": "dubai",
+    "niche": "agents"
+  },
+  {
+    "name": "HashCode Team",
+    "company": "HashCode",
+    "email": "support@hashcode.ae",
+    "region": "dubai",
+    "niche": "agents"
+  },
+  {
+    "name": "Codelabs Team",
+    "company": "Codelabs",
+    "email": "talk@codelabs.ae",
+    "region": "dubai",
+    "niche": "mcp"
+  },
+  {
+    "name": "Constient Team",
+    "company": "Constient",
+    "email": "info@constient.ae",
+    "region": "dubai",
+    "niche": "agents"
+  },
+  {
+    "name": "Suffescom Team",
+    "company": "Suffescom Solutions",
+    "email": "idea@suffescom.ae",
+    "region": "dubai",
+    "niche": "web"
+  },
+  {
+    "name": "DigeeX Team",
+    "company": "DigeeX AI",
+    "email": "info@digeesell.ae",
+    "region": "dubai",
+    "niche": "agents"
+  },
+  {
+    "name": "The AI Agency Team",
+    "company": "The AI Agency",
+    "email": "info@theaiagency.ae",
+    "region": "dubai",
+    "niche": "agents"
+  },
+  {
+    "name": "AI4SALE Team",
+    "company": "AI4SALE",
+    "email": "info@ai4.sale",
+    "region": "dubai",
+    "niche": "agents"
+  },
+  {
+    "name": "Socialtitli Team",
+    "company": "Socialtitli",
+    "email": "connect@socialtitli.com",
+    "region": "dubai",
+    "niche": "web"
+  },
+  {
+    "name": "Elitmind Team",
+    "company": "Elitmind AI",
+    "email": "contact.me@elitmind.com",
+    "region": "dubai",
+    "niche": "rag"
+  }
+]

@@ -16,8 +16,8 @@ description: >
   ZERO git commits/pushes needed — content goes live instantly via remote MySQL database.
 ---
 
-# 🚀 Deepak Bagada Viral & Rank-#1 Autonomous Journal Engine (`deepak-blog` v10.0)
-### (Progressive Crawl Budget Scaling Engine · High-CTR Symbols Edition · Zero Git Push Needed)
+# 🚀 Deepak Bagada Viral & Rank-#1 Autonomous Journal Engine (`deepak-blog` v10.1)
+### (Progressive Crawl Budget Scaling Engine · GSC Indexing Compliance · High-CTR Symbols Edition · Zero Git Push Needed)
 
 > [!IMPORTANT]
 > **CORE ARCHITECTURE: STRICT ITEM-BY-ITEM CLOSED LOOP & PROGRESSIVE SCALING**:
@@ -57,7 +57,8 @@ description: >
 > - **Step 5 — Direct Push to Live DB + Frontend**: Run `php .agent/skills/deepak-blog/scripts/publish-single-post.php` to insert/upsert directly into Hostinger Live MySQL DB (`posts` table), update `data/posts.php`, and clear application cache.
 > - **Step 6 — Live URL Quality & Alt Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and image alt tags.
 > - **Step 7 — Log to `memory.md`**: Append title, slug, tag, date, and metrics.
-> - **Step 8 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota).
+> - **Step 8 — GSC Indexing Protocol (v10.1)**: Confirm slug present in `sitemap.xml` with today's `<lastmod>` → URL Inspection → Request Indexing (≤ phase quota/day) → log timestamp. Check Page Indexing report for Discovered/Crawled-not-indexed, soft 404, duplicate-canonical.
+> - **Step 9 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota).
 > - **ZERO GIT PUSH NEEDED**: Publishing goes directly into the live database and updates local files. Zero git commits/pushes protects search engine indexing stability.
 
 ---
@@ -76,6 +77,57 @@ description: >
 2. **Quality Signal Consolidation**: 3 deeply engineered posts (1,400–1,800 words, runnable code, live P95 latency, ₹ pricing benchmarks) send strong quality signals to Google's Helpful Content System.
 3. **Spam Velocity Defense**: Search engine algorithms flag sudden spikes in mass generation. Starting at 3 dispatches mimics natural, elite human craftsmanship.
 4. **100% Indexing Guarantee**: Every URL gets crawled, rendered, and indexed rapidly before expanding publishing volume.
+
+---
+
+## 🔍 GOOGLE SEARCH CONSOLE INDEXING COMPLIANCE & CRAWL BUDGET ALLOCATION (v10.1)
+
+> [!IMPORTANT]
+> **Source of truth:** Google Search Central — [Crawl Budget Management](https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget), [URL Inspection tool](https://search.google.com/search-console), Page Indexing report. This section is MANDATORY for every publish run.
+
+### 1. GSC Indexing Guidelines — What the Skill Enforces
+
+| GSC Rule (Google official) | How `deepak-blog` complies |
+|---|---|
+| **Keep sitemaps up to date, only indexable URLs** | `SitemapController` emits ONLY `Post::published()` with `WordCount ≥900` + excludes `-variant-N` / `-vN` duplicate slugs. Every publish regenerates `<lastmod>` = publish date. Sitemap capped well under 50K URLs. |
+| **URL Inspection → Request Indexing for new/updated pages** | After each push, operator runs URL Inspection on `https://deepakbagada.in/journal/<slug>` → **Request Indexing** (priority crawl queue, no guarantee). Max 10 requests/day — our 3–5/day quota fits natively. |
+| **Monitor Page Indexing report daily** | Watch `Discovered – currently not indexed` (crawl backlog → reduce velocity), `Crawled – currently not indexed` (thin/duplicate → improve quality/consolidate), `Soft 404`, `Duplicate without user-selected canonical`, `Redirect error`, `Server error (5xx)`. Any spike = pause scale-up. |
+| **Consolidate duplicate content** | Numeric-suffix slugs (`-2`, `-3`, `-v2`) BANNED. Variant duplicates excluded from sitemap. One canonical per keyword — `check-collision.php` blocks dupes pre-write. |
+| **Block with robots.txt, NOT noindex, to save crawl** | `noindex` still costs a crawl (Google must fetch to read the directive). Unwanted param/filter URLs blocked via `robots.txt`. Journal URLs are always indexable + self-canonical. |
+| **404/410 for permanently removed pages** | Deleted posts return `410 Gone` (stronger de-queue signal than 404). Never soft-404. |
+| **Eliminate soft 404s** | Journal `show` route 404s on missing slug with proper status; no thin "empty" templates indexed. |
+| **Server health = crawl capacity** | 5xx / 429 / slow TTFB (>600ms) REDUCES Googlebot crawl limit. Deploy freezes during publish windows; `deploy.sh` never runs mid-batch. Target TTFB <200ms, zero 5xx. |
+| **Crawl demand = popularity + freshness** | Fresh `lastmod` + internal links from `/journal` index + 3–5 contextual `/services/*` links per post raise per-URL demand. Stale posts get freshness refresh, not new-URL spam. |
+
+### 2. Crawl Budget Allocation Table (per-day URL inventory)
+
+Google defines crawl budget = **crawl capacity limit** (server health) × **crawl demand** (popularity/freshness). Allocation per phase:
+
+| Phase | New URLs/day | Sitemap priority | Internal-link push | GSC action | Stop condition |
+|---|---|---|---|---|---|
+| **Phase 1 (3/day)** | 3 | `0.9` journal posts, `lastmod` = today | New post linked from `/journal` page-1 + 3 contextual links | Request Indexing ×3, verify 200 + self-canonical | Any `Discovered-not-indexed` >5 → hold at 3 |
+| **Phase 2 (5/day, current)** | 5 | Same + refresh 2 stale `lastmod` | + link from 1 related old post to new post | Request Indexing ×5, check Crawl Stats avg <300ms | `Crawled-not-indexed` spike → audit quality, hold |
+| **Phase 3 (7/day)** | 7 | Same | Topical cluster hub links | Same + weekly Index Coverage export | 5xx or TTFB regression → drop to 5 |
+| **Phase 4 (10/day)** | 10 | Same | Full pillar interlink pass | Same + 30-day server-log review (verified Googlebot only) | Any capacity-limit signal → drop one phase |
+
+**Rules:**
+- NEVER exceed phase quota — extra URLs steal crawl from money pages.
+- NEVER `Request Indexing` the same URL twice in 7 days.
+- NEVER use `crawl-delay` in robots.txt (Googlebot ignores it) — use GSC crawl-rate setting if throttling is ever needed.
+- Third-party scripts do NOT consume crawl budget (browser-fetched, not Googlebot origin-fetch) — don't chase them for indexing.
+
+### 3. Post-Publish GSC Checklist (runs after Step 6 Verify Live URL)
+
+```
+[ ] Sitemap returns 200 XML, new slug present with today's <lastmod>
+[ ] Live URL: 200, <title> ≤60, meta description 150-160, H1 = title, self-canonical, JSON-LD Article valid
+[ ] URL Inspection: "URL is on Google" OR Request Indexing submitted (log timestamp)
+[ ] Page Indexing report checked: no new Soft 404 / Duplicate / Redirect error
+[ ] Crawl Stats: avg response <300ms, availability >99.5%
+[ ] Internal links: new post reachable within 2 clicks from /journal
+```
+
+`sitemap.xml` reference: `https://deepakbagada.in/sitemap.xml` (declared in `public/robots.txt`).
 
 ---
 

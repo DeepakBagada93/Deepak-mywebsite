@@ -43,4 +43,33 @@ class Post extends Model
     {
         return $query->whereNotNull('date')->latest('date');
     }
+
+    /**
+     * Exclude near-duplicate variant slugs (*-variant-N, *-vN) at the query
+     * level so pagination counts stay correct. (Filtering after paginate()
+     * leaves pages short and shifts items across pages.)
+     *
+     * MySQL supports REGEXP; SQLite (tests) does not, so there we exclude
+     * the common `-variant-N` family via LIKE and callers keep a small
+     * PHP-side reject for the residual `-vN` suffixes as a safety net.
+     */
+    public function scopeCanonical($query)
+    {
+        $driver = $query->getConnection()->getDriverName();
+
+        if ($driver === 'mysql' || $driver === 'mysqli') {
+            return $query->whereRaw("slug NOT REGEXP '-(variant-[0-9]+|v[0-9]+)$'");
+        }
+
+        return $query->where('slug', 'NOT LIKE', '%-variant-%');
+    }
+
+    /**
+     * PHP-side variant check — mirrors scopeCanonical for drivers without
+     * REGEXP and acts as a safety net everywhere else.
+     */
+    public static function isVariantSlug(?string $slug): bool
+    {
+        return (bool) preg_match('/-(variant-\d+|v\d+)$/', (string) $slug);
+    }
 }

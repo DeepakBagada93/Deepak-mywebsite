@@ -14,9 +14,11 @@ class PostController extends Controller
         $canonical = $url.'/journal';
         $portraitUrl = $url.'/images/about-portrait.png';
 
-        $posts = Post::published()->paginate(15);
+        $posts = Post::published()->canonical()->paginate(15);
+        // Safety net: strip any residual variant slugs the DB-level filter
+        // could not express (e.g. `-vN` on SQLite, which lacks REGEXP).
         $listed = $posts->getCollection()
-            ->reject(fn (Post $p) => (bool) preg_match('/-(variant-\d+|v\d+)$/', $p->slug))
+            ->reject(fn (Post $p) => Post::isVariantSlug($p->slug))
             ->values();
 
         $head = [
@@ -74,7 +76,7 @@ class PostController extends Controller
         // Duplicate-variant guard: slugs like *-variant-12 / *-v8 are near-duplicates
         // of a canonical post. Noindex them and point canonical at the base slug
         // when it exists, so link equity consolidates instead of splitting.
-        $isVariant = (bool) preg_match('/-(variant-\d+|v\d+)$/', $post->slug);
+        $isVariant = Post::isVariantSlug($post->slug);
         if ($isVariant) {
             $baseSlug = preg_replace('/-(variant-\d+|v\d+)$/', '', $post->slug);
             $canonicalPost = Post::where('slug', $baseSlug)->whereNotNull('date')->first();
@@ -85,15 +87,15 @@ class PostController extends Controller
             }
         }
 
-        $related = Post::published()
+        $related = Post::published()->canonical()
             ->where('id', '!=', $post->id)
             ->where('category', $post->category)
             ->take(8)->get()
-            ->reject(fn (Post $r) => (bool) preg_match('/-(variant-\d+|v\d+)$/', $r->slug))
+            ->reject(fn (Post $r) => Post::isVariantSlug($r->slug))
             ->take(3);
         if ($related->count() < 3) {
-            $related = Post::published()->where('id', '!=', $post->id)->take(8)->get()
-                ->reject(fn (Post $r) => (bool) preg_match('/-(variant-\d+|v\d+)$/', $r->slug))
+            $related = Post::published()->canonical()->where('id', '!=', $post->id)->take(8)->get()
+                ->reject(fn (Post $r) => Post::isVariantSlug($r->slug))
                 ->take(3);
         }
 
