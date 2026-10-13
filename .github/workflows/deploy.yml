@@ -50,18 +50,7 @@ jobs:
           php-version: '8.4'
       - name: Validate journal source file
         run: |
-          php -r "
-            \$posts = require 'data/posts.php';
-            \$slugs = array_column(\$posts, 'slug');
-            if (count(\$slugs) !== count(array_unique(\$slugs))) { fwrite(STDERR, 'FAIL: duplicate slugs in data/posts.php'.PHP_EOL); exit(1); }
-            \$tomorrow = date('Y-m-d', strtotime('+1 day'));
-            foreach (\$posts as \$p) {
-              if (($p['published_at'] ?? '') > \$tomorrow) { fwrite(STDERR, 'FAIL: future-dated post '.(\$p['slug'] ?? '?').PHP_EOL); exit(1); }
-            }
-            \$dates = array_column(\$posts, 'published_at');
-            rsort(\$dates);
-            echo 'posts='.count(\$posts).' latest='.(\$dates[0] ?? '?').PHP_EOL;
-          "
+          php .github/scripts/check-journal-freshness.php
           php -l data/posts.php
           php -l app/Models/Post.php
           php -l database/seeders/PostSeeder.php
