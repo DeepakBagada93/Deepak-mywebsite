@@ -41,3 +41,9 @@ blog-audit.md
 .agent/**/scratch/
 .agent/**/schedule/
 
+# autonomous scheduler runtime files (per-machine — never commit/deploy)
+storage/framework/scheduled-posts.lock
+storage/framework/schedule-heartbeat.txt
+storage/framework/schedule-failures.json
+storage/logs/scheduled-posts.log
+

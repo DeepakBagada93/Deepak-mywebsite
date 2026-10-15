@@ -1,9 +1,15 @@
 <?php
 /**
  * save-scheduled-posts.php — Upserts scheduled dispatches directly to Live MySQL DB
+ *
+ * All slot times are IST wall-clock — force IST so `scheduled_for`
+ * comparisons stay consistent with config/app.php (Asia/Kolkata) and the
+ * tz-naive MySQL DATETIME columns.
  */
-require __DIR__ . '/../../../../vendor/autoload.php';
-$app = require __DIR__ . '/../../../../bootstrap/app.php';
+date_default_timezone_set('Asia/Kolkata');
+
+require __DIR__.'/../../../../vendor/autoload.php';
+$app = require __DIR__.'/../../../../bootstrap/app.php';
 $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
 
 use Illuminate\Support\Facades\DB;
@@ -21,6 +27,7 @@ if (!$payload) {
 }
 
 $slug = $payload['slug'];
+$tags = $payload['tags'] ?? (isset($payload['tag']) ? [$payload['tag']] : []);
 DB::table('scheduled_posts')->updateOrInsert(
     ['id' => $slug],
     [
@@ -32,11 +39,12 @@ DB::table('scheduled_posts')->updateOrInsert(
         'author' => 'Deepak Bagada',
         'category' => $payload['tag'] ?? 'AI DEV',
         'tag' => $payload['tag'] ?? 'AI DEV',
+        'tags' => json_encode(array_values($tags)),
         'scheduled_for' => $payload['scheduled_for'],
         'slot_label' => $payload['slot_label'] ?? '',
         'status' => 'scheduled',
     ]
 );
 
-echo "DB_SAVED: {$slug}\n";
+echo 'DB_SAVED: '.$slug."\n";
 exit(0);

@@ -41,7 +41,10 @@ class Post extends Model
 
     public function scopePublished($query)
     {
-        return $query->whereNotNull('date')->latest('date');
+        // Future-dated rows are scheduled, not published: hide them until
+        // their slot arrives. Tie-break on id so same-day/same-time batches
+        // paginate deterministically.
+        return $query->whereNotNull('date')->where('date', '<=', now())->orderBy('date', 'desc')->orderBy('id', 'asc');
     }
 
     /**

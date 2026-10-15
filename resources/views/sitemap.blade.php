@@ -99,7 +99,7 @@
     @foreach ($posts as $post)
     <url>
         <loc>{{ $url }}/journal/{{ $post->slug }}</loc>
-        <lastmod>{{ $post->date?->toDateString() ?? '' }}</lastmod>
+        <lastmod>{{ $post->date?->toAtomString() ?? '' }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

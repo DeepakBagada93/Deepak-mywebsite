@@ -21,7 +21,7 @@
                         <a class="entry reveal" data-reveal href="{{ route('journal.show', $post->slug) }}">
                             <div class="entry__meta mono">
                                 <span class="entry__tag">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
-                                <span class="entry__date">{{ $post->date?->format('d M Y') ?? '' }}</span>
+                                <span class="entry__date">{{ $post->date?->format('d M Y, h:i A') ?? '' }}</span>
                                 @if (!empty($post->read_time))
                                     <span class="entry__readtime" style="color: var(--muted); font-size: 0.64rem;">{{ $post->read_time }}</span>
                                 @endif

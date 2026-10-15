@@ -107,6 +107,9 @@ jobs:
             --exclude='storage/framework/cache/*' \
             --exclude='storage/framework/sessions/*' \
             --exclude='storage/framework/views/*' \
+            --exclude='storage/framework/scheduled-posts.lock' \
+            --exclude='storage/framework/schedule-heartbeat.txt' \
+            --exclude='storage/framework/schedule-failures.json' \
             ./ u775719140@86.38.243.124:domains/deepakbagada.in/public_html/
 
           # Sync posts to MySQL + build caches on Hostinger.
@@ -126,7 +129,7 @@ jobs:
             echo "$SSH_RAW_OR_B64" | tr -d '\r ' | base64 -d > ~/.ssh/deploy_key 2>/dev/null || printf "%s\n" "$SSH_RAW_OR_B64" > ~/.ssh/deploy_key
           fi
           chmod 600 ~/.ssh/deploy_key
-          LATEST_SLUG=$(php -r '$p=require "data/posts.php"; usort($p, fn($a,$b)=>strcmp($b["published_at"]??"", $a["published_at"]??"")); foreach($p as $x){ if(!preg_match("/-(variant-\d+|v\d+)$/",$x["slug"])){ echo $x["slug"]; break; }}')
+          LATEST_SLUG=$(php -r '$p=require "data/posts.php"; usort($p, fn($a,$b)=>(strcmp($b["published_at"]??"", $a["published_at"]??"") ?: strcmp($a["slug"]??"", $b["slug"]??""))); foreach($p as $x){ if(!preg_match("/-(variant-\d+|v\d+)$/",$x["slug"])){ echo $x["slug"]; break; }}')
           echo "Expecting latest post on live journal: $LATEST_SLUG"
           for i in 1 2 3; do
             if curl -sL "https://deepakbagada.in/journal" | grep -q "$LATEST_SLUG"; then

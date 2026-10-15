@@ -32,9 +32,16 @@ if (count($slugs) !== count(array_unique($slugs))) {
 
 foreach ($posts as $post) {
     $raw = $post['published_at'] ?? '';
+    // Accepts date-only (YYYY-MM-DD, legacy = midnight IST) or full slot
+    // datetime (Y-m-d H:i:s IST); the freshness window compares the day part.
     $day = substr((string) $raw, 0, 10);
     if (! preg_match('/^\d{4}-\d{2}-\d{2}$/', $day)) {
         fwrite(STDERR, "FAIL: bad published_at '{$raw}' on ".($post['slug'] ?? '?')."\n");
+        exit(1);
+    }
+    $time = substr((string) $raw, 11, 8);
+    if ($time !== '' && ! preg_match('/^\d{2}:\d{2}(:\d{2})?$/', $time)) {
+        fwrite(STDERR, "FAIL: bad published_at time '{$raw}' on ".($post['slug'] ?? '?')."\n");
         exit(1);
     }
     if ($day > $maxAllowed) {

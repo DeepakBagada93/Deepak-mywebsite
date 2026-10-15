@@ -3138,3 +3138,83 @@
   - Words: 1476
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Developer Junagadh 2026: ₹55K Builds [Hiring Proof]**
+  - Slug: `best-ai-developer-junagadh-2026-hiring-proof`
+  - Tag: `AI DEV`
+  - Published: `2026-10-14`
+  - Words: 1516
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **MCP Zero-Trust Security 2026: ClawSecure Audit [India Guide]**
+  - Slug: `mcp-security-zero-trust-clawsecure-audit-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-14`
+  - Words: 1528
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 16.3 AI Skills 2026: Agents Ship 2x Faster [Guide]**
+  - Slug: `nextjs-16-3-ai-skills-agents-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-14`
+  - Words: 1533
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel AI SDK v1 2026: MCP Tools in 15 Mins [Full Code]**
+  - Slug: `laravel-ai-sdk-v1-mcp-tools-production-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-14`
+  - Words: 1490
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Junagadh Lab OS 2026: Cron, Ledger & Daily Ship [Playbook]**
+  - Slug: `junagadh-lab-operating-system-cron-ledger-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-14`
+  - Words: 1503
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Agent Developer Junagadh 2026: Proof [Guide]**
+  - Slug: `best-ai-agent-developer-junagadh-2026-proof`
+  - Tag: `AI DEV`
+  - Published: `2026-10-15`
+  - Words: 1488
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **MCP OAuth Registration 2026: Dynamic Clients [Guide]**
+  - Slug: `mcp-oauth-dynamic-registration-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-15`
+  - Words: 1493
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Claude Opus 5.5 vs GPT-6 Sol 2026: Code [Benchmark]**
+  - Slug: `claude-opus-5-vs-gpt-5-coding-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-15`
+  - Words: 1501
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 16 Cache 2026: Partial Prerender [PPR Guide]**
+  - Slug: `nextjs-16-partial-prerender-cache-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-15`
+  - Words: 1476
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Hiring My First Contractor 2026: ₹18K Win [Junagadh]**
+  - Slug: `junagadh-hiring-first-contractor-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-15`
+  - Words: 1050
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

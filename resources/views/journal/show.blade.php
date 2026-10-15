@@ -8,7 +8,7 @@
             </nav>
             <div class="article__meta mono">
                 <span class="article__tag">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
-                <span class="article__date">{{ $post->date?->format('d M Y') ?? '' }}</span>
+                <span class="article__date">{{ $post->date?->format('d M Y, h:i A T') ?? '' }}</span>
                 @if (!empty($post->read_time))
                     <span class="article__readtime">· {{ $post->read_time }}</span>
                 @endif

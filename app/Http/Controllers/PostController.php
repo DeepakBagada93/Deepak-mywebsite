@@ -61,7 +61,8 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        abort_unless($post->date, 404);
+        // Future-dated rows are scheduled, not published — 404 until the slot arrives.
+        abort_unless($post->date && $post->date <= now(), 404);
 
         $site = config('site');
         $url = rtrim($site['url'], '/');
@@ -113,8 +114,8 @@ class PostController extends Controller
                         '@type' => 'Article',
                         'headline' => $post->title,
                         'description' => $post->excerpt,
-                        'datePublished' => $post->date?->toDateString(),
-                        'dateModified' => $post->date?->toDateString(),
+                        'datePublished' => $post->date?->toAtomString(),
+                        'dateModified' => $post->date?->toAtomString(),
                         'author' => [
                             '@type' => 'Person',
                             '@id' => $url.'/#person',
