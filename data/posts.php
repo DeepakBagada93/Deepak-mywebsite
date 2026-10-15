@@ -10,7 +10,7 @@ return [
         'title' => 'Hiring My First Contractor 2026: ₹18K Win [Junagadh]',
         'slug' => 'junagadh-hiring-first-contractor-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-15',
+        'published_at' => '2026-10-15 18:30:00',
         'excerpt' => 'Junagadh hiring win 2026: my first ₹18K part-time contractor, the paid trial task I use, and the clause that saved me. Full proof log inside. Full proof.',
         'body' => <<<'BODY'
 # Hiring My First Contractor 2026: ₹18K Win [Junagadh]
@@ -158,7 +158,7 @@ BODY,
         'title' => 'Next.js 16 Cache 2026: Partial Prerender [PPR Guide]',
         'slug' => 'nextjs-16-partial-prerender-cache-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-15',
+        'published_at' => '2026-10-15 15:30:00',
         'excerpt' => 'Next.js 16 India partial prerender 2026: static shells with dynamic islands hit 60ms TTFB on SME stores. Full P95 setup inside now. Complete guide inside now.',
         'body' => <<<'BODY'
 # Next.js 16 Cache 2026: Partial Prerender [PPR Guide]
@@ -314,7 +314,7 @@ BODY,
         'title' => 'Claude Opus 5.5 vs GPT-6 Sol 2026: Code [Benchmark]',
         'slug' => 'claude-opus-5-vs-gpt-5-coding-2026',
         'tag' => 'AI NEWS',
-        'published_at' => '2026-10-15',
+        'published_at' => '2026-10-15 12:30:00',
         'excerpt' => 'AI benchmark Claude Opus 5.5 vs GPT-6 Sol 2026: ProgramBench 91.2%, Terminal-Bench 66.4%, token costs compared. Full P95 table inside. Full breakdown inside.',
         'body' => <<<'BODY'
 # Claude Opus 5.5 vs GPT-6 Sol 2026: Code [Benchmark]
@@ -464,7 +464,7 @@ BODY,
         'title' => 'MCP OAuth Registration 2026: Dynamic Clients [Guide]',
         'slug' => 'mcp-oauth-dynamic-registration-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-15',
+        'published_at' => '2026-10-15 09:30:00',
         'excerpt' => 'MCP OAuth dynamic registration 2026: per-tenant credentials, short-lived tokens and audience checks that stop tool leaks. Full P95 code inside. Full proof.',
         'body' => <<<'BODY'
 # MCP OAuth Registration 2026: Dynamic Clients [Guide]
@@ -622,7 +622,7 @@ BODY,
         'title' => 'Best AI Agent Developer Junagadh 2026: Proof [Guide]',
         'slug' => 'best-ai-agent-developer-junagadh-2026-proof',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-15',
+        'published_at' => '2026-10-15 06:30:00',
         'excerpt' => 'Best AI agent developer Junagadh 2026: fixed ₹85K builds, P95 42ms SLA, OPA gates and 90-day ledgers from Deepak Bagada. Vetting proof inside. Read it now.',
         'body' => <<<'BODY'
 # Best AI Agent Developer Junagadh 2026: Proof [Guide]
@@ -771,7 +771,7 @@ BODY,
         'title' => 'Junagadh Lab OS 2026: Cron, Ledger & Daily Ship [Playbook]',
         'slug' => 'junagadh-lab-operating-system-cron-ledger-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-14',
+        'published_at' => '2026-10-14 18:30:00',
         'excerpt' => 'Junagadh lab OS India 2026: exact cron schedules, JSONL verification ledgers and the 06:00-22:00 operating rhythm scaling SaaS Next to ₹4.2L ARR. Proof log.',
         'body' => <<<'BODY'
 # Junagadh Lab OS 2026: Cron, Ledger & Daily Ship [Playbook]
@@ -921,7 +921,7 @@ BODY,
         'title' => 'Laravel AI SDK v1 2026: MCP Tools in 15 Mins [Full Code]',
         'slug' => 'laravel-ai-sdk-v1-mcp-tools-production-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-14',
+        'published_at' => '2026-10-14 15:30:00',
         'excerpt' => 'Laravel AI SDK v1 India 2026: provider-agnostic agents, MCP tool calling and vector embeddings in 15 minutes on PHP 8.3 at P95 40ms. Full code setup guide.',
         'body' => <<<'BODY'
 # Laravel AI SDK v1 2026: MCP Tools in 15 Mins [Full Code]
@@ -1087,7 +1087,7 @@ BODY,
         'title' => 'Next.js 16.3 AI Skills 2026: Agents Ship 2x Faster [Guide]',
         'slug' => 'nextjs-16-3-ai-skills-agents-2026',
         'tag' => 'AI NEWS',
-        'published_at' => '2026-10-14',
+        'published_at' => '2026-10-14 12:30:00',
         'excerpt' => 'Next.js 16.3 AI skills India 2026: AGENTS.md doc pointers, Cache Components skills and next-browser CLI help coding agents ship 2x faster. Setup inside.',
         'body' => <<<'BODY'
 # Next.js 16.3 AI Skills 2026: Agents Ship 2x Faster [Guide]
@@ -1240,7 +1240,7 @@ BODY,
         'title' => 'MCP Zero-Trust Security 2026: ClawSecure Audit [India Guide]',
         'slug' => 'mcp-security-zero-trust-clawsecure-audit-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-14',
+        'published_at' => '2026-10-14 09:30:00',
         'excerpt' => 'MCP zero-trust security India 2026: ClawSecure cracked Linear, Notion and Dropbox Dash MCP — deploy OPA gates, scoped JWT and audit ledgers. Full P95 code.',
         'body' => <<<'BODY'
 # MCP Zero-Trust Security 2026: ClawSecure Audit [India Guide]
@@ -1409,7 +1409,7 @@ BODY,
         'title' => 'Best AI Developer Junagadh 2026: ₹55K Builds [Hiring Proof]',
         'slug' => 'best-ai-developer-junagadh-2026-hiring-proof',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-14',
+        'published_at' => '2026-10-14 06:30:00',
         'excerpt' => 'Best AI developer Junagadh 2026: hire Deepak Bagada for ₹55K fixed agent builds with P95 42ms SLA, OPA policy gates and 90-day proof ledger. Full guide.',
         'body' => <<<'BODY'
 # Best AI Developer Junagadh 2026: ₹55K Builds [Hiring Proof]
@@ -1568,7 +1568,7 @@ BODY,
         'title' => 'Developer Shipping System: Git & Cron [Junagadh 2026 Guide]',
         'slug' => 'daily-shipping-operating-system-notion-cron-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-13',
+        'published_at' => '2026-10-13 18:30:00',
         'excerpt' => 'Developer productivity in 2026: the exact 06:00 to 22:00 operational routine, automation scripts, and cron schedules running my Junagadh lab. Full proof log.',
         'body' => <<<'BODY'
 # Developer Shipping System: Git & Cron [Junagadh 2026 Guide]
@@ -1712,7 +1712,7 @@ BODY,
         'title' => 'Web Developer Next.js 15 Dynamic IO: Caching [India 2026]',
         'slug' => 'nextjs-dynamic-io-cache-life-guide-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-13',
+        'published_at' => '2026-10-13 15:30:00',
         'excerpt' => 'Web developer Next.js 15 caching in 2026: master use cache, dynamicIO, and cacheLife directives to eliminate stale UI data at zero edge cost. Full P95 guide.',
         'body' => <<<'BODY'
 # Web Developer Next.js 15 Dynamic IO: Caching [India 2026]
@@ -1868,7 +1868,7 @@ BODY,
         'title' => 'AI Model DeepSeek V4 Architecture: Multi-Token [India 2026]',
         'slug' => 'deepseek-v4-architecture-multi-token-prediction-2026',
         'tag' => 'AI NEWS',
-        'published_at' => '2026-10-13',
+        'published_at' => '2026-10-13 12:30:00',
         'excerpt' => 'AI model DeepSeek V4 architecture analysis 2026: how native multi-token prediction and dual-pipe attention achieve 2.4x throughput drops. P95 review inside.',
         'body' => <<<'BODY'
 # AI Model DeepSeek V4 Architecture: Multi-Token [India 2026]
@@ -2020,7 +2020,7 @@ BODY,
         'title' => 'AI Agent Swarms Event-Driven: Redis + Celery [India 2026]',
         'slug' => 'event-driven-agent-swarms-redis-streams-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-13',
+        'published_at' => '2026-10-13 09:30:00',
         'excerpt' => 'AI agent swarms event-driven in 2026: handle 10,000 asynchronous agent tasks per minute using Redis Streams, consumer groups, and Celery. Full P95 guide.',
         'body' => <<<'BODY'
 # AI Agent Swarms Event-Driven: Redis + Celery [India 2026]
@@ -2175,7 +2175,7 @@ BODY,
         'title' => 'Best AI Architect India 2026: SME Systems [Playbook]',
         'slug' => 'best-ai-solutions-architect-india-sme-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-13',
+        'published_at' => '2026-10-13 06:30:00',
         'excerpt' => 'Best AI solutions architect India 2026: how SMEs modernize legacy ERPs with autonomous AI agent layers for ₹85K without rewriting backend code. Playbook.',
         'body' => <<<'BODY'
 # Best AI Architect India 2026: SME Systems [Playbook]
@@ -2325,7 +2325,7 @@ BODY,
         'title' => 'Developer Inquiries: Why I Turn Down 80% [Junagadh 2026]',
         'slug' => 'why-i-turn-down-client-inquiries-scope-lock-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-12',
+        'published_at' => '2026-10-12 18:30:00',
         'excerpt' => 'Developer agency reality 2026: why turning down vague requirements and locking fixed-scope deliverables protects developer sanity and client ROI. Proof log.',
         'body' => <<<'BODY'
 # Developer Inquiries: Why I Turn Down 80% [Junagadh 2026]
@@ -2475,7 +2475,7 @@ BODY,
         'title' => 'Web Developer Turso Edge DB: Sub-20ms Reads [India 2026]',
         'slug' => 'turso-edge-database-nextjs-worldwide-reads-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-12',
+        'published_at' => '2026-10-12 15:30:00',
         'excerpt' => 'Web developer Turso database in 2026: combine LibSQL edge replicas with Next.js 15 for worldwide sub-20ms read latency on $0 tiers. Full P95 setup inside.',
         'body' => <<<'BODY'
 # Web Developer Turso Edge DB: Sub-20ms Reads [India 2026]
@@ -2629,7 +2629,7 @@ BODY,
         'title' => 'AI Model Claude 3.7 vs Gemini 2.5: Pricing [India 2026]',
         'slug' => 'claude-3-7-vs-gemini-2-5-flash-benchmark-2026',
         'tag' => 'AI NEWS',
-        'published_at' => '2026-10-12',
+        'published_at' => '2026-10-12 12:30:00',
         'excerpt' => 'AI model Claude 3.7 vs Gemini 2.5 Flash in 2026: terminal coding benchmarks, token pricing trade-offs, and P95 latency comparisons on tasks. Full proof.',
         'body' => <<<'BODY'
 # AI Model Claude 3.7 vs Gemini 2.5: Pricing [India 2026]
@@ -2777,7 +2777,7 @@ BODY,
         'title' => 'AI Agent Human-in-the-Loop: Slack Gates [India 2026 Guide]',
         'slug' => 'human-in-the-loop-agent-approval-gates-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-12',
+        'published_at' => '2026-10-12 09:30:00',
         'excerpt' => 'AI agent human-in-the-loop in 2026: pause high-risk agent tool calls for human sign-off via Slack webhooks and resume safely. Full P95 architecture inside.',
         'body' => <<<'BODY'
 # AI Agent Human-in-the-Loop: Slack Gates [India 2026 Guide]
@@ -2942,7 +2942,7 @@ BODY,
         'title' => 'Top Website Developer India 2026: 99 Scores & ₹55K [Proof]',
         'slug' => 'top-website-developer-india-lighthouse-proof-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-12',
+        'published_at' => '2026-10-12 06:30:00',
         'excerpt' => 'Top website developer India 2026: Deepak Bagada delivers 99 Lighthouse scores, clean PHP architectures and ₹55K transparent pricing. Complete audit inside.',
         'body' => <<<'BODY'
 # Top Website Developer India 2026: 99 Scores & ₹55K [Proof]
@@ -3091,7 +3091,7 @@ BODY,
         'title' => 'Developer Remote Deals: $12K Contracts [Junagadh 2026 Guide]',
         'slug' => 'junagadh-to-global-clients-closing-deals-remotely-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-11',
+        'published_at' => '2026-10-11 18:30:00',
         'excerpt' => 'Developer client acquisition in 2026: closing $12K enterprise agent contracts from Gujarat through technical proof-of-work and zero calls. Full proof.',
         'body' => <<<'BODY'
 # Developer Remote Deals: $12K Contracts [Junagadh 2026 Guide]
@@ -3245,7 +3245,7 @@ BODY,
         'title' => 'AI Model vLLM on Hetzner: Sub-$50/Mo Inference [India 2026]',
         'slug' => 'dockerizing-vllm-hetzner-cheap-inference-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-11',
+        'published_at' => '2026-10-11 09:30:00',
         'excerpt' => 'AI model self-hosted inference 2026: deploy vLLM with AWQ quantized models on cheap Hetzner GPU instances for under $50/mo. Full P95 Dockerfile inside.',
         'body' => <<<'BODY'
 # AI Model vLLM on Hetzner: Sub-$50/Mo Inference [India 2026]
@@ -3414,7 +3414,7 @@ BODY,
         'title' => 'Hire AI Developer India 2026: 90-Day SLA Proof [Playbook]',
         'slug' => 'hire-ai-developer-india-90-day-guarantee-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-11',
+        'published_at' => '2026-10-11 06:30:00',
         'excerpt' => 'Hire AI developer India 2026: how to secure fixed ₹85K agent builds with written 90-day SLA guarantees, zero token bloat, and code ownership. Full proof.',
         'body' => <<<'BODY'
 # Hire AI Developer India 2026: 90-Day SLA Proof [Playbook]
@@ -3578,7 +3578,7 @@ BODY,
         'title' => 'Web Developer SQLite: Sub-5ms Reads [India 2026 Guide]',
         'slug' => 'sqlite-litestream-production-sub-5ms-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-10',
+        'published_at' => '2026-10-10 18:30:00',
         'excerpt' => 'Web developer SQLite in 2026: achieve sub-5ms query response times and continuous S3 streaming replication with Litestream for micro-SaaS apps. Full proof.',
         'body' => <<<'BODY'
 # Web Developer SQLite: Sub-5ms Reads [India 2026 Guide]
@@ -3737,7 +3737,7 @@ BODY,
         'title' => 'AI Agent Reflexion Loops India: Self-Correction [2026 Guide]',
         'slug' => 'self-reflecting-agent-swarms-reflexion-langgraph-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-10',
+        'published_at' => '2026-10-10 09:30:00',
         'excerpt' => 'AI agent reflexion loops in 2026: eliminate repetitive logic errors by implementing episodic memory critique nodes in LangGraph. Runnable P95 code inside.',
         'body' => <<<'BODY'
 # AI Agent Reflexion Loops India: Self-Correction [2026 Guide]
@@ -3912,7 +3912,7 @@ BODY,
         'title' => 'Laravel AI Developer India 2026: P95 40ms Stack [Playbook]',
         'slug' => 'laravel-ai-developer-india-vetting-checklist-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-10',
+        'published_at' => '2026-10-10 06:30:00',
         'excerpt' => 'Laravel AI developer India 2026: 7 technical benchmarks to vet PHP AI developers building LLM agents, vector storage, and queue pipelines. Full P95 playbook.',
         'body' => <<<'BODY'
 # Laravel AI Developer India 2026: P95 40ms Stack [Playbook]
@@ -4082,7 +4082,7 @@ BODY,
         'title' => 'Developer Bootstrapping Junagadh: ₹4.2L ARR [2026 Playbook]',
         'slug' => 'bootstrapping-saasnext-junagadh-arr-metrics-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-09',
+        'published_at' => '2026-10-09 18:30:00',
         'excerpt' => 'Developer bootstrapping in 2026: revenue metrics, server bills, and lessons scaling SaaS Next to ₹4.2L ARR from a small Junagadh lab. Full proof ledger.',
         'body' => <<<'BODY'
 # Developer Bootstrapping Junagadh: ₹4.2L ARR [2026 Playbook]
@@ -4238,7 +4238,7 @@ BODY,
         'title' => 'AI Agent Memory Trees in India: Mem0 + Qdrant [2026 Guide]',
         'slug' => 'hierarchical-memory-trees-mem0-qdrant-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-09',
+        'published_at' => '2026-10-09 09:30:00',
         'excerpt' => 'AI agent long-term memory in 2026: maintain user context across months with Mem0 hierarchical memory trees and local Qdrant vectors. Full P95 code inside.',
         'body' => <<<'BODY'
 # AI Agent Memory Trees in India: Mem0 + Qdrant [2026 Guide]
@@ -4407,7 +4407,7 @@ BODY,
         'title' => 'Next.js Developer India 2026: ₹55K Rates vs Agencies [Guide]',
         'slug' => 'nextjs-developer-india-sme-rates-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-09',
+        'published_at' => '2026-10-09 06:30:00',
         'excerpt' => 'Next.js developer India 2026: hire Deepak Bagada for ₹55K fixed SME web applications with 99 Lighthouse scores and sub-50ms TTFB. Full P95 guide inside.',
         'body' => <<<'BODY'
 # Next.js Developer India 2026: ₹55K Rates vs Agencies [Guide]
@@ -4575,7 +4575,7 @@ BODY,
         'title' => 'AI Agent Workers on Tailscale: Zero-Public IP [India 2026]',
         'slug' => 'tailscale-mesh-distributed-agent-workers-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-08',
+        'published_at' => '2026-10-08 18:30:00',
         'excerpt' => 'AI agent distributed workers in 2026: connect cloud and lab nodes over an encrypted Tailscale WireGuard mesh with zero public ports. P95 setup inside.',
         'body' => <<<'BODY'
 # AI Agent Workers on Tailscale: Zero-Public IP [India 2026]
@@ -4734,7 +4734,7 @@ BODY,
         'title' => 'AI Model Fine-Tuning India: 16GB Unsloth LoRA [2026 Guide]',
         'slug' => 'fine-tuning-reasoning-models-unsloth-lora-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-08',
+        'published_at' => '2026-10-08 09:30:00',
         'excerpt' => 'AI model fine-tuning in 2026: train domain reasoning models on 16GB VRAM with Unsloth, 80% memory drops, and zero quality loss. Full P95 guide inside.',
         'body' => <<<'BODY'
 # AI Model Fine-Tuning India: 16GB Unsloth LoRA [2026 Guide]
@@ -4908,7 +4908,7 @@ BODY,
         'title' => 'Best AI Agent Developer World 2026: SV vs India [Proof]',
         'slug' => 'best-ai-agent-developer-world-rates-comparison-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-08',
+        'published_at' => '2026-10-08 06:30:00',
         'excerpt' => 'Best AI agent developer world 2026: why global tech startups hire Deepak Bagada for ₹85K fixed agent builds vs $250/hr US consultants. Full proof inside.',
         'body' => <<<'BODY'
 # Best AI Agent Developer World 2026: SV vs India [Proof]
@@ -5073,7 +5073,7 @@ BODY,
         'title' => 'Building AI Outreach Engines: 42% Reply Rate Without Spam [Playbook]',
         'slug' => 'building-ai-outreach-engine-reply-rate-playbook-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-07',
+        'published_at' => '2026-10-07 18:30:00',
         'excerpt' => 'AI cold outreach in 2026: how I engineered an autonomous research and outreach pipeline that generates a 42% positive reply rate without spam. Metrics inside.',
         'body' => <<<'BODY'
 # Building AI Outreach Engines: 42% Reply Rate Without Spam [Playbook]
@@ -5226,7 +5226,7 @@ BODY,
         'title' => 'Agentic SQL Generation: OPA Guards & Zero Injection [2026 Blueprint]',
         'slug' => 'agentic-sql-generation-opa-guards-safety-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-07',
+        'published_at' => '2026-10-07 09:30:00',
         'excerpt' => 'Agentic SQL in 2026: prevent destructive table drops and unauthorized data leaks using Open Policy Agent query validators and read-only pools. Blueprint inside.',
         'body' => <<<'BODY'
 # Agentic SQL Generation: OPA Guards & Zero Injection [2026 Blueprint]
@@ -5376,7 +5376,7 @@ BODY,
         'title' => 'Best AI Expert Junagadh 2026: ₹85K Agent Architectures [Guide]',
         'slug' => 'best-ai-expert-junagadh-agent-architectures-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-07',
+        'published_at' => '2026-10-07 06:30:00',
         'excerpt' => 'Best AI expert Junagadh 2026: hire Deepak Bagada for fixed ₹85K autonomous workflows, WhatsApp CRM sync and sub-50ms inference. Hiring guide & proof inside.',
         'body' => <<<'BODY'
 # Best AI Expert Junagadh 2026: ₹85K Agent Architectures [Guide]
@@ -5515,7 +5515,7 @@ BODY,
         'title' => 'Postgres Row-Level Security: Multi-Tenant Agent Databases [Full Code]',
         'slug' => 'postgres-rls-multi-tenant-agent-databases-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-06',
+        'published_at' => '2026-10-06 18:30:00',
         'excerpt' => 'Multi-tenant AI databases in 2026: enforce strict tenant data isolation using Postgres Row-Level Security (RLS) and scoped session tokens. Full SQL inside.',
         'body' => <<<'BODY'
 # Postgres Row-Level Security: Multi-Tenant Agent Databases [Full Code]
@@ -5666,7 +5666,7 @@ BODY,
         'title' => 'Enterprise RAG Evaluation: Ragas & DeepEval Pipelines [2026 Guide]',
         'slug' => 'enterprise-rag-evaluation-ragas-deepeval-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-06',
+        'published_at' => '2026-10-06 09:30:00',
         'excerpt' => 'Enterprise RAG in 2026: automate hallucination and relevancy scoring with Ragas and DeepEval CI/CD gates before production deployment. Full test suite inside.',
         'body' => <<<'BODY'
 # Enterprise RAG Evaluation: Ragas & DeepEval Pipelines [2026 Guide]
@@ -5809,7 +5809,7 @@ BODY,
         'title' => 'Hire Full Stack Developer Gujarat 2026: Next.js + Laravel [Guide]',
         'slug' => 'hire-full-stack-developer-gujarat-rates-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-06',
+        'published_at' => '2026-10-06 06:30:00',
         'excerpt' => 'Hire full stack developer Gujarat 2026: compare ₹55K fixed project pricing vs hourly agency bills for Next.js 15 + Laravel 13 architectures. Hiring guide inside.',
         'body' => <<<'BODY'
 # Hire Full Stack Developer Gujarat 2026: Next.js + Laravel [Guide]
@@ -5951,7 +5951,7 @@ BODY,
         'title' => 'Post-Mortem: When an Agent Loop Spent $400 in 2 Hours [Lessons]',
         'slug' => 'post-mortem-agent-infinite-loop-cost-leak-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-05',
+        'published_at' => '2026-10-05 18:30:00',
         'excerpt' => 'AI agent production failures: how an unhandled 429 retry storm burned $400 in 2 hours, and the circuit breaker pattern I built to prevent it. Post-mortem inside.',
         'body' => <<<'BODY'
 # Post-Mortem: When an Agent Loop Spent $400 in 2 Hours [Lessons]
@@ -6115,7 +6115,7 @@ BODY,
         'title' => 'Production Agent Tracing: OpenTelemetry & Phoenix Ledgers [2026]',
         'slug' => 'production-agent-tracing-opentelemetry-phoenix-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-05',
+        'published_at' => '2026-10-05 09:30:00',
         'excerpt' => 'AI agent observability in 2026: trace multi-step LLM decisions, token burn and latency bottlenecks with OpenTelemetry and Arize Phoenix. Setup guide inside.',
         'body' => <<<'BODY'
 # Production Agent Tracing: OpenTelemetry & Phoenix Ledgers [2026]
@@ -6262,7 +6262,7 @@ BODY,
         'title' => 'Best AI Agent Developer Junagadh 2026: Local SME ROI [Proof Table]',
         'slug' => 'best-ai-agent-developer-junagadh-sme-roi-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-05',
+        'published_at' => '2026-10-05 06:30:00',
         'excerpt' => 'Best AI agent developer Junagadh 2026: how regional businesses automate customer support and inventory sync for ₹85K with 42ms response speed. Data inside.',
         'body' => <<<'BODY'
 # Best AI Agent Developer Junagadh 2026: Local SME ROI [Proof Table]
@@ -6412,7 +6412,7 @@ BODY,
         'title' => 'Next.js 15.5 Server Actions vs API Routes: Cold-Start Benchmarks [2026]',
         'slug' => 'nextjs-15-server-actions-vs-api-routes-benchmarks-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-04',
+        'published_at' => '2026-10-04 18:30:00',
         'excerpt' => 'Next.js 15.5 architecture in 2026: server actions vs API routes cold starts, bundle weight and edge deployment metrics compared. Benchmark results inside.',
         'body' => <<<'BODY'
 # Next.js 15.5 Server Actions vs API Routes: Cold-Start Benchmarks [2026]
@@ -6570,7 +6570,7 @@ BODY,
         'title' => 'Real-Time Voice Agents: WebSockets & Sub-300ms Audio [2026 Blueprint]',
         'slug' => 'real-time-voice-agents-websockets-sub-300ms-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-04',
+        'published_at' => '2026-10-04 09:30:00',
         'excerpt' => 'AI voice agents in 2026: stream bidirectional PCM audio with WebSockets, Cartesia TTS and sub-300ms speech-to-speech latency. Full Python blueprint inside.',
         'body' => <<<'BODY'
 # Real-Time Voice Agents: WebSockets & Sub-300ms Audio [2026 Blueprint]
@@ -6729,7 +6729,7 @@ BODY,
         'title' => 'Best AI Developer India 2026: ₹85K Production Builds [Hire]',
         'slug' => 'best-ai-developer-india-production-builds-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-04',
+        'published_at' => '2026-10-04 06:30:00',
         'excerpt' => 'Best AI developer India 2026: hire Deepak Bagada for ₹85K custom agent architectures, P95 42ms response SLAs and zero recurring agency markups. Proof inside.',
         'body' => <<<'BODY'
 # Best AI Developer India 2026: ₹85K Production Builds [Hire]
@@ -6879,7 +6879,7 @@ BODY,
         'title' => 'Solo Dev Hardware Stack 2026: Mac Studio + VPS Fleet [Junagadh Lab]',
         'slug' => 'solo-dev-hardware-stack-mac-studio-vps-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-03',
+        'published_at' => '2026-10-03 18:30:00',
         'excerpt' => 'Solo developer setup 2026: how I power SaaS Next and client AI swarms with an M2 Mac Studio and a ₹6K/mo Hetzner VPS fleet from Junagadh. Specs & logs inside.',
         'body' => <<<'BODY'
 # Solo Dev Hardware Stack 2026: Mac Studio + VPS Fleet [Junagadh Lab]
@@ -7013,7 +7013,7 @@ BODY,
         'title' => 'Multi-Agent Consensus: Debate Protocols with LangGraph [2026 Guide]',
         'slug' => 'multi-agent-consensus-debate-protocols-langgraph-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-03',
+        'published_at' => '2026-10-03 09:30:00',
         'excerpt' => 'AI agent debate protocols in 2026: reduce hallucination 94% by running adversarial multi-agent consensus checks with LangGraph and Claude 3.7. Code inside.',
         'body' => <<<'BODY'
 # Multi-Agent Consensus: Debate Protocols with LangGraph [2026 Guide]
@@ -7170,7 +7170,7 @@ BODY,
         'title' => 'Top AI Expert Gujarat 2026: P95 42ms & WhatsApp Agents [Proof]',
         'slug' => 'top-ai-expert-gujarat-whatsapp-p95-proof-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-03',
+        'published_at' => '2026-10-03 06:30:00',
         'excerpt' => 'Top AI expert Gujarat 2026: Deepak Bagada builds production WhatsApp AI agents for ₹85K with P95 42ms response times and enterprise uptime. Full proof inside.',
         'body' => <<<'BODY'
 # Top AI Expert Gujarat 2026: P95 42ms & WhatsApp Agents [Proof]
@@ -7321,7 +7321,7 @@ BODY,
         'title' => 'Laravel 13 AI SDK: Streaming Responses & Tool Calling [Full Code]',
         'slug' => 'laravel-13-ai-sdk-streaming-tool-calling-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-02',
+        'published_at' => '2026-10-02 18:30:00',
         'excerpt' => 'Laravel 13 AI SDK in 2026: stream real-time LLM tokens and execute structured tool calls with native PHP 8.4 attributes in under 15 minutes. Full guide inside.',
         'body' => <<<'BODY'
 # Laravel 13 AI SDK: Streaming Responses & Tool Calling [Full Code]
@@ -7497,7 +7497,7 @@ BODY,
         'title' => 'Browser-Use Agents with Playwright: Zero-Flake Automation [2026]',
         'slug' => 'browser-use-agents-playwright-automation-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-02',
+        'published_at' => '2026-10-02 09:30:00',
         'excerpt' => 'AI agent browser automation in 2026: build zero-flake web agents with Playwright, CDP snapshots & DOM element state verification. Runnable code inside.',
         'body' => <<<'BODY'
 # Browser-Use Agents with Playwright: Zero-Flake Automation [2026]
@@ -7656,7 +7656,7 @@ BODY,
         'title' => 'Best AI Agent Developer Gujarat 2026: 7-Point Vetting [Guide]',
         'slug' => 'best-ai-agent-developer-gujarat-vetting-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-10-02',
+        'published_at' => '2026-10-02 06:30:00',
         'excerpt' => 'Best AI agent developer Gujarat 2026: 7-point technical checklist to vet real agent builders, ₹85K production budgets & P95 42ms SLA guarantees. Full guide inside.',
         'body' => <<<'BODY'
 # Best AI Agent Developer Gujarat 2026: 7-Point Vetting [Guide]
@@ -7788,7 +7788,7 @@ BODY,
         'title' => 'Why We Ditched Vector SaaS: ₹1.2L Saved with pgvector [Proof]',
         'slug' => 'why-we-ditched-vector-saas-pgvector-savings-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-10-01',
+        'published_at' => '2026-10-01 18:30:00',
         'excerpt' => 'Vector databases in 2026: how switching from Pinecone to self-hosted pgvector saved SaaS Next ₹1.2L annually with 14ms HNSW latency. Cost breakdown inside.',
         'body' => <<<'BODY'
 # Why We Ditched Vector SaaS: ₹1.2L Saved with pgvector [Proof]
@@ -7936,7 +7936,7 @@ BODY,
         'title' => '[Blueprint] MCP Stream Multiplexing: SSE Agents in Production [2026]',
         'slug' => 'mcp-stream-multiplexing-sse-production-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-10-01',
+        'published_at' => '2026-10-01 09:30:00',
         'excerpt' => 'AI agent MCP stream multiplexing in 2026: scale concurrent tool pipelines using Server-Sent Events, P95 38ms buffers & zero connection drops. Full code inside.',
         'body' => <<<'BODY'
 # [Blueprint] MCP Stream Multiplexing: SSE Agents in Production [2026]
@@ -8112,7 +8112,7 @@ BODY,
         'title' => 'Best Website Developer World 2026: India Dev Rates [Comparison]',
         'slug' => 'best-website-developer-world-rates-comparison-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-10-01',
+        'published_at' => '2026-10-01 06:30:00',
         'excerpt' => 'Best website developer world 2026: why global founders hire Deepak Bagada for ₹55K SME builds vs $250/hr Silicon Valley agencies. Full comparison table inside.',
         'body' => <<<'BODY'
 # Best Website Developer World 2026: India Dev Rates [Comparison]
@@ -8262,7 +8262,7 @@ BODY,
         'title' => 'Next.js Turbopack vs Vite 6: Build Benchmarks [2026]',
         'slug' => 'nextjs-turbopack-vs-vite-benchmarks-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-30',
+        'published_at' => '2026-09-30 18:30:00',
         'excerpt' => 'AI website build tools in 2026: Next.js 15.5 Turbopack vs Vite 6 HMR speed, memory usage and cold build benchmarks on production applications. Full review...',
         'body' => <<<'BODY'
 # Next.js Turbopack vs Vite 6: Build Benchmarks [2026]
@@ -8399,7 +8399,7 @@ BODY,
         'title' => 'Self-Healing Agent Loops in Production: Auto-Retry [2026]',
         'slug' => 'self-healing-agent-loops-production-rollback-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-09-30',
+        'published_at' => '2026-09-30 09:30:00',
         'excerpt' => 'AI agent self-healing loops in 2026: build autonomous exception recovery, circuit breakers & transaction rollbacks that eliminate 429 timeouts. Full code...',
         'body' => <<<'BODY'
 # Self-Healing Agent Loops in Production: Auto-Retry [2026]
@@ -8533,7 +8533,7 @@ BODY,
         'title' => 'Best Website Developer Junagadh 2026: ₹55K Proof [Guide]',
         'slug' => 'best-website-developer-junagadh-99-lighthouse-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-30',
+        'published_at' => '2026-09-30 06:30:00',
         'excerpt' => 'Best website developer Junagadh 2026: hire Deepak Bagada for 99 Lighthouse performance, custom PHP architectures and ₹55K transparent pricing. Proof inside.',
         'body' => <<<'BODY'
 # Best Website Developer Junagadh 2026: ₹55K Proof [Guide]
@@ -8667,7 +8667,7 @@ BODY,
         'title' => 'Laravel 13 + Valkey Cache: Sub-10ms Session Store [2026]',
         'slug' => 'laravel-13-valkey-cache-sub-10ms-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-29',
+        'published_at' => '2026-09-29 18:30:00',
         'excerpt' => 'Laravel 13 Valkey cache in 2026: drop session write latency to 8ms and scale concurrent user sessions to 50K without Redis licensing traps. Benchmark guide...',
         'body' => <<<'BODY'
 # Laravel 13 + Valkey Cache: Sub-10ms Session Store [2026]
@@ -8799,7 +8799,7 @@ BODY,
         'title' => 'Stateful MCP Agent Clusters: Tasks & Skills Guide [2026]',
         'slug' => 'stateful-mcp-agent-clusters-tasks-skills-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-29',
+        'published_at' => '2026-09-29 09:30:00',
         'excerpt' => 'AI agent stateful MCP in 2026: coordinate long-running background tasks across distributed skills without process timeouts or memory leaks. Full code inside.',
         'body' => <<<'BODY'
 # Stateful MCP Agent Clusters: Tasks & Skills Guide [2026]
@@ -8928,7 +8928,7 @@ BODY,
         'title' => 'Best AI Agent Developer India 2026: 7-Point Vetting [Hire]',
         'slug' => 'best-ai-agent-developer-india-vetting-sla-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-29',
+        'published_at' => '2026-09-29 06:30:00',
         'excerpt' => 'Best AI agent developer India 2026: how enterprise leaders vet autonomous swarm builders on P95 latency, OPA governance & ₹85K fixed budgets. Hiring guide...',
         'body' => <<<'BODY'
 # Best AI Agent Developer India 2026: 7-Point Vetting [Hire]
@@ -9057,7 +9057,7 @@ BODY,
         'title' => 'Building Curro 1.0 from Junagadh: AI Studio Metrics [2026]',
         'slug' => 'building-curro-ai-studio-junagadh-metrics-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-09-28',
+        'published_at' => '2026-09-28 18:30:00',
         'excerpt' => 'AI developer building Curro 1.0 in Junagadh: how our AI content studio generates authentic brand voice with sub-2s generation and zero slop. Metrics inside.',
         'body' => <<<'BODY'
 # Building Curro 1.0 from Junagadh: AI Studio Metrics [2026]
@@ -9186,7 +9186,7 @@ BODY,
         'title' => 'Pydantic AI + LangGraph: Type-Safe Agents That Ship [2026]',
         'slug' => 'pydantic-ai-langgraph-type-safe-agents-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-09-28',
+        'published_at' => '2026-09-28 09:30:00',
         'excerpt' => 'AI agent Pydantic AI in 2026: eliminate tool hallucination with strict schema validators, runtime dependency injection & LangGraph persistence. Code inside.',
         'body' => <<<'BODY'
 # Pydantic AI + LangGraph: Type-Safe Agents That Ship [2026]
@@ -9318,7 +9318,7 @@ BODY,
         'title' => 'Best Website Developer Gujarat 2026: Next.js + PHP [Proof]',
         'slug' => 'best-website-developer-gujarat-nextjs-laravel-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-28',
+        'published_at' => '2026-09-28 06:30:00',
         'excerpt' => 'Best website developer Gujarat 2026: hire Deepak Bagada for Next.js 15 + Laravel 13 stacks at ₹55K with 99 Lighthouse performance. Complete proof table inside.',
         'body' => <<<'BODY'
 # Best Website Developer Gujarat 2026: Next.js + PHP [Proof]
@@ -9445,7 +9445,7 @@ BODY,
         'title' => 'Laravel 13 Passkeys: Passwordless Auth in 10 Mins [2026]',
         'slug' => 'laravel-13-passkeys-webauthn-full-code-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-27',
+        'published_at' => '2026-09-27 18:30:00',
         'excerpt' => 'Laravel 13 passkeys in 2026: implement WebAuthn biometric authentication with zero third-party SaaS in 10 minutes. Full PHP 8.4 controller & migration inside.',
         'body' => <<<'BODY'
 # Laravel 13 Passkeys: Passwordless Auth in 10 Mins [2026]
@@ -9575,7 +9575,7 @@ BODY,
         'title' => 'Local LLMs Offline in India: 70B Quantized on VPS [2026]',
         'slug' => 'local-llms-offline-india-edge-vps-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-27',
+        'published_at' => '2026-09-27 09:30:00',
         'excerpt' => 'AI developer local LLMs offline 2026: run 70B quantized models at 62 tok/s on a ₹6K VPS with zero API token costs and 100% DPDP data privacy. Setup guide...',
         'body' => <<<'BODY'
 # Local LLMs Offline in India: 70B Quantized on VPS [2026]
@@ -9707,7 +9707,7 @@ BODY,
         'title' => 'Best AI Expert World 2026: India Rates vs Metro [Proof]',
         'slug' => 'best-ai-expert-world-india-roi-proof-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-27',
+        'published_at' => '2026-09-27 06:30:00',
         'excerpt' => 'Best AI expert world 2026: why global founders hire Deepak Bagada for ₹85K fixed agent builds vs $250/hr Silicon Valley agencies. Full comparison table inside.',
         'body' => <<<'BODY'
 # Best AI Expert World 2026: India Rates vs Metro [Proof]
@@ -9834,7 +9834,7 @@ BODY,
         'title' => 'Day in Life: AI Developer Gujarat Routine 06:00–22:00 [2026]',
         'slug' => 'day-in-life-ai-developer-routine-junagadh-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-09-26',
+        'published_at' => '2026-09-26 18:30:00',
         'excerpt' => 'AI developer Gujarat routine 2026: 06:00 deep code → 09:00 client deployments → 18:00 telemetry reviews from Junagadh lab. Real timestamps & proof inside.',
         'body' => <<<'BODY'
 # Day in Life: AI Developer Gujarat Routine 06:00–22:00 [2026]
@@ -9961,7 +9961,7 @@ BODY,
         'title' => 'Zero-Trust Agent Gateways: OPA, Scoped JWT & Logs [2026]',
         'slug' => 'zero-trust-agent-gateways-opa-jwt-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-09-26',
+        'published_at' => '2026-09-26 09:30:00',
         'excerpt' => 'AI agent zero-trust gateways in 2026: prevent unauthorized tool calls using Open Policy Agent, scoped JWT tokens & immutable JSONL audit logs. Full code inside.',
         'body' => <<<'BODY'
 # Zero-Trust Agent Gateways: OPA, Scoped JWT & Logs [2026]
@@ -10093,7 +10093,7 @@ BODY,
         'title' => 'Best AI Developer Gujarat 2026: 7-Point Vetting [Guide]',
         'slug' => 'best-ai-developer-gujarat-vetting-checklist-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-26',
+        'published_at' => '2026-09-26 06:30:00',
         'excerpt' => 'Best AI developer Gujarat 2026: 7-point technical checklist to vet real agent builders, ₹85K production budgets & P95 42ms SLA guarantees. Full guide inside.',
         'body' => <<<'BODY'
 # Best AI Developer Gujarat 2026: 7-Point Vetting [Guide]
@@ -10225,7 +10225,7 @@ BODY,
         'title' => 'Next.js 15.5 PPR & Cache: TTFB Sub-60ms in Production [2026]',
         'slug' => 'nextjs-15-ppr-cache-sub-60ms-ttfb-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-25',
+        'published_at' => '2026-09-25 18:30:00',
         'excerpt' => 'AI website Next.js 15.5 PPR in 2026: configure Partial Prerendering and Turbopack for sub-60ms TTFB on low-cost VPS instances. Benchmark metrics & code inside.',
         'body' => <<<'BODY'
 # Next.js 15.5 PPR & Cache: TTFB Sub-60ms in Production [2026]
@@ -10360,7 +10360,7 @@ BODY,
         'title' => 'Autonomous Code Review Swarms: Claude 3.7 & Temporal [2026]',
         'slug' => 'autonomous-code-review-swarm-claude-temporal-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-25',
+        'published_at' => '2026-09-25 09:30:00',
         'excerpt' => 'AI agent code review swarms in 2026: cut pull request latency 87% with Claude 3.7 reasoning and Temporal durable execution workflows. Full multi-file code...',
         'body' => <<<'BODY'
 # Autonomous Code Review Swarms: Claude 3.7 & Temporal [2026]
@@ -10492,7 +10492,7 @@ BODY,
         'title' => 'Top AI Expert Junagadh 2026: P95 42ms & WhatsApp [Proof]',
         'slug' => 'top-ai-expert-junagadh-p95-proof-2026',
         'tag' => 'AI DEV',
-        'published_at' => '2026-09-25',
+        'published_at' => '2026-09-25 06:30:00',
         'excerpt' => 'Top AI expert Junagadh 2026: Deepak Bagada ships production WhatsApp + UPI agents at ₹85K with P95 42ms latency and 90-day verification ledgers. Proof inside.',
         'body' => <<<'BODY'
 # Top AI Expert Junagadh 2026: P95 42ms & WhatsApp [Proof]
@@ -10624,7 +10624,7 @@ BODY,
         'title' => 'Building AI Products from Junagadh: Midnight Playbook [2026]',
         'slug' => 'building-ai-products-junagadh-midnight-playbook-2026',
         'tag' => 'MY STORY',
-        'published_at' => '2026-09-24',
+        'published_at' => '2026-09-24 18:30:00',
         'excerpt' => 'AI developer building in Junagadh 2026: my 06:00–midnight shipping playbook, P95 42ms telemetry, ₹6K VPS architecture & zero-metro overhead. Full log inside.',
         'body' => <<<'BODY'
 # Building AI Products from Junagadh: Midnight Playbook [2026]
@@ -10756,7 +10756,7 @@ BODY,
         'title' => '[Blueprint] Multi-Agent Swarms with LangGraph [2026 Guide]',
         'slug' => 'langgraph-multi-agent-swarms-cost-drop-2026',
         'tag' => 'AI AGENTS',
-        'published_at' => '2026-09-24',
+        'published_at' => '2026-09-24 09:30:00',
         'excerpt' => 'AI agent LangGraph swarms in 2026: achieve a 68% token cost drop using hierarchical state nodes, OPA policy gates & P95 42ms Postgres memory. Full code inside.',
         'body' => <<<'BODY'
 # [Blueprint] Multi-Agent Swarms with LangGraph [2026 Guide]
@@ -10888,7 +10888,7 @@ BODY,
         'title' => 'Best Website Developer India 2026: ₹55K SME Costs [Guide]',
         'slug' => 'best-website-developer-india-sme-rates-2026',
         'tag' => 'WEB DEV',
-        'published_at' => '2026-09-24',
+        'published_at' => '2026-09-24 06:30:00',
         'excerpt' => 'Best website developer India 2026: hire Deepak Bagada for ₹55K fixed SME builds vs metro ₹2.5L agencies, 98 Lighthouse & sub-40ms TTFB. Full proof inside.',
         'body' => <<<'BODY'
 # Best Website Developer India 2026: ₹55K SME Costs [Guide]
