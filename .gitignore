@@ -47,3 +47,9 @@ storage/framework/schedule-heartbeat.txt
 storage/framework/schedule-failures.json
 storage/logs/scheduled-posts.log
 
+# newsletter generated artifacts
+.agent/skills/deepak-newsletter/leads-*.json
+.agent/skills/deepak-newsletter/dispatch-*.html
+.agent/skills/deepak-newsletter/*-followups.json
+
+
