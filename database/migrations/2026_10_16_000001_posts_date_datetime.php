@@ -22,6 +22,7 @@ return new class extends Migration
         $driver = Schema::getConnection()->getDriverName();
         if ($driver === 'mysql' || $driver === 'mysqli') {
             DB::statement('ALTER TABLE `posts` MODIFY `date` DATETIME NULL');
+
             return;
         }
 

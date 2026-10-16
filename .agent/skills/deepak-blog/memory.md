@@ -3218,3 +3218,43 @@
   - Words: 1050
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Top AI Developer Gujarat 2026: Hire Smart [Checklist]**
+  - Slug: `top-ai-developer-gujarat-2026-hiring-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16 06:30:00`
+  - Words: 1499
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **LangGraph Checkpoints 2026: Postgres Durable [Code]**
+  - Slug: `langgraph-checkpoint-postgres-durable-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-16 09:30:00`
+  - Words: 1470
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Gemini 4 Argon 2026: #1 Agent Model [India Review]**
+  - Slug: `gemini-3-pro-agent-coding-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-16 12:30:00`
+  - Words: 1513
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel Cloud Deploy 2026: Next.js Monorepo [Guide]**
+  - Slug: `laravel-cloud-nextjs-monorepo-deploy-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-16 15:30:00`
+  - Words: 1469
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Fixed-Price Scoping 2026: Template That Saves [₹Lakhs]**
+  - Slug: `fixed-price-scoping-template-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-16 18:30:00`
+  - Words: 1483
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

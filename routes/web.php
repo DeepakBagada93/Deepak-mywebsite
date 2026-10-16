@@ -10,6 +10,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ToolController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PortfolioController::class, 'index'])->name('home');
@@ -72,3 +74,20 @@ Route::get('/ads.txt', function () {
     return response("google.com, pub-4764950179214862, DIRECT, f08c47fec0942fa0\n", 200)
         ->header('Content-Type', 'text/plain; charset=utf-8');
 });
+
+// Autonomous scheduler webhook (for Hostinger Web Cron, UptimeRobot, or external pings)
+Route::get('/cron/process-scheduled', function (Request $request) {
+    $expected = env('CRON_TOKEN', substr(hash('sha256', config('app.key').'deepak-cron'), 0, 32));
+    if ($request->query('token') !== $expected) {
+        abort(403, 'Unauthorized');
+    }
+
+    $exitCode = Artisan::call('blog:process-scheduled');
+    $output = Artisan::output();
+
+    return response()->json([
+        'status' => $exitCode === 0 ? 'success' : 'failed',
+        'timestamp' => now()->toIso8601String(),
+        'output' => trim($output),
+    ]);
+})->name('cron.process-scheduled');

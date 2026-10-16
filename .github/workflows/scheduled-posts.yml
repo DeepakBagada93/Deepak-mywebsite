@@ -7,6 +7,9 @@ name: Scheduled Posts Sweep
 on:
   schedule:
     - cron: '*/10 * * * *'
+    # Dedicated slot-window sweeps (UTC: 01:00, 04:00, 07:00, 10:00, 13:00 = IST: 06:30, 09:30, 12:30, 15:30, 18:30)
+    - cron: '25,30,35,45 1,4,7,10,13 * * *'
+    - cron: '0,15 1,4,7,10,13 * * *'
   workflow_dispatch:
 
 jobs:
@@ -26,4 +29,5 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -p 65002 -H 86.38.243.124 >> ~/.ssh/known_hosts
           ssh -i ~/.ssh/deploy_key -p 65002 -o StrictHostKeyChecking=no u775719140@86.38.243.124 \
-            "cd domains/deepakbagada.in/public_html && php artisan schedule:run >> storage/logs/scheduled-posts.log 2>&1 || php artisan blog:process-scheduled --quiet >> storage/logs/scheduled-posts.log 2>&1"
+            "cd domains/deepakbagada.in/public_html && php artisan blog:process-scheduled --quiet >> storage/logs/scheduled-posts.log 2>&1 && php artisan schedule:run >> storage/logs/scheduled-posts.log 2>&1"
+

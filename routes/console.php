@@ -14,6 +14,6 @@ Artisan::command('inspire', function () {
 // publishes due slots while slot-time log lines stay in the log file.
 // Times are IST wall-clock (config/app.php timezone Asia/Kolkata).
 Schedule::command('blog:process-scheduled --quiet')
-    ->everyFiveMinutes()
+    ->everyMinute()
     ->withoutOverlapping()
     ->appendOutputTo(storage_path('logs/scheduled-posts.log'));

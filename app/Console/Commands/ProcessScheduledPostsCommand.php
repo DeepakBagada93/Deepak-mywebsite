@@ -13,8 +13,7 @@ class ProcessScheduledPostsCommand extends Command
     protected $signature = 'blog:process-scheduled
                             {--force-all : Publish all scheduled posts regardless of slot time}
                             {--slug= : Publish only the given slug}
-                            {--dry-run : List due posts without writing}
-                            {--quiet : Silent unless publishing or failing}';
+                            {--dry-run : List due posts without writing}';
 
     /**
      * The console command description.
@@ -28,11 +27,15 @@ class ProcessScheduledPostsCommand extends Command
     {
         $script = base_path('.agent/skills/deepak-blog/scripts/process-scheduled-posts.php');
 
-        $args = ['php', $script];
-        foreach (['force-all', 'dry-run', 'quiet'] as $flag) {
+        $phpBinary = PHP_BINARY ?: 'php';
+        $args = [$phpBinary, $script];
+        foreach (['force-all', 'dry-run'] as $flag) {
             if ($this->option($flag)) {
                 $args[] = '--'.$flag;
             }
+        }
+        if ($this->option('quiet')) {
+            $args[] = '--quiet';
         }
         if ($slug = $this->option('slug')) {
             $args[] = '--slug='.$slug;
