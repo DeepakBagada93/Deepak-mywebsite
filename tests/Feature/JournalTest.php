@@ -134,7 +134,7 @@ class JournalTest extends TestCase
     }
 
     /**
-     * @param array<string, mixed> $overrides
+     * @param  array<string, mixed>  $overrides
      */
     protected function makeProbePost(string $slug, string $content, array $overrides = []): Post
     {

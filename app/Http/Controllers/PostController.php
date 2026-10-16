@@ -24,6 +24,7 @@ class PostController extends Controller
         'quick-commerce-10-minute-delivery-vs-kirana-2026',
         'parental-control-safe-internet-gen-alpha-india-2026',
     ];
+
     public function index()
     {
         $site = config('site');
