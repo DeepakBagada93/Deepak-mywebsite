@@ -493,3 +493,19 @@ Published: 2026-09-19 via opensource-library skill, live at https://deepakbagada
 193. `humanlayer/skills` — Agent Frameworks — 3113 stars — Trending Sep 17-19 2026 (HumanLayer skills — approval workflows for AI agents. TS, 3.1k stars, trending Sep 2026.)
 
 Published: 2026-09-19 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 193 repos (183→193) — verified via CuratedRepo::count()
+
+## Curated Repositories — Batch 15 (10 New, Trending Oct 16 2026 — LIVE sync via opensource-library)
+
+194. `pydantic/pydantic-ai` — Agent Frameworks — 20663 stars — Trending Oct 2026 (Type-safe Python agent framework with native schema validation, structured outputs, multi-model support, and dependency injection.)
+195. `mendableai/firecrawl` — LLM Tooling — 192096 stars — Trending Oct 2026 (Open-source web scraping and crawling engine that converts dynamic JS websites directly into clean, LLM-ready Markdown.)
+196. `upstash/context7` — MCP & Tooling — 63137 stars — Trending Oct 2026 (Up-to-date documentation platform and MCP server delivering version-specific framework APIs directly to AI coding agents.)
+197. `microsoft/mcp-for-beginners` — MCP & Tooling — 17457 stars — Trending Oct 2026 (Official cross-language curriculum and reference architectures for Model Context Protocol in Python, TypeScript, Rust, C#, and Java.)
+198. `exo-explore/exo` — Infrastructure — 47924 stars — Trending Oct 2026 (Decentralized local AI cluster engine that pools VRAM across Mac, Linux, and Windows hardware to run 70B+ models locally.)
+199. `sgl-project/sglang` — Infrastructure — 37216 stars — Trending Oct 2026 (Fast serving engine and programming system for LLMs with RadixAttention for multi-turn KV cache reuse and structured JSON decoding.)
+200. `microsoft/OmniParser` — Automation — 25528 stars — Trending Oct 2026 (Screen parsing vision model that parses UI screenshots into bounding boxes and interactive coordinates for computer-use agents.)
+201. `stanfordnlp/dspy` — LLM Tooling — 38656 stars — Trending Oct 2026 (Framework for algorithmically optimizing LLM prompts and weights through teleprompters rather than hand-crafted strings.)
+202. `zilliztech/claude-context` — MCP & Tooling — 12620 stars — Trending Oct 2026 (Code search MCP server with Milvus vector embeddings providing semantic code indexing for Claude Code and coding agents.)
+203. `agno-agi/agno` — Agent Frameworks — 42766 stars — Trending Oct 2026 (High-performance multi-modal, multi-agent platform with native PostgreSQL storage, persistent memory, and integrated tool orchestration.)
+
+Published: 2026-10-16 via opensource-library skill, live at https://deepakbagada.in/repos — DB now 202 repos (193→202) — verified via CuratedRepo::count()
+-  — Infrastructure — 90814 stars — Trending Oct 2026 (Ultra-fast Python package and virtual environment manager written in Rust)
