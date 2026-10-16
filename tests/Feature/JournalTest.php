@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Http\Controllers\PostController;
 use App\Models\Post;
 use Database\Seeders\PostSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -130,5 +131,134 @@ class JournalTest extends TestCase
                 "Post {$post['slug']} is dated in the future and would look stale/missing once listed."
             );
         }
+    }
+
+    /**
+     * @param array<string, mixed> $overrides
+     */
+    protected function makeProbePost(string $slug, string $content, array $overrides = []): Post
+    {
+        return Post::updateOrCreate(['id' => $slug], array_merge([
+            'title' => 'Probe '.$slug,
+            'slug' => $slug,
+            'excerpt' => 'Probe excerpt.',
+            'content' => $content,
+            'author' => 'Deepak Bagada',
+            'date' => date('Y-m-d', strtotime('-1 day')),
+            'category' => 'PROBE',
+            'read_time' => '8 min read',
+            'image' => '',
+            'tags' => json_encode([]),
+        ], $overrides));
+    }
+
+    public function test_show_emits_faqpage_json_ld_when_post_has_faqs(): void
+    {
+        $longAnswer = str_repeat('Scalable answer sentence. ', 30); // >500 chars
+        $this->assertGreaterThan(500, strlen($longAnswer));
+
+        $this->makeProbePost('faq-guard-with-faqs', implode("\n\n", [
+            '# Probe FAQs',
+            'Intro paragraph with enough words to render.',
+            '## Frequently Asked Questions',
+            '### What is the first probe question?',
+            'The first answer has **bold** text and a [link](https://example.com/docs) for stripping.',
+            '### How does the second probe feature work?',
+            $longAnswer,
+            '## The Bottom Line',
+            'Closing paragraph.',
+        ]));
+
+        $response = $this->get('/journal/faq-guard-with-faqs');
+        $response->assertStatus(200);
+        $response->assertSee('FAQPage', false);
+        $response->assertSee('What is the first probe question?', false);
+        $response->assertSee('The first answer has bold text and a link for stripping.', false);
+        // Answers are capped at 500 chars in the schema.
+        $response->assertSee(substr($longAnswer, 0, 500), false);
+        $response->assertDontSee($longAnswer, false);
+    }
+
+    public function test_show_omits_faqpage_json_ld_when_post_has_no_faqs(): void
+    {
+        $this->makeProbePost('faq-guard-without-faqs', implode("\n\n", [
+            '# Probe No FAQs',
+            'Just a regular article body without any FAQ section.',
+            '## Section One',
+            'Some paragraph content here.',
+        ]));
+
+        $response = $this->get('/journal/faq-guard-without-faqs');
+        $response->assertStatus(200);
+        $response->assertSee('Article', false);
+        $response->assertDontSee('FAQPage', false);
+    }
+
+    public function test_show_html_contains_no_literal_undefined(): void
+    {
+        // Four same-category probes so KEEP READING only links controlled titles.
+        foreach (range(1, 4) as $i) {
+            $this->makeProbePost('render-guard-clean-'.$i, implode("\n\n", [
+                '# Clean Probe '.$i,
+                'Plain engineering prose about latency budgets and retry queues.',
+                '## Section One',
+                'More paragraphs with digits 123 and symbols % & @ for coverage.',
+            ]), ['category' => 'RENDER PROBE', 'title' => 'Clean Probe Title '.$i]);
+        }
+
+        $response = $this->get('/journal/render-guard-clean-1');
+        $response->assertStatus(200);
+        $response->assertDontSee('undefined', false);
+    }
+
+    public function test_off_topic_slugs_return_410_gone(): void
+    {
+        $response = $this->get('/journal/sarkari-yojana-2026-list');
+        $response->assertStatus(410);
+
+        $response = $this->get('/journal/womens-cricket-ipl-fantasy-2026');
+        $response->assertStatus(410);
+    }
+
+    public function test_sitemap_excludes_off_topic_slugs_even_when_substantial(): void
+    {
+        // Belt-and-braces: fatten a gone slug past the <900-word filter and
+        // prove the explicit exclusion still keeps it out of the sitemap.
+        $this->makeProbePost(
+            'sarkari-yojana-2026-list',
+            str_repeat('Substantial probe content word. ', 400)
+        );
+
+        $this->get('/journal/sarkari-yojana-2026-list')->assertStatus(410);
+
+        $response = $this->get('/sitemap.xml');
+        $response->assertStatus(200);
+        foreach (PostController::GONE_SLUGS as $slug) {
+            $response->assertDontSee('/journal/'.$slug, false);
+        }
+    }
+
+    public function test_variant_slug_301_redirects_to_published_base(): void
+    {
+        $this->makeProbePost('variant-guard-base-post', 'Base post body with enough words to render a page.');
+        $this->makeProbePost('variant-guard-base-post-variant-3', 'Variant near-duplicate body.');
+
+        $this->get('/journal/variant-guard-base-post')->assertStatus(200);
+
+        $response = $this->get('/journal/variant-guard-base-post-variant-3');
+        $response->assertStatus(301);
+        $this->assertStringEndsWith(
+            '/journal/variant-guard-base-post',
+            (string) $response->headers->get('Location')
+        );
+    }
+
+    public function test_variant_slug_without_base_keeps_noindex_fallback(): void
+    {
+        $this->makeProbePost('orphan-guard-post-variant-7', 'Orphan variant body without a base post.');
+
+        $response = $this->get('/journal/orphan-guard-post-variant-7');
+        $response->assertStatus(200);
+        $response->assertSee('noindex, follow', false);
     }
 }

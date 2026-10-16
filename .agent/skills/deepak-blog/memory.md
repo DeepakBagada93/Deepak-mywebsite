@@ -3258,3 +3258,213 @@
   - Words: 1483
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Website Cost Gujarat 2026: ₹25K–₹80K Breakdown [Junagadh]**
+  - Slug: `custom-website-cost-junagadh-gujarat-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-16`
+  - Words: 1351
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/custom-website-cost-junagadh-gujarat-2026
+
+- **AI Agents for Indian SMEs 2026: ₹40K ROI Guide [Code]**
+  - Slug: `building-multi-agent-ai-systems-indian-smes-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1343
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/building-multi-agent-ai-systems-indian-smes-2026
+
+- **AI Coding Agents 2026: Ship vs Hype [Guide]**
+  - Slug: `ai-coding-agents-2026-what-they-ship-vs-promise`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-16`
+  - Words: 1523
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-coding-agents-2026-what-they-ship-vs-promise
+
+- **AEO Checklist 2026: Get Cited by AI [Proven Guide]**
+  - Slug: `answer-engine-optimization-checklist-2026`
+  - Tag: `AEO`
+  - Published: `2026-10-16`
+  - Words: 1242
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/answer-engine-optimization-checklist-2026
+
+- **WhatsApp AI Chatbots 2026: SME Guide [₹55K Proof]**
+  - Slug: `whatsapp-ai-chatbots-indian-smes-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1243
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/whatsapp-ai-chatbots-indian-smes-2026
+
+- **Website Design: Magazine Portfolio India 2026 [Playbook]**
+  - Slug: `why-this-portfolio-looks-like-a-magazine`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-16`
+  - Words: 1493
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/why-this-portfolio-looks-like-a-magazine
+
+- **Website Redesign 2026: 9-Signal Checklist [SME Guide]**
+  - Slug: `when-to-redesign-your-website-2026-checklist`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-16`
+  - Words: 1201
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/when-to-redesign-your-website-2026-checklist
+
+- **Zero-Click SEO 2026: 5 Moves That Win [Guide]**
+  - Slug: `zero-click-search-2026-what-to-do`
+  - Tag: `AEO`
+  - Published: `2026-10-16`
+  - Words: 1231
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/zero-click-search-2026-what-to-do
+
+- **Website Speed Audit: 6.8s → 1.9s Gujarat Fix 2026 [Guide]**
+  - Slug: `load-time-audit-saasnext-6-8-to-1-9-seconds`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-16`
+  - Words: 1308
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/load-time-audit-saasnext-6-8-to-1-9-seconds
+
+- **AI Apps 2026: Native Architecture [Blueprint]**
+  - Slug: `building-ai-native-web-applications-architecture-ux-2026`
+  - Tag: `WEB & AI`
+  - Published: `2026-10-16`
+  - Words: 1660
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/building-ai-native-web-applications-architecture-ux-2026
+
+- **AI Agents 2026: 8 Google ADK Patterns [Guide]**
+  - Slug: `google-adk-multi-agent-patterns-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1404
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/google-adk-multi-agent-patterns-2026
+
+- **Pydantic AI 2.0 + Harness 2026 [Guide]**
+  - Slug: `pydantic-ai-2-0-type-safe-harness-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1328
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/pydantic-ai-2-0-type-safe-harness-2026
+
+- **Strands Agents 2026: AWS Model-Driven SDK [Guide]**
+  - Slug: `strands-agents-aws-model-driven-sdk-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1343
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/strands-agents-aws-model-driven-sdk-2026
+
+- **AI Agents 2026: Deploy ADK to Cloud Run [Guide]**
+  - Slug: `deploy-google-adk-cloud-run-vertex-ai-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1578
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/deploy-google-adk-cloud-run-vertex-ai-2026
+
+- **Best AI Agent Frameworks August 2026: Ranked by Alice Labs**
+  - Slug: `best-ai-agent-frameworks-august-2026-ranked`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-16`
+  - Words: 1240
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/best-ai-agent-frameworks-august-2026-ranked
+
+- **Hermes Agent 234K Stars: Self-Improving AI That Learns**
+  - Slug: `hermes-agent-234k-stars-self-improving-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-16`
+  - Words: 1308
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/hermes-agent-234k-stars-self-improving-2026
+
+- **Claude Agent SDK: 5-Level Hierarchical Subagents Ship**
+  - Slug: `claude-agent-sdk-hierarchical-subagents-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1280
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/claude-agent-sdk-hierarchical-subagents-2026
+
+- **Sovereign AI in India: Offline 70B + MCP + DPDP 2026**
+  - Slug: `sovereign-ai-india-offline-70b-mcp-dpdp-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1278
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/sovereign-ai-india-offline-70b-mcp-dpdp-2026
+
+- **SEO Case Study: 3x Organic Traffic Gujarat 2026 [Proven]**
+  - Slug: `case-study-saasnext-tripling-organic-traffic`
+  - Tag: `LOCAL SEO`
+  - Published: `2026-10-16`
+  - Words: 1253
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/case-study-saasnext-tripling-organic-traffic
+
+- **Microsoft Agent Framework 1.0 [2026 GA Guide]**
+  - Slug: `microsoft-agent-framework-1-0-harness-ga-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1292
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/microsoft-agent-framework-1-0-harness-ga-2026
+
+- **Sunday Setup: 5 ADK Agents That Make Monday Easy**
+  - Slug: `sunday-setup-5-adk-agents-monday-automation-2026`
+  - Tag: `AUTOMATION`
+  - Published: `2026-10-16`
+  - Words: 1341
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/sunday-setup-5-adk-agents-monday-automation-2026
+
+- **AI Agents 2026: LlamaIndex Workflows 1.0 [Guide]**
+  - Slug: `llamaindex-workflows-1-0-event-driven-engine-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1328
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/llamaindex-workflows-1-0-event-driven-engine-2026
+
+- **RAG vs Fine-Tuning: What Worked India 2026 [Benchmark]**
+  - Slug: `fine-tuning-vs-rag-what-worked-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1258
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/fine-tuning-vs-rag-what-worked-2026
+
+- **AI Swarms 2026: Multi-Agent Architecture [Blueprint]**
+  - Slug: `multi-ai-agent-architecture-swarm-orchestration-guide-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-16`
+  - Words: 1669
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/multi-ai-agent-architecture-swarm-orchestration-guide-2026
+
+- **Laravel 13 Production: 12 Lessons Gujarat 2026 [Guide]**
+  - Slug: `laravel-13-production-12-months-lessons`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-16`
+  - Words: 1234
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/laravel-13-production-12-months-lessons
+
+- **Hiring My First Contractor 2026: ₹18K Win [Junagadh]**
+  - Slug: `junagadh-hiring-first-contractor-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-16`
+  - Words: 1201
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/junagadh-hiring-first-contractor-2026
+
+- **AI Developer Story in 6 Chapters: Gujarat 2026 [Guide]**
+  - Slug: `from-code-to-ai-my-story-six-chapters`
+  - Tag: `MY STORY`
+  - Published: `2026-10-16`
+  - Words: 1291
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/from-code-to-ai-my-story-six-chapters
+
+- **AEO Ranking: SEO Meets AI Search Gujarat 2026 [Guide]**
+  - Slug: `seo-meets-aeo-ranking-ai-era`
+  - Tag: `AEO`
+  - Published: `2026-10-16`
+  - Words: 1224
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/seo-meets-aeo-ranking-ai-era
+
+- **AI Automations: 5 Systems Run Gujarat 2026 [Blueprint]**
+  - Slug: `5-ai-automations-run-my-workflow`
+  - Tag: `AUTOMATION`
+  - Published: `2026-10-16`
+  - Words: 1241
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/5-ai-automations-run-my-workflow
+
+- **Curro 1.0: AI Content Studio Guide India 2026 [Launch]**
+  - Slug: `curro-1-0-ai-content-studio`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-16`
+  - Words: 1206
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/curro-1-0-ai-content-studio

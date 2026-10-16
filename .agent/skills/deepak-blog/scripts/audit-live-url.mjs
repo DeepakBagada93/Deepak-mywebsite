@@ -176,7 +176,16 @@ else {
 }
 
 // ─── 9. Content format / leak checks ───────────────────────────────────────
-if (has(/undefined|null|NaN.*render/i)) add("WARN", "Render leaks", "Possible JS render leak (undefined/null in HTML)");
+// Render-leak check matches BARE text nodes only (e.g. <p>undefined</p> when a
+// framework interpolates an unset value). The old naive /undefined|null/i on
+// raw HTML false-positived on legitimate engineering prose ("null check",
+// "nullable column", "undefined scope") and JS code samples — script/style
+// sources are stripped and prose around the token no longer flags.
+const textNodes = html
+  .replace(/<script[\s\S]*?<\/script>/gi, " ")
+  .replace(/<style[\s\S]*?<\/style>/gi, " ")
+  .match(/>([^<>]*)</g) || [];
+if (textNodes.some((t) => /^\s*(undefined|null|NaN)\s*$/i.test(t.slice(1, -1)))) add("WARN", "Render leaks", "Possible JS render leak (undefined/null in HTML)");
 if (count(/\*\*.*\*\*/) > 20) {
   const withoutCode = html.replace(/<code[\s\S]*?<\/code>/gi, "").replace(/<pre[\s\S]*?<\/pre>/gi, "");
   if (/\*\*[^<]{5,}\*\*/.test(withoutCode)) add("WARN", "Raw markdown leaks", "Raw **bold** markers in HTML — markdown not rendered");

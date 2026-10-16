@@ -16,9 +16,12 @@ class SitemapController extends Controller
         $url = rtrim($site['url'], '/');
         // Exclude thin posts (<900 words, auditor-consistent count) so Google
         // focuses crawl budget on substantial pages (AdSense low-value fix).
-        // Also exclude duplicate-variant slugs (canonical consolidation).
+        // Also exclude duplicate-variant slugs (canonical consolidation) and
+        // off-topic 410 slugs (belt-and-braces: they 410 in PostController@show
+        // but must never be offered for crawling either).
         $posts = Post::published()->canonical()->get()
             ->reject(fn (Post $p) => Post::isVariantSlug($p->slug))
+            ->reject(fn (Post $p) => in_array($p->slug, PostController::GONE_SLUGS, true))
             ->reject(fn (Post $p) => WordCount::count($p->content) < 900)
             ->values();
         $services = Service::orderBy('id')->get();
