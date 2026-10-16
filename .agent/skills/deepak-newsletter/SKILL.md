@@ -120,7 +120,21 @@ flowchart TD
 
 ---
 
-## 🛡️ 4. Deliverability, Compliance & Best Practices
+## 🛡️ 4. Web Syndication, SEO & AdSense Anti-Thin Content Standards
+
+When newsletter dispatches are repurposed or archived on the web (`/journal` or blog entries):
+1. **Never Post Thin Teasers**:
+   - Short email excerpts (<800 words) published as standalone web pages trigger Google AdSense **"Low-value content"** penalties.
+   - Any newsletter topic syndicated to the web MUST be expanded into a full **1,200–1,800+ word** technical article with multi-file runnable code, P95 metrics, and comparison tables.
+2. **Canonical & AEO Optimization**:
+   - Web versions must include the 40–60 word Direct Answer block for Google AI Overviews and Perplexity extraction.
+   - Cross-link back to core services (`/services/*`) and open-source library entries (`/library/*`).
+3. **Information Gain**:
+   - Provide concrete rupee / dollar ROI figures and real server configuration files rather than high-level commentary.
+
+---
+
+## 🛡️ 5. Deliverability, Compliance & Best Practices
 
 1. **CAN-SPAM & GDPR Compliant**:
    - Always include physical business address: `Deepak Bagada, Junagadh, Gujarat 362001, India`.
@@ -132,3 +146,4 @@ flowchart TD
 3. **Engagement Driven**:
    - Primary metric is **replies and discussions**, not blind blasts.
    - Reply-to goes directly to `ceo@saasnext.in` for 1-on-1 direct conversations.
+

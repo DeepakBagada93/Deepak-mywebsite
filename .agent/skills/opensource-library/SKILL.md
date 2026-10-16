@@ -49,6 +49,31 @@ All skill and blueprint titles MUST be engineered for maximum CTR using high-con
 
 ---
 
+## 🛡️ GOOGLE ADSENSE DIRECTORY DEFENSE & AEO/GEO COMPLIANCE
+### (Defeating "Low-Value Content" & "Thin Aggregator" Flags in Curated Hubs)
+
+> [!CAUTION]
+> **ADSENSE DIRECTORY & CURATED LIST POLICY**:
+> Online directories and curated repositories are the #1 target for AdSense **"Low-value content"** and **"Scraped / Thin content"** rejections if they merely link out or parrot GitHub README descriptions.
+> Every entry in `/repos`, `/library`, and `/blueprints` must deliver **unmistakable original editorial value** and deep practitioner analysis that cannot be found on GitHub or third-party documentation.
+
+### Mandatory High-Value Editorial Rules:
+1. **Substantial Practitioner Commentary (`why_great`)**:
+   - Minimum 60–120 words of firsthand engineering analysis from Deepak Bagada.
+   - Must cite concrete metrics: token reduction percentage, P95 latency shifts, ₹/INR or $/USD cost differences, or Docker container optimization.
+   - Must reference real production scenarios (e.g. Junagadh lab tests, Gujarat client deployments, local Pi 5 / workstation harnesses).
+2. **Brutal Technical Honesty (`when_not`)**:
+   - Every repo entry MUST articulate failure modes, operational complexity, or situations where simpler tools beat the library.
+   - AdSense raters and human evaluators look specifically for balanced, objective analysis over generic promotional praise.
+3. **Flagship Skill Pages (`/library/{slug}`) Depth**:
+   - Strict **1,200–2,000 words** minimum per skill page.
+   - Multi-file runnable code blocks, full Mermaid / SVG architecture diagrams, and configuration files.
+4. **Structured AEO / GEO Entity Architecture**:
+   - Schema.org JSON-LD structured data on all pages (`CollectionPage`, `ItemList`, `SoftwareApplication`).
+   - Clean, extractable metadata (stars, license, category, version, framework dependencies) for Google AI Overviews and Perplexity search indexing.
+
+---
+
 ## ✍️ ANTI-AI SLOP & 100% HUMAN PRACTITIONER MANIFESTO
 ### (Zero AI Slop Guarantee · Defeating Google Core Updates & AI Detectors)
 
