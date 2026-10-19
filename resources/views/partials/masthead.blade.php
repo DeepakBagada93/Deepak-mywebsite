@@ -102,6 +102,9 @@
             </div>
             <a href="{{ route('library.index') }}">Library</a>
             <a href="{{ route('products.index') }}">Store</a>
+            <button type="button" class="masthead__cart-btn mono" data-open-cart aria-label="Open Shopping Cart">
+                🛒 Cart <span class="masthead__cart-badge" id="masthead-cart-count" style="display:none">0</span>
+            </button>
             <a href="{{ route('journal.index') }}">Journal</a>
             <a href="{{ route('legal.contact') }}">Contact</a>
         </nav>
@@ -150,6 +153,11 @@
         </li>
         <li><a href="{{ route('library.index') }}"><span class="mono mmenu__num">03</span>AI Library</a></li>
         <li><a href="{{ route('products.index') }}"><span class="mono mmenu__num">04</span>Store <span class="mmenu__badge mono">New</span></a></li>
+        <li>
+            <button type="button" class="mmenu__cart-btn" data-open-cart>
+                <span class="mono mmenu__num">🛒</span>Cart (<span class="mmenu-cart-count">0</span>)
+            </button>
+        </li>
         <li><a href="{{ route('blueprints.index') }}"><span class="mono mmenu__num">05</span>Blueprints</a></li>
         <li><a href="{{ route('repos.index') }}"><span class="mono mmenu__num">06</span>Repos</a></li>
         <li><a href="/#about"><span class="mono mmenu__num">07</span>About</a></li>

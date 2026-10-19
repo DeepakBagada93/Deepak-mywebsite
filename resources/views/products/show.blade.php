@@ -124,5 +124,4 @@
 </article>
 
 @include('products.partials.checkout-modal')
-@include('products.partials.cart')
 @endsection

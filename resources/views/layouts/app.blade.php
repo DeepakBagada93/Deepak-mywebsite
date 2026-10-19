@@ -97,6 +97,8 @@
 
     @include('partials.footer')
 
+    @include('products.partials.cart')
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="/js/main.js?v={{ file_exists(public_path('js/main.js')) ? filemtime(public_path('js/main.js')) : time() }}"></script>
