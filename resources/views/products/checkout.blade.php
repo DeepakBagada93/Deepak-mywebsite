@@ -59,7 +59,7 @@
                                 <label class="store-field">
                                     <span class="mono">Email address <strong class="checkout-required">*</strong></span>
                                     <input type="email" name="email" required autocomplete="email" placeholder="e.g. you@example.com" class="checkout-input">
-                                    <small class="checkout-field-hint mono">Your download archive link and purchase receipt will be sent here.</small>
+                                    <small class="checkout-field-hint mono">✓ Includes receipt, instant ZIP delivery & future product update dispatches.</small>
                                 </label>
 
                                 <label class="store-field">
@@ -128,7 +128,7 @@
                     <p class="mono checkout-kicker">Order Confirmed</p>
                     <h2 class="checkout-title">You're all set!</h2>
                     <p class="checkout-subtitle" id="checkout-success-msg">
-                        Your download link has been generated and sent to your email address.
+                        Your download link has been sent to your email address, and you're enrolled to receive future product release updates.
                     </p>
 
                     <div class="checkout-success__reference mono" id="checkout-success-ref"></div>

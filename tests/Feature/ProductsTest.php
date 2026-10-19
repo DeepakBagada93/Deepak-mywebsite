@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Mail\AdminPurchaseMail;
 use App\Mail\ProductDeliveryMail;
 use App\Models\ProductOrder;
+use App\Models\Subscriber;
 use App\Services\CashfreeService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
@@ -495,5 +496,58 @@ class ProductsTest extends TestCase
         $order = ProductOrder::where('cart_reference', $reference)->first();
         $this->assertSame(ProductOrder::STATUS_SUCCESS, $order->payment_status);
         $this->assertTrue($order->isDownloadable());
+    }
+
+    public function test_purchasing_customer_is_automatically_subscribed_to_newsletter(): void
+    {
+        Mail::fake();
+
+        // 1. New subscriber created on free checkout
+        $this->postJson('/products/checkout', [
+            'product_slug' => 'ai-project-kickoff-skills-kit',
+            'name' => 'Auto Subscriber',
+            'email' => 'auto-sub@example.com',
+        ])->assertStatus(200);
+
+        $this->assertDatabaseHas('subscribers', [
+            'email' => 'auto-sub@example.com',
+            'name' => 'Auto Subscriber',
+            'status' => 'active',
+            'source' => 'product_checkout',
+        ]);
+
+        // 2. Reactivate unsubscribed subscriber on paid order return/fulfillment
+        config([
+            'services.cashfree.app_id' => 'test_app',
+            'services.cashfree.secret_key' => 'test_secret',
+        ]);
+
+        $inactiveSubscriber = Subscriber::create([
+            'email' => 'returning@example.com',
+            'name' => 'Old Name',
+            'status' => 'unsubscribed',
+            'source' => 'website',
+        ]);
+
+        $reference = ProductOrder::generateReference();
+        ProductOrder::create([
+            'order_reference' => ProductOrder::generateReference(),
+            'cart_reference' => $reference,
+            'product_slug' => 'live-payment-verification-kit',
+            'product_title' => 'Live Payment Verification Test Pack',
+            'customer_name' => 'Returning Customer',
+            'customer_email' => 'returning@example.com',
+            'amount' => 5,
+            'payment_status' => ProductOrder::STATUS_PENDING,
+        ]);
+
+        Http::fake([
+            '*/orders/'.$reference => Http::response(['order_status' => 'PAID'], 200),
+        ]);
+
+        $this->get('/products/return?order_id='.$reference)->assertStatus(200);
+
+        $inactiveSubscriber->refresh();
+        $this->assertSame('active', $inactiveSubscriber->status);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\ProductOrder;
+use App\Models\Subscriber;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
@@ -34,6 +35,9 @@ class ProductDeliveryMail extends Mailable
 
     public function content(): Content
     {
+        $email = strtolower(trim((string) $this->orders->first()?->customer_email));
+        $subscriber = $email ? Subscriber::where('email', $email)->first() : null;
+
         return new Content(
             view: 'emails.product-delivery',
             with: [
@@ -41,6 +45,7 @@ class ProductDeliveryMail extends Mailable
                 'orders' => $this->orders,
                 'customer' => $this->orders->first()->customer_name,
                 'total' => $this->orders->sum('amount'),
+                'subscriber' => $subscriber,
             ],
         );
     }

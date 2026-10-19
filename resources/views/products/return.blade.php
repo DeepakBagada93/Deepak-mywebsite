@@ -31,7 +31,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <p class="mono" style="color:var(--muted);margin-top:18px">Links valid 48 hours · 5 downloads each · no account needed</p>
+                <p class="mono" style="color:var(--muted);margin-top:18px">Links valid 48 hours · 5 downloads each · Subscribed to product release updates</p>
                 <div class="article__foot" style="justify-content:center">
                     <a class="btn btn--ghost" href="{{ route('products.track') }}">Track / re-download →</a>
                 </div>

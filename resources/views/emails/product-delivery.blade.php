@@ -47,6 +47,12 @@
                     <tr>
                         <td style="padding:24px 40px 40px;border-top:1px solid #e3ddd2;">
                             <p style="margin:0 0 8px;font-size:14px;line-height:1.7;">Link expired or hit its limit? Just reply to this email and I will resend it.</p>
+                            <p style="margin:0 0 12px;font-size:12px;color:#8a8377;line-height:1.6;">
+                                You are enrolled to receive future engineering product releases & technical dispatches from Deepak Bagada.
+                                @if (!empty($subscriber))
+                                    · <a href="{{ $subscriber->getUnsubscribeUrl() }}" style="color:#6f6f6f;text-decoration:underline;">Unsubscribe</a>
+                                @endif
+                            </p>
                             <p style="margin:0;font-size:12px;color:#6f6f6f;font-family:'Courier New',monospace;">{{ $site['name'] }} — {{ $site['email'] }}</p>
                         </td>
                     </tr>

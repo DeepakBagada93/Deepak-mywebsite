@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Mail\AdminPurchaseMail;
 use App\Mail\ProductDeliveryMail;
 use App\Models\ProductOrder;
+use App\Models\Subscriber;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 
@@ -32,12 +33,52 @@ class OrderFulfiller
             $order->markPaid($cfOrderId);
         }
 
-        $this->sendNotifications(ProductOrder::group($cartReference));
+        $allOrders = ProductOrder::group($cartReference);
+
+        $this->subscribeCustomerToNewsletter($allOrders);
+        $this->sendNotifications($allOrders);
     }
 
     public function fulfill(ProductOrder $order): void
     {
         $this->fulfillGroup($order->cart_reference ?: $order->order_reference);
+    }
+
+    /**
+     * Automatically enroll buyers in the newsletter for future product announcements
+     * and engineering updates (idempotent; reactivates inactive subscribers).
+     *
+     * @param  Collection<int, ProductOrder>  $orders
+     */
+    public function subscribeCustomerToNewsletter(Collection $orders): void
+    {
+        $first = $orders->first();
+        if (! $first || empty($first->customer_email)) {
+            return;
+        }
+
+        $email = strtolower(trim((string) $first->customer_email));
+        $name = trim((string) ($first->customer_name ?: ''));
+
+        try {
+            $subscriber = Subscriber::where('email', $email)->first();
+
+            if (! $subscriber) {
+                Subscriber::create([
+                    'email' => $email,
+                    'name' => $name ?: null,
+                    'status' => 'active',
+                    'source' => 'product_checkout',
+                ]);
+            } elseif (! $subscriber->isActive()) {
+                $subscriber->resubscribe();
+                if ($name && empty($subscriber->name)) {
+                    $subscriber->update(['name' => $name]);
+                }
+            }
+        } catch (\Throwable $e) {
+            report($e);
+        }
     }
 
     /**
