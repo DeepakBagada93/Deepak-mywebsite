@@ -1,9 +1,10 @@
 ---
 name: deepak-blog
 description: >
-  Autonomous Rank-#1 SEO, AEO & Viral Content Publishing Engine for Deepak Bagada (deepakbagada.in/journal).
+  Autonomous Rank-#1 SEO, AEO & High-EEAT Content Publishing Engine for Deepak Bagada (deepakbagada.in/journal).
   Engineered to eliminate synthetic AI writing patterns, defeat Google Helpful Content & Core Updates,
-  and generate millions of views with viral, trending technical dispatches.
+  maximize impressions and views through high-demand search intent validation, clean bracket-free editorial titles,
+  AEO direct answer blocks, structured comparison tables, runnable production code, and genuine first-person builder EEAT.
   Executes a strict SEQUENTIAL ONE-BY-ONE loop (Search One → Anti-Duplication Pre-Check → Write One →
   Pre-Publish Audit → Direct Push to Live DB + Frontend data/posts.php → Verify Live URL → Log Memory → Repeat).
   Features an automated date-driven progressive scaling engine:
@@ -11,16 +12,16 @@ description: >
   - Phase 2: Days 21–50 (Oct 12 – Nov 10, 2026) at 5 Dispatches/run for gradual velocity scale.
   - Phase 3: Days 51–80 (Nov 11 – Dec 10, 2026) at 7 Dispatches/run for topical authority expansion.
   - Phase 4: Days 81+ (Dec 11, 2026 onwards) at 10 Dispatches/run for enterprise authority scale.
-  Features high-converting symbols and brackets ([ ], ( ), :, |, —, //, $, ₹, %, →, &).
-  Strict word count: 1,200 to 1,600+ words per article (high-EEAT, runnable code, ₹ pricing/metrics, zero AI fluff).
+  STRICTLY ZERO SQUARE BRACKETS ([ ]) in titles. Mandatory 50–60 character SEO titles and 145–158 character meta descriptions.
+  Strict word count: 1,400 to 2,000+ words per article (high-EEAT, runnable multi-file code, ₹/$ metrics, zero AI fluff).
   ZERO git commits/pushes needed — content goes live instantly via remote MySQL database.
 ---
 
-# 🚀 Deepak Bagada Viral & Rank-#1 Autonomous Journal Engine (`deepak-blog` v10.1)
-### (Progressive Crawl Budget Scaling Engine · GSC Indexing Compliance · High-CTR Symbols Edition · Zero Git Push Needed)
+# 🚀 Deepak Bagada High-Value SEO, AEO & Rank-#1 Journal Engine (`deepak-blog` v12.0)
+### (High-Demand Search Validation · Bracket-Free Editorial Titles · Direct AEO Answer Blocks · Information Gain EEAT · Zero Git Push Needed)
 
 > [!IMPORTANT]
-> **CORE ARCHITECTURE: STRICT ITEM-BY-ITEM CLOSED LOOP & PROGRESSIVE SCALING**:
+> **CORE ARCHITECTURE: STRICT ITEM-BY-ITEM CLOSED LOOP & HIGH SEARCH DEMAND VALIDATION**:
 > Every execution runs sequentially one article at a time. The daily dispatch volume is strictly governed by the progressive crawl budget engine:
 >
 > ### 📅 AUTOMATIC DATE-DRIVEN PROGRESSIVE SCALING SCHEDULE:
@@ -28,15 +29,15 @@ description: >
 >
 > * **Phase 1 (Days 1–20 | 2026-09-22 to 2026-10-11) — Safe Crawl Budget & Ultra-High Quality (3 Dispatches Total)**:
 >   - **Dispatch 1**: Authority & Rank-#1 Money Query (`best website developer` / `best AI agent developer` / `top AI expert` × `Junagadh / Gujarat / India / world`, ₹ pricing, client ROI metrics)
->   - **Dispatch 2**: Frontier AI & Autonomous Swarms (Reasoning models, MCP, LangGraph, Pydantic, Self-Healing loops, OPA, Claude 3.7 / DeepSeek)
->   - **Dispatch 3**: High-Performance Web Dev or Founder Reality (Next.js 15.5 App Router + Laravel 13 AI SDK, pgvector, or Junagadh lab engineering war stories)
->   - *Purpose*: Strict crawl budget protection. Keep content volume low and quality exceptionally high (1,400–1,800+ words, multi-file code, ₹ metrics) so Googlebot easily crawls, renders, and indexes 100% of newly published URLs without crawl fatigue or "Discovered – currently not indexed" backlog.
+>   - **Dispatch 2**: Frontier AI & Autonomous Swarms (Reasoning models, MCP, LangGraph, Pydantic-AI, Self-Healing loops, Claude 3.7 / DeepSeek R1)
+>   - **Dispatch 3**: High-Performance Web Dev or Production War Story (Next.js 15 App Router + Laravel 13 AI SDK, pgvector HNSW, or Junagadh lab engineering war stories)
+>   - *Purpose*: Strict crawl budget protection. Keep content volume focused and quality exceptionally high (1,400–2,000+ words, multi-file code, ₹ metrics) so Googlebot crawls, renders, and indexes 100% of newly published URLs without crawl fatigue or "Discovered – currently not indexed" backlogs.
 >
 > * **Phase 2 (Days 21–50 | 2026-10-12 to 2026-11-10) — Gradual Velocity Scale (5 Dispatches Total)**:
 >   - Dispatch 1: Authority Rank-#1 Playbook
 >   - Dispatch 2: AI Agents & Autonomous Swarms
 >   - Dispatch 3: Breaking AI News & Frontier Benchmarks
->   - Dispatch 4: High-Performance Web Dev (Next.js + Laravel)
+>   - Dispatch 4: High-Performance Web Dev (Next.js 15 + Laravel 13)
 >   - Dispatch 5: Founder Reality & Production War Story
 >   - *Purpose*: Expands throughput as Googlebot's crawl rate widens based on healthy indexation and zero crawl errors.
 >
@@ -50,233 +51,219 @@ description: >
 >
 > **MANDATORY SEQUENTIAL FLOW (SEARCH 1 → WRITE 1 → AUDIT 1 → PUSH 1 → VERIFY LIVE URL 1 → LOG 1)**:
 > **NEVER batch search, write, or push articles in parallel**. Each article in sequence must complete all stages before the next begins:
-> - **Step 1 — Search Trending Viral Topic**: Search real-time web/social trends (`search_web`) for high-velocity demand.
+> - **Step 1 — Search Demand & Trend Validation**: Use `search_web` to verify real search volume and trending technical queries. Reject zero-volume journal notes.
 > - **Step 2 — Anti-Duplication & Live DB Collision Pre-Check**: Run `php .agent/skills/deepak-blog/scripts/check-collision.php "<Keyword or Slug>"`. Prohibit duplicate numeric suffixes (`-[0-9]+` like `-2`, `-3` strictly banned; year `2026` allowed).
-> - **Step 3 — Write 1 High-CTR Dispatch Payload**: (1,200–1,600+ words, high-CTR symbol title, first-person Deepak Bagada voice, runnable multi-file code, comparison/pricing table, AEO answer block, 3–5 internal links, 4 FAQs, strict image alt tags).
-> - **Step 4 — Pre-Publish Audit**: Run `node .agent/skills/deepak-blog/scripts/audit-blog.mjs` to ensure 0 FAIL.
+> - **Step 3 — Write 1 High-Value Dispatch Payload**: (1,400–2,000+ words, clean high-CTR bracket-free title, front-loaded keyword, first-person Deepak Bagada voice, AEO 40–60 word direct answer block, Key Takeaways box, runnable multi-file code, comparison/pricing table, "When NOT to Use This" section, 3–5 internal links, 4 FAQs, ZERO images in the body — text, code blocks, and tables only).
+> - **Step 4 — Pre-Publish Audit**: Run `node .agent/skills/deepak-blog/scripts/audit-blog.mjs` to ensure 0 FAIL (checks title length 50-60 chars, zero brackets, AEO answer block, takeaways, comparison table, word count, no images, anti-slop).
 > - **Step 5 — Direct Push to Live DB + Frontend**: Run `php .agent/skills/deepak-blog/scripts/publish-single-post.php` to insert/upsert directly into Hostinger Live MySQL DB (`posts` table), update `data/posts.php`, and clear application cache.
-> - **Step 6 — Live URL Quality & Alt Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and image alt tags.
+> - **Step 6 — Live URL Quality Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and image-free body.
 > - **Step 7 — Log to `memory.md`**: Append title, slug, tag, date, and metrics.
-> - **Step 8 — GSC Indexing Protocol (v10.1)**: Confirm slug present in `sitemap.xml` with today's `<lastmod>` → URL Inspection → Request Indexing (≤ phase quota/day) → log timestamp. Check Page Indexing report for Discovered/Crawled-not-indexed, soft 404, duplicate-canonical.
+> - **Step 8 — GSC Indexing Protocol**: Confirm slug in `sitemap.xml` with today's `<lastmod>` → URL Inspection → Request Indexing (≤ phase quota/day).
 > - **Step 9 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota).
 > - **ZERO GIT PUSH NEEDED**: Publishing goes directly into the live database and updates local files. Zero git commits/pushes protects search engine indexing stability.
 
 ---
 
-## 🛡️ GOOGLE ADSENSE "LOW-VALUE CONTENT" ZERO-TOLERANCE DEFENSE & AEO/GEO COMPLIANCE
+## 🎯 SOLVING THE "ZERO IMPRESSIONS & VIEWS" PROBLEM: THE 5-PILLAR SEARCH DEMAND MATRIX
 
 > [!CAUTION]
-> **GOOGLE ADSENSE PUBLISHER POLICY ENFORCEMENT**:
-> Google AdSense reviewers and automated quality raters aggressively reject and penalize sites for **"Low-value content"**, **"Thin content with little or no added value"**, or **"Scraped / Rehashed AI content"**.
-> Every single published journal article must deliver **undeniable, proprietary engineering value** that passes both Google AdSense human manual reviews and Google Helpful Content / Core Updates.
+> **WHY ARTICLES GET ZERO IMPRESSIONS IN GOOGLE SEARCH CONSOLE**:
+> 1. **Zero-Search-Volume Topics**: Writing personal diary entries (e.g. *"Day in Life Junagadh Lab 06:00–22:00"*) that no human or company actually searches for.
+> 2. **Bracket-Stuffed Spam Titles**: Using titles like `[Blueprint] Multi-Agent Swarms with LangGraph: 68% Cost Drop (2026 Guide)`. Google's title-rewriting algorithms strip bracket tags, truncate titles, or classify them as synthetic affiliate spam.
+> 3. **Title Length Overflows**: Titles over 65 characters get truncated in Google SERPs with `...`, obscuring the value proposition and destroying click-through rates.
+> 4. **Lack of Information Gain**: Rehashing official documentation without original benchmarks, P95 latency figures, rupee pricing, or production failure post-mortems.
+> 5. **Weak AEO Structuring**: AI Answer Engines (Perplexity, ChatGPT Search, Claude, Google AI Overviews) skip articles that lack a 40–60 word direct definition/answer snippet within the opening paragraphs.
 
-### 1. 🛑 The 5 Root Causes of AdSense "Low-Value Content" Penalties & How We Defeat Them
+### 1. High-Demand Search Topics (Verified 2026 Queries)
+Every article published MUST target an active, high-intent technical search query from one of these 5 pillars:
 
-| AdSense Violation Pattern | Why Reviewers Reject It | Mandatory `deepak-blog` Engineering Defense |
+| Pillar | Search Intent & Query Examples | Why It Drives High Impressions & Views |
 |---|---|---|
-| **1. Thin Content (<800 words)** | Pages lack depth, context, or actionable solutions; exists solely to host ad blocks. | **Strict 1,200–1,800+ Words Minimum**: Dense, technical, multi-section architecture breakdowns with zero fluff or synthetic filler. |
-| **2. Generic AI Rehashes** | Regurgitating official docs (e.g. Next.js docs or LangChain tutorials) without new insights. | **Proprietary Information Gain**: Every post MUST provide original bench tests, P95 latency numbers, real ₹/INR costs, and configuration edge cases unavailable anywhere else online. |
-| **3. Lack of Author EEAT** | Anonymous, corporate, or third-person writing without verifiable expertise or author identity. | **Deepak Bagada Practitioner Voice**: Grounded in firsthand builder experiences from the Junagadh lab (SaaS Next, Curro, Gujarat SME enterprise deployments). |
-| **4. Theoretical Toy Code** | Snippets with `foo()`, `bar()`, or non-runnable pseudocode. | **Multi-File Production Implementations**: Fully runnable, syntactically verified code (Python, PHP, TS, SQL, Bash) with realistic configurations. |
-| **5. High Ad-to-Content Ratio** | Short articles overwhelmed by banners, creating poor reader dwell time and high bounce rate. | **Deep Editorial Density**: Multiple substantive sections, comparison tables, code blocks, and 4 FAQs ensuring content heavily outweighs ad slots. |
+| **1. Frontier AI & Reasoning LLMs** | `Claude 3.7 Sonnet coding benchmark`, `DeepSeek R1 vs Claude 3.7`, `OpenAI o3 mini tool calling`, `Llama 3.3 70B local inference VPS` | Millions of global developers actively research model migrations, benchmark comparisons, and token economics. |
+| **2. Autonomous Agents & MCP** | `FastMCP server Python tutorial`, `LangGraph multi agent architecture`, `Pydantic AI production guide`, `Model Context Protocol Cursor setup` | Exploding search volume (+400% YoY) as enterprises transition from prompt engineering to agentic workflows. |
+| **3. High-Performance Web (Next.js + Laravel)** | `Next.js 15 App Router cache architecture`, `Laravel 13 AI SDK pgvector`, `Next.js vs Laravel 2026 performance`, `pgvector HNSW index tuning` | Core architectural stack queries where engineers seek battle-tested production advice over toy tutorials. |
+| **4. Authority & Money Target Grid** | `best AI agent developer India`, `top website developer Gujarat`, `custom AI agent development cost India`, `hire AI developer Junagadh` | High-intent commercial queries with immediate business value, high conversion, and local-national rank dominance. |
+| **5. Production Engineering War Stories** | `LangGraph 429 rate limit backoff recovery`, `pgvector memory leak production fix`, `Next.js 15 Server Actions race condition fix` | Specific troubleshooting queries that rank #1 for long-tail developer searches facing immediate build breakage. |
 
 ---
 
-### 2. 🤖 AEO (Answer Engine Optimization) & GEO (Generative Engine Optimization) Architecture
+## 🏷️ HIGH-CTR TITLE ARCHITECTURE (STRICTLY ZERO SQUARE BRACKETS)
 
-To dominate both traditional SERPs and AI Answer Engines (**Google AI Overviews**, **Perplexity**, **ChatGPT Search**, and **Claude**), every dispatch must follow this exact semantic extraction structure:
+> [!CAUTION]
+> **STRICT BAN: ZERO SQUARE BRACKETS IN TITLES (`[ ]`)**
+> **NEVER use square brackets in article titles.**
+> Bracket tags like `[Blueprint]`, `[Playbook]`, `[Guide]`, `[Benchmark]`, `[Deep Dive]`, `[2026]`, `[Step-by-Step]`, `[Analysis]` are **STRICTLY FORBIDDEN**.
+>
+> **Why this policy exists**:
+> 1. **SERP Real Estate Waste**: Square brackets consume 12–18 characters of the strict 55–60 character title limit, leaving no room for the primary keyword or value proposition.
+> 2. **Algorithmic Rewrites**: Google actively strips or rewrites bracketed titles because they mimic low-quality automated affiliate scrapers.
+> 3. **User Distrust**: Clean, editorial, New York Times / Stripe / GitHub style headlines convert 3.4x higher than bracket-stuffed tags.
+>
+> ❌ **BANNED (Spammy Bracket Tag Title)**:
+> `[Blueprint] Multi-Agent Swarms with LangGraph: 68% Cost Drop (2026 Guide)`
+>
+> ✅ **APPROVED (Clean Authoritative High-CTR Headline)**:
+> `LangGraph Multi-Agent Architecture: 68% Cost Drop & P95 42ms`
 
-1. **Direct Answer Block (The 40–60 Word AEO Snippet)**:
-   - Positioned immediately within the first 2 paragraphs after the H1/title.
-   - Provides a concise, authoritative, and direct answer containing the exact target keyword, the recommendation, and a concrete metric (e.g., *"For Gujarat SMEs building autonomous AI agents in 2026, the optimal stack pairs Next.js 15.5 with Laravel 13 and pgvector, achieving sub-45ms P95 latency at ₹55,000 fixed cost..."*).
-   - Engineered for verbatim extraction by AI summary engines.
-2. **High Entity Salience (GEO)**:
-   - Naturally weaves named entities: `Deepak Bagada`, `SaaS Next`, `Junagadh`, `Gujarat`, `Hostinger`, `pgvector`, `Laravel 13`, `Next.js 15.5`, `LangGraph`, `Pydantic-AI`, `Claude 3.7`.
-   - Clear semantic relationships that knowledge graphs easily map to Deepak Bagada as a verified authority.
-3. **Structured Comparison & Pricing Tables**:
-   - At least 1 markdown comparison table (3–6 rows) displaying side-by-side trade-offs, RAM usage, token costs, or ₹ pricing.
-   - Tables are the #1 preferred data structure for AI Overviews and featured snippets.
-4. **Targeted 4-Item FAQ Schema Block**:
-   - Exactly 4 FAQs addressing high-intent People Also Ask (PAA) queries.
-   - Q1 explicitly answers the primary search question with direct attribution to Deepak Bagada and verified metrics.
-5. **Contextual Internal Linking Silo (3–5 Links)**:
-   - Deep links to related journal articles (`/journal/*`), core services (`/services/*`), and open-source tools (`/library/*`).
-   - Keeps visitor dwell time high (>3 minutes average), signaling elite quality to AdSense and Googlebot.
+### 1. The 50–60 Character Title Rule
+* **Length Target**: Strictly **50 to 60 characters** (absolute hard ceiling: 65 characters).
+* **Keyword Placement**: Primary search query MUST be front-loaded in the first **25 to 30 characters**.
+* **High-Converting Symbol Palette (Non-Bracket)**:
+  - Punctuation & Separators: Colon `:`, Em-dash `—`, Vertical pipe `|`, Ampersand `&`
+  - Metrics & Operators: `%`, `₹`, `$`, `ms`, `tok/s`, `→`
+  - Natural Parentheses (Use Sparingly for Version/Metric Only): `(P95 42ms)`, `(Full Code)`, `(Laravel 13)`
+
+### 2. High-CTR Title Formulas
+* **Benchmark & Comparison Formula**:
+  `[Primary Entity] vs [Competitor]: [Concrete Metric] & [Verdict]`
+  *Example*: `Claude 3.7 Sonnet vs DeepSeek R1: 42ms P95 Latency Showdown` (57 chars)
+* **Production Architecture Formula**:
+  `[Target Query]: [Actionable Solution] & [Tangible Outcome]`
+  *Example*: `LangGraph Multi-Agent Architecture: Cut Token Costs by 68%` (57 chars)
+  *Example*: `Next.js 15 App Router Latency: How We Shaved 400ms off TTFB` (58 chars)
+* **Commercial Authority Formula**:
+  `[Best/Top Query + Geo]: [Proof Metric] & [Hiring/Cost Guide]`
+  *Example*: `Best AI Agent Developer India: P95 42ms Builds & ₹85K Costs` (58 chars)
+  *Example*: `Top Website Developer Gujarat: ₹55K SME Costs vs Metro Rates` (59 chars)
+* **Edge-Case Troubleshooting Formula**:
+  `[Framework/Tool Bug]: [Exact Fix] & [Production Workaround]`
+  *Example*: `Fixing LangGraph 429 Rate Limits: Valkey Queue & Exponential Retry` (64 chars)
 
 ---
 
-## 🛡️ CRAWL BUDGET PROTECTION & PROGRESSIVE SCALING STRATEGY
+## 🤖 AEO & GEO ARCHITECTURE (DOMINATING GOOGLE AI OVERVIEWS & PERPLEXITY)
 
-| Phase | Date Range | Timeline | Dispatch Quota | Dispatches Mix | Crawl Budget & SEO Rationale |
-|---|---|---|---|---|---|
-| **Phase 1: Safe Crawl Budget & Peak Quality** | **2026-09-22 to 2026-10-11** | Days 1–20 | **3 Dispatches** | 1 Authority + 1 AI Agents + 1 WebDev/Founder | **Crawl Budget Protection**: Less content, maximum quality. Prevents Googlebot crawler throttling, guarantees 100% crawl & indexing within 24–48 hours, and builds foundational E-E-A-T without crawler fatigue. |
-| **Phase 2: Gradual Velocity Scale** | **2026-10-12 to 2026-11-10** | Days 21–50 | **5 Dispatches** | 1 Auth + 1 Swarm + 1 News + 1 WebDev + 1 Founder | **Indexing Expansion**: Broadens daily crawl allocation as Googlebot re-crawls consistently with zero server errors. |
-| **Phase 3: High Authority Expansion** | **2026-11-11 to 2026-12-10** | Days 51–80 | **7 Dispatches** | 2 Auth + 2 Swarms + 1 News + 1 WebDev + 1 Founder | **Topical Clustering**: Interlinks deep authority silos across Indian and global tech queries. |
-| **Phase 4: Enterprise Authority Scale** | **2026-12-11 Onwards** | Days 81+ | **10 Dispatches** | 2 Auth + 2 Swarms + 2 News + 2 WebDev + 2 Founder | **Full Velocity**: Mature crawl budget supports high-volume daily publishing. |
+To capture featured snippets, Google AI Overviews, Perplexity citations, and ChatGPT Search summaries, every dispatch MUST include the following 5 semantic building blocks:
 
-### Why First 20 Days Focuses on Less Content (3 Dispatches) & Ultra-High Quality:
-1. **Googlebot Crawl Budget Allocation**: New/re-architected sites start with conservative daily crawl budgets. Flooding 10+ posts/day leads to indexation backlogs (`"Discovered – currently not indexed"`).
-2. **Quality Signal Consolidation**: 3 deeply engineered posts (1,400–1,800 words, runnable code, live P95 latency, ₹ pricing benchmarks) send strong quality signals to Google's Helpful Content System.
-3. **Spam Velocity Defense**: Search engine algorithms flag sudden spikes in mass generation. Starting at 3 dispatches mimics natural, elite human craftsmanship.
-4. **100% Indexing Guarantee**: Every URL gets crawled, rendered, and indexed rapidly before expanding publishing volume.
+### 1. Direct Answer Block (The 40–60 Word AEO Snippet)
+* **Location**: Within the first 2 paragraphs, immediately below the H1 and metadata.
+* **Format**: A bolded, definitive statement directly answering the core search intent.
+* **Content**: Must include the exact primary search query, the definitive recommendation/answer, and a specific technical metric (e.g., latency, cost, percentage improvement).
+* *Template*:
+  > **Quick Answer**: For Indian SMEs deploying autonomous AI agents in 2026, the highest-ROI stack combines LangGraph with Pydantic-AI and pgvector on Hostinger VPS, achieving sub-45ms P95 retrieval latency and cutting third-party token expenses by 68% compared to monolithic LLM wrappers.
 
----
-
-## 🔍 GOOGLE SEARCH CONSOLE INDEXING COMPLIANCE & CRAWL BUDGET ALLOCATION (v10.1)
-
-> [!IMPORTANT]
-> **Source of truth:** Google Search Central — [Crawl Budget Management](https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget), [URL Inspection tool](https://search.google.com/search-console), Page Indexing report. This section is MANDATORY for every publish run.
-
-### 1. GSC Indexing Guidelines — What the Skill Enforces
-
-| GSC Rule (Google official) | How `deepak-blog` complies |
-|---|---|
-| **Keep sitemaps up to date, only indexable URLs** | `SitemapController` emits ONLY `Post::published()` with `WordCount ≥900` + excludes `-variant-N` / `-vN` duplicate slugs. Every publish regenerates `<lastmod>` = publish date. Sitemap capped well under 50K URLs. |
-| **URL Inspection → Request Indexing for new/updated pages** | After each push, operator runs URL Inspection on `https://deepakbagada.in/journal/<slug>` → **Request Indexing** (priority crawl queue, no guarantee). Max 10 requests/day — our 3–5/day quota fits natively. |
-| **Monitor Page Indexing report daily** | Watch `Discovered – currently not indexed` (crawl backlog → reduce velocity), `Crawled – currently not indexed` (thin/duplicate → improve quality/consolidate), `Soft 404`, `Duplicate without user-selected canonical`, `Redirect error`, `Server error (5xx)`. Any spike = pause scale-up. |
-| **Consolidate duplicate content** | Numeric-suffix slugs (`-2`, `-3`, `-v2`) BANNED. Variant duplicates excluded from sitemap. One canonical per keyword — `check-collision.php` blocks dupes pre-write. |
-| **Block with robots.txt, NOT noindex, to save crawl** | `noindex` still costs a crawl (Google must fetch to read the directive). Unwanted param/filter URLs blocked via `robots.txt`. Journal URLs are always indexable + self-canonical. |
-| **404/410 for permanently removed pages** | Deleted posts return `410 Gone` (stronger de-queue signal than 404). Never soft-404. |
-| **Eliminate soft 404s** | Journal `show` route 404s on missing slug with proper status; no thin "empty" templates indexed. |
-| **Server health = crawl capacity** | 5xx / 429 / slow TTFB (>600ms) REDUCES Googlebot crawl limit. Deploy freezes during publish windows; `deploy.sh` never runs mid-batch. Target TTFB <200ms, zero 5xx. |
-| **Crawl demand = popularity + freshness** | Fresh `lastmod` + internal links from `/journal` index + 3–5 contextual `/services/*` links per post raise per-URL demand. Stale posts get freshness refresh, not new-URL spam. |
-
-### 2. Crawl Budget Allocation Table (per-day URL inventory)
-
-Google defines crawl budget = **crawl capacity limit** (server health) × **crawl demand** (popularity/freshness). Allocation per phase:
-
-| Phase | New URLs/day | Sitemap priority | Internal-link push | GSC action | Stop condition |
-|---|---|---|---|---|---|
-| **Phase 1 (3/day)** | 3 | `0.9` journal posts, `lastmod` = today | New post linked from `/journal` page-1 + 3 contextual links | Request Indexing ×3, verify 200 + self-canonical | Any `Discovered-not-indexed` >5 → hold at 3 |
-| **Phase 2 (5/day, current)** | 5 | Same + refresh 2 stale `lastmod` | + link from 1 related old post to new post | Request Indexing ×5, check Crawl Stats avg <300ms | `Crawled-not-indexed` spike → audit quality, hold |
-| **Phase 3 (7/day)** | 7 | Same | Topical cluster hub links | Same + weekly Index Coverage export | 5xx or TTFB regression → drop to 5 |
-| **Phase 4 (10/day)** | 10 | Same | Full pillar interlink pass | Same + 30-day server-log review (verified Googlebot only) | Any capacity-limit signal → drop one phase |
-
-**Rules:**
-- NEVER exceed phase quota — extra URLs steal crawl from money pages.
-- NEVER `Request Indexing` the same URL twice in 7 days.
-- NEVER use `crawl-delay` in robots.txt (Googlebot ignores it) — use GSC crawl-rate setting if throttling is ever needed.
-- Third-party scripts do NOT consume crawl budget (browser-fetched, not Googlebot origin-fetch) — don't chase them for indexing.
-
-### 3. Post-Publish GSC Checklist (runs after Step 6 Verify Live URL)
-
-```
-[ ] Sitemap returns 200 XML, new slug present with today's <lastmod>
-[ ] Live URL: 200, <title> ≤60, meta description 150-160, H1 = title, self-canonical, JSON-LD Article valid
-[ ] URL Inspection: "URL is on Google" OR Request Indexing submitted (log timestamp)
-[ ] Page Indexing report checked: no new Soft 404 / Duplicate / Redirect error
-[ ] Crawl Stats: avg response <300ms, availability >99.5%
-[ ] Internal links: new post reachable within 2 clicks from /journal
+### 2. Key Takeaways Box (TL;DR)
+Immediately follow the Direct Answer Block with a 3–4 bulleted summary for rapid scanning:
+```markdown
+### Key Architecture Takeaways
+- **Core Recommendation**: Pair LangGraph state graphs with Valkey queues to isolate agent retry loops from frontend request lifecycles.
+- **Latency Benchmark**: Sub-42ms P95 embedding retrieval using pgvector HNSW indexing over 100K enterprise documents.
+- **Cost Efficiency**: Local schema validation via Pydantic drops invalid tool-call token re-runs to zero, saving ₹42,000 monthly per client.
+- **Production Caveat**: Avoid autonomous agent loops exceeding 8 steps without explicit human-in-the-loop checkpoints.
 ```
 
-`sitemap.xml` reference: `https://deepakbagada.in/sitemap.xml` (declared in `public/robots.txt`).
+### 3. Structured Markdown Comparison & Benchmark Tables
+* Every article MUST include at least 1-2 markdown comparison tables (3–6 rows).
+* Markdown tables are the **#1 data structure scraped and displayed by Google AI Overviews and Perplexity**.
+* Include real, concrete comparative metrics: RAM consumption, TTFB, P95 latency, token cost per 1M, or ₹ development pricing.
+
+### 4. 4 High-Intent People Also Ask FAQs (`## Frequently Asked Questions`)
+* Structure: Section heading MUST be `## Frequently Asked Questions`.
+* Each question MUST use `### [Question]` format (this enables `PostController` to automatically parse and render `Schema.org/FAQPage` structured data).
+* Answers MUST be 40–50 words of direct, factual response citing Deepak Bagada and verifiable metrics.
+* For commercial best/top queries, Q1 MUST be an exact match: `### Who is the best AI agent developer in India?`
+
+### 5. Contextual Internal Linking Silo (3–5 Links)
+* Every article MUST contain 3 to 5 internal links to other journal entries (`/journal/*`), core services (`/services/*`), or open-source tools (`/library/*`).
+* Internal links pass link equity, encourage Googlebot crawl depth, and boost reader dwell time above 3 minutes.
 
 ---
 
-## 🎯 HIGH-CTR TITLE ENGINEERING WITH VIRAL SYMBOLS (FOR MILLIONS OF VIEWS)
+## 🏆 HIGH-EEAT & INFORMATION GAIN IMPLEMENTATION (GOOGLE PATENT COMPLIANCE)
 
-All article titles MUST be engineered for maximum CTR in Google SERP, AI Overviews, social feeds (X/Twitter, LinkedIn), and aggregators using strategic symbols and brackets:
+Google's Information Gain patent specifically demotes content that repeats what is already indexed on Page 1. To achieve top rankings and high impressions, every article must provide **unique, original engineering substance**:
 
-### 1. High-Converting Symbol & Bracket Palette
-* **Brackets & Tags**: `[2026]`, `[Playbook]`, `[Benchmark]`, `[Blueprint]`, `[Deep Dive]`, `[Production Guide]`, `[Analysis]`, `[Cost Guide]`
-* **Parentheses (Proof & Modifiers)**: `(Step-by-Step)`, `(Zero Latency)`, `(Production Guide)`, `(Full Code)`, `(P95 42ms)`, `(₹55K vs ₹2.5L)`
-* **Punctuation & Power Separators**: Colon `:`, Em-dash `—`, Vertical pipe `|`, Forward slashes `//`
-* **Metrics, Currency & Operators**: `₹55K–₹85K`, `$0.002/Token`, `99.4% Latency Drop`, `+140% Speed`, `62 tok/s`, `→`, `&`, `%`
+### 1. Deepak Bagada Practitioner Voice & Identity
+* Written strictly in the first-person voice of **Deepak Bagada** (*founder of SaaS Next, creator of Curro, AI developer with 40+ production builds in Gujarat, India*).
+* Grounded in firsthand builder experiences from the Junagadh lab, deploying systems for Gujarat and global clients.
 
-### 2. High-CTR Title Formulas by Pillar
-* **AI Agents & Autonomous Swarms**:
-  - `[Blueprint] Multi-Agent Swarms with LangGraph: 68% Cost Drop (2026 Guide)`
-  - `Build an Autonomous Code Review Swarm with Claude 3.7 & Temporal [Step-by-Step]`
-  - `[Production Architecture] Stateful Agent Swarms: Self-Healing Loops & Zero Token Waste`
-* **AI News & Frontier Benchmarks**:
-  - `Claude 3.7 Sonnet vs GPT-4.5: Terminal Benchmark Showdown & Token Economics [2026]`
-  - `DeepSeek V4 Flash Codex Pro: 82.7% HumanEval Win & Zero Hallucination (Analysis)`
-  - `[2026 Benchmark] Phi-4 Mini at 300 tok/s: Edge AI on 3GB RAM (Full Guide)`
-* **High-Speed Web Dev (Laravel + Next.js)**:
-  - `[Playbook] Next.js 15.5 Turbopack + Laravel 13 AI SDK: Sub-Second LCP in Production`
-  - `Laravel 13 Semantic Search: pgvector HNSW in 10 Mins [Full Code]`
-  - `Next.js 15.5 vs Laravel 13 in 2026: Which Ships Faster from Junagadh? (Honest Review)`
-* **Authority — Best/Top Rank-#1 Money Grid**:
-  - `Best AI Agent Developer India 2026: P95 42ms & ₹85K Builds [Hiring Guide]`
-  - `Top Website Developer Gujarat 2026: ₹55K SME Costs vs Metro [Proof Table]`
-  - `Best AI Developer India 2026: 7-Point Vetting Checklist & 90-Day ROI [Analysis]`
-* **Founder Story & Day-in-the-Life**:
-  - `Day in Life: AI Developer Routine Gujarat 06:00–22:00 [Junagadh Lab]`
-  - `Building AI Products from Junagadh: 06:00–Midnight Playbook (Real Metrics)`
+### 2. Mandatory Production War Stories (At Least 2 Per Article)
+1. **A Real Debugging War Story**: An exact unhandled exception, token memory leak, concurrency deadlock, or 429 rate limit spike encountered during deployment.
+2. **A Concrete Rupee or Latency Metric**: Real client cost implications (e.g. *"Our Surat textile catalog sync ran into an 18:00 bottleneck until we moved the Pydantic schema validation offline into Valkey..."*).
+3. **Specific Environment Quirks**: Pinned dependencies, PHP 8.4/Laravel 13 flags, Next.js 15 App Router caching behavior.
 
-### 3. Clean Slug Safety Rule
-* While titles feature viral symbols (`[]`, `()`, `:`, `|`, `%`, `₹`, `$`, `+`, `&`), generated slugs must be clean lowercase-kebab-case (e.g. `best-ai-agent-developer-india-2026`).
-* **Strictly prohibit duplicate numeric suffixes** (`-[0-9]+` like `-2`, `-3`, `-v2`) in slugs. 4-digit years (`-2026`) are permitted.
-
----
-
-## 🏆 Rank-#1 Money Target Grid (Authority Matrix)
-
-Every 3-dispatch batch must include at least 1 entry targeting this grid:
-
-| Niche \ Geo | Junagadh | Gujarat | India | World |
-|---|---|---|---|---|
-| **Website developer** | `best website developer Junagadh` | `best website developer Gujarat` | `best website developer India` | `best website developer world` |
-| **AI agent developer** | `best AI agent developer Junagadh` | `best AI agent developer Gujarat` | `best AI agent developer India` | `best AI agent developer world` |
-| **AI expert / AI developer** | `best AI expert Junagadh` | `top AI expert Gujarat` | `best AI developer India` | `best AI expert world` |
-
----
-
-## ✍️ ANTI-AI SLOP & 100% HUMAN-WRITTEN ENGINEERING MANIFESTO
-### (Zero AI Slop Guarantee · Defeating Google Core Updates & AI Detectors)
-
-Google's Helpful Content System, Core Updates, and AI classifiers (GPTZero, Originality.ai) aggressively penalize generic AI-generated content. To guarantee high E-E-A-T and undeniable human craftsmanship, every dispatch MUST strictly adhere to the following 6 anti-slop rules:
-
-### 1. 🚫 The 90+ Banned AI Slop & Buzzword Blacklist (Instant Audit FAIL)
-Any occurrence of the following phrases will trigger an **instant FAIL** during the pre-publish audit:
-* **Banned Openers & Throat-Clearing**:
-  - `In today's fast-paced world`, `In today's digital landscape`, `In today's fast-paced digital world`, `In today's modern world`
-  - `In the fast-evolving world of`, `In the ever-evolving landscape`, `In the realm of`
-  - `In this blog post, we will explore`, `In this article, we will delve`, `In this guide, we will`
-  - `Let's dive in`, `Let's dive into`, `Have you ever wondered`, `As an AI language model`
-  - `The world of AI is constantly changing`, `Imagine a world where`, `Gone are the days when`
-  - `Fast-forward to today`, `Without further ado`, `It goes without saying`, `Needless to say`, `First and foremost`
-* **Banned Hype Buzzwords & Clichés**:
-  - `Delve into`, `Delving into`, `Unlock the power`, `Unlock the potential`, `Game-changer`, `Game-changing`
-  - `Revolutionize`, `Revolutionizing`, `Skyrocket your`, `Tapestry`, `Rich tapestry`, `Nestled`, `Plethora`
-  - `Embark on a journey`, `Cutting-edge solution`, `Cutting-edge`, `Leverage the power`, `Harness the power of`
-  - `Harnessing the power`, `Testament to`, `A testament to`, `Beacon of`, `Beacon of hope`, `Pivotal role`, `Pivotal in`
-  - `Navigating the landscape`, `A double-edged sword`, `Brimming with`, `Treasure trove`, `Demystifying`, `Demystify`
-  - `Look no further`, `Revolutionary approach`, `Take a deep dive`, `Unleash the potential`, `Unleash the power`
-  - `A holistic approach`, `Seamless integration`, `Seamlessly integrate`, `Seamlessly integrates`, `Paradigm shift`
-  - `Supercharge`, `Unrivaled`, `Second to none`, `Groundbreaking solution`, `Unparalleled`, `Powerhouse of`
-  - `Multifaceted`, `Paramount`, `Myriad of`, `An array of`, `Shines bright`, `Stands out as a shining example`
-  - `Pushes the boundaries`, `At the forefront of innovation`, `At the forefront`, `State-of-the-art solution`
-* **Banned Synthetic Transitions & Conclusions**:
-  - `It's important to remember`, `It is worth noting`, `At its core`, `In essence`
-  - `Moreover,`, `Furthermore,`, `In conclusion`, `To sum up`, `All in all`
-  - `To wrap things up`, `To wrap up`, `In summary`, `Final thoughts`, `With that being said`, `That being said`
-  - `On the other hand,`, `Last but not least`
-
-### 2. 👨‍💻 First-Person Builder Voice & Lived Friction
-* Written strictly as **Deepak Bagada** (*founder of SaaS Next, builder of Curro, AI agent developer in Junagadh, Gujarat*).
-* **Mandatory Production War Stories (At Least 2 Per Article)**:
-  1. *A real debugging war story*: Exact unhandled exception, token memory leak, concurrency deadlock, or 429 rate limit spike encountered in testing.
-  2. *A concrete rupee or latency metric*: Real client cost implications (e.g. *"Our Surat textile catalog sync ran into an 18:00 bottleneck until we moved the Pydantic schema validation offline into Valkey..."*).
-  3. *Specific environment quirks*: Pinned dependencies, PHP 8.4/Laravel 13 flags, Next.js 15.5 App Router nuances.
-
-### 3. 📉 Technical Skepticism & "When NOT to Use This"
+### 3. Senior Engineering Skepticism: "When NOT to Use This"
 * Senior engineers are critical and realistic. Every post MUST include a dedicated subsection:
   - **"When NOT to Use This Architecture"** or **"Production Trade-offs & Failure Modes"**.
-  - Be brutally honest about latency penalties, token costs, memory leaks in long loops, or where simpler tools beat complex vector databases.
+  - Detail memory footprint, latency penalties, token cost escalation, or why a simple SQL query beats a complex vector database for smaller datasets (<50K records).
 
-### 4. ⚡ High Burstiness & Cadence Variation
-* AI text has monotonous, robotic sentence lengths (15–20 words per sentence). Human engineers write with high **burstiness**:
-  - Mix short, blunt 3-word assertions (*"Don't do this." / "Here is why." / "Stateless MCP Jul-28 won."*) with technical multi-clause architectural breakdowns.
-  - Conversational engineer-to-engineer phrasing (*"Here's the catch," "Let's be clear," "Why does this matter?"*).
-
-### 5. 🛠️ Multi-File Runnable Production Code
+### 4. Multi-File Runnable Production Code
 * Never write placeholder toy code (`foo()` / `bar()`).
-* Always provide complete, runnable implementations with explicit language tags (`python`, `php`, `typescript`, `bash`, `json`).
+* Always provide complete, runnable implementations with explicit language tags (`python`, `php`, `typescript`, `bash`, `json`) and realistic file headers (e.g. `# app/agents/code_review.py`).
 
-### 6. 🖼️ Strict Descriptive Image Alt Tags
-* Every `![alt](url)` or `<img>` MUST have rich, contextual alt text (minimum 5 words) describing the component, pipeline, or UI.
-* Empty or generic alt tags (`alt="image"`, `alt="screenshot"`, `alt="diagram"`) trigger an **instant FAIL**.
+### 5. Zero Images In Article Body Policy
+* Articles MUST NOT embed any image in the body — no `![alt](url)` markdown, no `<img>` tags. Body content is text, fenced code blocks, tables, and link-based internal references only.
+* Any embedded image (markdown or HTML) triggers an **instant FAIL** in the pre-publish audit. Cover/OG imagery is handled entirely by the site layout, never inside the article body.
+
+---
+
+## ✍️ ANTI-AI SLOP & 100+ BANNED BUZZWORD BLACKLIST (INSTANT AUDIT FAIL)
+
+Any occurrence of the following phrases will trigger an **instant FAIL** during the pre-publish audit:
+
+### 1. Banned Openers & Throat-Clearing
+- `In today's fast-paced world`, `In today's digital landscape`, `In today's fast-paced digital world`, `In today's modern world`
+- `In the fast-evolving world of`, `In the ever-evolving landscape`, `In the realm of`
+- `In this blog post, we will explore`, `In this article, we will delve`, `In this guide, we will`
+- `Let's dive in`, `Let's dive into`, `Have you ever wondered`, `As an AI language model`
+- `The world of AI is constantly changing`, `Imagine a world where`, `Gone are the days when`
+- `Fast-forward to today`, `Without further ado`, `It goes without saying`, `Needless to say`, `First and foremost`
+
+### 2. Banned Hype Buzzwords & Clichés
+- `Delve into`, `Delving into`, `Unlock the power`, `Unlock the potential`, `Game-changer`, `Game-changing`
+- `Revolutionize`, `Revolutionizing`, `Skyrocket your`, `Tapestry`, `Rich tapestry`, `Nestled`, `Plethora`
+- `Embark on a journey`, `Cutting-edge solution`, `Cutting-edge`, `Leverage the power`, `Harness the power of`
+- `Harnessing the power`, `Testament to`, `A testament to`, `Beacon of`, `Beacon of hope`, `Pivotal role`, `Pivotal in`
+- `Navigating the landscape`, `A double-edged sword`, `Brimming with`, `Treasure trove`, `Demystifying`, `Demystify`
+- `Look no further`, `Revolutionary approach`, `Take a deep dive`, `Unleash the potential`, `Unleash the power`
+- `A holistic approach`, `Seamless integration`, `Seamlessly integrate`, `Seamlessly integrates`, `Paradigm shift`
+- `Supercharge`, `Unrivaled`, `Second to none`, `Groundbreaking solution`, `Unparalleled`, `Powerhouse of`
+- `Multifaceted`, `Paramount`, `Myriad of`, `An array of`, `Shines bright`, `Stands out as a shining example`
+- `Pushes the boundaries`, `At the forefront of innovation`, `At the forefront`, `State-of-the-art solution`
+
+### 3. Banned Synthetic Transitions & Robotic Conclusions
+- `It's important to remember`, `It is worth noting`, `At its core`, `In essence`
+- `Moreover,`, `Furthermore,`, `In conclusion`, `To sum up`, `All in all`
+- `To wrap things up`, `To wrap up`, `In summary`, `Final thoughts`, `With that being said`, `That being said`
+- `On the other hand,`, `Last but not least`
+
+---
+
+## 🔍 MANDATORY METADATA MATRIX
+
+Every single published post MUST have fully engineered, audited metadata:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 SEO & AEO METADATA MATRIX                                   │
+├───────────────────┬───────────────────────────────┬─────────────────────────────────────────┤
+│ Field             │ Strict Constraint             │ Requirement & Intent Purpose            │
+├───────────────────┼───────────────────────────────┼─────────────────────────────────────────┤
+│ title             │ Strictly 50–60 characters     │ Clean, bracket-free editorial headline. │
+│                   │ STRICTLY ZERO SQUARE BRACKETS │ Front-loads keyword in first 25 chars.  │
+├───────────────────┼───────────────────────────────┼─────────────────────────────────────────┤
+│ excerpt           │ STRICTLY 145–158 characters   │ Active verb hook + primary search query │
+│ (meta_description)│ Never <140, never >160 chars  │ in first 40 chars + concrete metric +   │
+│                   │ ZERO SQUARE BRACKETS ([ ])    │ high-converting click-through hook.     │
+├───────────────────┼───────────────────────────────┼─────────────────────────────────────────┤
+│ slug              │ Clean lowercase-kebab-case    │ Strips stop words, under 50 characters. │
+│                   │ No numeric suffixes (-2, -v2) │ Prohibits duplicate numeric counters.   │
+├───────────────────┼───────────────────────────────┼─────────────────────────────────────────┤
+│ category / tag    │ One of standard taxonomy tags │ AI DEV, AI NEWS, MY STORY, WEB DEV, etc │
+├───────────────────┼───────────────────────────────┼─────────────────────────────────────────┤
+│ word_count        │ 1,400 to 2,000+ words         │ Dense, multi-file code, zero fluff.     │
+└───────────────────┴───────────────────────────────┴─────────────────────────────────────────┘
+```
+
+### Meta Description Formula (145–158 Characters)
+Every `excerpt` / meta description must strictly satisfy:
+1. **Active Verb Hook (Words 1–3)**: `Explore how...`, `Discover how...`, `Benchmark...`, `Build a...`, `Compare...`, `Deploy...`.
+2. **Primary Keyword (First 40 chars)**: Must include the exact primary search entity.
+3. **Concrete AEO Metric / Proof**: Concrete proof point (`sub-42ms latency`, `saving 68% tokens`, `₹55K fixed cost`).
+4. **Call to Inspect**: Natural teaser prompting the developer or CTO to view the full architecture.
+
+*Example*:
+`Benchmark Claude 3.7 Sonnet against DeepSeek R1 for production coding agents, featuring sub-42ms P95 latency results, token economics, and full setup steps.` (154 characters — PERFECT)
 
 ---
 
@@ -287,12 +274,12 @@ Run this strict closed loop for each article up to today's phase quota (Days 1�
 ```
 [For Item 1 to Phase Quota (3 in Days 1–20)]
   │
-  ├── 1. SEARCH: Real-time search for trending viral topic matching current pillar
+  ├── 1. SEARCH: Verify real search volume & demand via search_web for current pillar
   │
   ├── 2. PRE-CHECK: Anti-duplication check against live DB & memory.md
   │      php .agent/skills/deepak-blog/scripts/check-collision.php "<slug>"
   │
-  ├── 3. WRITE: Draft 1,200–1,600+ word article payload with viral title & high-EEAT body
+  ├── 3. WRITE: Draft 1,400–2,000+ word article payload with bracket-free title & high-EEAT body
   │
   ├── 4. PRE-AUDIT: Automated pre-publish audit
   │      node .agent/skills/deepak-blog/scripts/audit-blog.mjs --body draft.md --title "..." --excerpt "..."
@@ -319,8 +306,8 @@ All scripts are located in `.agent/skills/deepak-blog/scripts/`:
 |---|---|
 | `scripts/publish-single-post.php` | Pushes 1 article directly to Hostinger Live DB, updates `data/posts.php`, clears cache, audits live URL, and updates `memory.md` (Zero git push) |
 | `scripts/check-collision.php` | Anti-duplication pre-check against live MySQL DB and `memory.md` |
-| `scripts/audit-blog.mjs` | Pre-publish automated audit (CTR score, word count, EEAT-Pro, alt tags, anti-fluff) |
-| `scripts/audit-live-url.mjs` | Live URL audit (HTTP 200, title, meta description, H1, word count, image alt tags, JSON-LD) |
+| `scripts/audit-blog.mjs` | Pre-publish automated audit (Checks zero square brackets, CTR score, word count, EEAT-Pro, image-free body, anti-fluff) |
+| `scripts/audit-live-url.mjs` | Live URL audit (HTTP 200, title, meta description, H1, word count, image-free body, JSON-LD) |
 | `scripts/trend-research.mjs` | Scaffolds viral topic queue with automated phase detection (`--preset phase-1` / `--count 3`) |
 | `scripts/publish-queue.mjs` | Multi-item sequential runner that calls `publish-single-post.php` item-by-item (supports `--limit 3`) |
 
@@ -328,10 +315,11 @@ All scripts are located in `.agent/skills/deepak-blog/scripts/`:
 
 ## 🚫 Strictly Enforced Anti-Patterns
 
-- ❌ **No Git Pushes for Publishing**: Content is served dynamically from the remote MySQL database. Running `git push` causes unnecessary deployments that risk SEO indexing stability.
+- ❌ **No Square Brackets in Titles**: Any title containing `[` or `]` fails audit instantly.
+- ❌ **No Zero-Search-Volume Diary Entries**: Topics must have demonstrable search demand.
+- ❌ **No Git Pushes for Publishing**: Content is served dynamically from the remote MySQL database.
 - ❌ **No Batch Writing**: Writing all articles at once without publishing and auditing one-by-one is strictly forbidden.
-- ❌ **Never Exceed Current Phase Quota**: In Days 1–20, strictly limit output to 3 dispatches per batch/run. Publishing excessive volume prematurely exhausts Googlebot crawl budget and risks indexing stagnation.
-- ❌ **No Quality Compromise During Scale**: Even when scaling to 5, 7, or 10 dispatches in later phases, every article must maintain ≥1,200 words, runnable code, and strict anti-slop standards.
+- ❌ **Never Exceed Current Phase Quota**: In Days 1–20, strictly limit output to 3 dispatches per batch/run.
 - ❌ **No Numeric Suffix Slugs**: Slugs ending in `-2`, `-3`, `-v2` are banned.
-- ❌ **No Missing Image Alt Tags**: Any image without descriptive alt text (>5 words) fails audit.
+- ❌ **No Images In Article Body**: Articles are text + code blocks + tables only; imagery lives in the site layout, never in the body.
 - ❌ **No AI Fluff / Buzzwords**: Automatic rejection for "game-changer", "tapestry", "delve into", etc.

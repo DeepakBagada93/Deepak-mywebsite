@@ -1,0 +1,167 @@
+{
+  "name": "AI Agency Delivery OS",
+  "slug": "agency-delivery-os",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-18T10:23:06.430Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 969,
+      "sha256": "6c4c76e28511bcc5bb06990cdcfbe2d60c687478810247557e9ad77c6e7a967a"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1730,
+      "sha256": "b7da12961971e46c417d3373d2a0bca7db6dfa11c8c572db0c5b19f50951dc4a"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 4790,
+      "sha256": "e11f5dc25c890aaef4e670a51930dff7e175548719990d6ef17dba17add3accc"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1707,
+      "sha256": "e38a66db1ec491adcc1f3fa579d31ec068c8b3f369f97ac97753b9761d820d70"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 3744,
+      "sha256": "cb1cac51b13740e6b1589fdd36222152e51c23736259e24f6cd56abe84f28661"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 5431,
+      "sha256": "a4cd51af934c777a5e61ed4fb2eda1b0d74d32dd81c0929a74cdc9c64af5196e"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1312,
+      "sha256": "24bfc254cf8d1814e9152fd235e8e14f9dfde2b402a8aae21a2c76015db7023a"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1860,
+      "sha256": "20d59f89d0d62be395cda8ea1ba48c2ace07982886237ec1f7b1757d6949ccb4"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 7968,
+      "sha256": "22f24390f688dd7be17412a2972fba836e3eba2399c3eb1bbdda34fa90710249"
+    },
+    {
+      "path": "examples/engagement-example/brief.md",
+      "bytes": 557,
+      "sha256": "93f6b2a1968ddfcdea0346eb6d636e49963b4d1adcd5fd0934ff3fbd0c593221"
+    },
+    {
+      "path": "examples/engagement-example/delivery-plan.md",
+      "bytes": 684,
+      "sha256": "763ff19129ca71f8c7c24d0343eeeb3d0c784592921b4cdf6e8b493a730456d1"
+    },
+    {
+      "path": "examples/engagement-example/engagement.json",
+      "bytes": 635,
+      "sha256": "de45d966cc30ac6a14b2e53f3c2ea9cd28053b459f0d906cf6459b752c4d5eb7"
+    },
+    {
+      "path": "examples/engagement-example/handoff.md",
+      "bytes": 387,
+      "sha256": "b43d5f3c5cafa1fad8a8bfce02262aea9b613a754c88c835731ce48d9dce2f53"
+    },
+    {
+      "path": "examples/engagement-example/permissions.md",
+      "bytes": 887,
+      "sha256": "96418252087d6606262aa6dd55156aaa76572468e178477748ffd8ea2cb6af7b"
+    },
+    {
+      "path": "examples/engagement-example/proposal.md",
+      "bytes": 871,
+      "sha256": "d93b1e0f8ad19e695acb7ce232148289d1ee969734c8ffd3c4e0d33705730815"
+    },
+    {
+      "path": "examples/engagement-example/qa-gates.md",
+      "bytes": 803,
+      "sha256": "ec37c49cdc71338aaf78aa2e63fc6c37d7a7a3b540eeb54eccb8c93478c17874"
+    },
+    {
+      "path": "examples/engagement-example/risk.md",
+      "bytes": 696,
+      "sha256": "0536a464a408a266c9bcc3abb7a4c34bfe7ba5c5f198ede42aa31db378b84732"
+    },
+    {
+      "path": "examples/engagement-example/scope.md",
+      "bytes": 569,
+      "sha256": "e5a3540a63aed76d3cf875fe981254998f1a04a91494f92214b4ac8c706015a1"
+    },
+    {
+      "path": "examples/engagement-example/state.json",
+      "bytes": 316,
+      "sha256": "db5a95e01de75f04575be6d1aa2d82738658353909d23d1fb68b1190f7e6cc8f"
+    },
+    {
+      "path": "examples/intake-incomplete.json",
+      "bytes": 212,
+      "sha256": "4d08ed86bdc3ce794c609c74564665c82072b555d432276e5403147b1fe6a4d8"
+    },
+    {
+      "path": "examples/intake.json",
+      "bytes": 635,
+      "sha256": "de45d966cc30ac6a14b2e53f3c2ea9cd28053b459f0d906cf6459b752c4d5eb7"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1914,
+      "sha256": "a8e028b5f398ef8799df3c2653eb0221ad90b7fd3cb7577bc687267b04bb480c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4279,
+      "sha256": "f04d1b687e56d46e3cb03d5a5818418f03450d3bbbbe2a32bfbb597a20673800"
+    },
+    {
+      "path": "skills/engagement-os/scripts/advance-engagement.mjs",
+      "bytes": 2649,
+      "sha256": "bc82377247f672c4dec3fc5f365536029c3f85d3585181d693d7dc86a2f1e043"
+    },
+    {
+      "path": "skills/engagement-os/scripts/audit-engagement.mjs",
+      "bytes": 2123,
+      "sha256": "47e2f795afa64c3b28ca40439dca26f7d1fb8b9776e52a819d9dd2c037284027"
+    },
+    {
+      "path": "skills/engagement-os/scripts/init-engagement.mjs",
+      "bytes": 8698,
+      "sha256": "2342f6dd96607fc231e419fa9bcfbe7cbf76126c6334703850256cf2119c9a96"
+    },
+    {
+      "path": "skills/engagement-os/scripts/lib.mjs",
+      "bytes": 7531,
+      "sha256": "2039db76ecc7495895b07420c42dbbab876f83225f0fe3b00e3d0272a473f036"
+    },
+    {
+      "path": "skills/engagement-os/scripts/verify-engagement.mjs",
+      "bytes": 1893,
+      "sha256": "01004309f393fc7cb11e7950bb4a575971ef9eb416f0a4c2406567dea210587e"
+    },
+    {
+      "path": "skills/engagement-os/SKILL.md",
+      "bytes": 7330,
+      "sha256": "19ce6736aae8924d668a53f724477bf3d60c8e343d899674c963ccc6c44b329f"
+    },
+    {
+      "path": "tests/engagement-os.test.mjs",
+      "bytes": 6138,
+      "sha256": "82dc3a3f5aff99fd0899129b7f61378999d0cb6655cebd7ef4bc4ef996d0fe1b"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4569,
+      "sha256": "f72ccdaad26f67cee61674661e8911a7efae4e0d95d3343032d591a59c67b6e9"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

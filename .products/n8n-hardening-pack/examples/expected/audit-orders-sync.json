@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-18T10:10:34.596Z",
+  "reports": [
+    {
+      "file": "examples/orders-sync.workflow.json",
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-10-18T10:10:34.595Z",
+      "workflow": {
+        "name": "Orders sync (half-hardened)",
+        "nodes": 3,
+        "triggers": 1,
+        "settings": [
+          "executionOrder",
+          "errorWorkflow"
+        ]
+      },
+      "summary": {
+        "findings": 3,
+        "critical": 0,
+        "high": 0,
+        "score": 85,
+        "verdict": "needs-hardening"
+      },
+      "findings": [
+        {
+          "id": "no-retry-fetch-orders",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Fetch Orders` has no retry policy; a single transient failure ends the run.",
+          "evidence": [
+            {
+              "node": "Fetch Orders",
+              "path": "retryOnFail"
+            }
+          ],
+          "fix": "Enable Retry On Fail with 3 tries and a 1s wait."
+        },
+        {
+          "id": "no-retry-upsert-orders",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Upsert Orders` has no retry policy; a single transient failure ends the run.",
+          "evidence": [
+            {
+              "node": "Upsert Orders",
+              "path": "retryOnFail"
+            }
+          ],
+          "fix": "Enable Retry On Fail with 3 tries and a 1s wait."
+        },
+        {
+          "id": "no-timeout-fetch-orders",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Fetch Orders` makes an HTTP call with no timeout.",
+          "evidence": [
+            {
+              "node": "Fetch Orders",
+              "path": "parameters.options.timeout"
+            }
+          ],
+          "fix": "Set a timeout (30000 ms is a safe default)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "repo-search-server",
+  "version": "0.1.0",
+  "description": "Read-only repository search tools for local coding agents.",
+  "tools": [
+    {
+      "name": "search_files",
+      "description": "Search tracked text files for a literal query and return matching paths with line numbers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Literal text to search for."
+          },
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of matches to return."
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_file_summary",
+      "description": "Summarize a file's size, extension, and top-level exported symbols.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Repository-relative file path."
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

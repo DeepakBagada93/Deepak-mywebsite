@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-18T10:13:29.324Z",
+  "project": {
+    "name": "repo-search-server",
+    "tools": 2,
+    "files": 3
+  },
+  "summary": {
+    "findings": 0,
+    "critical": 0,
+    "high": 0,
+    "score": 100,
+    "verdict": "launch-ready"
+  },
+  "findings": []
+}

@@ -101,6 +101,7 @@
                 </div>
             </div>
             <a href="{{ route('library.index') }}">Library</a>
+            <a href="{{ route('products.index') }}">Store</a>
             <a href="{{ route('journal.index') }}">Journal</a>
             <a href="{{ route('legal.contact') }}">Contact</a>
         </nav>
@@ -148,15 +149,16 @@
             </div>
         </li>
         <li><a href="{{ route('library.index') }}"><span class="mono mmenu__num">03</span>AI Library</a></li>
-        <li><a href="{{ route('blueprints.index') }}"><span class="mono mmenu__num">04</span>Blueprints</a></li>
-        <li><a href="{{ route('repos.index') }}"><span class="mono mmenu__num">05</span>Repos</a></li>
-        <li><a href="/#about"><span class="mono mmenu__num">06</span>About</a></li>
-        <li><a href="/#projects"><span class="mono mmenu__num">07</span>Work</a></li>
-        <li><a href="{{ route('journal.index') }}"><span class="mono mmenu__num">08</span>Journal</a></li>
-        <li><a href="/#contact"><span class="mono mmenu__num">09</span>Contact</a></li>
+        <li><a href="{{ route('products.index') }}"><span class="mono mmenu__num">04</span>Store <span class="mmenu__badge mono">New</span></a></li>
+        <li><a href="{{ route('blueprints.index') }}"><span class="mono mmenu__num">05</span>Blueprints</a></li>
+        <li><a href="{{ route('repos.index') }}"><span class="mono mmenu__num">06</span>Repos</a></li>
+        <li><a href="/#about"><span class="mono mmenu__num">07</span>About</a></li>
+        <li><a href="/#projects"><span class="mono mmenu__num">08</span>Work</a></li>
+        <li><a href="{{ route('journal.index') }}"><span class="mono mmenu__num">09</span>Journal</a></li>
+        <li><a href="/#contact"><span class="mono mmenu__num">10</span>Contact</a></li>
         <li>
             <button type="button" class="mmenu__subscribe-trigger mono" data-newsletter-trigger>
-                <span class="mono mmenu__num">10</span>Subscribe to Dispatch →
+                <span class="mono mmenu__num">11</span>Subscribe to Dispatch →
             </button>
         </li>
     </ul>

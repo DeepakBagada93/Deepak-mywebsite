@@ -1,0 +1,10 @@
+---
+description: Storefront style rules
+alwaysApply: true
+---
+
+# Style rules
+
+- Indent with tabs in all new files.
+- Use double quotes in JSX attributes.
+- Keep comments meaningful; do not narrate obvious code.

@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-18T09:56:36.080Z",
+  "repo": "examples/messy-repo",
+  "tokenEstimator": "characters/4 (approximation, not tokenizer-exact)",
+  "budget": {
+    "kernel": 300,
+    "repoMap": 800,
+    "playbook": 400,
+    "adapter": 120,
+    "total": 1100
+  },
+  "summary": {
+    "contextFiles": 3,
+    "estimatedTokens": 1011,
+    "budgetTokens": 1100,
+    "findings": 11,
+    "score": 15,
+    "verdict": "needs-rework"
+  },
+  "stack": {
+    "name": "acme-storefront",
+    "language": "TypeScript",
+    "packageManager": "pnpm",
+    "frameworks": [
+      "Next.js"
+    ],
+    "formatters": [
+      "prettier"
+    ],
+    "testRunners": [
+      "vitest"
+    ],
+    "scripts": [
+      "dev",
+      "build",
+      "lint",
+      "test",
+      "typecheck"
+    ]
+  },
+  "files": [
+    {
+      "path": "CLAUDE.md",
+      "bytes": 3258,
+      "estimatedTokens": 815,
+      "rules": 37
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 572,
+      "estimatedTokens": 143,
+      "rules": 12
+    },
+    {
+      "path": ".cursor/rules/style.mdc",
+      "bytes": 211,
+      "estimatedTokens": 53,
+      "rules": 5
+    }
+  ],
+  "findings": [
+    {
+      "id": "conflict-package-manager",
+      "type": "conflict",
+      "severity": "critical",
+      "message": "Conflicting package manager instructions: npm vs pnpm.",
+      "evidence": [
+        {
+          "value": "npm",
+          "path": "CLAUDE.md",
+          "line": 13,
+          "raw": "Install dependencies with npm:"
+        },
+        {
+          "value": "npm",
+          "path": "CLAUDE.md",
+          "line": 16,
+          "raw": "npm install"
+        },
+        {
+          "value": "pnpm",
+          "path": "AGENTS.md",
+          "line": 5,
+          "raw": "- Install with pnpm: `pnpm install`"
+        },
+        {
+          "value": "pnpm",
+          "path": "AGENTS.md",
+          "line": 6,
+          "raw": "- Run the suite with `pnpm run test`"
+        }
+      ],
+      "fix": "Pick one package manager, state it once in the kernel, and delete every other manager instruction."
+    },
+    {
+      "id": "oversize-claude-md",
+      "type": "budget",
+      "severity": "critical",
+      "message": "`CLAUDE.md` loads ~815 tokens on every session (kernel budget: 300).",
+      "evidence": [
+        {
+          "path": "CLAUDE.md",
+          "line": 1,
+          "raw": "3258 characters"
+        }
+      ],
+      "fix": "Move task-specific detail into an on-demand playbook; keep always-on rules in the kernel only."
+    },
+    {
+      "id": "conflict-quotes",
+      "type": "conflict",
+      "severity": "high",
+      "message": "Conflicting quote style instructions: double vs single.",
+      "evidence": [
+        {
+          "value": "double",
+          "path": "CLAUDE.md",
+          "line": 36,
+          "raw": "- Use double quotes for all strings."
+        },
+        {
+          "value": "double",
+          "path": ".cursor/rules/style.mdc",
+          "line": 9,
+          "raw": "- Use double quotes in JSX attributes."
+        },
+        {
+          "value": "single",
+          "path": "AGENTS.md",
+          "line": 10,
+          "raw": "- Use single quotes for all strings."
+        }
+      ],
+      "fix": "Keep one quote rule, or defer formatting to the configured formatter and delete both rules."
+    },
+    {
+      "id": "conflict-semicolons",
+      "type": "conflict",
+      "severity": "high",
+      "message": "Conflicting semicolon policy instructions: always vs never.",
+      "evidence": [
+        {
+          "value": "always",
+          "path": "CLAUDE.md",
+          "line": 37,
+          "raw": "- Always use semicolons."
+        },
+        {
+          "value": "never",
+          "path": "AGENTS.md",
+          "line": 11,
+          "raw": "- Never use semicolons."
+        }
+      ],
+      "fix": "Delete both; let Prettier/Biome own semicolon policy. If neither exists, keep exactly one rule."
+    },
+    {
+      "id": "conflict-indentation",
+      "type": "conflict",
+      "severity": "medium",
+      "message": "Conflicting indentation instructions: spaces vs tabs.",
+      "evidence": [
+        {
+          "value": "spaces",
+          "path": "CLAUDE.md",
+          "line": 38,
+          "raw": "- Indent with 2 spaces."
+        },
+        {
+          "value": "tabs",
+          "path": "AGENTS.md",
+          "line": 12,
+          "raw": "- Indent with tabs."
+        },
+        {
+          "value": "tabs",
+          "path": ".cursor/rules/style.mdc",
+          "line": 8,
+          "raw": "- Indent with tabs in all new files."
+        }
+      ],
+      "fix": "Defer indentation to the formatter config, then remove it from prose rules."
+    },
+    {
+      "id": "duplicate-rule-1",
+      "type": "duplication",
+      "severity": "medium",
+      "message": "The same rule appears in 2 files; duplicated rules drift apart.",
+      "evidence": [
+        {
+          "path": "CLAUDE.md",
+          "line": 39,
+          "raw": "- Prefer named exports over default exports."
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 13,
+          "raw": "- Prefer named exports over default exports."
+        }
+      ],
+      "fix": "Keep the rule in exactly one layer (usually the kernel) and delete the copies."
+    },
+    {
+      "id": "duplicate-rule-2",
+      "type": "duplication",
+      "severity": "medium",
+      "message": "The same rule appears in 2 files; duplicated rules drift apart.",
+      "evidence": [
+        {
+          "path": "CLAUDE.md",
+          "line": 62,
+          "raw": "- Do not add new dependencies without asking."
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 19,
+          "raw": "- Do not add new dependencies without asking."
+        }
+      ],
+      "fix": "Keep the rule in exactly one layer (usually the kernel) and delete the copies."
+    },
+    {
+      "id": "duplicate-rule-3",
+      "type": "duplication",
+      "severity": "medium",
+      "message": "The same rule appears in 2 files; duplicated rules drift apart.",
+      "evidence": [
+        {
+          "path": "CLAUDE.md",
+          "line": 63,
+          "raw": "- Do not rewrite unrelated code while fixing a bug."
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 20,
+          "raw": "- Do not rewrite unrelated code while fixing a bug."
+        }
+      ],
+      "fix": "Keep the rule in exactly one layer (usually the kernel) and delete the copies."
+    },
+    {
+      "id": "duplicate-rule-4",
+      "type": "duplication",
+      "severity": "medium",
+      "message": "The same rule appears in 2 files; duplicated rules drift apart.",
+      "evidence": [
+        {
+          "path": "CLAUDE.md",
+          "line": 81,
+          "raw": "- Keep comments meaningful; do not narrate obvious code."
+        },
+        {
+          "path": ".cursor/rules/style.mdc",
+          "line": 10,
+          "raw": "- Keep comments meaningful; do not narrate obvious code."
+        }
+      ],
+      "fix": "Keep the rule in exactly one layer (usually the kernel) and delete the copies."
+    },
+    {
+      "id": "soft-instructions",
+      "type": "specificity",
+      "severity": "medium",
+      "message": "7 instruction(s) are unenforceable (\"write clean code\", \"as needed\").",
+      "evidence": [
+        {
+          "path": "context files",
+          "line": 7,
+          "raw": "You are a helpful senior full-stack engineer. Write clean code. Be careful when editing files. Follow best practices at all times. Use good judgment when something is ambiguous. Try to keep changes focused and make sure to test your work where appropriate."
+        },
+        {
+          "path": "context files",
+          "line": 7,
+          "raw": "You are a helpful senior full-stack engineer. Write clean code. Be careful when editing files. Follow best practices at all times. Use good judgment when something is ambiguous. Try to keep changes focused and make sure to test your work where appropriate."
+        },
+        {
+          "path": "context files",
+          "line": 7,
+          "raw": "You are a helpful senior full-stack engineer. Write clean code. Be careful when editing files. Follow best practices at all times. Use good judgment when something is ambiguous. Try to keep changes focused and make sure to test your work where appropriate."
+        },
+        {
+          "path": "context files",
+          "line": 7,
+          "raw": "You are a helpful senior full-stack engineer. Write clean code. Be careful when editing files. Follow best practices at all times. Use good judgment when something is ambiguous. Try to keep changes focused and make sure to test your work where appropriate."
+        },
+        {
+          "path": "context files",
+          "line": 7,
+          "raw": "You are a helpful senior full-stack engineer. Write clean code. Be careful when editing files. Follow best practices at all times. Use good judgment when something is ambiguous. Try to keep changes focused and make sure to test your work where appropriate."
+        },
+        {
+          "path": "context files",
+          "line": 7,
+          "raw": "You are a helpful senior full-stack engineer. Write clean code. Be careful when editing files. Follow best practices at all times. Use good judgment when something is ambiguous. Try to keep changes focused and make sure to test your work where appropriate."
+        }
+      ],
+      "fix": "Replace each soft phrase with an observable check: a command, a file path, or a forbidden action."
+    },
+    {
+      "id": "stale-path-src-server-api-ts",
+      "type": "staleness",
+      "severity": "medium",
+      "message": "Context references `src/server/api.ts`, which does not exist in the repository.",
+      "evidence": [
+        {
+          "path": "CLAUDE.md",
+          "line": 50,
+          "raw": "The checkout flow lives in `src/server/api.ts` and talks to Stripe. If you need to change the checkout behaviour, that file is the place to start. It is a large file, so read it fully before editing."
+        }
+      ],
+      "fix": "Remove the reference or update it to the current path."
+    }
+  ]
+}

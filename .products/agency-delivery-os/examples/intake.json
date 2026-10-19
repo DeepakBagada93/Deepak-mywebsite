@@ -1,0 +1,23 @@
+{
+  "clientName": "Northwind Supply",
+  "projectName": "Quote Automation",
+  "decisionMaker": "Priya Raman",
+  "budgetUsd": 12000,
+  "timelineWeeks": 6,
+  "successMetric": "Cut manual quote turnaround from two days to under four hours for repeat customers.",
+  "deliverables": [
+    "Intake form with validation",
+    "Quote calculation service",
+    "Internal review dashboard"
+  ],
+  "outOfScope": [
+    "Payment processing",
+    "Customer-facing mobile app",
+    "ERP migration"
+  ],
+  "constraints": [
+    "Must run inside the existing AWS account",
+    "Single reviewer available on Tuesdays"
+  ],
+  "dataSensitivity": "medium"
+}

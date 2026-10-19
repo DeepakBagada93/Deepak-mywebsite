@@ -1,0 +1,137 @@
+{
+  "name": "n8n Production Hardening Pack",
+  "slug": "n8n-hardening-pack",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-18T10:24:22.496Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1000,
+      "sha256": "b515678cb2ee3a881951fc614fab861d1636cbd57f5ce074dc62183c55f7158a"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 2000,
+      "sha256": "328acc6e70e13c3797f439775b1b931288c3ac4e8ee9d3b85f58c6f82a041d12"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 5202,
+      "sha256": "4d8f8ff3058b231b82ffbb4dce61d3a4f540cf8a2ec120ca65508d42aa3b9370"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1667,
+      "sha256": "929c54368587c42b8687705aa56cd4205b1fe019d2c798923160d282775d019e"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 4719,
+      "sha256": "2bb8ba67adec2e0fba4ce24d48d7c73799ddba255002472ca77fe83c3dddfda5"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 5704,
+      "sha256": "a2079845ce0dbe36eb0dcbd6270daa945b8ce2d4372bb51eef418df2ba737a92"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1381,
+      "sha256": "2048fb669faa6c64bd60fe5e7c645ab13dd253f4e09f4eb4d45de219ea5a4f4f"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1872,
+      "sha256": "224e618c2fd39c8b5d1b26e98bf3f9c78531443496a17310423d7e0e4884ef5f"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 9067,
+      "sha256": "4ea8a885f7982bb5bf95311c6f9c00d1dadfbc534831e42168768fc7d892e0a7"
+    },
+    {
+      "path": "examples/expected/audit-lead-intake.json",
+      "bytes": 5662,
+      "sha256": "775c1ab15ff15fa1f66dc6510070b99183890c1a85d3b6c75d7c1e6a2151e0aa"
+    },
+    {
+      "path": "examples/expected/audit-lead-intake.md",
+      "bytes": 2880,
+      "sha256": "0e6dee5a1a107c4ffe241f02ab7b2cefdf385ed52561e05eb3f9b7f2286861ed"
+    },
+    {
+      "path": "examples/expected/audit-orders-sync.json",
+      "bytes": 1914,
+      "sha256": "5b0bf05f87ac79c26a555af1de05bcbf4de445d4bb3acd3dcb2fa8cdb80133b2"
+    },
+    {
+      "path": "examples/expected/orders-sync.hardened.json",
+      "bytes": 1761,
+      "sha256": "61473649b0e9b87f983f73a1e6bc61268bbaa5a354173c91bd8cffaf99c4e336"
+    },
+    {
+      "path": "examples/lead-intake-clean.workflow.json",
+      "bytes": 3023,
+      "sha256": "a7a9ad65becae85df384ab1841fbc749f45709dd910ca894e15fe6d29bd33de0"
+    },
+    {
+      "path": "examples/lead-intake.workflow.json",
+      "bytes": 2286,
+      "sha256": "f1e27c40d553c5cd3e9e419d4b4057185dbd7adbafc1bebb97dace0b07712b8e"
+    },
+    {
+      "path": "examples/orders-sync.workflow.json",
+      "bytes": 1493,
+      "sha256": "979a4c51d5f74c4cbd20616611479a78b5832483552c212e918b0b9ff617abba"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1990,
+      "sha256": "196cbbd2685837b6d1f2948c3ed784ad6139c8b446e5473677387eb752673715"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4150,
+      "sha256": "19cc13abef8e058f3ccac737e181acc5f27a85c8f2ddc4f5c2e80328678740a4"
+    },
+    {
+      "path": "skills/workflow-hardener/scripts/audit-workflow.mjs",
+      "bytes": 2815,
+      "sha256": "d14b35ae00574aae85e397b41a5fa2acd70bc996a23d5542272154e223e9b302"
+    },
+    {
+      "path": "skills/workflow-hardener/scripts/harden-workflow.mjs",
+      "bytes": 3426,
+      "sha256": "1943116cb725d4e502dd8e5cbae7a3679ebf7b0cdf1707835629b8bbd8812fab"
+    },
+    {
+      "path": "skills/workflow-hardener/scripts/lib.mjs",
+      "bytes": 10136,
+      "sha256": "f48ab211d201683f2c39b0483aa356ac00e9d59ee46d5d479f5cfca7350eb9eb"
+    },
+    {
+      "path": "skills/workflow-hardener/scripts/verify-workflow.mjs",
+      "bytes": 2641,
+      "sha256": "22efb003bf728630f077f51087b8b822f8f9c0c2ab91a87088cbbcfbc03c3526"
+    },
+    {
+      "path": "skills/workflow-hardener/SKILL.md",
+      "bytes": 7164,
+      "sha256": "7fe35647226efc1a0aac1abcdef9bb34a46d9c3770ee298a5d3128df7beb9f62"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4433,
+      "sha256": "d6d106038ce717b05451e3959a2f52e5b90880fd7357f5138cfdce711e11cac3"
+    },
+    {
+      "path": "tests/workflow-hardener.test.mjs",
+      "bytes": 5212,
+      "sha256": "0e8e7b802d000ac0db52c318f0231a7cb8f2697b7b078fdad3628c378823bbc9"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

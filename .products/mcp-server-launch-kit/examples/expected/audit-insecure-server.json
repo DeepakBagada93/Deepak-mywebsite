@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-18T10:15:39.503Z",
+  "project": {
+    "name": "Ops Server",
+    "tools": 2,
+    "files": 1
+  },
+  "summary": {
+    "findings": 7,
+    "critical": 1,
+    "high": 4,
+    "score": 38,
+    "verdict": "not-launch-ready"
+  },
+  "findings": [
+    {
+      "id": "hardcoded-secret",
+      "type": "security",
+      "severity": "critical",
+      "message": "A credential-shaped literal is embedded in source or used as an env fallback.",
+      "evidence": [
+        {
+          "path": "server.mjs"
+        }
+      ],
+      "fix": "Read the value from the environment and fail closed when it is missing."
+    },
+    {
+      "id": "exec-capability",
+      "type": "capability",
+      "severity": "high",
+      "message": "Server can execute shell or child processes.",
+      "evidence": [
+        {
+          "path": "server.mjs"
+        }
+      ],
+      "fix": "Remove it, or document the allowlist, require confirmation, and sandbox the call."
+    },
+    {
+      "id": "no-tests",
+      "type": "quality",
+      "severity": "high",
+      "message": "No test file found; protocol behavior is unverified.",
+      "evidence": [],
+      "fix": "Add a smoke test that initializes the server and lists tools."
+    },
+    {
+      "id": "secret-logged",
+      "type": "security",
+      "severity": "high",
+      "message": "An environment secret is written to logs.",
+      "evidence": [
+        {
+          "path": "server.mjs"
+        }
+      ],
+      "fix": "Log a presence flag, never the value."
+    },
+    {
+      "id": "spec-invalid",
+      "type": "spec",
+      "severity": "high",
+      "message": "Spec has 7 violation(s): name must be kebab-case, at least 3 characters. version must be semver (e.g. 0.1.0). description must be at least 20 characters. …",
+      "evidence": [
+        {
+          "path": "mcp.spec.json",
+          "detail": "name must be kebab-case, at least 3 characters."
+        },
+        {
+          "path": "mcp.spec.json",
+          "detail": "version must be semver (e.g. 0.1.0)."
+        },
+        {
+          "path": "mcp.spec.json",
+          "detail": "description must be at least 20 characters."
+        },
+        {
+          "path": "mcp.spec.json",
+          "detail": "run_command: inputSchema.properties is required."
+        },
+        {
+          "path": "mcp.spec.json",
+          "detail": "run_command: destructive tools must say \"destructive\" in their description."
+        },
+        {
+          "path": "mcp.spec.json",
+          "detail": "fetch_url: description must be at least 20 characters."
+        },
+        {
+          "path": "mcp.spec.json",
+          "detail": "fetch_url: inputSchema.type must be \"object\"."
+        }
+      ],
+      "fix": "Fix every spec violation before scaffolding or publishing."
+    },
+    {
+      "id": "no-readme",
+      "type": "docs",
+      "severity": "medium",
+      "message": "No README; installers cannot tell what the server does.",
+      "evidence": [],
+      "fix": "Document run command, tools, and required environment variables."
+    },
+    {
+      "id": "unbounded-fetch",
+      "type": "reliability",
+      "severity": "low",
+      "message": "Outbound fetch has no visible timeout.",
+      "evidence": [
+        {
+          "path": "server.mjs"
+        }
+      ],
+      "fix": "Pass an AbortSignal with a timeout."
+    }
+  ]
+}

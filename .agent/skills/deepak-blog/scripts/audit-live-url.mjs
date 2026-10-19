@@ -196,22 +196,20 @@ if (count(/<pre[^>]*>/gi) > 0 || count(/<code[^>]*>/gi) > 2) add("PASS", "Code b
 else if (has(/```|<\s*code/i)) { /* has code intent but not rendered */ }
 else add("WARN", "Code blocks", "No <pre>/<code> blocks — if article has code, ensure rendering");
 
-// ─── 10. Images & Alt Text Audit (Accessibility, AEO, Image Search) ────────
-const imgTags = [...html.matchAll(/<img\b([^>]*?)>/gi)].map(m => {
-  const alt = (m[1].match(/alt=["'](.*?)["']/i) || [])[1] || "";
-  const src = (m[1].match(/src=["'](.*?)["']/i) || [])[1] || "";
-  return { tag: m[0], alt: alt.trim(), src: src.trim() };
-});
-if (imgTags.length > 0) {
-  const genericAlt = /^(image|screenshot|diagram|photo|graphic|pic|picture|img|illustration|unnamed|alt)$/i;
-  const badAlts = imgTags.filter(img => !img.alt || img.alt.length < 5 || genericAlt.test(img.alt));
-  if (badAlts.length > 0) {
-    add("FAIL", "Image alt tags (Accessibility & AEO)", `${badAlts.length}/${imgTags.length} live image(s) missing descriptive alt text: ${badAlts.map(b => `"${b.alt || "(empty)"}" [${b.src.slice(0, 30)}]`).join("; ")}`);
-  } else {
-    add("PASS", "Image alt tags", `${imgTags.length} image(s) live with valid, descriptive alt tags`);
-  }
+// ─── 10. No-Images-In-Body Audit (article content must be image-free) ──────
+const bodyMatch = html.match(/<div class="article__body">([\s\S]*?)<aside class="author-box"/);
+if (!bodyMatch) {
+  add("WARN", "No images in body", "article__body container not found — could not verify image-free body");
 } else {
-  add("PASS", "Images check", "No images embedded in article (all text/code/tables render cleanly)");
+  const bodyImgs = [...bodyMatch[1].matchAll(/<img\b[^>]*>/gi)].map(m => {
+    const src = (m[0].match(/src=["'](.*?)["']/i) || [])[1] || m[0].slice(0, 40);
+    return src.trim().slice(0, 40);
+  });
+  if (bodyImgs.length > 0) {
+    add("FAIL", "No images in body", `${bodyImgs.length} image(s) embedded in article body — content must be image-free: ${bodyImgs.join("; ")}`);
+  } else {
+    add("PASS", "No images in body", "Article body contains zero embedded images (text/code/tables only)");
+  }
 }
 
 // ─── 11. Tables & Responsive Layout ─────────────────────────────────────────

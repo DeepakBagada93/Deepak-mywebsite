@@ -1,0 +1,162 @@
+{
+  "name": "MCP Server Launch Kit",
+  "slug": "mcp-server-launch-kit",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-18T10:24:22.702Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1172,
+      "sha256": "b93615050d1f4725ef496b9d98207b19ede1bfafe9a9c13ceb8aaf2e78190246"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1923,
+      "sha256": "3bdf7d3efecf213bf4871e156c93f6c834c3700c04434610d3a6d7c8e74deeb9"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 4809,
+      "sha256": "98f76b7f920aee06cf082a024152486dc4df0f687aab09cc98a472de28c2ab54"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1712,
+      "sha256": "acaea1658daa59697ee75480b117915be5cecefb40636d79aad2efeb60f17b05"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 4165,
+      "sha256": "03ec51edd098135a2ec643fb5466b3b594eccce522079098deba6ee542c47a48"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 5953,
+      "sha256": "b5800553a4daf9b74427896314da26f9d81f43326a310e03602be575988d1c86"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1499,
+      "sha256": "94ec1cf33fa3fc104176d3f0d858cddb38c56aee61efca7954231c1d3369ea32"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1959,
+      "sha256": "d7987b9746213b3f8bcaa5c0b14d57829e02a24ebdcd5aa05815b37ee246f31c"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 9025,
+      "sha256": "1104f4ca8924e5565f7336d1437d7fea0f513bcd0cc76c3fc4847cfe928ee274"
+    },
+    {
+      "path": "examples/expected/audit-insecure-server.json",
+      "bytes": 3378,
+      "sha256": "89aebdff6b0ac74db4db1e10693443aa69fdba098acea8f23471050c7d69ed18"
+    },
+    {
+      "path": "examples/expected/audit-insecure-server.md",
+      "bytes": 1530,
+      "sha256": "c3e70f7fc1fd48e2da47e32339556422ba1c0e923ae9f254a7c32b015bdb0d56"
+    },
+    {
+      "path": "examples/expected/audit-scaffolded-example.json",
+      "bytes": 298,
+      "sha256": "6974953bf510dfb312c2fe963444c046730e8d7d661a97b75b1a9a42bb72b115"
+    },
+    {
+      "path": "examples/insecure-server/mcp.spec.json",
+      "bytes": 326,
+      "sha256": "84f7d1c84ca763d0837ff4609ef0ebcda0fd5a1821f42c19684fee4e6307d464"
+    },
+    {
+      "path": "examples/insecure-server/server.mjs",
+      "bytes": 1416,
+      "sha256": "29fe38e80905e4de0978c1a21cdac2b2768f4ba1dad7e9cf2a6fc7dfa1dbc08d"
+    },
+    {
+      "path": "examples/repo-search.spec.json",
+      "bytes": 1143,
+      "sha256": "a84e6d54e27f57a36eca1c17e2f8d5ca6de81922dd3d1e7ea08bc5758056b960"
+    },
+    {
+      "path": "examples/scaffolded-example/mcp.spec.json",
+      "bytes": 1183,
+      "sha256": "6146483219060b6df648c4dc49025f4ba7f951a097b23f29c18bef8c16effc21"
+    },
+    {
+      "path": "examples/scaffolded-example/package.json",
+      "bytes": 305,
+      "sha256": "2e216c095b491602047ee9d5bcbcf33ce5c150d21f60da431d410c268fcb560d"
+    },
+    {
+      "path": "examples/scaffolded-example/README.md",
+      "bytes": 1164,
+      "sha256": "3e6568b91ed7a68632e77afcb21217918fe1d0779cbc50a953b632e811334d8f"
+    },
+    {
+      "path": "examples/scaffolded-example/server.mjs",
+      "bytes": 3400,
+      "sha256": "9fa724ad6be6726336f39006b66af49576d80ed663ecac388123cb55062b710e"
+    },
+    {
+      "path": "examples/scaffolded-example/test/smoke.test.mjs",
+      "bytes": 2965,
+      "sha256": "bd2d08b18583cd8a15a79b46434b3c098b93395638bcd21a9e2d88dd96e39e24"
+    },
+    {
+      "path": "examples/scaffolded-example/tools.mjs",
+      "bytes": 1341,
+      "sha256": "503fc574a536af600a290687119c4b132b8e8752b184320b092925773b0342ba"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 2042,
+      "sha256": "6e174990102ec7a1d8fc1e0895fbe83e8fa138a75ab959e47c6560685a5e62ba"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4351,
+      "sha256": "45c6ed3cc62e6971139f4d58e3204f7aa194cd61c1c20ee7c4884092194ef5b2"
+    },
+    {
+      "path": "skills/mcp-server-architect/scripts/audit-server.mjs",
+      "bytes": 1728,
+      "sha256": "5a87dc715ad0dc5693349a65503056414ac9b5d4f0efa9fd7d01b55b4893f8c4"
+    },
+    {
+      "path": "skills/mcp-server-architect/scripts/lib.mjs",
+      "bytes": 10468,
+      "sha256": "43989d42a794e6a0fdc753882eb0063963cdd3a5010f359830074463423aa2d5"
+    },
+    {
+      "path": "skills/mcp-server-architect/scripts/scaffold-server.mjs",
+      "bytes": 10421,
+      "sha256": "86ce5b6f5946324041bc800514b618fad05c42c3bedf176ddeb4d4a2577038c3"
+    },
+    {
+      "path": "skills/mcp-server-architect/scripts/verify-server.mjs",
+      "bytes": 1966,
+      "sha256": "436b1175d2d0ef85b756e5feddd156ec28a82d63a8419b6a4aca53b42bc3b08e"
+    },
+    {
+      "path": "skills/mcp-server-architect/SKILL.md",
+      "bytes": 7261,
+      "sha256": "f43df3475ea65617eb20a44ab145f1acbb01e605b5ffb24cd1ef667592ca9aa5"
+    },
+    {
+      "path": "tests/mcp-server-architect.test.mjs",
+      "bytes": 5504,
+      "sha256": "c841ad340fc2d2a81f5664067bbc8c97531460076e69698a448a28f3ee156fee"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4690,
+      "sha256": "033d4ba2dca17c4f50d7c50679b8397333d87f498494dd87b842e279b6843a33"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

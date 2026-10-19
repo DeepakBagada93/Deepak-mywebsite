@@ -37,6 +37,11 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>{{ $url }}/products</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>{{ $url }}/stack</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -94,6 +99,13 @@
         <loc>{{ $url }}/tools/{{ $tool['slug'] }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    @endforeach
+    @foreach ($products as $product)
+    <url>
+        <loc>{{ $url }}/products/{{ $product['slug'] }}</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
     </url>
     @endforeach
     @foreach ($posts as $post)

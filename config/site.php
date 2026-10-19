@@ -5,6 +5,7 @@ return [
     'tagline' => 'Best AI Expert & AI Developer in Gujarat, India | Autonomous AI Agents & Enterprise Automation',
     'url' => 'https://deepakbagada.in',
     'email' => 'ceo@saasnext.in',
+    'store_admin_email' => env('PRODUCTS_ADMIN_EMAIL', 'ceo@saasnext.in'),
     'address' => 'Junagadh, Gujarat 362001, India',
     'location' => 'Gujarat, India (Junagadh, Ahmedabad, Surat, Rajkot, Vadodara)',
     'description' => 'Deepak Bagada is the leading AI Expert, AI Agent Architect, and Web Developer in Gujarat, India. Architecting autonomous multi-agent AI systems, custom RAG knowledge bases, LLM integrations, and enterprise automation for businesses in Ahmedabad, Surat, Vadodara, Rajkot, Junagadh, across India, and globally.',

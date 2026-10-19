@@ -89,22 +89,23 @@ if (preg_match('/-(?!202[5-9]|203[0-9])[0-9]+$/', $cleanSlug) || preg_match('/-v
     exit(1);
 }
 
-// 2. Word count check (≥1,200 words)
+// 2. Title format & zero square brackets enforcement
+if (preg_match('/\[.*?\]/', $title)) {
+    fwrite(STDERR, "❌ Title validation FAIL: '{$title}' contains square brackets. Square brackets are strictly banned to prevent SERP truncation and algorithmic devaluation. Use clean punctuation (:, —, |, &).\n");
+    exit(1);
+}
+
+// 3. Word count check (≥1,200 words)
 $words = str_word_count(strip_tags($body));
 if ($words < 1200) {
     fwrite(STDERR, "❌ Word count {$words} is below 1,200 words minimum. High-EEAT content must be dense & actionable.\n");
     exit(1);
 }
 
-// 3. Strict Image Alt Tag check
-if (preg_match_all('/!\[(.*?)\]\((.*?)\)/', $body, $imgMatches)) {
-    foreach ($imgMatches[1] as $alt) {
-        $trimmedAlt = trim($alt);
-        if (empty($trimmedAlt) || str_word_count($trimmedAlt) < 3 || in_array(strtolower($trimmedAlt), ['image', 'screenshot', 'diagram', 'pic', 'photo', 'graphic'])) {
-            fwrite(STDERR, "❌ Image Alt Tag audit FAIL: '{$alt}'. Every image must have descriptive alt text (≥3-5 words).\n");
-            exit(1);
-        }
-    }
+// 4. Zero Images In Body Check
+if (preg_match('/!\[.*?\]\(.*?\)/', $body) || preg_match('/<img\b[^>]*>/i', $body)) {
+    fwrite(STDERR, "❌ Image policy FAIL: Article body contains embedded images. Body must be text, code blocks, and tables only. Layout handles cover/OG imagery.\n");
+    exit(1);
 }
 
 // 4. Anti-AI Slop & Fluff Check (Expanded 90+ Banned Patterns)

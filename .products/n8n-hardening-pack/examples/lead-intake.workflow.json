@@ -1,0 +1,110 @@
+{
+  "name": "Lead intake (unsafe)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-intake",
+        "authentication": "none",
+        "responseMode": "onReceived"
+      },
+      "id": "a1",
+      "name": "Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "lead-intake"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.enrichment.example/v1/person",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer sk_live_9f8a7b6c5d4e3f2a1b"
+            }
+          ]
+        }
+      },
+      "id": "a2",
+      "name": "Enrich Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [220, 0]
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "schema": "public",
+        "table": "leads",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        }
+      },
+      "id": "a3",
+      "name": "Store Lead",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [440, 0]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems"
+      },
+      "id": "a4",
+      "name": "Old Slack Ping",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [440, 180],
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "id": "a5",
+      "name": "Unused Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [660, 260]
+    }
+  ],
+  "connections": {
+    "Lead Webhook": {
+      "main": [
+        [
+          {
+            "node": "Enrich Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrich Lead": {
+      "main": [
+        [
+          {
+            "node": "Store Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {
+    "Lead Webhook": [
+      {
+        "json": {
+          "email": "customer@example.com",
+          "name": "Pinned Customer"
+        }
+      }
+    ]
+  },
+  "settings": {},
+  "active": false
+}

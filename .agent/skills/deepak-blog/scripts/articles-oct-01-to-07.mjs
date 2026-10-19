@@ -11,7 +11,6 @@ export const ARTICLES = {
 
 Explore our specialized [web application development](/services/web-development), enterprise [AI development services](/services/ai-development), and custom [business automation systems](/services/automation-expert) to build resilient infrastructure.
 
-![Production web application performance telemetry dashboard measuring TTFB under 40ms](https://deepakbagada.in/assets/images/posts/web-dev-benchmark-telemetry.webp)
 
 ## Real Production War Stories: Surat & California Deployments
 
@@ -151,7 +150,6 @@ A complete production web platform deployment takes exactly 14 business days fro
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to upgrade your engineering stack.
 
-![High throughput Model Context Protocol stream multiplexing architecture diagram](https://deepakbagada.in/assets/images/posts/mcp-stream-multiplexing-diagram.webp)
 
 ## Real Production War Stories: Ahmedabad Fintech & Rajkot ERP
 
@@ -317,7 +315,6 @@ In production deployments across Gujarat enterprises, our multiplexed SSE implem
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build self-hosted software.
 
-![PostgreSQL pgvector performance benchmarks measuring 14ms HNSW latency](https://deepakbagada.in/assets/images/posts/pgvector-latency-benchmark.webp)
 
 ## Real Production War Stories: SaaS Next & Morbi Ceramics
 

@@ -1,0 +1,10 @@
+{
+  "clientName": "Northwind Supply",
+  "projectName": "Quote Automation",
+  "decisionMaker": "Priya Raman",
+  "timelineWeeks": 6,
+  "successMetric": "Faster quotes.",
+  "deliverables": [
+    "Intake form"
+  ]
+}

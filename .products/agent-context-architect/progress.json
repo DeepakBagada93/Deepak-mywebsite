@@ -1,0 +1,31 @@
+{
+  "product": "agent-context-architect",
+  "version": "1.0.0",
+  "createdAt": "2026-10-18T00:00:00.000Z",
+  "stages": {
+    "research": "partial",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "Paid-ad longevity could not be verified: Meta Ad Library returned HTTP 403 to automated fetch and Google Ads Transparency Center returned no extractable ad data. No ad-longevity claim is made anywhere in the product.",
+    "Market evidence is limited to live marketplace pricing and public practitioner reports, recorded in docs/research-dossier.md with source type labels.",
+    "Differentiation is deterministic tooling plus measurable before/after token counts, not a prompt list, because generic skill bundles are commoditized at $2-$19.",
+    "Token counts are documented as characters/4 estimates to avoid tokenizer-precision claims."
+  ],
+  "unresolved": [
+    "Owner approval for commercial terms, pricing, support, and publication.",
+    "Behavioral activation test in a named client (Claude Code, Cursor, Antigravity, Codex).",
+    "Run on Node 18/20/22 and on Windows before advertising those environments."
+  ],
+  "evidence": [
+    "Audit/compile/verify executed against examples/messy-repo on 2026-10-18 (Node 25.9.0).",
+    "Expected outputs regenerated from the scripts, not hand-written.",
+    "Structural and functional tests run from the product root."
+  ]
+}

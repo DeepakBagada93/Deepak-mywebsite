@@ -1,0 +1,227 @@
+{
+  "name": "Agent Context Architect",
+  "slug": "agent-context-architect",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-18T10:01:03.337Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1351,
+      "sha256": "cf90e594173ebc1e833090a495fc4ca7816fa00dc7bd002af1ca275ccc545e58"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 2183,
+      "sha256": "bf4609a1e1712f1e413f505bc44a425c587977b7c365362fb5bb5f62bb30a9e5"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 7113,
+      "sha256": "f3d3807e183254c28f738b46782ae6ae34656823c47addcbb52ad1ffe3c6d957"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 2820,
+      "sha256": "e0902eb6cd679e80ad86e54a7c9aaadf80669b0917f4214b9be16bf818200f46"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 7533,
+      "sha256": "d4704dffe4fad01e97f10d3de75da03aff08c039ce71fa0220dd5fcdab41981d"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 8765,
+      "sha256": "fa1a552c0ac3c97e2379d9a17cd27e8f24d9594f4d7cfea95efefa76601a4335"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 2756,
+      "sha256": "62887e621e8862c7e87102eb3f907cceda582bc5717eb7c9801204fe6c8b3d1b"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 4409,
+      "sha256": "9357b5d2c7ebfd8dbbc307d244ddbc382d4890a302972ba26cff5ef73f7e0a69"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 15199,
+      "sha256": "76366d27b2d136e60bc0e2556647a492a330511469590be687598805c26061ba"
+    },
+    {
+      "path": "examples/compiled-example/.context/drift-probes.md",
+      "bytes": 1059,
+      "sha256": "0849f71082c62727fcd2b25e5f1e93e233df10e1afe90b55ce3709f325fd69fc"
+    },
+    {
+      "path": "examples/compiled-example/.context/kernel.md",
+      "bytes": 1112,
+      "sha256": "4c4a8b78e714b55ca2ee8fc368c4cc99408df60dab987f1328dcd69124169fba"
+    },
+    {
+      "path": "examples/compiled-example/.context/manifest.json",
+      "bytes": 1873,
+      "sha256": "b27387873c5ec81138859e3232793e02ab7dfd127138d6f70d33a2f215122e64"
+    },
+    {
+      "path": "examples/compiled-example/.context/playbooks/build.md",
+      "bytes": 741,
+      "sha256": "1446eea07f143d2b546019ab1218b07c3f7c7d5c26ef71a440c96642a5e6c4e0"
+    },
+    {
+      "path": "examples/compiled-example/.context/playbooks/dev.md",
+      "bytes": 719,
+      "sha256": "1935f4628b880b697d97fae4fb19042efcb0acbe0e26c040229bf168df13afec"
+    },
+    {
+      "path": "examples/compiled-example/.context/playbooks/lint.md",
+      "bytes": 716,
+      "sha256": "5f722c9f22c161f8c6c06596898d400515a8e28d9474ea48bc870b9a20c5cec4"
+    },
+    {
+      "path": "examples/compiled-example/.context/playbooks/test.md",
+      "bytes": 721,
+      "sha256": "a29f8a6c7428436ed7b3a8a75d5d5246ff4b74a2254872cd3315fc1790ec54d3"
+    },
+    {
+      "path": "examples/compiled-example/.context/playbooks/typecheck.md",
+      "bytes": 721,
+      "sha256": "4081a96d55e4aff30ed344bc5023ebbf2a3e11d7ca3ee4fa78da6b1fef5818dd"
+    },
+    {
+      "path": "examples/compiled-example/.context/repo-map.md",
+      "bytes": 478,
+      "sha256": "8283301ebf2d8ac5b0e7a3fb3460ab23be1d3f36112cf8ef4a426e6289e97b52"
+    },
+    {
+      "path": "examples/compiled-example/adapters/000-context.mdc",
+      "bytes": 351,
+      "sha256": "f046c42601593f4f8be009cf779b306eab5ab0020814e51ff6aa98eeb8a9d2e2"
+    },
+    {
+      "path": "examples/compiled-example/adapters/AGENTS.md",
+      "bytes": 460,
+      "sha256": "5614d81062e8055bfc6e1ebfaf368b41b85b9df4a116f7587cab1f23a19ccdf4"
+    },
+    {
+      "path": "examples/compiled-example/adapters/CLAUDE.md",
+      "bytes": 460,
+      "sha256": "6a08f877c58a2e0ec351b34fdd30e8a9f0361743db8d906aed26e3a7a57fbd46"
+    },
+    {
+      "path": "examples/expected/audit-report.json",
+      "bytes": 10137,
+      "sha256": "859cdc674c29a815c4a6fbc5f0af7ac20ff5dd5466bed924c079d66d6d14b410"
+    },
+    {
+      "path": "examples/expected/audit-report.md",
+      "bytes": 5903,
+      "sha256": "8c0a05f0d6f05f441bcf5e2f424d5ddd6c4e86dc324d79adc9c2fa1646883413"
+    },
+    {
+      "path": "examples/messy-repo/.cursor/rules/style.mdc",
+      "bytes": 211,
+      "sha256": "c694110661ae9e26004e808e18257425a6c73e5e979159b6aa73b2133cda67b5"
+    },
+    {
+      "path": "examples/messy-repo/AGENTS.md",
+      "bytes": 572,
+      "sha256": "1a18d43cb2e6ce90e8444400e168f99a4bce7285643fddd18477bbef5cd4bd27"
+    },
+    {
+      "path": "examples/messy-repo/CLAUDE.md",
+      "bytes": 3258,
+      "sha256": "5e3120a82f57c7e093b60c6f60bd3780983ed1aa1d827663267f785a7a832a5c"
+    },
+    {
+      "path": "examples/messy-repo/docs/adr/0001-use-postgres.md",
+      "bytes": 488,
+      "sha256": "ab3d724926eacff8c7567ff863bb19698899e06406840d9445b1c9c799ce13d3"
+    },
+    {
+      "path": "examples/messy-repo/package.json",
+      "bytes": 463,
+      "sha256": "0b0a1342a5d7e58f1b877429205f12491a65a30c8f22a32c4d682079e1ee770c"
+    },
+    {
+      "path": "examples/messy-repo/pnpm-lock.yaml",
+      "bytes": 190,
+      "sha256": "e1aa8eed8524eb8689b7c308a57bfb77294f57d4c4f56eeafef4b411c256c555"
+    },
+    {
+      "path": "examples/messy-repo/README.md",
+      "bytes": 242,
+      "sha256": "d8fdcdda155a4483ca05e58d501a7c0810d30e9c22976f333f29bd11a7f6f3c6"
+    },
+    {
+      "path": "examples/messy-repo/src/app/page.tsx",
+      "bytes": 550,
+      "sha256": "c572c091b9c8cd45bde6f75e04b876fca7d1bd708f95657b169cb330a31afc2c"
+    },
+    {
+      "path": "examples/messy-repo/src/lib/db.ts",
+      "bytes": 299,
+      "sha256": "ed6ecfc6dcbbbc42c9c1ac25f6577a3e9c02c2dd9efde431a53ab3582dc23cd4"
+    },
+    {
+      "path": "examples/messy-repo/src/lib/format.ts",
+      "bytes": 224,
+      "sha256": "2b8c06572500b4249ae5b51fef6f94eea54ac1b0f0ab8a1888f9d1b62417a028"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 2388,
+      "sha256": "0de1fcca27730131ac33c3431ace699ae095ccc8c8dd0b293b27b45530fc9966"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6377,
+      "sha256": "f0ae9769930ceaead912c9fb26292f4b80db35337c9d2e42288b31aaa2505984"
+    },
+    {
+      "path": "skills/context-architect/scripts/audit-context.mjs",
+      "bytes": 10778,
+      "sha256": "cbf18eee803dc75382e45439aa5021f7c29f8eb5ec9f7a643dd60ec421b23fb2"
+    },
+    {
+      "path": "skills/context-architect/scripts/compile-context.mjs",
+      "bytes": 18754,
+      "sha256": "d0bee11990e555638027f355ef5f3ef8e6f750fe41d7c13681054e7e27981a8f"
+    },
+    {
+      "path": "skills/context-architect/scripts/lib.mjs",
+      "bytes": 12210,
+      "sha256": "913eddaad8c08ba02a72743b9027791068d3debb9b9f8432b45c5e30b898eb2b"
+    },
+    {
+      "path": "skills/context-architect/scripts/verify-context.mjs",
+      "bytes": 7222,
+      "sha256": "ee86aa5e1bdcd8d33e21cd9536d2e2d7646ecb5bc0d9391ef4e764eeb8044ad3"
+    },
+    {
+      "path": "skills/context-architect/SKILL.md",
+      "bytes": 10360,
+      "sha256": "441328c9756d8219cfd8f711f4a0dcac5c0c749ee69afb40c7d7efecb8e3c0cf"
+    },
+    {
+      "path": "skills/context-drift-guard/SKILL.md",
+      "bytes": 8148,
+      "sha256": "b91ab07abff712e5660991c5db7f98771df0026805c0fdb4020e7d9e01f344ec"
+    },
+    {
+      "path": "tests/context-tooling.test.mjs",
+      "bytes": 8532,
+      "sha256": "afad6967442debc12af09052119e1ec3518c8a22c39376f17a7ff99be15f825d"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 5163,
+      "sha256": "5f5d8f772e6355e25aed908694504cc7a553a7d75636332c9608196de115c1d9"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

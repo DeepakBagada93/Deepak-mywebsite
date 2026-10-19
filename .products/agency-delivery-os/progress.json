@@ -1,0 +1,31 @@
+{
+  "product": "agency-delivery-os",
+  "version": "1.0.0",
+  "createdAt": "2026-10-18T00:00:00.000Z",
+  "stages": {
+    "research": "partial",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "No paid-ad claim: Ad Library inaccessible to automated fetch.",
+    "Guarded state machine rather than document templates alone, so the product has testable behavior.",
+    "Advancement requires a clean audit and the next phase's artifacts; failures leave state untouched.",
+    "Proposal payment schedule is labeled a template, not professional advice.",
+    "Intake requires explicit exclusions to prevent scope-creep disputes."
+  ],
+  "unresolved": [
+    "Owner approval for pricing, license, support, and publication.",
+    "Run on Node 18/20/22 and Windows.",
+    "Test with a real client engagement before advertising outcomes."
+  ],
+  "evidence": [
+    "Functional tests 8/8 passing on 2026-10-18 (Node 25.9.0).",
+    "Full phase chain scoped → handoff verified; placeholder and missing-artifact guards verified."
+  ]
+}

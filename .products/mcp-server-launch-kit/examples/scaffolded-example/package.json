@@ -1,0 +1,14 @@
+{
+  "name": "repo-search-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only repository search tools for local coding agents.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test/smoke.test.mjs"
+  }
+}

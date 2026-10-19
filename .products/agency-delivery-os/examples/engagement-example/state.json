@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "engagementId": "quote-automation-mvdod42l",
+  "phase": "scoped",
+  "createdAt": "2026-10-18T10:20:45.405Z",
+  "history": [
+    {
+      "phase": "discovery",
+      "at": "2026-10-18T10:20:45.405Z"
+    },
+    {
+      "phase": "scoped",
+      "at": "2026-10-18T10:20:45.405Z"
+    }
+  ]
+}

@@ -11,7 +11,7 @@
     $robots = $head['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 @endphp
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en" prefix="og: https://ogp.me/ns#" data-store-currency="{{ $storeCurrency ?? 'INR' }}">
 <head>
     <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-4764950179214862">
@@ -30,6 +30,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $desc }}">
     <meta name="keywords" content="AI developer Gujarat, AI expert Junagadh, AI agent development India, enterprise AI automation, Deepak Bagada">

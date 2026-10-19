@@ -294,3 +294,48 @@
 | **BATCH-DARK3-50-S5** | 2026-10-15 | [MCP Security] Your agent is 1 tool call from breach | Dubai S5 + US-tail (7 UAE + 3 US NYC/Austin) | 10 | Dispatched 10/10 | Same draft; 45s batch gap; 50/50 campaign complete, 0 failures; leads `leads-50-dark3.json` (50 fresh, 3 dupes skipped vs 212 contacted); tracker `dark3-50-followups.json`; follow-ups due 2026-10-19 |
 
 **Total unique contacted: 262 (2026-10-15)**
+
+| **BATCH-MBP-22-S1** | 2026-10-16 | // [Mumbai/Pune] Cut AI token burn 60% with local RAG | Mumbai S1 (MBP-001–011) | 11 | Dispatched 11/11 | Draft `dispatch-mumbaipune-22.html`; source `mumbaipune_22_2026`; audit PASS 0 issues; 3s throttle; follow-ups due 2026-10-20 |
+| **BATCH-MBP-22-S2** | 2026-10-16 | // [Mumbai/Pune] Cut AI token burn 60% with local RAG | Mumbai-tail + Pune S2 (MBP-012–022) | 11 | Dispatched 11/11 | Same draft; 3s throttle; 22/22 campaign complete, 0 failures; leads `leads-22-mumbaipune.json`; tracker `mumbaipune-22-followups.json`; follow-ups due 2026-10-20 |
+
+**Total unique contacted: 284 (2026-10-16)**
+
+| **BATCH-USDM-10** | 2026-10-16 | [Zero-Trust] The tool gate your agents lack | US decision-makers (T1 x4, T2 x2, T4 x4) | 10 | Dispatched 10/10 | First tiered v1.1 batch: T1 personalized by first name; draft `dispatch-usdm-10.html`; source `usdm_10_2026`; audit PASS (1 benign substr warning); 3s throttle; leads `leads-10-usdm.json`; tracker `usdm-10-followups.json`; follow-ups due 2026-10-20 |
+
+**Total unique contacted: 294 (2026-10-16)**
+
+### leads-10-usdm (10)
+- g@yuma.ai
+- david.gilio@jtnaiagency.com
+- sean@rednovaagency.com
+- anne@voiceofai.io
+- talktous@anvilaisystems.com
+- info@theaiagencyusa.com
+- info@aiautomationagency360.com
+- hello@aiphoneagent.ai
+- contactus@voicemyagent.ai
+- sales@voiceagent.chat
+
+### leads-22-mumbaipune (22)
+- hello@fiaxe.com
+- sapiencehq@gmail.com
+- business@aikiaa.agency
+- info@jinsolutions.in
+- info@obsidianstudios.in
+- business@dgeniussolutions.com
+- elevate@srcreativepro.com
+- hi@conneural.ai
+- hello@thinnest.ai
+- hello@codeamesh.com
+- hello@nxflowai.com
+- contact@quantaltech.ai
+- hello@sharpsell.ai
+- shreyas@rapid-xai.com
+- contact@abhijitai.in
+- info@progresswithai.com
+- director@digitalaiml.com
+- praveen@neuvonsoftware.com
+- contact@omeraai.com
+- sales@chat360.io
+- info@panthm.com
+- vansh@bytesense.in

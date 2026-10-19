@@ -123,8 +123,15 @@ class PostController extends Controller
                 ->take(3);
         }
 
+        $pageTitle = $post->title;
+        if (!str_contains($pageTitle, $site['name'])) {
+            if (mb_strlen($pageTitle . ' — ' . $site['name']) <= 65) {
+                $pageTitle .= ' — ' . $site['name'];
+            }
+        }
+
         $head = [
-            'title' => $post->title.' — '.$site['name'].' | Best AI Developer & Web Expert',
+            'title' => $pageTitle,
             'description' => $post->excerpt,
             'canonical' => $canonical,
             'og_type' => 'article',

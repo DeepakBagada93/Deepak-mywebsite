@@ -58,10 +58,10 @@ if (packArg) {
   const tags = [...raw.matchAll(/'tag'\s*=>\s*'([^']+)'/g)].map(m => m[1]);
   if (bodies[idx] !== undefined) {
     body = bodies[idx];
-    title = titles[idx] || title;
-    excerpt = excerpts[idx] || excerpt;
-    slug = slugs[idx] || slug;
-    tag = tags[idx] || tag;
+    title = titleArg || titles[idx] || "";
+    excerpt = excerptArg || excerpts[idx] || "";
+    slug = slugArg || slugs[idx] || "";
+    tag = tagArg || tags[idx] || "";
   } else { console.error(`❌ No post at index ${idx} in data/posts.php`); process.exit(2); }
 } else {
   console.error("Usage:");
@@ -79,51 +79,58 @@ function ctrScore(titleStr) {
   if (!titleStr) return { score: 0, reasons: ["no title"] };
   let s = 0;
   const reasons = [];
-  if (titleStr.length > 0 && titleStr.length <= 60) { s += 2; reasons.push("≤60 chars"); } 
-  else if (titleStr.length <= 65) { s += 1; reasons.push("≤65 chars (sweet 50-60)"); }
+
+  // Zero square brackets policy
+  if (/\[.*?\]/.test(titleStr)) {
+    s -= 3;
+    reasons.push("square brackets present (-3, banned)");
+  }
+
+  if (titleStr.length >= 45 && titleStr.length <= 60) { s += 2; reasons.push("sweet 45-60 chars"); } 
+  else if (titleStr.length <= 65) { s += 1; reasons.push("≤65 chars"); }
   else reasons.push(`>${65} chars (-2)`);
 
-  // Strip leading brackets like [Blueprint], [2026], [Guide] for keyword front-loading check
-  const strippedTitle = titleStr.replace(/^\[[^\]]+\]\s*/i, "").trim();
-  const first20 = (strippedTitle.slice(0, 25) + " " + titleStr.slice(0, 20)).toLowerCase();
-  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|agent|swarm|model|llm/i.test(first20)) { s += 2; reasons.push("keyword front-loaded"); } 
-  else reasons.push("keyword not front-loaded (-2)");
+  const first25 = titleStr.slice(0, 30).toLowerCase();
+  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|agent|swarm|model|llm|claude|deepseek|openai|next\.?js|fastmcp|langgraph|pydantic/i.test(first25)) { 
+    s += 2; reasons.push("keyword front-loaded"); 
+  } else reasons.push("keyword not front-loaded (-2)");
 
   if (/2026/.test(titleStr)) { s += 1; reasons.push("year 2026"); } else reasons.push("no year 2026 (-1)");
   if (/india|gujarat|junagadh|world/i.test(titleStr)) { s += 1; reasons.push("geo modifier"); } else reasons.push("no geo (-1)");
   if (/\d/.test(titleStr)) { s += 2; reasons.push("digit present"); } else reasons.push("no digit (-2)");
   if (/best|top|guide|playbook|breakdown|proven|ultimate|complete|blueprint|benchmark|deep dive|analysis|step-by-step/i.test(titleStr)) { s += 1; reasons.push("power word"); } else reasons.push("no power word (-1)");
-  if (/[:|—→\/\/$₹%]/.test(titleStr)) { s += 1; reasons.push("high-converting symbol"); }
-  if (/\[[^\]]+\]|\([^)]+\)/.test(titleStr)) { s += 1; reasons.push("bracket tag"); }
-  return { score: Math.min(10, s), reasons };
+  if (/[:|—→\/\/$₹%&]/.test(titleStr)) { s += 2; reasons.push("high-converting punctuation"); }
+  if (/\([^)]{2,25}\)/.test(titleStr) && !/\[/.test(titleStr)) { s += 1; reasons.push("natural proof parenthesis"); }
+  return { score: Math.max(0, Math.min(10, s)), reasons };
 }
 
 const isBestTop = /best|top|#1|ranked/i.test(title || "");
 
 // ─── title / excerpt / slug ─────────────────────────────────────────────────
-if (!title) add("FAIL", "Meta title", "Missing — title must be <60 chars, high-CTR, with year 2026, keyword front-loaded");
-else if (title.length > 65) add("FAIL", "Meta title ≤65 chars", `${title.length} chars: "${title}" — over cap (hurts CTR)`);
+if (!title) add("FAIL", "Meta title", "Missing — title must be 50-60 chars, bracket-free, high-CTR, keyword front-loaded");
+else if (/\[.*?\]/.test(title)) add("FAIL", "Zero square brackets in title", `Found square brackets in "${title}" — BANNED. Square brackets trigger SERP truncation & algorithmic deval. Use clean colons, em-dashes, pipes, or natural parentheses.`);
+else if (title.length > 65) add("FAIL", "Meta title ≤65 chars", `${title.length} chars: "${title}" — over cap (hurts CTR and truncates in SERP)`);
 else if (title.length > 60) add("WARN", "Meta title ≤60 chars", `${title.length} chars: "${title}" — slightly over 60, but acceptable with symbols`);
-else if (title.length < 20) add("WARN", "Meta title", `${title.length} chars — too short for CTR`);
-else add("PASS", "Meta title ≤60 chars", `${title.length} chars: "${title}"`);
+else if (title.length < 25) add("WARN", "Meta title", `${title.length} chars — too short for CTR & search intent`);
+else add("PASS", "Meta title 50-60 chars (bracket-free)", `${title.length} chars: "${title}"`);
 
 // CTR 0-10
 const ctr = ctrScore(title);
 if (!title) add("FAIL", "CTR score ≥7/10", `No title — CTR 0/10`);
 else if (ctr.score >= 7) add("PASS", `CTR score ${ctr.score}/10`, ctr.reasons.join(" · "));
-else if (ctr.score >= 5) add("WARN", `CTR score ${ctr.score}/10 (target ≥7)`, ctr.reasons.join(" · ") + " — add year/geo/digit/symbols/brackets, front-load keyword");
-else add("FAIL", `CTR score ${ctr.score}/10 (need ≥7)`, ctr.reasons.join(" · ") + " — title needs CTR formula: Best/Top/Symbols + digit + geo + 2026 + colon/brackets");
+else if (ctr.score >= 5) add("WARN", `CTR score ${ctr.score}/10 (target ≥7)`, ctr.reasons.join(" · ") + " — add year/geo/digit/symbols, front-load keyword, remove square brackets");
+else add("FAIL", `CTR score ${ctr.score}/10 (need ≥7)`, ctr.reasons.join(" · ") + " — title needs CTR formula: front-loaded keyword + metric/digit + clean punctuation (:, —, |, &)");
 
-if (!excerpt) add("FAIL", "Meta description / excerpt", "Missing — need 150-160 chars, answer-first, keyword in first 20 chars + proof + CTA");
-else if (excerpt.length < 140) add("FAIL", "Meta description 150-160", `${excerpt.length} chars — too short, need 150-160: "${excerpt.slice(0, 80)}..."`);
-else if (excerpt.length < 150) add("WARN", "Meta description 150-160", `${excerpt.length} chars — below 150 sweet spot, pad with proof/CTA`);
-else if (excerpt.length > 160) add("FAIL", "Meta description 150-160", `${excerpt.length} chars — over 160, will truncate in SERP`);
+if (!excerpt) add("FAIL", "Meta description / excerpt", "Missing — need 145-158 chars, answer-first, keyword in first 40 chars + proof + CTA");
+else if (excerpt.length < 140) add("FAIL", "Meta description 145-158", `${excerpt.length} chars — too short, need 145-158: "${excerpt.slice(0, 80)}..."`);
+else if (excerpt.length > 160) add("FAIL", "Meta description 145-158", `${excerpt.length} chars — over 160, will truncate in SERP`);
+else if (excerpt.length < 145 || excerpt.length > 158) add("WARN", "Meta description 145-158", `${excerpt.length} chars — acceptable, but 145-158 is the sweet spot to prevent mobile truncation`);
 else {
-  const kwFirst20 = /best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|junagadh|gujarat|india/i.test(excerpt.slice(0, 30).toLowerCase());
-  const hasProof = /₹|Rs\.?|INR|P95|tok\/s|ms\b|ledger|Top \d|-guide|proof|cost|hire/i.test(excerpt);
-  if (kwFirst20 && hasProof) add("PASS", "Meta description 150-160", `${excerpt.length} chars, keyword early + proof token`);
-  else if (!kwFirst20) add("FAIL", "Meta description 150-160", `${excerpt.length} chars — keyword must be in first 20 chars for snippet`);
-  else add("WARN", "Meta description 150-160", `${excerpt.length} chars — add proof token (₹/P95/tok/s/Top N) + CTA for CTR`);
+  const kwFirst40 = /best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|junagadh|gujarat|india|claude|deepseek|next\.?js|langgraph/i.test(excerpt.slice(0, 40).toLowerCase());
+  const hasProof = /₹|Rs\.?|INR|P95|tok\/s|ms\b|ledger|Top \d|-guide|proof|cost|hire|%|\$/i.test(excerpt);
+  if (kwFirst40 && hasProof) add("PASS", "Meta description 145-158", `${excerpt.length} chars, keyword early + proof token`);
+  else if (!kwFirst40) add("WARN", "Meta description keyword front-load", `${excerpt.length} chars — recommend primary keyword in first 40 chars for snippet lift`);
+  else add("WARN", "Meta description proof token", `${excerpt.length} chars — add proof token (₹/$/P95/tok/s/%) + CTA for CTR`);
 }
 
 if (slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) add("WARN", "Slug format", `"${slug}" — use lowercase-kebab-case`);
@@ -137,9 +144,10 @@ if (!body || body.trim().length < 200) {
   add("FAIL", "Article body", "Missing or too short");
 } else {
   const words = body.split(/\s+/).filter(Boolean).length;
-  if (words < 1200) add("FAIL", "Word count ≥1200", `${words} words — need 1,200-1,600+`);
-  else if (words > 2200) add("WARN", "Word count", `${words} words — long, ensure every section earns it`);
-  else add("PASS", "Word count ≥1200", `${words} words`);
+  if (words < 1200) add("FAIL", "Word count ≥1400", `${words} words — need at least 1,200 words (target 1,400–2,000+)`);
+  else if (words < 1400) add("WARN", "Word count 1,400-2,000+", `${words} words — acceptable depth, expand to 1,400+ for peak E-E-A-T`);
+  else if (words > 2400) add("WARN", "Word count", `${words} words — long, ensure every section earns it`);
+  else add("PASS", "Word count 1,400-2,000+", `${words} words`);
 
   // AEO intro — v6.0: 40-60 word answer block with exact best/top phrase for money queries
   // Scan first 3 non-heading blocks (byline-first hand drafts still pass if answer follows immediately)
@@ -156,9 +164,19 @@ if (!body || body.trim().length < 200) {
     else add("PASS", "AEO answer-first intro", "Opening provides direct answer block");
   } else add("WARN", "AEO answer-first intro", "Opening looks thin — first 40-60 words must directly answer the primary question");
 
+  // AEO Key Takeaways Box
+  const hasKeyTakeaways = /key architecture takeaways|key takeaways|core takeaways|tl;?dr|executive summary|quick summary/i.test(body);
+  if (hasKeyTakeaways) add("PASS", "AEO Key Takeaways / TL;DR", "Key Takeaways block present for rapid scanning & snippet extraction");
+  else add("WARN", "AEO Key Takeaways / TL;DR", "Add a 'Key Takeaways' bulleted block near top for AEO & user dwell time");
+
+  // EEAT Trade-offs & "When NOT to Use This"
+  const hasTradeoffs = /when not to use|trade-offs|production failure modes|limitations & trade-offs|anti-patterns/i.test(body);
+  if (hasTradeoffs) add("PASS", "EEAT Trade-offs & Limitations", "Section on when NOT to use or production failure modes present (senior engineering credibility)");
+  else add("WARN", "EEAT Trade-offs & Limitations", "Add a 'When NOT to Use This' or 'Production Trade-offs' section to demonstrate senior engineering authority");
+
   // Internal links 3-5
   const links = [...body.matchAll(/\[([^\]]+)\]\((\/[^)]+)\)/g)].map(m => m[2]);
-  const internal = links.filter(h => h.startsWith("/services/") || h.startsWith("/#") || h.startsWith("/journal/") || h.startsWith("/services"));
+  const internal = links.filter(h => h.startsWith("/services/") || h.startsWith("/#") || h.startsWith("/journal/") || h.startsWith("/services") || h.startsWith("/library/"));
   if (internal.length < 3) add("FAIL", "Internal links 3-5", `Only ${internal.length} internal links: ${internal.join(", ") || "none"} — need 3-5`);
   else if (internal.length > 5) add("WARN", "Internal links 3-5", `${internal.length} links — OK but ensure relevance`);
   else add("PASS", "Internal links 3-5", `${internal.length} links: ${internal.join(", ")}`);
@@ -183,13 +201,12 @@ if (!body || body.trim().length < 200) {
     }
   }
 
-  // Tables — mandatory for best/top/commercial
+  // Tables — mandatory for best/top/commercial, highly recommended for all
   const tableCount = (body.match(/\|.*\|.*\|/g) || []).length;
   const hasTable = tableCount >= 2; // at least header + one row
   if (isBestTop && !hasTable) add("FAIL", "EEAT-Pro: comparison/pricing table", "Title has best/top — body MUST have a markdown comparison or pricing table with 3-5 rows (proof for superlative)");
-  else if (isBestTop && hasTable) add("PASS", "EEAT-Pro: comparison/pricing table", `Table present (${Math.floor(tableCount/2)} rows est.) — proves best/top claim`);
-  else if (!isBestTop && /cost|price|pricing|hire|₹/i.test(title) && !hasTable) add("WARN", "Pricing table", "Commercial title suggests ₹ pricing table — add one for EEAT");
-  else if (hasTable) add("PASS", "Table present", `${Math.floor(tableCount/2)} table rows — good quotability`);
+  else if (!hasTable) add("WARN", "AEO/GEO Structured Table", "Article lacks a markdown comparison/benchmark table — tables are the #1 preferred format for AI Overviews & featured snippets");
+  else add("PASS", "AEO/GEO Structured Table", `Markdown table present (${Math.floor(tableCount/2)} rows est.) — optimal for AI Overviews and snippet extraction`);
 
   // EEAT signals
   const hasFirstPerson = /\bI (built|shipped|designed|deployed|tested|use|recommend|run|ship)\b/i.test(body);
@@ -234,22 +251,14 @@ if (!body || body.trim().length < 200) {
   if (bolds % 2 !== 0) add("FAIL", "Bold leaks", "Unclosed ** — odd number of bold markers");
   else if (/\*\*[^*]+\*\*/.test(body)) add("PASS", "Bold formatting", "Bold markers present and likely closed");
 
-  // Images & Alt Tag Audit (Strict AEO & Accessibility)
-  const mdImages = [...body.matchAll(/!\[(.*?)\]\((.*?)\)/g)].map(m => ({ alt: m[1].trim(), src: m[2].trim(), type: "markdown" }));
-  const htmlImages = [...body.matchAll(/<img\b([^>]*?)>/gi)].map(m => {
-    const altMatch = m[1].match(/alt=["'](.*?)["']/i);
-    const srcMatch = m[1].match(/src=["'](.*?)["']/i);
-    return { alt: altMatch ? altMatch[1].trim() : "", src: srcMatch ? srcMatch[1].trim() : "", type: "html" };
-  });
-  const allImages = [...mdImages, ...htmlImages];
-  if (allImages.length > 0) {
-    const genericAltPatterns = /^(image|screenshot|diagram|photo|graphic|pic|picture|img|illustration|unnamed|alt)$/i;
-    const badAlts = allImages.filter(img => !img.alt || img.alt.length < 5 || genericAltPatterns.test(img.alt));
-    if (badAlts.length > 0) {
-      add("FAIL", "Image alt tags (Accessibility/AEO)", `${badAlts.length}/${allImages.length} image(s) have missing, empty, or generic alt text: ${badAlts.map(b => `"${b.alt || "(empty)"}"`).join(", ")} — every image MUST have a descriptive, contextual alt tag`);
-    } else {
-      add("PASS", "Image alt tags", `${allImages.length} image(s) verified with rich, contextual alt tags`);
-    }
+  // Zero-Images-In-Body Policy (article content must embed NO images)
+  const mdImages = [...body.matchAll(/!\[[^\]]*\]\(([^)]*)\)/g)].map(m => m[1].trim());
+  const htmlImages = [...body.matchAll(/<img\b[^>]*>/gi)].map(m => m[0].slice(0, 60));
+  const embeddedImages = [...mdImages, ...htmlImages];
+  if (embeddedImages.length > 0) {
+    add("FAIL", "No images in body", `${embeddedImages.length} embedded image(s) found — article bodies must contain ZERO images (text, code blocks, tables only): ${embeddedImages.join("; ")}`);
+  } else {
+    add("PASS", "No images in body", "Zero embedded images — text/code/tables only");
   }
 
   // Quotable Bottom Line

@@ -10,7 +10,6 @@ export const ARTICLES_PART1 = {
 
 Explore our specialized [web application development](/services/web-development), enterprise [AI development services](/services/ai-development), and custom [business automation systems](/services/automation-expert) to build resilient infrastructure.
 
-![Production web application performance telemetry dashboard measuring TTFB under 40ms](https://deepakbagada.in/assets/images/posts/web-dev-benchmark-telemetry.webp)
 
 ## Real Production War Stories: Surat & California Deployments
 
@@ -150,7 +149,6 @@ A complete production web platform deployment takes exactly 14 business days fro
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to upgrade your engineering stack.
 
-![High throughput Model Context Protocol stream multiplexing architecture diagram](https://deepakbagada.in/assets/images/posts/mcp-stream-multiplexing-diagram.webp)
 
 ## Real Production War Stories: Ahmedabad Fintech & Rajkot ERP
 
@@ -316,7 +314,6 @@ In production deployments across Gujarat enterprises, our multiplexed SSE implem
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build self-hosted software.
 
-![PostgreSQL pgvector performance benchmarks measuring 14ms HNSW latency](https://deepakbagada.in/assets/images/posts/pgvector-latency-benchmark.webp)
 
 ## Real Production War Stories: SaaS Next & Morbi Ceramics
 
@@ -454,7 +451,6 @@ Because PostgreSQL runs entirely within your own Indian VPC or on-premise server
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build resilient infrastructure.
 
-![Technical vetting checklist dashboard for autonomous AI agent developers in Gujarat](https://deepakbagada.in/assets/images/posts/ai-agent-developer-vetting-checklist.webp)
 
 ## Real Production War Stories: Vadodara Pharma & Rajkot Logistics
 
@@ -576,7 +572,6 @@ Yes. We deploy lightweight, secure Python bridge connectors that run on the clie
 
 Explore our specialized [business automation systems](/services/automation-expert), custom [AI development services](/services/ai-development), and enterprise [web application development](/services/web-development) to upgrade your operational pipelines.
 
-![Automated browser agent running Playwright with Chrome DevTools Protocol telemetry](https://deepakbagada.in/assets/images/posts/browser-use-playwright-automation.webp)
 
 ## Real Production War Stories: Gandhinagar E-Tender & Junagadh APMC
 
@@ -725,7 +720,6 @@ A standard 4-core Linux VPS with 8GB RAM running in our Junagadh lab comfortably
 
 Explore our specialized [web application development](/services/web-development), enterprise [AI development services](/services/ai-development), and custom [business automation systems](/services/automation-expert) to modernize your application architecture.
 
-![Laravel 13 AI SDK streaming controller and tool calling architecture diagram](https://deepakbagada.in/assets/images/posts/laravel-13-ai-sdk-streaming.webp)
 
 ## Real Production War Stories: Rajkot Auto-Parts & Ahmedabad Legal
 

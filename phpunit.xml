@@ -29,6 +29,10 @@
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
+        <env name="CASHFREE_APP_ID" value=""/>
+        <env name="CASHFREE_SECRET_KEY" value=""/>
+        <env name="STORE_DEFAULT_CURRENCY" value="INR"/>
+        <env name="STORE_ENABLED_CURRENCIES" value="INR,USD"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>

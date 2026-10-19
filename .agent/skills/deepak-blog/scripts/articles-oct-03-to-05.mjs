@@ -10,7 +10,6 @@ export const ARTICLES_PART2 = {
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build production automation.
 
-![WhatsApp AI agent performance telemetry dashboard measuring 42ms response times](https://deepakbagada.in/assets/images/posts/whatsapp-ai-agent-telemetry.webp)
 
 ## Real Production War Stories: Surat Diamond & Morbi Ceramic
 
@@ -151,7 +150,6 @@ All chat transcripts, customer phone numbers, and enterprise catalog data reside
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build resilient agent swarms.
 
-![Multi-agent consensus debate protocol graph architecture using LangGraph](https://deepakbagada.in/assets/images/posts/langgraph-multi-agent-consensus.webp)
 
 ## Real Production War Stories: Ahmedabad Healthcare & Anand Dairy
 
@@ -298,7 +296,6 @@ We enforce hard iteration ceilings (maximum 3 debate rounds), utilize smaller qu
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to see how our engineering stack ships software.
 
-![Solo developer workstation hardware setup featuring Mac Studio and server telemetry](https://deepakbagada.in/assets/images/posts/solo-dev-hardware-stack.webp)
 
 ## Real Production War Stories: Junagadh Lab & Client Deployments
 
@@ -422,7 +419,6 @@ Our entire production server fleet (four dedicated Linux VPS nodes handling over
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build resilient infrastructure.
 
-![Production AI developer performance telemetry and SLA benchmark dashboard](https://deepakbagada.in/assets/images/posts/best-ai-developer-india-benchmark.webp)
 
 ## Real Production War Stories: Bangalore SaaS & Delhi D2C
 
@@ -562,7 +558,6 @@ A complete custom autonomous agent build takes exactly 14 business days from arc
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build real-time voice infrastructure.
 
-![Real-time voice agent WebSocket audio streaming architecture diagram](https://deepakbagada.in/assets/images/posts/real-time-voice-agent-websockets.webp)
 
 ## Real Production War Stories: Rajkot Hospital & Vadodara Logistics
 
@@ -711,7 +706,6 @@ Yes. Our voice agents are optimized for Indian English, Hindi, and Gujarati, uti
 
 Explore our specialized [web application development](/services/web-development), enterprise [AI development services](/services/ai-development), and custom [business automation systems](/services/automation-expert) to optimize your web application stack.
 
-![Next.js 15.5 Server Actions vs API routes latency benchmark graph](https://deepakbagada.in/assets/images/posts/nextjs-15-benchmarks.webp)
 
 ## Real Production War Stories: Bhavnagar Maritime & Junagadh Portal
 
@@ -859,7 +853,6 @@ A dedicated 4-core Linux VPS with 8GB RAM running in our Junagadh lab comfortabl
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build regional enterprise infrastructure.
 
-![Local SME AI agent return on investment proof table dashboard](https://deepakbagada.in/assets/images/posts/junagadh-sme-ai-roi.webp)
 
 ## Real Production War Stories: Junagadh Groundnut Oil & Keshod Agro
 
@@ -999,7 +992,6 @@ No. Our architectures integrate seamlessly with your existing accounting softwar
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build observable production platforms.
 
-![OpenTelemetry and Arize Phoenix production agent tracing dashboard](https://deepakbagada.in/assets/images/posts/agent-tracing-opentelemetry-phoenix.webp)
 
 ## Real Production War Stories: Morbi Ceramics & Ahmedabad Chemical
 
@@ -1136,7 +1128,6 @@ Because Arize Phoenix runs entirely inside your private VPS node or on-premise h
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build resilient, fault-tolerant infrastructure.
 
-![Production incident post-mortem timeline and circuit breaker architecture diagram](https://deepakbagada.in/assets/images/posts/agent-loop-post-mortem.webp)
 
 ## The Incident Timeline: 118 Minutes of Autonomous Chaos
 

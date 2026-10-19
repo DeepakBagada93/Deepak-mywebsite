@@ -1,0 +1,18 @@
+{
+  "name": "Ops Server",
+  "version": "0.1",
+  "description": "Internal ops tools.",
+  "tools": [
+    {
+      "name": "run_command",
+      "description": "Runs a shell command.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "fetch_url",
+      "description": "Fetches a URL."
+    }
+  ]
+}

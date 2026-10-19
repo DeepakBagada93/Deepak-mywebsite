@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "generator": "context-architect/1.0.0",
+  "generatedAt": "2026-10-18T09:56:36.165Z",
+  "repo": "acme-storefront",
+  "stack": {
+    "language": "TypeScript",
+    "packageManager": "pnpm",
+    "frameworks": [
+      "Next.js"
+    ],
+    "formatters": [
+      "prettier"
+    ],
+    "testRunners": [
+      "vitest"
+    ]
+  },
+  "budget": {
+    "kernel": 300,
+    "repoMap": 800,
+    "playbook": 400,
+    "adapter": 120,
+    "total": 1100
+  },
+  "layers": [
+    {
+      "path": "kernel.md",
+      "estimatedTokens": 278,
+      "budget": 300,
+      "ok": true
+    },
+    {
+      "path": "repo-map.md",
+      "estimatedTokens": 119,
+      "budget": 800,
+      "ok": true
+    },
+    {
+      "path": "playbooks/build.md",
+      "estimatedTokens": 186,
+      "budget": 400,
+      "ok": true
+    },
+    {
+      "path": "playbooks/test.md",
+      "estimatedTokens": 181,
+      "budget": 400,
+      "ok": true
+    },
+    {
+      "path": "playbooks/lint.md",
+      "estimatedTokens": 179,
+      "budget": 400,
+      "ok": true
+    },
+    {
+      "path": "playbooks/typecheck.md",
+      "estimatedTokens": 181,
+      "budget": 400,
+      "ok": true
+    },
+    {
+      "path": "playbooks/dev.md",
+      "estimatedTokens": 180,
+      "budget": 400,
+      "ok": true
+    },
+    {
+      "path": "drift-probes.md",
+      "estimatedTokens": 264,
+      "budget": 400,
+      "ok": true
+    }
+  ],
+  "adapters": [],
+  "alwaysOnTokens": 278,
+  "alwaysOnBudget": 300,
+  "sources": [
+    {
+      "path": "CLAUDE.md",
+      "estimatedTokens": 815
+    },
+    {
+      "path": "AGENTS.md",
+      "estimatedTokens": 143
+    },
+    {
+      "path": ".cursor/rules/style.mdc",
+      "estimatedTokens": 53
+    }
+  ],
+  "driftProbes": 7,
+  "notes": [
+    "Token counts are estimates (~4 characters per token), not tokenizer-exact.",
+    "Always-on context is within budget."
+  ]
+}

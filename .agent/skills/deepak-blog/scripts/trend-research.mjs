@@ -296,7 +296,7 @@ if (presetCounts) {
       if (existingSlugs.has(slug) || existingTitles.has(titleNorm) || queue.some(q => q.slug === slug)) {
         // mutate title with variant to avoid dup (Next.js ↔ Laravel rotation)
         if (tries > tpls.length) {
-          const variant = `${t.title} — Variant ${tries}`;
+          const variant = `${t.title} (2026 Deep Dive)`;
           const vSlug = slugify(variant);
           if (!existingSlugs.has(vSlug) && !queue.some(q => q.slug === vSlug)) {
             const score = deterministicScore({ ...t, title: variant }, pillarId);

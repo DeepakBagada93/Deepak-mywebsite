@@ -85,8 +85,8 @@ function alertFailure(string $subject, string $body): void
 // to Hostinger MySQL) must NOT kill the whole batch. Retry with backoff.
 function fetchWithRetry(callable $fn, string $label)
 {
-    $attempts = 4;
-    $delays = [5, 15, 30]; // seconds between retries
+    $attempts = 6;
+    $delays = [3, 8, 15, 30, 45]; // seconds between retries
     $last = null;
     for ($i = 1; $i <= $attempts; $i++) {
         try {
@@ -96,10 +96,11 @@ function fetchWithRetry(callable $fn, string $label)
             if ($i === $attempts) {
                 break;
             }
-            $wait = $delays[$i - 1] ?? 30;
+            $wait = $delays[$i - 1] ?? 45;
             fwrite(STDERR, "⚠ DB attempt {$i}/{$attempts} failed [{$label}]: " . substr($e->getMessage(), 0, 120) . " — retrying in {$wait}s…\n");
             try {
                 DB::purge('mysql');
+                DB::reconnect('mysql');
             } catch (\Throwable $ignored) {
             }
             sleep($wait);
@@ -170,7 +171,11 @@ foreach ($duePosts as $p) {
         continue;
     }
 
-    $words = WordCount::count($p->content);
+    // Zero-Images-In-Body Policy Defense: strip any embedded images automatically
+    $cleanContent = preg_replace('/!\[[^\]]*\]\([^)]*\)\s*/', '', $p->content);
+    $cleanContent = preg_replace('/<img\b[^>]*>\s*/i', '', $cleanContent);
+
+    $words = WordCount::count($cleanContent);
     $readTime = max(1, (int) ceil($words / 200)) . ' min read';
 
     // Full datetime (Y-m-d H:i:s IST) — never truncate to date-only, or the
@@ -188,7 +193,7 @@ foreach ($duePosts as $p) {
                 'title' => $p->title,
                 'slug' => $p->slug,
                 'excerpt' => $p->excerpt,
-                'content' => $p->content,
+                'content' => $cleanContent,
                 'author' => $p->author ?: 'Deepak Bagada',
                 'date' => $slotAt,
                 'category' => $category,
@@ -237,7 +242,7 @@ foreach ($duePosts as $p) {
                 ."        'tag'          => '{$escapedTag}',\n"
                 ."        'excerpt'      => '{$escapedExcerpt}',\n"
                 ."        'body'         => <<<'BODY'\n"
-                .$p->content."\n"
+                .$cleanContent."\n"
                 ."BODY,\n"
                 ."        'published_at' => '{$slotAt}',\n"
                 ."    ],\n";
@@ -248,7 +253,8 @@ foreach ($duePosts as $p) {
             echo "  ✓ [2/4] Prepended to local data/posts.php\n";
 
             // Lint-guard: a broken data/posts.php takes down the whole site.
-            exec('php -l '.escapeshellarg($postsFile).' 2>&1', $lintOut, $lintCode);
+            $phpBin = defined('PHP_BINARY') && PHP_BINARY ? PHP_BINARY : '/opt/homebrew/bin/php';
+            exec(escapeshellcmd($phpBin).' -l '.escapeshellarg($postsFile).' 2>&1', $lintOut, $lintCode);
             if ($lintCode !== 0) {
                 fwrite(STDERR, '  ❌ PHP syntax error in data/posts.php after edit: '.implode("\n", $lintOut)."\n");
             }

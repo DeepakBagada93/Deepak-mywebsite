@@ -1,0 +1,103 @@
+{
+  "name": "AI Project Kickoff Skills Kit",
+  "slug": "ai-project-kickoff-skills-kit",
+  "version": "0.1.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-18T09:07:22.419Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 185,
+      "sha256": "cd31da07ef2bdc0b92cd80e03ec3f1211214ae587c7b4739949858b83a6ac323"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 655,
+      "sha256": "f81939ccb0e1e5fa84f52dc291c32fadf8de276e7dd941f3a8ddaca4b0030649"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 350,
+      "sha256": "c7b5f36fbc6b96b965fde09b15c902dcc254f80d98f58ffea26c9c8f2f182c6e"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 883,
+      "sha256": "d5c65ce5a1b99b626d935edb3ca246b29708f9bbb0455b4783f6f9942c89c930"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 993,
+      "sha256": "3bfed4aeb1314b8bacb8cb42ec4eab56bf75ab8854d7c6fae0fcaa301b2b1ba9"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 2121,
+      "sha256": "a5714538fad5ab9f519c06972c66f78aa131ce51035fd10eb046af35206c2a1d"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 587,
+      "sha256": "3008f4b9e0656a49a5a0c1cce43ad3295aff9757b4e0bb7d94aaac700dba7757"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 981,
+      "sha256": "25b0ceb71d3d3983425f584fc6273af31fa42b4c695d3c4725a8bc5de0d4d0ca"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "bytes": 337,
+      "sha256": "2aee8b77653fcfc68ac5da20ebd088a626acb0b11632de7bd257f076257fc802"
+    },
+    {
+      "path": "docs/validation-report.json",
+      "bytes": 1287,
+      "sha256": "aa810c0e44b927fa29583941d734b21f582a541d71db9c979a22eae325a27b91"
+    },
+    {
+      "path": "examples/project-brief-template.md",
+      "bytes": 224,
+      "sha256": "dbcd237b003cb62a1fdbec7a5007c7d3eb547bc003ebb25c1784c94d6b3579b2"
+    },
+    {
+      "path": "examples/saas-integration-expected-plan.md",
+      "bytes": 2009,
+      "sha256": "5eefe96bc4bd169fe361cb3d831f554f006e707c42b1bc3f1ee17e39f1b06a12"
+    },
+    {
+      "path": "examples/saas-integration-input.md",
+      "bytes": 529,
+      "sha256": "e963c7ed7f63ededdb1dff0b35fba0c431eb6332036654a547edc02efadb9cd5"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 332,
+      "sha256": "023da062ac5f1c9ad819c07fed9dad479763cf4109825b15002ec18be221db23"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2738,
+      "sha256": "ba8e232a1429019e2e36f5f05220862501e8b87849afb75336fe9d9dfa2ccae6"
+    },
+    {
+      "path": "skills/implementation-plan/SKILL.md",
+      "bytes": 1439,
+      "sha256": "5ff962e7661345d457e8ce2691d2f3fe403236f221b26dfc83c4d2bd2c15b437"
+    },
+    {
+      "path": "skills/project-discovery/SKILL.md",
+      "bytes": 1636,
+      "sha256": "4dc6568a788cfc0280b8ca8966f18adabb7b255aa29ea4d7c1b4cc61c362cc55"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 743,
+      "sha256": "8b7a824d2c42f91e5d1132cb3d979ab1af8c72440b51ba867f1219a386e743df"
+    }
+  ],
+  "manualReview": [
+    "Commercial license and price require owner approval.",
+    "Test actual behavior with the buyer's chosen agent/model before promising compatibility."
+  ]
+}

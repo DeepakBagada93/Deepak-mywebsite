@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-18T10:10:34.408Z",
+  "reports": [
+    {
+      "file": "examples/lead-intake.workflow.json",
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-10-18T10:10:34.407Z",
+      "workflow": {
+        "name": "Lead intake (unsafe)",
+        "nodes": 5,
+        "triggers": 1,
+        "settings": []
+      },
+      "summary": {
+        "findings": 12,
+        "critical": 1,
+        "high": 3,
+        "score": 21,
+        "verdict": "not-production-ready"
+      },
+      "findings": [
+        {
+          "id": "inline-secrets",
+          "type": "security",
+          "severity": "critical",
+          "message": "1 credential value(s) are inlined in node parameters or embedded credential data.",
+          "evidence": [
+            {
+              "node": "Enrich Lead",
+              "path": "headerParameters.parameters[0].value",
+              "valuePreview": "Bear…1b"
+            }
+          ],
+          "fix": "Move each value into an n8n credential and reference it; then re-export."
+        },
+        {
+          "id": "missing-error-workflow",
+          "type": "reliability",
+          "severity": "high",
+          "message": "No error workflow is configured; failed runs fail silently.",
+          "evidence": [],
+          "fix": "Set Settings → Error Workflow to a workflow that starts with an Error Trigger."
+        },
+        {
+          "id": "pinned-data",
+          "type": "hygiene",
+          "severity": "high",
+          "message": "Workflow export contains pinned test data.",
+          "evidence": [
+            {
+              "path": "pinData"
+            }
+          ],
+          "fix": "Unpin data before exporting; pinned data can leak customer records."
+        },
+        {
+          "id": "webhook-without-auth",
+          "type": "security",
+          "severity": "high",
+          "message": "Webhook trigger accepts unauthenticated requests.",
+          "evidence": [
+            {
+              "node": "Lead Webhook",
+              "path": "parameters.authentication"
+            }
+          ],
+          "fix": "Require header or basic authentication, or add a signature check node."
+        },
+        {
+          "id": "no-idempotency-guard",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "Webhook-driven workflow writes to an external system with no duplicate guard.",
+          "evidence": [
+            {
+              "node": "Enrich Lead"
+            },
+            {
+              "node": "Store Lead"
+            },
+            {
+              "node": "Old Slack Ping"
+            }
+          ],
+          "fix": "Add a dedupe check (event id lookup, Remove Duplicates, or an IF on last-seen timestamp) before the write."
+        },
+        {
+          "id": "no-retry-enrich-lead",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Enrich Lead` has no retry policy; a single transient failure ends the run.",
+          "evidence": [
+            {
+              "node": "Enrich Lead",
+              "path": "retryOnFail"
+            }
+          ],
+          "fix": "Enable Retry On Fail with 3 tries and a 1s wait."
+        },
+        {
+          "id": "no-retry-old-slack-ping",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Old Slack Ping` has no retry policy; a single transient failure ends the run.",
+          "evidence": [
+            {
+              "node": "Old Slack Ping",
+              "path": "retryOnFail"
+            }
+          ],
+          "fix": "Enable Retry On Fail with 3 tries and a 1s wait."
+        },
+        {
+          "id": "no-retry-store-lead",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Store Lead` has no retry policy; a single transient failure ends the run.",
+          "evidence": [
+            {
+              "node": "Store Lead",
+              "path": "retryOnFail"
+            }
+          ],
+          "fix": "Enable Retry On Fail with 3 tries and a 1s wait."
+        },
+        {
+          "id": "no-timeout-enrich-lead",
+          "type": "reliability",
+          "severity": "medium",
+          "message": "`Enrich Lead` makes an HTTP call with no timeout.",
+          "evidence": [
+            {
+              "node": "Enrich Lead",
+              "path": "parameters.options.timeout"
+            }
+          ],
+          "fix": "Set a timeout (30000 ms is a safe default)."
+        },
+        {
+          "id": "orphan-nodes",
+          "type": "structure",
+          "severity": "medium",
+          "message": "Unreachable node(s) from any trigger: Old Slack Ping, Unused Set.",
+          "evidence": [
+            {
+              "node": "Old Slack Ping"
+            },
+            {
+              "node": "Unused Set"
+            }
+          ],
+          "fix": "Delete them or connect them; dead branches hide drift."
+        },
+        {
+          "id": "disabled-node-old-slack-ping",
+          "type": "maintenance",
+          "severity": "low",
+          "message": "`Old Slack Ping` is disabled and will be skipped silently in production.",
+          "evidence": [
+            {
+              "node": "Old Slack Ping"
+            }
+          ],
+          "fix": "Delete it or document why it is disabled."
+        },
+        {
+          "id": "legacy-execution-order",
+          "type": "maintenance",
+          "severity": "low",
+          "message": "Workflow does not use executionOrder v1.",
+          "evidence": [],
+          "fix": "Set settings.executionOrder to \"v1\" and re-test branch order."
+        }
+      ]
+    }
+  ]
+}

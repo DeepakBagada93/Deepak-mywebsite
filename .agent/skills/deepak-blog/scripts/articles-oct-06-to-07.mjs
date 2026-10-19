@@ -10,7 +10,6 @@ export const ARTICLES_PART3 = {
 
 Explore our specialized [web application development](/services/web-development), enterprise [AI development services](/services/ai-development), and custom [business automation systems](/services/automation-expert) to build high-performance web platforms.
 
-![Full stack developer hiring guide and rate comparison dashboard for Gujarat](https://deepakbagada.in/assets/images/posts/hire-full-stack-developer-gujarat.webp)
 
 ## Real Production War Stories: Rajkot CNC & Surat Textiles
 
@@ -142,7 +141,6 @@ A complete custom production web application is delivered in exactly 14 to 16 bu
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build verified AI pipelines.
 
-![Enterprise RAG evaluation pipeline with Ragas and DeepEval scoring metrics](https://deepakbagada.in/assets/images/posts/enterprise-rag-evaluation.webp)
 
 ## Real Production War Stories: Gandhinagar Fintech & Surat Diamond
 
@@ -275,7 +273,6 @@ In regulated domains such as fintech, healthcare, and legal compliance, we manda
 
 Explore our specialized [web application development](/services/web-development), enterprise [AI development services](/services/ai-development), and custom [business automation systems](/services/automation-expert) to build secure multi-tenant infrastructure.
 
-![PostgreSQL Row-Level Security multi-tenant architecture and policy diagram](https://deepakbagada.in/assets/images/posts/postgres-rls-multi-tenant.webp)
 
 ## Real Production War Stories: SaaS Next & Baroda Medical
 
@@ -416,7 +413,6 @@ When properly supported by composite B-tree indexes on \`tenant_id\`, PostgreSQL
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to upgrade your engineering stack.
 
-![Technical architecture diagram for autonomous AI agent systems in Junagadh](https://deepakbagada.in/assets/images/posts/best-ai-expert-junagadh.webp)
 
 ## Real Production War Stories: Saurashtra Agri & Junagadh Retail
 
@@ -545,7 +541,6 @@ A complete custom autonomous agent system takes exactly 14 business days from ar
 
 Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to build secure data pipelines.
 
-![Agentic SQL generation security architecture with OPA policy gates](https://deepakbagada.in/assets/images/posts/agentic-sql-generation-opa.webp)
 
 ## Real Production War Stories: Rajkot Cooperative & Morbi Ceramics
 
@@ -685,7 +680,6 @@ No. For absolute safety, all agentic SQL execution is isolated to physical read-
 
 Explore our specialized [business automation systems](/services/automation-expert), custom [AI development services](/services/ai-development), and enterprise [web application development](/services/web-development) to build automated growth engines.
 
-![Autonomous AI outreach engine architecture and 42 percent reply rate dashboard](https://deepakbagada.in/assets/images/posts/building-ai-outreach-engine.webp)
 
 ## Real Production War Stories: US SaaS Client & Dubai Agency
 

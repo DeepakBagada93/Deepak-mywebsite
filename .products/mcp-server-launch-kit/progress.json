@@ -1,0 +1,30 @@
+{
+  "product": "mcp-server-launch-kit",
+  "version": "1.0.0",
+  "createdAt": "2026-10-18T00:00:00.000Z",
+  "stages": {
+    "research": "partial",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "No official SDK dependency: generated servers use a dependency-free JSON-RPC subset so they run and are testable without npm install.",
+    "Handlers are explicit dry-run echoes rather than placeholders, so the generated server is runnable and honest.",
+    "Shell execution is reported as a high finding but allowed with documented controls; the audit never silently downgrades it.",
+    "No MCP client was connected; compatibility is marked untested for real hosts."
+  ],
+  "unresolved": [
+    "Owner approval for pricing, license, support, and publication.",
+    "Connect a generated server to a named MCP host and record the result.",
+    "Run on Node 18/20/22 and Windows."
+  ],
+  "evidence": [
+    "Functional tests cover spec rejection, scaffold, smoke test, audit, and gate.",
+    "Scaffolded example audit: 0 findings, 100/100; insecure example: 7 findings, 38/100."
+  ]
+}

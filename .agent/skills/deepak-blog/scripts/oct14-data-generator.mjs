@@ -283,9 +283,6 @@ export function generateFullArticleBody(item) {
   // Internal Links Block (3-5 internal links)
   md += `Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to upgrade your engineering stack.\n\n`;
 
-  // Architecture Diagram with descriptive alt tag (>= 5 words)
-  md += `![${item.altText}](https://deepakbagada.in/images/journal/${item.slug}.jpg)\n\n`;
-
   // Deployment Ledger War Story 1
   md += `## Deployment Ledger — ${item.cityA} ${item.vertical} rollout\n\n`;
   const article = /^[aeiou]/i.test(item.vertical) ? "an" : "a";

@@ -1,0 +1,11 @@
+---
+description: Authoritative project context (managed)
+alwaysApply: true
+---
+<!-- context-architect:managed:begin -->
+
+Read `.context/kernel.md` before any task. Load `.context/repo-map.md` for paths and
+`.context/playbooks/` for task procedures. Do not restate rules here.
+
+Canonical package manager: `pnpm`.
+<!-- context-architect:managed:end -->

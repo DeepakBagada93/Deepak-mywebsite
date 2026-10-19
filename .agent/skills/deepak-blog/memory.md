@@ -3468,3 +3468,92 @@
   - Published: `2026-10-16`
   - Words: 1206
   - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/curro-1-0-ai-content-studio
+
+- **Discovery Call Red Flags 2026: Walk Away [Junagadh]**
+  - Slug: `client-red-flags-discovery-calls-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-17 18:30:00`
+  - Words: 1501
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Code Review Swarm 2026: Ship Clean PRs [System]**
+  - Slug: `multi-agent-code-review-swarm-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-18 09:30:00`
+  - Words: 1484
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Kimi K2 Open Model 2026: Agent Wins [India Guide]**
+  - Slug: `kimi-k2-open-agent-model-2026`
+  - Tag: `AI NEWS`
+  - Published: 2026-10-18 12:30:00`
+  - Words: 1461
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Valkey Cache Tags 2026: Laravel Invalidation [Code]**
+  - Slug: `valkey-cache-laravel-tag-invalidation-2026`
+  - Tag: `WEB DEV`
+  - Published: 2026-10-18 15:30:00`
+  - Words: 1464
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Solo Founder Health 2026: Code Without Burnout [OS]**
+  - Slug: `solo-founder-health-routine-2026`
+  - Tag: `MY STORY`
+  - Published: 2026-10-18 18:30:00`
+  - Words: 1478
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Top AI Agent Developer India 2026: Compare [Prices]**
+  - Slug: `top-ai-agent-developer-india-2026-comparison`
+  - Tag: `AI DEV`
+  - Published: 2026-10-19 06:30:00`
+  - Words: 1474
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Hindi Gujarati Voice Agents 2026: Twilio [India Guide]**
+  - Slug: `voice-agent-hindi-gujarati-twilio-2026`
+  - Tag: `AI AGENTS`
+  - Published: 2026-10-19 09:30:00`
+  - Words: 1483
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **GPT-5 Mini Cost 2026: $0.04 Budget Pick [Benchmark]**
+  - Slug: `gpt-5-mini-cost-benchmark-2026`
+  - Tag: `AI NEWS`
+  - Published: 2026-10-19 12:30:00`
+  - Words: 1452
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Inertia 2 Props 2026: Deferred Polling [Full Code]**
+  - Slug: `inertia-2-deferred-props-polling-2026`
+  - Tag: `WEB DEV`
+  - Published: 2026-10-19 15:30:00`
+  - Words: 1455
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Junagadh Power Backup 2026: Never Miss Deploy [Lab]**
+  - Slug: `junagadh-internet-power-backup-2026`
+  - Tag: `MY STORY`
+  - Published: 2026-10-19 18:30:00`
+  - Words: 1475
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+---
+
+## POLICY CHANGE — 2026-10-18: Journal bodies are IMAGE-FREE
+
+- Removed every embedded image (`![alt](url)` and `<img>`) from October 2026 post content in the live MySQL `posts` table AND `data/posts.php` (107/112 October entries sanitized; September left untouched).
+- `SKILL.md` §6 is now **🚫 Zero Images In Article Body**; the pre-publish and live audits (`audit-blog.mjs`, `audit-live-url.mjs`) now **FAIL** on any image embedded in the body.
+- `oct-data-generator.mjs` and `oct14-data-generator.mjs` no longer inject an image line; historical `articles-oct-*.mjs` image lines stripped.
+- Do NOT generate, invent, or reference `images/journal/*` or `assets/images/posts/*` inside article bodies going forward. Represent visuals as tables, fenced code blocks, or ASCII diagrams. Cover/OG imagery is handled by the site layout only.

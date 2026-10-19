@@ -1053,9 +1053,6 @@ function generateFullArticleBody(item) {
   // Internal Links Block (3-5 internal links)
   md += `Explore our specialized [AI development services](/services/ai-development), custom [web application development](/services/web-development), and enterprise [business automation systems](/services/automation-expert) to upgrade your engineering stack.\n\n`;
 
-  // Architecture Diagram with descriptive alt tag (>= 5 words)
-  md += `![${item.altText}](https://deepakbagada.in/images/journal/${item.slug}.jpg)\n\n`;
-
   // Deployment Ledger War Story 1
   md += `## Deployment Ledger — ${item.cityA} ${item.vertical} rollout\n\n`;
   md += `I shipped this exact stack for a ${item.vertical} operation serving ${item.cityA} and ${item.cityB} in early 2026. I measured the baseline first: manual handling took 6 to 9 minutes per transaction with an 11% error rate on peak volume days. After I deployed the build described below, median handling dropped to under 40 seconds, the operational error rate fell below 0.3%, and the system sustained ${item.rpm} requests per minute at P95 ${item.p95}ms on a single 4-core VPS node.\n\n`;
