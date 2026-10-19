@@ -428,4 +428,66 @@ class ProductsTest extends TestCase
         $this->assertSame('production', config('services.cashfree.env'));
         $this->assertSame('https://api.cashfree.com/pg', config('services.cashfree.base_url'));
     }
+
+    public function test_cashfree_order_meta_urls_always_use_https(): void
+    {
+        config([
+            'services.cashfree.app_id' => 'test_app',
+            'services.cashfree.secret_key' => 'test_secret',
+            'site.url' => 'http://127.0.0.1:8000',
+        ]);
+
+        Http::fake([
+            '*/orders' => Http::response(['payment_session_id' => 'ps_https', 'cf_order_id' => 'cf_https'], 200),
+        ]);
+
+        $cashfree = app(CashfreeService::class);
+        $res = $cashfree->createPaymentSession('REF-123', 5, 'INR', [
+            'name' => 'Tester',
+            'email' => 't@example.com',
+            'phone' => '9999999999',
+        ]);
+
+        $this->assertNotNull($res);
+        $this->assertSame('ps_https', $res['payment_session_id']);
+
+        Http::assertSent(function ($request) {
+            $returnUrl = (string) ($request['order_meta']['return_url'] ?? '');
+            $notifyUrl = (string) ($request['order_meta']['notify_url'] ?? '');
+
+            return str_starts_with($returnUrl, 'https://') && str_starts_with($notifyUrl, 'https://');
+        });
+    }
+
+    public function test_return_from_payment_reconciles_order_using_merchant_reference(): void
+    {
+        Mail::fake();
+        config([
+            'services.cashfree.app_id' => 'test_app',
+            'services.cashfree.secret_key' => 'test_secret',
+        ]);
+
+        $reference = ProductOrder::generateReference();
+        ProductOrder::create([
+            'order_reference' => ProductOrder::generateReference(),
+            'cart_reference' => $reference,
+            'product_slug' => 'live-payment-verification-kit',
+            'product_title' => 'Live Payment Verification Test Pack',
+            'customer_name' => 'Paid User',
+            'customer_email' => 'paiduser@example.com',
+            'amount' => 5,
+            'payment_status' => ProductOrder::STATUS_PENDING,
+        ]);
+
+        Http::fake([
+            '*/orders/'.$reference => Http::response(['order_status' => 'PAID'], 200),
+        ]);
+
+        $response = $this->get('/products/return?order_id='.$reference);
+        $response->assertStatus(200);
+
+        $order = ProductOrder::where('cart_reference', $reference)->first();
+        $this->assertSame(ProductOrder::STATUS_SUCCESS, $order->payment_status);
+        $this->assertTrue($order->isDownloadable());
+    }
 }

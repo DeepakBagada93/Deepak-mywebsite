@@ -220,22 +220,53 @@
                 if (window.DBCart) window.DBCart.clear();
                 showSuccess(res.data);
             } else if (res.data.status === 'checkout') {
-                loadCashfree(function (ok) {
-                    if (!ok) { showError('Could not load the payment window. Please refresh and try again.'); return; }
-                    var cashfree = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
-                    cashfree.checkout({ paymentSessionId: res.data.payment_session_id, redirectTarget: '_self' });
+                ensureCashfree(function (cashfree) {
+                    if (!cashfree) {
+                        showError('Could not initialize secure Cashfree payment window. Please check your network and refresh.');
+                        return;
+                    }
+                    cashfree.checkout({
+                        paymentSessionId: res.data.payment_session_id,
+                        redirectTarget: '_modal',
+                    }).then(function (result) {
+                        if (result.error) {
+                            showError(result.error.message || 'Payment window closed. You can retry whenever you are ready.');
+                        } else if (result.paymentDetails) {
+                            window.location.href = '{{ route('products.return') }}?order_id=' + encodeURIComponent(res.data.order_reference);
+                        }
+                    }).catch(function (err) {
+                        console.error('Cashfree error:', err);
+                        showError('Could not open payment window. Please refresh and try again.');
+                    });
                 });
             }
         })
         .catch(function () { showError('Network error. Please try again.'); });
     });
 
-    function loadCashfree(cb) {
-        if (window.Cashfree) { cb(true); return; }
+    function ensureCashfree(cb) {
+        if (window.Cashfree) {
+            try {
+                var instance = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
+                cb(instance);
+                return;
+            } catch (e) {
+                console.error('Cashfree init error:', e);
+            }
+        }
         var s = document.createElement('script');
         s.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';
-        s.onload = function () { cb(true); };
-        s.onerror = function () { cb(false); };
+        s.async = true;
+        s.onload = function () {
+            try {
+                var instance = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
+                cb(instance);
+            } catch (e) {
+                console.error('Cashfree post-load error:', e);
+                cb(null);
+            }
+        };
+        s.onerror = function () { cb(null); };
         document.head.appendChild(s);
     }
 })();

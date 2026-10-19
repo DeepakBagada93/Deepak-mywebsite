@@ -131,9 +131,9 @@ class OrderController extends Controller
         $first = $orders->first();
 
         if ($first->payment_status === ProductOrder::STATUS_PENDING && $this->cashfree->isConfigured()) {
-            $status = $first->cf_order_id
-                ? $this->cashfree->fetchOrderStatus($first->cf_order_id)
-                : null;
+            // Cashfree's /orders/{order_id} endpoint expects the merchant order_id ($reference)
+            $status = $this->cashfree->fetchOrderStatus($reference)
+                ?? ($first->cf_order_id ? $this->cashfree->fetchOrderStatus($first->cf_order_id) : null);
 
             if ($status === 'PAID') {
                 $this->fulfiller->fulfillGroup($reference, $first->cf_order_id);

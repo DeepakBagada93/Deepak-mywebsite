@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+{{-- Preload Cashfree v3 Web Checkout SDK --}}
+<script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
 @php
     $currencies = \App\Support\Money::currencies();
     $totalInr = $products->sum(fn ($p) => \App\Support\Money::priceFor($p, 'INR'));
@@ -370,15 +372,30 @@
                     if (window.DBCart) window.DBCart.clear();
                     showSuccess(res.data);
                 } else if (res.data.status === 'checkout') {
-                    loadCashfree(function (ok) {
-                        if (!ok) {
-                            showError('Could not load secure Cashfree payment window. Please check your network and refresh.');
+                    ensureCashfree(function (cashfree) {
+                        if (!cashfree) {
+                            showError('Could not initialize secure Cashfree payment window. Please check your network and refresh the page.');
                             return;
                         }
-                        var cashfree = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
+
+                        // Open Cashfree's interactive modal popup checkout (UPI QR, GPay, PhonePe, Cards, NetBanking)
                         cashfree.checkout({
                             paymentSessionId: res.data.payment_session_id,
-                            redirectTarget: '_self'
+                            redirectTarget: '_modal',
+                        }).then(function (result) {
+                            if (result.error) {
+                                // User closed modal or payment encountered an error
+                                console.warn('Cashfree payment event:', result.error);
+                                showError(result.error.message || 'Payment window was closed. You can retry whenever you are ready.');
+                            } else if (result.paymentDetails) {
+                                // Payment completed! Redirect to return page to fulfill order
+                                window.location.href = '{{ route('products.return') }}?order_id=' + encodeURIComponent(res.data.order_reference);
+                            } else if (result.redirect) {
+                                // External redirect handled by gateway
+                            }
+                        }).catch(function (err) {
+                            console.error('Cashfree checkout failure:', err);
+                            showError('Unable to open payment modal. Please refresh the page and try again.');
                         });
                     });
                 }
@@ -389,12 +406,29 @@
         });
     }
 
-    function loadCashfree(cb) {
-        if (window.Cashfree) { cb(true); return; }
+    function ensureCashfree(cb) {
+        if (window.Cashfree) {
+            try {
+                var instance = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
+                cb(instance);
+                return;
+            } catch (e) {
+                console.error('Cashfree initialization error:', e);
+            }
+        }
         var s = document.createElement('script');
         s.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';
-        s.onload = function () { cb(true); };
-        s.onerror = function () { cb(false); };
+        s.async = true;
+        s.onload = function () {
+            try {
+                var instance = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
+                cb(instance);
+            } catch (e) {
+                console.error('Cashfree post-load error:', e);
+                cb(null);
+            }
+        };
+        s.onerror = function () { cb(null); };
         document.head.appendChild(s);
     }
 })();

@@ -25,6 +25,13 @@ class CashfreeService
             return null;
         }
 
+        $baseUrl = rtrim(config('site.url') ?: config('app.url') ?: 'https://deepakbagada.in', '/');
+        if (str_starts_with($baseUrl, 'http://')) {
+            $baseUrl = 'https://'.substr($baseUrl, 7);
+        } elseif (! str_starts_with($baseUrl, 'https://')) {
+            $baseUrl = 'https://'.$baseUrl;
+        }
+
         $response = $this->client()->post('/orders', [
             'order_id' => $orderReference,
             'order_amount' => (float) $amount,
@@ -36,8 +43,8 @@ class CashfreeService
                 'customer_phone' => $customer['phone'] ?: '9999999999',
             ],
             'order_meta' => [
-                'return_url' => url('/products/return').'?order_id={order_id}',
-                'notify_url' => url('/webhooks/cashfree'),
+                'return_url' => $baseUrl.'/products/return?order_id={order_id}',
+                'notify_url' => $baseUrl.'/webhooks/cashfree',
             ],
         ]);
 
@@ -55,14 +62,15 @@ class CashfreeService
 
     /**
      * Fetch the authoritative order status (webhook fallback).
+     * Cashfree PG API expects the merchant's order_id.
      */
-    public function fetchOrderStatus(string $cfOrderId): ?string
+    public function fetchOrderStatus(string $orderId): ?string
     {
         if (! $this->isConfigured()) {
             return null;
         }
 
-        $response = $this->client()->get('/orders/'.$cfOrderId);
+        $response = $this->client()->get('/orders/'.$orderId);
 
         if ($response->failed()) {
             report(new \RuntimeException('Cashfree status fetch failed: '.$response->body()));
