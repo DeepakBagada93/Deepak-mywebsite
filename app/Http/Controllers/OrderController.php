@@ -72,17 +72,14 @@ class OrderController extends Controller
         $total = $products->sum(fn (array $product) => Money::priceFor($product, $currency));
         $allFree = $products->every(fn (array $product) => $product['is_free']);
 
-        // Free carts (and the not-yet-configured gateway on local/staging)
-        // are fulfilled instantly so the whole flow can be tested end to end.
-        if ($allFree || ! $this->cashfree->isConfigured()) {
+        // 100% Free downloads are fulfilled instantly (zero payment needed)
+        if ($allFree) {
             $this->fulfiller->fulfillGroup($cartReference);
 
             return response()->json([
                 'status' => 'fulfilled',
-                'test_mode' => ! $allFree,
-                'message' => $allFree
-                    ? 'Enjoy your download'.($products->count() > 1 ? 's' : '').'.'
-                    : 'Payment gateway is in test mode — download unlocked for testing.',
+                'test_mode' => false,
+                'message' => 'Enjoy your download'.($products->count() > 1 ? 's' : '').'.',
                 'order_reference' => $cartReference,
                 'downloads' => ProductOrder::group($cartReference)->map(fn (ProductOrder $order) => [
                     'title' => $order->product_title,
@@ -90,6 +87,14 @@ class OrderController extends Controller
                 ])->all(),
                 'download_url' => ProductOrder::group($cartReference)->first()->download_url,
             ]);
+        }
+
+        // Paid products must strictly go through Cashfree
+        if (! $this->cashfree->isConfigured()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Payment gateway is currently unavailable. Please try again shortly or contact '.config('site.email').'.',
+            ], 503);
         }
 
         $session = $this->cashfree->createPaymentSession($cartReference, $total, $currency, [

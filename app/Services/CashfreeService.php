@@ -32,15 +32,18 @@ class CashfreeService
             $baseUrl = 'https://'.$baseUrl;
         }
 
+        $rawPhone = preg_replace('/[^\d]/', '', (string) ($customer['phone'] ?? ''));
+        $cleanPhone = strlen($rawPhone) >= 10 ? substr($rawPhone, -10) : '9999999999';
+
         $response = $this->client()->post('/orders', [
             'order_id' => $orderReference,
             'order_amount' => (float) $amount,
             'order_currency' => strtoupper($currency) ?: 'INR',
             'customer_details' => [
-                'customer_id' => 'cust_'.substr(md5($customer['email']), 0, 12),
-                'customer_name' => $customer['name'],
-                'customer_email' => $customer['email'],
-                'customer_phone' => $customer['phone'] ?: '9999999999',
+                'customer_id' => 'cust_'.substr(md5($customer['email'] ?? 'guest'), 0, 12),
+                'customer_name' => $customer['name'] ?? 'Customer',
+                'customer_email' => $customer['email'] ?? 'customer@example.com',
+                'customer_phone' => $cleanPhone,
             ],
             'order_meta' => [
                 'return_url' => $baseUrl.'/products/return?order_id={order_id}',

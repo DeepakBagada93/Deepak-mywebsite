@@ -41,6 +41,8 @@ class ProductsTest extends TestCase
     public function test_usd_checkout_prices_in_us_dollars(): void
     {
         Mail::fake();
+        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        Http::fake(['*/orders' => Http::response(['payment_session_id' => 'ps_usd', 'cf_order_id' => 'cf_usd'], 200)]);
 
         $response = $this->postJson('/products/checkout', [
             'items' => ['mcp-server-launch-kit'],
@@ -49,7 +51,7 @@ class ProductsTest extends TestCase
             'email' => 'us@example.com',
         ]);
 
-        $response->assertStatus(200)->assertJsonPath('status', 'fulfilled');
+        $response->assertStatus(200)->assertJsonPath('status', 'checkout');
 
         $order = ProductOrder::where('customer_email', 'us@example.com')->first();
         $this->assertNotNull($order);
@@ -155,9 +157,14 @@ class ProductsTest extends TestCase
         Mail::assertSent(ProductDeliveryMail::class, fn ($mail) => $mail->hasTo('free@example.com'));
     }
 
-    public function test_demo_five_rupee_product_checkout_and_download(): void
+    public function test_demo_five_rupee_product_checkout_with_cashfree_and_download(): void
     {
         Mail::fake();
+        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+
+        Http::fake([
+            '*/orders' => Http::response(['payment_session_id' => 'ps_demo', 'cf_order_id' => 'cf_demo'], 200),
+        ]);
 
         $response = $this->postJson('/products/checkout', [
             'product_slug' => 'live-payment-verification-kit',
@@ -167,24 +174,24 @@ class ProductsTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonPath('status', 'fulfilled')
-            ->assertJsonPath('test_mode', true);
+            ->assertJsonPath('status', 'checkout')
+            ->assertJsonPath('payment_session_id', 'ps_demo');
 
         $order = ProductOrder::where('customer_email', 'test5@example.com')->first();
         $this->assertNotNull($order);
         $this->assertSame(5, (int) $order->amount);
         $this->assertSame('INR', $order->currency);
-        $this->assertTrue($order->isDownloadable());
 
-        // Verify download token streams the actual zip file
+        // Fulfill the order and verify download token streams the actual zip file
+        $order->markPaid();
         $downloadResponse = $this->get('/download/'.$order->download_token);
         $downloadResponse->assertStatus(200);
         $downloadResponse->assertHeader('Content-Type', 'application/zip');
     }
 
-    public function test_paid_product_checkout_fulfills_in_test_mode_when_gateway_unconfigured(): void
+    public function test_paid_product_checkout_fails_safely_when_gateway_unconfigured(): void
     {
-        Mail::fake();
+        config(['services.cashfree.app_id' => null, 'services.cashfree.secret_key' => null]);
 
         $response = $this->postJson('/products/checkout', [
             'product_slug' => 'mcp-server-launch-kit',
@@ -192,16 +199,13 @@ class ProductsTest extends TestCase
             'email' => 'paid@example.com',
         ]);
 
-        $response->assertStatus(200)
-            ->assertJsonPath('status', 'fulfilled')
-            ->assertJsonPath('test_mode', true);
+        $response->assertStatus(503)
+            ->assertJsonPath('status', 'error');
 
-        $order = ProductOrder::where('customer_email', 'paid@example.com')->first();
-        $this->assertNotNull($order);
-        $this->assertSame(3499, $order->amount);
-        $this->assertTrue($order->isDownloadable());
-
-        Mail::assertSent(ProductDeliveryMail::class, fn ($mail) => $mail->hasTo('paid@example.com'));
+        $this->assertDatabaseMissing('product_orders', [
+            'customer_email' => 'paid@example.com',
+            'payment_status' => ProductOrder::STATUS_SUCCESS,
+        ]);
     }
 
     public function test_no_account_is_created_on_purchase(): void
@@ -221,6 +225,8 @@ class ProductsTest extends TestCase
     public function test_multi_item_cart_checkout_groups_items_under_one_reference(): void
     {
         Mail::fake();
+        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        Http::fake(['*/orders' => Http::response(['payment_session_id' => 'ps_cart', 'cf_order_id' => 'cf_cart'], 200)]);
 
         $response = $this->postJson('/products/checkout', [
             'items' => ['ai-project-kickoff-skills-kit', 'n8n-hardening-pack'],
@@ -229,17 +235,14 @@ class ProductsTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonPath('status', 'fulfilled')
-            ->assertJsonCount(2, 'downloads');
+            ->assertJsonPath('status', 'checkout')
+            ->assertJsonPath('payment_session_id', 'ps_cart');
 
         $reference = $response->json('order_reference');
         $lines = ProductOrder::where('cart_reference', $reference)->get();
 
         $this->assertCount(2, $lines);
-        $this->assertTrue($lines->every(fn ($o) => $o->payment_status === ProductOrder::STATUS_SUCCESS));
         $this->assertSame(2499, $lines->sum('amount'));
-
-        Mail::assertSent(ProductDeliveryMail::class, fn ($mail) => $mail->hasTo('cart@example.com') && $mail->orders->count() === 2);
     }
 
     public function test_admin_receives_instant_purchase_email(): void
@@ -247,13 +250,13 @@ class ProductsTest extends TestCase
         Mail::fake();
 
         $this->postJson('/products/checkout', [
-            'items' => ['mcp-server-launch-kit'],
+            'items' => ['ai-project-kickoff-skills-kit'],
             'name' => 'Admin Alert Buyer',
             'email' => 'notify@example.com',
         ])->assertStatus(200);
 
         Mail::assertSent(AdminPurchaseMail::class, function ($mail) {
-            return $mail->hasTo(config('site.email')) && $mail->orders->sum('amount') === 3499;
+            return $mail->hasTo(config('site.email'));
         });
     }
 
@@ -405,12 +408,15 @@ class ProductsTest extends TestCase
         ])->assertStatus(422)->assertJsonValidationErrors(['currency']);
 
         // INR checkout succeeds
+        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        Http::fake(['*/orders' => Http::response(['payment_session_id' => 'ps_inr', 'cf_order_id' => 'cf_inr'], 200)]);
+
         $this->postJson('/products/checkout', [
             'items' => ['mcp-server-launch-kit'],
             'currency' => 'INR',
             'name' => 'Buyer',
             'email' => 'inr-buyer@example.com',
-        ])->assertStatus(200);
+        ])->assertStatus(200)->assertJsonPath('status', 'checkout');
     }
 
     public function test_cashfree_service_is_configured_with_live_credentials(): void
