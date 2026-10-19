@@ -124,9 +124,9 @@ class PostController extends Controller
         }
 
         $pageTitle = $post->title;
-        if (!str_contains($pageTitle, $site['name'])) {
-            if (mb_strlen($pageTitle . ' — ' . $site['name']) <= 65) {
-                $pageTitle .= ' — ' . $site['name'];
+        if (! str_contains($pageTitle, $site['name'])) {
+            if (mb_strlen($pageTitle.' — '.$site['name']) <= 65) {
+                $pageTitle .= ' — '.$site['name'];
             }
         }
 

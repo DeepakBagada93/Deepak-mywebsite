@@ -222,9 +222,9 @@ class OrderController extends Controller
 
         $head = [
             'title' => $products->count() === 1
-                ? 'Checkout: ' . $product['title'] . ' — ' . $site['name']
-                : 'Checkout (' . $products->count() . ' items) — ' . $site['name'],
-            'description' => 'Secure checkout for ' . ($products->count() === 1 ? $product['title'] : 'selected engineering toolkits') . '. Instant digital delivery via Cashfree.',
+                ? 'Checkout: '.$product['title'].' — '.$site['name']
+                : 'Checkout ('.$products->count().' items) — '.$site['name'],
+            'description' => 'Secure checkout for '.($products->count() === 1 ? $product['title'] : 'selected engineering toolkits').'. Instant digital delivery via Cashfree.',
             'canonical' => $products->count() === 1
                 ? route('products.checkout.single', $product['slug'])
                 : route('products.checkout.page'),

@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Mail\AdminPurchaseMail;
 use App\Mail\ProductDeliveryMail;
 use App\Models\ProductOrder;
+use App\Services\CashfreeService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
@@ -414,7 +415,7 @@ class ProductsTest extends TestCase
 
     public function test_cashfree_service_is_configured_with_live_credentials(): void
     {
-        $cashfree = app(\App\Services\CashfreeService::class);
+        $cashfree = app(CashfreeService::class);
         // Under testing environment, verify service reads config
         config([
             'services.cashfree.app_id' => 'test_app_id_mock',

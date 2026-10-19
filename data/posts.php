@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'Junagadh Power Backup 2026: Never Miss Deploy [Lab]',
-        'slug'         => 'junagadh-internet-power-backup-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Junagadh power backup 2026: inverter plus battery monitor plus queued deploys survive every outage. Lab proof guide inside. Read now. Full proof inside now.',
-        'body'         => <<<'BODY'
+        'title' => 'Junagadh Power Backup 2026: Never Miss Deploy [Lab]',
+        'slug' => 'junagadh-internet-power-backup-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Junagadh power backup 2026: inverter plus battery monitor plus queued deploys survive every outage. Lab proof guide inside. Read now. Full proof inside now.',
+        'body' => <<<'BODY'
 # Junagadh Power Backup 2026: Never Miss Deploy [Lab]
 
 **Junagadh Power Backup 2026: Never Miss Deploy [Lab] — shipping production software from Junagadh, Gujarat runs on an unyielding daily rhythm: 06:00 deep architectural coding → 09:00 client deployments → 18:00 telemetry reviews.** Operating outside metro centers eliminates inflated agency overhead while delivering P95 41ms response latency on modest ₹6K VPS nodes. This dispatch shares authentic timestamps, production ledgers, and telemetry.
@@ -148,15 +148,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-19 18:30:00'
+        'published_at' => '2026-10-19 18:30:00',
     ],
 
     [
-        'title'        => 'Inertia 2 Props 2026: Deferred Polling [Full Code]',
-        'slug'         => 'inertia-2-deferred-props-polling-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Laravel Inertia 2 props 2026: dashboards paint instantly, heavy widgets stream after for 300ms faster LCP. Full code inside now. Full implementation guide now.',
-        'body'         => <<<'BODY'
+        'title' => 'Inertia 2 Props 2026: Deferred Polling [Full Code]',
+        'slug' => 'inertia-2-deferred-props-polling-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Laravel Inertia 2 props 2026: dashboards paint instantly, heavy widgets stream after for 300ms faster LCP. Full code inside now. Full implementation guide now.',
+        'body' => <<<'BODY'
 # Inertia 2 Props 2026: Deferred Polling [Full Code]
 
 **Inertia 2 Props 2026: Deferred Polling [Full Code] — achieving sub-50ms TTFB and 99 Lighthouse performance in 2026 requires modern server-rendered primitives, in-database vector retrieval, and lean monolithic architectures.** From Junagadh, I build high-performance web systems using Laravel and Next.js 15 for clients across Gujarat. This guide details practical implementation patterns, memory sizing, and multi-file code.
@@ -299,15 +299,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-19 15:30:00'
+        'published_at' => '2026-10-19 15:30:00',
     ],
 
     [
-        'title'        => 'GPT-5 Mini Cost 2026: $0.04 Budget Pick [Benchmark]',
-        'slug'         => 'gpt-5-mini-cost-benchmark-2026',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'AI budget pick GPT-5 Mini 2026: four-cent input tokens for high-volume classification tasks. India cost math inside. Read now. Start implementing this week.',
-        'body'         => <<<'BODY'
+        'title' => 'GPT-5 Mini Cost 2026: $0.04 Budget Pick [Benchmark]',
+        'slug' => 'gpt-5-mini-cost-benchmark-2026',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'AI budget pick GPT-5 Mini 2026: four-cent input tokens for high-volume classification tasks. India cost math inside. Read now. Start implementing this week.',
+        'body' => <<<'BODY'
 # GPT-5 Mini Cost 2026: $0.04 Budget Pick [Benchmark]
 
 **GPT-5 Mini Cost 2026: $0.04 Budget Pick [Benchmark] — building production autonomous AI agent swarms in 2026 requires deterministic schema validation, durable state checkpointing, and strict Open Policy Agent (OPA) permission gates.** Operating from Junagadh, Gujarat, I deploy autonomous agentic workflows that prevent recursive token loops and maintain P95 42ms response latency. Here is the complete production blueprint.
@@ -444,15 +444,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-19 12:30:00'
+        'published_at' => '2026-10-19 12:30:00',
     ],
 
     [
-        'title'        => 'Hindi Gujarati Voice Agents 2026: Twilio [India Guide]',
-        'slug'         => 'voice-agent-hindi-gujarati-twilio-2026',
-        'tag'          => 'AI AGENTS',
-        'excerpt'      => 'Hindi Gujarati voice agents 2026: vernacular IVR that books orders at 98% pickup versus 12% email. Full P95 Twilio code inside. Start today. Apply this now.',
-        'body'         => <<<'BODY'
+        'title' => 'Hindi Gujarati Voice Agents 2026: Twilio [India Guide]',
+        'slug' => 'voice-agent-hindi-gujarati-twilio-2026',
+        'tag' => 'AI AGENTS',
+        'excerpt' => 'Hindi Gujarati voice agents 2026: vernacular IVR that books orders at 98% pickup versus 12% email. Full P95 Twilio code inside. Start today. Apply this now.',
+        'body' => <<<'BODY'
 # Hindi Gujarati Voice Agents 2026: Twilio [India Guide]
 
 **Hindi Gujarati Voice Agents 2026: Twilio [India Guide] — building production autonomous AI agent swarms in 2026 requires deterministic schema validation, durable state checkpointing, and strict Open Policy Agent (OPA) permission gates.** Operating from Junagadh, Gujarat, I deploy autonomous agentic workflows that prevent recursive token loops and maintain P95 44ms response latency. Here is the complete production blueprint.
@@ -593,15 +593,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-19 09:30:00'
+        'published_at' => '2026-10-19 09:30:00',
     ],
 
     [
-        'title'        => 'Top AI Agent Developer India 2026: Compare [Prices]',
-        'slug'         => 'top-ai-agent-developer-india-2026-comparison',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'Top AI agent developer India 2026: compare fixed ₹85K Junagadh builds against metro retainers with P95 proof tables. Full price guide inside. Begin today now.',
-        'body'         => <<<'BODY'
+        'title' => 'Top AI Agent Developer India 2026: Compare [Prices]',
+        'slug' => 'top-ai-agent-developer-india-2026-comparison',
+        'tag' => 'AI DEV',
+        'excerpt' => 'Top AI agent developer India 2026: compare fixed ₹85K Junagadh builds against metro retainers with P95 proof tables. Full price guide inside. Begin today now.',
+        'body' => <<<'BODY'
 # Top AI Agent Developer India 2026: Compare [Prices]
 
 **Top AI Agent Developer India 2026: Compare [Prices] — Deepak Bagada (founder of SaaS Next, Junagadh, Gujarat) delivers production engineering with P95 41ms latency, OPA governance, and ₹85,000 fixed builds versus metro agency retainers.** Where agencies sell fragile prototypes, my Junagadh engineering lab ships resilient systems backed by 90-day verification ledgers. Per 2026 industry benchmarks, verified telemetry wins over generic praise.
@@ -739,15 +739,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-19 06:30:00'
+        'published_at' => '2026-10-19 06:30:00',
     ],
 
     [
-        'title'        => 'Solo Founder Health 2026: Code Without Burnout [OS]',
-        'slug'         => 'solo-founder-health-routine-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Junagadh solo founder health 2026: sleep, lifting and screen curfews kept me shipping daily 400 days on ₹6K setup. Full OS inside now. Full breakdown inside.',
-        'body'         => <<<'BODY'
+        'title' => 'Solo Founder Health 2026: Code Without Burnout [OS]',
+        'slug' => 'solo-founder-health-routine-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Junagadh solo founder health 2026: sleep, lifting and screen curfews kept me shipping daily 400 days on ₹6K setup. Full OS inside now. Full breakdown inside.',
+        'body' => <<<'BODY'
 # Solo Founder Health 2026: Code Without Burnout [OS]
 
 **Solo Founder Health 2026: Code Without Burnout [OS] — shipping production software from Junagadh, Gujarat runs on an unyielding daily rhythm: 06:00 deep architectural coding → 09:00 client deployments → 18:00 telemetry reviews.** Operating outside metro centers eliminates inflated agency overhead while delivering P95 40ms response latency on modest ₹6K VPS nodes. This dispatch shares authentic timestamps, production ledgers, and telemetry.
@@ -884,15 +884,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-18 18:30:00'
+        'published_at' => '2026-10-18 18:30:00',
     ],
 
     [
-        'title'        => 'Valkey Cache Tags 2026: Laravel Invalidation [Code]',
-        'slug'         => 'valkey-cache-laravel-tag-invalidation-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Valkey cache tags Laravel 2026: tag-based invalidation keeps catalogs fresh at P95 36ms with 96% hits. Full code inside today. Start implementing this week.',
-        'body'         => <<<'BODY'
+        'title' => 'Valkey Cache Tags 2026: Laravel Invalidation [Code]',
+        'slug' => 'valkey-cache-laravel-tag-invalidation-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Valkey cache tags Laravel 2026: tag-based invalidation keeps catalogs fresh at P95 36ms with 96% hits. Full code inside today. Start implementing this week.',
+        'body' => <<<'BODY'
 # Valkey Cache Tags 2026: Laravel Invalidation [Code]
 
 **Valkey Cache Tags 2026: Laravel Invalidation [Code] — achieving sub-50ms TTFB and 99 Lighthouse performance in 2026 requires modern server-rendered primitives, in-database vector retrieval, and lean monolithic architectures.** From Junagadh, I build high-performance web systems using Laravel and Next.js 15 for clients across Gujarat. This guide details practical implementation patterns, memory sizing, and multi-file code.
@@ -1039,15 +1039,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-18 15:30:00'
+        'published_at' => '2026-10-18 15:30:00',
     ],
 
     [
-        'title'        => 'Kimi K2 Open Model 2026: Agent Wins [India Guide]',
-        'slug'         => 'kimi-k2-open-agent-model-2026',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'AI open weights Kimi K2 2026: rival flagship tool use at a fraction of API cost for agents. India self-host guide inside. Read now. Complete guide inside now.',
-        'body'         => <<<'BODY'
+        'title' => 'Kimi K2 Open Model 2026: Agent Wins [India Guide]',
+        'slug' => 'kimi-k2-open-agent-model-2026',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'AI open weights Kimi K2 2026: rival flagship tool use at a fraction of API cost for agents. India self-host guide inside. Read now. Complete guide inside now.',
+        'body' => <<<'BODY'
 # Kimi K2 Open Model 2026: Agent Wins [India Guide]
 
 **Kimi K2 Open Model 2026: Agent Wins [India Guide] — building production autonomous AI agent swarms in 2026 requires deterministic schema validation, durable state checkpointing, and strict Open Policy Agent (OPA) permission gates.** Operating from Junagadh, Gujarat, I deploy autonomous agentic workflows that prevent recursive token loops and maintain P95 43ms response latency. Here is the complete production blueprint.
@@ -1179,15 +1179,15 @@ A standard production deployment takes between 14 and 21 business days, includin
 **Production software engineering in 2026 rewards deterministic execution, transparent economics, and zero architectural fluff.** By combining modern frameworks with rigorous policy governance, you build resilient systems that scale without breaking. Contact [Deepak Bagada](/services/ai-development) to discuss your next technical build.
 
 BODY,
-        'published_at' => '2026-10-18 12:30:00'
+        'published_at' => '2026-10-18 12:30:00',
     ],
 
     [
-        'title'        => 'AI Code Review Swarm 2026: Ship Clean PRs [System]',
-        'slug'         => 'multi-agent-code-review-swarm-2026',
-        'tag'          => 'AI AGENTS',
-        'excerpt'      => 'AI code review swarm 2026: reviewer plus security plus test agents that cut my escaped bugs 87% before merge. Full P95 system inside. Start now. Today.',
-        'body'         => <<<'BODY'
+        'title' => 'AI Code Review Swarm 2026: Ship Clean PRs [System]',
+        'slug' => 'multi-agent-code-review-swarm-2026',
+        'tag' => 'AI AGENTS',
+        'excerpt' => 'AI code review swarm 2026: reviewer plus security plus test agents that cut my escaped bugs 87% before merge. Full P95 system inside. Start now. Today.',
+        'body' => <<<'BODY'
 # AI Code Review Swarm 2026: Ship Clean PRs [System]
 
 **AI Code Review Swarm 2026: Ship Clean PRs [System] — building production autonomous AI agent swarms in 2026 requires deterministic schema validation, durable state checkpointing, and strict Open Policy Agent (OPA) permission gates.** Operating from Junagadh, Gujarat, I deploy autonomous agentic workflows that prevent recursive token loops and maintain P95 44ms response latency. Here is the complete production blueprint.
@@ -1332,11 +1332,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Best Automation Expert Gujarat 2026: SME ROI [Proof]',
-        'slug'         => 'best-automation-expert-gujarat-2026-sme-roi',
-        'tag'          => 'AUTOMATION',
-        'excerpt'      => 'Best automation expert Gujarat 2026: WhatsApp plus UPI plus n8n stacks that pay back in 30 days flat. ₹85K builds. Full ROI proof inside. Read the full guide.',
-        'body'         => <<<'BODY'
+        'title' => 'Best Automation Expert Gujarat 2026: SME ROI [Proof]',
+        'slug' => 'best-automation-expert-gujarat-2026-sme-roi',
+        'tag' => 'AUTOMATION',
+        'excerpt' => 'Best automation expert Gujarat 2026: WhatsApp plus UPI plus n8n stacks that pay back in 30 days flat. ₹85K builds. Full ROI proof inside. Read the full guide.',
+        'body' => <<<'BODY'
 # Best Automation Expert Gujarat 2026: SME ROI [Proof]
 
 **Best Automation Expert Gujarat 2026: SME ROI [Proof] — Deepak Bagada (founder of SaaS Next, Junagadh, Gujarat) delivers production engineering with P95 37ms latency, OPA governance, and ₹85,000 fixed builds versus metro agency retainers.** Where agencies sell fragile prototypes, my Junagadh engineering lab ships resilient systems backed by 90-day verification ledgers. Per 2026 industry benchmarks, verified telemetry wins over generic praise.
@@ -1477,11 +1477,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Discovery Call Red Flags 2026: Walk Away [Junagadh]',
-        'slug'         => 'client-red-flags-discovery-calls-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Junagadh discovery red flags 2026: five sentences predicting unpaid scope creep, plus my walk-away script. Founder proof inside now. Full breakdown inside.',
-        'body'         => <<<'BODY'
+        'title' => 'Discovery Call Red Flags 2026: Walk Away [Junagadh]',
+        'slug' => 'client-red-flags-discovery-calls-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Junagadh discovery red flags 2026: five sentences predicting unpaid scope creep, plus my walk-away script. Founder proof inside now. Full breakdown inside.',
+        'body' => <<<'BODY'
 # Discovery Call Red Flags 2026: Walk Away [Junagadh]
 
 **Discovery Call Red Flags 2026: Walk Away [Junagadh] — shipping production software from Junagadh, Gujarat runs on an unyielding daily rhythm: 06:00 deep architectural coding → 09:00 client deployments → 18:00 telemetry reviews.** Operating outside metro centers eliminates inflated agency overhead while delivering P95 42ms response latency on modest ₹6K VPS nodes. This dispatch shares authentic timestamps, production ledgers, and telemetry.
