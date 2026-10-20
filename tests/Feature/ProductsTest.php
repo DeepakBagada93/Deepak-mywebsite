@@ -24,7 +24,7 @@ class ProductsTest extends TestCase
         $response->assertSee('The AI Systems Master Bundle');
         $response->assertSee('AI Agency Delivery OS');
         $response->assertSee('MCP Server Launch Kit');
-        $response->assertSee('Live Payment Verification Test Pack');
+        $response->assertSee('n8n Production Hardening Pack');
         $response->assertSee('AI Project Kickoff Skills Kit');
     }
 
@@ -158,29 +158,29 @@ class ProductsTest extends TestCase
         Mail::assertSent(ProductDeliveryMail::class, fn ($mail) => $mail->hasTo('free@example.com'));
     }
 
-    public function test_demo_five_rupee_product_checkout_with_cashfree_and_download(): void
+    public function test_paid_product_checkout_with_cashfree_and_download(): void
     {
         Mail::fake();
         config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
 
         Http::fake([
-            '*/orders' => Http::response(['payment_session_id' => 'ps_demo', 'cf_order_id' => 'cf_demo'], 200),
+            '*/orders' => Http::response(['payment_session_id' => 'ps_paid', 'cf_order_id' => 'cf_paid'], 200),
         ]);
 
         $response = $this->postJson('/products/checkout', [
-            'product_slug' => 'live-payment-verification-kit',
+            'product_slug' => 'n8n-hardening-pack',
             'currency' => 'INR',
-            'name' => 'Five Rupee Tester',
-            'email' => 'test5@example.com',
+            'name' => 'Paid Tester',
+            'email' => 'paidtest@example.com',
         ]);
 
         $response->assertStatus(200)
             ->assertJsonPath('status', 'checkout')
-            ->assertJsonPath('payment_session_id', 'ps_demo');
+            ->assertJsonPath('payment_session_id', 'ps_paid');
 
-        $order = ProductOrder::where('customer_email', 'test5@example.com')->first();
+        $order = ProductOrder::where('customer_email', 'paidtest@example.com')->first();
         $this->assertNotNull($order);
-        $this->assertSame(5, (int) $order->amount);
+        $this->assertSame(2499, (int) $order->amount);
         $this->assertSame('INR', $order->currency);
 
         // Fulfill the order and verify download token streams the actual zip file
@@ -478,11 +478,11 @@ class ProductsTest extends TestCase
         ProductOrder::create([
             'order_reference' => ProductOrder::generateReference(),
             'cart_reference' => $reference,
-            'product_slug' => 'live-payment-verification-kit',
-            'product_title' => 'Live Payment Verification Test Pack',
+            'product_slug' => 'n8n-hardening-pack',
+            'product_title' => 'n8n Production Hardening Pack',
             'customer_name' => 'Paid User',
             'customer_email' => 'paiduser@example.com',
-            'amount' => 5,
+            'amount' => 2499,
             'payment_status' => ProductOrder::STATUS_PENDING,
         ]);
 
@@ -533,11 +533,11 @@ class ProductsTest extends TestCase
         ProductOrder::create([
             'order_reference' => ProductOrder::generateReference(),
             'cart_reference' => $reference,
-            'product_slug' => 'live-payment-verification-kit',
-            'product_title' => 'Live Payment Verification Test Pack',
+            'product_slug' => 'n8n-hardening-pack',
+            'product_title' => 'n8n Production Hardening Pack',
             'customer_name' => 'Returning Customer',
             'customer_email' => 'returning@example.com',
-            'amount' => 5,
+            'amount' => 2499,
             'payment_status' => ProductOrder::STATUS_PENDING,
         ]);
 
