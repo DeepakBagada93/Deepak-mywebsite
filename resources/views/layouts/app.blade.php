@@ -9,6 +9,10 @@
     $ogImg = $url . ($head['og_image'] ?? '/images/about-portrait.png');
     $ogImgAlt = $head['og_image_alt'] ?? 'Deepak Bagada — Best AI Expert & AI Developer in Junagadh, Gujarat, India';
     $robots = $head['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+    $cssFile = public_path('css/app.css');
+    $jsFile = public_path('js/main.js');
+    $cssVersion = file_exists($cssFile) ? substr(md5_file($cssFile), 0, 10) : '1';
+    $jsVersion = file_exists($jsFile) ? substr(md5_file($jsFile), 0, 10) : '1';
 @endphp
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#" data-store-currency="{{ $storeCurrency ?? 'INR' }}">
@@ -81,7 +85,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/app.css?v={{ file_exists(public_path('css/app.css')) ? filemtime(public_path('css/app.css')) : time() }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ $cssVersion }}">
 </head>
 <body>
 
@@ -101,6 +105,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="/js/main.js?v={{ file_exists(public_path('js/main.js')) ? filemtime(public_path('js/main.js')) : time() }}"></script>
+    <script src="{{ asset('js/main.js') }}?v={{ $jsVersion }}"></script>
 </body>
 </html>
