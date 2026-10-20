@@ -38,6 +38,15 @@
             </div>
 
             <div class="footer__col">
+                <p class="mono footer__col-title">Sites</p>
+                <ul class="footer__col-list">
+                    <li><a href="https://dailyaiworld.com/" target="_blank" rel="noopener noreferrer">Daily AI World ↗</a></li>
+                    <li><a href="https://curro.in/" target="_blank" rel="noopener noreferrer">Curro ↗</a></li>
+                    <li><a href="https://saasnext.in/" target="_blank" rel="noopener noreferrer">SaaSNext ↗</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
                 <p class="mono footer__col-title">Contact</p>
                 <ul class="footer__col-list">
                     <li><a href="mailto:{{ $site['email'] }}">{{ $site['email'] }}</a></li>
