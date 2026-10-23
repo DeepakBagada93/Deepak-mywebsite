@@ -34,6 +34,25 @@
                     </div>
                 </div>
 
+                {{-- Mobile Quick Buy Box (visible on mobile only) --}}
+                <div class="store-detail__mobile-buybox">
+                    <div class="store-detail__mobile-price-row">
+                        <div class="store__price store-buybox__price">
+                            @include('products.partials.price', ['product' => $product])
+                        </div>
+                        @if ($discount > 0)
+                            <span class="mono store-buybox__off">{{ $discount }}% OFF · limited-time launch price</span>
+                        @endif
+                    </div>
+                    <div class="store-detail__mobile-btn-group">
+                        <a href="{{ route('products.checkout.single', $product['slug']) }}" class="btn btn--primary store-detail__mobile-buy-btn">
+                            {{ $isFree ? 'Download free →' : 'Buy now — instant download →' }}
+                        </a>
+                        <button type="button" class="btn btn--ghost store-detail__mobile-cart-btn" data-add-cart="{{ $product['slug'] }}">+ Add to cart</button>
+                    </div>
+                    <p class="store-buybox__secure mono">⚡ Instant delivery after payment · 🔒 Cashfree UPI, cards & netbanking</p>
+                </div>
+
                 <div class="store-detail__body">
                     <p>{{ $product['description'] }}</p>
                 </div>
@@ -61,20 +80,23 @@
 
                 @if (! empty($product['comparison']))
                 <div class="store-detail__block">
-                    <h2 class="store-detail__h2">Why this architecture wins</h2>
-                    <div class="store-comparison" style="overflow-x:auto;">
-                        <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.95rem;">
+                    <div class="store-comparison__head">
+                        <h2 class="store-detail__h2">Why this architecture wins</h2>
+                        <span class="store-comparison__hint mono">Swipe to compare ↔</span>
+                    </div>
+                    <div class="store-comparison">
+                        <table class="store-comparison__table">
                             <thead>
-                                <tr style="border-bottom:2px solid var(--hair);text-align:left;">
-                                    <th style="padding:12px;width:50%;color:var(--muted);font-family:var(--mono);font-size:0.75rem;text-transform:uppercase;">Without this skill (Manual & Flawed)</th>
-                                    <th style="padding:12px;width:50%;color:var(--ink);font-family:var(--mono);font-size:0.75rem;text-transform:uppercase;">With this skill (Deterministic & Gated)</th>
+                                <tr>
+                                    <th class="store-comparison__th store-comparison__th--without">Without this skill (Manual & Flawed)</th>
+                                    <th class="store-comparison__th store-comparison__th--with">With this skill (Deterministic & Gated)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($product['comparison'] as $row)
-                                <tr style="border-bottom:1px solid var(--hair);">
-                                    <td style="padding:12px;color:var(--muted);line-height:1.5;">✕ {{ $row['without'] }}</td>
-                                    <td style="padding:12px;color:var(--ink);font-weight:500;line-height:1.5;">✓ {{ $row['with'] }}</td>
+                                <tr>
+                                    <td class="store-comparison__td store-comparison__td--without">✕ {{ $row['without'] }}</td>
+                                    <td class="store-comparison__td store-comparison__td--with">✓ {{ $row['with'] }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -180,14 +202,65 @@
         <div class="store-detail__related">
             <h2 class="store-detail__h2">More from the studio</h2>
             <div class="store__grid">
-                @foreach ($related as $product)
-                    @include('products.partials.card', ['product' => $product])
+                @foreach ($related as $relatedProduct)
+                    @include('products.partials.card', ['product' => $relatedProduct])
                 @endforeach
             </div>
         </div>
         @endif
     </div>
 </article>
+
+{{-- Mobile Sticky Action Bar --}}
+<div class="store-mobile-sticky" id="storeMobileSticky">
+    <div class="store-mobile-sticky__inner">
+        <div class="store-mobile-sticky__info">
+            <span class="store-mobile-sticky__title">{{ $product['title'] }}</span>
+            <div class="store__price store-mobile-sticky__price">
+                @include('products.partials.price', ['product' => $product])
+            </div>
+        </div>
+        <div class="store-mobile-sticky__actions">
+            <a href="{{ route('products.checkout.single', $product['slug']) }}" class="btn btn--primary store-mobile-sticky__btn">
+                {{ $isFree ? 'Download' : 'Buy now' }}
+            </a>
+            <button type="button" class="btn btn--ghost store-mobile-sticky__cart" data-add-cart="{{ $product['slug'] }}" aria-label="Add to cart">
+                + Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    var bar = document.getElementById('storeMobileSticky');
+    if (!bar) return;
+    var ticking = false;
+    function checkScroll() {
+        if (window.innerWidth > 980) {
+            bar.classList.remove('is-visible');
+            return;
+        }
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY > 280) {
+            bar.classList.add('is-visible');
+        } else {
+            bar.classList.remove('is-visible');
+        }
+    }
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                checkScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', checkScroll, { passive: true });
+    checkScroll();
+})();
+</script>
 
 @include('products.partials.checkout-modal')
 @endsection

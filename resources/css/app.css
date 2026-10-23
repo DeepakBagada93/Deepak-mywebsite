@@ -103,6 +103,287 @@
     margin: 0;
 }
 
+/* =============================================================================
+   Store Detail Mobile Responsiveness & Sticky Action Bar
+   ============================================================================= */
+
+/* Mobile Quick Buy Box (hidden on desktop, visible <= 980px) */
+.store-detail__mobile-buybox {
+    display: none;
+    margin: 20px 0 28px;
+    padding: 20px 18px;
+    background: var(--surface, #faf8f5);
+    border: 1px solid var(--hair, rgba(22, 22, 22, 0.16));
+    border-radius: 6px;
+}
+.store-detail__mobile-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+.store-detail__mobile-btn-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.store-detail__mobile-buy-btn {
+    width: 100%;
+    text-align: center;
+    padding: 13px 20px;
+    font-size: 0.95rem;
+}
+.store-detail__mobile-cart-btn {
+    width: 100%;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 0.9rem;
+}
+
+/* Sticky Mobile Bottom Bar */
+.store-mobile-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--hair, rgba(22, 22, 22, 0.16));
+    padding: 10px 16px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    display: none;
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.store-mobile-sticky.is-visible {
+    transform: translateY(0);
+}
+.store-mobile-sticky__inner {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.store-mobile-sticky__info {
+    min-width: 0;
+    flex: 1;
+}
+.store-mobile-sticky__title {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--ink, #111111);
+}
+.store-mobile-sticky__price {
+    font-size: 0.88rem;
+    margin-top: 2px;
+}
+.store-mobile-sticky__price .store__price-now {
+    font-weight: 700;
+    color: var(--ink, #111111);
+}
+.store-mobile-sticky__price .store__price-was {
+    font-size: 0.75rem;
+    color: var(--muted, #6c757d);
+    margin-left: 6px;
+}
+.store-mobile-sticky__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.store-mobile-sticky__btn {
+    padding: 9px 16px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.store-mobile-sticky__cart {
+    padding: 9px 12px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+/* Comparison Table */
+.store-comparison__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+.store-comparison__hint {
+    display: none;
+    font-size: 0.65rem;
+    color: var(--muted, #888888);
+}
+.store-comparison {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--hair, #e9ecef);
+    border-radius: 6px;
+    background: #ffffff;
+    margin-top: 14px;
+}
+.store-comparison__table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+.store-comparison__th {
+    padding: 12px 16px;
+    width: 50%;
+    font-family: var(--mono, monospace);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--hair, #e9ecef);
+    text-align: left;
+}
+.store-comparison__th--without {
+    color: var(--muted, #6c757d);
+    background: #fafafa;
+}
+.store-comparison__th--with {
+    color: var(--ink, #111111);
+    background: #fdfdfd;
+}
+.store-comparison__td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--hair, #f1f3f5);
+    line-height: 1.55;
+    vertical-align: top;
+}
+.store-comparison__td--without {
+    color: var(--muted, #555555);
+    background: #fafafa;
+}
+.store-comparison__td--with {
+    color: var(--ink, #111111);
+    font-weight: 500;
+    background: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 980px) {
+    .store-detail {
+        padding: 40px 0 90px;
+    }
+    .store-detail__layout {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+    }
+    .store-detail__aside {
+        position: static;
+        width: 100%;
+    }
+    .store-detail__mobile-buybox {
+        display: block;
+    }
+    .store-mobile-sticky {
+        display: block;
+    }
+    .store-comparison__hint {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 640px) {
+    .store-detail {
+        padding: 32px 0 100px;
+    }
+    .store-detail__crumb {
+        margin-bottom: 18px;
+        font-size: 0.65rem;
+        gap: 6px;
+    }
+    .store-detail__icon {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+    .store-detail__title {
+        font-size: 1.85rem;
+        line-height: 1.15;
+        margin-bottom: 12px;
+        word-break: break-word;
+    }
+    .store-detail__tagline {
+        font-size: 1.05rem;
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+    .store-detail__rating {
+        gap: 8px 12px;
+        font-size: 0.72rem;
+    }
+    .store-detail__body {
+        margin: 20px 0;
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+    .store-detail__block {
+        margin-top: 32px;
+    }
+    .store-detail__h2 {
+        font-size: 1.25rem;
+        margin-bottom: 14px;
+        padding-bottom: 8px;
+    }
+    .store-detail__aeo {
+        padding: 16px 14px;
+        margin: 18px 0;
+    }
+    .store-detail__aeo-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .store-step {
+        padding: 14px;
+    }
+    .store-step__title {
+        font-size: 0.95rem;
+    }
+    .store-step__desc {
+        font-size: 0.88rem;
+        margin-bottom: 8px;
+    }
+    .store-step__code {
+        padding: 8px 12px;
+        font-size: 0.78rem;
+        white-space: pre;
+    }
+    .store-buybox {
+        padding: 22px 16px;
+    }
+    .store-buybox__facts {
+        gap: 10px;
+    }
+    .store-buybox__facts li {
+        font-size: 0.88rem;
+    }
+    .store-detail__deliverables li {
+        font-size: 0.92rem;
+    }
+    .store-detail__tech li {
+        font-size: 0.6rem;
+        padding: 4px 8px;
+    }
+}
+
 /* ─── Reading Progress Bar & Journal Visual Architecture ─────────────── */
 .read-progress-bar {
     position: fixed;
