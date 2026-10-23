@@ -1,0 +1,73 @@
+{
+  "invoice": {
+    "number": "INV-2026-0142",
+    "date": "2026-10-18",
+    "supplier": "Sundara Foods Pvt Ltd",
+    "supplierGstin": "29AAECS1234F1ZK",
+    "recipient": "Priya Nair",
+    "placeOfSupply": "29-Karnataka",
+    "grandTotal": 522.9
+  },
+  "context": {
+    "aato": 4200000,
+    "aatoCrore": 0.42,
+    "hsnBand": "AATO up to ₹5 crore",
+    "hsnDigitsRequired": 4,
+    "eInvoiceRequired": false,
+    "supplyType": "intra-state",
+    "supplierState": "29",
+    "recipientState": "29",
+    "isB2C": true,
+    "isExport": false,
+    "auditDate": "2026-10-20"
+  },
+  "summary": {
+    "score": 100,
+    "verdict": "READY TO ISSUE",
+    "counts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "findings": [],
+  "checks": [
+    {
+      "code": "INV_NO_NUMBER",
+      "label": "Invoice number present",
+      "status": "pass",
+      "detail": "INV-2026-0142"
+    },
+    {
+      "code": "INV_NO_DATE",
+      "label": "Invoice date present",
+      "status": "pass",
+      "detail": "2026-10-18"
+    },
+    {
+      "code": "SUP_GSTIN_INVALID",
+      "label": "Supplier GSTIN valid",
+      "status": "pass",
+      "detail": "29AAECS1234F1ZK"
+    },
+    {
+      "code": "HSN_DIGITS",
+      "label": "Line 1 HSN depth",
+      "status": "pass",
+      "detail": "4 digits (need 4)"
+    },
+    {
+      "code": "RATE_VALID",
+      "label": "Line 1 GST rate",
+      "status": "pass",
+      "detail": "5%"
+    },
+    {
+      "code": "AMOUNT_IN_WORDS_MISMATCH",
+      "label": "Amount in words matches total",
+      "status": "pass",
+      "detail": "Five Hundred Twenty Two Rupees and Ninety Paise Only"
+    }
+  ]
+}

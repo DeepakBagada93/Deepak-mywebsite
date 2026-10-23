@@ -1,0 +1,41 @@
+{
+  "product": "itc-recovery-desk",
+  "version": "1.0.0",
+  "createdAt": "2026-10-20T00:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "The product is CSV-first because Tally, Zoho, Busy, ClearTax and Excel can all export CSV without a portal integration.",
+    "The engine is offline and deterministic: every exception comes from a named rule in lib.mjs, so the same inputs and tolerance produce the same matches and amounts.",
+    "The skill is positioned as data preparation and exception review, not tax advice, eligibility determination or filing.",
+    "Matching normalises invoice punctuation (INV/001 and INV-001 are the same key) to handle real exports, but the original source value is retained in exceptions.csv for review.",
+    "Duplicates are flagged separately from match status so a duplicate can still match GSTR-2B while remaining visible for review.",
+    "Potential ITC at risk is the tax on missing-in-2B rows plus positive value differences; it is explicitly a review amount, not a confirmed loss.",
+    "Credit notes, reverse charge, imports, ISD, section 17(5) blocking and multi-currency are excluded from v1 rather than silently misclassified."
+  ],
+  "unresolved": [
+    "Owner approval for final pricing, licence terms, support terms, storefront, fulfilment and publication.",
+    "Demand has not been validated through interviews, pre-orders or pilots.",
+    "Windows and Node.js 18 execution have not been tested; only macOS with Node.js 25.9.0 is verified.",
+    "Client-IDE installation and activation in Antigravity, Claude Code, Cursor, Codex or other hosts has not been tested.",
+    "Large-file performance has not been benchmarked.",
+    "Legal sufficiency and tax-positioning review have not been independently validated."
+  ],
+  "evidence": [
+    "node --test tests/*.test.mjs reports 20 passing, 0 failing.",
+    "Demo: 7 books rows, 7 GSTR-2B rows, 6 matched, 1 missing-in-2B, 1 missing-in-books, 1 value mismatch, 1 date mismatch; potential ITC at risk 1890; potential unclaimed 900; match rate 85.71.",
+    "Messy: 2 duplicate books rows, 1 invalid GSTIN checksum, 2 missing-in-2B rows; potential ITC at risk 2700; match rate 50.",
+    "CLI strict mode exits 1 on exceptions; non-strict mode exits 0; invalid input exits 2.",
+    "Scripts import only node: built-ins and local modules; zero runtime dependencies, no network calls and no API keys.",
+    "validate-product reports 0 failures; validate-skill-readiness reports 0 failures; audit-package reports 0 failures and 45 safe entries.",
+    "product-manifest.json records 35 product files; dist/itc-recovery-desk-1.0.0.zip contains the customer package."
+  ]
+}

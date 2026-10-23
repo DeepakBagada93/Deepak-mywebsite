@@ -1,0 +1,153 @@
+{
+  "name": "GST Invoice & HSN Compliance Kit",
+  "slug": "gst-invoice-compliance-kit",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-20T15:39:39.288Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 2016,
+      "sha256": "82716a6d047de645a6c3cd605f056a5f6acba2da74a8248e8249aff90f5c3668"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 3729,
+      "sha256": "28d436a1dd711195f7e332e525c9a3d61500ffb0fe18fb9b3a594159790ae280"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 9526,
+      "sha256": "c3cdd857e0f2f5189323e239d5bfa3ef1e2b93cd7605f5f9f91dd89a54ea3808"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 4323,
+      "sha256": "5d8fca4ee8b49a8b8bb17429c21273607d0dd4266bbd350056a699221a2adab7"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 11375,
+      "sha256": "d5d6b46d3543ffe6567f2e4e63a06c27138dfe1e4526026bcb4885ad10ea3b53"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 9330,
+      "sha256": "53e7cdf3c3cb0311e1301bcff53cdd749003a5b3d98029b24809e093761a4e99"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 6086,
+      "sha256": "26feeec9b6741bb8159a1332013f643f7100695dff464103dbcafcd4c66eea08"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 5351,
+      "sha256": "d0020ec0a621947743082b5effb630a0756260c23d0f98789ec0770fb710fb16"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 19147,
+      "sha256": "8fb5712dcc4aa73b858782d8db2f61a60e10a954fc845dc7e85d7f5e17b47441"
+    },
+    {
+      "path": "examples/expected/batch.json",
+      "bytes": 6847,
+      "sha256": "a2e02e98cb7a1da705851047c33e70eaf00321943a10ff3e5cf7e1d05d9b34ba"
+    },
+    {
+      "path": "examples/expected/batch.md",
+      "bytes": 1196,
+      "sha256": "ee72465947bec7d9fe1d4396e1c9e9df41759a6b5adaf201e82ce75c24ada4db"
+    },
+    {
+      "path": "examples/expected/invoice-clean.json",
+      "bytes": 1651,
+      "sha256": "0ecccc8e8a1c81baf423f5e68bb5d373dc2f56467b73dfa2654660db288b5b30"
+    },
+    {
+      "path": "examples/expected/invoice-clean.md",
+      "bytes": 942,
+      "sha256": "16ed10f91590770c1dd2987cc57126f5ac5805bfe64bbfe76ad468dce1eaea8c"
+    },
+    {
+      "path": "examples/expected/invoice-fixture.json",
+      "bytes": 5485,
+      "sha256": "2848c393db78f69ace4aac44da59a497b565076735d74416f85083ffe14013b1"
+    },
+    {
+      "path": "examples/expected/invoice-fixture.md",
+      "bytes": 3632,
+      "sha256": "79face6bc369ce70f76aa02242e4692207c505aee2617d122e5e3501cd3152fa"
+    },
+    {
+      "path": "examples/invoice.clean.json",
+      "bytes": 1355,
+      "sha256": "b70973ab8f8c07863959c999dfd899adc51f5a2cafb01319ac587d48e7a0c0fe"
+    },
+    {
+      "path": "examples/invoice.fixture.json",
+      "bytes": 1142,
+      "sha256": "e1eb66b1fc2fc37df118f34e86ca1c4ab22c9a76bb89409fa76128399c521c31"
+    },
+    {
+      "path": "examples/invoices.batch.json",
+      "bytes": 4475,
+      "sha256": "319a54c4936dcae6d82e98176de561b7092c47732d886ed5711466a2732848ed"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 5485,
+      "sha256": "1f65d7c29eb9ae7cf63056f5d94d2cdd0655ea87c27291a066c9eda094a28951"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7932,
+      "sha256": "c33977f006df5aa3b70c04d457bfd1886a3221fcf7a69aa93bfec4488404c2ae"
+    },
+    {
+      "path": "skills/gst-invoice-compliance-kit/scripts/audit-invoice.mjs",
+      "bytes": 3253,
+      "sha256": "2d250d0c5f6601b09c493e2a94a95d8bdca0d6237623eca067913170f0126a79"
+    },
+    {
+      "path": "skills/gst-invoice-compliance-kit/scripts/batch-audit.mjs",
+      "bytes": 4004,
+      "sha256": "0f8ce7c9b93e2b0d7bcc6349a04b7a6d9e966b66dd23dff652e4c87290130cde"
+    },
+    {
+      "path": "skills/gst-invoice-compliance-kit/scripts/hsn-lookup.mjs",
+      "bytes": 3147,
+      "sha256": "4f0a75a2a9793975265eab407e7df2a6097c04d6267f757794e0e2cfcd5dd432"
+    },
+    {
+      "path": "skills/gst-invoice-compliance-kit/scripts/lib.mjs",
+      "bytes": 46492,
+      "sha256": "341a8a632ae8ef543a005042897d0cdeee55af42622566ef7da9549a4cf9a341"
+    },
+    {
+      "path": "skills/gst-invoice-compliance-kit/SKILL.md",
+      "bytes": 46980,
+      "sha256": "65cab7912ba3aca3ca9ec4f0aa891d4c4b37c0cf6771d5c567cf9bc77bcc728b"
+    },
+    {
+      "path": "tests/gst-invoice-compliance-kit.test.mjs",
+      "bytes": 15302,
+      "sha256": "bd3332629db822a82b3e19d33191d23067e6ebf29de067afdde226f146783a69"
+    },
+    {
+      "path": "tests/index.js",
+      "bytes": 348,
+      "sha256": "8d0984a8c7cddf30cc5940c9403598f3b10762e1bb4522abca77124bb6e128f4"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 6056,
+      "sha256": "fe36eeb259f1e8bfd2b066dc290d53dc8092d37b78313fe50369a25e354cde18"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, support terms, storefront fulfillment, and owner approval require manual review.",
+    "Live GST portal, IRP, and e-way bill behavior, client-IDE installation, and Node.js/Windows compatibility are not verified."
+  ]
+}

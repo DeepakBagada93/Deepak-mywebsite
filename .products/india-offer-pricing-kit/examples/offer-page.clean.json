@@ -1,0 +1,28 @@
+{
+  "product": "Creator Revenue Skills Pack",
+  "url": "https://deepakbagada.in/products/creator-revenue-pack",
+  "currency": "INR",
+  "price": 2999,
+  "priceIncludesGst": true,
+  "gstNumber": "24ABCDE1234F1Z5",
+  "refundPolicy": "30-day money-back guarantee if the pack does not run as documented.",
+  "deliveryTime": "Instant download after payment",
+  "contact": {
+    "email": "support@deepakbagada.in",
+    "whatsapp": "+91 90000 00000"
+  },
+  "paymentMethods": ["upi", "cards", "netbanking"],
+  "headline": "Turn one idea into ads, content and a priced offer.",
+  "cta": "Get the pack for ₹2,999",
+  "testimonials": [
+    {
+      "name": "Riya S.",
+      "result": "Cut her ad audit from three hours to twenty minutes."
+    }
+  ],
+  "termsUrl": "https://deepakbagada.in/terms",
+  "privacyUrl": "https://deepakbagada.in/privacy",
+  "claims": [
+    "Three tested skills, instant download, 30-day refund."
+  ]
+}

@@ -1,0 +1,6 @@
+issue_type,severity,supplier_gstin,invoice_number,invoice_date,books_taxable,gstr2b_taxable,books_tax,gstr2b_tax,tax_difference,action,source_row
+missing_in_2b,high,29AAECS1234F1Z5,INV-2002,2026-09-02,5000,,900,,900,"Ask the supplier to file or amend GSTR-1, and confirm the invoice is valid and not cancelled.",books:4
+missing_in_2b,high,29AAECS1234F1ZK,INV-2001,2026-09-01,10000,,1800,,1800,"Ask the supplier to file or amend GSTR-1, and confirm the invoice is valid and not cancelled.",books:3
+duplicate_in_books,medium,29AAECS1234F1ZK,INV-2001,2026-09-01,10000,,1800,,0,Confirm only one invoice is genuine before claiming ITC.,books:3
+duplicate_in_books,medium,29AAECS1234F1ZK,INV/2001,2026-09-01,10000,,1800,,0,Confirm only one invoice is genuine before claiming ITC.,books:2
+invalid_gstin_checksum,medium,29AAECS1234F1Z5,INV-2002,2026-09-02,5000,,900,,0,Correct the GSTIN from the supplier document; matching may fail.,books:4

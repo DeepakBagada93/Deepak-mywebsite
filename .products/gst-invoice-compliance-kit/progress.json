@@ -1,0 +1,41 @@
+{
+  "product": "gst-invoice-compliance-kit",
+  "version": "1.0.0",
+  "createdAt": "2026-10-20T00:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "The audit engine is offline and deterministic: every finding comes from a named rule in lib.mjs, so the same invoice, audit date and options produce the same score and report.",
+    "E-invoice logic is limited to B2B and export supplies where AATO strictly exceeds ₹5 crore; exactly ₹5 crore is outside the mandate, and domestic B2C is explicitly excluded instead of being over-flagged.",
+    "HSN/SAC depth is modelled as 4 digits up to ₹5 crore AATO and 6 digits above; an 8-digit invoice code is accepted but flagged medium because GSTR-1 Table 12 expects 4 or 6 digits. No 8-digit mandate is claimed.",
+    "Batch duplicates are grouped by invoice number and reported once per affected invoice, with the group size in the message, so a duplicate is not counted as many separate findings.",
+    "The product does not file returns, compute liability, generate IRNs or e-way bills, or claim portal acceptance; those limits are stated in the skill, README, license and store listing.",
+    "The CA handoff is conservative: unresolved classification, rate, export, SEZ, works-contract and state-threshold questions are written into ca-questions.md rather than guessed."
+  ],
+  "unresolved": [
+    "Owner approval for final pricing, license terms, support terms, storefront, fulfillment and publication.",
+    "Execution on Windows and on Node.js 18 and 22 has not been tested; only macOS with Node.js 20+ (recorded run on 25.9.0) is verified.",
+    "Live GST portal, IRP and e-way bill integration has not been tested; the kit is not a filing tool.",
+    "State-specific e-way bill thresholds are not modelled beyond the ₹50,000 central threshold and an explicit caveat.",
+    "Client-IDE installation and activation in Antigravity, Claude Code, Cursor, Codex or other hosts has not been tested.",
+    "Market demand, ad performance and legal sufficiency have not been independently validated."
+  ],
+  "evidence": [
+    "node --test tests/ reports 33 passing, 0 skipped, 0 failing.",
+    "Clean fixture: 100/100, READY TO ISSUE, zero findings, exit 0 in strict mode.",
+    "Broken fixture: 0/100, DO NOT ISSUE, 4 critical / 5 high / 3 medium / 2 low.",
+    "Batch of three invoices: average 86.67, duplicate INV-2026-0142 detected in 2 invoices, exit 1.",
+    "Tutorial examples: B2C 100/100 exit 0, B2B 100/100 exit 0, duplicate batch average 80 exit 1.",
+    "E-invoice boundary: exactly ₹5 crore does not require an IRN; above ₹5 crore does. An 8-digit HSN code is medium for GSTR-1 formatting.",
+    "Factory validator, skill-readiness validator and archive audit each reported 0 failures.",
+    "Scripts import only node: built-ins and local modules; zero runtime dependencies, no network calls and no API keys."
+  ]
+}

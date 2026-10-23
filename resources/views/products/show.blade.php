@@ -38,6 +38,51 @@
                     <p>{{ $product['description'] }}</p>
                 </div>
 
+                @if (! empty($product['aeo_summary']))
+                <div class="store-detail__aeo" data-reveal>
+                    <div class="store-detail__aeo-label mono">⚡ Direct Answer & Architecture Blueprint</div>
+                    <p style="font-size:1.02rem;line-height:1.7;margin:0 0 14px 0;color:var(--ink);"><strong>{{ $product['aeo_summary']['definition'] }}</strong></p>
+                    <div class="store-detail__aeo-grid">
+                        <div class="store-detail__aeo-item">
+                            <strong class="mono">Target Audience</strong>
+                            <p>{{ $product['aeo_summary']['target_audience'] }}</p>
+                        </div>
+                        <div class="store-detail__aeo-item">
+                            <strong class="mono">Core Mechanism</strong>
+                            <p>{{ $product['aeo_summary']['core_mechanism'] }}</p>
+                        </div>
+                        <div class="store-detail__aeo-item">
+                            <strong class="mono">Verified Benchmark</strong>
+                            <p>{{ $product['aeo_summary']['key_metric'] }}</p>
+                        </div>
+                    </div>
+                </div>
+                @endif
+
+                @if (! empty($product['comparison']))
+                <div class="store-detail__block">
+                    <h2 class="store-detail__h2">Why this architecture wins</h2>
+                    <div class="store-comparison" style="overflow-x:auto;">
+                        <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.95rem;">
+                            <thead>
+                                <tr style="border-bottom:2px solid var(--hair);text-align:left;">
+                                    <th style="padding:12px;width:50%;color:var(--muted);font-family:var(--mono);font-size:0.75rem;text-transform:uppercase;">Without this skill (Manual & Flawed)</th>
+                                    <th style="padding:12px;width:50%;color:var(--ink);font-family:var(--mono);font-size:0.75rem;text-transform:uppercase;">With this skill (Deterministic & Gated)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($product['comparison'] as $row)
+                                <tr style="border-bottom:1px solid var(--hair);">
+                                    <td style="padding:12px;color:var(--muted);line-height:1.5;">✕ {{ $row['without'] }}</td>
+                                    <td style="padding:12px;color:var(--ink);font-weight:500;line-height:1.5;">✓ {{ $row['with'] }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @endif
+
                 <div class="store-detail__block">
                     <h2 class="store-detail__h2">What's inside</h2>
                     <ul class="store-detail__deliverables">
@@ -55,6 +100,27 @@
                         @endforeach
                     </ul>
                 </div>
+
+                @if (! empty($product['how_to_use']))
+                <div class="store-detail__block">
+                    <h2 class="store-detail__h2">How to use this skill (Step-by-step)</h2>
+                    <p style="color:var(--muted);margin-bottom:16px;font-size:0.95rem;">Run offline in your local workspace, orchestrate through any agent (Claude Code, Cursor, Antigravity, Cline), or plug directly into CI/CD pipelines.</p>
+                    <div class="store-steps">
+                        @foreach ($product['how_to_use'] as $step)
+                        <div class="store-step">
+                            <div class="store-step__head">
+                                <span class="store-step__num mono">{{ $step['step'] ?? $loop->iteration }}</span>
+                                <h3 class="store-step__title">{{ $step['title'] }}</h3>
+                            </div>
+                            <p class="store-step__desc">{{ $step['desc'] }}</p>
+                            @if (! empty($step['command']))
+                            <pre class="store-step__code"><code>{{ $step['command'] }}</code></pre>
+                            @endif
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
 
                 <div class="store-detail__block">
                     <h2 class="store-detail__h2">Included with every purchase</h2>

@@ -1,0 +1,3 @@
+supplier_gstin,issue_count,invoice_numbers,tax_at_risk,potential_unclaimed,action
+29AAECS1234F1ZK,1,INV-1005,1800,0,"Ask the supplier to file or amend GSTR-1, and confirm the invoice is valid and not cancelled."
+27AAECS1234F1ZO,2,INV-1006 | INV-2001,90,900,Locate the invoice and record it in the purchase register before claiming ITC. Ask the supplier to confirm or amend GSTR-1; the purchase register claims more tax than GSTR-2B.

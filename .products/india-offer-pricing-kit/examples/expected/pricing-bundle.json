@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-20T14:12:29.917Z",
+  "product": "Creator Revenue Skills Pack",
+  "audience": "Indian D2C founders, creators and small agencies",
+  "currency": "INR",
+  "assumptions": {
+    "gstRate": 18,
+    "gatewayFeePct": 2,
+    "feeGstPercent": 18,
+    "effectiveGatewayPct": 2.36,
+    "netFactor": 0.8275,
+    "floorNet": 1800,
+    "cpc": 18,
+    "cvr": 0.02
+  },
+  "tiers": [
+    {
+      "name": "Solo",
+      "price": 2999,
+      "role": "Entry offer for first-time buyers",
+      "base": 2541.5254237288136,
+      "gst": 457.47,
+      "gatewayFee": 59.98,
+      "netRevenue": 2481.55,
+      "marginPct": 82.7
+    },
+    {
+      "name": "Pro",
+      "price": 3999,
+      "role": "Main offer: the one most buyers should choose",
+      "base": 3388.983050847458,
+      "gst": 610.02,
+      "gatewayFee": 79.98,
+      "netRevenue": 3309,
+      "marginPct": 82.7
+    },
+    {
+      "name": "Agency",
+      "price": 7999,
+      "role": "Unlimited client use and priority support",
+      "base": 6778.813559322034,
+      "gst": 1220.19,
+      "gatewayFee": 159.98,
+      "netRevenue": 6618.83,
+      "marginPct": 82.7
+    }
+  ],
+  "recommendedTier": "Solo",
+  "minimumViablePrice": 2199,
+  "launchPrice": 1999,
+  "anchorPrice": 7999,
+  "bundlePrice": 2999,
+  "bundleSavingPct": 21,
+  "economics": {
+    "adSpend": 20000,
+    "clicks": 1111,
+    "sales": 22.2,
+    "revenue": 66578,
+    "netRevenue": 55090,
+    "roas": 3.33,
+    "profit": 35090,
+    "breakEvenCPA": 2481.55,
+    "breakEvenROAS": 1.21,
+    "verdict": "PROFITABLE TEST"
+  },
+  "paymentNotes": [
+    "UPI is the default expectation in India; a page without it loses buyers.",
+    "Cards and netbanking should be visible before checkout, not hidden behind \"more options\".",
+    "Recurring charges need explicit consent, a cancellation path and RBI e-mandate handling."
+  ],
+  "warnings": []
+}

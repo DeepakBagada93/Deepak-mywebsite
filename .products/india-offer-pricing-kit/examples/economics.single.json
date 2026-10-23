@@ -1,0 +1,16 @@
+{
+  "product": "Ad Creative Lab",
+  "audience": "D2C founders spending ₹50,000–₹5,00,000 per month on ads",
+  "floorNet": 1000,
+  "anchorValue": 3499,
+  "tierPrices": [1499, 3499, 6999],
+  "economicsPrice": 1499,
+  "gstRate": 18,
+  "gatewayFeePct": 2,
+  "gatewayGstOnFee": 18,
+  "priceIncludesGst": true,
+  "adSpend": 30000,
+  "cpc": 18,
+  "cvr": 0.02,
+  "bundlePrices": [1499, 1299, 999]
+}

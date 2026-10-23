@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-20T14:12:29.851Z",
+  "product": "Ad Creative Lab",
+  "audience": "D2C founders spending ₹50,000–₹5,00,000 per month on ads",
+  "currency": "INR",
+  "assumptions": {
+    "gstRate": 18,
+    "gatewayFeePct": 2,
+    "feeGstPercent": 18,
+    "effectiveGatewayPct": 2.36,
+    "netFactor": 0.8275,
+    "floorNet": 1000,
+    "cpc": 18,
+    "cvr": 0.02
+  },
+  "tiers": [
+    {
+      "name": "Solo",
+      "price": 1499,
+      "role": "Entry offer for first-time buyers",
+      "base": 1270.3389830508474,
+      "gst": 228.66,
+      "gatewayFee": 29.98,
+      "netRevenue": 1240.36,
+      "marginPct": 82.7
+    },
+    {
+      "name": "Pro",
+      "price": 3499,
+      "role": "Main offer: the one most buyers should choose",
+      "base": 2965.2542372881358,
+      "gst": 533.75,
+      "gatewayFee": 69.98,
+      "netRevenue": 2895.27,
+      "marginPct": 82.7
+    },
+    {
+      "name": "Agency",
+      "price": 6999,
+      "role": "Unlimited client use and priority support",
+      "base": 5931.35593220339,
+      "gst": 1067.64,
+      "gatewayFee": 139.98,
+      "netRevenue": 5791.38,
+      "marginPct": 82.7
+    }
+  ],
+  "recommendedTier": "Solo",
+  "minimumViablePrice": 1299,
+  "launchPrice": 999,
+  "anchorPrice": 6999,
+  "bundlePrice": 2999,
+  "bundleSavingPct": 21,
+  "economics": {
+    "adSpend": 30000,
+    "clicks": 1667,
+    "sales": 33.3,
+    "revenue": 49917,
+    "netRevenue": 41304,
+    "roas": 1.66,
+    "profit": 11304,
+    "breakEvenCPA": 1240.36,
+    "breakEvenROAS": 1.21,
+    "verdict": "PROFITABLE TEST"
+  },
+  "paymentNotes": [
+    "UPI is the default expectation in India; a page without it loses buyers.",
+    "Cards and netbanking should be visible before checkout, not hidden behind \"more options\".",
+    "Recurring charges need explicit consent, a cancellation path and RBI e-mandate handling."
+  ],
+  "warnings": []
+}

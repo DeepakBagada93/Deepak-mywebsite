@@ -1,0 +1,157 @@
+{
+  "name": "India Offer & Pricing Kit",
+  "slug": "india-offer-pricing-kit",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-20T14:16:06.538Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 582,
+      "sha256": "afe5d1a120aeb8b833fa134508f12290c7536405ceb2ecef34b9d5afa6185d25"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1211,
+      "sha256": "16bd702396766779e619ad97619b03bbb4073d8aa695f265fa6622f512bfbcb9"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 2809,
+      "sha256": "634b6fddae9a18e31aaf7c92c72b9d7103f3dd8134579a75b0a6431df3810fcb"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1470,
+      "sha256": "282b6d35f682575ef0dc0a6ff4e10217dd826ba18d6e99d303d70e474a6c3d39"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 3121,
+      "sha256": "660c12117ff8bfc38cd0ac289fcc3ec2d65f18861dac67c20568fa0f014fdc0d"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 4528,
+      "sha256": "ec020331c2e06fb0fce376f35501ab7b8082969666ee0940faf59f5bdcf95097"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1606,
+      "sha256": "a62015560a216aa2b542893935ef7f6dda755617c406206b7a63358bdc3d7500"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 2117,
+      "sha256": "a1520a16a3fdd2cdc7d8baa493e20664f34ed6d37fc3418910d54b52e6c6ca0b"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 6392,
+      "sha256": "50140d3a5c7093161d995ec418a5e04c9234dd58bcb810d51d06117bf14c1845"
+    },
+    {
+      "path": "examples/economics.bundle.json",
+      "bytes": 395,
+      "sha256": "018ccfb920755d320d772413171f397f141f3e954c04b47ea06225d4f376c874"
+    },
+    {
+      "path": "examples/economics.single.json",
+      "bytes": 397,
+      "sha256": "0f9aaf84bf6f0fb28656885e30d1832ad8027d2b3c0da7e173eb4cbf82ffc965"
+    },
+    {
+      "path": "examples/expected/offer-audit-clean.json",
+      "bytes": 334,
+      "sha256": "11f07e46de56a1b2acd5070899c501009b6005525690dd9df5f6c8bb8dfe2bde"
+    },
+    {
+      "path": "examples/expected/offer-audit-clean.md",
+      "bytes": 438,
+      "sha256": "3c28631fb7df25397ff85d312ab8e32bd9c6079861eb81c09b8da597748ec2ab"
+    },
+    {
+      "path": "examples/expected/offer-audit-fixture.json",
+      "bytes": 4429,
+      "sha256": "42151d1c27ba80a78f61ddf8e631361cc902a25f9befca483da78c278007806b"
+    },
+    {
+      "path": "examples/expected/offer-audit-fixture.md",
+      "bytes": 2749,
+      "sha256": "9450ca7b2eea8ee75166938e40912b08716756f3b5d6396742d90b5c25987068"
+    },
+    {
+      "path": "examples/expected/pricing-bundle.json",
+      "bytes": 1897,
+      "sha256": "22b7a79d0a74b42c2b05f778b7b02915ad23c8695047c1090622f21867741678"
+    },
+    {
+      "path": "examples/expected/pricing-bundle.md",
+      "bytes": 1085,
+      "sha256": "4174bbd2197bfa177ecc62832cada826f0bef9611695441b69b7431f2f2a9d76"
+    },
+    {
+      "path": "examples/expected/pricing-single.json",
+      "bytes": 1901,
+      "sha256": "14af6031f0421f530dc5ca8072f58c007cc002c940e6ea110c252e0d30057181"
+    },
+    {
+      "path": "examples/expected/pricing-single.md",
+      "bytes": 1071,
+      "sha256": "732bc8af73c00f48ebd10475bdf0c1ff1a53d2d19298a8b26eae00b7f379c9e0"
+    },
+    {
+      "path": "examples/offer-page.clean.json",
+      "bytes": 917,
+      "sha256": "52483ad79faf6d7743b46aa18ab4fce8473db85e9d98eae95501c72289bc7f41"
+    },
+    {
+      "path": "examples/offer-page.fixture.json",
+      "bytes": 548,
+      "sha256": "deb22d61f2b4bd79dd4a0974dfa0a2d51ecfdfd31066c6ea62f324c54a2ba7b3"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1528,
+      "sha256": "44ecc35d7c734e94692ec0a497509e53db8aa090d3586e7b9d22182790195c0d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2631,
+      "sha256": "f7fbc991aa67861d966aca110aed7e3d11570516b1f5332188dd73aa4c0a240e"
+    },
+    {
+      "path": "skills/india-offer-pricing-kit/scripts/audit-offer-page.mjs",
+      "bytes": 1554,
+      "sha256": "7a1c0a04a39dbd51394c8078a4faf75a274dba46dfa9fe5a2c7ae3988b2064dc"
+    },
+    {
+      "path": "skills/india-offer-pricing-kit/scripts/lib.mjs",
+      "bytes": 20474,
+      "sha256": "69438b501765e99b869ce832b676411024bd5dd0f421e9f79e41fccf7573fdd3"
+    },
+    {
+      "path": "skills/india-offer-pricing-kit/scripts/price-offer.mjs",
+      "bytes": 1359,
+      "sha256": "f34a2976c18f3f3aa8662d05eb7318e4c89265cd7c078e626e9a89dee1cb9af5"
+    },
+    {
+      "path": "skills/india-offer-pricing-kit/SKILL.md",
+      "bytes": 8644,
+      "sha256": "ce7acffed6dc2213e945002a4ca70bc6bdcd8c6c1fadabf25ea5cf9fbeedcfda"
+    },
+    {
+      "path": "tests/india-offer-pricing-kit.test.mjs",
+      "bytes": 3506,
+      "sha256": "7e28674a529b6000271a94bfc5e44a0ca20b60576714cd157fbbbf062f480c70"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4729,
+      "sha256": "45e2aed9012fa40fc5d0e86a789aadb20d7ccd546a16d0e205ec75ebeed46777"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "sourceTitle": "Flawed content pack fixture",
+  "pieces": [
+    {
+      "id": "B1",
+      "platform": "instagram",
+      "format": "reel_9x16",
+      "language": "en",
+      "hook": "This game-changer will unlock the power of AI.",
+      "body": "In today's fast-paced world, this game-changer will unlock the power of AI and supercharge your workflow. It is important to note that every founder should delve into automation to elevate your brand.",
+      "cta": "Save this.",
+      "hashtags": ["ai", "automation", "growth", "business", "marketing", "tools", "india", "startup", "viral"]
+    },
+    {
+      "id": "B2",
+      "platform": "x",
+      "format": "post",
+      "language": "en",
+      "hook": "Same text, different platform.",
+      "body": "In today's fast-paced world, this game-changer will unlock the power of AI and supercharge your workflow. It is important to note that every founder should delve into automation to elevate your brand. This is exactly the same paragraph pasted again because rewriting takes time and nobody checked the character limit before posting it to X where the limit is two hundred and eighty characters.",
+      "cta": "",
+      "hashtags": []
+    },
+    {
+      "id": "B3",
+      "platform": "linkedin",
+      "format": "text",
+      "language": "en",
+      "hook": "A copy of the Instagram post.",
+      "body": "In today's fast-paced world, this game-changer will unlock the power of AI and supercharge your workflow. It is important to note that every founder should delve into automation to elevate your brand.",
+      "cta": "Comment below.",
+      "hashtags": ["ai", "automation", "growth", "business", "marketing", "tools"]
+    }
+  ]
+}

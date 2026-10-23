@@ -1,0 +1,142 @@
+{
+  "name": "Content Repurpose Engine",
+  "slug": "content-repurpose-engine",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-20T14:16:06.264Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 506,
+      "sha256": "edefaec883dcbff975ad73d3263728242d61c558dff17743dc2df7e7743d7f07"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1159,
+      "sha256": "d7983de03b76caa853f7bd39a66fe368f0feeca8fbbf333c6a8959c1a3c8211e"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 2698,
+      "sha256": "66cb7782f4f4b4cc6c67e584dd017da854523d116cd34b445b29203e94e74b7d"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1318,
+      "sha256": "32320b3f70a9e190c7cf812ac65cf720cd18275d1859d11a28a216739860b364"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 3596,
+      "sha256": "b31333d09b289dfec06e3d5588177338b96cabd3f4a31db2000ec43e173b00d9"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 4384,
+      "sha256": "c5e0d0e4f81aed540e4bb9e139f2b0785b95f2c05b4db8b200d43b254d117b7e"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1459,
+      "sha256": "f48a8e446436e40f34a32ae278997bf8c46e3e25c53be227d79339d1d64eda7d"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1682,
+      "sha256": "e45d828f8aa181138240b4ecd232ca6855a673d96b08a19eceddf58534be9e9c"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 5718,
+      "sha256": "72888a2197964a46cd4ebaa16f59078eb3dd90f9e8a9353ca597f62cabd79675"
+    },
+    {
+      "path": "examples/content-pack.clean.json",
+      "bytes": 5377,
+      "sha256": "94640cb396680904cae9677df3ab91f37c9155119708f8cb6ad63676eea45d87"
+    },
+    {
+      "path": "examples/content-pack.fixture.json",
+      "bytes": 1692,
+      "sha256": "92dd50e0cecdeba05cdc58886cdad292b7ff6aaafacad4b89b551443f98dbf73"
+    },
+    {
+      "path": "examples/expected/audit-clean.json",
+      "bytes": 311,
+      "sha256": "407ee805ceac146ab3f4f8d1027cd479d51a08a2ddf93cb4ac3ab3293529090c"
+    },
+    {
+      "path": "examples/expected/audit-clean.md",
+      "bytes": 437,
+      "sha256": "36619ddcfef006798b4cbe0e72e8bf9c630dfde207d13ac90c64b2d0e185fae5"
+    },
+    {
+      "path": "examples/expected/audit-fixture.json",
+      "bytes": 7945,
+      "sha256": "efb2c04c3bdfb6e3c842269f068cf365587b877c56938720026a8b984a6cdf2d"
+    },
+    {
+      "path": "examples/expected/audit-fixture.md",
+      "bytes": 4573,
+      "sha256": "87fddd16b2b9d49663d0ab00d98749f008e915f892e5f58a2a9febf9fa9fcf23"
+    },
+    {
+      "path": "examples/expected/plan.json",
+      "bytes": 16466,
+      "sha256": "be7efe309aab897f3e83d619b063229262bc2f1380a3a76cd4470fc3cf0a6238"
+    },
+    {
+      "path": "examples/expected/plan.md",
+      "bytes": 4707,
+      "sha256": "3ad7dbb0a4b3efdf589c4a87ffdfd212ff79a38d289aee9849f8bdfb89b85128"
+    },
+    {
+      "path": "examples/source.asset.json",
+      "bytes": 1327,
+      "sha256": "b0a0bfd884a1102ca34d5daf3f8d0ca1f1a9efff9abed096474ae52dbb0c30c1"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1451,
+      "sha256": "c0d5d1cf2ea8298b3bf31ceecb6a0d3ebb3c2ed33f7b86f0a14cebc60068d196"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2589,
+      "sha256": "a34cd13f570390523ab67ce922dd4d46267c361ff91e21f1aeb98c215be57592"
+    },
+    {
+      "path": "skills/content-repurpose-engine/scripts/audit-content-pack.mjs",
+      "bytes": 1556,
+      "sha256": "fca4c2927da70702ef0fd480ed1e26df44d2cb9f06f82361c9b70e3851dcbb7d"
+    },
+    {
+      "path": "skills/content-repurpose-engine/scripts/build-content-plan.mjs",
+      "bytes": 1320,
+      "sha256": "6d55d83fcdd9174cc27f55e994432518b583be635882a21514b9671d7419deee"
+    },
+    {
+      "path": "skills/content-repurpose-engine/scripts/lib.mjs",
+      "bytes": 20688,
+      "sha256": "aab742776c04cefdb2f2dccf4693083d272385ac2632c54362323d0ffa5b4ed1"
+    },
+    {
+      "path": "skills/content-repurpose-engine/SKILL.md",
+      "bytes": 8768,
+      "sha256": "78afafd2fb679ee8f8ae88c4e9bfca0cf2e4129582c6fd8d5552c3d6a9a26353"
+    },
+    {
+      "path": "tests/content-repurpose-engine.test.mjs",
+      "bytes": 3122,
+      "sha256": "069598a83c1d67e37d47c500feed5969beec0978ee7e697fe372ed2e54e259e2"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4639,
+      "sha256": "f28ec0ec9a83d064852bfbf4e6fbaf38cabd0ce9af41f7ffac8bab5320de9c9d"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

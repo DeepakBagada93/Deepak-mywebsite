@@ -1,0 +1,145 @@
+{
+  "invoices": [
+    {
+      "invoiceNumber": "INV-2026-0142",
+      "invoiceDate": "2026-10-18",
+      "business": { "name": "Sundara Foods Pvt Ltd", "gstin": "29AAECS1234F1ZK", "aato": 4200000 },
+      "supplier": {
+        "name": "Sundara Foods Pvt Ltd",
+        "address": "14/2 Residency Road, Bengaluru, Karnataka 560025",
+        "gstin": "29AAECS1234F1ZK",
+        "stateCode": "29",
+        "phone": "+91 98450 00000",
+        "email": "accounts@sundarafoods.in"
+      },
+      "recipient": {
+        "name": "Priya Nair",
+        "address": "Flat 402, Palm Grove, Indiranagar, Bengaluru, Karnataka 560038",
+        "gstin": null,
+        "stateCode": "29",
+        "uniqueId": "9000012345"
+      },
+      "placeOfSupply": "29-Karnataka",
+      "lines": [
+        {
+          "description": "Millet Dosa Mix 500g",
+          "hsn": "1905",
+          "quantity": 2,
+          "unit": "packet",
+          "unitPrice": 249,
+          "discount": 0,
+          "taxableValue": 498,
+          "gstRate": 5,
+          "cgst": 12.45,
+          "sgst": 12.45,
+          "igst": 0,
+          "total": 522.9
+        }
+      ],
+      "charges": { "shipping": 0, "other": 0 },
+      "discount": 0,
+      "roundOff": 0,
+      "totalTaxableValue": 498,
+      "totalTax": 24.9,
+      "grandTotal": 522.9,
+      "amountInWords": "Five Hundred Twenty Two Rupees and Ninety Paise Only",
+      "paymentTerms": "Prepaid. Order confirmed on receipt of payment.",
+      "eInvoice": null,
+      "eWayBill": null
+    },
+    {
+      "invoiceNumber": "INV-2026-0143",
+      "invoiceDate": "2026-10-19",
+      "business": { "name": "Sundara Foods Pvt Ltd", "gstin": "29AAECS1234F1ZK", "aato": 4200000 },
+      "supplier": {
+        "name": "Sundara Foods Pvt Ltd",
+        "address": "14/2 Residency Road, Bengaluru, Karnataka 560025",
+        "gstin": "29AAECS1234F1ZK",
+        "stateCode": "29",
+        "phone": "+91 98450 00000",
+        "email": "accounts@sundarafoods.in"
+      },
+      "recipient": {
+        "name": "Rahul Iyer",
+        "address": "18 Balfour Road, Chennai, Tamil Nadu 600017",
+        "gstin": null,
+        "stateCode": "33",
+        "uniqueId": "9000098765"
+      },
+      "placeOfSupply": "33-Tamil Nadu",
+      "lines": [
+        {
+          "description": "Millet Dosa Mix 500g",
+          "hsn": "1905",
+          "quantity": 3,
+          "unit": "packet",
+          "unitPrice": 249,
+          "discount": 0,
+          "taxableValue": 747,
+          "gstRate": 5,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 37.35,
+          "total": 784.35
+        }
+      ],
+      "charges": { "shipping": 60, "other": 0 },
+      "discount": 0,
+      "roundOff": 0,
+      "totalTaxableValue": 747,
+      "totalTax": 37.35,
+      "grandTotal": 844.35,
+      "amountInWords": "Eight Hundred Forty Four Rupees and Thirty Five Paise Only",
+      "paymentTerms": "Prepaid. Order confirmed on receipt of payment.",
+      "eInvoice": null,
+      "eWayBill": null
+    },
+    {
+      "invoiceNumber": "INV-2026-0142",
+      "invoiceDate": "2026-10-19",
+      "business": { "name": "Sundara Foods Pvt Ltd", "gstin": "29AAECS1234F1ZK", "aato": 4200000 },
+      "supplier": {
+        "name": "Sundara Foods Pvt Ltd",
+        "address": "14/2 Residency Road, Bengaluru, Karnataka 560025",
+        "gstin": "29AAECS1234F1ZK",
+        "stateCode": "29",
+        "phone": "+91 98450 00000",
+        "email": "accounts@sundarafoods.in"
+      },
+      "recipient": {
+        "name": "Priya Nair",
+        "address": "Flat 402, Palm Grove, Indiranagar, Bengaluru, Karnataka 560038",
+        "gstin": null,
+        "stateCode": "29",
+        "uniqueId": "9000012345"
+      },
+      "placeOfSupply": "29-Karnataka",
+      "lines": [
+        {
+          "description": "Millet Dosa Mix 500g",
+          "hsn": "1905",
+          "quantity": 2,
+          "unit": "packet",
+          "unitPrice": 249,
+          "discount": 0,
+          "taxableValue": 498,
+          "gstRate": 5,
+          "cgst": 12.45,
+          "sgst": 12.45,
+          "igst": 0,
+          "total": 522.9
+        }
+      ],
+      "charges": { "shipping": 0, "other": 0 },
+      "discount": 0,
+      "roundOff": 0,
+      "totalTaxableValue": 498,
+      "totalTax": 24.9,
+      "grandTotal": 522.9,
+      "amountInWords": "Five Hundred Twenty Two Rupees and Ninety Paise Only",
+      "paymentTerms": "Prepaid. Order confirmed on receipt of payment.",
+      "eInvoice": null,
+      "eWayBill": null
+    }
+  ]
+}

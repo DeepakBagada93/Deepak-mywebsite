@@ -1,0 +1,49 @@
+{
+  "brand": "Deepak Bagada Systems",
+  "product": "Ad Creative Lab",
+  "price": 1499,
+  "currency": "INR",
+  "landingPage": "https://deepakbagada.in/products/ad-creative-lab",
+  "platforms": ["meta", "google"],
+  "creatives": [
+    {
+      "id": "M1",
+      "platform": "meta",
+      "format": "static_4x5",
+      "angle": "cost_of_inaction",
+      "language": "en",
+      "hooks": [
+        "Stop paying for clicks that never convert.",
+        "₹18 a click, zero sales. Here is the 12-point fix.",
+        "Most ad accounts leak money in the first 125 characters."
+      ],
+      "primaryText": "Stop paying for clicks that never convert. Run the 12 creative checks before you spend. Score the pack, fix hooks, launch.",
+      "headline": "Audit ads before you spend",
+      "description": "12 creative checks",
+      "cta": "Download"
+    },
+    {
+      "id": "G1",
+      "platform": "google",
+      "format": "search_rsa",
+      "angle": "mechanism",
+      "language": "en",
+      "hooks": ["Score 12 creative checks in minutes."],
+      "primaryText": "",
+      "headline": "Ad Creative Audit Tool",
+      "description": "12 checks for hooks, claims and budget. Instant download for ₹1,499.",
+      "cta": ""
+    }
+  ],
+  "ugcScripts": [
+    {
+      "id": "U1",
+      "durationSeconds": 30,
+      "hook": "My best ad was failing for one boring reason.",
+      "beats": ["Show the ad", "Run the audit", "Fix the hook", "Show the new score"],
+      "dialogue": "My best ad was failing for one boring reason. The first line was 30 words long. I ran the creative audit, cut it to eight words, and the same product started converting. Twelve checks, one download, no guesswork.",
+      "shotList": ["Phone screen recording of the audit", "Close-up of the hook rewrite", "Score card at 100"],
+      "cta": "Download the checklist"
+    }
+  ]
+}

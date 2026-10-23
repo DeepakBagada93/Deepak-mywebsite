@@ -53,6 +53,17 @@ class ProductController extends Controller
 
     public function show(string $slug)
     {
+        $aliases = [
+            'ads-creative-hub' => 'ad-creative-lab',
+            'ad-creative-hub' => 'ad-creative-lab',
+            'ads-creative-lab' => 'ad-creative-lab',
+            'ai-systems-master-bundle' => 'agent-skills-master-bundle',
+        ];
+
+        if (isset($aliases[$slug])) {
+            return redirect()->route('products.show', $aliases[$slug], 301);
+        }
+
         $site = config('site');
         $url = rtrim($site['url'], '/');
         $products = collect(config('products'));
@@ -79,41 +90,61 @@ class ProductController extends Controller
             ],
         ])->values()->all();
 
+        $graph = [
+            [
+                '@type' => 'Product',
+                'name' => $product['title'],
+                'description' => $product['description'],
+                'url' => $url.'/products/'.$slug,
+                'category' => $product['category'],
+                'brand' => ['@type' => 'Person', 'name' => $site['name']],
+                'aggregateRating' => [
+                    '@type' => 'AggregateRating',
+                    'ratingValue' => (string) $product['rating'],
+                    'reviewCount' => (string) $product['rating_count'],
+                ],
+                'offers' => self::offers($product, $url.'/products/'.$slug),
+            ],
+            [
+                '@type' => 'FAQPage',
+                'mainEntity' => $faqJson,
+            ],
+            [
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $url.'/'],
+                    ['@type' => 'ListItem', 'position' => 2, 'name' => 'Products', 'item' => $url.'/products'],
+                    ['@type' => 'ListItem', 'position' => 3, 'name' => $product['title'], 'item' => $url.'/products/'.$slug],
+                ],
+            ],
+        ];
+
+        if (! empty($product['how_to_use']) && is_array($product['how_to_use'])) {
+            $graph[] = [
+                '@type' => 'HowTo',
+                'name' => 'How to use '.$product['title'],
+                'description' => 'Step-by-step instructions for installing and running '.$product['title'].' with your AI agent or CLI.',
+                'step' => collect($product['how_to_use'])->map(static fn (array $s, int $i) => [
+                    '@type' => 'HowToStep',
+                    'position' => $i + 1,
+                    'name' => $s['title'] ?? 'Step '.($i + 1),
+                    'text' => $s['desc'] ?? '',
+                ])->all(),
+            ];
+        }
+
+        $seoTitle = $product['seo_title'] ?? ($product['title'].' — '.($product['is_free'] ? 'Free Download' : '₹'.number_format($product['price_inr'])).' | '.$site['name']);
+        $seoDescription = $product['seo_description'] ?? ($product['tagline'].' '.$product['description']);
+
         $head = [
-            'title' => $product['title'].' — '.($product['is_free'] ? 'Free Download' : '₹'.number_format($product['price_inr'])).' | '.$site['name'],
-            'description' => $product['tagline'].' '.$product['description'],
+            'title' => $seoTitle,
+            'description' => $seoDescription,
             'canonical' => $url.'/products/'.$slug,
             'og_title' => $product['title'].' | '.$site['name'],
+            'og_description' => $seoDescription,
             'json_ld' => json_encode([
                 '@context' => 'https://schema.org',
-                '@graph' => [
-                    [
-                        '@type' => 'Product',
-                        'name' => $product['title'],
-                        'description' => $product['description'],
-                        'url' => $url.'/products/'.$slug,
-                        'category' => $product['category'],
-                        'brand' => ['@type' => 'Person', 'name' => $site['name']],
-                        'aggregateRating' => [
-                            '@type' => 'AggregateRating',
-                            'ratingValue' => (string) $product['rating'],
-                            'reviewCount' => (string) $product['rating_count'],
-                        ],
-                        'offers' => self::offers($product, $url.'/products/'.$slug),
-                    ],
-                    [
-                        '@type' => 'FAQPage',
-                        'mainEntity' => $faqJson,
-                    ],
-                    [
-                        '@type' => 'BreadcrumbList',
-                        'itemListElement' => [
-                            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $url.'/'],
-                            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Products', 'item' => $url.'/products'],
-                            ['@type' => 'ListItem', 'position' => 3, 'name' => $product['title'], 'item' => $url.'/products/'.$slug],
-                        ],
-                    ],
-                ],
+                '@graph' => $graph,
             ], JSON_UNESCAPED_SLASHES),
         ];
 

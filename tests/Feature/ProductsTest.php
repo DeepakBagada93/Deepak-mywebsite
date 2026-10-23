@@ -26,6 +26,22 @@ class ProductsTest extends TestCase
         $response->assertSee('MCP Server Launch Kit');
         $response->assertSee('n8n Production Hardening Pack');
         $response->assertSee('AI Project Kickoff Skills Kit');
+        $response->assertSee('Ad Creative Lab');
+        $response->assertSee('Content Repurpose Engine');
+        $response->assertSee('GST Invoice & HSN Compliance Kit');
+        $response->assertSee('India Offer & Pricing Kit');
+        $response->assertSee('ITC Recovery Desk');
+    }
+
+    public function test_ads_creative_hub_alias_redirects_to_ad_creative_lab(): void
+    {
+        $response = $this->get('/products/ads-creative-hub');
+        $response->assertRedirect('/products/ad-creative-lab');
+        $response->assertStatus(301);
+
+        $response = $this->get('/products/ads-creative-hub/checkout');
+        $response->assertRedirect('/products/ad-creative-lab/checkout');
+        $response->assertStatus(301);
     }
 
     public function test_store_page_renders_both_currencies(): void

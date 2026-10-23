@@ -1,0 +1,261 @@
+{
+  "checkedAt": "2026-10-20T00:00:00.000Z",
+  "invoiceCount": 3,
+  "duplicates": [
+    {
+      "number": "INV-2026-0142",
+      "count": 2,
+      "indexes": [
+        0,
+        2
+      ]
+    }
+  ],
+  "totals": {
+    "averageScore": 86.67,
+    "score": 260,
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "invoices": [
+    {
+      "invoice": {
+        "number": "INV-2026-0142",
+        "date": "2026-10-18",
+        "supplier": "Sundara Foods Pvt Ltd",
+        "supplierGstin": "29AAECS1234F1ZK",
+        "recipient": "Priya Nair",
+        "placeOfSupply": "29-Karnataka",
+        "grandTotal": 522.9
+      },
+      "context": {
+        "aato": 4200000,
+        "aatoCrore": 0.42,
+        "hsnBand": "AATO up to ₹5 crore",
+        "hsnDigitsRequired": 4,
+        "eInvoiceRequired": false,
+        "supplyType": "intra-state",
+        "supplierState": "29",
+        "recipientState": "29",
+        "isB2C": true,
+        "isExport": false,
+        "auditDate": "2026-10-20"
+      },
+      "summary": {
+        "score": 80,
+        "verdict": "FIX BEFORE ISSUING",
+        "counts": {
+          "critical": 1,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "findings": [
+        {
+          "code": "DUP_INVOICE_NUMBER",
+          "severity": "critical",
+          "message": "Invoice number INV-2026-0142 appears on 2 invoices.",
+          "fix": "Every invoice number must be unique within a financial year.",
+          "ref": "CGST Rule 46",
+          "field": "invoiceNumber"
+        }
+      ],
+      "checks": [
+        {
+          "code": "INV_NO_NUMBER",
+          "label": "Invoice number present",
+          "status": "pass",
+          "detail": "INV-2026-0142"
+        },
+        {
+          "code": "INV_NO_DATE",
+          "label": "Invoice date present",
+          "status": "pass",
+          "detail": "2026-10-18"
+        },
+        {
+          "code": "SUP_GSTIN_INVALID",
+          "label": "Supplier GSTIN valid",
+          "status": "pass",
+          "detail": "29AAECS1234F1ZK"
+        },
+        {
+          "code": "HSN_DIGITS",
+          "label": "Line 1 HSN depth",
+          "status": "pass",
+          "detail": "4 digits (need 4)"
+        },
+        {
+          "code": "RATE_VALID",
+          "label": "Line 1 GST rate",
+          "status": "pass",
+          "detail": "5%"
+        },
+        {
+          "code": "AMOUNT_IN_WORDS_MISMATCH",
+          "label": "Amount in words matches total",
+          "status": "pass",
+          "detail": "Five Hundred Twenty Two Rupees and Ninety Paise Only"
+        }
+      ]
+    },
+    {
+      "invoice": {
+        "number": "INV-2026-0143",
+        "date": "2026-10-19",
+        "supplier": "Sundara Foods Pvt Ltd",
+        "supplierGstin": "29AAECS1234F1ZK",
+        "recipient": "Rahul Iyer",
+        "placeOfSupply": "33-Tamil Nadu",
+        "grandTotal": 844.35
+      },
+      "context": {
+        "aato": 4200000,
+        "aatoCrore": 0.42,
+        "hsnBand": "AATO up to ₹5 crore",
+        "hsnDigitsRequired": 4,
+        "eInvoiceRequired": false,
+        "supplyType": "inter-state",
+        "supplierState": "29",
+        "recipientState": "33",
+        "isB2C": true,
+        "isExport": false,
+        "auditDate": "2026-10-20"
+      },
+      "summary": {
+        "score": 100,
+        "verdict": "READY TO ISSUE",
+        "counts": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "findings": [],
+      "checks": [
+        {
+          "code": "INV_NO_NUMBER",
+          "label": "Invoice number present",
+          "status": "pass",
+          "detail": "INV-2026-0143"
+        },
+        {
+          "code": "INV_NO_DATE",
+          "label": "Invoice date present",
+          "status": "pass",
+          "detail": "2026-10-19"
+        },
+        {
+          "code": "SUP_GSTIN_INVALID",
+          "label": "Supplier GSTIN valid",
+          "status": "pass",
+          "detail": "29AAECS1234F1ZK"
+        },
+        {
+          "code": "HSN_DIGITS",
+          "label": "Line 1 HSN depth",
+          "status": "pass",
+          "detail": "4 digits (need 4)"
+        },
+        {
+          "code": "RATE_VALID",
+          "label": "Line 1 GST rate",
+          "status": "pass",
+          "detail": "5%"
+        },
+        {
+          "code": "AMOUNT_IN_WORDS_MISMATCH",
+          "label": "Amount in words matches total",
+          "status": "pass",
+          "detail": "Eight Hundred Forty Four Rupees and Thirty Five Paise Only"
+        }
+      ]
+    },
+    {
+      "invoice": {
+        "number": "INV-2026-0142",
+        "date": "2026-10-19",
+        "supplier": "Sundara Foods Pvt Ltd",
+        "supplierGstin": "29AAECS1234F1ZK",
+        "recipient": "Priya Nair",
+        "placeOfSupply": "29-Karnataka",
+        "grandTotal": 522.9
+      },
+      "context": {
+        "aato": 4200000,
+        "aatoCrore": 0.42,
+        "hsnBand": "AATO up to ₹5 crore",
+        "hsnDigitsRequired": 4,
+        "eInvoiceRequired": false,
+        "supplyType": "intra-state",
+        "supplierState": "29",
+        "recipientState": "29",
+        "isB2C": true,
+        "isExport": false,
+        "auditDate": "2026-10-20"
+      },
+      "summary": {
+        "score": 80,
+        "verdict": "FIX BEFORE ISSUING",
+        "counts": {
+          "critical": 1,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "findings": [
+        {
+          "code": "DUP_INVOICE_NUMBER",
+          "severity": "critical",
+          "message": "Invoice number INV-2026-0142 appears on 2 invoices.",
+          "fix": "Every invoice number must be unique within a financial year.",
+          "ref": "CGST Rule 46",
+          "field": "invoiceNumber"
+        }
+      ],
+      "checks": [
+        {
+          "code": "INV_NO_NUMBER",
+          "label": "Invoice number present",
+          "status": "pass",
+          "detail": "INV-2026-0142"
+        },
+        {
+          "code": "INV_NO_DATE",
+          "label": "Invoice date present",
+          "status": "pass",
+          "detail": "2026-10-19"
+        },
+        {
+          "code": "SUP_GSTIN_INVALID",
+          "label": "Supplier GSTIN valid",
+          "status": "pass",
+          "detail": "29AAECS1234F1ZK"
+        },
+        {
+          "code": "HSN_DIGITS",
+          "label": "Line 1 HSN depth",
+          "status": "pass",
+          "detail": "4 digits (need 4)"
+        },
+        {
+          "code": "RATE_VALID",
+          "label": "Line 1 GST rate",
+          "status": "pass",
+          "detail": "5%"
+        },
+        {
+          "code": "AMOUNT_IN_WORDS_MISMATCH",
+          "label": "Amount in words matches total",
+          "status": "pass",
+          "detail": "Five Hundred Twenty Two Rupees and Ninety Paise Only"
+        }
+      ]
+    }
+  ]
+}

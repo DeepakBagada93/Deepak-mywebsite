@@ -1,0 +1,31 @@
+{
+  "brand": "Deepak Bagada Systems",
+  "product": "Ad Creative Lab",
+  "price": 1499,
+  "currency": "INR",
+  "landingPage": "https://deepakbagada.in/products/ad-creative-lab",
+  "platforms": ["meta"],
+  "creatives": [
+    {
+      "id": "M1",
+      "platform": "meta",
+      "format": "static_4x5",
+      "language": "en",
+      "hooks": ["GROW YOUR BUSINESS FAST!!!"],
+      "primaryText": "GUARANTEED 100% results in 7 days. Only 3 spots left! Our ads are the best in India and risk-free. Buy now for ₹999.",
+      "headline": "BEST ADS EVER",
+      "description": "Guaranteed sales",
+      "cta": "Download"
+    }
+  ],
+  "ugcScripts": [
+    {
+      "id": "U1",
+      "durationSeconds": 15,
+      "hook": "",
+      "beats": ["Problem", "Solution"],
+      "dialogue": "This is a very long dialogue that keeps going and going without any pause because nobody edited the script before recording it and it never ends even though the video is only fifteen seconds long which is far too fast for a human to speak naturally on camera.",
+      "cta": ""
+    }
+  ]
+}

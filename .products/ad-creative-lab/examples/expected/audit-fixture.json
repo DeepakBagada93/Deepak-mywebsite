@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "checkedAt": "2026-10-20T14:01:19.393Z",
+  "brand": "Deepak Bagada Systems",
+  "product": "Ad Creative Lab",
+  "platforms": [
+    "meta"
+  ],
+  "findings": [
+    {
+      "id": "F003",
+      "code": "CLAIM_GUARANTEE",
+      "severity": "critical",
+      "message": "Absolute guarantee or risk-free claim.",
+      "evidence": [
+        "M1",
+        "GUARANTEED 100% results in 7 days. Only 3 spots left! Our ads are the best in India and risk-free. Buy now for ₹999.\nBEST ADS EVER\nGuaranteed sales\nGROW YOUR BUSINESS FAST!!!\nDownload"
+      ],
+      "fix": "Replace with the concrete proof instead: \"12 checks, tested on 40 workflows\", \"7-day refund as per policy\"."
+    },
+    {
+      "id": "F001",
+      "code": "CREATIVE_ALL_CAPS",
+      "severity": "high",
+      "message": "More than one all-caps word.",
+      "evidence": [
+        "M1",
+        "GUARANTEED, BEST, ADS, EVER, GROW, YOUR"
+      ],
+      "fix": "Use sentence case. Emphasise with one accent, never shouting."
+    },
+    {
+      "id": "F004",
+      "code": "CLAIM_FAKE_URGENCY",
+      "severity": "high",
+      "message": "Countdown or scarcity claim that usually cannot be verified.",
+      "evidence": [
+        "M1",
+        "GUARANTEED 100% results in 7 days. Only 3 spots left! Our ads are the best in India and risk-free. Buy now for ₹999.\nBEST ADS EVER\nGuaranteed sales\nGROW YOUR BUSINESS FAST!!!\nDownload"
+      ],
+      "fix": "Use a real, dated deadline that applies to everyone, or drop the urgency line."
+    },
+    {
+      "id": "F008",
+      "code": "UGC_NO_HOOK",
+      "severity": "high",
+      "message": "UGC script has no hook line.",
+      "evidence": [
+        "U1"
+      ],
+      "fix": "Add a spoken hook in the first two seconds."
+    },
+    {
+      "id": "F009",
+      "code": "UGC_NO_CTA",
+      "severity": "high",
+      "message": "UGC script has no CTA.",
+      "evidence": [
+        "U1"
+      ],
+      "fix": "End with one action the viewer can take immediately."
+    },
+    {
+      "id": "F002",
+      "code": "CREATIVE_EXCLAMATION",
+      "severity": "medium",
+      "message": "Multiple exclamation marks.",
+      "evidence": [
+        "M1"
+      ],
+      "fix": "Keep at most one exclamation mark in the whole creative."
+    },
+    {
+      "id": "F005",
+      "code": "CLAIM_SUPERLATIVE",
+      "severity": "medium",
+      "message": "Unsubstantiated superlative.",
+      "evidence": [
+        "M1",
+        "GUARANTEED 100% results in 7 days. Only 3 spots left! Our ads are the best in India and risk-free. Buy now for ₹999.\nBEST ADS EVER\nGuaranteed sales\nGROW YOUR BUSINESS FAST!!!\nDownload"
+      ],
+      "fix": "Name the comparison and the date: \"scored 92/100 in our October 2026 audit\"."
+    },
+    {
+      "id": "F006",
+      "code": "CREATIVE_WEAK_HOOK",
+      "severity": "medium",
+      "message": "Hook carries fewer than two of the six hook signals.",
+      "evidence": [
+        "M1",
+        "GROW YOUR BUSINESS FAST!!!",
+        "score 0/7"
+      ],
+      "fix": "Add a specific number, a named pain, or an audience callout in the first line."
+    },
+    {
+      "id": "F007",
+      "code": "CREATIVE_PRICE_MISMATCH",
+      "severity": "medium",
+      "message": "Creative quotes a price that differs from the catalog price.",
+      "evidence": [
+        "M1",
+        "catalog ₹1,499",
+        "ads 999"
+      ],
+      "fix": "Match the landing page exactly, or label a crossed-out anchor price explicitly."
+    }
+  ],
+  "summary": {
+    "score": 8,
+    "verdict": "DO NOT SPEND",
+    "critical": 1,
+    "high": 4,
+    "medium": 4,
+    "low": 0,
+    "creatives": 1,
+    "ugcScripts": 1
+  }
+}

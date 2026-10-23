@@ -1,0 +1,2 @@
+issue_type,severity,supplier_gstin,invoice_number,invoice_date,books_taxable,gstr2b_taxable,books_tax,gstr2b_tax,tax_difference,action,source_row
+missing_in_books,high,27AAECS1234F1ZO,INV-2001,2026-09-20,,5000,,900,0,Locate the invoice and record it in the purchase register before claiming ITC.,gstr2b:8

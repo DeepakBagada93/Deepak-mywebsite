@@ -1,0 +1,142 @@
+{
+  "name": "Ad Creative Lab",
+  "slug": "ad-creative-lab",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-20T14:16:05.988Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 531,
+      "sha256": "02fd0f06684c1a0a0379a1ed55fc41a6c583e60525c0e79009deb85b1bc6da06"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1261,
+      "sha256": "a3b9c833613a4317f42e7289a8605234e396972d2cc24dcb581b0f4b49211b37"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 2893,
+      "sha256": "288ba014251a32aa7002ae94cd2cf228b540c68148a78e278c82a499e9767401"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1372,
+      "sha256": "197dd18172a841ad630b48dd3fa2135752307873f6907ae96578199a3baec656"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 3983,
+      "sha256": "a294ee9ed1c1115fad0054fc938859c7952ae4da6c2f417de3c12ca98a1d3498"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 4704,
+      "sha256": "7a73492644487490c5e0a7aff36e11fdf066ee5d25e1db0025104896d2222119"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1660,
+      "sha256": "82b9dccb30f7b28a4c175c54cf757002a00e7a8acfaf018d6c5cd4fcdd46efd6"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1865,
+      "sha256": "0e82cb2bfc9d2008cb9e5e7e6ace823db2a013bd311d359a8eae1e4886fec6bb"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 5386,
+      "sha256": "dd338cfe4285e4b9f56ea6dff092c79f942a3d277b9ad90ed04b14907d1c6e14"
+    },
+    {
+      "path": "examples/creative-pack.clean.json",
+      "bytes": 1847,
+      "sha256": "51b0e038e2560c3587fc5a31c6c55162b143fe6273b7e6a2f15d45aaafff4a8e"
+    },
+    {
+      "path": "examples/creative-pack.fixture.json",
+      "bytes": 1062,
+      "sha256": "0abfc0f81aff889e4e17d788119a718fa5b09dc44adc1e7bae0c3955020ef7b6"
+    },
+    {
+      "path": "examples/expected/audit-clean.json",
+      "bytes": 382,
+      "sha256": "7589e7363352e354ec3da9d51c38e0e9a6ee4fe85034c660fa24e753e13dab27"
+    },
+    {
+      "path": "examples/expected/audit-clean.md",
+      "bytes": 456,
+      "sha256": "c9d2806383db04d9986316e98913b8a2f3060abb710ffe8dd2f68a349490e54e"
+    },
+    {
+      "path": "examples/expected/audit-fixture.json",
+      "bytes": 3669,
+      "sha256": "321e66740d9da108e9ad3f143079a1fd8563f8050fedeaa18423ab4d40de9fda"
+    },
+    {
+      "path": "examples/expected/audit-fixture.md",
+      "bytes": 2560,
+      "sha256": "234933b565946dd524692f32567f8e5d66ea2da66f5b9f00bf316dbac80bf797"
+    },
+    {
+      "path": "examples/expected/test-matrix.json",
+      "bytes": 3635,
+      "sha256": "76b057878f401f98264c50cce58e599c1822caa97a117f3a062a6bd01a8a83f0"
+    },
+    {
+      "path": "examples/expected/test-matrix.md",
+      "bytes": 1380,
+      "sha256": "642d9e0b6c6e3a2125b710f7035c063eeff0dfb8d1c8ec247d4b50c705ad69c5"
+    },
+    {
+      "path": "examples/test-matrix.brief.json",
+      "bytes": 836,
+      "sha256": "a0cfc783768a017c38e3e05810140ebaa08f06a44d84da3d8c18e5beac7f6256"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1569,
+      "sha256": "f8e1b89e26fda605600c4eea7c05720e7a59473e9460da513cb142be9fe3d67d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2780,
+      "sha256": "d24ac67bc928b76ba8bc078e59dea17b0aa48012a34274e54bab469447348a5d"
+    },
+    {
+      "path": "skills/ad-creative-lab/scripts/audit-creative-pack.mjs",
+      "bytes": 1543,
+      "sha256": "15d69065518e47ed40ed04d1f2b227431178570087e307f00848a09727af9eb1"
+    },
+    {
+      "path": "skills/ad-creative-lab/scripts/lib.mjs",
+      "bytes": 24327,
+      "sha256": "1a814692f036472cc552947a88abdd9ea84f867ba150f5aa2c8784594ce98b8e"
+    },
+    {
+      "path": "skills/ad-creative-lab/scripts/plan-test-matrix.mjs",
+      "bytes": 1515,
+      "sha256": "0b3d1ece76cde6b4d2fc30d6d8b19875df5660b22893e57b8f4556affb54e00f"
+    },
+    {
+      "path": "skills/ad-creative-lab/SKILL.md",
+      "bytes": 9560,
+      "sha256": "a15b1eda424cb12aaec21cbfcd6cd42534c61c936a1260db4072a6a63e004916"
+    },
+    {
+      "path": "tests/ad-creative-lab.test.mjs",
+      "bytes": 3064,
+      "sha256": "2f297885ae3c5963b3b2ef2bf90ee70fbe3c6c3ef67635a00b27ac1a50fec634"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4622,
+      "sha256": "60b8482b320783b4acba3bbf30bfb4534acde65e0c707c4592dca520f01c59d2"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

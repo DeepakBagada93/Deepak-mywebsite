@@ -1,0 +1,30 @@
+{
+  "product": "india-offer-pricing-kit",
+  "version": "1.0.0",
+  "createdAt": "2026-10-20T00:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "Model uses GST-inclusive display, 18% GST and a 2% + 18% gateway fee as configurable defaults, so the maths is auditable rather than hidden.",
+    "The engine supports an explicit tier ladder as well as a computed one, because most sellers already have store prices and need validation, not a replacement.",
+    "Dark-pattern checks follow the CCPA 2023 categories that a text audit can actually detect: false urgency and drip pricing.",
+    "Refund language such as 'money-back guarantee' is exempt from the guarantee-claim rule, because a refund policy is required rather than prohibited."
+  ],
+  "unresolved": [
+    "Owner approval for final pricing, license and publication.",
+    "GST treatment must be confirmed by a CA; the skill does not file or advise."
+  ],
+  "evidence": [
+    "₹1,499 at 18% GST and 2.36% gateway nets ₹1,240.36; break-even CPA matches.",
+    "₹2,999 bundle nets ₹2,481.55, a 21% discount against the ₹3,797 individual sum.",
+    "Clean offer page audits at 100/100; non-compliant page at 0/100 with GST, urgency and income findings."
+  ]
+}

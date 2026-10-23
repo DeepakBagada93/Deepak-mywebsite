@@ -1,0 +1,188 @@
+{
+  "name": "ITC Recovery Desk",
+  "slug": "itc-recovery-desk",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-20T16:06:30.446Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1236,
+      "sha256": "fe028fe0c90748daa6dd4ec076e5f2cebb7a899e16846705bd60eb4d82578695"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 3204,
+      "sha256": "ddc8e5452097404fa46010ab69db6035c3729cc3bd991675fb7b3ab91a8b6be6"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 6274,
+      "sha256": "d95c1a4257eda3cba62bb491114413d6e0a9c6c665c55edaa23084c08a7bd086"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 4016,
+      "sha256": "e86fae39d90926c48d6e69b52eb58a7ce0640b162e2800b14200629ab249d283"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 7858,
+      "sha256": "fdd57107d91e6d8d38ef488d35cdcb98f4de8aadf5cc6940fa26e81bc8a511be"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 6538,
+      "sha256": "eb1bed57343a2ca9485757cda5797394f2a8ba4e7956a745e2901be30849918b"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 3131,
+      "sha256": "cf9d39774e0443ec94f6120f5c382e5c857aacc865292c898f2359fb1ec47146"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 2950,
+      "sha256": "cb5652df2dc4e13db75200bd704122b460ef995a710067f787ab732f22fa0599"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 9327,
+      "sha256": "6484aaa40688faa1893f07bb96e9ed7e236d102ef9ae66dc54e8634864225d4c"
+    },
+    {
+      "path": "docs/validation-plan.md",
+      "bytes": 4630,
+      "sha256": "dc1a96161b191dc9a5f2e007b751a24e46be8b3f05b7f70c13c2739171a40ce2"
+    },
+    {
+      "path": "examples/books-messy.csv",
+      "bytes": 332,
+      "sha256": "861ba28f0a7fa7985311ab57ac8072bf30639c53ce95a80cc0f386951b8e25cc"
+    },
+    {
+      "path": "examples/books.csv",
+      "bytes": 496,
+      "sha256": "d4fade5869486204500d23f6be44fb9aeb3c3eb51f584b096c5d771d3a2b4473"
+    },
+    {
+      "path": "examples/expected/demo/exceptions.csv",
+      "bytes": 856,
+      "sha256": "d7396864aa983c5077d5e55bdb56d20d785a5e35cc0076e2a324ced09de95722"
+    },
+    {
+      "path": "examples/expected/demo/itc-at-risk.csv",
+      "bytes": 509,
+      "sha256": "895ee8bfc1859391beeb19b99eb7d12c165646c195c6614577c096547d297cbc"
+    },
+    {
+      "path": "examples/expected/demo/itc-unclaimed.csv",
+      "bytes": 305,
+      "sha256": "a50a423cb6d1647956c8751136fe43908ecb1d21ad7a61feeb1450ede95650d8"
+    },
+    {
+      "path": "examples/expected/demo/matched.csv",
+      "bytes": 599,
+      "sha256": "2969de4bdcb3c5007e3ca83def0ede9c5fc1ae665e180d8cdc4814391a9298f5"
+    },
+    {
+      "path": "examples/expected/demo/summary.json",
+      "bytes": 567,
+      "sha256": "34ab98cac0f6f67ee8f0e9689c820f0becd1ce34abdc278689d9775bcdf53ab3"
+    },
+    {
+      "path": "examples/expected/demo/summary.md",
+      "bytes": 1965,
+      "sha256": "f89c88619c208bf6f94c3894c2355e30d1406cd2f5e14ce88cf06777b2a7eb69"
+    },
+    {
+      "path": "examples/expected/demo/supplier-followup.csv",
+      "bytes": 433,
+      "sha256": "aca910d44a2312d7b01591f2c1965476cc82df25ad7692944dbc92f0aaf9e723"
+    },
+    {
+      "path": "examples/expected/messy/exceptions.csv",
+      "bytes": 933,
+      "sha256": "f1472dc79a03206550d0aa1433bd82a02e4d50180ff063eb8aa7b61f1137c630"
+    },
+    {
+      "path": "examples/expected/messy/itc-at-risk.csv",
+      "bytes": 497,
+      "sha256": "645e5d55ece8fbc51fef5e3baaaa37d5b9b44ecddeff6ddfe9dadb151018c8cd"
+    },
+    {
+      "path": "examples/expected/messy/itc-unclaimed.csv",
+      "bytes": 146,
+      "sha256": "8df3e49f6a8fd51d5746e28b887a8e9e45c7513089e6a5fd4e6aaa56dc4529c9"
+    },
+    {
+      "path": "examples/expected/messy/matched.csv",
+      "bytes": 279,
+      "sha256": "dcce15878c57478b46a871bc87bad049e643b1a322694e0c4420b9a7c40b8822"
+    },
+    {
+      "path": "examples/expected/messy/summary.json",
+      "bytes": 560,
+      "sha256": "049cd60b660242e9c5efbf8b9e68c95e6903773a2b183815c95a16d4821aac43"
+    },
+    {
+      "path": "examples/expected/messy/summary.md",
+      "bytes": 2052,
+      "sha256": "fdd1e87192502838b81a94e890987b3a318f6a36da63c9cae4a6f306e3b8305f"
+    },
+    {
+      "path": "examples/expected/messy/supplier-followup.csv",
+      "bytes": 341,
+      "sha256": "e1a345c6b310a76639c3751701e75292589605bbb7a32950cc5da86c4dfaca10"
+    },
+    {
+      "path": "examples/gstr2b-messy.csv",
+      "bytes": 253,
+      "sha256": "ce886ee8cb65bd0a69add9ee6955c495759b6a1c0e533160dc1f4c52ce357862"
+    },
+    {
+      "path": "examples/gstr2b.csv",
+      "bytes": 604,
+      "sha256": "1f08ba7789fbf24b917e3fc51f36b764d2342df3a9497a47824203b66a235d2b"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 3236,
+      "sha256": "638d2828055cf1eb48a12090858e4cd909e60d7a849b1533e0d4a27178355c88"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5703,
+      "sha256": "ef2a901d570acec9108fb5fb9d392a7636603dfb3e569f1f124d7aaf63043f9c"
+    },
+    {
+      "path": "skills/itc-recovery-desk/scripts/lib.mjs",
+      "bytes": 29273,
+      "sha256": "7996a39f15e5737fa39ede96b3c6e8334b0386be44ba3ad9e6c0f5e3450f910d"
+    },
+    {
+      "path": "skills/itc-recovery-desk/scripts/reconcile.mjs",
+      "bytes": 3181,
+      "sha256": "aef58b4825684981910fccd4a0ad4c5c294cebf3921c2aacf2576776f37756b5"
+    },
+    {
+      "path": "skills/itc-recovery-desk/SKILL.md",
+      "bytes": 14323,
+      "sha256": "82623557ae296cf253f483df90c1b4861fad89cb55338e63d0fbbcbb8be34775"
+    },
+    {
+      "path": "tests/itc-recovery-desk.test.mjs",
+      "bytes": 7827,
+      "sha256": "83abe87af1eacf2675c9007fc8402a84737538e8cdbea31f2be9875150848c9f"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 2990,
+      "sha256": "10de772c2d42d6312223e4132d6f3f73f73de95ad7754b85e0b359c6ea072dea"
+    }
+  ],
+  "manualReview": [
+    "Owner approval for pricing, licence, support, storefront and publication is required.",
+    "Demand, legal sufficiency and live GST portal behaviour have not been independently validated."
+  ]
+}

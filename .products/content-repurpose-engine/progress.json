@@ -1,0 +1,29 @@
+{
+  "product": "content-repurpose-engine",
+  "version": "1.0.0",
+  "createdAt": "2026-10-20T00:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "The planner produces a deterministic 30-day scaffold (platform, format, angle, insight, draft hook); final copy is written by the agent and gated by the audit.",
+    "Duplicate detection uses 5-word shingles at a 0.70 threshold so reformatted cross-posts are caught without flagging shared topic vocabulary.",
+    "India Hinglish is supported by language tags rather than machine translation.",
+    "Pricing sits below Ad Creative Lab because the buyer is a content creator or small team, not an ads operator."
+  ],
+  "unresolved": [
+    "Owner approval for final pricing, license and publication.",
+    "No live publishing or engagement data has been attached."
+  ],
+  "evidence": [
+    "Planner produces 30 pieces, 6 platforms, every insight used 5 times, zero duplicate cells.",
+    "Clean pack audits at 100/100; flawed pack audits at 0/100 with length, CTA and cross-post findings."
+  ]
+}

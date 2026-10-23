@@ -1,0 +1,26 @@
+{
+  "product": "Get Rich AI Course",
+  "url": "https://example.com/course",
+  "currency": "USD",
+  "price": 4999,
+  "priceIncludesGst": false,
+  "gstNumber": "INVALID123",
+  "refundPolicy": "",
+  "deliveryTime": "",
+  "contact": {},
+  "paymentMethods": ["cards"],
+  "headline": "GUARANTEED 100% results. Only 5 seats left!",
+  "cta": "",
+  "testimonials": [
+    {
+      "name": "",
+      "result": ""
+    }
+  ],
+  "termsUrl": "",
+  "privacyUrl": "",
+  "claims": [
+    "Double your income in 7 days or get rich.",
+    "GST extra at checkout."
+  ]
+}

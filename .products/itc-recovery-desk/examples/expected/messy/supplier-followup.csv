@@ -1,0 +1,3 @@
+supplier_gstin,issue_count,invoice_numbers,tax_at_risk,potential_unclaimed,action
+29AAECS1234F1ZK,1,INV-2001,1800,0,"Ask the supplier to file or amend GSTR-1, and confirm the invoice is valid and not cancelled."
+29AAECS1234F1Z5,1,INV-2002,900,0,"Ask the supplier to file or amend GSTR-1, and confirm the invoice is valid and not cancelled."

@@ -1,0 +1,293 @@
+{
+  "schemaVersion": "1.0",
+  "checkedAt": "2026-10-20T14:08:16.081Z",
+  "sourceTitle": "Flawed content pack fixture",
+  "findings": [
+    {
+      "id": "F009",
+      "code": "PIECE_BODY_LENGTH",
+      "severity": "high",
+      "message": "Body exceeds the X limit.",
+      "evidence": [
+        "B2",
+        "393/280"
+      ],
+      "fix": "Trim the piece or split it into a thread or carousel."
+    },
+    {
+      "id": "F010",
+      "code": "PIECE_NO_CTA",
+      "severity": "high",
+      "message": "Piece has no call to action.",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "End with one reply or bookmark line."
+    },
+    {
+      "id": "F026",
+      "code": "PIECE_CROSS_POST_DUPLICATE",
+      "severity": "high",
+      "message": "Two pieces are near-identical across platforms.",
+      "evidence": [
+        "B1",
+        "B2",
+        "1.00"
+      ],
+      "fix": "Rewrite the second piece in that platform's native format; do not paste and reformat."
+    },
+    {
+      "id": "F027",
+      "code": "PIECE_CROSS_POST_DUPLICATE",
+      "severity": "high",
+      "message": "Two pieces are near-identical across platforms.",
+      "evidence": [
+        "B2",
+        "B3",
+        "1.00"
+      ],
+      "fix": "Rewrite the second piece in that platform's native format; do not paste and reformat."
+    },
+    {
+      "id": "F002",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"in today's fast-paced world\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F003",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"delve into\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F004",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"unlock the power\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F005",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"game-changer\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F006",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"elevate your\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F007",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"it is important to note\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F008",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"supercharge\".",
+      "evidence": [
+        "B1"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F011",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"in today's fast-paced world\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F012",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"delve into\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F013",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"unlock the power\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F014",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"game-changer\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F015",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"elevate your\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F016",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"it is important to note\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F017",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"supercharge\".",
+      "evidence": [
+        "B2"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F019",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"in today's fast-paced world\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F020",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"delve into\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F021",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"unlock the power\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F022",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"game-changer\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F023",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"elevate your\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F024",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"it is important to note\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F025",
+      "code": "PIECE_AI_PHRASE",
+      "severity": "medium",
+      "message": "Contains the AI-tell phrase \"supercharge\".",
+      "evidence": [
+        "B3"
+      ],
+      "fix": "Replace it with a plain sentence a person would say out loud."
+    },
+    {
+      "id": "F001",
+      "code": "PIECE_HASHTAGS",
+      "severity": "low",
+      "message": "Too many hashtags for this platform.",
+      "evidence": [
+        "B1",
+        "9/8"
+      ],
+      "fix": "Use a small set of specific tags, or none."
+    },
+    {
+      "id": "F018",
+      "code": "PIECE_HASHTAGS",
+      "severity": "low",
+      "message": "Too many hashtags for this platform.",
+      "evidence": [
+        "B3",
+        "6/5"
+      ],
+      "fix": "Use a small set of specific tags, or none."
+    }
+  ],
+  "summary": {
+    "score": 0,
+    "verdict": "DO NOT PUBLISH",
+    "critical": 0,
+    "high": 4,
+    "medium": 21,
+    "low": 2,
+    "pieces": 3
+  }
+}

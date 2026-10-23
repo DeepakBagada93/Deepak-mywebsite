@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "checkedAt": "2026-10-20T14:08:16.037Z",
+  "sourceTitle": "The 12 checks before an n8n workflow goes live",
+  "findings": [],
+  "summary": {
+    "score": 100,
+    "verdict": "READY TO PUBLISH",
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "pieces": 6
+  }
+}

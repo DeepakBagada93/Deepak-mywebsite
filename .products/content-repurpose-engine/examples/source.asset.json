@@ -1,0 +1,27 @@
+{
+  "source": {
+    "title": "The 12 checks before an n8n workflow goes live",
+    "url": "https://deepakbagada.in/products/n8n-hardening-pack"
+  },
+  "thesis": "Most n8n workflows fail silently because nobody checks retries, error handling, backups and alerts before handoff.",
+  "audience": "automation freelancers and agency owners in India",
+  "goal": "sell",
+  "currency": "INR",
+  "languages": ["en", "hi-en"],
+  "startDate": "2026-10-21",
+  "days": 30,
+  "platforms": ["instagram", "linkedin", "x", "youtube_shorts", "newsletter", "blog"],
+  "offer": {
+    "name": "n8n Production Hardening Pack",
+    "price": 2499,
+    "url": "https://deepakbagada.in/products/n8n-hardening-pack"
+  },
+  "insights": [
+    { "id": "I1", "text": "A workflow that fails without an alert is not automation, it is a liability." },
+    { "id": "I2", "text": "Retries without a backoff strategy turn one failure into five duplicate writes." },
+    { "id": "I3", "text": "UnAuthenticated webhooks are the most common production hole in client builds." },
+    { "id": "I4", "text": "Pinned data in an exported workflow can leak a real customer record." },
+    { "id": "I5", "text": "A backup nobody tested is a hope, not a backup." },
+    { "id": "I6", "text": "The handoff checklist is the product; the workflow is just the artifact." }
+  ]
+}

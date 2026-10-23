@@ -1,0 +1,5 @@
+issue_type,severity,supplier_gstin,invoice_number,invoice_date,books_taxable,gstr2b_taxable,books_tax,gstr2b_tax,tax_difference,action,source_row
+missing_in_2b,high,29AAECS1234F1ZK,INV-1005,2026-09-12,10000,,1800,,1800,"Ask the supplier to file or amend GSTR-1, and confirm the invoice is valid and not cancelled.",books:6
+missing_in_books,high,27AAECS1234F1ZO,INV-2001,2026-09-20,,5000,,900,0,Locate the invoice and record it in the purchase register before claiming ITC.,gstr2b:8
+value_mismatch,high,27AAECS1234F1ZO,INV-1006,2026-09-15,12000,12000,2160,2070,90,Ask the supplier to confirm or amend GSTR-1; the purchase register claims more tax than GSTR-2B.,books:7
+date_mismatch,medium,29AAECS1234F1ZK,INV-1007,2026-09-18,8000,8000,1440,1440,0,Confirm the invoice date with the supplier; review whether the difference changes the return period.,books:8

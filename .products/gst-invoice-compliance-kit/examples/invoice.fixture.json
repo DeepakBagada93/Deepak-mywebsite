@@ -1,0 +1,51 @@
+{
+  "invoiceNumber": "INV-2026-0091",
+  "invoiceDate": "2026-10-15",
+  "business": {
+    "name": "Deccan Snacks LLP",
+    "gstin": "29AAECS1234F1Z",
+    "financialYear": "2026-27",
+    "aato": 60000000
+  },
+  "supplier": {
+    "name": "Deccan Snacks LLP",
+    "address": "22 Church Street, Bengaluru, Karnataka 560001",
+    "gstin": "29AAECS1234F1Z",
+    "stateCode": "29"
+  },
+  "recipient": {
+    "name": "Anita Desai Traders",
+    "address": "3 Turner Road, Bandra West, Mumbai, Maharashtra 400050",
+    "gstin": "27AAECS1234F1ZO",
+    "stateCode": "27"
+  },
+  "placeOfSupply": "27-Maharashtra",
+  "lines": [
+    {
+      "description": "Chatted Masala 100g",
+      "hsn": "0901",
+      "quantity": 250,
+      "unit": "pouch",
+      "unitPrice": 230,
+      "discount": 0,
+      "taxableValue": 57500,
+      "gstRate": 18,
+      "cgst": 5100,
+      "sgst": 5100,
+      "igst": 0,
+      "total": 68800
+    }
+  ],
+  "charges": {
+    "shipping": 120,
+    "other": 0
+  },
+  "discount": 0,
+  "roundOff": 5,
+  "totalTaxableValue": 57000,
+  "totalTax": 10200,
+  "grandTotal": 120000,
+  "amountInWords": "",
+  "eInvoice": null,
+  "eWayBill": null
+}

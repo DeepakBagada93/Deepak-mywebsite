@@ -1,0 +1,30 @@
+{
+  "product": "ad-creative-lab",
+  "version": "1.0.0",
+  "createdAt": "2026-10-20T00:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "partial"
+  },
+  "decisions": [
+    "Scope is creative audit + test planning, not ad-account creation, so it complements the existing google-ads-products and meta-ads-products skills instead of duplicating them.",
+    "Every score is deterministic and reproducible from the shipped scripts; no model judgement is baked into the audit.",
+    "India-first compliance checks use ASCI-style claim classes plus Meta and Google character limits.",
+    "Pricing is set for Indian SMB and agency buyers at ₹1,499 / ₹3,499 / ₹6,999, below the engineering-toolkit band."
+  ],
+  "unresolved": [
+    "Owner approval for final pricing, license and publication.",
+    "Live ad-account performance data has not been attached; projections are planning inputs."
+  ],
+  "evidence": [
+    "Clean fixture audits at 100/100 with exit 0 in strict mode.",
+    "Broken fixture audits at 8/100 with a critical guarantee finding.",
+    "Test matrix allocates exactly ₹30,000 across 12 cells with break-even CPA ₹1,349.10."
+  ]
+}

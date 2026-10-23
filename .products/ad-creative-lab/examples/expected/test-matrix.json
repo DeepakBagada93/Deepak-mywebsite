@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-20T14:01:19.448Z",
+  "product": "Ad Creative Lab",
+  "budget": 30000,
+  "days": 21,
+  "daily": 1429,
+  "price": 1499,
+  "margin": 0.9,
+  "breakEvenCPA": 1349.1,
+  "assumptions": {
+    "cpc": 18,
+    "cvr": 0.02
+  },
+  "projected": {
+    "clicks": 1667,
+    "sales": 33.3,
+    "revenue": 49917,
+    "roas": 1.66
+  },
+  "cells": [
+    {
+      "platform": "meta",
+      "angleId": "A1",
+      "angle": "Cost of inaction",
+      "hypothesis": "The buyer feels wasted spend more than they desire growth.",
+      "format": "ugc_9x16",
+      "budget": 2800
+    },
+    {
+      "platform": "meta",
+      "angleId": "A1",
+      "angle": "Cost of inaction",
+      "hypothesis": "The buyer feels wasted spend more than they desire growth.",
+      "format": "static_4x5",
+      "budget": 2400
+    },
+    {
+      "platform": "meta",
+      "angleId": "A2",
+      "angle": "Failed alternative",
+      "hypothesis": "Boosting posts and hiring a freelancer have already failed them.",
+      "format": "ugc_9x16",
+      "budget": 2400
+    },
+    {
+      "platform": "meta",
+      "angleId": "A2",
+      "angle": "Failed alternative",
+      "hypothesis": "Boosting posts and hiring a freelancer have already failed them.",
+      "format": "static_4x5",
+      "budget": 2400
+    },
+    {
+      "platform": "meta",
+      "angleId": "A3",
+      "angle": "Mechanism",
+      "hypothesis": "Showing the 12 checks makes the product concrete and credible.",
+      "format": "ugc_9x16",
+      "budget": 2400
+    },
+    {
+      "platform": "meta",
+      "angleId": "A3",
+      "angle": "Mechanism",
+      "hypothesis": "Showing the 12 checks makes the product concrete and credible.",
+      "format": "static_4x5",
+      "budget": 2400
+    },
+    {
+      "platform": "meta",
+      "angleId": "A4",
+      "angle": "Proof",
+      "hypothesis": "A before/after score is more persuasive than a testimonial.",
+      "format": "ugc_9x16",
+      "budget": 2400
+    },
+    {
+      "platform": "meta",
+      "angleId": "A4",
+      "angle": "Proof",
+      "hypothesis": "A before/after score is more persuasive than a testimonial.",
+      "format": "static_4x5",
+      "budget": 2400
+    },
+    {
+      "platform": "google",
+      "angleId": "A1",
+      "angle": "Cost of inaction",
+      "hypothesis": "The buyer feels wasted spend more than they desire growth.",
+      "format": "search_rsa",
+      "budget": 2600
+    },
+    {
+      "platform": "google",
+      "angleId": "A2",
+      "angle": "Failed alternative",
+      "hypothesis": "Boosting posts and hiring a freelancer have already failed them.",
+      "format": "search_rsa",
+      "budget": 2600
+    },
+    {
+      "platform": "google",
+      "angleId": "A3",
+      "angle": "Mechanism",
+      "hypothesis": "Showing the 12 checks makes the product concrete and credible.",
+      "format": "search_rsa",
+      "budget": 2600
+    },
+    {
+      "platform": "google",
+      "angleId": "A4",
+      "angle": "Proof",
+      "hypothesis": "A before/after score is more persuasive than a testimonial.",
+      "format": "search_rsa",
+      "budget": 2600
+    }
+  ],
+  "decisionRules": [
+    "Days 0-3: do not edit. Only add negative keywords or exclude junk placements.",
+    "Kill a cell after 1,000 impressions and CTR below 0.8%, or spend above 1.5× break-even CPA with zero sales.",
+    "Scale a winning cell by 20% every 3 days, never by doubling overnight.",
+    "Judge creative on hook rate (3-second views ÷ impressions), not on likes.",
+    "Replace a fatigued ad when frequency passes 2.5 in 7 days or CTR drops 30% week over week."
+  ],
+  "warnings": []
+}

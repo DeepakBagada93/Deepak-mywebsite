@@ -1,0 +1,16 @@
+{
+  "product": "Creator Revenue Skills Pack",
+  "audience": "Indian D2C founders, creators and small agencies",
+  "floorNet": 1800,
+  "anchorValue": 3797,
+  "tierPrices": [2999, 3999, 7999],
+  "economicsPrice": 2999,
+  "gstRate": 18,
+  "gatewayFeePct": 2,
+  "gatewayGstOnFee": 18,
+  "priceIncludesGst": true,
+  "adSpend": 20000,
+  "cpc": 18,
+  "cvr": 0.02,
+  "bundlePrices": [1499, 1299, 999]
+}

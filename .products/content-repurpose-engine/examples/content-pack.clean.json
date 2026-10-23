@@ -1,0 +1,79 @@
+{
+  "sourceTitle": "The 12 checks before an n8n workflow goes live",
+  "pieces": [
+    {
+      "id": "P1",
+      "platform": "instagram",
+      "format": "reel_9x16",
+      "insightId": "I1",
+      "angleId": "contrarian",
+      "language": "en",
+      "hook": "A workflow that fails silently is not automation.",
+      "body": "A workflow that fails silently is not automation. It is a liability with a cron job.\n\nBefore you call a build finished, check three things:\n1. Does an error reach a human within 60 seconds?\n2. Does a retry create a duplicate record?\n3. Can you restore last week's version without guessing?\n\nIf any answer is no, the workflow is a demo.",
+      "cta": "Save this for your next handoff.",
+      "hashtags": ["n8n", "automation", "freelancing"]
+    },
+    {
+      "id": "P2",
+      "platform": "linkedin",
+      "format": "text",
+      "insightId": "I2",
+      "angleId": "mistake",
+      "language": "en",
+      "hook": "Adding retries without backoff is how one failed write becomes five.",
+      "body": "Adding retries without backoff is how one failed write becomes five.\n\nA client workflow hit a timeout last month. The node retried three times in two seconds, and the CRM ended up with four copies of the same lead. Nobody noticed until the sales team called the same person twice.\n\nThe fix took ten minutes: exponential backoff, an idempotency key, and a duplicate guard before the write.\n\nRetries are not resilience. Retries with a strategy are.",
+      "cta": "Which failure mode has bitten your team? Comment below.",
+      "hashtags": ["automation", "n8n"]
+    },
+    {
+      "id": "P3",
+      "platform": "x",
+      "format": "post",
+      "insightId": "I3",
+      "angleId": "proof",
+      "language": "en",
+      "hook": "An open webhook is an open door.",
+      "body": "An open webhook is an open door. We audited 40 client workflows last quarter. 17 had at least one unauthenticated endpoint. Most were built by competent people who simply never checked. Add header auth, rotate the secret, log every call.",
+      "cta": "Bookmark this before your next build.",
+      "hashtags": ["n8n"]
+    },
+    {
+      "id": "P4",
+      "platform": "youtube_shorts",
+      "format": "short_9x16",
+      "insightId": "I4",
+      "angleId": "listicle",
+      "language": "en",
+      "hook": "Your exported workflow may contain a customer record.",
+      "body": "Your exported workflow may contain a customer record.\n\nOpen the JSON and search for pinned data. If a node has sample rows saved, those rows ship with the file. I have seen a real phone number inside a template someone uploaded to a public repo.\n\nBefore you share an export: clear pinned data, search for emails and phone numbers, then re-import to confirm the workflow still runs. Ten seconds of checking beats a privacy incident.",
+      "cta": "Subscribe for the next teardown.",
+      "hashtags": ["n8n", "security"]
+    },
+    {
+      "id": "P5",
+      "platform": "newsletter",
+      "format": "email",
+      "insightId": "I5",
+      "angleId": "story",
+      "language": "en",
+      "hook": "The backup you never restored is not a backup.",
+      "body": "The backup you never restored is not a backup.\n\nA client asked me to \"add backups\" to their automation stack. We scheduled exports every night for three weeks. Then we tried to restore one.\n\nIt failed. The export omitted credentials, the import crashed, and the run history was gone.\n\nNow the checklist has one extra line: restore last night's backup into a staging instance and run one test event. If that does not pass, the backup does not exist.\n\nThat single line has saved more client calls than any monitoring tool I have installed.",
+      "cta": "Reply with your biggest automation blocker and I will answer it next week.",
+      "hashtags": []
+    },
+    {
+      "id": "P6",
+      "platform": "blog",
+      "format": "article",
+      "insightId": "I6",
+      "angleId": "howto",
+      "language": "en",
+      "hook": "The handoff checklist is the product.",
+      "seoTitle": "n8n Handoff Checklist: 12 Checks Before Launch",
+      "metaDescription": "A practical 12-point checklist for n8n freelancers: error handling, retries, backups, alerts and client handoff, with the failure each check prevents.",
+      "body": "The handoff checklist is the product. The workflow is just the artifact.\n\nWhen a client pays for automation, they are buying confidence that the thing will keep working after you close the laptop. That confidence comes from evidence, not from a demo.\n\nA useful handoff has four sections. First, failure handling: every external call has a timeout and a retry policy, and errors reach a named human. Second, data safety: credentials live in n8n credentials, exports carry no pinned customer rows, and writes are idempotent. Third, recovery: a backup exists and has been restored into staging at least once. Fourth, ownership: the client knows which alerts are theirs and which are yours.\n\nWrite the checklist before the build, not after. It changes what you build. You stop adding nodes to impress and start adding guards that let you sleep.\n\nThe full 12-point version is in the n8n Production Hardening Pack, including the audit script and the CI gate.",
+      "cta": "Get the 12-point pack and run it on your next build.",
+      "hashtags": []
+    }
+  ]
+}

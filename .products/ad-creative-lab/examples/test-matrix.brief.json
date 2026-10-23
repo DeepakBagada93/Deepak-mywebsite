@@ -1,0 +1,18 @@
+{
+  "product": "Ad Creative Lab",
+  "price": 1499,
+  "margin": 0.9,
+  "audience": "D2C founders and agency owners in India spending ₹50,000–₹5,00,000 per month on ads",
+  "platforms": ["meta", "google"],
+  "formats": ["ugc_9x16", "static_4x5", "search_rsa"],
+  "budget": 30000,
+  "days": 21,
+  "cpc": 18,
+  "cvr": 0.02,
+  "angles": [
+    { "id": "A1", "name": "Cost of inaction", "hypothesis": "The buyer feels wasted spend more than they desire growth." },
+    { "id": "A2", "name": "Failed alternative", "hypothesis": "Boosting posts and hiring a freelancer have already failed them." },
+    { "id": "A3", "name": "Mechanism", "hypothesis": "Showing the 12 checks makes the product concrete and credible." },
+    { "id": "A4", "name": "Proof", "hypothesis": "A before/after score is more persuasive than a testimonial." }
+  ]
+}

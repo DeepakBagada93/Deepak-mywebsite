@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "checkedAt": "2026-10-20T14:01:19.341Z",
+  "brand": "Deepak Bagada Systems",
+  "product": "Ad Creative Lab",
+  "platforms": [
+    "meta",
+    "google"
+  ],
+  "findings": [],
+  "summary": {
+    "score": 100,
+    "verdict": "READY TO LAUNCH",
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "creatives": 2,
+    "ugcScripts": 1
+  }
+}

@@ -197,6 +197,17 @@ class OrderController extends Controller
      */
     public function showCheckout(Request $request, ?string $slug = null)
     {
+        $aliases = [
+            'ads-creative-hub' => 'ad-creative-lab',
+            'ad-creative-hub' => 'ad-creative-lab',
+            'ads-creative-lab' => 'ad-creative-lab',
+            'ai-systems-master-bundle' => 'agent-skills-master-bundle',
+        ];
+
+        if ($slug && isset($aliases[$slug])) {
+            return redirect()->route('products.checkout.single', $aliases[$slug], 301);
+        }
+
         $catalog = collect(config('products'));
         $site = config('site');
 

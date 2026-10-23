@@ -1,0 +1,28 @@
+{
+  "verdict": "REVIEW REQUIRED",
+  "counts": {
+    "booksRows": 4,
+    "gstr2bRows": 2,
+    "validBooksRows": 4,
+    "validGstr2bRows": 2,
+    "exactMatched": 2,
+    "valueMismatch": 0,
+    "dateMismatch": 0,
+    "matched": 2,
+    "missingIn2B": 2,
+    "missingInBooks": 0,
+    "duplicateBooks": 2,
+    "duplicateGstr2b": 0,
+    "invalidRows": 0,
+    "exceptions": 5
+  },
+  "amounts": {
+    "booksTax": 8100,
+    "gstr2bTax": 5400,
+    "matchedTax": 5400,
+    "itcAtRisk": 2700,
+    "potentialUnclaimed": 0,
+    "netDifference": 2700
+  },
+  "matchRate": 50
+}

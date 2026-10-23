@@ -1,0 +1,168 @@
+{
+  "invoice": {
+    "number": "INV-2026-0091",
+    "date": "2026-10-15",
+    "supplier": "Deccan Snacks LLP",
+    "supplierGstin": "29AAECS1234F1Z",
+    "recipient": "Anita Desai Traders",
+    "placeOfSupply": "27-Maharashtra",
+    "grandTotal": 120000
+  },
+  "context": {
+    "aato": 60000000,
+    "aatoCrore": 6,
+    "hsnBand": "AATO above ₹5 crore",
+    "hsnDigitsRequired": 6,
+    "eInvoiceRequired": true,
+    "supplyType": "inter-state",
+    "supplierState": "29",
+    "recipientState": "27",
+    "isB2C": false,
+    "isExport": false,
+    "auditDate": "2026-10-20"
+  },
+  "summary": {
+    "score": 0,
+    "verdict": "DO NOT ISSUE",
+    "counts": {
+      "critical": 4,
+      "high": 5,
+      "medium": 3,
+      "low": 2
+    }
+  },
+  "findings": [
+    {
+      "code": "SUP_GSTIN_INVALID",
+      "severity": "critical",
+      "message": "Supplier GSTIN \"29AAECS1234F1Z\" is not a valid 15-character GSTIN.",
+      "fix": "Copy the GSTIN from the GST portal certificate; do not type it by hand.",
+      "ref": "CGST Rule 46",
+      "field": "supplier.gstin"
+    },
+    {
+      "code": "TAX_SPLIT_WRONG",
+      "severity": "critical",
+      "message": "Line 1 charges CGST/SGST for an inter-state supply (supplier 29 → recipient 27).",
+      "fix": "Inter-state supply is charged IGST only.",
+      "ref": "Section 10(1)(a) / Section 12",
+      "field": "lines[0].cgst"
+    },
+    {
+      "code": "GRAND_TOTAL_MISMATCH",
+      "severity": "critical",
+      "message": "Invoice total 120000 does not match the computed 67325.",
+      "fix": "Recompute: taxable + tax + charges − discount + round-off.",
+      "ref": "CGST Rule 46",
+      "field": "grandTotal"
+    },
+    {
+      "code": "EINV_IRN_MISSING",
+      "severity": "critical",
+      "message": "Aggregate annual turnover is ₹6,00,00,000, so this B2B supply needs an IRN on the IRP portal.",
+      "fix": "Generate the IRN and QR, then print IRN, ACK number, ACK date and the QR on the invoice.",
+      "ref": "GSTN e-invoice notification (B2B and exports)",
+      "field": "eInvoice.irn"
+    },
+    {
+      "code": "HSN_DIGITS",
+      "severity": "high",
+      "message": "Line 1 code \"0901\" has 4 digits; 6 digits are required (AATO above ₹5 crore).",
+      "fix": "Extend the code to the digit depth your turnover band requires.",
+      "ref": "Notification 78/2020-Central Tax; GSTN Phase-3 (May 2025)",
+      "field": "lines[0].hsn"
+    },
+    {
+      "code": "LINE_TAX_MISMATCH",
+      "severity": "high",
+      "message": "Line 1 tax is 10200; 57500 × 18% = 10350.",
+      "fix": "Recompute the tax from the taxable value and the rate.",
+      "ref": "CGST Rule 46",
+      "field": "lines[0].gstRate"
+    },
+    {
+      "code": "LINE_TOTAL_MISMATCH",
+      "severity": "high",
+      "message": "Line 1 total is 68800; expected 67700.",
+      "fix": "Line total must equal taxable value plus tax.",
+      "ref": "CGST Rule 46",
+      "field": "lines[0].total"
+    },
+    {
+      "code": "SUBTOTAL_MISMATCH",
+      "severity": "high",
+      "message": "Stated taxable value 57000 does not match the sum of lines 57500.",
+      "fix": "Reconcile the line totals against the invoice total.",
+      "ref": "CGST Rule 46",
+      "field": "totalTaxableValue"
+    },
+    {
+      "code": "NO_AMOUNT_IN_WORDS",
+      "severity": "high",
+      "message": "Amount in words is missing.",
+      "fix": "Print the total invoice value in words.",
+      "ref": "CGST Rule 46",
+      "field": "amountInWords"
+    },
+    {
+      "code": "SUP_NO_CONTACT",
+      "severity": "medium",
+      "message": "Supplier phone or email is missing.",
+      "fix": "Print a contact so the buyer can reconcile a query.",
+      "ref": "CGST Rule 46",
+      "field": "supplier.phone"
+    },
+    {
+      "code": "RATE_MISMATCH",
+      "severity": "medium",
+      "message": "Line 1 charges 18% GST on 0901 (Coffee, tea, mate and spices); this heading is commonly 5%.",
+      "fix": "Verify the rate on the GST portal rate finder for your exact product. A wrong rate is a bigger risk than a missing HSN.",
+      "ref": "GST rate finder",
+      "field": "lines[0].gstRate"
+    },
+    {
+      "code": "EWAY_MISSING",
+      "severity": "medium",
+      "message": "Goods supply of ₹120000 exceeds the ₹50,000 e-way bill threshold. State-specific thresholds may differ.",
+      "fix": "Generate the e-way bill for the consignment and record its number on the invoice; confirm your state threshold.",
+      "ref": "GSTN e-way bill rules",
+      "field": "eWayBill"
+    },
+    {
+      "code": "ROUND_OFF_EXCEEDS",
+      "severity": "low",
+      "message": "Round-off 5 is larger than ₹1.",
+      "fix": "Round-off should be a rounding of a few paise, not a discount.",
+      "ref": "CGST Rule 46",
+      "field": "roundOff"
+    },
+    {
+      "code": "NO_PAYMENT_TERMS",
+      "severity": "low",
+      "message": "No payment terms or payment mode is stated.",
+      "fix": "State the payment mode and due date; it decides when tax is due.",
+      "ref": "Section 31(3) / Section 13",
+      "field": "paymentTerms"
+    }
+  ],
+  "checks": [
+    {
+      "code": "INV_NO_NUMBER",
+      "label": "Invoice number present",
+      "status": "pass",
+      "detail": "INV-2026-0091"
+    },
+    {
+      "code": "INV_NO_DATE",
+      "label": "Invoice date present",
+      "status": "pass",
+      "detail": "2026-10-15"
+    },
+    {
+      "code": "RATE_VALID",
+      "label": "Line 1 GST rate",
+      "status": "pass",
+      "detail": "18%"
+    }
+  ]
+}

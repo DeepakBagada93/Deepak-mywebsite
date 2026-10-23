@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "1.0",
+  "checkedAt": "2026-10-20T14:12:30.013Z",
+  "product": "Get Rich AI Course",
+  "url": "https://example.com/course",
+  "findings": [
+    {
+      "id": "F012",
+      "code": "CLAIM_GUARANTEE",
+      "severity": "critical",
+      "message": "Absolute guarantee or risk-free claim.",
+      "evidence": [
+        "GUARANTEED"
+      ],
+      "fix": "State the condition and the remedy: \"7-day refund if the audit finds nothing\", not a blanket guarantee."
+    },
+    {
+      "id": "F013",
+      "code": "CLAIM_INCOME",
+      "severity": "critical",
+      "message": "Income, profit or return promise.",
+      "evidence": [
+        "Double your income"
+      ],
+      "fix": "Remove the money promise. Show the mechanism and the range actually observed."
+    },
+    {
+      "id": "F001",
+      "code": "OFFER_CURRENCY",
+      "severity": "high",
+      "message": "Currency is not INR on an India-targeted page.",
+      "evidence": [
+        "USD"
+      ],
+      "fix": "Show INR. If you also accept USD, show both with the exchange basis."
+    },
+    {
+      "id": "F002",
+      "code": "OFFER_GST_EXCLUSIVE",
+      "severity": "high",
+      "message": "Displayed price excludes GST.",
+      "evidence": [
+        "4999"
+      ],
+      "fix": "Make the displayed price GST-inclusive and show the breakup."
+    },
+    {
+      "id": "F004",
+      "code": "OFFER_NO_REFUND",
+      "severity": "high",
+      "message": "No refund policy.",
+      "evidence": [],
+      "fix": "State the window (for example 7 or 30 days), the condition and how to claim."
+    },
+    {
+      "id": "F006",
+      "code": "OFFER_NO_CONTACT",
+      "severity": "high",
+      "message": "No email or WhatsApp contact.",
+      "evidence": [],
+      "fix": "Add a monitored email and, for India, a WhatsApp link."
+    },
+    {
+      "id": "F008",
+      "code": "OFFER_NO_CTA",
+      "severity": "high",
+      "message": "No call to action.",
+      "evidence": [],
+      "fix": "Add one primary button with the price and what happens next."
+    },
+    {
+      "id": "F014",
+      "code": "DARK_FALSE_URGENCY",
+      "severity": "high",
+      "message": "False urgency pattern (CCPA dark-pattern guidance).",
+      "evidence": [
+        "Only 5 seats"
+      ],
+      "fix": "Use a real, dated deadline that applies to every buyer, or remove it."
+    },
+    {
+      "id": "F015",
+      "code": "DARK_DRIP_PRICING",
+      "severity": "high",
+      "message": "Price excludes GST and adds it later (drip pricing).",
+      "evidence": [
+        "GST extra"
+      ],
+      "fix": "Display the final GST-inclusive price on the page. Show the GST breakup, not a surprise at checkout."
+    },
+    {
+      "id": "F003",
+      "code": "OFFER_GSTIN_INVALID",
+      "severity": "medium",
+      "message": "GSTIN does not match the 15-character format.",
+      "evidence": [
+        "INVALID123"
+      ],
+      "fix": "Recheck the GSTIN on the GST portal before publishing."
+    },
+    {
+      "id": "F005",
+      "code": "OFFER_NO_DELIVERY",
+      "severity": "medium",
+      "message": "Delivery time is not stated.",
+      "evidence": [],
+      "fix": "Say \"instant download\" or the exact turnaround."
+    },
+    {
+      "id": "F007",
+      "code": "OFFER_NO_UPI",
+      "severity": "medium",
+      "message": "UPI is not listed as a payment method.",
+      "evidence": [
+        "cards"
+      ],
+      "fix": "Enable UPI and show it at checkout; it is the dominant consumer payment rail in India."
+    },
+    {
+      "id": "F009",
+      "code": "OFFER_UNNAMED_TESTIMONIAL",
+      "severity": "medium",
+      "message": "Testimonial has no name.",
+      "evidence": [
+        "T1"
+      ],
+      "fix": "Use a real, attributable quote with permission, or remove it."
+    },
+    {
+      "id": "F011",
+      "code": "OFFER_NO_LEGAL_LINKS",
+      "severity": "medium",
+      "message": "Terms or privacy page is missing.",
+      "evidence": [],
+      "fix": "Link both in the footer; digital sales need terms, refund and privacy pages."
+    },
+    {
+      "id": "F010",
+      "code": "OFFER_VAGUE_TESTIMONIAL",
+      "severity": "low",
+      "message": "Testimonial has no specific result.",
+      "evidence": [
+        "T1"
+      ],
+      "fix": "Add the before/after or the number the buyer reported."
+    }
+  ],
+  "summary": {
+    "score": 0,
+    "verdict": "DO NOT LAUNCH",
+    "critical": 2,
+    "high": 7,
+    "medium": 5,
+    "low": 1
+  }
+}
