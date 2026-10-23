@@ -3335,6 +3335,7 @@ code { font-family: var(--mono); font-size: 0.85em; }
     z-index: 9500;
     pointer-events: none;
     visibility: hidden;
+    overflow: hidden;
     transition: visibility 0.35s ease;
 }
 .cart-drawer.is-open {
@@ -3365,7 +3366,7 @@ code { font-family: var(--mono); font-size: 0.85em; }
     height: 100dvh;
     max-height: 100dvh;
     width: 100%;
-    max-width: 440px;
+    max-width: min(440px, 100vw);
     background: var(--paper);
     border-left: 1px solid var(--hair);
     box-shadow: -24px 0 64px rgba(22, 22, 22, 0.28);
@@ -4478,15 +4479,55 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
 @media (max-width: 980px) {
     .store-detail {
         padding: 40px 0 90px;
+        overflow-x: clip;
+        max-width: 100%;
     }
     .store-detail__layout {
         display: flex;
         flex-direction: column;
         gap: 36px;
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    .store-detail__main {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    .store-detail__block {
+        min-width: 0;
+        max-width: 100%;
+    }
+    .store-steps {
+        min-width: 0;
+        max-width: 100%;
+    }
+    .store-step {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .store-step__head {
+        min-width: 0;
+        max-width: 100%;
+    }
+    .store-step__title {
+        word-break: break-word;
+    }
+    .store-step__code {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: pre-wrap;
+        word-break: break-all;
+        box-sizing: border-box;
     }
     .store-detail__aside {
         position: static;
         width: 100%;
+        min-width: 0;
+        max-width: 100%;
     }
     .store-detail__mobile-buybox {
         display: block;
@@ -4500,8 +4541,13 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
     .store-detail {
         padding: 32px 0 100px;
+        overflow-x: clip;
+        max-width: 100%;
     }
     .store-detail__crumb {
         margin-bottom: 18px;
@@ -4561,7 +4607,8 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
     .store-step__code {
         padding: 8px 12px;
         font-size: 0.78rem;
-        white-space: pre;
+        white-space: pre-wrap;
+        word-break: break-all;
     }
     .store-buybox {
         padding: 22px 16px;
