@@ -7,7 +7,7 @@
         <nav class="tool-page__breadcrumb mono" data-reveal>
             <a href="{{ route('tools.index') }}">Tools</a>
             <span>/</span>
-            <a href="{{ route('tools.index') }}?category={{ $tool['category_slug'] }}">{{ $tool['category'] }}</a>
+            <a href="{{ route('tools.category', ['category' => $tool['category_slug']]) }}">{{ $tool['category'] }}</a>
             <span>/</span>
             <span>{{ $tool['name'] }}</span>
         </nav>
@@ -149,7 +149,7 @@
                                 '@type' => 'ListItem',
                                 'position' => 2,
                                 'name' => $tool['category'],
-                                'item' => config('site.url') . '/tools?category=' . $tool['category_slug'],
+                                'item' => route('tools.category', ['category' => $tool['category_slug']]),
                             ],
                             [
                                 '@type' => 'ListItem',

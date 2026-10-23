@@ -3,7 +3,7 @@
         All Skills
     </a>
     @foreach ($categories as $cat)
-        <a href="{{ route('library.index', ['category' => $cat->slug]) }}"
+        <a href="{{ route('library.category', ['category' => $cat->slug]) }}"
            class="pill-btn {{ ($selectedCategorySlug ?? '') === $cat->slug ? 'is-active' : '' }}">
             {{ $cat->name }}
         </a>

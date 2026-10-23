@@ -14,12 +14,12 @@
             </div>
 
             <div class="category-filter" style="margin-top: 32px;">
-                <a href="{{ route('repos.index') }}" class="pill-btn {{ empty($category) ? 'is-active' : '' }}">
+                <a href="{{ route('repos.index') }}" class="pill-btn {{ empty($categoryName) ? 'is-active' : '' }}">
                     All Categories
                 </a>
                 @foreach ($categories as $cat)
-                    <a href="{{ route('repos.index', ['category' => $cat]) }}"
-                       class="pill-btn {{ $category === $cat ? 'is-active' : '' }}">
+                    <a href="{{ route('repos.category', ['category' => \Illuminate\Support\Str::slug($cat)]) }}"
+                       class="pill-btn {{ $categoryName === $cat ? 'is-active' : '' }}">
                         {{ $cat }}
                     </a>
                 @endforeach

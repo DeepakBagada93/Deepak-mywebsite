@@ -44,6 +44,7 @@ Route::prefix('repos')->group(function () {
 
 Route::prefix('tools')->group(function () {
     Route::get('/', [ToolController::class, 'index'])->name('tools.index');
+    Route::get('/category/{category}', [ToolController::class, 'category'])->name('tools.category');
     Route::get('/{slug}', [ToolController::class, 'show'])->name('tools.show');
 });
 

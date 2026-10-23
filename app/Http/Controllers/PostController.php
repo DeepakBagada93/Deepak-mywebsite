@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Support\WordCount;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -25,14 +26,23 @@ class PostController extends Controller
         'parental-control-safe-internet-gen-alpha-india-2026',
     ];
 
-    public function index()
+    public function index(Request $request)
     {
         $site = config('site');
         $url = rtrim($site['url'], '/');
-        $canonical = $url.'/journal';
         $portraitUrl = $url.'/images/about-portrait.png';
 
         $posts = Post::published()->canonical()->paginate(15);
+
+        // ?page=1 is a duplicate of the clean index — consolidate with a 301.
+        if ((string) $request->query('page') === '1') {
+            return redirect()->to($url.'/journal', 301);
+        }
+
+        // Paginated pages must self-canonicalise. Pointing page 2+ at page 1
+        // is what Search Console reports as "Alternate page with proper
+        // canonical tag".
+        $canonical = $url.'/journal'.($posts->currentPage() > 1 ? '?page='.$posts->currentPage() : '');
         // Safety net: strip any residual variant slugs the DB-level filter
         // could not express (e.g. `-vN` on SQLite, which lacks REGEXP).
         $listed = $posts->getCollection()
@@ -99,16 +109,18 @@ class PostController extends Controller
 
         // Duplicate-variant guard: slugs like *-variant-12 / *-v8 are near-duplicates
         // of a canonical post. When the base slug exists as a published post,
-        // 301 to it so link equity consolidates instead of splitting; otherwise
-        // noindex the variant and point canonical at the journal index.
+        // 301 to it so link equity consolidates instead of splitting; orphan
+        // variants have no unique value, so 410 Gone de-queues them (a 200 +
+        // canonical-to-index keeps them in "Alternate page" reports forever).
         $isVariant = Post::isVariantSlug($post->slug);
         if ($isVariant) {
-            $baseSlug = preg_replace('/-(variant-\d+|v\d+)$/', '', $post->slug);
+            $baseSlug = Post::baseSlugFor($post->slug);
             $canonicalPost = Post::published()->where('slug', $baseSlug)->first();
-            if ($canonicalPost) {
+            if ($canonicalPost && $canonicalPost->id !== $post->id) {
                 return redirect($url.'/journal/'.$canonicalPost->slug, 301);
             }
-            $canonical = $url.'/journal';
+
+            abort(410);
         }
 
         $related = Post::published()->canonical()
@@ -136,7 +148,7 @@ class PostController extends Controller
             'canonical' => $canonical,
             'og_type' => 'article',
             'og_image' => '/images/about-portrait.png',
-            'robots' => ($isThin || $isVariant) ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            'robots' => $isThin ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
             'json_ld' => json_encode([
                 '@context' => 'https://schema.org',
                 '@graph' => array_values(array_filter([

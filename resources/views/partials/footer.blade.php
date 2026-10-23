@@ -69,10 +69,10 @@
                 <p class="mono footer__col-title">Free Tools</p>
                 <ul class="footer__col-list">
                     <li><a href="{{ route('tools.index') }}">All Tools</a></li>
-                    <li><a href="{{ route('tools.index') }}?category=pdf-document">PDF Tools</a></li>
-                    <li><a href="{{ route('tools.index') }}?category=image">Image Tools</a></li>
-                    <li><a href="{{ route('tools.index') }}?category=developer">Developer Tools</a></li>
-                    <li><a href="{{ route('tools.index') }}?category=calculator">Calculators</a></li>
+                    <li><a href="{{ route('tools.category', ['category' => 'pdf-document']) }}">PDF Tools</a></li>
+                    <li><a href="{{ route('tools.category', ['category' => 'image']) }}">Image Tools</a></li>
+                    <li><a href="{{ route('tools.category', ['category' => 'developer']) }}">Developer Tools</a></li>
+                    <li><a href="{{ route('tools.category', ['category' => 'calculator']) }}">Calculators</a></li>
                 </ul>
             </div>
 

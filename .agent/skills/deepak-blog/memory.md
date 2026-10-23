@@ -3557,3 +3557,141 @@
 - `SKILL.md` §6 is now **🚫 Zero Images In Article Body**; the pre-publish and live audits (`audit-blog.mjs`, `audit-live-url.mjs`) now **FAIL** on any image embedded in the body.
 - `oct-data-generator.mjs` and `oct14-data-generator.mjs` no longer inject an image line; historical `articles-oct-*.mjs` image lines stripped.
 - Do NOT generate, invent, or reference `images/journal/*` or `assets/images/posts/*` inside article bodies going forward. Represent visuals as tables, fenced code blocks, or ASCII diagrams. Cover/OG imagery is handled by the site layout only.
+
+- **PHP 8.4 Hooks 2026: Laravel Models [Practical Guide]**
+  - Slug: `php-84-property-hooks-laravel-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-20 15:30:00`
+  - Words: 1431
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Pricing Mistakes Year One 2026: ₹9L Lessons [Truth]**
+  - Slug: `pricing-mistakes-first-year-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-20 18:30:00`
+  - Words: 1449
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Agent Developer India 2026: ₹85K & P95 41ms**
+  - Slug: `best-ai-agent-developer-india-cost-p95-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-10-22 06:30:00`
+  - Words: 1839
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **MCP Protocol 2026: One Interface for Every AI Agent**
+  - Slug: `mcp-protocol-ai-agents-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-22 12:30:00`
+  - Words: 1672
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel 13 Performance 2026: 98 Lighthouse, No SPA**
+  - Slug: `laravel-13-performance-lighthouse-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-22 15:30:00`
+  - Words: 1606
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Building From Junagadh 2026: 06:00 to Midnight Playbook**
+  - Slug: `building-from-junagadh-daily-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-22 18:30:00`
+  - Words: 1797
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+## Scheduled — 2026-10-24 to 2026-10-25 (Phase 2, 5/day)
+
+- **AI Agent Maintenance Cost India 2026: ₹18K Retainer**
+  - Slug: `ai-agent-maintenance-cost-india-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-10-24 06:30:00`
+  - Words: 2027
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **WorkOS Agent Auth 2026: 12ms Scoped AI Agent Tokens**
+  - Slug: `workos-agent-auth-scoped-tokens-2026`
+  - Tag: `AI AGENTS`
+  - Scheduled For: `2026-10-24 09:30:00`
+  - Words: 2254
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Meta Muse Wonder AI 2026: 56 Index, $4.52 Per Task**
+  - Slug: `meta-muse-wonder-benchmark-2026`
+  - Tag: `AI NEWS`
+  - Scheduled For: `2026-10-24 12:30:00`
+  - Words: 2100
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Laravel 13 MariaDB Vector Search: Skip pgvector 2026**
+  - Slug: `laravel-13-mariadb-vector-search-2026`
+  - Tag: `WEB DEV`
+  - Scheduled For: `2026-10-24 15:30:00`
+  - Words: 1881
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Scope Creep 2026: The ₹1.2L Clause I Use in Gujarat**
+  - Slug: `scope-creep-change-request-clause-2026`
+  - Tag: `MY STORY`
+  - Scheduled For: `2026-10-24 18:30:00`
+  - Words: 2096
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **AI Automation Agency India 2026: Real ₹75K Build Rates**
+  - Slug: `ai-automation-agency-india-pricing-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-10-25 06:30:00`
+  - Words: 2072
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **AI Agent Evals 2026: Braintrust $249 vs LangSmith Cost**
+  - Slug: `langsmith-vs-braintrust-2026`
+  - Tag: `AI AGENTS`
+  - Scheduled For: `2026-10-25 09:30:00`
+  - Words: 2042
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **GPT-6.1 Sol Agent Cost 2026: $2 Input vs Astra $10**
+  - Slug: `gpt-61-sol-cost-benchmark-2026`
+  - Tag: `AI NEWS`
+  - Scheduled For: `2026-10-25 12:30:00`
+  - Words: 2044
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Next.js 16.4 Partial Prefetching: 1 Shell Per Route 2026**
+  - Slug: `nextjs-16-4-partial-prefetching-2026`
+  - Tag: `WEB DEV`
+  - Scheduled For: `2026-10-25 15:30:00`
+  - Words: 2066
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Why I Turned Down ₹6L: The Junagadh Margin Math 2026**
+  - Slug: `turning-down-6l-project-2026`
+  - Tag: `MY STORY`
+  - Scheduled For: `2026-10-25 18:30:00`
+  - Words: 2096
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **First ₹10L Month 2026: Real Ledger Breakdown & Proof**
+  - Slug: `first-10l-month-2026-ledger-breakdown`
+  - Tag: `MY STORY`
+  - Published: `2026-10-23 18:30:00`
+  - Words: 1995
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

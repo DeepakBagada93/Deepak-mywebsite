@@ -127,11 +127,11 @@ $duePosts = null;
 try {
     $duePosts = fetchWithRetry(fn () => $buildDueQuery()->orderBy('scheduled_for', 'asc')->get(), 'fetch-due');
 } catch (\Throwable $e) {
-    $msg = "❌ DB FAILED after 4 attempts [fetch-due] at " . date('Y-m-d H:i:s T') . ": {$e->getMessage()}\n";
+    $msg = "❌ DB FAILED after 6 attempts [fetch-due] at " . date('Y-m-d H:i:s T') . ": {$e->getMessage()}\n";
     fwrite(STDERR, $msg);
     alertFailure(
         '[deepak-blog] Scheduled publish FAILED — DB unreachable',
-        "The scheduled post processor could not reach Hostinger MySQL after 4 retries.\n\n{$msg}\nDue posts are still queued and will auto-publish on the next run once the network returns.\nCheck scheduler.log for details."
+        "The scheduled post processor could not reach Hostinger MySQL after 6 retries.\n\n{$msg}\nDue posts are still queued and will auto-publish on the next run once the network returns.\nCheck scheduler.log for details."
     );
     exit(1);
 }
@@ -151,6 +151,25 @@ if ($duePosts->isEmpty()) {
     if ($next && !$quiet) {
         echo "⏳ Next scheduled post: [{$next->scheduled_for}] {$next->title} (Slug: {$next->slug})\n";
     }
+
+    // Queue watchdog: a dry queue means the generation run was skipped, not
+    // that everything is fine. Alert (throttled) so a day never ships empty.
+    $gapHours = $next ? (strtotime($next->scheduled_for) - time()) / 3600 : 999;
+    if ($gapHours > 30) {
+        $alertFile = base_path('storage/framework/schedule-queue-alert.json');
+        $lastAlert = file_exists($alertFile) ? (int) @file_get_contents($alertFile) : 0;
+        if (time() - $lastAlert > 12 * 3600) {
+            @file_put_contents($alertFile, (string) time());
+            fwrite(STDERR, "⚠ Scheduled queue gap > 30h — generate the next batch.\n");
+            alertFailure(
+                '[deepak-blog] Scheduled queue is running dry',
+                $next
+                    ? "No dispatch is queued in the next 30 hours. Next item: {$next->scheduled_for} ({$next->slug}). Generate today's queue to keep the cadence."
+                    : 'No scheduled posts remain in the database. Generate the next batch immediately.'
+            );
+        }
+    }
+
     if (!$quiet) {
         echo "==========================================================\n";
     }

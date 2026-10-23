@@ -3,22 +3,23 @@ name: deepak-blog
 description: >
   Autonomous Rank-#1 SEO, AEO & High-EEAT Content Publishing Engine for Deepak Bagada (deepakbagada.in/journal).
   Engineered to eliminate synthetic AI writing patterns, defeat Google Helpful Content & Core Updates,
-  maximize impressions and views through high-demand search intent validation, clean bracket-free editorial titles,
-  AEO direct answer blocks, structured comparison tables, runnable production code, and genuine first-person builder EEAT.
+  maximize impressions and dwell time through high-demand search intent validation, clean bracket-free editorial titles,
+  AEO direct answer blocks, structured comparison tables, visual architecture diagrams (Mermaid / SVG), runnable production code,
+  and genuine first-person builder EEAT.
   Executes a strict SEQUENTIAL ONE-BY-ONE loop (Search One → Anti-Duplication Pre-Check → Write One →
   Pre-Publish Audit → Direct Push to Live DB + Frontend data/posts.php → Verify Live URL → Log Memory → Repeat).
   Features an automated date-driven progressive scaling engine:
-  - Phase 1: Days 1–20 (Sep 22 – Oct 11, 2026) at 3 Dispatches/run for Safe Crawl Budget Protection & maximum high-EEAT quality.
-  - Phase 2: Days 21–50 (Oct 12 – Nov 10, 2026) at 5 Dispatches/run for gradual velocity scale.
+  - Phase 1: Days 1–20 (Sep 22 – Oct 11, 2026) at 3 Dispatches/run for Safe Crawl Budget Protection.
+  - Phase 2: Days 21–50 (Oct 12 – Nov 10, 2026) at 5 Dispatches/run [CURRENT ACTIVE PHASE] for gradual velocity scale & retention.
   - Phase 3: Days 51–80 (Nov 11 – Dec 10, 2026) at 7 Dispatches/run for topical authority expansion.
   - Phase 4: Days 81+ (Dec 11, 2026 onwards) at 10 Dispatches/run for enterprise authority scale.
   STRICTLY ZERO SQUARE BRACKETS ([ ]) in titles. Mandatory 50–60 character SEO titles and 145–158 character meta descriptions.
-  Strict word count: 1,400 to 2,000+ words per article (high-EEAT, runnable multi-file code, ₹/$ metrics, zero AI fluff).
+  Strict word count: 1,400 to 2,000+ words per article (high-EEAT, runnable multi-file code, ₹/$ metrics, visual architecture, zero AI fluff).
   ZERO git commits/pushes needed — content goes live instantly via remote MySQL database.
 ---
 
-# 🚀 Deepak Bagada High-Value SEO, AEO & Rank-#1 Journal Engine (`deepak-blog` v12.0)
-### (High-Demand Search Validation · Bracket-Free Editorial Titles · Direct AEO Answer Blocks · Information Gain EEAT · Zero Git Push Needed)
+# 🚀 Deepak Bagada High-Value SEO, AEO & Rank-#1 Journal Engine (`deepak-blog` v13.0)
+### (High-Demand Search Validation · Visual Architecture · Bracket-Free Titles · Direct AEO Answer Blocks · Zero Git Push)
 
 > [!IMPORTANT]
 > **CORE ARCHITECTURE: STRICT ITEM-BY-ITEM CLOSED LOOP & HIGH SEARCH DEMAND VALIDATION**:
@@ -30,16 +31,16 @@ description: >
 > * **Phase 1 (Days 1–20 | 2026-09-22 to 2026-10-11) — Safe Crawl Budget & Ultra-High Quality (3 Dispatches Total)**:
 >   - **Dispatch 1**: Authority & Rank-#1 Money Query (`best website developer` / `best AI agent developer` / `top AI expert` × `Junagadh / Gujarat / India / world`, ₹ pricing, client ROI metrics)
 >   - **Dispatch 2**: Frontier AI & Autonomous Swarms (Reasoning models, MCP, LangGraph, Pydantic-AI, Self-Healing loops, Claude 3.7 / DeepSeek R1)
->   - **Dispatch 3**: High-Performance Web Dev or Production War Story (Next.js 15 App Router + Laravel 13 AI SDK, pgvector HNSW, or Junagadh lab engineering war stories)
+>   - **Dispatch 3**: High-Performance Web Dev or Production War Story (Next.js 15 App Router + Laravel 12 AI SDK, pgvector HNSW, or Junagadh lab engineering war stories)
 >   - *Purpose*: Strict crawl budget protection. Keep content volume focused and quality exceptionally high (1,400–2,000+ words, multi-file code, ₹ metrics) so Googlebot crawls, renders, and indexes 100% of newly published URLs without crawl fatigue or "Discovered – currently not indexed" backlogs.
 >
-> * **Phase 2 (Days 21–50 | 2026-10-12 to 2026-11-10) — Gradual Velocity Scale (5 Dispatches Total)**:
+> * **Phase 2 (Days 21–50 | 2026-10-12 to 2026-11-10) — Gradual Velocity Scale & Retention [ACTIVE NOW] (5 Dispatches Total)**:
 >   - Dispatch 1: Authority Rank-#1 Playbook
 >   - Dispatch 2: AI Agents & Autonomous Swarms
 >   - Dispatch 3: Breaking AI News & Frontier Benchmarks
->   - Dispatch 4: High-Performance Web Dev (Next.js 15 + Laravel 13)
+>   - Dispatch 4: High-Performance Web Dev (Next.js 15 + Laravel 11/12)
 >   - Dispatch 5: Founder Reality & Production War Story
->   - *Purpose*: Expands throughput as Googlebot's crawl rate widens based on healthy indexation and zero crawl errors.
+>   - *Purpose*: Expands throughput to 5 dispatches/day while enforcing Visual Architecture (Mermaid flowcharts, Table of Contents, 1-click code copy) to keep bounce rates ultra-low and dwell time above 3.5 minutes.
 >
 > * **Phase 3 (Days 51–80 | 2026-11-11 to 2026-12-10) — High Authority Expansion (7 Dispatches Total)**:
 >   - 2 Authority Money Queries + 2 AI Agents/Swarms + 1 AI News + 1 Web Dev + 1 Founder Reality.
@@ -53,13 +54,13 @@ description: >
 > **NEVER batch search, write, or push articles in parallel**. Each article in sequence must complete all stages before the next begins:
 > - **Step 1 — Search Demand & Trend Validation**: Use `search_web` to verify real search volume and trending technical queries. Reject zero-volume journal notes.
 > - **Step 2 — Anti-Duplication & Live DB Collision Pre-Check**: Run `php .agent/skills/deepak-blog/scripts/check-collision.php "<Keyword or Slug>"`. Prohibit duplicate numeric suffixes (`-[0-9]+` like `-2`, `-3` strictly banned; year `2026` allowed).
-> - **Step 3 — Write 1 High-Value Dispatch Payload**: (1,400–2,000+ words, clean high-CTR bracket-free title, front-loaded keyword, first-person Deepak Bagada voice, AEO 40–60 word direct answer block, Key Takeaways box, runnable multi-file code, comparison/pricing table, "When NOT to Use This" section, 3–5 internal links, 4 FAQs, ZERO images in the body — text, code blocks, and tables only).
-> - **Step 4 — Pre-Publish Audit**: Run `node .agent/skills/deepak-blog/scripts/audit-blog.mjs` to ensure 0 FAIL (checks title length 50-60 chars, zero brackets, AEO answer block, takeaways, comparison table, word count, no images, anti-slop).
+> - **Step 3 — Write 1 High-Value Dispatch Payload**: (1,400–2,000+ words, clean high-CTR bracket-free title, front-loaded keyword, first-person Deepak Bagada voice, AEO 40–60 word direct answer block, Key Takeaways box, visual architecture diagram via Mermaid or clean SVG/ASCII, runnable multi-file code, comparison/pricing table, "When NOT to Use This" section, 3–5 internal links, 4 FAQs).
+> - **Step 4 — Pre-Publish Audit**: Run `node .agent/skills/deepak-blog/scripts/audit-blog.mjs` to ensure 0 FAIL (checks title length 50-60 chars, zero brackets, AEO answer block, takeaways, visual architecture, comparison table, word count, no generic stock photos, no speculative tool versions, anti-slop).
 > - **Step 5 — Direct Push to Live DB + Frontend**: Run `php .agent/skills/deepak-blog/scripts/publish-single-post.php` to insert/upsert directly into Hostinger Live MySQL DB (`posts` table), update `data/posts.php`, and clear application cache.
-> - **Step 6 — Live URL Quality Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and image-free body.
+> - **Step 6 — Live URL Quality Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and visual architecture layout.
 > - **Step 7 — Log to `memory.md`**: Append title, slug, tag, date, and metrics.
 > - **Step 8 — GSC Indexing Protocol**: Confirm slug in `sitemap.xml` with today's `<lastmod>` → URL Inspection → Request Indexing (≤ phase quota/day).
-> - **Step 9 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota).
+> - **Step 9 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota: 5/day in Phase 2).
 > - **ZERO GIT PUSH NEEDED**: Publishing goes directly into the live database and updates local files. Zero git commits/pushes protects search engine indexing stability.
 
 ---
@@ -191,9 +192,15 @@ Google's Information Gain patent specifically demotes content that repeats what 
 * Never write placeholder toy code (`foo()` / `bar()`).
 * Always provide complete, runnable implementations with explicit language tags (`python`, `php`, `typescript`, `bash`, `json`) and realistic file headers (e.g. `# app/agents/code_review.py`).
 
-### 5. Zero Images In Article Body Policy
-* Articles MUST NOT embed any image in the body — no `![alt](url)` markdown, no `<img>` tags. Body content is text, fenced code blocks, tables, and link-based internal references only.
-* Any embedded image (markdown or HTML) triggers an **instant FAIL** in the pre-publish audit. Cover/OG imagery is handled entirely by the site layout, never inside the article body.
+### 5. Visual Architecture & Flowchart Policy (Defeating Text Fatigue & Bounces)
+* **Mermaid Architecture Flowcharts**: Complex technical posts (agents, MCP, microservices, caches, vector search) SHOULD include a clean Mermaid architecture diagram (` ```mermaid ... ``` `). Visual architecture charts immediately hook arriving developers, visually communicate data flows, and cut page bounce rates by over 40%.
+* **Clean SVG / Technical Schematics Allowed**: Technical flowcharts and architecture schematics with descriptive `alt` text are fully supported.
+* **Strict Ban on Generic Stock Photos**: Generic AI stock photos (e.g. Unsplash business handshakes, generic robot photos, stock laptop photos) are **STRICTLY BANNED**. Visuals must strictly be technical architecture diagrams, state machines, or workflow schematics.
+
+### 6. Zero Speculative / Hallucinated Framework Versions
+* **Strict Production-Stable Rule**: Never write speculative tutorials based on unreleased or fictitious framework versions (e.g. *Next.js 16.4*, *Laravel 13*, *GPT-6.1*).
+* Developers search Google for answers to their real-world code problems. If an article mentions imaginary or unreleased versions, developer trust drops instantly and bounce rate hits 100%.
+* Always target active production-stable tooling: Next.js 15, Laravel 11/12, Python 3.12/3.13, Claude 3.5/3.7, DeepSeek R1, LangGraph, Pydantic-AI.
 
 ---
 
@@ -269,17 +276,17 @@ Every `excerpt` / meta description must strictly satisfy:
 
 ## 🔄 THE ONE-BY-ONE PROGRESSIVE EXECUTION LOOP
 
-Run this strict closed loop for each article up to today's phase quota (Days 1–20: 3 dispatches; Days 21–50: 5; Days 51–80: 7; Days 81+: 10):
+Run this strict closed loop for each article up to today's phase quota (Phase 1: 3; Phase 2 [ACTIVE]: 5; Phase 3: 7; Phase 4: 10):
 
 ```
-[For Item 1 to Phase Quota (3 in Days 1–20)]
+[For Item 1 to Phase Quota (5 in Phase 2: Oct 12 – Nov 10, 2026)]
   │
   ├── 1. SEARCH: Verify real search volume & demand via search_web for current pillar
   │
   ├── 2. PRE-CHECK: Anti-duplication check against live DB & memory.md
   │      php .agent/skills/deepak-blog/scripts/check-collision.php "<slug>"
   │
-  ├── 3. WRITE: Draft 1,400–2,000+ word article payload with bracket-free title & high-EEAT body
+  ├── 3. WRITE: Draft 1,400–2,000+ word article payload with bracket-free title, visual architecture & high-EEAT body
   │
   ├── 4. PRE-AUDIT: Automated pre-publish audit
   │      node .agent/skills/deepak-blog/scripts/audit-blog.mjs --body draft.md --title "..." --excerpt "..."
@@ -293,7 +300,7 @@ Run this strict closed loop for each article up to today's phase quota (Days 1�
   │
   ├── 7. LOG: Append published details to .agent/skills/deepak-blog/memory.md
   │
-  └── 8. NEXT: Only after 100% verified, proceed to next item in sequence (stop at current phase quota)!
+  └── 8. NEXT: Only after 100% verified, proceed to next item in sequence (stop at current phase quota: 5/day)!
 ```
 
 ---
@@ -306,10 +313,10 @@ All scripts are located in `.agent/skills/deepak-blog/scripts/`:
 |---|---|
 | `scripts/publish-single-post.php` | Pushes 1 article directly to Hostinger Live DB, updates `data/posts.php`, clears cache, audits live URL, and updates `memory.md` (Zero git push) |
 | `scripts/check-collision.php` | Anti-duplication pre-check against live MySQL DB and `memory.md` |
-| `scripts/audit-blog.mjs` | Pre-publish automated audit (Checks zero square brackets, CTR score, word count, EEAT-Pro, image-free body, anti-fluff) |
-| `scripts/audit-live-url.mjs` | Live URL audit (HTTP 200, title, meta description, H1, word count, image-free body, JSON-LD) |
-| `scripts/trend-research.mjs` | Scaffolds viral topic queue with automated phase detection (`--preset phase-1` / `--count 3`) |
-| `scripts/publish-queue.mjs` | Multi-item sequential runner that calls `publish-single-post.php` item-by-item (supports `--limit 3`) |
+| `scripts/audit-blog.mjs` | Pre-publish automated audit (Checks zero square brackets, CTR score, word count, EEAT-Pro, visual architecture, anti-fluff, production-stable tooling) |
+| `scripts/audit-live-url.mjs` | Live URL audit (HTTP 200, title, meta description, H1, word count, visual architecture, JSON-LD) |
+| `scripts/trend-research.mjs` | Scaffolds viral topic queue with automated phase detection (`--preset phase-2` / `--count 5`) |
+| `scripts/publish-queue.mjs` | Multi-item sequential runner that calls `publish-single-post.php` item-by-item (supports `--limit 5`) |
 
 ---
 
@@ -319,7 +326,8 @@ All scripts are located in `.agent/skills/deepak-blog/scripts/`:
 - ❌ **No Zero-Search-Volume Diary Entries**: Topics must have demonstrable search demand.
 - ❌ **No Git Pushes for Publishing**: Content is served dynamically from the remote MySQL database.
 - ❌ **No Batch Writing**: Writing all articles at once without publishing and auditing one-by-one is strictly forbidden.
-- ❌ **Never Exceed Current Phase Quota**: In Days 1–20, strictly limit output to 3 dispatches per batch/run.
+- ❌ **Never Exceed Current Phase Quota**: In Phase 2 (Oct 12 – Nov 10, 2026), strictly limit output to 5 dispatches per batch/run.
 - ❌ **No Numeric Suffix Slugs**: Slugs ending in `-2`, `-3`, `-v2` are banned.
-- ❌ **No Images In Article Body**: Articles are text + code blocks + tables only; imagery lives in the site layout, never in the body.
+- ❌ **No Generic Non-Technical Stock Photos**: Banned (Unsplash, decorative fluff). Technical architecture schematics, Mermaid flowcharts, and SVG system diagrams only.
+- ❌ **No Speculative or Hallucinated Framework Versions**: Banned (Next.js 16+, Laravel 13+, GPT-6). Ground all tutorials in active production-stable frameworks.
 - ❌ **No AI Fluff / Buzzwords**: Automatic rejection for "game-changer", "tapestry", "delve into", etc.

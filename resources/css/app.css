@@ -7,3 +7,210 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* =============================================================================
+   AEO & Step-by-Step Skill Enhancements
+   ============================================================================= */
+.store-detail__aeo {
+    background: #fafbfc;
+    border: 1px solid var(--hair, #e9ecef);
+    border-left: 3px solid var(--ink, #111111);
+    padding: 24px;
+    margin: 28px 0;
+    border-radius: 4px;
+}
+.store-detail__aeo-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted, #6c757d);
+    margin-bottom: 12px;
+}
+.store-detail__aeo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+    border-top: 1px solid var(--hair, #f1f3f5);
+    padding-top: 14px;
+}
+.store-detail__aeo-item strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink, #111111);
+    margin-bottom: 4px;
+}
+.store-detail__aeo-item p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--muted, #555555);
+    margin: 0;
+}
+.store-steps {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+.store-step {
+    border: 1px solid var(--hair, #e9ecef);
+    border-radius: 4px;
+    padding: 18px 20px;
+    background: #ffffff;
+}
+.store-step__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.store-step__num {
+    background: var(--ink, #111111);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.store-step__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ink, #111111);
+}
+.store-step__desc {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--muted, #555555);
+    margin: 0 0 10px 0;
+}
+.store-step__code {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-family: var(--mono, monospace);
+    font-size: 0.85rem;
+    color: #212529;
+    overflow-x: auto;
+    margin: 0;
+}
+
+/* ─── Reading Progress Bar & Journal Visual Architecture ─────────────── */
+.read-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent, #b33926);
+    width: 0%;
+    z-index: 9999;
+    pointer-events: none;
+    transition: width 0.08s ease-out;
+}
+
+.article-toc {
+    background: #fbfaf8;
+    border: 1px solid var(--hair, #e6e3dd);
+    border-left: 3px solid var(--accent, #b33926);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 28px 0 36px;
+}
+.article-toc__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--muted, #666666);
+    user-select: none;
+}
+.article-toc__toggle {
+    font-size: 0.75rem;
+    color: var(--accent, #b33926);
+    font-family: var(--mono, monospace);
+}
+.article-toc__list {
+    margin: 12px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.article-toc__list li {
+    margin: 6px 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+.article-toc__list li.toc-h3 {
+    margin-left: 18px;
+    font-size: 0.86rem;
+    opacity: 0.88;
+}
+.article-toc__list a {
+    color: var(--ink, #111111);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    transition: all 0.15s ease;
+}
+.article-toc__list a:hover {
+    color: var(--accent, #b33926);
+    border-bottom-color: var(--accent, #b33926);
+}
+
+.code-wrap {
+    position: relative;
+    margin: 28px 0;
+}
+.code-wrap pre {
+    margin: 0 !important;
+}
+.code-copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #e0e0e0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: var(--mono, monospace);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+.code-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.45);
+}
+.code-copy-btn.copied {
+    background: #2e7d32;
+    color: #ffffff;
+    border-color: #4caf50;
+}
+
+.mermaid-wrap {
+    background: #fbfaf8;
+    border: 1px solid var(--hair, #e6e3dd);
+    border-radius: 6px;
+    padding: 24px 16px;
+    margin: 32px 0;
+    overflow-x: auto;
+    text-align: center;
+}
+.mermaid-wrap svg {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}

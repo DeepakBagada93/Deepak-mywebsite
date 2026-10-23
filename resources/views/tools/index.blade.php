@@ -22,7 +22,7 @@
         <div class="tools-hub__filters" data-reveal>
             <a href="{{ route('tools.index') }}" class="pill-btn {{ !$activeCategory ? 'is-active' : '' }}">All Tools</a>
             @foreach ($categories as $catName => $catTools)
-                <a href="{{ route('tools.index') }}?category={{ $catTools->first()['category_slug'] }}" 
+                <a href="{{ route('tools.category', ['category' => $catTools->first()['category_slug']]) }}"
                    class="pill-btn {{ $activeCategory === $catTools->first()['category_slug'] ? 'is-active' : '' }}">
                     {{ $catTools->first()['category_icon'] }} {{ $catName }}
                 </a>

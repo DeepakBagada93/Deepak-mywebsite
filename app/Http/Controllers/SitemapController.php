@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CuratedRepo;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Skill;
 use App\Models\SkillArchitecture;
+use App\Models\SkillCategory;
 use App\Support\WordCount;
+use Illuminate\Support\Str;
 
 class SitemapController extends Controller
 {
@@ -26,12 +29,32 @@ class SitemapController extends Controller
             ->values();
         $services = Service::orderBy('id')->get();
         $skills = Skill::published()->get();
+        $skillCategories = SkillCategory::orderBy('sort_order', 'asc')->get();
         $blueprints = SkillArchitecture::orderBy('sort_order', 'asc')->get();
         $tools = config('tools');
+        $toolCategories = collect($tools)->pluck('category_slug')->unique()->values();
+        $repoCategories = CuratedRepo::select('category')
+            ->distinct()
+            ->whereNotNull('category')
+            ->orderBy('category')
+            ->pluck('category')
+            ->map(static fn (string $category) => Str::slug($category))
+            ->values();
         $products = config('products');
 
         return response()
-            ->view('sitemap', compact('url', 'posts', 'services', 'skills', 'blueprints', 'tools', 'products'))
+            ->view('sitemap', compact(
+                'url',
+                'posts',
+                'services',
+                'skills',
+                'skillCategories',
+                'blueprints',
+                'tools',
+                'toolCategories',
+                'repoCategories',
+                'products',
+            ))
             ->header('Content-Type', 'application/xml');
     }
 }

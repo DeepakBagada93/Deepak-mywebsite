@@ -58,4 +58,34 @@ class SkillLibraryTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('The Production AI Content & Media Stack');
     }
+
+    public function test_library_category_query_redirects_to_clean_path(): void
+    {
+        $this->get('/library?category=agent-architecture')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/library/category/agent-architecture');
+    }
+
+    public function test_library_category_page_self_canonicalises(): void
+    {
+        $response = $this->get('/library/category/agent-architecture');
+
+        $response->assertStatus(200);
+        $response->assertSee('<link rel="canonical" href="https://deepakbagada.in/library/category/agent-architecture">', false);
+    }
+
+    public function test_repos_category_query_redirects_to_clean_path(): void
+    {
+        $this->get('/repos?category=Automation')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/repos/category/automation');
+    }
+
+    public function test_repos_category_page_self_canonicalises(): void
+    {
+        $response = $this->get('/repos/category/automation');
+
+        $response->assertStatus(200);
+        $response->assertSee('<link rel="canonical" href="https://deepakbagada.in/repos/category/automation">', false);
+    }
 }

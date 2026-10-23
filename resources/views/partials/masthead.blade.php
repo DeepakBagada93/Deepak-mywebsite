@@ -84,7 +84,7 @@
                             <div class="tools-popover__cats">
                                 @php $toolCategories = collect(config('tools'))->groupBy('category'); @endphp
                                 @foreach ($toolCategories as $categoryName => $categoryTools)
-                                <a href="{{ route('tools.index') }}?category={{ $categoryTools->first()['category_slug'] }}" class="tools-popover__cat-card">
+                                <a href="{{ route('tools.category', ['category' => $categoryTools->first()['category_slug']]) }}" class="tools-popover__cat-card">
                                     <span class="tools-popover__cat-icon">{{ $categoryTools->first()['category_icon'] }}</span>
                                     <span class="tools-popover__cat-name">{{ $categoryName }}</span>
                                     <span class="mono tools-popover__cat-count">{{ $categoryTools->count() }}</span>

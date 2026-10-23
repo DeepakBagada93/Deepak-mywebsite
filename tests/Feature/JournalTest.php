@@ -253,12 +253,28 @@ class JournalTest extends TestCase
         );
     }
 
-    public function test_variant_slug_without_base_keeps_noindex_fallback(): void
+    public function test_variant_slug_without_base_returns_410_gone(): void
     {
         $this->makeProbePost('orphan-guard-post-variant-7', 'Orphan variant body without a base post.');
 
-        $response = $this->get('/journal/orphan-guard-post-variant-7');
+        $this->get('/journal/orphan-guard-post-variant-7')->assertStatus(410);
+    }
+
+    public function test_paginated_journal_self_canonicalises(): void
+    {
+        $response = $this->get('/journal?page=2');
+
         $response->assertStatus(200);
-        $response->assertSee('noindex, follow', false);
+        $response->assertSee(
+            '<link rel="canonical" href="https://deepakbagada.in/journal?page=2">',
+            false
+        );
+    }
+
+    public function test_page_one_redirects_to_clean_journal_url(): void
+    {
+        $this->get('/journal?page=1')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/journal');
     }
 }

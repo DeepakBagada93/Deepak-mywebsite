@@ -76,4 +76,24 @@ class ToolsTest extends TestCase
 
         $response->assertStatus(404);
     }
+
+    public function test_category_query_redirects_to_clean_category_path(): void
+    {
+        $this->get('/tools?category=calculator')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/tools/category/calculator');
+    }
+
+    public function test_category_page_self_canonicalises(): void
+    {
+        $response = $this->get('/tools/category/calculator');
+
+        $response->assertStatus(200);
+        $response->assertSee('<link rel="canonical" href="https://deepakbagada.in/tools/category/calculator">', false);
+    }
+
+    public function test_unknown_category_returns_404(): void
+    {
+        $this->get('/tools/category/not-a-category')->assertStatus(404);
+    }
 }

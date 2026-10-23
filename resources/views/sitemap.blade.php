@@ -36,6 +36,27 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+    @foreach ($toolCategories as $categorySlug)
+    <url>
+        <loc>{{ $url }}/tools/category/{{ $categorySlug }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    @endforeach
+    @foreach ($skillCategories as $category)
+    <url>
+        <loc>{{ $url }}/library/category/{{ $category->slug }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    @endforeach
+    @foreach ($repoCategories as $categorySlug)
+    <url>
+        <loc>{{ $url }}/repos/category/{{ $categorySlug }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    @endforeach
     <url>
         <loc>{{ $url }}/products</loc>
         <changefreq>weekly</changefreq>

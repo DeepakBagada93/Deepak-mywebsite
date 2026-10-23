@@ -251,14 +251,48 @@ if (!body || body.trim().length < 200) {
   if (bolds % 2 !== 0) add("FAIL", "Bold leaks", "Unclosed ** — odd number of bold markers");
   else if (/\*\*[^*]+\*\*/.test(body)) add("PASS", "Bold formatting", "Bold markers present and likely closed");
 
-  // Zero-Images-In-Body Policy (article content must embed NO images)
-  const mdImages = [...body.matchAll(/!\[[^\]]*\]\(([^)]*)\)/g)].map(m => m[1].trim());
-  const htmlImages = [...body.matchAll(/<img\b[^>]*>/gi)].map(m => m[0].slice(0, 60));
-  const embeddedImages = [...mdImages, ...htmlImages];
-  if (embeddedImages.length > 0) {
-    add("FAIL", "No images in body", `${embeddedImages.length} embedded image(s) found — article bodies must contain ZERO images (text, code blocks, tables only): ${embeddedImages.join("; ")}`);
+  // Visual Architecture & Diagram Policy (Defeats text fatigue & lowers bounce rate)
+  // Allows: Mermaid flowcharts (```mermaid), clean ASCII/Unicode architecture maps, and verified local/hosted diagrams (/images/architecture/*, /images/diagrams/*).
+  // Banned: Generic non-technical stock photos (unsplash, pexels, placeholder, stock, loremflickr).
+  const hasMermaid = /```mermaid/i.test(body);
+  const mdImages = [...body.matchAll(/!\[([^\]]*)\]\(([^)]*)\)/g)].map(m => ({ alt: m[1].trim(), src: m[2].trim() }));
+  const htmlImages = [...body.matchAll(/<img\b([^>]*?)src=["']([^"']+)["']([^>]*?)>/gi)].map(m => ({ alt: (m[1] + m[3]).match(/alt=["']([^"']*)["']/i)?.[1] || "", src: m[2].trim() }));
+  const allImages = [...mdImages, ...htmlImages];
+
+  const genericStockImages = allImages.filter(img => /unsplash|pexels|placeholder|stock|shutterstock|depositphotos|dummyimage/i.test(img.src));
+
+  if (hasMermaid) {
+    add("PASS", "Visual Architecture Diagram", "Mermaid visual architecture flowchart present — excellent for reader retention & low bounce rate");
+  }
+
+  if (genericStockImages.length > 0) {
+    add("FAIL", "Visual Architecture Quality", `Found ${genericStockImages.length} generic stock photo(s) — BANNED. Only technical diagrams (Mermaid, local SVGs, or architecture schematics) are allowed.`);
+  } else if (allImages.length > 0) {
+    const missingAlt = allImages.filter(img => !img.alt || img.alt.length < 5);
+    if (missingAlt.length > 0) {
+      add("WARN", "Visual Architecture Alt Text", `${missingAlt.length} diagram/image(s) missing descriptive alt text for accessibility and image SEO`);
+    } else {
+      add("PASS", "Visual Architecture", `${allImages.length} technical diagram/image(s) with descriptive alt text present`);
+    }
+  } else if (!hasMermaid) {
+    add("WARN", "Visual Architecture", "Article is pure text & code with no Mermaid diagram or visual architecture chart — adding a Mermaid flowchart (/diagram) significantly cuts reader bounce rate");
   } else {
-    add("PASS", "No images in body", "Zero embedded images — text/code/tables only");
+    add("PASS", "Visual Architecture", "Visual architecture verified");
+  }
+
+  // Speculative & Fake Framework Versions Guard (Protects developer trust and prevents instant bounces)
+  const FAKE_OR_SPECULATIVE_VERSIONS = [
+    /next\.?js\s*(?:1[6-9]|[2-9]\d)/i, // Next.js 16+ is speculative (current is Next.js 15)
+    /laravel\s*(?:1[3-9]|[2-9]\d)/i,    // Laravel 13+ is speculative (current is Laravel 11/12)
+    /gpt-?6/i,                          // GPT-6 is hallucinated/speculative
+    /claude\s*4(?:\.|\b)/i,             // Claude 4.x is speculative (current is 3.5 / 3.7)
+    /python\s*(?:3\.1[5-9]|3\.[2-9]\d|4\.)/i, // Python 3.15+ or 4
+  ];
+  const detectedFake = FAKE_OR_SPECULATIVE_VERSIONS.find(regex => regex.test(title + " " + body));
+  if (detectedFake) {
+    add("FAIL", "Speculative / Future Version Guard", `Detected speculative/unreleased technology version matching ${detectedFake}. Articles must target current production-stable frameworks (Next.js 15, Laravel 11/12, Claude 3.7, etc.) to prevent high bounce rates from frustrated developers.`);
+  } else {
+    add("PASS", "Production-Stable Versions", "Targets realistic, production-stable tooling and versions");
   }
 
   // Quotable Bottom Line

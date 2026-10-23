@@ -196,19 +196,30 @@ if (count(/<pre[^>]*>/gi) > 0 || count(/<code[^>]*>/gi) > 2) add("PASS", "Code b
 else if (has(/```|<\s*code/i)) { /* has code intent but not rendered */ }
 else add("WARN", "Code blocks", "No <pre>/<code> blocks — if article has code, ensure rendering");
 
-// ─── 10. No-Images-In-Body Audit (article content must be image-free) ──────
+// ─── 10. Visual Architecture & Diagram Audit (Cuts bounce rate) ─────────────
 const bodyMatch = html.match(/<div class="article__body">([\s\S]*?)<aside class="author-box"/);
 if (!bodyMatch) {
-  add("WARN", "No images in body", "article__body container not found — could not verify image-free body");
+  add("WARN", "Visual Architecture", "article__body container not found — could not verify body visuals");
 } else {
-  const bodyImgs = [...bodyMatch[1].matchAll(/<img\b[^>]*>/gi)].map(m => {
+  const bodyContent = bodyMatch[1];
+  const hasMermaid = /class=["'][^"']*mermaid[^"']*["']|<svg\b/i.test(bodyContent);
+  const bodyImgs = [...bodyContent.matchAll(/<img\b[^>]*>/gi)].map(m => {
     const src = (m[0].match(/src=["'](.*?)["']/i) || [])[1] || m[0].slice(0, 40);
-    return src.trim().slice(0, 40);
+    return src.trim();
   });
-  if (bodyImgs.length > 0) {
-    add("FAIL", "No images in body", `${bodyImgs.length} image(s) embedded in article body — content must be image-free: ${bodyImgs.join("; ")}`);
-  } else {
-    add("PASS", "No images in body", "Article body contains zero embedded images (text/code/tables only)");
+
+  const stockImgs = bodyImgs.filter(s => /unsplash|pexels|placeholder|stock|shutterstock|depositphotos|dummyimage/i.test(s));
+
+  if (hasMermaid) {
+    add("PASS", "Visual Architecture", "Architecture diagram / SVG rendered in body");
+  }
+
+  if (stockImgs.length > 0) {
+    add("FAIL", "Visual Architecture", `${stockImgs.length} generic stock photo(s) in body — BANNED: ${stockImgs.join("; ")}`);
+  } else if (bodyImgs.length > 0) {
+    add("PASS", "Visual Architecture", `${bodyImgs.length} technical architecture diagram(s) rendered in body`);
+  } else if (!hasMermaid) {
+    add("PASS", "Visual Architecture", "Clean text/code layout (consider adding Mermaid diagram to boost dwell time)");
   }
 }
 
