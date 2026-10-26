@@ -1,0 +1,52 @@
+{
+  "slug": "global-client-hunter-os",
+  "name": "Global Client Hunter OS",
+  "tagline": "Land $2,000–$10,000/month international clients with ICP audits, 0% synthetic outreach, and export compliance.",
+  "outcome": "Turn a prospect URL into an ICP friction audit, a 90-word anti-fluff email, and a 3-tier USD/EUR/AED proposal — with Stripe, Wise, FIRC and 0% GST LUT setup guidance.",
+  "outcome_short": "stop competing on ₹15k domestic retainers",
+  "pain_short": "the domestic retainer ceiling",
+  "pain_points": [
+    "Domestic clients cap retainers at ₹15,000–₹30,000/month while overseas buyers pay 4–8× for the same technical work.",
+    "Cold messages read like generic outsourced IT pitches, so CTOs delete them before the second line.",
+    "Stripe verification, FIRC documentation and 0% GST LUT compliance stall the first international payment."
+  ],
+  "price_inr": 999,
+  "compare_inr": 2999,
+  "price_note": "One-time · commercial license · instant download",
+  "proof_bullets": [
+    "ICP Friction Audit from a prospect URL and your stack",
+    "90-word, 0% synthetic outreach emails built for CTOs",
+    "3-tier milestone proposals priced in USD, EUR or AED",
+    "Stripe, Wise, FIRC and 0% GST LUT export checklist",
+    "Sample $5,000 Next.js proposal and 3-touch sequence"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "ICP audit + outreach + proposal engine" },
+    { "label": "License", "value": "Unlimited agency team seats" },
+    { "label": "Format", "value": "ZIP · agent skill + docs + examples" },
+    { "label": "Updates", "value": "12 months free" }
+  ],
+  "bonus": "The export pricing matrix for USD/EUR/AED quotes and a complete cross-border finance guide are included in the same archive.",
+  "guarantee": "If the first ICP audit and outreach draft do not give you a sharper international pitch, reply within 30 days and I will refund the purchase.",
+  "cta_url": "https://deepakbagada.in/products/global-client-hunter-os",
+  "cta_label": "Get Global Client Hunter OS — {{PRICE}}",
+  "ps": "Reply with your current service and target country, and I will tell you which part of the ICP audit to run first.",
+  "preheader": "ICP audits, 90-word outreach and USD proposals for Indian founders who want $2,000–$10,000/month clients.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, escape the ₹15k domestic retainer",
+    "{{COMPANY_SHORT}}: pitch international clients in 90 words",
+    "{{CITY}} freelancers: a ₹999 export client OS",
+    "{{FIRST_NAME}}, turn one prospect URL into a $5k proposal",
+    "A ₹999 international client system for {{COMPANY_SHORT}}"
+  ],
+  "audience_cities": [
+    "Mumbai",
+    "Bengaluru",
+    "Delhi NCR",
+    "Pune",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Ahmedabad"
+  ]
+}

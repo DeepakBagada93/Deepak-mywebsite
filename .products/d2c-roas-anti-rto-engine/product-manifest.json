@@ -1,0 +1,102 @@
+{
+  "name": "Indian D2C ROAS & Anti-RTO Engine",
+  "slug": "d2c-roas-anti-rto-engine",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-24T17:13:17.635Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 714,
+      "sha256": "c791e95dcb43db9eda460046a3a930bac859cf33475582703d61f2b69cc38237"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 800,
+      "sha256": "8a39205e96f4fe272d5f73cf7e509568d8ed724cd8f62e8dafc234cf165f03aa"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 340,
+      "sha256": "274a983fee0f367f1950ef348d19efcf2eac5ebe5e633ee7d959fa6e1a1720d5"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 2711,
+      "sha256": "58131bb7a08ba66cfc7d89d3f76ccd2c22657379f84fcacb8457e098b79c26dd"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1040,
+      "sha256": "a7b4fb50cac70580f7b35cfa7398d40fdb9151c04fbcb50f4029bdbfe26aa543"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 2699,
+      "sha256": "0b31ada3975c76fec4e9aed9878bbf50953b8e821cd62fe5283b8bf75907f9c3"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 3345,
+      "sha256": "46b305c96b4124c0613d8059621189752e16b9247e9024ec1c7c42d3145c49c4"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1077,
+      "sha256": "a827d577a5ac59d31d4af6633e5bf59dbcf0db9f57fbc3dbf9410e152542645a"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 913,
+      "sha256": "a02c894fe062c4399e2a7b96d0b7c211174d566854316eb7a89261e78ca4b2f2"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 1878,
+      "sha256": "a600ad271ae02c76a524b3aa5bc0844b0ad79833b178bae20e2ff48d3a6f0de2"
+    },
+    {
+      "path": "examples/hinglish-ad-copy-pack.md",
+      "bytes": 2476,
+      "sha256": "b09ab1df9f445d1baea81757324033467cbd4ec5a501267450969af23fce7e8a"
+    },
+    {
+      "path": "examples/rto-risk-scoring-matrix.json",
+      "bytes": 1011,
+      "sha256": "657d1df64735e3319ac15f6a48550b68bb60ad5546333cdf6e485a5b7909439a"
+    },
+    {
+      "path": "examples/sample-d2c-order.json",
+      "bytes": 877,
+      "sha256": "b0d6916879cd2d213983559160da2ea060371a0572872453b3c8ae7514eb5bdc"
+    },
+    {
+      "path": "examples/whatsapp-cod-verification-flow.md",
+      "bytes": 1485,
+      "sha256": "20c1a41356a0ab614a92d06cb148df74a00663f5a225948ed0d210d8a799e4d8"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 749,
+      "sha256": "05d9ad4f509667ea851004be760ec97bfb61c6878dc5ce2be36253461be49f19"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2930,
+      "sha256": "a0377ee75a64b7f6627089ffa10cf2ed6cf74630b1a2e213e6627bb9a7988a6a"
+    },
+    {
+      "path": "skills/d2c-roas-anti-rto-engine/SKILL.md",
+      "bytes": 4931,
+      "sha256": "79ef8cb16312e70b05b6444ad192c5244a589a5e30d5594ca1e5cb232937839f"
+    },
+    {
+      "path": "tests/anti-rto.test.mjs",
+      "bytes": 1421,
+      "sha256": "8acd14eb7439649552d6862ae0b9ce4896277f49dce02034ef4042f7ac0091fb"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

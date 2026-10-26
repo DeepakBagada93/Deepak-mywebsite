@@ -1,0 +1,32 @@
+{
+  "scoringRubric": {
+    "addressCompleteness": {
+      "weight": 35,
+      "checks": [
+        { "condition": "Has house or flat number", "points": 15 },
+        { "condition": "Has landmark or road name", "points": 10 },
+        { "condition": "Pincode is valid 6-digit Indian postal code", "points": 10 }
+      ]
+    },
+    "customerAuthenticity": {
+      "weight": 30,
+      "checks": [
+        { "condition": "Valid 10-digit Indian phone (starts with 6,7,8,9)", "points": 15 },
+        { "condition": "Full name with first and last name", "points": 10 },
+        { "condition": "Non-spam email address", "points": 5 }
+      ]
+    },
+    "cartRisk": {
+      "weight": 35,
+      "checks": [
+        { "condition": "Cart value below ₹2,500 for first-time COD buyer", "points": 20 },
+        { "condition": "Single quantity or realistic household order", "points": 15 }
+      ]
+    }
+  },
+  "actionThresholds": {
+    "lowRiskMinScore": 75,
+    "mediumRiskRange": [45, 74],
+    "highRiskMaxScore": 44
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "ai-support-triage-sentinel",
+  "title": "Autonomous Customer Support & Ticket Escalation Sentinel",
+  "version": "1.0.0",
+  "description": "Production AI triage workflow that ingests customer support tickets, scores urgency and sentiment, drafts resolutions with knowledge citations, and escalates VIPs via Slack.",
+  "author": "Deepak Bagada Systems",
+  "category": "ai-workflow-automation",
+  "pricing": {
+    "currency_inr": {
+      "launch_flash_inr": 1999,
+      "solo_inr": 2999,
+      "agency_pro_inr": 5999,
+      "agency_whitelabel_inr": 11999,
+      "tax_terms": "18% GST Inclusive with Instant ITC Tax Invoice"
+    },
+    "currency_usd": {
+      "launch_flash_usd": 119,
+      "solo_usd": 149,
+      "agency_pro_usd": 349,
+      "agency_whitelabel_usd": 597,
+      "tax_terms": "Net USD via Stripe / Lemon Squeezy"
+    }
+  },
+  "platforms": [
+    "n8n",
+    "Zapier",
+    "Zendesk",
+    "Freshdesk",
+    "Intercom",
+    "Slack"
+  ],
+  "deliverables": [
+    "workflows/n8n-support-triage.json",
+    "workflows/zapier-support-triage.json",
+    "docs/tutorial-guide.md",
+    "docs/system-architecture.md",
+    "docs/store-listing.md",
+    "pdf/ai-support-triage-sentinel-implementation-guide.pdf",
+    ".env.example",
+    "docker-compose.yml",
+    "dist/ai-support-triage-sentinel-v1.0.0.zip"
+  ]
+}

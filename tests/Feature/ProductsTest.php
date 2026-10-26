@@ -31,6 +31,9 @@ class ProductsTest extends TestCase
         $response->assertSee('GST Invoice & HSN Compliance Kit');
         $response->assertSee('India Offer & Pricing Kit');
         $response->assertSee('ITC Recovery Desk');
+        $response->assertSee('Agency Email Template Pack');
+        $response->assertSee('Email Marketing &amp; Cold Outreach Engine', false);
+        $response->assertSee('AI Email Automation for Agencies');
     }
 
     public function test_ads_creative_hub_alias_redirects_to_ad_creative_lab(): void

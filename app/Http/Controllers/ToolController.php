@@ -13,7 +13,8 @@ class ToolController extends Controller
             return redirect()->route('tools.category', ['category' => $request->query('category')], 301);
         }
 
-        if ((string) $request->query('page') === '1') {
+        // The tools hub is not paginated, so any ?page= URL is a duplicate.
+        if ($request->has('page')) {
             return redirect()->route('tools.index', [], 301);
         }
 
@@ -26,6 +27,11 @@ class ToolController extends Controller
             ->contains(static fn (array $tool) => $tool['category_slug'] === $category);
 
         abort_unless($exists, 404);
+
+        // Category pages are not paginated either; collapse ?page= duplicates.
+        if (request()->has('page')) {
+            return redirect()->route('tools.category', ['category' => $category], 301);
+        }
 
         return $this->renderIndex($category);
     }

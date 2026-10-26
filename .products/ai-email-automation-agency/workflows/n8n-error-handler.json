@@ -1,0 +1,107 @@
+{
+  "name": "Agency AI Email Engine — Error Handler",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "node_error_trigger",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [-200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const err = $input.item.json;\nconst execution = err.execution || {};\nconst workflow = err.workflow || {};\nconst trigger = err.trigger || {};\nreturn {\n  json: {\n    incident_id: 'inc_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 7),\n    workflow_name: workflow.name || 'unknown_workflow',\n    workflow_id: workflow.id || 'unknown',\n    execution_id: execution.id || 'unknown',\n    execution_url: execution.url || '',\n    node_name: err.node ? err.node.name : 'unknown_node',\n    error_message: (err.error && (err.error.message || err.error.description)) || String(err.error || 'Unknown error'),\n    error_stack: (err.error && err.error.stack) || '',\n    trigger_payload: trigger,\n    occurred_at: new Date().toISOString(),\n    severity: 'high'\n  }\n};"
+      },
+      "id": "node_format_incident",
+      "name": "Format Incident",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [40, 300]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": "={{ $env.SLACK_ALERT_CHANNEL_ID }}",
+        "text": "=*Agency email automation incident*\n\n*Workflow:* {{ $json.workflow_name }}\n*Node:* {{ $json.node_name }}\n*Execution:* {{ $json.execution_url }}\n*Error:* {{ $json.error_message }}\n\nNo email should be treated as sent until this incident is reviewed.",
+        "otherOptions": {}
+      },
+      "id": "node_slack_alert",
+      "name": "Slack Incident Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [280, 300],
+      "credentials": {
+        "slackApi": {
+          "id": "CREDENTIAL_SLACK",
+          "name": "Slack API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO agency_email_dead_letters (incident_id, workflow_name, workflow_id, execution_id, execution_url, node_name, error_message, error_stack, trigger_payload, severity, occurred_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING incident_id;",
+        "queryReplacement": "={{ [\n  $('Format Incident').item.json.incident_id,\n  $('Format Incident').item.json.workflow_name,\n  $('Format Incident').item.json.workflow_id,\n  $('Format Incident').item.json.execution_id,\n  $('Format Incident').item.json.execution_url,\n  $('Format Incident').item.json.node_name,\n  $('Format Incident').item.json.error_message,\n  $('Format Incident').item.json.error_stack,\n  JSON.stringify($('Format Incident').item.json.trigger_payload),\n  $('Format Incident').item.json.severity,\n  $('Format Incident').item.json.occurred_at\n] }}",
+        "options": {}
+      },
+      "id": "node_dead_letter",
+      "name": "Write Dead Letter",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [520, 300],
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_POSTGRES",
+          "name": "Postgres"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Format Incident",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Incident": {
+      "main": [
+        [
+          {
+            "node": "Slack Incident Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Incident Alert": {
+      "main": [
+        [
+          {
+            "node": "Write Dead Letter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "pinData": {},
+  "tags": []
+}

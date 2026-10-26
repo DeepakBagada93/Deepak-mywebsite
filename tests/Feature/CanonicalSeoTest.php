@@ -2,8 +2,10 @@
 
 namespace Tests\Feature;
 
+use App\Http\Middleware\RedirectPublicPrefix;
 use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\Request;
 use Tests\TestCase;
 
 class CanonicalSeoTest extends TestCase
@@ -29,6 +31,28 @@ class CanonicalSeoTest extends TestCase
         $this->get('/public')
             ->assertStatus(301)
             ->assertRedirect('https://deepakbagada.in');
+
+        $this->get('/public/')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in');
+    }
+
+    public function test_public_prefix_redirect_uses_raw_request_uri(): void
+    {
+        $request = Request::create('/public/journal/some-post?page=2', 'GET', [], [], [], [
+            'SCRIPT_NAME' => '/public/index.php',
+            'SCRIPT_FILENAME' => public_path('index.php'),
+            'PHP_SELF' => '/public/index.php',
+            'REQUEST_URI' => '/public/journal/some-post?page=2',
+        ]);
+
+        $response = (new RedirectPublicPrefix)->handle($request, fn () => response('ok'));
+
+        $this->assertSame(301, $response->getStatusCode());
+        $this->assertSame(
+            'https://deepakbagada.in/journal/some-post?page=2',
+            $response->headers->get('Location')
+        );
     }
 
     public function test_page_one_redirects_to_clean_listing_urls(): void

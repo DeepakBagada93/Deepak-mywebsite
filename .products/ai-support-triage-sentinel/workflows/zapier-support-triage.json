@@ -1,0 +1,35 @@
+{
+  "name": "AI Support Triage (Zapier Integration Recipe)",
+  "platform": "Zapier",
+  "trigger": {
+    "app": "Webhooks by Zapier",
+    "event": "Catch Hook",
+    "payload_fields": ["ticketId", "customerEmail", "subject", "description", "planTier"]
+  },
+  "steps": [
+    {
+      "step_order": 1,
+      "app": "Code by Zapier",
+      "action": "Run JavaScript",
+      "code": "const input = inputData;\noutput = {\n  ticketId: input.ticketId,\n  subject: input.subject.trim(),\n  isEnterprise: (input.planTier || '').toLowerCase() === 'enterprise'\n};"
+    },
+    {
+      "step_order": 2,
+      "app": "ChatGPT / OpenAI",
+      "action": "Conversation",
+      "model": "gpt-4o",
+      "instructions": "Classify ticket urgency (1-5), sentiment (NEUTRAL, ANGRY), category (BILLING, BUG), and write a polished resolution draft."
+    },
+    {
+      "step_order": 3,
+      "app": "Filter by Zapier",
+      "condition": "urgencyScore Greater Than 3"
+    },
+    {
+      "step_order": 4,
+      "app": "Slack",
+      "action": "Send Channel Message",
+      "channel": "#support-escalations"
+    }
+  ]
+}

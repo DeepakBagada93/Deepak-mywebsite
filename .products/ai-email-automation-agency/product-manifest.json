@@ -1,0 +1,156 @@
+{
+  "name": "AI Email Automation for Agencies",
+  "slug": "ai-email-automation-agency",
+  "version": "1.0.0",
+  "category": "ai-workflow-automation",
+  "license": "Commercial — client deployments permitted, resale prohibited",
+  "generatedAt": "2026-10-26T14:59:36.728Z",
+  "platforms": [
+    "n8n",
+    "Make.com",
+    "Gmail",
+    "Slack",
+    "Postgres"
+  ],
+  "pricing": {
+    "solo_usd": 147,
+    "agency_usd": 297,
+    "agency_pro_usd": 497
+  },
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 1197,
+      "sha256": "58c944fc249762633929f7903fa838ccc7619385715f7cb50e49abb13afe14f6"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 631,
+      "sha256": "7527c69a333a3234acafdaf39b51b70f1c92df2e63e2034d1c10c44cea4fabe0"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1640,
+      "sha256": "bb0f5a53910f3e2a7121444b5d10468fb420d2eef6cbdac3ccd74f4fb6432b6f"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1886,
+      "sha256": "eff820ee048c2c4117a50af15833ec77b4777874fbceb1f032e4dfa7c4b82f9f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2945,
+      "sha256": "9cd86c183bc79466df2c999897dd5c4e5a30c45e3bd1821286b545a19ff1778b"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 1969,
+      "sha256": "7ab8baf98c9bb0a615dba0595c90be5f190f3507d7f4eef49fa6ef9f62a90ef8"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 3321,
+      "sha256": "e76a26402eaa2eed2fcdf2538155552373c1bd9e1c3b111287f57ba8ee823ef5"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1501,
+      "sha256": "746cf82e515fffe81953f1ace90064b0c9e720bbf060af1a83d3dfc247b2d48f"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 3381,
+      "sha256": "2b47c3bd15019324925f657d0b512ba1a0c2b7cc7df030e74b53d599565c6b98"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 4231,
+      "sha256": "d22b821a726297793cb7c2c2a55b49a655084bd36fa5a7b0662ce0dabd3adbaa"
+    },
+    {
+      "path": "docs/system-architecture.md",
+      "bytes": 6203,
+      "sha256": "cb5cc03e11cc4ad588c80a652ee353f18935524bbb3d4ce06ec21fac9c55d129"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 2140,
+      "sha256": "bf17d33926c0afee16e63012234f1a02c1565eb3046c7e17733ebcfd6e02bf1d"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1797,
+      "sha256": "e86cc6b289ad4c44be506ea6f5028ca70e8847d936349fcf4686651291eb329a"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 7486,
+      "sha256": "a4cd03dc16e23dcbee5b738096c6950e41af5c46d2a34f279559a4de3c633179"
+    },
+    {
+      "path": "examples/agency-outbound/README.md",
+      "bytes": 450,
+      "sha256": "12494b468e36264f8fbb4ca975bde4e12cfca2297f1e2d892752a7f1aee2fca9"
+    },
+    {
+      "path": "examples/agency-outbound/sample-ai-output.json",
+      "bytes": 882,
+      "sha256": "a757d617c04a57b8772f86180da9e4307bfa7319df24525e4d5f46b413476929"
+    },
+    {
+      "path": "examples/agency-outbound/sample-lead.json",
+      "bytes": 473,
+      "sha256": "ee7fad5b68a857f004c1677ca795e269986f3bfbeaf3badb97d5473a5ee1502e"
+    },
+    {
+      "path": "pdf/ai-email-automation-agency-implementation-guide.pdf",
+      "bytes": 430381,
+      "sha256": "d979e4b995e5705981b7419d3f37d7bfd4f8fcb8c727ab5a7f8dc9bd0cb9a400"
+    },
+    {
+      "path": "schema.sql",
+      "bytes": 1655,
+      "sha256": "89d1d112c2bd55ed267a93672ed0c1605fe30516c4668f1423883c73ff918607"
+    },
+    {
+      "path": "tests/sample-lead.json",
+      "bytes": 473,
+      "sha256": "ee7fad5b68a857f004c1677ca795e269986f3bfbeaf3badb97d5473a5ee1502e"
+    },
+    {
+      "path": "tests/test-email-curl.sh",
+      "bytes": 783,
+      "sha256": "2fee846f4b84a9c46ecdfdcdc16ddf483e47e76b2112029dba7f8e8d51f57364"
+    },
+    {
+      "path": "tests/workflow-structure.test.mjs",
+      "bytes": 5289,
+      "sha256": "bc11e0c618fc2ebe8f733de22b6127b50fc8765658d68acc89d6030751b20cef"
+    },
+    {
+      "path": "workflows/make-agency-email-engine.json",
+      "bytes": 6468,
+      "sha256": "5db55f992ce6a94c7b4ce391d1e05f4664fb752bdcccd7868d33d869f465d9fc"
+    },
+    {
+      "path": "workflows/n8n-agency-email-engine.json",
+      "bytes": 14355,
+      "sha256": "470e2d920d1b6338c9e6e283c0994d1e5d8d0214df04df26c6fbb3b639fd8dc5"
+    },
+    {
+      "path": "workflows/n8n-approval-and-sequence.json",
+      "bytes": 13260,
+      "sha256": "c4f7f8111547f15b241cf52ace65a523578537e513cab98defcf0ac25032592a"
+    },
+    {
+      "path": "workflows/n8n-error-handler.json",
+      "bytes": 4093,
+      "sha256": "62e989e396749bb2e44aa7b2b465e47ab18dbcc15e28a50b5aa7d009166dd645"
+    }
+  ],
+  "manualReview": [
+    "Owner approval for pricing and store publication.",
+    "One live end-to-end test with real credentials before production use."
+  ]
+}

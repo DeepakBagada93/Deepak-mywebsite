@@ -7,17 +7,21 @@
  *
  * Supported Regions:
  *   --region=India|US|AU|Dubai|UK
+ *   --metro=all|Bengaluru|Mumbai|"Delhi NCR"|Pune|Hyderabad|Chennai|Kolkata|Ahmedabad
+ *   --segment=all|saas|ai|agency|fintech|d2c|manufacturing|logistics|healthtech|edtech
+ *
+ * India is metro-first by default. Gujarat is the secondary industrial belt.
  *
  * Usage:
- *   node discover-leads.mjs --region=India --topic=agents
- *   node discover-leads.mjs --region=India --topic=costs
+ *   node discover-leads.mjs --region=India --metro=all --segment=agency --topic=agents
+ *   node discover-leads.mjs --region=India --metro=Bengaluru --topic=costs
  *   node discover-leads.mjs --region=US --topic=agents
  */
 
 const REGION_DATA = {
   India: {
     name: 'India (Metro Startups & Regional Enterprises)',
-    cities: ['Bengaluru', 'Mumbai', 'Delhi NCR', 'Gurgaon', 'Noida', 'Hyderabad', 'Pune', 'Ahmedabad', 'Surat'],
+    cities: ['Bengaluru', 'Mumbai', 'Delhi NCR', 'Pune', 'Hyderabad', 'Chennai', 'Kolkata', 'Ahmedabad', 'Surat'],
     roleKeywords: [
       '"Founder" OR "Co-Founder" ("Series A" OR "funded" OR "SaaS")',
       '"Chief Technology Officer" OR "CTO" ("Bengaluru" OR "Bangalore" OR "Mumbai" OR "Pune")',
@@ -76,6 +80,76 @@ const REGION_DATA = {
     ],
     fundingSignals: ['"Series A" OR "Series B"', '"backed by Index" OR "backed by Balderton"', '"scaleup"'],
   },
+};
+
+const METRO_PLAYBOOK = {
+  Bengaluru: {
+    priority: 'P1',
+    pains: ['token spend outrunning ARR', 'agent retries in production', 'context drift across CLAUDE.md / Cursor rules', 'MCP servers without security gates'],
+    products: ['AI Systems Master Bundle', 'MCP Server Launch Kit', 'Agent Context Architect'],
+  },
+  Mumbai: {
+    priority: 'P1',
+    pains: ['compliance-heavy agent workflows', 'payment webhook reconciliation', 'WhatsApp support volume', 'agency scope creep'],
+    products: ['GST Invoice & HSN Compliance Kit', 'AI Agency Delivery OS', 'n8n Production Hardening Pack'],
+  },
+  'Delhi NCR': {
+    priority: 'P1',
+    pains: ['enterprise security reviews stalling pilots', 'Tally/Zoho/SAP integration breaks', 'token cost after every prompt change', 'AI demos that never ship'],
+    products: ['AI Systems Master Bundle', 'MCP Server Launch Kit', 'AI Agency Delivery OS'],
+  },
+  Pune: {
+    priority: 'P2',
+    pains: ['repeated agent scaffolding across clients', 'ERP data trapped in Excel', 'silent n8n failures', 'proposal and scope rework'],
+    products: ['AI Agency Delivery OS', 'n8n Production Hardening Pack', 'AI Systems Master Bundle'],
+  },
+  Hyderabad: {
+    priority: 'P2',
+    pains: ['global client security reviews', 'manual agent regression testing', 'USD token bills', 'conflicting coding-agent rules'],
+    products: ['MCP Server Launch Kit', 'Agent Context Architect', 'AI Systems Master Bundle'],
+  },
+  Chennai: {
+    priority: 'P2',
+    pains: ['logistics retries', 'white-label AI delivery assets', 'manual GST checks', 'missing handover runbooks'],
+    products: ['AI Agency Delivery OS', 'GST Invoice & HSN Compliance Kit', 'n8n Production Hardening Pack'],
+  },
+  Kolkata: {
+    priority: 'P2',
+    pains: ['underpriced agency delivery', 'manual client reporting', 'WhatsApp commerce peak failures', 'AI pilots stuck before sign-off'],
+    products: ['AI Agency Delivery OS', 'n8n Production Hardening Pack', 'Agent Context Architect'],
+  },
+  Ahmedabad: {
+    priority: 'P2',
+    pains: ['catalogue/ERP sync delays', 'Tally-to-Postgres errors', 'manual export documentation', 'agency scope leaks'],
+    products: ['n8n Production Hardening Pack', 'GST Invoice & HSN Compliance Kit', 'AI Agency Delivery OS'],
+  },
+};
+
+const METRO_ALIASES = {
+  bangalore: 'Bengaluru', bengaluru: 'Bengaluru', blr: 'Bengaluru',
+  mumbai: 'Mumbai', bombay: 'Mumbai', thane: 'Mumbai', 'navi mumbai': 'Mumbai',
+  delhi: 'Delhi NCR', 'new delhi': 'Delhi NCR', 'delhi ncr': 'Delhi NCR',
+  gurgaon: 'Delhi NCR', gurugram: 'Delhi NCR', noida: 'Delhi NCR', 'greater noida': 'Delhi NCR',
+  faridabad: 'Delhi NCR', ghaziabad: 'Delhi NCR',
+  pune: 'Pune', pimpri: 'Pune', chinchwad: 'Pune',
+  hyderabad: 'Hyderabad', secunderabad: 'Hyderabad',
+  chennai: 'Chennai', madras: 'Chennai', omr: 'Chennai',
+  kolkata: 'Kolkata', calcutta: 'Kolkata',
+  ahmedabad: 'Ahmedabad', amdavad: 'Ahmedabad', gandhinagar: 'Ahmedabad',
+  surat: 'Surat', rajkot: 'Rajkot', vadodara: 'Vadodara',
+};
+
+const SEGMENT_QUERIES = {
+  all: { label: 'All high-ticket segments', terms: [] },
+  saas: { label: 'B2B SaaS', terms: ['"B2B SaaS"', '"software product"', '"platform"'] },
+  ai: { label: 'AI infrastructure & agent studios', terms: ['"AI startup"', '"agent"', '"LLM"'] },
+  agency: { label: 'Agencies & software houses', terms: ['"digital agency"', '"software development agency"', '"design studio"'] },
+  fintech: { label: 'Fintech & compliance', terms: ['"fintech"', '"payments"', '"GST"', '"compliance"'] },
+  d2c: { label: 'D2C & ecommerce', terms: ['"D2C"', '"ecommerce"', '"Shopify"'] },
+  manufacturing: { label: 'Manufacturing & exports', terms: ['"manufacturing"', '"textile"', '"chemical"', '"export"'] },
+  logistics: { label: 'Logistics & supply chain', terms: ['"logistics"', '"warehouse"', '"supply chain"'] },
+  healthtech: { label: 'Healthtech & pharma', terms: ['"healthtech"', '"clinic"', '"pharma"'] },
+  edtech: { label: 'Edtech & coaching', terms: ['"edtech"', '"learning"', '"coaching"'] },
 };
 
 const TOPIC_QUERIES = {
@@ -144,8 +218,16 @@ const TIER_GUIDE = `
 `;
 
 const args = process.argv.slice(2);
-const rawRegion = (args.find(a => a.startsWith('--region=')) || '--region=India').replace('--region=', '');
-const topicArg = (args.find(a => a.startsWith('--topic=')) || '--topic=agents').replace('--topic=', '');
+const arg = (name, fallback) => {
+  const found = args.find(a => a === `--${name}` || a.startsWith(`--${name}=`));
+  if (!found) return fallback;
+  const eq = found.indexOf('=');
+  return eq !== -1 ? found.slice(eq + 1) : args[args.indexOf(found) + 1] ?? fallback;
+};
+const rawRegion = arg('region', 'India');
+const topicArg = arg('topic', 'agents');
+const rawMetro = arg('metro', 'all');
+const rawSegment = arg('segment', 'all');
 
 // Resolve region alias (IN -> India)
 const matchedKey = Object.keys(REGION_DATA).find(
@@ -154,9 +236,17 @@ const matchedKey = Object.keys(REGION_DATA).find(
 
 const region = REGION_DATA[matchedKey];
 const topics = TOPIC_QUERIES[topicArg] || TOPIC_QUERIES.agents;
+const segment = SEGMENT_QUERIES[rawSegment] || SEGMENT_QUERIES.all;
+const metroLookup = METRO_ALIASES[rawMetro.toLowerCase()] || Object.keys(METRO_PLAYBOOK).find(k => k.toLowerCase() === rawMetro.toLowerCase());
+const metroKeys = matchedKey !== 'India' || rawMetro === 'all'
+  ? Object.keys(METRO_PLAYBOOK).filter(k => region.cities.includes(k))
+  : metroLookup ? [metroLookup] : [];
+const cities = metroKeys.length ? metroKeys : region.cities;
+const segmentTerms = segment.terms.length ? segment.terms.join(' OR ') : topics.join(' OR ');
 
 console.log(`================================================================`);
 console.log(`🚀 High-Ticket Lead Discovery Matrix: ${region.name} | Topic: ${topicArg}`);
+console.log(`   Metro: ${metroKeys.length ? metroKeys.join(', ') : 'region default'} | Segment: ${segment.label}`);
 console.log(`   Target Deal Size: ₹3,00,000 – ₹25,00,000+ INR / $5,000 – $50,000+ USD`);
 console.log(`   Engine: Deepak Bagada Autonomous Technical Outreach`);
 console.log(`================================================================\n`);
@@ -164,26 +254,40 @@ console.log(`================================================================\n`
 console.log(HIGH_TICKET_PROFILES);
 
 console.log(`🔍 1. High-Ticket LinkedIn / Google Boolean Dorks (${region.name}):\n`);
-region.cities.forEach(city => {
+cities.forEach(city => {
   region.roleKeywords.forEach(role => {
-    const query = `site:linkedin.com/in (${role}) "${city}" (${topics.join(' OR ')})`;
+    const query = `site:linkedin.com/in (${role}) "${city}" (${segmentTerms})`;
     console.log(`- ${query}`);
   });
 });
 
+if (matchedKey === 'India') {
+  console.log(`\n📍 1b. Metro Playbook — Pains, Triggers & Product Fit:\n`);
+  metroKeys.forEach(metro => {
+    const play = METRO_PLAYBOOK[metro];
+    if (!play) return;
+    console.log(`- ${metro} [${play.priority}]`);
+    console.log(`  Pains:    ${play.pains.join(' · ')}`);
+    console.log(`  Products: ${play.products.join(' · ')}`);
+  });
+}
+
 console.log(`\n💰 2. Funded Company & High-Growth Searches (High-Ticket Intent):\n`);
 region.fundingSignals.forEach(fund => {
-  console.log(`- site:linkedin.com/company (${fund}) (${topics.join(' OR ')}) ("careers" OR "we're hiring")`);
+  console.log(`- site:linkedin.com/company (${fund}) (${segmentTerms}) ("careers" OR "we're hiring")`);
+});
+cities.slice(0, 4).forEach(city => {
+  console.log(`- (site:inc42.com OR site:yourstory.com OR site:entrackr.com) "${city}" ("raised" OR "funding") (${segmentTerms}) 2026`);
 });
 
 console.log(`\n💡 3. Twitter / X Real-Time Engineering Discussions (Curiosity & Pain Signals):\n`);
 topics.forEach(t => {
-  console.log(`- (${t}) (${region.cities.slice(0, 4).join(' OR ')}) ("token bill" OR "production latency" OR "agent failed" OR "hiring AI")`);
+  console.log(`- (${t}) (${cities.slice(0, 4).join(' OR ')}) ("token bill" OR "production latency" OR "agent failed" OR "hiring AI")`);
 });
 
 console.log(`\n📧 4. Direct Public Email Discovery Queries (Tier 1/2 High-Ticket):\n`);
-region.cities.slice(0, 5).forEach(city => {
-  console.log(`- "founder" OR "CTO" "${city}" ("AI agency" OR "SaaS" OR "Tech") "email" "@" -site:zoominfo.com -site:apollo.io`);
+cities.slice(0, 5).forEach(city => {
+  console.log(`- "founder" OR "CTO" "${city}" (${segmentTerms}) "email" "@" -site:zoominfo.com -site:apollo.io -site:lusha.com`);
 });
 console.log(`- site:*.in OR site:*.ai ("founder" OR "CTO" OR "Managing Director") ("contact us" OR "about") email "@"`);
 

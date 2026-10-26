@@ -1,0 +1,11 @@
+{
+  "product": "products/ai-email-automation-agency",
+  "checkedAt": "2026-10-26T14:59:45.038Z",
+  "passed": [
+    "ai-email-automation-agency-v1.0.0.zip has 33 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

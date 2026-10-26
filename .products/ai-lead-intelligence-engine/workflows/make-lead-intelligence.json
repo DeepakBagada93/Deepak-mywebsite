@@ -1,0 +1,91 @@
+{
+  "name": "AI Lead Intelligence System (Make Blueprint)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "hook": "WEBHOOK_ID_PLACEHOLDER"
+      },
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0,
+          "name": "Inbound Lead Webhook"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "openai:createChatCompletion",
+      "version": 1,
+      "parameters": {
+        "account": "CREDENTIAL_OPENAI_ACCOUNT"
+      },
+      "mapper": {
+        "model": "gpt-4o",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a B2B Lead Qualification Agent. Score lead 0-100, classify tier (HOT/WARM/NURTURE), provide 1-sentence reasoning and personalized icebreaker. Output valid JSON only."
+          },
+          {
+            "role": "user",
+            "content": "Lead data: {{1.data}}"
+          }
+        ]
+      },
+      "metadata": {
+        "designer": {
+          "x": 350,
+          "y": 0,
+          "name": "GPT-4o Scoring & Icebreaker"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "module": "hubspot:createOrUpdateContact",
+      "version": 1,
+      "parameters": {
+        "account": "CREDENTIAL_HUBSPOT_ACCOUNT"
+      },
+      "mapper": {
+        "email": "{{1.data.email}}",
+        "firstname": "{{1.data.name}}",
+        "lead_score": "{{3.choices[1].message.content.score}}",
+        "notes": "{{3.choices[1].message.content.qualificationReason}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 700,
+          "y": 0,
+          "name": "HubSpot CRM Sync"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "module": "gateway:WebhookRespond",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "status": 200,
+        "body": "{\"status\":\"success\",\"score\":\"processed\"}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1050,
+          "y": 0,
+          "name": "Webhook 200 Response"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "version": 1
+  }
+}

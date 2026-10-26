@@ -1,0 +1,26 @@
+{
+  "businessName": "Dr. Verma Multi-Speciality Dental Care",
+  "category": "Dentist / Cosmetic Dentistry",
+  "address": {
+    "street": "Plot 42, 100 Feet Road, Near CMH Hospital Metro Station, Indiranagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560038",
+    "country": "IN"
+  },
+  "geo": {
+    "latitude": 12.9784,
+    "longitude": 77.6408
+  },
+  "contact": {
+    "phone": "+91-80-49123456",
+    "whatsapp": "+91-9876543210",
+    "website": "https://drvermadental-demo.in"
+  },
+  "services": [
+    "Invisible Aligners & Braces",
+    "Painless Root Canal Treatment (RCT)",
+    "Laser Teeth Whitening",
+    "Dental Implants"
+  ]
+}

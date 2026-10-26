@@ -1,0 +1,485 @@
+{
+  "name": "Agency AI Email Engine — Approval, Send & Follow-up",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "agency-email-approval",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node_approval_webhook",
+      "name": "Approval Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [-260, 300],
+      "webhookId": "agency-email-approval"
+    },
+    {
+      "parameters": {
+        "jsCode": "const q = $input.item.json.query || {};\nconst recordId = String(q.record || '').trim();\nconst token = String(q.token || '').trim();\nconst decision = String(q.decision || '').trim().toLowerCase();\nif (!recordId || !token) throw new Error('Missing record or token.');\nif (!['approve', 'reject'].includes(decision)) throw new Error('Decision must be approve or reject.');\nreturn { json: { record_id: recordId, approval_token: token, decision } };"
+      },
+      "id": "node_validate_request",
+      "name": "Validate Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-20, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT id, contact_id, email, company, subject, preview_text, body, followup_1, followup_2, approval_token, status, created_at FROM agency_email_drafts WHERE id = $1 AND approval_token = $2 AND created_at > NOW() - INTERVAL '7 days' LIMIT 1;",
+        "queryReplacement": "={{ [$('Validate Request').item.json.record_id, $('Validate Request').item.json.approval_token] }}",
+        "options": {}
+      },
+      "id": "node_load_draft",
+      "name": "Load Draft",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [220, 300],
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_POSTGRES",
+          "name": "Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const row = $input.item.json;\nif (!row || !row.id) throw new Error('Draft not found, token expired, or token mismatch.');\nif (row.status !== 'pending_review') throw new Error('Draft is not pending review. Current status: ' + row.status);\nconst decision = $('Validate Request').item.json.decision;\nreturn {\n  json: {\n    ...row,\n    decision,\n    approved: decision === 'approve',\n    reply_subject: row.subject.startsWith('Re:') ? row.subject : 'Re: ' + row.subject\n  }\n};"
+      },
+      "id": "node_authorize",
+      "name": "Authorize & Prepare",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond_approved",
+              "leftValue": "={{ $json.approved }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "node_approved_if",
+      "name": "Approved?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [700, 300]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "sendTo": "={{ $json.email }}",
+        "subject": "={{ $json.subject }}",
+        "emailType": "html",
+        "message": "={{ $json.body }}",
+        "options": {}
+      },
+      "id": "node_gmail_send",
+      "name": "Send Approved Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [940, 160],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CREDENTIAL_GMAIL_OAUTH",
+          "name": "Gmail OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE agency_email_drafts SET status = 'sent', sent_at = NOW() WHERE id = $1 RETURNING id, status;",
+        "queryReplacement": "={{ [$('Authorize & Prepare').item.json.id] }}",
+        "options": {}
+      },
+      "id": "node_mark_sent",
+      "name": "Mark Sent",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [1180, 160],
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_POSTGRES",
+          "name": "Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": "={{ $env.SLACK_REVIEW_CHANNEL_ID }}",
+        "text": "=*Approved email sent*\n\nLead: {{ $('Authorize & Prepare').item.json.email }} ({{ $('Authorize & Prepare').item.json.company }})\nSubject: {{ $('Authorize & Prepare').item.json.subject }}\n\nFollow-up 1 scheduled in 4 days. Follow-up 2 scheduled 5 days after that.",
+        "otherOptions": {}
+      },
+      "id": "node_slack_sent",
+      "name": "Notify Sent",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [1420, 160],
+      "credentials": {
+        "slackApi": {
+          "id": "CREDENTIAL_SLACK",
+          "name": "Slack API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resume": "timeInterval",
+        "unit": "days",
+        "amount": 4
+      },
+      "id": "node_wait_4",
+      "name": "Wait 4 Days",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [1660, 160],
+      "webhookId": "wait-followup-1"
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "sendTo": "={{ $('Authorize & Prepare').item.json.email }}",
+        "subject": "={{ $('Authorize & Prepare').item.json.reply_subject }}",
+        "emailType": "html",
+        "message": "={{ $('Authorize & Prepare').item.json.followup_1 }}",
+        "options": {}
+      },
+      "id": "node_gmail_followup_1",
+      "name": "Send Follow-up 1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [1900, 160],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CREDENTIAL_GMAIL_OAUTH",
+          "name": "Gmail OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resume": "timeInterval",
+        "unit": "days",
+        "amount": 5
+      },
+      "id": "node_wait_5",
+      "name": "Wait 5 Days",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [2140, 160],
+      "webhookId": "wait-followup-2"
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "sendTo": "={{ $('Authorize & Prepare').item.json.email }}",
+        "subject": "={{ $('Authorize & Prepare').item.json.reply_subject }}",
+        "emailType": "html",
+        "message": "={{ $('Authorize & Prepare').item.json.followup_2 }}",
+        "options": {}
+      },
+      "id": "node_gmail_followup_2",
+      "name": "Send Follow-up 2",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [2380, 160],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CREDENTIAL_GMAIL_OAUTH",
+          "name": "Gmail OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE agency_email_drafts SET status = 'sequence_complete', completed_at = NOW() WHERE id = $1 RETURNING id, status;",
+        "queryReplacement": "={{ [$('Authorize & Prepare').item.json.id] }}",
+        "options": {}
+      },
+      "id": "node_mark_complete",
+      "name": "Mark Sequence Complete",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [2620, 160],
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_POSTGRES",
+          "name": "Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: 'sent', record_id: $('Authorize & Prepare').item.json.id, follow_ups: 2 }) }}",
+        "options": {}
+      },
+      "id": "node_respond_sent",
+      "name": "Respond Sent",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [2860, 160]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE agency_email_drafts SET status = 'rejected', reviewed_at = NOW() WHERE id = $1 RETURNING id, status;",
+        "queryReplacement": "={{ [$('Authorize & Prepare').item.json.id] }}",
+        "options": {}
+      },
+      "id": "node_mark_rejected",
+      "name": "Mark Rejected",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [940, 460],
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_POSTGRES",
+          "name": "Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": "={{ $env.SLACK_REVIEW_CHANNEL_ID }}",
+        "text": "=*Email draft rejected*\n\nLead: {{ $('Authorize & Prepare').item.json.email }} ({{ $('Authorize & Prepare').item.json.company }})\nSubject: {{ $('Authorize & Prepare').item.json.subject }}\n\nNo email was sent. The draft stays available in Gmail for manual editing.",
+        "otherOptions": {}
+      },
+      "id": "node_slack_rejected",
+      "name": "Notify Rejected",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [1180, 460],
+      "credentials": {
+        "slackApi": {
+          "id": "CREDENTIAL_SLACK",
+          "name": "Slack API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: 'rejected', record_id: $('Authorize & Prepare').item.json.id }) }}",
+        "options": {}
+      },
+      "id": "node_respond_rejected",
+      "name": "Respond Rejected",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1420, 460]
+    }
+  ],
+  "connections": {
+    "Approval Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Request": {
+      "main": [
+        [
+          {
+            "node": "Load Draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Draft": {
+      "main": [
+        [
+          {
+            "node": "Authorize & Prepare",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Authorize & Prepare": {
+      "main": [
+        [
+          {
+            "node": "Approved?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Approved?": {
+      "main": [
+        [
+          {
+            "node": "Send Approved Email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark Rejected",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Approved Email": {
+      "main": [
+        [
+          {
+            "node": "Mark Sent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Sent": {
+      "main": [
+        [
+          {
+            "node": "Notify Sent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Sent": {
+      "main": [
+        [
+          {
+            "node": "Wait 4 Days",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 4 Days": {
+      "main": [
+        [
+          {
+            "node": "Send Follow-up 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Follow-up 1": {
+      "main": [
+        [
+          {
+            "node": "Wait 5 Days",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5 Days": {
+      "main": [
+        [
+          {
+            "node": "Send Follow-up 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Follow-up 2": {
+      "main": [
+        [
+          {
+            "node": "Mark Sequence Complete",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Sequence Complete": {
+      "main": [
+        [
+          {
+            "node": "Respond Sent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Rejected": {
+      "main": [
+        [
+          {
+            "node": "Notify Rejected",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Rejected": {
+      "main": [
+        [
+          {
+            "node": "Respond Rejected",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "pinData": {},
+  "tags": []
+}

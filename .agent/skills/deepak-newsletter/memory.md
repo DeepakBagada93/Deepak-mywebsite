@@ -554,3 +554,71 @@
 - info@rushkar.com (Rushkar Technology · Ahmedabad)
 - support@pravux.com (Pravux Tech · Ahmedabad)
 - sales@vervesys.com (Verve Systems · Ahmedabad)
+
+---
+
+## 2026-10-25 — v3.0 upgrade: metro research + dark product email
+
+### Added
+- `scripts/research-leads.mjs` — metro-first research brief with search plan, metro pain hooks, product fit, scoring rubric and enrichment contract.
+- `scripts/enrich-leads.mjs` — city/email normalization, role tier, segment inference, pain/hook derivation, 0–100 score, dedupe, optional MX verification.
+- `scripts/audit-leads.mjs` — hard gate for metro, decision-maker, generic inboxes, source URL, signal, hook length and score.
+- `templates/dark-product-sales.html` — 600px dark theme (`#07090d` / `#0e1117` / `#7ee787` / `#238636`), no images, table layout, preheader, price block, proof, guarantee, unsubscribe.
+- `scripts/build-product-email.mjs` — per-lead HTML + plain text + subject variants + manifest.
+- `scripts/audit-product-email.mjs` — dark-theme, CTA, price, proof, unsubscribe, address, banned phrase and spam gate.
+- `scripts/send-product-campaign.php` — product campaign sender; dry-run by default; metro/score/generic guards; `--live` required; `--save-dir` for previews; resumable log.
+- `products/agency-delivery-os.json` — product config for the ₹5,999 agency campaign.
+- `products/ai-systems-master-bundle.json` — product config for the ₹9,999 master bundle campaign.
+
+### Changed
+- `scripts/discover-leads.mjs` — India is metro-first; added `--metro` and `--segment`; metro playbook; canonical metro list (Bengaluru, Mumbai, Delhi NCR, Pune, Hyderabad, Chennai, Kolkata, Ahmedabad).
+- `SKILL.md` — rewritten to v3.0 with product-first strategy, metro matrix, deep research pipeline, dark product email standard and safety rules.
+
+### Important
+- The existing `leads-100-india.json` is legacy: many generic inboxes, missing `source_url`, `signal` and `personalization_hook`. It will fail `audit-leads.mjs` and should not be used for product campaigns until re-researched and enriched.
+- Product campaigns are metro-only by default and require `research_score >= 65`.
+- `send-product-campaign.php` is dry-run unless `--live` is passed. Never add `--live` until both lead and email audits pass.
+- Product price and URL must be read from `config/products.php` / the product JSON, not hand-written.
+
+### Verified
+- `node --check` passed on all new `.mjs` files.
+- `php -l` passed on `send-product-campaign.php`.
+- End-to-end dry run: 1 strong lead scored 93/A, rendered dark email passed audit, sender dry-run produced 1 preview with 0 sends.
+- Role-based `cto@` address passes lead audit with a `role_based_address` warning; generic `info@` fails.
+- Sender skips `mx: false` leads by default; `--allow-mx-fail` overrides only for controlled tests.
+- Both product configs (agency ₹5,999 and master bundle ₹9,999) build and pass the dark email audit.
+
+---
+
+## 2026-10-25 — Ad Creative Lab pilot (₹999)
+
+### Batch
+- **Product:** Ad Creative Lab (`products/ad-creative-lab.json`) · ₹999 (compare ₹1,499)
+- **Metros:** Mumbai 8 · Bengaluru 1 · Delhi NCR 1
+- **Segments:** agency 9 · d2c 1
+- **Leads:** 10 (all A-tier; scores 80–90)
+- **Sources:** public agency/D2C pages and dated posts (Oct 13–23, 2026; two signals from July 2026)
+- **Files:** `research/leads-2026-10-25-ad-creative-lab-pilot.json` → `-enriched.json` → `-audit.md`
+- **Campaign:** `campaigns/2026-10-25-ad-creative-lab/pilot/` + `preview/`
+
+### Audit
+- Lead audit: PASS — 10 clean, 0 failed, 2 warned (`name_incomplete` for Parth; `free_email` / `email_status_risky` for Adsmagnify Gmail).
+- Email audit: PASS — 10/10.
+- Dry run: 10 would send, 0 skipped, 0 failed.
+- No duplicates in `india-100-sent.json` or `tier1-100-sent.json`.
+
+### Live send
+- Mode: LIVE via `smtp-relay.brevo.com` · 4s throttle · `--source=metro_ad_creative_lab_oct`
+- Result: **10 sent, 0 skipped, 0 failed**
+- Sent log: `campaigns/2026-10-25-ad-creative-lab-sent.json`
+- Recipients: vivek@aimnlaunch.com, karthik@digitaladvantagemedia.com, abhishek@baclinc.com, debashis@dexxtra.com, connect@madresult.com, growth@adtitudemedia.com, business@dgeniussolutions.com, affan@rawbare.com, vishal@sqroot.in, adsmagnify@gmail.com
+
+### Fixes shipped during this batch
+- `enrich-leads.mjs` — MX now resolves the actual email domain for free inboxes (Gmail/Yahoo), not the company website domain.
+- `send-product-campaign.php` — subject is now generated per lead and rotated across the five product variants; HTML `<title>`/preheader now matches the per-lead subject.
+
+### Follow-up
+- Watch bounces/replies for 24–48 hours. Stop and re-verify on the first hard bounce.
+- Product non-opener follow-up: **2026-11-01** (7 days).
+- Do not re-contact any of these leads before **2026-11-08** (14 days).
+- Next batch: build 10–25 more verified leads before sending again; do not send the same product to the same company twice in 30 days.

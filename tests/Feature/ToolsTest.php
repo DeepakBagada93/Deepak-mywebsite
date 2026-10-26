@@ -84,6 +84,21 @@ class ToolsTest extends TestCase
             ->assertRedirect('https://deepakbagada.in/tools/category/calculator');
     }
 
+    public function test_page_query_redirects_to_clean_tools_urls(): void
+    {
+        $this->get('/tools?page=1')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/tools');
+
+        $this->get('/tools?page=2')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/tools');
+
+        $this->get('/tools/category/calculator?page=2')
+            ->assertStatus(301)
+            ->assertRedirect('https://deepakbagada.in/tools/category/calculator');
+    }
+
     public function test_category_page_self_canonicalises(): void
     {
         $response = $this->get('/tools/category/calculator');

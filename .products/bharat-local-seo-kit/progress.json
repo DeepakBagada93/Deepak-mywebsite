@@ -1,0 +1,29 @@
+{
+  "product": "bharat-local-seo-kit",
+  "version": "1.0.0",
+  "createdAt": "2026-10-24T17:15:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "completed"
+  },
+  "decisions": [
+    "Tailored specifically for Indian MSMEs, clinics, salons, and local agencies serving tier 1 to tier 3 cities.",
+    "Integrated 52-week festive calendar covering national and regional Indian festivals (Diwali, Eid, Navratri, Pongal, Holi, wedding season).",
+    "Engineered bilingual and sentiment-aware review responder that protects clinic/business reputation while enforcing geo-keywords.",
+    "Priced into optimized Indian buyer tiers: Launch Flash (₹599), Single Business Solo (₹799), Agency Pro (₹1,999), and Agency Master (₹3,999), plus 3-in-1 Bharat Super-Bundle option (₹1,499)."
+  ],
+  "unresolved": [
+    "Owner approval for public store listing and pricing finalization."
+  ],
+  "evidence": [
+    "node --test products/bharat-local-seo-kit/tests/local-seo.test.mjs passed 2/2 tests.",
+    "node .agent/scripts/validate-product.mjs products/bharat-local-seo-kit passed with 0 failures.",
+    "node .agent/scripts/audit-package.mjs products/bharat-local-seo-kit verified clean ZIP with 21 safe entries."
+  ]
+}

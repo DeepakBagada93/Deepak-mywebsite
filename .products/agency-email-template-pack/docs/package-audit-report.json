@@ -1,0 +1,11 @@
+{
+  "product": "products/agency-email-template-pack",
+  "checkedAt": "2026-10-26T14:59:44.474Z",
+  "passed": [
+    "agency-email-template-pack-v1.0.0.zip has 53 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

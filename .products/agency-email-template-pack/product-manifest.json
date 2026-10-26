@@ -1,0 +1,229 @@
+{
+  "name": "Agency Email Template Pack",
+  "slug": "agency-email-template-pack",
+  "version": "1.0.0",
+  "category": "email-templates",
+  "license": "Commercial — client work permitted, resale prohibited",
+  "generatedAt": "2026-10-26T14:59:36.665Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 663,
+      "sha256": "e103dc1f47afe67dbf23036dc945f0f2c247479e74eb23177aacebcddf23fcd9"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1743,
+      "sha256": "57e94acf83b430b7986e2a62a0b7e478b93f5f369c8dc4a1e47540dd3c3f7b7b"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1771,
+      "sha256": "167138bf28ffcad129c5f29a974ed981671bdb210079a7c2d97c5012921a5e76"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2400,
+      "sha256": "a956f63be96c5dc48e5bcdd5584eb928c31f5fc616b63e6b0722c96060971f03"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 2765,
+      "sha256": "23441c1ef986244e73114948404f380df969b5361886807f8e12b9667d43c1b9"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1163,
+      "sha256": "48812489e02b5388b1606d5e3b7c872950d1270c16d0cb975711059053dc19a5"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 2471,
+      "sha256": "ba1e5bea6a3ed24c189ed48f3b2a4dd3f0e96205c72408977cbec844768beb21"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 3447,
+      "sha256": "4c7e811ecbcd1f9a5341983985142c9256e5d6598e086a9cc702ad7098a0886e"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1651,
+      "sha256": "b241618da3761f72542bf879f92a53ca5c7499fe396f115daf743fc45820309c"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1330,
+      "sha256": "c45c14a4dab01290002650203b019cc3d6fa2515ca14fc277136be92429ddb6b"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 4576,
+      "sha256": "2900103aa5428b0e1705d3f74aae730ae84885462703054625787d8d3ea46b66"
+    },
+    {
+      "path": "examples/agency-campaign/01-audience-and-icp-research.md",
+      "bytes": 2700,
+      "sha256": "756838099fd0a7e244f7d7f25994336770cfa0bf1a2e1bddcbb66e14330bf1d2"
+    },
+    {
+      "path": "examples/agency-campaign/02-deliverability-and-infrastructure.md",
+      "bytes": 2059,
+      "sha256": "4054a86a6d070d5b7a8f865c01e9ee0d86bcf1a3aa641bc0683c2fa28613802e"
+    },
+    {
+      "path": "examples/agency-campaign/03-cold-email-sequences.md",
+      "bytes": 3187,
+      "sha256": "31ed30e185dfd9b5415425a1258f205a8027be2a1ca1e6b249ecec76f06b497c"
+    },
+    {
+      "path": "examples/agency-campaign/04-lifecycle-and-nurture-flows.md",
+      "bytes": 2533,
+      "sha256": "4159bf70cea59443b5470838b85ee5772e4ab05703cb166490555fdbcb1e6c4f"
+    },
+    {
+      "path": "examples/agency-campaign/05-promotional-and-newsletter-campaigns.md",
+      "bytes": 2077,
+      "sha256": "64e59ec268c06ecdaa4a9d4b49405da6d5c6b14cfe28dc9f71e4dd004ec01a15"
+    },
+    {
+      "path": "examples/agency-campaign/06-subject-line-and-copy-vault.md",
+      "bytes": 2512,
+      "sha256": "2511ce437ce7feea02350091d19439fa6c61ad65c0000e47796dbd1aef62d447"
+    },
+    {
+      "path": "examples/agency-campaign/07-email-production-qa.md",
+      "bytes": 1641,
+      "sha256": "f0a860055d250b0412c5f2ceb2d90cb70288e6cf46bef6b5b6d07861db940bb3"
+    },
+    {
+      "path": "examples/agency-campaign/email-campaign-delivery.json",
+      "bytes": 1477,
+      "sha256": "13124bc45f999845b10a2ec20cb6de4bc72842421e7e406e1b2316c9ec1230e1"
+    },
+    {
+      "path": "scripts/build-templates.mjs",
+      "bytes": 20603,
+      "sha256": "b7d09cdd6515609827c1f49064c7f65de5ad3a4bcb7a3c2ecbd7f64a51bad2f9"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 2339,
+      "sha256": "a54cee13a9854190b0f01cebf11e5922b5ac247c3e01dc752ecf79bd1a1a01d6"
+    },
+    {
+      "path": "scripts/validate-template-pack.mjs",
+      "bytes": 7394,
+      "sha256": "5ad2181e54667185a79b03d3ca08894a93d048bebaf36d69701e5a00640392c7"
+    },
+    {
+      "path": "skill/SKILL.md",
+      "bytes": 4093,
+      "sha256": "3caa65ba8b000dc712e9ae020d94f7a1e16137286637d5ba7d268b8130818349"
+    },
+    {
+      "path": "templates/README.md",
+      "bytes": 1999,
+      "sha256": "caeb6748168e4f748c3c1604c8bc34b7fd5478581046b515b8b93638420c26cd"
+    },
+    {
+      "path": "templates/copy/01-cold-outreach.md",
+      "bytes": 1879,
+      "sha256": "05672563f4d80662a8d17b44f9e3327a39c19ab27518c2a27e47ff3843e1f0ea"
+    },
+    {
+      "path": "templates/copy/02-discovery-follow-up.md",
+      "bytes": 1868,
+      "sha256": "b0d2b14cb80a6cf76e8e6e1eb6a0db05bd5d8b127c97a24b5763d7ca3c434c2b"
+    },
+    {
+      "path": "templates/copy/03-proposal-nudge.md",
+      "bytes": 1877,
+      "sha256": "5d54e5a37703ef44087ff5ca3d6e598a3c2017085104ae5d86a8f8f072e7f470"
+    },
+    {
+      "path": "templates/copy/04-client-onboarding.md",
+      "bytes": 1885,
+      "sha256": "305fa17edb48408cd0162fa121df8f612239f02caa63a87ef20f25ffb029ae04"
+    },
+    {
+      "path": "templates/copy/05-case-study-broadcast.md",
+      "bytes": 2085,
+      "sha256": "9fe0d037750d1325c351adfc8c268161ad38804ec385f11f1d6a4d62429213e4"
+    },
+    {
+      "path": "templates/copy/06-winback-reactivation.md",
+      "bytes": 1958,
+      "sha256": "e37fb618e2315836343ca3b7aede15e56d8d1e24a8f58961864e7d488ceec52e"
+    },
+    {
+      "path": "templates/copy/07-newsletter.md",
+      "bytes": 1893,
+      "sha256": "0e3774ddb89ae50066417d911f9a4ce9a1b863e1dfa552a854c690310434bd9b"
+    },
+    {
+      "path": "templates/copy/08-referral-request.md",
+      "bytes": 1807,
+      "sha256": "1f72d60fb578e44bde4f4780f71865758bbe7c4b4369331c1c1d8fdaf1111d23"
+    },
+    {
+      "path": "templates/html/01-cold-outreach.html",
+      "bytes": 8385,
+      "sha256": "1f6c3a53717ee072bf932de26aad85bf9803e72f6d46dcfb4642d02304fbaf51"
+    },
+    {
+      "path": "templates/html/02-discovery-follow-up.html",
+      "bytes": 8435,
+      "sha256": "0b8ce7521100d724fb784407ce2886df17d4536284bba47364cf3c545010090b"
+    },
+    {
+      "path": "templates/html/03-proposal-nudge.html",
+      "bytes": 8404,
+      "sha256": "e5b10836defd28cb7393e50880729df61b37291ba54d9d817744f557b43ac7ca"
+    },
+    {
+      "path": "templates/html/04-client-onboarding.html",
+      "bytes": 8437,
+      "sha256": "2f525178e250f331fb596a1939ae93212303e96ae0cf4dfa6b3164a630888a5c"
+    },
+    {
+      "path": "templates/html/05-case-study-broadcast.html",
+      "bytes": 8577,
+      "sha256": "4a69f6e231efd434ccbe2811762aea21966d7560fb86eaa83f52588acd1d83be"
+    },
+    {
+      "path": "templates/html/06-winback-reactivation.html",
+      "bytes": 8517,
+      "sha256": "0e4a505ecc2fb07884ad19e73c4efad667f90a3bcb3d5e5b15d8b21031740f52"
+    },
+    {
+      "path": "templates/html/07-newsletter.html",
+      "bytes": 8460,
+      "sha256": "839b57a35135633ef59e2ed6da59c6d3514a8ccbe5a7c10f1f51dc88e2220331"
+    },
+    {
+      "path": "templates/html/08-referral-request.html",
+      "bytes": 8340,
+      "sha256": "a2d65f3c2cd49b840556b7fd3ff36be731b2ea2922782e13e10687c4af8e562d"
+    },
+    {
+      "path": "templates/manifest.json",
+      "bytes": 2036,
+      "sha256": "cad89f24ad723289f3cce306d3bd77f3acc6cb74dea530f7e8d0e4a78252227e"
+    },
+    {
+      "path": "templates/subject-line-vault.md",
+      "bytes": 2592,
+      "sha256": "9fbcba2927541cc04418ed3970be3d4d66fc53aa73143b97e257dce031286460"
+    },
+    {
+      "path": "tests/template-pack.test.mjs",
+      "bytes": 3491,
+      "sha256": "b8daf3c4ff42bfb371c4b1e0ae419805cf32c4245c2c928242629187c0933ea7"
+    }
+  ],
+  "manualReview": [
+    "Owner approval for pricing and store publication.",
+    "Buyer seed test in the target ESP before the first live send."
+  ]
+}

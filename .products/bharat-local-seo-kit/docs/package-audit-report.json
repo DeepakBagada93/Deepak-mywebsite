@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/bharat-local-seo-kit",
+  "checkedAt": "2026-10-24T17:05:13.707Z",
+  "passed": [
+    "bharat-local-seo-kit-1.0.0.zip has 23 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "agency-delivery-os",
+  "name": "AI Agency Delivery OS",
+  "tagline": "Ten phase-gated artifacts from one client intake, with strict verification.",
+  "outcome": "Turn every client engagement into a state machine that refuses to advance until scope, risk and acceptance gates are explicit.",
+  "outcome_short": "stop scope creep before it eats your margin",
+  "pain_short": "the delivery gap",
+  "pain_points": [
+    "Scope expands after the proposal is signed, and senior time leaks into unbilled revisions.",
+    "Client handovers depend on memory instead of acceptance gates and runbooks.",
+    "Every new engagement restarts the same document work from scratch."
+  ],
+  "price_inr": 5999,
+  "compare_inr": 11999,
+  "price_note": "One-time · commercial license · instant download",
+  "proof_bullets": [
+    "10 phase-gated artifacts generated from a single intake file",
+    "Scope with negative constraints and a weighted risk register",
+    "Permissions boundary, QA acceptance gates and handoff runbooks",
+    "Append-only state machine that blocks out-of-order delivery",
+    "Zero dependencies, runs locally, full source included"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "10 phase-gated artifacts" },
+    { "label": "License", "value": "Unlimited client projects" },
+    { "label": "Format", "value": "ZIP · Markdown + Node.js" },
+    { "label": "Updates", "value": "12 months free" }
+  ],
+  "bonus": "AI Project Kickoff Skills Kit — the intake and scoping framework used before artifact one.",
+  "guarantee": "If the first artifact does not save you an hour on your next engagement, reply and I will refund the purchase.",
+  "cta_url": "https://deepakbagada.in/products/agency-delivery-os",
+  "cta_label": "Get the Delivery OS — {{PRICE}}",
+  "ps": "Reply with your current client intake process and I will tell you which artifact to run first.",
+  "preheader": "Ten phase-gated artifacts from one intake. Built for agencies that are tired of unbilled revisions.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, cut scope creep before it eats your margin",
+    "{{COMPANY_SHORT}}: 10 phase-gated artifacts from one intake",
+    "{{CITY}} agencies: deliver AI projects without scope leaks",
+    "A ₹5,999 delivery OS for {{COMPANY_SHORT}}",
+    "{{FIRST_NAME}}, stop rewriting the same proposal"
+  ],
+  "audience_cities": [
+    "Bengaluru",
+    "Mumbai",
+    "Delhi NCR",
+    "Pune",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Ahmedabad"
+  ]
+}

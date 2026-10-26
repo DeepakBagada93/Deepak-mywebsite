@@ -1,0 +1,37 @@
+{
+  "product": "products/ai-email-automation-agency",
+  "checkedAt": "2026-10-26T14:59:44.929Z",
+  "passed": [
+    "Required path exists: README.md",
+    "Required path exists: LICENSE.md",
+    "Required path exists: CHANGELOG.md",
+    "Required path exists: COMPATIBILITY.md",
+    "Required path exists: product-manifest.json",
+    "Required path exists: docs",
+    "Required path exists: examples",
+    "Required path exists: tests",
+    "Required path exists: dist",
+    "Manifest parses and has required fields",
+    "Documentation exists: docs/product-specification.md",
+    "Documentation exists: docs/test-plan.md",
+    "Documentation exists: docs/test-results.md",
+    "Documentation exists: docs/store-listing.md",
+    "Documentation exists: docs/release-report.md",
+    "Structured file checked: docker-compose.yml",
+    "Structured file checked: examples/agency-outbound/sample-ai-output.json",
+    "Structured file checked: examples/agency-outbound/sample-lead.json",
+    "Structured file checked: product-manifest.json",
+    "Structured file checked: progress.json",
+    "Structured file checked: tests/sample-lead.json",
+    "Structured file checked: workflow-qa-report.json",
+    "Structured file checked: workflows/make-agency-email-engine.json",
+    "Structured file checked: workflows/n8n-agency-email-engine.json",
+    "Structured file checked: workflows/n8n-approval-and-sequence.json",
+    "Structured file checked: workflows/n8n-error-handler.json"
+  ],
+  "failures": [],
+  "warnings": [],
+  "manualReview": [
+    "Clean-environment installation, commercial terms, and store fulfillment require manual review unless separately evidenced."
+  ]
+}

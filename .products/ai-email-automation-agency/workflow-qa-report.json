@@ -1,0 +1,25 @@
+{
+  "auditTimestamp": "2026-10-26T14:56:11.360Z",
+  "productSlug": "ai-email-automation-agency",
+  "workspace": "products/ai-email-automation-agency",
+  "passed": [
+    "Found required path: workflows",
+    "Found required path: docs/tutorial-guide.md",
+    "Found required path: docs/store-listing.md",
+    "Found required path: .env.example",
+    "Workflow JSON syntax valid: workflows/make-agency-email-engine.json",
+    "Zero hardcoded secrets detected: workflows/make-agency-email-engine.json",
+    "Workflow JSON syntax valid: workflows/n8n-agency-email-engine.json",
+    "Zero hardcoded secrets detected: workflows/n8n-agency-email-engine.json",
+    "Workflow JSON syntax valid: workflows/n8n-approval-and-sequence.json",
+    "Zero hardcoded secrets detected: workflows/n8n-approval-and-sequence.json",
+    "Workflow JSON syntax valid: workflows/n8n-error-handler.json",
+    "Zero hardcoded secrets detected: workflows/n8n-error-handler.json",
+    "Tutorial guide comprehensive (7474 characters)",
+    "PDF implementation manual present: pdf/ai-email-automation-agency-implementation-guide.pdf",
+    "Distribution archive packaged cleanly: dist/ai-email-automation-agency-v1.0.0.zip (272.1 KB)"
+  ],
+  "warnings": [],
+  "errors": [],
+  "isReleaseReady": true
+}

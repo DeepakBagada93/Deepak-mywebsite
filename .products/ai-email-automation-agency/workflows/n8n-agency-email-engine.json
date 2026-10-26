@@ -1,0 +1,372 @@
+{
+  "name": "Agency AI Email Engine \u2014 Draft & Human Review",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "agency-email-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node_intake_webhook",
+      "name": "Agency Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -220,
+        300
+      ],
+      "webhookId": "agency-email-intake"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.item.json.body || $input.item.json;\nconst email = String(raw.email || '').trim().toLowerCase();\nif (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {\n  throw new Error('Validation Error: a valid lead email is required.');\n}\nconst freeProviders = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com'];\nconst domain = email.split('@')[1];\nconst company = String(raw.company || domain.split('.')[0]).trim();\nconst segment = raw.segment || (freeProviders.includes(domain) ? 'solo_operator' : 'agency_team');\nreturn {\n  json: {\n    contact_id: 'lead_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 7),\n    first_name: String(raw.first_name || raw.name || 'there').trim().split(' ')[0],\n    last_name: String(raw.last_name || '').trim(),\n    email,\n    company,\n    domain,\n    segment,\n    role: String(raw.role || 'Founder').trim(),\n    trigger_event: String(raw.trigger_event || 'recent growth or launch activity').trim(),\n    pain_point: String(raw.pain_point || 'campaign launches taking too long').trim(),\n    notes: String(raw.notes || '').trim(),\n    source: String(raw.source || 'manual').trim(),\n    consent_basis: String(raw.consent_basis || 'legitimate_interest_b2b').trim(),\n    received_at: new Date().toISOString()\n  }\n};"
+      },
+      "id": "node_normalize",
+      "name": "Validate & Normalize Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        20,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "={{ $env.OPENAI_MODEL || 'gpt-4o-mini' }}",
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "id": "node_openai_model",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        520
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "CREDENTIAL_OPENAI_ACCOUNT",
+          "name": "OpenAI API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a senior new-business lead at an agency. Write one personalized cold email for the lead below.\n\nLead:\n- First name: {{ $json.first_name }}\n- Company: {{ $json.company }}\n- Role: {{ $json.role }}\n- Segment: {{ $json.segment }}\n- Trigger: {{ $json.trigger_event }}\n- Suspected pain: {{ $json.pain_point }}\n- Notes: {{ $json.notes }}\n\nReturn ONLY valid JSON with this exact shape:\n{\n  \"lead_score\": <0-100 integer>,\n  \"segment_label\": <\"agency_team\" | \"solo_operator\" | \"enterprise\" | \"poor_fit\">,\n  \"subject\": <2-6 words, lowercase or sentence case, no exclamation mark>,\n  \"preview_text\": <under 90 characters, adds context>,\n  \"body\": <plain text, 60-110 words, 4 sentences maximum, no links, no calendar link, one soft reply CTA>,\n  \"followup_1\": <plain text, 35-70 words, adds one proof point, no link unless permission was granted>,\n  \"followup_2\": <plain text, 25-50 words, polite close, no guilt>\n}\n\nRules:\n- Sentence 1 references the trigger without flattery.\n- Sentence 2 names the operational bottleneck.\n- Sentence 3 gives one realistic peer proof point; mark it as illustrative if no verified metric exists.\n- Sentence 4 asks for permission to send an asset or asks a one-line question.\n- Never claim guaranteed results, never invent a client name, never use urgency.\n- Write like a founder, not a marketing department. No emojis, no ALL CAPS.",
+        "hasOutputParser": true
+      },
+      "id": "node_strategist",
+      "name": "AI Email Strategist",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const rawText = ($input.item.json.text || $input.item.json.output || '').toString();\nlet parsed;\ntry {\n  const match = rawText.match(/\\{[\\s\\S]*\\}/);\n  parsed = JSON.parse(match ? match[0] : rawText);\n} catch (error) {\n  throw new Error('AI output was not valid JSON: ' + error.message);\n}\n\nconst lead = $('Validate & Normalize Lead').item.json;\nconst spam = ['act now', '100% free', 'guaranteed returns', 'risk-free', 'limited time', 'make money fast', 'urgent'];\nconst body = String(parsed.body || '').trim();\nconst subject = String(parsed.subject || '').trim();\nconst reasons = [];\nif (!subject || subject.length > 60) reasons.push('subject length must be 1-60 characters');\nif (/[!]{1}/.test(subject)) reasons.push('subject contains an exclamation mark');\nif (!body || body.split(/\\s+/).length > 130) reasons.push('body must be 1-130 words');\nif (/https?:\\/\\//i.test(body)) reasons.push('cold body must not contain a link');\nif (/calendly\\.com|cal\\.com|hubspot\\.com\\/meetings/i.test(body)) reasons.push('cold body must not contain a calendar link');\nif (spam.some(word => (subject + ' ' + body).toLowerCase().includes(word))) reasons.push('spam trigger phrase detected');\nif (!parsed.followup_1 || !parsed.followup_2) reasons.push('both follow-ups are required');\n\nreturn {\n  json: {\n    ...lead,\n    lead_score: Number(parsed.lead_score || 0),\n    segment_label: parsed.segment_label || lead.segment,\n    subject,\n    preview_text: String(parsed.preview_text || '').slice(0, 90),\n    body,\n    followup_1: String(parsed.followup_1 || '').trim(),\n    followup_2: String(parsed.followup_2 || '').trim(),\n    guardrail_passed: reasons.length === 0,\n    guardrail_reasons: reasons,\n    approval_token: 'apr_' + Math.random().toString(36).slice(2) + Date.now().toString(36),\n    status: reasons.length === 0 ? 'pending_review' : 'blocked_by_guardrail'\n  }\n};"
+      },
+      "id": "node_guardrail",
+      "name": "Parse & Guardrail",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond_guardrail",
+              "leftValue": "={{ $json.guardrail_passed }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "node_guardrail_if",
+      "name": "Guardrail Passed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        740,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "create",
+        "subject": "={{ $json.subject }}",
+        "message": "={{ $json.body }}",
+        "options": {
+          "sendTo": "={{ $json.email }}"
+        }
+      },
+      "id": "node_gmail_draft",
+      "name": "Create Gmail Draft",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        980,
+        180
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CREDENTIAL_GMAIL_OAUTH",
+          "name": "Gmail OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO agency_email_drafts (contact_id, email, company, segment, lead_score, subject, preview_text, body, followup_1, followup_2, approval_token, status, created_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13) RETURNING id, approval_token;",
+        "queryReplacement": "={{ [\n  $('Parse & Guardrail').item.json.contact_id,\n  $('Parse & Guardrail').item.json.email,\n  $('Parse & Guardrail').item.json.company,\n  $('Parse & Guardrail').item.json.segment_label,\n  $('Parse & Guardrail').item.json.lead_score,\n  $('Parse & Guardrail').item.json.subject,\n  $('Parse & Guardrail').item.json.preview_text,\n  $('Parse & Guardrail').item.json.body,\n  $('Parse & Guardrail').item.json.followup_1,\n  $('Parse & Guardrail').item.json.followup_2,\n  $('Parse & Guardrail').item.json.approval_token,\n  $('Parse & Guardrail').item.json.status,\n  $('Parse & Guardrail').item.json.received_at\n] }}",
+        "options": {}
+      },
+      "id": "node_postgres_save",
+      "name": "Save Draft Record",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [
+        1220,
+        180
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_POSTGRES",
+          "name": "Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": "={{ $env.SLACK_REVIEW_CHANNEL_ID }}",
+        "text": "=*Email draft ready for review*\n\n*Lead:* {{ $('Parse & Guardrail').item.json.email }} ({{ $('Parse & Guardrail').item.json.company }})\n*Score:* {{ $('Parse & Guardrail').item.json.lead_score }}/100\n*Subject:* {{ $('Parse & Guardrail').item.json.subject }}\n\nPreview: {{ $('Parse & Guardrail').item.json.preview_text }}\n\nApprove:\n{{ $env.N8N_PUBLIC_URL }}/webhook/agency-email-approval?record={{ $json.id }}&token={{ $json.approval_token }}&decision=approve\n\nReject:\n{{ $env.N8N_PUBLIC_URL }}/webhook/agency-email-approval?record={{ $json.id }}&token={{ $json.approval_token }}&decision=reject",
+        "otherOptions": {}
+      },
+      "id": "node_slack_review",
+      "name": "Slack Review Request",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        1460,
+        180
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "CREDENTIAL_SLACK",
+          "name": "Slack API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: 'pending_review', record_id: $('Save Draft Record').item.json.id, subject: $('Parse & Guardrail').item.json.subject }) }}",
+        "options": {}
+      },
+      "id": "node_respond_ready",
+      "name": "Respond Draft Ready",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1700,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": "={{ $env.SLACK_ALERT_CHANNEL_ID }}",
+        "text": "=*Email guardrail blocked a draft*\n\nLead: {{ $json.email }} ({{ $json.company }})\nReasons: {{ $json.guardrail_reasons.join('; ') }}\n\nNo email was created. Open the execution to review the AI output.",
+        "otherOptions": {}
+      },
+      "id": "node_slack_guardrail",
+      "name": "Slack Guardrail Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        980,
+        430
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "CREDENTIAL_SLACK",
+          "name": "Slack API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: 'blocked_by_guardrail', reasons: $json.guardrail_reasons }) }}",
+        "options": {
+          "responseCode": 422
+        }
+      },
+      "id": "node_respond_blocked",
+      "name": "Respond Guardrail Failed",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1220,
+        430
+      ]
+    }
+  ],
+  "connections": {
+    "Agency Lead Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate & Normalize Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & Normalize Lead": {
+      "main": [
+        [
+          {
+            "node": "AI Email Strategist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Email Strategist",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Email Strategist": {
+      "main": [
+        [
+          {
+            "node": "Parse & Guardrail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse & Guardrail": {
+      "main": [
+        [
+          {
+            "node": "Guardrail Passed?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardrail Passed?": {
+      "main": [
+        [
+          {
+            "node": "Create Gmail Draft",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack Guardrail Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Gmail Draft": {
+      "main": [
+        [
+          {
+            "node": "Save Draft Record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Draft Record": {
+      "main": [
+        [
+          {
+            "node": "Slack Review Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Review Request": {
+      "main": [
+        [
+          {
+            "node": "Respond Draft Ready",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Guardrail Alert": {
+      "main": [
+        [
+          {
+            "node": "Respond Guardrail Failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "pinData": {},
+  "tags": []
+}

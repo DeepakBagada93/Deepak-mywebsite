@@ -1,0 +1,9 @@
+{
+  "lead_score": 78,
+  "segment_label": "agency_team",
+  "subject": "the weekly report rebuild",
+  "preview_text": "One handoff, one question, no calendar link.",
+  "body": "Hi Priya, saw Northstar hired a new head of delivery last month. Most agencies in that spot inherit a reporting loop that nobody owns, so every weekly client note gets rebuilt by hand. We mapped that handoff for a 20-person brand team and cut the rebuild from nine hours to five hours a week. Worth a two-minute look at the handoff map? No call needed.",
+  "followup_1": "Hi Priya, one more data point: the same 20-person team removed two revision rounds per report after the handoff map. Want me to send the one-page version?",
+  "followup_2": "Hi Priya, I will assume reporting is not a priority this quarter and close the loop. If it becomes one, reply map and I will send the two-minute walkthrough."
+}

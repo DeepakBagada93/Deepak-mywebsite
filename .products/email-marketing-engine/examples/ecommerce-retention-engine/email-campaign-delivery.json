@@ -1,0 +1,21 @@
+{
+  "campaign_name": "Lumina Glow D2C Retention & Wholesale Outreach",
+  "category": "E-Commerce Clean Beauty & Wholesale",
+  "primary_domain": "luminaglow.com",
+  "sending_domains": [
+    "send.luminaglow.com",
+    "luminabeautypartners.com"
+  ],
+  "sending_platforms": {
+    "cold_outreach": "Smartlead.ai",
+    "lifecycle_nurture": "Klaviyo"
+  },
+  "mailbox_fleet_count": 4,
+  "daily_cold_sending_capacity": 120,
+  "sequence_steps_count": 3,
+  "lifecycle_flows_count": 2,
+  "cold_rubric_score": 92,
+  "lifecycle_rubric_score": 98,
+  "deliverability_audit_status": "PASS",
+  "ready_for_production": true
+}

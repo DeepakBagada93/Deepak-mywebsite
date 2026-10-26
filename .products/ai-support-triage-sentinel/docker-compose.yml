@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: support_sentinel_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-support_n8n}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-replace_with_secure_postgres_password}
+      POSTGRES_DB: ${POSTGRES_DB:-n8n_support_sentinel}
+    volumes:
+      - support_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -U ${POSTGRES_USER:-support_n8n} -d ${POSTGRES_DB:-n8n_support_sentinel}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: support_sentinel_redis
+    restart: unless-stopped
+    volumes:
+      - support_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: support_sentinel_n8n
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5679}:5678"
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=${POSTGRES_DB:-n8n_support_sentinel}
+      - DB_POSTGRESDB_USER=${POSTGRES_USER:-support_n8n}
+      - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD:-replace_with_secure_postgres_password}
+      - EXECUTIONS_MODE=regular
+      - WEBHOOK_URL=${WEBHOOK_URL:-http://localhost:5679/}
+      - EXECUTIONS_DATA_PRUNE=true
+    volumes:
+      - support_n8n_data:/home/node/.n8n
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  support_postgres_data:
+  support_redis_data:
+  support_n8n_data:

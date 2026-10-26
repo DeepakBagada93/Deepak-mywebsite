@@ -1,0 +1,52 @@
+{
+  "slug": "ad-creative-lab",
+  "name": "Ad Creative Lab",
+  "tagline": "A deterministic 20+ check ad audit, six-angle rebuild and break-even CPA matrix before you spend.",
+  "outcome": "Run 20+ deterministic checks on Meta and Google ad copy, rebuild hooks across six proven angles, and calculate break-even CPA before a single rupee goes live.",
+  "outcome_short": "stop guessing ad creative before you spend",
+  "pain_short": "the pre-spend guesswork",
+  "pain_points": [
+    "The first 125 characters get truncated on mobile, so the hook never lands.",
+    "Single-angle creative fatigues in days and the test budget is gone before you learn anything.",
+    "ASCI claims, rupee consistency and platform character limits are checked by hand after launch."
+  ],
+  "price_inr": 999,
+  "compare_inr": 1499,
+  "price_note": "One-time · commercial license · instant download",
+  "proof_bullets": [
+    "20+ deterministic checks for Meta and Google character limits",
+    "ASCI claim-class and rupee consistency validation",
+    "Six-angle copy rebuild with hook variants",
+    "Three paced UGC scripts: 15s, 30s and 45s",
+    "Break-even CPA and minimum ROAS test matrix"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "20+ check audit + 6-angle rebuild" },
+    { "label": "License", "value": "Unlimited client ad accounts" },
+    { "label": "Format", "value": "ZIP · CLI + rules engine" },
+    { "label": "Updates", "value": "12 months free" }
+  ],
+  "bonus": "Three paced UGC scripts with shot lists and hooks, included in the same archive.",
+  "guarantee": "If the audit does not flag at least one fixable issue in your current ad pack, reply and I will refund the purchase.",
+  "cta_url": "https://deepakbagada.in/products/ad-creative-lab",
+  "cta_label": "Get Ad Creative Lab — {{PRICE}}",
+  "ps": "Reply with your current Meta or Google ad copy and I will tell you which check to run first.",
+  "preheader": "20+ deterministic ad checks, a six-angle rebuild and break-even CPA math before you spend.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, your ad dies in the first 125 characters",
+    "{{COMPANY_SHORT}}: audit 20+ ad rules before you spend",
+    "{{CITY}} media buyers: stop guessing ad creative",
+    "A ₹999 pre-spend ad audit for {{COMPANY_SHORT}}",
+    "{{FIRST_NAME}}, break-even CPA before the next test"
+  ],
+  "audience_cities": [
+    "Bengaluru",
+    "Mumbai",
+    "Delhi NCR",
+    "Pune",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Ahmedabad"
+  ]
+}

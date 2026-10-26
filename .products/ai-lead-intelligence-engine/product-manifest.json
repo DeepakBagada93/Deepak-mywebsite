@@ -1,0 +1,42 @@
+{
+  "name": "ai-lead-intelligence-engine",
+  "title": "AI Inbound Lead Qualification & CRM Auto-Enrichment System",
+  "version": "1.0.0",
+  "description": "Production AI workflow system that instantly scores inbound leads, enriches domain intelligence, syncs to HubSpot/Salesforce, and dispatches sales alerts via Slack.",
+  "author": "Deepak Bagada Systems",
+  "category": "ai-workflow-automation",
+  "pricing": {
+    "currency_inr": {
+      "launch_flash_inr": 2499,
+      "solo_inr": 3499,
+      "agency_pro_inr": 6999,
+      "agency_whitelabel_inr": 12999,
+      "tax_terms": "18% GST Inclusive with Instant ITC Tax Invoice"
+    },
+    "currency_usd": {
+      "launch_flash_usd": 147,
+      "solo_usd": 197,
+      "agency_pro_usd": 397,
+      "agency_whitelabel_usd": 697,
+      "tax_terms": "Net USD via Stripe / Lemon Squeezy"
+    }
+  },
+  "platforms": [
+    "n8n",
+    "Make.com",
+    "HubSpot",
+    "Salesforce",
+    "Slack"
+  ],
+  "deliverables": [
+    "workflows/n8n-lead-intelligence.json",
+    "workflows/make-lead-intelligence.json",
+    "docs/tutorial-guide.md",
+    "docs/system-architecture.md",
+    "docs/store-listing.md",
+    "pdf/ai-lead-intelligence-engine-implementation-guide.pdf",
+    ".env.example",
+    "docker-compose.yml",
+    "dist/ai-lead-intelligence-engine-v1.0.0.zip"
+  ]
+}

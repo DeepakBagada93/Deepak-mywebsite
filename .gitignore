@@ -51,5 +51,19 @@ storage/logs/scheduled-posts.log
 .agent/skills/deepak-newsletter/leads-*.json
 .agent/skills/deepak-newsletter/dispatch-*.html
 .agent/skills/deepak-newsletter/*-followups.json
+.agent/skills/deepak-newsletter/campaigns/
+.agent/skills/deepak-newsletter/*-sent.json
+
+# generated outreach campaigns and lead research (contains prospect PII)
+/campaigns/
+/research/
+/storage/campaigns/
+
+# generated ad platform runs
+.agent/skills/*/runs/
+
+# OAuth client secrets — never commit
+client_secret_*.json
+.agent/skills/deepak-blog/client_secret_*.apps.googleusercontent.com.json
 
 

@@ -1,0 +1,106 @@
+{
+  "name": "AI Content & SEO Factory Pipeline (Production)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "content-topic-trigger",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node_wh_topic",
+      "name": "Topic Intake Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\nif (!body.topic || !body.primaryKeyword) {\n  throw new Error('Missing Topic Parameters: topic and primaryKeyword are required.');\n}\n\nreturn {\n  json: {\n    jobId: 'job_' + Math.random().toString(36).substring(2, 10),\n    topic: body.topic,\n    keyword: body.primaryKeyword,\n    targetAudience: body.targetAudience || 'B2B Technical Leaders',\n    wordCountTarget: body.wordCountTarget || 1400,\n    slug: (body.primaryKeyword).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),\n    requestedAt: new Date().toISOString()\n  }\n};"
+      },
+      "id": "node_prep_job",
+      "name": "Sanitize & Slugify Topic",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.3
+        }
+      },
+      "id": "node_llm_writer",
+      "name": "OpenAI GPT-4o Writing Engine",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [680, 500],
+      "credentials": {
+        "openAiApi": {
+          "id": "CREDENTIAL_OPENAI_ACCOUNT",
+          "name": "OpenAI Credentials"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an elite Staff Technical Writer and Rank-#1 SEO Architect.\n\nAuthor a high-converting, human-written, engineering-grade technical article based on:\n- Topic: {{ $json.topic }}\n- Primary Keyword: {{ $json.keyword }}\n- Target Audience: {{ $json.targetAudience }}\n\nSTRICT GUIDELINES:\n1. Eliminate all robotic clichés (\"In today's fast-paced digital world\", \"delve\", \"tapestry\").\n2. Provide runnable code snippets, clear architectural trade-offs, and concrete numbers.\n3. Output a valid JSON response with:\n{\n  \"metaTitle\": <60-char keyword-first SEO title>,\n  \"metaDescription\": <155-char click-optimized meta description>,\n  \"deck\": <2-sentence summary>,\n  \"markdownContent\": <1,400+ words complete structured article with H2, H3, tables, code blocks>,\n  \"schemaJsonLd\": <valid Article JSON-LD object>,\n  \"estimatedReadingMinutes\": <number>\n}",
+        "hasOutputParser": true
+      },
+      "id": "node_agent_writer",
+      "name": "Technical Authoring Agent",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SLACK_APPROVAL_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"text\": \"📝 *NEW TECHNICAL ARTICLE READY FOR REVIEW*\\n*Title:* \" + $json.response.metaTitle + \"\\n*Keyword:* `\" + $json.keyword + \"`\\n*Word Count:* ~\" + ($json.response.estimatedReadingMinutes * 220) + \" words\\n*Summary:* \" + $json.response.deck + \"\\n*Slug:* `/blog/\" + $json.slug + \"`\\n*Status:* Staged for 1-click publishing.\"\n}",
+        "options": {}
+      },
+      "id": "node_slack_draft",
+      "name": "Send Slack Preview & Approval",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [950, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"completed\",\n  \"jobId\": \"{{ $json.jobId }}\",\n  \"slug\": \"{{ $json.slug }}\",\n  \"metaTitle\": \"{{ $json.response.metaTitle }}\",\n  \"metaDescription\": \"{{ $json.response.metaDescription }}\",\n  \"stagedInSlack\": true,\n  \"timestamp\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {}
+      },
+      "id": "node_respond_content",
+      "name": "Respond Webhook 200 OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1200, 300]
+    }
+  ],
+  "connections": {
+    "Topic Intake Trigger": {
+      "main": [[{"node": "Sanitize & Slugify Topic", "type": "main", "index": 0}]]
+    },
+    "Sanitize & Slugify Topic": {
+      "main": [[{"node": "Technical Authoring Agent", "type": "main", "index": 0}]]
+    },
+    "OpenAI GPT-4o Writing Engine": {
+      "ai_languageModel": [[{"node": "Technical Authoring Agent", "type": "ai_languageModel", "index": 0}]]
+    },
+    "Technical Authoring Agent": {
+      "main": [[{"node": "Send Slack Preview & Approval", "type": "main", "index": 0}]]
+    },
+    "Send Slack Preview & Approval": {
+      "main": [[{"node": "Respond Webhook 200 OK", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

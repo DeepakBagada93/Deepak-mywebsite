@@ -1,0 +1,33 @@
+{
+  "baseCurrency": "USD",
+  "domesticReferenceCurrency": "INR",
+  "fxAssumptions": {
+    "usdToInr": 86.50,
+    "eurToInr": 93.20,
+    "gbpToInr": 110.40,
+    "aedToInr": 23.55
+  },
+  "serviceTiers": [
+    {
+      "tier": "2-Week Architecture & Bugfix Sprint",
+      "usdPrice": 2500,
+      "inrEquivalent": 216250,
+      "paymentRailFeeEstimateUsd": 75,
+      "gstTreatment": "0% Export of Services under LUT (No tax blockage)"
+    },
+    {
+      "tier": "Full MVP Build / Modernization Sprint (4 Weeks)",
+      "usdPrice": 5500,
+      "inrEquivalent": 475750,
+      "paymentRailFeeEstimateUsd": 165,
+      "gstTreatment": "0% Export of Services under LUT (No tax blockage)"
+    },
+    {
+      "tier": "Monthly Fractional Engineering Partner Retainer",
+      "usdPrice": 4000,
+      "inrEquivalent": 346000,
+      "paymentRailFeeEstimateUsd": 120,
+      "gstTreatment": "0% Export of Services under LUT (No tax blockage)"
+    }
+  ]
+}

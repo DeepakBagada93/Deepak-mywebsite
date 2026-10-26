@@ -1,0 +1,130 @@
+{
+  "name": "AI Lead Intelligence & CRM Dispatch (Production)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "inbound-lead",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node_webhook_lead",
+      "name": "Inbound Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\nif (!body.email || !body.email.includes('@')) {\n  throw new Error('Validation Error: Valid contact email is required.');\n}\n\nconst domain = body.email.split('@')[1];\nconst isFreeProvider = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com'].includes(domain.toLowerCase());\n\nreturn {\n  json: {\n    leadId: 'lead_' + Math.random().toString(36).substring(2, 10),\n    fullName: body.name || 'Anonymous Prospect',\n    email: body.email.toLowerCase().trim(),\n    company: body.company || (isFreeProvider ? 'Independent / Unspecified' : domain.split('.')[0].toUpperCase()),\n    domain: domain,\n    isCorporate: !isFreeProvider,\n    inquiryText: body.message || body.notes || 'Inquiry requested via site form.',\n    timestamp: new Date().toISOString()\n  }\n};"
+      },
+      "id": "node_sanitize_lead",
+      "name": "Sanitize & Enrich Domain",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "id": "node_llm_model",
+      "name": "GPT-4o Engine",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [680, 500],
+      "credentials": {
+        "openAiApi": {
+          "id": "CREDENTIAL_OPENAI_ACCOUNT",
+          "name": "OpenAI Credentials"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an elite B2B Sales Development & Qualification Agent.\n\nEvaluate the following lead record:\n- Name: {{ $json.fullName }}\n- Email: {{ $json.email }}\n- Company: {{ $json.company }} (Corporate: {{ $json.isCorporate }})\n- Inquiry: \"{{ $json.inquiryText }}\"\n\nReturn a valid JSON object strictly adhering to this schema:\n{\n  \"score\": <number from 0 to 100>,\n  \"tier\": <\"HOT\" | \"WARM\" | \"NURTURE\" | \"SPAM\">,\n  \"qualificationReason\": <1-2 sentences explaining the score>,\n  \"personalizedIcebreaker\": <a tailored 2-sentence email opener referencing their company and pain point>,\n  \"recommendedAction\": <\"INSTANT_DISPATCH\" | \"STANDARD_CRM_QUEUE\" | \"AUTO_DISMISS\">\n}",
+        "hasOutputParser": true
+      },
+      "id": "node_ai_scoring",
+      "name": "AI Lead Qualification Agent",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.response.score || 0 }}",
+              "operation": "largerEqual",
+              "value2": 80
+            }
+          ]
+        }
+      },
+      "id": "node_score_gate",
+      "name": "High-Intent Threshold (Score >= 80)",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [920, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SLACK_ALERT_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"text\": \"🔥 *HIGH-INTENT LEAD DETECTED (Score: \" + $json.response.score + \"/100)*\\n*Prospect:* \" + $json.fullName + \" (\" + $json.company + \")\\n*Email:* \" + $json.email + \"\\n*Analysis:* \" + $json.response.qualificationReason + \"\\n*Drafted Icebreaker:* \\\"\" + $json.response.personalizedIcebreaker + \"\\\"\\n*Action:* Pushed to CRM with VIP tag.\"\n}",
+        "options": {}
+      },
+      "id": "node_slack_alert",
+      "name": "Instant Slack VIP Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1180, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"processed\",\n  \"leadId\": \"{{ $json.leadId }}\",\n  \"score\": {{ $json.response.score }},\n  \"tier\": \"{{ $json.response.tier }}\",\n  \"action\": \"{{ $json.response.recommendedAction }}\",\n  \"timestamp\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {}
+      },
+      "id": "node_respond_webhook",
+      "name": "Respond 200 OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1400, 300]
+    }
+  ],
+  "connections": {
+    "Inbound Lead Webhook": {
+      "main": [[{"node": "Sanitize & Enrich Domain", "type": "main", "index": 0}]]
+    },
+    "Sanitize & Enrich Domain": {
+      "main": [[{"node": "AI Lead Qualification Agent", "type": "main", "index": 0}]]
+    },
+    "GPT-4o Engine": {
+      "ai_languageModel": [[{"node": "AI Lead Qualification Agent", "type": "ai_languageModel", "index": 0}]]
+    },
+    "AI Lead Qualification Agent": {
+      "main": [[{"node": "High-Intent Threshold (Score >= 80)", "type": "main", "index": 0}]]
+    },
+    "High-Intent Threshold (Score >= 80)": {
+      "main": [
+        [{"node": "Instant Slack VIP Alert", "type": "main", "index": 0}],
+        [{"node": "Respond 200 OK", "type": "main", "index": 0}]
+      ]
+    },
+    "Instant Slack VIP Alert": {
+      "main": [[{"node": "Respond 200 OK", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

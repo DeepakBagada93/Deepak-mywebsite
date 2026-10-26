@@ -1,0 +1,7 @@
+{
+  "ticketId": "TCK-10928",
+  "customerEmail": "ops-director@fintechvault.com",
+  "planTier": "ENTERPRISE",
+  "subject": "URGENT: Billing webhook signature verification failing after update",
+  "description": "Our automated payout worker received 403 Forbidden errors across all webhook dispatches since 09:00 AM. 140 payouts are held in pending state."
+}

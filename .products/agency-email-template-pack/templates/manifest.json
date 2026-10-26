@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-10-26T14:57:46.238Z",
+  "templates": [
+    {
+      "file": "templates/html/01-cold-outreach.html",
+      "copy": "templates/copy/01-cold-outreach.md",
+      "slug": "cold-outreach",
+      "accent": "#2563eb",
+      "subject": "A quieter way to fix {{pain_point|the bottleneck}}"
+    },
+    {
+      "file": "templates/html/02-discovery-follow-up.html",
+      "copy": "templates/copy/02-discovery-follow-up.md",
+      "slug": "discovery-follow-up",
+      "accent": "#0f766e",
+      "subject": "The three notes from our call"
+    },
+    {
+      "file": "templates/html/03-proposal-nudge.html",
+      "copy": "templates/copy/03-proposal-nudge.md",
+      "slug": "proposal-nudge",
+      "accent": "#7c3aed",
+      "subject": "One question before you decide"
+    },
+    {
+      "file": "templates/html/04-client-onboarding.html",
+      "copy": "templates/copy/04-client-onboarding.md",
+      "slug": "client-onboarding",
+      "accent": "#b45309",
+      "subject": "Your kickoff starts here"
+    },
+    {
+      "file": "templates/html/05-case-study-broadcast.html",
+      "copy": "templates/copy/05-case-study-broadcast.md",
+      "slug": "case-study-broadcast",
+      "accent": "#be123c",
+      "subject": "How {{client_name|one agency}} cut {{metric|reporting time}} by {{metric_delta|41%}}"
+    },
+    {
+      "file": "templates/html/06-winback-reactivation.html",
+      "copy": "templates/copy/06-winback-reactivation.md",
+      "slug": "winback-reactivation",
+      "accent": "#475569",
+      "subject": "It has been a while — here is what changed"
+    },
+    {
+      "file": "templates/html/07-newsletter.html",
+      "copy": "templates/copy/07-newsletter.md",
+      "slug": "newsletter",
+      "accent": "#1d4ed8",
+      "subject": "The handoff nobody owns"
+    },
+    {
+      "file": "templates/html/08-referral-request.html",
+      "copy": "templates/copy/08-referral-request.md",
+      "slug": "referral-request",
+      "accent": "#15803d",
+      "subject": "Know one team with this problem?"
+    }
+  ]
+}

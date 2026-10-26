@@ -1,0 +1,30 @@
+{
+  "product": "d2c-roas-anti-rto-engine",
+  "version": "1.0.0",
+  "createdAt": "2026-10-24T17:30:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "completed"
+  },
+  "decisions": [
+    "Targets the dual crisis facing Indian D2C brands: creative fatigue on Meta Ads and crippling courier RTO losses on Cash on Delivery orders.",
+    "Uses natural, colloquial Hinglish copy frameworks specifically adapted to Bharat consumer psychology.",
+    "Implements a 4-vector address hygiene and RTO risk scoring engine to hold suspicious orders before courier dispatch.",
+    "Includes a 2-touch WhatsApp verification flow with an instant ₹50 UPI prepaid conversion discount hook.",
+    "Priced into optimized Indian buyer tiers: Launch Flash (₹699), Starter D2C Solo (₹899), Brand Pro (₹2,299), and Agency Master (₹4,499), plus 3-in-1 Bharat Super-Bundle option (₹1,499)."
+  ],
+  "unresolved": [
+    "Owner approval for public store listing and pricing finalization."
+  ],
+  "evidence": [
+    "node --test products/d2c-roas-anti-rto-engine/tests/anti-rto.test.mjs passed 2/2 tests.",
+    "node .agent/scripts/validate-product.mjs products/d2c-roas-anti-rto-engine passed with 0 failures.",
+    "node .agent/scripts/audit-package.mjs products/d2c-roas-anti-rto-engine verified clean ZIP with 21 safe entries."
+  ]
+}

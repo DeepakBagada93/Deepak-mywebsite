@@ -1,0 +1,21 @@
+{
+  "auditTimestamp": "2026-10-25T06:12:01.551Z",
+  "productSlug": "ai-content-factory-pipeline",
+  "workspace": "/Users/deepakbagada/saasnext project/deepak-skills/products/ai-content-factory-pipeline",
+  "passed": [
+    "Found required path: workflows",
+    "Found required path: docs/tutorial-guide.md",
+    "Found required path: docs/store-listing.md",
+    "Found required path: .env.example",
+    "Workflow JSON syntax valid: workflows/make-content-factory.json",
+    "Zero hardcoded secrets detected: workflows/make-content-factory.json",
+    "Workflow JSON syntax valid: workflows/n8n-content-factory.json",
+    "Zero hardcoded secrets detected: workflows/n8n-content-factory.json",
+    "Tutorial guide comprehensive (3611 characters)",
+    "PDF implementation manual present: pdf/ai-content-factory-pipeline-implementation-guide.pdf",
+    "Distribution archive packaged cleanly: dist/ai-content-factory-pipeline-v1.0.0.zip (234.8 KB)"
+  ],
+  "warnings": [],
+  "errors": [],
+  "isReleaseReady": true
+}

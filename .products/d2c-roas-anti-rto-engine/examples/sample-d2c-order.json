@@ -1,0 +1,36 @@
+{
+  "orderId": "VR-98421",
+  "placedAt": "2026-10-24T18:24:00+05:30",
+  "customer": {
+    "name": "Priyanka Sharma",
+    "phone": "+91-9871122334",
+    "email": "priyanka.s92@example.com"
+  },
+  "shippingAddress": {
+    "line1": "Flat 302, Green Valley Apartments, Near City Mall",
+    "line2": "Sector 14, Kaushambi",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "pincode": "201010",
+    "country": "India"
+  },
+  "cart": {
+    "items": [
+      {
+        "sku": "VR-OIL-100ML",
+        "title": "VedicRoot Rosemary & Red Onion Hair Growth Elixir (100ml)",
+        "quantity": 2,
+        "priceInr": 799
+      }
+    ],
+    "subtotalInr": 1598,
+    "discountInr": 200,
+    "totalInr": 1398,
+    "paymentMethod": "Cash on Delivery (COD)"
+  },
+  "riskEvaluation": {
+    "completenessScore": 95,
+    "riskLevel": "LOW",
+    "recommendedAction": "AUTO_DISPATCH"
+  }
+}

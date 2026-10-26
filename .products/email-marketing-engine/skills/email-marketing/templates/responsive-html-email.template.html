@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{EMAIL_SUBJECT}}</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; max-width: 100%; }
+    body { margin: 0; padding: 0; width: 100% !important; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    
+    /* Preheader hide-box */
+    .preheader { display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; overflow: hidden; mso-hide: all; }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 600px) {
+      .container-table { width: 100% !important; max-width: 100% !important; }
+      .mobile-padding { padding-left: 20px !important; padding-right: 20px !important; }
+      .mobile-headline { font-size: 24px !important; line-height: 32px !important; }
+      .button-cell { display: block !important; width: 100% !important; }
+      .button-link { display: block !important; width: 100% !important; text-align: center !important; }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      body, .bg-body { background-color: #0f172a !important; color: #f1f5f9 !important; }
+      .content-box { background-color: #1e293b !important; border-color: #334155 !important; }
+      .text-primary { color: #f8fafc !important; }
+      .text-secondary { color: #94a3b8 !important; }
+      .footer-text { color: #64748b !important; }
+    }
+  </style>
+</head>
+<body class="bg-body" style="margin: 0; padding: 0; background-color: #f8fafc; color: #1e293b;">
+  
+  <!-- Preheader text (shows in inbox snippet, hidden in email body) -->
+  <span class="preheader">{{EMAIL_PREHEADER_TEXT}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</span>
+
+  <!-- Main wrapper table -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="table-layout: fixed;">
+    <tr>
+      <td align="center" style="padding: 30px 15px 40px 15px;">
+        
+        <!-- Email Container (600px Max Width) -->
+        <table class="container-table" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto;" role="presentation">
+          
+          <!-- Brand Header / Logo -->
+          <tr>
+            <td align="center" style="padding-bottom: 24px;">
+              <a href="{{BRAND_WEBSITE_URL}}" target="_blank" style="text-decoration: none;">
+                <img src="{{BRAND_LOGO_IMAGE_URL}}" alt="{{BRAND_NAME}}" width="140" style="width: 140px; height: auto; border: 0;" />
+              </a>
+            </td>
+          </tr>
+
+          <!-- Content Card Box -->
+          <tr>
+            <td class="content-box mobile-padding" style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 40px 36px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+              
+              <!-- Category / Sub-heading -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+                <tr>
+                  <td class="text-secondary" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; padding-bottom: 8px;">
+                    {{HEADER_CATEGORY_LABEL}}
+                  </td>
+                </tr>
+
+                <!-- Main Headline -->
+                <tr>
+                  <td class="text-primary mobile-headline" style="font-size: 26px; font-weight: 700; line-height: 34px; color: #0f172a; padding-bottom: 20px;">
+                    {{HERO_HEADLINE}}
+                  </td>
+                </tr>
+
+                <!-- Optional Hero Image (Hero Banner) -->
+                <!-- 
+                <tr>
+                  <td style="padding-bottom: 24px;">
+                    <img src="{{HERO_BANNER_URL}}" alt="{{HERO_BANNER_ALT}}" width="528" style="width: 100%; height: auto; border-radius: 8px;" />
+                  </td>
+                </tr>
+                -->
+
+                <!-- Body Paragraph 1 -->
+                <tr>
+                  <td class="text-secondary" style="font-size: 16px; line-height: 26px; color: #334155; padding-bottom: 16px;">
+                    Hi {{first_name|there}},
+                  </td>
+                </tr>
+
+                <!-- Body Paragraph 2 -->
+                <tr>
+                  <td class="text-secondary" style="font-size: 16px; line-height: 26px; color: #334155; padding-bottom: 24px;">
+                    {{BODY_PARAGRAPH_MAIN}}
+                  </td>
+                </tr>
+
+                <!-- Highlight Box / Value Callout -->
+                <tr>
+                  <td style="padding-bottom: 24px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #f1f5f9; border-left: 4px solid #3b82f6; border-radius: 4px; padding: 16px 20px;">
+                      <tr>
+                        <td style="font-size: 15px; line-height: 24px; color: #1e293b; font-weight: 500;">
+                          💡 <strong>Key Takeaway:</strong> {{KEY_TAKEAWAY_CALLOUT}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Bullet Points List -->
+                <tr>
+                  <td class="text-secondary" style="font-size: 16px; line-height: 26px; color: #334155; padding-bottom: 28px;">
+                    {{BULLET_POINTS_HTML}}
+                  </td>
+                </tr>
+
+                <!-- Bulletproof CTA Button -->
+                <tr>
+                  <td align="center" style="padding-bottom: 30px;">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                      <tr>
+                        <td class="button-cell" align="center" bgcolor="#2563eb" style="border-radius: 8px;">
+                          <a class="button-link" href="{{CTA_DESTINATION_URL}}" target="_blank" style="display: inline-block; padding: 14px 32px; font-size: 16px; font-weight: 600; color: #ffffff; text-decoration: none; border-radius: 8px; border: 1px solid #2563eb; background-color: #2563eb;">
+                            {{CTA_BUTTON_TEXT}} &rarr;
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Signoff -->
+                <tr>
+                  <td class="text-secondary" style="font-size: 15px; line-height: 24px; color: #475569; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                    Cheers,<br>
+                    <strong>{{SENDER_NAME}}</strong><br>
+                    <span style="font-size: 13px; color: #64748b;">{{SENDER_TITLE}}, {{BRAND_NAME}}</span>
+                  </td>
+                </tr>
+
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer Information & CAN-SPAM Compliance -->
+          <tr>
+            <td align="center" style="padding: 24px 10px 0 10px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+                <tr>
+                  <td class="footer-text" align="center" style="font-size: 12px; line-height: 18px; color: #94a3b8; padding-bottom: 12px;">
+                    &copy; {{CURRENT_YEAR}} {{COMPANY_LEGAL_NAME}}. All rights reserved.<br>
+                    {{COMPANY_PHYSICAL_MAILING_ADDRESS}}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" style="font-size: 12px; line-height: 18px; color: #94a3b8;">
+                    You received this email because you subscribed or used our services.<br>
+                    <a href="{{UNSUBSCRIBE_URL}}" target="_blank" style="color: #64748b; text-decoration: underline;">Unsubscribe</a> &bull; 
+                    <a href="{{PREFERENCES_URL}}" target="_blank" style="color: #64748b; text-decoration: underline;">Manage Preferences</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

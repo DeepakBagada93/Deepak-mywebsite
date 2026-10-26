@@ -1,0 +1,29 @@
+{
+  "product": "global-client-hunter-os",
+  "version": "1.0.0",
+  "createdAt": "2026-10-24T17:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "completed"
+  },
+  "decisions": [
+    "Positioned specifically for Indian developers and boutique agencies looking to export software services to US, UK, and Gulf markets.",
+    "Engineered with 0% synthetic AI fluff constraints to prevent outbound messages from getting caught in spam filters or marked as generic agency spam.",
+    "Integrated 4-stage execution: ICP friction audit -> 3-touch cold outreach -> executive ROI proposal -> cross-border compliance (LUT, FIRC, Stripe/Wise).",
+    "Pricing structured into optimized Indian buyer tiers: Launch Flash (₹799), Solo Standard (₹999), Agency Pro (₹2,499), and Agency Master (₹4,999), plus 3-in-1 Bharat Super-Bundle option (₹1,499)."
+  ],
+  "unresolved": [
+    "Owner approval for public store listing and pricing finalization."
+  ],
+  "evidence": [
+    "node --test products/global-client-hunter-os/tests/skill-contract.test.mjs passed 2/2 tests.",
+    "node .agent/scripts/validate-product.mjs products/global-client-hunter-os passed with 0 failures.",
+    "node .agent/scripts/audit-package.mjs products/global-client-hunter-os verified clean ZIP with 23 safe entries."
+  ]
+}

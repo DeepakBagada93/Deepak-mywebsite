@@ -1,0 +1,45 @@
+{
+  "productSlug": "ai-email-automation-agency",
+  "title": "AI Email Automation for Agencies",
+  "version": "1.0.0",
+  "currentStage": "completed",
+  "stages": {
+    "stage_0_discovery": "completed",
+    "stage_1_research": "completed",
+    "stage_2_architecture": "completed",
+    "stage_3_workflows": "completed",
+    "stage_4_environment": "completed",
+    "stage_5_tutorial_and_pdf": "completed",
+    "stage_6_store_listing": "completed",
+    "stage_7_qa_and_packaging": "completed"
+  },
+  "decisions": [
+    {
+      "date": "2026-10-26",
+      "decision": "Separated drafting from sending. AI never sends; a human approval token is mandatory."
+    },
+    {
+      "date": "2026-10-26",
+      "decision": "Enforced guardrails in a code node rather than trusting the prompt: no links, no calendar links, no spam phrases, strict length limits."
+    },
+    {
+      "date": "2026-10-26",
+      "decision": "Added a dedicated error workflow with Slack alerting and a Postgres dead-letter table."
+    },
+    {
+      "date": "2026-10-26",
+      "decision": "Targeted agencies and service businesses instead of generic e-commerce lifecycle automation."
+    }
+  ],
+  "unresolved": [
+    "Owner approval for pricing ($147 / $297 / $497) and public store publication.",
+    "Buyer must bind credentials and run one live end-to-end test before production use."
+  ],
+  "evidence": [
+    "workflow-structure.test.mjs passed 8/8 checks.",
+    "All four workflow JSON files parse cleanly.",
+    "Secret scan found zero hardcoded credentials.",
+    "Product validator generated workflow-qa-report.json and a distribution ZIP.",
+    "PDF implementation manual compiled from docs/tutorial-guide.md."
+  ]
+}

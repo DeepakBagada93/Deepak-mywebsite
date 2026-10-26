@@ -1,0 +1,43 @@
+{
+  "name": "ai-content-factory-pipeline",
+  "title": "Autonomous Multi-Agent Content & SEO Publishing Pipeline",
+  "version": "1.0.0",
+  "description": "Multi-agent autonomous content factory that conducts deep topic research, crafts 1,400+ word anti-AI-fluff articles, runs automated SEO quality auditing, and publishes to WordPress, Webflow, or Ghost.",
+  "author": "Deepak Bagada Systems",
+  "category": "ai-workflow-automation",
+  "pricing": {
+    "currency_inr": {
+      "launch_flash_inr": 2999,
+      "solo_inr": 3999,
+      "agency_pro_inr": 7999,
+      "agency_whitelabel_inr": 14999,
+      "tax_terms": "18% GST Inclusive with Instant ITC Tax Invoice"
+    },
+    "currency_usd": {
+      "launch_flash_usd": 177,
+      "solo_usd": 247,
+      "agency_pro_usd": 497,
+      "agency_whitelabel_usd": 797,
+      "tax_terms": "Net USD via Stripe / Lemon Squeezy"
+    }
+  },
+  "platforms": [
+    "n8n",
+    "Make.com",
+    "WordPress",
+    "Webflow",
+    "Ghost",
+    "Slack"
+  ],
+  "deliverables": [
+    "workflows/n8n-content-factory.json",
+    "workflows/make-content-factory.json",
+    "docs/tutorial-guide.md",
+    "docs/system-architecture.md",
+    "docs/store-listing.md",
+    "pdf/ai-content-factory-pipeline-implementation-guide.pdf",
+    ".env.example",
+    "docker-compose.yml",
+    "dist/ai-content-factory-pipeline-v1.0.0.zip"
+  ]
+}

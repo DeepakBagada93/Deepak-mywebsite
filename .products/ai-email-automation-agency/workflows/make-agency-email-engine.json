@@ -1,0 +1,174 @@
+{
+  "name": "Agency AI Email Engine (Make.com Blueprint)",
+  "version": 1,
+  "metadata": {
+    "scenario": "Agency AI Email Engine",
+    "description": "Intake a lead, generate a personalized agency email with AI, create a Gmail draft, request Slack approval, then send and schedule two follow-ups.",
+    "platform": "Make.com",
+    "minimumPlan": "Core (webhooks, Gmail, Slack, HTTP, Data Store)",
+    "dataStores": ["agency_email_drafts", "agency_email_dead_letters"]
+  },
+  "flow": [
+    {
+      "id": 1,
+      "name": "Custom Webhook — Agency Lead Intake",
+      "module": "webhooks:CustomWebhook",
+      "parameters": {
+        "hook": "agency-email-intake",
+        "method": "POST",
+        "expectedSchema": {
+          "email": "string",
+          "first_name": "string",
+          "company": "string",
+          "role": "string",
+          "trigger_event": "string",
+          "pain_point": "string",
+          "notes": "string",
+          "source": "string"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Set — Normalize Lead",
+      "module": "util:SetVariable2",
+      "parameters": {
+        "contact_id": "lead_{{formatDate(now; \"x\")}}_{{substring(toString(random); 2; 7)}}",
+        "email": "{{lower(trim(1.email))}}",
+        "first_name": "{{ifempty(1.first_name; \"there\")}}",
+        "company": "{{ifempty(1.company; split(1.email; \"@\"); 2)}}",
+        "segment": "{{if(contains(split(1.email; \"@\"); 2); \"gmail.com\"; \"solo_operator\"; \"agency_team\")}}",
+        "trigger_event": "{{ifempty(1.trigger_event; \"recent growth or launch activity\")}}",
+        "pain_point": "{{ifempty(1.pain_point; \"campaign launches taking too long\")}}",
+        "received_at": "{{now}}"
+      }
+    },
+    {
+      "id": 3,
+      "name": "OpenAI — Draft Agency Email",
+      "module": "openai:CreateCompletion",
+      "parameters": {
+        "model": "{{env.OPENAI_MODEL}}",
+        "temperature": 0.4,
+        "prompt": "You are a senior new-business lead at an agency. Return ONLY valid JSON with keys lead_score, segment_label, subject, preview_text, body, followup_1, followup_2. Write one 4-sentence cold email under 110 words. No links, no calendar link, no guarantees, no urgency. Reference the trigger: {{2.trigger_event}}. Company: {{2.company}}. Role: {{2.role}}. Suspected pain: {{2.pain_point}}. Subject must be 2-6 words with no exclamation mark. Body must ask permission to send an asset or ask one short question."
+      },
+      "errorHandler": {
+        "module": "builtin:Break",
+        "parameters": { "retry": true, "attempts": 3, "interval": 2000 }
+      }
+    },
+    {
+      "id": 4,
+      "name": "JSON — Parse AI Output",
+      "module": "json:ParseJSON",
+      "parameters": {
+        "json": "{{replace(replace(3.choices[]; \"```json\"; \"\"); \"```\"; \"\")}}"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Router — Guardrail",
+      "module": "builtin:Router",
+      "parameters": {
+        "routes": [
+          {
+            "name": "Pass",
+            "filter": "{{length(4.subject) <= 60 and length(4.body) <= 900 and !contains(4.body; \"http\") and !contains(4.body; \"calendly\")}}"
+          },
+          {
+            "name": "Block",
+            "filter": "{{length(4.subject) > 60 or length(4.body) > 900 or contains(4.body; \"http\") or contains(4.body; \"calendly\")}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Gmail — Create Draft",
+      "module": "google-email:createDraft",
+      "parameters": {
+        "to": "{{2.email}}",
+        "subject": "{{4.subject}}",
+        "content": "{{4.body}}",
+        "contentType": "text/plain"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Data Store — Save Draft",
+      "module": "datastore:AddRecord",
+      "parameters": {
+        "store": "agency_email_drafts",
+        "record": {
+          "contact_id": "{{2.contact_id}}",
+          "email": "{{2.email}}",
+          "company": "{{2.company}}",
+          "segment": "{{4.segment_label}}",
+          "lead_score": "{{4.lead_score}}",
+          "subject": "{{4.subject}}",
+          "preview_text": "{{4.preview_text}}",
+          "body": "{{4.body}}",
+          "followup_1": "{{4.followup_1}}",
+          "followup_2": "{{4.followup_2}}",
+          "status": "pending_review",
+          "created_at": "{{now}}"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "Slack — Review Request",
+      "module": "slack:CreateMessage",
+      "parameters": {
+        "channel": "{{env.SLACK_REVIEW_CHANNEL_ID}}",
+        "text": "*Email draft ready for review*\n\nLead: {{2.email}} ({{2.company}})\nScore: {{4.lead_score}}/100\nSubject: {{4.subject}}\n\nApprove in the Make approval queue or reject with a note. No email is sent until a human approves."
+      }
+    },
+    {
+      "id": 9,
+      "name": "Webhook Response — Pending Review",
+      "module": "webhooks:WebhookResponse",
+      "parameters": {
+        "status": 200,
+        "body": {
+          "status": "pending_review",
+          "record_id": "{{7.record_id}}",
+          "subject": "{{4.subject}}"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "Slack — Guardrail Blocked",
+      "module": "slack:CreateMessage",
+      "parameters": {
+        "channel": "{{env.SLACK_ALERT_CHANNEL_ID}}",
+        "text": "*Email guardrail blocked a draft*\n\nLead: {{2.email}}\nSubject: {{4.subject}}\nReview the AI output before creating any draft."
+      }
+    },
+    {
+      "id": 11,
+      "name": "Webhook Response — Blocked",
+      "module": "webhooks:WebhookResponse",
+      "parameters": {
+        "status": 422,
+        "body": { "status": "blocked_by_guardrail" }
+      }
+    },
+    {
+      "id": 12,
+      "name": "Error Handler — Slack + Data Store",
+      "module": "builtin:ErrorHandler",
+      "parameters": {
+        "slackChannel": "{{env.SLACK_ALERT_CHANNEL_ID}}",
+        "message": "*Agency email automation incident*\n\nScenario: Agency AI Email Engine\nModule: {{error.module}}\nMessage: {{error.message}}\nExecution: {{error.executionUrl}}",
+        "dataStore": "agency_email_dead_letters"
+      }
+    }
+  ],
+  "notes": [
+    "Replace env.* tokens with Make connections or environment variables.",
+    "The Make blueprint stops at human review. Sending and follow-ups are handled by the n8n approval workflow or an equivalent Make approval scenario.",
+    "Never place a live Gmail token, Slack token, or OpenAI key inside the blueprint."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "campaign_name": "Northline Studio — Agency Services Reference Campaign",
+  "campaign_slug": "agency-campaign",
+  "version": "1.0.0",
+  "audience": {
+    "segment": "B2B SaaS founders and marketing leaders, 15-120 employees",
+    "list_size": 900,
+    "source": "Inbound lead magnet, podcast guests, trigger-event research",
+    "exclusions": ["current clients", "open proposals", "opt-outs", "cold contact in last 45 days"]
+  },
+  "infrastructure": {
+    "sending_domain": "try.northline.studio",
+    "esp": "Google Workspace + Brevo",
+    "authentication": ["SPF", "DKIM", "DMARC", "custom tracking domain"],
+    "daily_cap_per_mailbox": 45,
+    "warmup_days": 21
+  },
+  "sequences": {
+    "cold_outbound": { "steps": 5, "duration_days": 18, "links_in_step_1": 0 },
+    "welcome_onboarding": { "steps": 5, "duration_days": 10 },
+    "proposal_checkout_dropout": { "steps": 3, "duration_days": 10 },
+    "client_onboarding": { "steps": 4, "duration_days": 21 },
+    "win_back": { "steps": 3, "duration_days": 15 }
+  },
+  "templates": [
+    "01-cold-outreach.html",
+    "02-discovery-follow-up.html",
+    "03-proposal-nudge.html",
+    "04-client-onboarding.html",
+    "05-case-study-broadcast.html",
+    "06-winback-reactivation.html",
+    "07-newsletter.html",
+    "08-referral-request.html"
+  ],
+  "verification": {
+    "spam_audit": "pass",
+    "mobile_rendering": "pass",
+    "dark_mode": "pass",
+    "compliance_links": "pass",
+    "owner_approval": "pending"
+  }
+}

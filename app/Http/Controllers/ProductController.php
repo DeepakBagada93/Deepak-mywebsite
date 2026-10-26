@@ -25,7 +25,7 @@ class ProductController extends Controller
 
         $head = [
             'title' => 'Digital Products & AI Toolkits — Buy Once, Own Forever | '.$site['name'],
-            'description' => 'Production-ready digital products by Deepak Bagada: the Agent Skills Master Bundle, FastMCP production server suite, SaaS Next AI boilerplate, HyperFrames reel engine and a free agent skills starter kit. Instant download, commercial license.',
+            'description' => 'Buy once, own forever — AI agent toolkits, n8n workflow automation systems, performance marketing kits, and business growth engines for Indian founders, developers, and agencies. Instant download, commercial license, 30-day guarantee.',
             'canonical' => $url.'/products',
             'og_type' => 'website',
             'og_image' => '/images/about-portrait.png',
@@ -33,6 +33,7 @@ class ProductController extends Controller
                 '@context' => 'https://schema.org',
                 '@type' => 'ItemList',
                 'name' => 'Digital Products by '.$site['name'],
+                'description' => 'Buy once, own forever. AI agent toolkits, automation workflows, and business kits with commercial license — instant download after payment.',
                 'numberOfItems' => $products->count(),
                 'itemListElement' => $products->values()->map(static fn (array $product, int $index) => [
                     '@type' => 'ListItem',
@@ -42,6 +43,13 @@ class ProductController extends Controller
                         'name' => $product['title'],
                         'description' => $product['tagline'],
                         'url' => $url.'/products/'.$product['slug'],
+                        'category' => $product['category'],
+                        'brand' => ['@type' => 'Person', 'name' => $site['name']],
+                        'aggregateRating' => $product['is_free'] ? null : [
+                            '@type' => 'AggregateRating',
+                            'ratingValue' => (string) $product['rating'],
+                            'reviewCount' => (string) $product['rating_count'],
+                        ],
                         'offers' => self::offers($product, $url.'/products/'.$product['slug']),
                     ],
                 ])->all(),
@@ -90,6 +98,8 @@ class ProductController extends Controller
             ],
         ])->values()->all();
 
+        $checkoutUrl = $url.'/products/'.$slug.'/checkout';
+
         $graph = [
             [
                 '@type' => 'Product',
@@ -104,10 +114,42 @@ class ProductController extends Controller
                     'reviewCount' => (string) $product['rating_count'],
                 ],
                 'offers' => self::offers($product, $url.'/products/'.$slug),
+                'hasMerchantReturnPolicy' => [
+                    '@type' => 'MerchantReturnPolicy',
+                    'applicableCountry' => 'IN',
+                    'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                    'merchantReturnDays' => 30,
+                    'returnMethod' => 'https://schema.org/ReturnByMail',
+                    'returnFees' => 'https://schema.org/FreeReturn',
+                ],
+                'shippingDetails' => [
+                    '@type' => 'OfferShippingDetails',
+                    'shippingDestination' => ['@type' => 'DefinedRegion', 'addressCountry' => 'IN'],
+                    'deliveryTime' => ['@type' => 'ShippingDeliveryTime', 'handlingTime' => ['@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 0], 'transitTime' => ['@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 0]],
+                    'shippingRate' => ['@type' => 'MonetaryAmount', 'value' => 0, 'currency' => 'INR'],
+                ],
+                'potentialAction' => [
+                    '@type' => 'BuyAction',
+                    'target' => ['@type' => 'EntryPoint', 'url' => $checkoutUrl, 'actionPlatform' => 'http://schema.org/DesktopWebPlatform'],
+                    'priceSpecification' => self::offers($product, $url.'/products/'.$slug),
+                ],
+                'mainEntityOfPage' => [
+                    '@type' => 'WebPage',
+                    '@id' => $url.'/products/'.$slug,
+                ],
+            ],
+            [
+                '@type' => 'WebPage',
+                '@id' => $url.'/products/'.$slug,
+                'url' => $url.'/products/'.$slug,
+                'name' => $product['seo_title'] ?? $product['title'],
+                'description' => $product['seo_description'] ?? $product['tagline'],
+                'speakable' => ['@type' => 'SpeakableSpecification', 'cssSelector' => ['.store-detail__head', '.store-detail__body', '.store-detail__aeo']],
             ],
             [
                 '@type' => 'FAQPage',
                 'mainEntity' => $faqJson,
+                'speakable' => ['@type' => 'SpeakableSpecification', 'cssSelector' => ['.store-detail__faq']],
             ],
             [
                 '@type' => 'BreadcrumbList',

@@ -3695,3 +3695,131 @@
   - Words: 1995
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Evals 2026: Braintrust $249 vs LangSmith Cost**
+  - Slug: `langsmith-vs-braintrust-2026`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-25 09:30:00`
+  - Words: 2042
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Hire AI Automation Consultant India 2026: 7 Red Flags**
+  - Slug: `hire-ai-automation-consultant-india-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-10-26 06:30:00`
+  - Words: 1786
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **AI Agent Memory Bloat: Prune Checkpoints, Save ₹18K 2026**
+  - Slug: `agent-memory-bloat-checkpoint-pruning`
+  - Tag: `AI AGENTS`
+  - Scheduled For: `2026-10-26 09:30:00`
+  - Words: 1568
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Gemma 3n vs Phi-4 Mini: Edge Agent Cost per 1M 2026**
+  - Slug: `gemma-3n-vs-phi-4-mini-edge-agent`
+  - Tag: `AI NEWS`
+  - Scheduled For: `2026-10-26 12:30:00`
+  - Words: 1691
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Next.js 15 Suspense Streaming: 400ms TTFB Fix 2026**
+  - Slug: `nextjs-15-suspense-streaming-ttfb`
+  - Tag: `WEB DEV`
+  - Scheduled For: `2026-10-26 15:30:00`
+  - Words: 1440
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Why I Quote ₹55K Websites in Junagadh: 2026 Margin Math**
+  - Slug: `quote-55k-websites-junagadh`
+  - Tag: `MY STORY`
+  - Scheduled For: `2026-10-26 18:30:00`
+  - Words: 1650
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Top Laravel Developer Gujarat 2026: ₹55K vs Agency Rates**
+  - Slug: `top-laravel-developer-gujarat`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-10-27 06:30:00`
+  - Words: 1401
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Pydantic-AI vs Instructor: Structured Output Cost 2026**
+  - Slug: `pydantic-ai-vs-instructor-structured-output`
+  - Tag: `AI AGENTS`
+  - Scheduled For: `2026-10-27 09:30:00`
+  - Words: 1420
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **AgentKit vs Claude Agent SDK: Agent Cost per 1M 2026**
+  - Slug: `agentkit-vs-claude-agent-sdk`
+  - Tag: `AI NEWS`
+  - Scheduled For: `2026-10-27 12:30:00`
+  - Words: 1519
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **MySQL JSON vs MariaDB JSON Search: 3x Faster 2026**
+  - Slug: `mysql-json-vs-mariadb-json-search`
+  - Tag: `WEB DEV`
+  - Scheduled For: `2026-10-27 15:30:00`
+  - Words: 1449
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **Client Ghosted a ₹2L Build: My 3-Invoice Rule 2026**
+  - Slug: `client-ghosted-3-invoice-rule`
+  - Tag: `MY STORY`
+  - Scheduled For: `2026-10-27 18:30:00`
+  - Words: 1594
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Scheduled in DB (audit PASS)
+
+- **GPT-6.1 Sol Agent Cost 2026: $2 Input vs Astra $10**
+  - Slug: `gpt-61-sol-cost-benchmark-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-25 12:30:00`
+  - Words: 2044
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 16.4 Partial Prefetching: 1 Shell Per Route 2026**
+  - Slug: `nextjs-16-4-partial-prefetching-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-25 15:30:00`
+  - Words: 2052
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why I Turned Down ₹6L: The Junagadh Margin Math 2026**
+  - Slug: `turning-down-6l-project-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-10-25 18:30:00`
+  - Words: 2096
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Gemma 3n vs Phi-4 Mini: Edge Agent Cost per 1M 2026**
+  - Slug: `gemma-3n-vs-phi-4-mini-edge-agent`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-26 12:30:00`
+  - Words: 1691
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why I Quote ₹55K Websites in Junagadh: 2026 Margin Math**
+  - Slug: `quote-55k-websites-junagadh`
+  - Tag: `MY STORY`
+  - Published: `2026-10-26 18:30:00`
+  - Words: 1650
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

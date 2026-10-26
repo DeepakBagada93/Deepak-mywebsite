@@ -1,0 +1,41 @@
+{
+  "productSlug": "agency-email-template-pack",
+  "title": "Agency Email Template Pack",
+  "version": "1.0.0",
+  "currentStage": "completed",
+  "stages": {
+    "research": "completed",
+    "specification": "completed",
+    "templates": "completed",
+    "copy_pack": "completed",
+    "reference_campaign": "completed",
+    "documentation": "completed",
+    "quality": "completed",
+    "packaging": "completed",
+    "release_audit": "completed"
+  },
+  "decisions": [
+    {
+      "date": "2026-10-26",
+      "decision": "Targeted agency/services revenue moments instead of a generic visual template pack."
+    },
+    {
+      "date": "2026-10-26",
+      "decision": "Kept templates text-first with no remote images, scripts, or external stylesheets to protect deliverability."
+    },
+    {
+      "date": "2026-10-26",
+      "decision": "Enforced {{tag|fallback}} syntax across every dynamic value so personalization never ships blank."
+    }
+  ],
+  "unresolved": [
+    "Owner approval for pricing ($29 / $79 / $149) and public store publication.",
+    "Buyer must run a seed test in the target ESP before the first live send."
+  ],
+  "evidence": [
+    "scripts/validate-template-pack.mjs passed with zero errors.",
+    "tests/template-pack.test.mjs passed.",
+    "Reference campaign passed the email-marketing campaign validator.",
+    "Distribution ZIP built with product-manifest.json hashes."
+  ]
+}

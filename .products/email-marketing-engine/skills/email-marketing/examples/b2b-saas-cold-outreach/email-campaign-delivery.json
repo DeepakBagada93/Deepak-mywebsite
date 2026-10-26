@@ -1,0 +1,22 @@
+{
+  "campaign_name": "PipePilot B2B Outbound & Lifecycle Engine",
+  "category": "B2B SaaS Sales Intelligence",
+  "primary_domain": "pipepilot.io",
+  "sending_domains": [
+    "trypipepilot.com",
+    "usepipepilot.io",
+    "getpipepilot.co"
+  ],
+  "sending_platforms": {
+    "cold_outreach": "Instantly.ai",
+    "lifecycle_nurture": "Loops.so"
+  },
+  "mailbox_fleet_count": 6,
+  "daily_cold_sending_capacity": 180,
+  "sequence_steps_count": 5,
+  "lifecycle_flows_count": 2,
+  "cold_rubric_score": 96,
+  "lifecycle_rubric_score": 94,
+  "deliverability_audit_status": "PASS",
+  "ready_for_production": true
+}

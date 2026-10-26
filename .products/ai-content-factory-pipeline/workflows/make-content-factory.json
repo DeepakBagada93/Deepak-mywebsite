@@ -1,0 +1,90 @@
+{
+  "name": "AI Content Factory Pipeline (Make Blueprint)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "hook": "WEBHOOK_CONTENT_TOPIC"
+      },
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0,
+          "name": "Topic Webhook Ingestion"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "openai:createChatCompletion",
+      "version": 1,
+      "parameters": {
+        "account": "CREDENTIAL_OPENAI_ACCOUNT"
+      },
+      "mapper": {
+        "model": "gpt-4o",
+        "temperature": 0.3,
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a Rank-#1 SEO Content Engine. Output structured JSON with metaTitle, metaDescription, and complete 1,400-word markdown body with zero AI fluff."
+          },
+          {
+            "role": "user",
+            "content": "Produce article for topic: {{1.data.topic}} focusing on keyword: {{1.data.keyword}}"
+          }
+        ]
+      },
+      "metadata": {
+        "designer": {
+          "x": 350,
+          "y": 0,
+          "name": "GPT-4o Deep Writing Node"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "module": "wordpress:createPost",
+      "version": 1,
+      "parameters": {
+        "account": "CREDENTIAL_WORDPRESS_ACCOUNT"
+      },
+      "mapper": {
+        "title": "{{2.choices[1].message.content.metaTitle}}",
+        "content": "{{2.choices[1].message.content.markdownContent}}",
+        "status": "draft"
+      },
+      "metadata": {
+        "designer": {
+          "x": 700,
+          "y": 0,
+          "name": "WordPress Staging Draft"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "module": "gateway:WebhookRespond",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "status": 200,
+        "body": "{\"status\":\"draft_created\",\"postId\":{{3.id}}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1050,
+          "y": 0,
+          "name": "Webhook 200 Response"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "version": 1
+  }
+}

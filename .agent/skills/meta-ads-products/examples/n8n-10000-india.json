@@ -1,0 +1,100 @@
+{
+  "offer": {
+    "brand": "Deepak Bagada",
+    "product": "n8n Production Hardening Pack",
+    "price": 2499,
+    "margin": 0.85,
+    "promise": "Ship n8n workflows that fail loudly, retry safely and survive client handoff.",
+    "landing_page": "https://deepakbagada.in/products/n8n-hardening-pack",
+    "free_product": "AI Project Kickoff Skills Kit",
+    "free_landing_page": "https://deepakbagada.in/products/ai-project-kickoff-skills-kit",
+    "proof": [
+      "Used on real client builds",
+      "12 checks across error handling, retries, backups and alerts",
+      "Instant download"
+    ]
+  },
+  "budget": {
+    "total": 10000,
+    "days": 14,
+    "currency": "INR",
+    "max": 50000
+  },
+  "objective": "SALES",
+  "conversion": {
+    "event": "PURCHASE",
+    "optimization_event": "PURCHASE",
+    "pixel_id": null
+  },
+  "targeting": {
+    "countries": ["IN"],
+    "age_min": 25,
+    "age_max": 50,
+    "genders": "ALL",
+    "languages": ["English", "Hindi"],
+    "interests": [
+      "Business owners",
+      "Software developers",
+      "Automation",
+      "SaaS",
+      "Digital marketing",
+      "No-code",
+      "Make.com",
+      "Zapier",
+      "AI tools"
+    ],
+    "audience_availability": {
+      "retargeting": false,
+      "lookalike": false
+    }
+  },
+  "placements": {
+    "mode": "ADVANTAGE_PLUS",
+    "exclude": ["Audience Network"]
+  },
+  "assumptions": {
+    "cpm": 250,
+    "ctr": 0.013,
+    "cvr": 0.012
+  },
+  "creative": {
+    "tool": "n8n",
+    "failure": "silent workflow failures",
+    "checks": "12-point production audit",
+    "palette": "charcoal, emerald green, warm paper white",
+    "workspace": "a dark walnut desk with a laptop, a paper checklist, a brass pen and a half-finished coffee",
+    "creator": {
+      "name": "Riya",
+      "age": 27,
+      "look": "shoulder-length dark hair, minimal makeup, small gold studs, mustard oversized t-shirt",
+      "setting": "a bright home desk with a monstera plant, a white wall and a laptop just out of focus"
+    }
+  },
+  "ad_copy": {
+    "primary_text": [
+      "Your n8n workflow didn't fail. It failed silently. Run the 12 checks I use before every client handoff. ₹2,499.",
+      "One silent error can kill a client's n8n workflow at 2AM. This 12-point audit catches it first. Instant download.",
+      "Demo vs production is 12 checks. Error handling, retries, backups, alerts. Get the n8n Hardening Pack."
+    ],
+    "headlines": [
+      "12 Checks Before You Ship n8n",
+      "Stop Silent n8n Failures",
+      "The n8n Production Audit",
+      "Ship n8n Without 2AM Calls",
+      "₹2,499 · Instant Download"
+    ],
+    "descriptions": [
+      "12-point production checklist",
+      "Built from real client builds",
+      "Instant access. No call."
+    ],
+    "cta": "Download",
+    "carousel": [
+      { "headline": "It didn't fail. It failed silently.", "description": "Unseen failure." },
+      { "headline": "No retry. No alert. No backup.", "description": "Silent killers." },
+      { "headline": "The 12-point production audit", "description": "Before handoff." },
+      { "headline": "Built from real client builds", "description": "Production-tested." },
+      { "headline": "Get the pack — ₹2,499", "description": "Instant download." }
+    ]
+  }
+}

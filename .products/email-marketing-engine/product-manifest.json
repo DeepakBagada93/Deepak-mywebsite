@@ -1,0 +1,317 @@
+{
+  "name": "email-marketing-engine",
+  "slug": "email-marketing-engine",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-25T16:22:44.313Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1610,
+      "sha256": "b78dc13c5e9624b054eb03b6bd460841b7dad9a7f3c611296cc375eabd243338"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 2179,
+      "sha256": "dfb490cd484e0aeca7ddde5680edc20961fc7aad5efcf63db48b639b671dfe99"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 4954,
+      "sha256": "e898f27a159ef5cb7ca1360803bbd0b5aaba96943f6575da110325ec2e33d95c"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1997,
+      "sha256": "3082ebdc09b27471f760291b2643435c54e49da087cbb27aab4ce202df93a546"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 2505,
+      "sha256": "e4988f0f214ce81b1d39e5fe4df9fae1c73c5e912f6ec50066d318920308f1b7"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 4847,
+      "sha256": "23e51370f403ff399c9e0ce3c96134e139ab38acf2964ea9b68fdbea6ef5ccf3"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 2336,
+      "sha256": "c27234650625bf7c2dc31c00bbd08a7ccaad97235229e533f5e1c36c39c7fb36"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 2172,
+      "sha256": "130cbda8746bdcc7d4654c7fa32ba874f92b594c7bbf8d211b550eee0d0c4654"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 3872,
+      "sha256": "2ba5844fc78a30b7d6d5c1474e47227a8169ced8bab2d5cdc6cb35dd600db23d"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/01-audience-and-icp-research.md",
+      "bytes": 2967,
+      "sha256": "4f9ccb61974548a435dfe40d5ad6f195fb2fca7ed71defe81d9e4a040bdec999"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/02-deliverability-and-infrastructure.md",
+      "bytes": 2116,
+      "sha256": "e9729cefcbf18d6496483ea8a692cf6c48d9934ceab94fbe00c522531f27c192"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/03-cold-email-sequences.md",
+      "bytes": 3188,
+      "sha256": "11d2ce1f335ec5bc1f7f78627bcbf201bcf0d5068830ae0c1a01b2478b541d33"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/04-lifecycle-and-nurture-flows.md",
+      "bytes": 2797,
+      "sha256": "ed1c1dd29fe73f014815616f4ef1fcaaf08fde4d79a07f646652002b586ee1a3"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/05-promotional-and-newsletter-campaigns.md",
+      "bytes": 2468,
+      "sha256": "740f9606a27177e7ca16b4711d779bf7f1d122e09db97fb642bbdb9a12b0451b"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/06-subject-line-and-copy-vault.md",
+      "bytes": 1623,
+      "sha256": "42af176483dc3e52d7c6186cb198f3289a0dfb901c76e76af4eec76cca9f04e0"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/07-email-production-qa.md",
+      "bytes": 1774,
+      "sha256": "90800a6287c6d4495356575ce49065a66499a254b48213ddbaf80e9f66712e93"
+    },
+    {
+      "path": "examples/b2b-saas-cold-outreach/email-campaign-delivery.json",
+      "bytes": 605,
+      "sha256": "203581e814db0534d56ca317c8208832f7e71a100ab36a29b2450700ad763a7c"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/01-audience-and-icp-research.md",
+      "bytes": 1343,
+      "sha256": "3c48cb9d6e147f96b82973b1a316b7dc9bddb8d71c31164995e03585a46c1b77"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/02-deliverability-and-infrastructure.md",
+      "bytes": 810,
+      "sha256": "5f7ae18789511fad4bb7c70a8d7e0406c19ad02e23cf17b8e14056430e46b4a4"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/03-cold-email-sequences.md",
+      "bytes": 1876,
+      "sha256": "02e33261d8eb514c1227aeeab31bc86e7550fc5f60c00fa6c6417ca1d19b11ec"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/04-lifecycle-and-nurture-flows.md",
+      "bytes": 2292,
+      "sha256": "bd2a905939f288a578860fc334b7e60c590796afe94214ccc0b95136fa945d0b"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/05-promotional-and-newsletter-campaigns.md",
+      "bytes": 1725,
+      "sha256": "6976c4ddb3f213092bf1788b87af86ee62269ea977996ebe2cdd90319aa689b8"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/06-subject-line-and-copy-vault.md",
+      "bytes": 965,
+      "sha256": "2c98177af3bb34188ddf6cce63e7a968488abf33bc4d2726f9eabef766fd4006"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/07-email-production-qa.md",
+      "bytes": 1242,
+      "sha256": "9851c81f6c7ab3c12010f6d91b3a00d022f442c761f38e3f870b4fb55dc63e46"
+    },
+    {
+      "path": "examples/ecommerce-retention-engine/email-campaign-delivery.json",
+      "bytes": 608,
+      "sha256": "4585c52f45f8082650136f947cfc975b04c143d00fddecd6da99de4b732a8d1a"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1696,
+      "sha256": "74a7f721b6d408489fe4169db04c8d309a73a125091e5904c5647d643737044a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3668,
+      "sha256": "63cb9576c8fa19cd6a29383cf06cb6cd2e5b4def69c25ff7a90033ec35090ba1"
+    },
+    {
+      "path": "skills/email-marketing/COMPATIBILITY.md",
+      "bytes": 2472,
+      "sha256": "6b72bce82ac76dc156b4ab44611cbfd4a4f54dd8c124bb78a9ffafa824c2855a"
+    },
+    {
+      "path": "skills/email-marketing/config/deliverability-and-dns-standards.md",
+      "bytes": 5580,
+      "sha256": "7c8ff37a0fabe3869b1fcb04e9aa4de81e544562f6df659ecbd048b3212b7e26"
+    },
+    {
+      "path": "skills/email-marketing/config/esp-platform-blueprints.md",
+      "bytes": 4406,
+      "sha256": "19ad10cb6a2307b85dcc1dcb7f7ccb0d16c736f0e2fb88597ddfac7027794e4c"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/01-audience-and-icp-research.md",
+      "bytes": 2967,
+      "sha256": "4f9ccb61974548a435dfe40d5ad6f195fb2fca7ed71defe81d9e4a040bdec999"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/02-deliverability-and-infrastructure.md",
+      "bytes": 2116,
+      "sha256": "e9729cefcbf18d6496483ea8a692cf6c48d9934ceab94fbe00c522531f27c192"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/03-cold-email-sequences.md",
+      "bytes": 3188,
+      "sha256": "11d2ce1f335ec5bc1f7f78627bcbf201bcf0d5068830ae0c1a01b2478b541d33"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/04-lifecycle-and-nurture-flows.md",
+      "bytes": 2797,
+      "sha256": "ed1c1dd29fe73f014815616f4ef1fcaaf08fde4d79a07f646652002b586ee1a3"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/05-promotional-and-newsletter-campaigns.md",
+      "bytes": 2468,
+      "sha256": "740f9606a27177e7ca16b4711d779bf7f1d122e09db97fb642bbdb9a12b0451b"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/06-subject-line-and-copy-vault.md",
+      "bytes": 1623,
+      "sha256": "42af176483dc3e52d7c6186cb198f3289a0dfb901c76e76af4eec76cca9f04e0"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/07-email-production-qa.md",
+      "bytes": 1774,
+      "sha256": "90800a6287c6d4495356575ce49065a66499a254b48213ddbaf80e9f66712e93"
+    },
+    {
+      "path": "skills/email-marketing/examples/b2b-saas-cold-outreach/email-campaign-delivery.json",
+      "bytes": 605,
+      "sha256": "203581e814db0534d56ca317c8208832f7e71a100ab36a29b2450700ad763a7c"
+    },
+    {
+      "path": "skills/email-marketing/quality/cold-email-rubric.md",
+      "bytes": 3075,
+      "sha256": "cb643127274adc85807060766f1a245a04007f7edc7189d21d99d7d419ecc2ac"
+    },
+    {
+      "path": "skills/email-marketing/quality/deliverability-checklist.md",
+      "bytes": 3123,
+      "sha256": "c589ea2d55e3526f9b72500a09dafdbd0402a8fa336a7c6bc2533849431491c5"
+    },
+    {
+      "path": "skills/email-marketing/quality/lifecycle-email-rubric.md",
+      "bytes": 2915,
+      "sha256": "5b47b9d27599a221afaa508ea3c7ad12b3bc6dbcdde9474b6c9698c16fbced6e"
+    },
+    {
+      "path": "skills/email-marketing/quality/spam-trigger-words-blacklist.md",
+      "bytes": 3242,
+      "sha256": "42fa1b62f8a01d8459e62a7e2fd2e6660c8f4c2e32e545ea8a5943799dc5abeb"
+    },
+    {
+      "path": "skills/email-marketing/README.md",
+      "bytes": 4656,
+      "sha256": "08e3ece246737e4a95ee15d07cc7b6e265ba3749675ea2624dfbadad8711f69f"
+    },
+    {
+      "path": "skills/email-marketing/scripts/validate-email-campaign.mjs",
+      "bytes": 6525,
+      "sha256": "f78e09a3fe061f142ebc2de108c7b54291f572b0d9f9795107ab30f06b2d4de8"
+    },
+    {
+      "path": "skills/email-marketing/SKILL.md",
+      "bytes": 11314,
+      "sha256": "37949b7b5bedf3bdece7b6032bb2ed682925f802ad85d5f3910ace82d7ee4b63"
+    },
+    {
+      "path": "skills/email-marketing/templates/01-audience-icp-research.template.md",
+      "bytes": 2191,
+      "sha256": "ea997cec42aff83333b745f119cdd91e776554c68328c59e4b544077f5692d19"
+    },
+    {
+      "path": "skills/email-marketing/templates/02-deliverability-infrastructure.template.md",
+      "bytes": 2034,
+      "sha256": "341309dfc05596dcf9a9bc3a1f07238d3405a0aea150da1b152e31a735a79008"
+    },
+    {
+      "path": "skills/email-marketing/templates/03-cold-email-sequence.template.md",
+      "bytes": 3209,
+      "sha256": "d3cffa180dafd7bdca5ea8d4224c87e2cc91d159ff14af634ac0e8bac04a2a77"
+    },
+    {
+      "path": "skills/email-marketing/templates/04-lifecycle-nurture-flows.template.md",
+      "bytes": 3241,
+      "sha256": "ea86003c5e866a2c99232c82c194b40682bfec6e29656da220fdc67101b81dd7"
+    },
+    {
+      "path": "skills/email-marketing/templates/05-promotional-and-newsletter.template.md",
+      "bytes": 2522,
+      "sha256": "0a827bebe41d2d8f6d8fdce0993a3d7794e6bb74220343bf4841303867f75d15"
+    },
+    {
+      "path": "skills/email-marketing/templates/06-subject-line-copy-vault.template.md",
+      "bytes": 2897,
+      "sha256": "8cd38e0c59d974f4e9e36114ac03e5cd4bbc76f88ab890e1eaddc66d80877ed8"
+    },
+    {
+      "path": "skills/email-marketing/templates/07-production-qa.template.md",
+      "bytes": 2083,
+      "sha256": "8410c51a266aa15df5d5ecaa9761e39acdf16ed98225daa678413899d88ada05"
+    },
+    {
+      "path": "skills/email-marketing/templates/responsive-html-email.template.html",
+      "bytes": 9169,
+      "sha256": "0c6c5426ed5e565746ff7972ac0cc99f59bfbbd315bddbfc238f48be5cbb6d4c"
+    },
+    {
+      "path": "skills/email-marketing/workflows/01-audience-and-icp-research.md",
+      "bytes": 3188,
+      "sha256": "f527c7cbce2be4bee3b6d24d3c3b1b2dade2cdbe96a30ed1e248890fd213f49c"
+    },
+    {
+      "path": "skills/email-marketing/workflows/02-cold-outreach-engineering.md",
+      "bytes": 4201,
+      "sha256": "f7e2a23546414e0fa0f74d7b50b035bdf3586813cfe6a9a102385d33067959aa"
+    },
+    {
+      "path": "skills/email-marketing/workflows/03-lifecycle-and-retention-flows.md",
+      "bytes": 3269,
+      "sha256": "92e8f9a2063e63d4733cfd678097658abb385d78608b3255349911f68d2e8e81"
+    },
+    {
+      "path": "skills/email-marketing/workflows/04-promotional-and-editorial-newsletters.md",
+      "bytes": 3158,
+      "sha256": "a5de6d4a8932a5213c19ddc8d051a6d5051b606b94182b3ccc38fdbafa90ddaa"
+    },
+    {
+      "path": "skills/email-marketing/workflows/05-deliverability-and-domain-warmup.md",
+      "bytes": 2683,
+      "sha256": "f9d094bcbe85d3da4ccfef4816d12180b4f8323df4f5b3d447c11997a9c4eec6"
+    },
+    {
+      "path": "skills/email-marketing/workflows/06-email-testing-and-qa.md",
+      "bytes": 2513,
+      "sha256": "6429272c66b5c943de3c201ba25107686f3b65b042e55f815f84f45108248b08"
+    },
+    {
+      "path": "tests/email-tooling.test.mjs",
+      "bytes": 1451,
+      "sha256": "c721b9c36ace58408d64bb969f6556310fee6bdbb59fcb39e8a979ca664c8cfa"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 4287,
+      "sha256": "2f509c024db9edebf40f61b3abbcddbb0eb75a67251417c145a7856f79c9fd9b"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

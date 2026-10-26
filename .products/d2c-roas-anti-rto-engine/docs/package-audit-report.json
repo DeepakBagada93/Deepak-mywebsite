@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/d2c-roas-anti-rto-engine",
+  "checkedAt": "2026-10-24T17:08:05.141Z",
+  "passed": [
+    "d2c-roas-anti-rto-engine-1.0.0.zip has 23 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: lead_engine_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-n8n_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-replace_with_secure_postgres_password}
+      POSTGRES_DB: ${POSTGRES_DB:-n8n_lead_engine}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -U ${POSTGRES_USER:-n8n_admin} -d ${POSTGRES_DB:-n8n_lead_engine}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: lead_engine_redis
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: lead_engine_n8n
+    restart: unless-stopped
+    ports:
+      - "${N8N_PORT:-5678}:5678"
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=${POSTGRES_DB:-n8n_lead_engine}
+      - DB_POSTGRESDB_USER=${POSTGRES_USER:-n8n_admin}
+      - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD:-replace_with_secure_postgres_password}
+      - EXECUTIONS_MODE=regular
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-random_32_character_encryption_key_here}
+      - WEBHOOK_URL=${WEBHOOK_URL:-http://localhost:5678/}
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=336
+    volumes:
+      - n8n_data:/home/node/.n8n
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  redis_data:
+  n8n_data:

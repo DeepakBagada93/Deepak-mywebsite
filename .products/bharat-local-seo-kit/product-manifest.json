@@ -1,0 +1,102 @@
+{
+  "name": "Bharat Local SEO & Google Business Domination Kit",
+  "slug": "bharat-local-seo-kit",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-24T17:13:17.581Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 770,
+      "sha256": "746a9e6c3fe40e82f478151c08df6152aa98226167cbb8020a0e1e3aeb51d650"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 791,
+      "sha256": "67dcb5eae632fc96cc092ee5db88bea432ef1f20cb3013281f3fe0190a27eab6"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 332,
+      "sha256": "6b66670dd71ccb9bab140db3eb21fa4ed56f5adf6a6126f976d83715a7f8ab65"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 2623,
+      "sha256": "2c80dcbfd4e8d9f74c7c96cd0000b4b4e8dce1e0a8bc7fdd87ce80815079ec32"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 999,
+      "sha256": "f4278df7de81ffbe0528f84e0f83a56b95ee9a76950ef41c13049e2f8d54cf6f"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 2557,
+      "sha256": "fd296bd3f87821ec8dba3e19b8a9484aaa178155d661848c76d76e9a00e267eb"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 3176,
+      "sha256": "fdb014a8ef083de0ec6b473c6a2649229ebcb6419a326cd86a447f4b757dc1ad"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 985,
+      "sha256": "b9be9f5e066e3c4328a65270d2553ec60841363190189c81a2305b7004ee289b"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 930,
+      "sha256": "49b6a97b41c25a90feee2b481929185b82b2dabfc23bf057edf105ebde7a6866"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 1843,
+      "sha256": "ecac9891150204227a101a48ac3481c3eb0eff314529992d37c40a755fd27498"
+    },
+    {
+      "path": "examples/festive-post-campaigns.md",
+      "bytes": 1645,
+      "sha256": "ab777dcb3f9c102b54a2b583024a13c9f3921897584f4b211d019fcfac6f78b3"
+    },
+    {
+      "path": "examples/local-business-schema.json",
+      "bytes": 1222,
+      "sha256": "63dd394387ed5dc007d6f0ebaed549945a1635fe6eee70fc9480662adcc10acd"
+    },
+    {
+      "path": "examples/review-response-bank.md",
+      "bytes": 1710,
+      "sha256": "505aee6a00409d386e55c1df576c692468fc76e0d83953f63017b0358d1c5714"
+    },
+    {
+      "path": "examples/sample-local-business.json",
+      "bytes": 660,
+      "sha256": "52b09645d0980e745dce28b177ddc56bb44da88309d716c566948f95f518712d"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 815,
+      "sha256": "237f238f5c23cf34ace8996029fb02c68d405ce66cb3c5288492aae709d2bb03"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2622,
+      "sha256": "911ef7e1a5e066547bae6277f30ae5ec9d728aa9148e811338e224c521bafd59"
+    },
+    {
+      "path": "skills/bharat-local-seo-kit/SKILL.md",
+      "bytes": 4653,
+      "sha256": "349470904399b18e9b9a685cd13389f7642efbe29cef67d849ae7128b1d4a3d8"
+    },
+    {
+      "path": "tests/local-seo.test.mjs",
+      "bytes": 1088,
+      "sha256": "54c199cdf0bb80992f2fa283a98fd7452e47b1c158f456a05cee5798b8854ff0"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

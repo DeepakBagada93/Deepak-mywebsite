@@ -1,0 +1,129 @@
+{
+  "name": "AI Support Triage & Urgent Escalation Sentinel (Production)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "support-ticket-inbound",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node_wh_ticket",
+      "name": "Inbound Ticket Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\nif (!body.ticketId || !body.subject || !body.description) {\n  throw new Error('Malformed Ticket: ticketId, subject, and description are required.');\n}\n\nreturn {\n  json: {\n    ticketId: body.ticketId,\n    customerEmail: (body.email || 'unknown@customer.com').toLowerCase(),\n    tier: body.planTier || 'STANDARD',\n    subject: body.subject,\n    description: body.description,\n    submittedAt: new Date().toISOString()\n  }\n};"
+      },
+      "id": "node_validate_ticket",
+      "name": "Validate Ticket Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "id": "node_llm_triage",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [700, 500],
+      "credentials": {
+        "openAiApi": {
+          "id": "CREDENTIAL_OPENAI_ACCOUNT",
+          "name": "OpenAI Credentials"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert Enterprise Technical Support & Customer Experience Architect.\n\nAnalyze this inbound customer ticket:\n- Ticket ID: {{ $json.ticketId }}\n- Customer: {{ $json.customerEmail }} (Plan: {{ $json.tier }})\n- Subject: {{ $json.subject }}\n- Message: \"{{ $json.description }}\"\n\nProduce a JSON response strictly following this structure:\n{\n  \"urgencyScore\": <number 1 to 5, where 5 is critical outage or high churn risk>,\n  \"sentiment\": <\"POSITIVE\" | \"NEUTRAL\" | \"FRUSTRATED\" | \"SEVERELY_ANGRY\">,\n  \"category\": <\"BILLING\" | \"BUG_OUTAGE\" | \"FEATURE_REQUEST\" | \"ACCOUNT_ACCESS\">,\n  \"executiveSummary\": <1 concise sentence of the customer problem>,\n  \"suggestedResolutionDraft\": <polite, highly specific 3-paragraph reply resolving the query or giving next diagnostic steps>,\n  \"requiresImmediateEscalation\": <true if urgencyScore >= 4 or plan is ENTERPRISE or sentiment is SEVERELY_ANGRY>\n}",
+        "hasOutputParser": true
+      },
+      "id": "node_ai_triage_agent",
+      "name": "AI Triage & Draft Agent",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [700, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.response.requiresImmediateEscalation }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node_escalation_gate",
+      "name": "Urgent Escalation Gate",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [940, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SLACK_ESCALATION_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"text\": \"🚨 *URGENT SUPPORT ESCALATION: Ticket #\" + $json.ticketId + \"*\\n*Customer:* \" + $json.customerEmail + \" (\" + $json.tier + \")\\n*Subject:* \" + $json.subject + \"\\n*Sentiment:* `\" + $json.response.sentiment + \"` (Urgency: \" + $json.response.urgencyScore + \"/5)\\n*Summary:* \" + $json.response.executiveSummary + \"\\n*Drafted Reply Ready for 1-Click Review in Helpdesk.*\"\n}",
+        "options": {}
+      },
+      "id": "node_slack_escalate",
+      "name": "Post to #urgent-support Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1180, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"triaged\",\n  \"ticketId\": \"{{ $json.ticketId }}\",\n  \"category\": \"{{ $json.response.category }}\",\n  \"urgencyScore\": {{ $json.response.urgencyScore }},\n  \"escalated\": {{ $json.response.requiresImmediateEscalation }},\n  \"draftedReply\": {{ JSON.stringify($json.response.suggestedResolutionDraft) }},\n  \"timestamp\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {}
+      },
+      "id": "node_respond_triage",
+      "name": "Respond Webhook 200 OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1400, 300]
+    }
+  ],
+  "connections": {
+    "Inbound Ticket Webhook": {
+      "main": [[{"node": "Validate Ticket Payload", "type": "main", "index": 0}]]
+    },
+    "Validate Ticket Payload": {
+      "main": [[{"node": "AI Triage & Draft Agent", "type": "main", "index": 0}]]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [[{"node": "AI Triage & Draft Agent", "type": "ai_languageModel", "index": 0}]]
+    },
+    "AI Triage & Draft Agent": {
+      "main": [[{"node": "Urgent Escalation Gate", "type": "main", "index": 0}]]
+    },
+    "Urgent Escalation Gate": {
+      "main": [
+        [{"node": "Post to #urgent-support Slack", "type": "main", "index": 0}],
+        [{"node": "Respond Webhook 200 OK", "type": "main", "index": 0}]
+      ]
+    },
+    "Post to #urgent-support Slack": {
+      "main": [[{"node": "Respond Webhook 200 OK", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

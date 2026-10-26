@@ -1,0 +1,26 @@
+{
+  "productSlug": "ai-content-factory-pipeline",
+  "title": "Autonomous Multi-Agent Content & SEO Publishing Pipeline",
+  "version": "1.0.0",
+  "currentStage": "completed",
+  "stages": {
+    "stage_0_discovery": "completed",
+    "stage_1_research": "completed",
+    "stage_2_architecture": "completed",
+    "stage_3_workflows": "completed",
+    "stage_4_environment": "completed",
+    "stage_5_tutorial_and_pdf": "completed",
+    "stage_6_store_listing": "completed",
+    "stage_7_qa_and_packaging": "completed"
+  },
+  "decisions": [
+    {
+      "date": "2026-10-25",
+      "decision": "Engineered multi-agent stages: Research Agent, Draft Specialist, Anti-AI Fluff Auditor, and CMS Publishing Adapter."
+    },
+    {
+      "date": "2026-10-25",
+      "decision": "Included automated Schema.org Article JSON-LD markup and Slack preview dispatcher with 1-click publishing."
+    }
+  ]
+}

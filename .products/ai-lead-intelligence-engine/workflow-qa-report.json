@@ -1,0 +1,21 @@
+{
+  "auditTimestamp": "2026-10-25T06:11:19.795Z",
+  "productSlug": "ai-lead-intelligence-engine",
+  "workspace": "/Users/deepakbagada/saasnext project/deepak-skills/products/ai-lead-intelligence-engine",
+  "passed": [
+    "Found required path: workflows",
+    "Found required path: docs/tutorial-guide.md",
+    "Found required path: docs/store-listing.md",
+    "Found required path: .env.example",
+    "Workflow JSON syntax valid: workflows/make-lead-intelligence.json",
+    "Zero hardcoded secrets detected: workflows/make-lead-intelligence.json",
+    "Workflow JSON syntax valid: workflows/n8n-lead-intelligence.json",
+    "Zero hardcoded secrets detected: workflows/n8n-lead-intelligence.json",
+    "Tutorial guide comprehensive (5199 characters)",
+    "PDF implementation manual present: pdf/ai-lead-intelligence-engine-implementation-guide.pdf",
+    "Distribution archive packaged cleanly: dist/ai-lead-intelligence-engine-v1.0.0.zip (293.8 KB)"
+  ],
+  "warnings": [],
+  "errors": [],
+  "isReleaseReady": true
+}

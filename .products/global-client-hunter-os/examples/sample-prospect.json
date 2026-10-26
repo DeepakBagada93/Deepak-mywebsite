@@ -1,0 +1,23 @@
+{
+  "target": {
+    "company": "Apex Logistics Cloud Inc.",
+    "website": "https://apexlogistics-demo.io",
+    "location": "Austin, TX, USA",
+    "decisionMaker": {
+      "name": "Marcus Vance",
+      "title": "VP of Engineering & Architecture",
+      "linkedin": "linkedin.com/in/marcus-vance-example"
+    },
+    "observations": [
+      "Careers page lists open 'Staff Frontend Engineer' unfilled for 6 weeks.",
+      "Mobile landing page Core Web Vitals shows 4.8s Largest Contentful Paint (LCP).",
+      "Fleet tracking dashboard re-renders entire map canvas on single vehicle coordinate update."
+    ]
+  },
+  "seller": {
+    "agency": "DevCraft Studio",
+    "lead": "Aarav Sharma",
+    "stack": "Next.js 15, React Server Components, Mapbox GL, Supabase, TailwindCSS",
+    "benchmark": "Cut dashboard rendering latency by 74% for a logistics fleet app managing 2,400 active vehicles."
+  }
+}

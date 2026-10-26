@@ -1,0 +1,102 @@
+{
+  "name": "Global Client Hunter OS",
+  "slug": "global-client-hunter-os",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-24T17:13:17.527Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 725,
+      "sha256": "37b16d0b4fec4002534635776595dc00a093d6ba041b53b121eb938e80fc23c9"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 763,
+      "sha256": "4cc70ee3bcaf394eb7beae3dd3b52635d0a50a87bbcb841e9409371803e17016"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 338,
+      "sha256": "b93e29b69f78be7b8e20358174b72f07de58391e0fec970ee40fe4ce44b2d359"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 3382,
+      "sha256": "6d36394a17bdb032ae1fc4239f3dc858306a6948cb5799413ad926ce1713e14e"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1058,
+      "sha256": "df640e1f2f52adaf6b6a9dfc170c3e447f0f3e0882c38510b9de06d510fef604"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 3992,
+      "sha256": "d5f6e9fb1e5ef082fe4a507574a118acc8c4531cdf5c917b4cb7e2cf3d5a3257"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 3552,
+      "sha256": "33fa3f5ccd56543434244cff80c888e3da48c0f7fc40183d732a96771adc4c49"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1203,
+      "sha256": "ce670aee9493670c5a2572fd173ae1eb68ecdf5e1d2a8abb1bf730a57877ff3f"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 966,
+      "sha256": "6ed4ac32e92dd31ce799928592db1ab93740e2be10c7894231557c08043b5adb"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 2749,
+      "sha256": "02e26fab899b998b6dd56056e74d08af521ae54b671a3672b4d6a77fb8b040ac"
+    },
+    {
+      "path": "examples/cold-outreach-sequence.md",
+      "bytes": 1713,
+      "sha256": "e7f77fd2995ad0049a11f0c22f3b448e8c3aafb7a73d747bd77dee062e107fe1"
+    },
+    {
+      "path": "examples/export-pricing-matrix.json",
+      "bytes": 936,
+      "sha256": "1526f26c218f03de5e8d63740235856c2dea09e31453d1b52a5d6d620c933000"
+    },
+    {
+      "path": "examples/international-proposal.md",
+      "bytes": 2284,
+      "sha256": "2c658250f257f1802bf038002cda2fe13d951f3dcbf91f197a9d336fbf843f97"
+    },
+    {
+      "path": "examples/sample-prospect.json",
+      "bytes": 895,
+      "sha256": "4c3b5ab6c4a48192b831e731e0d8ad5cdc4c793c87849801758c04f0975f0c3e"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1203,
+      "sha256": "7fb000fea2df25dec7c2a486b74ab83cdef2e906a5cccf5f6e224f89328ac33e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2641,
+      "sha256": "c1c7175544bc3552843d89f87ac82c91172d589855513c8db90e466b3ace3772"
+    },
+    {
+      "path": "skills/global-client-hunter-os/SKILL.md",
+      "bytes": 5239,
+      "sha256": "937d8922754e0540e0a0bb68c0cbaaca8424e53e0a5bacc13557e830dcdd54b4"
+    },
+    {
+      "path": "tests/skill-contract.test.mjs",
+      "bytes": 1252,
+      "sha256": "00981d63a672b661ee1140a89ea8fb1344d7aac14e35842a05a232027b5b8c0f"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

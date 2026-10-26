@@ -1,0 +1,52 @@
+{
+  "slug": "agent-skills-master-bundle",
+  "name": "AI Systems Master Bundle",
+  "tagline": "All four production engineering toolkits in one offline archive.",
+  "outcome": "Replace scattered prompts and fragile wrappers with four audited, dependency-free toolkits for AI delivery, context, MCP and n8n.",
+  "outcome_short": "ship AI systems without the duct tape",
+  "pain_short": "the tooling sprawl",
+  "pain_points": [
+    "Prompts, wrappers and agent rules are scattered across repos with no audit trail.",
+    "Each new AI project restarts the same scaffolding, security and delivery work.",
+    "Token spend and retry loops rise faster than the team can measure them."
+  ],
+  "price_inr": 9999,
+  "compare_inr": 19999,
+  "price_note": "One-time · all 4 toolkits · commercial license",
+  "proof_bullets": [
+    "AI Agency Delivery OS — 10 phase-gated artifacts from one intake",
+    "Agent Context Architect — budgeted context compiler with drift CI checks",
+    "MCP Server Launch Kit — zero-dependency scaffold with 13 static audit rules",
+    "n8n Production Hardening Pack — deterministic workflow audit and safe transforms",
+    "AI Project Kickoff Skills Kit included as a bonus"
+  ],
+  "features": [
+    { "label": "Toolkits", "value": "4 commercial toolkits" },
+    { "label": "License", "value": "Unlimited client projects" },
+    { "label": "Format", "value": "ZIP · source + tests + docs" },
+    { "label": "Updates", "value": "12 months free" }
+  ],
+  "bonus": "AI Project Kickoff Skills Kit — planning and scoping framework for the first week of an engagement.",
+  "guarantee": "If the first toolkit does not save you an hour in the first week, reply and I will refund the purchase.",
+  "cta_url": "https://deepakbagada.in/products/agent-skills-master-bundle",
+  "cta_label": "Get the Master Bundle — {{PRICE}}",
+  "ps": "Reply with the AI system you are trying to ship and I will tell you which toolkit to open first.",
+  "preheader": "Four production toolkits for one price. Agency delivery, context, MCP and n8n, all audited offline.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, four AI toolkits for one ₹9,999",
+    "{{COMPANY_SHORT}}: stop stitching AI tools together",
+    "{{CITY}} teams: ship agents with audit gates",
+    "A ₹9,999 AI systems bundle for {{COMPANY_SHORT}}",
+    "{{FIRST_NAME}}, the toolkit stack behind production agents"
+  ],
+  "audience_cities": [
+    "Bengaluru",
+    "Mumbai",
+    "Delhi NCR",
+    "Pune",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Ahmedabad"
+  ]
+}
