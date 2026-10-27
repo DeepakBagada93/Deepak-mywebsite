@@ -69,6 +69,73 @@ class RazorpayService
     }
 
     /**
+     * Create a Razorpay Hosted Payment Link for a dedicated, seamless checkout page.
+     *
+     * @param  array{name?:string,email?:string,phone?:?string}  $customer
+     * @return array{id:string,short_url:string,amount:int,currency:string,status:string}|null
+     */
+    public function createPaymentLink(
+        string $reference,
+        int|float $amount,
+        string $currency = 'USD',
+        string $description = 'Digital Product Purchase',
+        array $customer = []
+    ): ?array {
+        if (! $this->isConfigured()) {
+            return null;
+        }
+
+        $currency = strtoupper(trim($currency ?: 'USD'));
+        $amountInSubunits = (int) round($amount * 100);
+
+        $contact = trim((string) ($customer['phone'] ?? ''));
+        if ($contact && strlen($contact) === 10 && ! str_starts_with($contact, '+')) {
+            $contact = '+91'.$contact;
+        }
+
+        $payload = [
+            'amount' => $amountInSubunits,
+            'currency' => $currency,
+            'accept_partial' => false,
+            'reference_id' => substr($reference, 0, 40),
+            'description' => substr($description, 0, 200),
+            'customer' => array_filter([
+                'name' => substr((string) ($customer['name'] ?? ''), 0, 100),
+                'email' => substr((string) ($customer['email'] ?? ''), 0, 100),
+                'contact' => $contact ?: null,
+            ]),
+            'notify' => [
+                'sms' => false,
+                'email' => false,
+            ],
+            'reminder_enable' => false,
+            'callback_url' => url('/products/return'),
+            'callback_method' => 'get',
+            'notes' => [
+                'cart_reference' => $reference,
+                'customer_name' => substr((string) ($customer['name'] ?? ''), 0, 100),
+                'customer_email' => substr((string) ($customer['email'] ?? ''), 0, 100),
+            ],
+        ];
+
+        $response = $this->client()->post('/payment_links', $payload);
+
+        if ($response->failed()) {
+            report(new \RuntimeException('Razorpay payment link creation failed: '.$response->body()));
+
+            return null;
+        }
+
+        return [
+            'id' => (string) $response->json('id'),
+            'short_url' => (string) $response->json('short_url'),
+            'amount' => (int) $response->json('amount'),
+            'currency' => (string) $response->json('currency'),
+            'status' => (string) $response->json('status'),
+        ];
+    }
+
+    /**
      * Fetch the authoritative order status from Razorpay.
      */
     public function fetchOrder(string $orderId): ?array

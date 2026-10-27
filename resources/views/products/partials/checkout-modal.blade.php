@@ -228,6 +228,11 @@
                 if (window.DBCart) window.DBCart.clear();
                 showSuccess(res.data);
             } else if (res.data.status === 'checkout') {
+                if (res.data.payment_url) {
+                    if (window.DBCart) window.DBCart.clear();
+                    window.location.href = res.data.payment_url;
+                    return;
+                }
                 openRazorpayModal(res.data);
             }
         })

@@ -97,31 +97,53 @@ class OrderController extends Controller
             ], 503);
         }
 
-        $order = $this->razorpay->createOrder($cartReference, $total, $currency, [
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'phone' => $data['phone'] ?? null,
-        ]);
+        $description = $products->pluck('title')->implode(', ');
+        $paymentLink = $this->razorpay->createPaymentLink(
+            $cartReference,
+            $total,
+            $currency,
+            $description,
+            [
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'phone' => $data['phone'] ?? null,
+            ]
+        );
 
-        if (! $order) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Could not start checkout. Please try again or email '.config('site.email').'.',
-            ], 502);
+        $orderId = $paymentLink['id'] ?? null;
+        $paymentUrl = $paymentLink['short_url'] ?? null;
+
+        // Fallback to standard order if payment link creation is not supported
+        if (! $orderId) {
+            $order = $this->razorpay->createOrder($cartReference, $total, $currency, [
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'phone' => $data['phone'] ?? null,
+            ]);
+
+            if (! $order) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Could not start checkout. Please try again or email '.config('site.email').'.',
+                ], 502);
+            }
+
+            $orderId = $order['id'];
         }
 
         ProductOrder::where('cart_reference', $cartReference)
             ->update([
-                'razorpay_order_id' => $order['id'],
-                'cf_order_id' => $order['id'],
+                'razorpay_order_id' => $orderId,
+                'cf_order_id' => $orderId,
             ]);
 
         return response()->json([
             'status' => 'checkout',
-            'razorpay_order_id' => $order['id'],
+            'payment_url' => $paymentUrl,
+            'razorpay_order_id' => $orderId,
             'razorpay_key' => $this->razorpay->getKeyId(),
-            'amount' => $order['amount'],
-            'currency' => $order['currency'],
+            'amount' => (int) round($total * 100),
+            'currency' => $currency,
             'order_reference' => $cartReference,
             'customer' => [
                 'name' => $data['name'],
@@ -187,12 +209,18 @@ class OrderController extends Controller
      */
     public function returnFromPayment(Request $request)
     {
-        $reference = (string) ($request->query('order_id') ?: $request->query('razorpay_order_id'));
+        $reference = (string) (
+            $request->query('order_id')
+            ?: $request->query('razorpay_payment_link_reference_id')
+            ?: $request->query('razorpay_order_id')
+        );
         $orders = ProductOrder::group($reference);
 
         if ($orders->isEmpty()) {
+            $plinkId = (string) $request->query('razorpay_payment_link_id');
             $orders = ProductOrder::where('razorpay_order_id', $reference)
                 ->orWhere('cf_order_id', $reference)
+                ->when($plinkId, fn ($q) => $q->orWhere('razorpay_order_id', $plinkId))
                 ->get();
         }
 
@@ -207,25 +235,43 @@ class OrderController extends Controller
             $rzpPaymentId = (string) $request->query('razorpay_payment_id');
             $rzpOrderId = (string) $request->query('razorpay_order_id');
             $rzpSignature = (string) $request->query('razorpay_signature');
+            $rzpPlinkStatus = (string) $request->query('razorpay_payment_link_status');
+            $rzpPlinkId = (string) $request->query('razorpay_payment_link_id');
 
-            // 1. If payment verification params are present, verify signature
-            if ($rzpPaymentId && $rzpOrderId && $rzpSignature) {
+            // 1. If returning from Payment Link with captured payment
+            if ($rzpPaymentId && ($rzpPlinkStatus === 'paid' || $rzpPlinkId)) {
+                $payment = $this->razorpay->fetchPayment($rzpPaymentId);
+                if ($payment && in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
+                    $this->fulfiller->fulfillGroup($cartReference, $rzpPlinkId ?: $rzpOrderId, $rzpPaymentId, $rzpSignature);
+                    $orders = ProductOrder::group($cartReference);
+                }
+            }
+            // 2. Standard modal signature verification
+            elseif ($rzpPaymentId && $rzpOrderId && $rzpSignature) {
                 if ($this->razorpay->verifyPaymentSignature($rzpOrderId, $rzpPaymentId, $rzpSignature)) {
                     $this->fulfiller->fulfillGroup($cartReference, $rzpOrderId, $rzpPaymentId, $rzpSignature);
                     $orders = ProductOrder::group($cartReference);
                 }
             } else {
-                // 2. Otherwise fetch order status from Razorpay API
+                // 3. Fallback: check status via API
                 $lookupOrderId = $first->razorpay_order_id ?: $first->cf_order_id;
                 if ($lookupOrderId) {
-                    $rzpOrder = $this->razorpay->fetchOrder($lookupOrderId);
-                    if ($rzpOrder && ($rzpOrder['status'] ?? null) === 'paid') {
-                        $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId);
-                        $orders = ProductOrder::group($cartReference);
-                    } elseif ($rzpOrder && ($rzpOrder['status'] ?? null) === 'attempted' && (int) ($rzpOrder['attempts'] ?? 0) > 3) {
-                        ProductOrder::where('cart_reference', $cartReference)
-                            ->update(['payment_status' => ProductOrder::STATUS_FAILED]);
-                        $orders = ProductOrder::group($cartReference);
+                    if (str_starts_with($lookupOrderId, 'plink_') && $rzpPaymentId) {
+                        $payment = $this->razorpay->fetchPayment($rzpPaymentId);
+                        if ($payment && in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
+                            $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId, $rzpPaymentId);
+                            $orders = ProductOrder::group($cartReference);
+                        }
+                    } else {
+                        $rzpOrder = $this->razorpay->fetchOrder($lookupOrderId);
+                        if ($rzpOrder && ($rzpOrder['status'] ?? null) === 'paid') {
+                            $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId);
+                            $orders = ProductOrder::group($cartReference);
+                        } elseif ($rzpOrder && ($rzpOrder['status'] ?? null) === 'attempted' && (int) ($rzpOrder['attempts'] ?? 0) > 3) {
+                            ProductOrder::where('cart_reference', $cartReference)
+                                ->update(['payment_status' => ProductOrder::STATUS_FAILED]);
+                            $orders = ProductOrder::group($cartReference);
+                        }
                     }
                 }
             }

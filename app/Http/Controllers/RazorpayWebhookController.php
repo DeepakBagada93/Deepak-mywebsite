@@ -28,10 +28,11 @@ class RazorpayWebhookController extends Controller
 
         $orderEntity = $payload['payload']['order']['entity'] ?? [];
         $paymentEntity = $payload['payload']['payment']['entity'] ?? [];
+        $paymentLinkEntity = $payload['payload']['payment_link']['entity'] ?? [];
 
-        $orderId = $orderEntity['id'] ?? ($paymentEntity['order_id'] ?? null);
+        $orderId = $orderEntity['id'] ?? ($paymentEntity['order_id'] ?? ($paymentLinkEntity['id'] ?? null));
         $paymentId = $paymentEntity['id'] ?? null;
-        $receipt = $orderEntity['receipt'] ?? ($orderEntity['notes']['cart_reference'] ?? ($paymentEntity['notes']['cart_reference'] ?? null));
+        $receipt = $orderEntity['receipt'] ?? ($orderEntity['notes']['cart_reference'] ?? ($paymentEntity['notes']['cart_reference'] ?? ($paymentLinkEntity['reference_id'] ?? null)));
 
         // Find orders by cart_reference or razorpay_order_id
         $orders = null;
@@ -50,7 +51,7 @@ class RazorpayWebhookController extends Controller
 
         $cartReference = $orders->first()->cart_reference;
 
-        if (in_array($event, ['order.paid', 'payment.captured'], true)) {
+        if (in_array($event, ['order.paid', 'payment.captured', 'payment_link.paid'], true)) {
             $this->fulfiller->fulfillGroup($cartReference, $orderId, $paymentId);
         } elseif ($event === 'payment.failed') {
             ProductOrder::where('cart_reference', $cartReference)
