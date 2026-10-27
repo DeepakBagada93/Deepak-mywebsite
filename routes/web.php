@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\BlueprintController;
-use App\Http\Controllers\CashfreeWebhookController;
 use App\Http\Controllers\CuratedRepoController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\LegalController;
@@ -10,6 +9,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RazorpayWebhookController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SkillController;
@@ -60,14 +60,17 @@ Route::prefix('products')->group(function () {
     Route::post('/checkout', [OrderController::class, 'initiate'])
         ->middleware('throttle:20,1')
         ->name('products.checkout');
+    Route::post('/verify', [OrderController::class, 'verifyPayment'])
+        ->middleware('throttle:30,1')
+        ->name('products.verify');
     Route::get('/{slug}/checkout', [OrderController::class, 'showCheckout'])->name('products.checkout.single');
     Route::get('/{slug}', [ProductController::class, 'show'])->name('products.show');
 });
 
 Route::get('/download/{token}', [DownloadController::class, 'show'])->name('products.download');
 
-Route::post('/webhooks/cashfree', [CashfreeWebhookController::class, 'handle'])
-    ->name('webhooks.cashfree');
+Route::post('/webhooks/razorpay', [RazorpayWebhookController::class, 'handle'])
+    ->name('webhooks.razorpay');
 
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])
     ->middleware('throttle:15,1')

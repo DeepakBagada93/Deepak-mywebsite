@@ -37,7 +37,8 @@
                                 <tr>
                                     <td style="padding:14px 16px;font-size:13px;">
                                         <strong>Order</strong> {{ $first->cart_reference }}<br>
-                                        @if ($first->cf_order_id)<strong>Cashfree</strong> {{ $first->cf_order_id }}<br>@endif
+                                        @if ($first->razorpay_payment_id)<strong>Payment ID</strong> {{ $first->razorpay_payment_id }}<br>@endif
+                                        @if ($first->razorpay_order_id)<strong>Razorpay Order</strong> {{ $first->razorpay_order_id }}<br>@elseif ($first->cf_order_id)<strong>Gateway ID</strong> {{ $first->cf_order_id }}<br>@endif
                                         <strong>Paid at</strong> {{ optional($first->paid_at)->format('d M Y, H:i') ?? now()->format('d M Y, H:i') }}
                                     </td>
                                 </tr>

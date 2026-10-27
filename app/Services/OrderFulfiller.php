@@ -15,7 +15,7 @@ class OrderFulfiller
      * Mark every line in a checkout paid (idempotently) and email the buyer
      * their download links plus alert the store admin.
      */
-    public function fulfillGroup(string $cartReference, ?string $cfOrderId = null): void
+    public function fulfillGroup(string $cartReference, ?string $orderId = null, ?string $paymentId = null, ?string $signature = null): void
     {
         $orders = ProductOrder::group($cartReference);
 
@@ -30,7 +30,7 @@ class OrderFulfiller
         }
 
         foreach ($pending as $order) {
-            $order->markPaid($cfOrderId);
+            $order->markPaid($orderId, $paymentId, $signature);
         }
 
         $allOrders = ProductOrder::group($cartReference);

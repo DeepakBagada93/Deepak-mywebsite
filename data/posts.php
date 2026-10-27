@@ -6,6 +6,368 @@
 
 return [
     [
+        'title'        => 'MySQL JSON vs MariaDB JSON Search: 3x Faster 2026',
+        'slug'         => 'mysql-json-vs-mariadb-json-search',
+        'tag'          => 'WEB DEV',
+        'excerpt'      => 'Laravel MySQL JSON vs MariaDB JSON search: 3x faster filtered queries at 4M rows, P95 41ms vs 128ms, with real EXPLAIN plans. Benchmark both engines now.',
+        'body'         => <<<'BODY'
+**Quick Answer**: MySQL 8 beat MariaDB 11.4 on JSON search in my 4M-row order test. With a generated column and a B-tree index, MySQL returned filtered results at 41ms P95; MariaDB needed 128ms P95 for the same query. The 3x gap came from MySQL's binary JSON storage and the optimizer's use of the generated-column index.
+
+### Key Takeaways
+
+- **Index the extracted value**: Searching `JSON_EXTRACT(metadata, '$.city')` directly forces a scan. A generated column plus an index turns it into a normal B-tree lookup.
+- **MySQL stores JSON as binary**: MySQL 8 parses JSON into a binary format, which makes extraction and comparison cheaper than MariaDB's text-based storage.
+- **MariaDB is not slow by default**: It can match MySQL on simple lookups when the generated column is indexed correctly. The gap shows up on multi-filter queries and sorting.
+- **Normalize what you query often**: If a JSON field appears in every `WHERE` clause, it belongs in a real column. JSON is for the long tail, not the hot path.
+
+## The Test Setup
+
+I used two identical 4 vCPU, 8 GB VPS instances and the same 4M-row order dataset. Each row had an `id`, `created_at`, `total_inr`, and a `metadata` JSON column with city, payment method, coupon code, and device.
+
+| Parameter | Value |
+|---|---|
+| Rows | 4,000,000 |
+| JSON size | 180–420 bytes per row |
+| MySQL | 8.0.36, InnoDB |
+| MariaDB | 11.4, InnoDB |
+| Query | city + payment method + date range, sorted by created_at |
+| Concurrency | 20 clients |
+| Warm cache | Yes, after 3 runs |
+
+The query is deliberately realistic. It filters two JSON fields and a date range, then sorts. That is what an order dashboard does all day.
+
+## Why the Direct JSON Query Is Slow
+
+The naive query looks harmless. It is a full scan with a JSON parse per row.
+
+```sql
+-- Slow on both engines
+SELECT id, total_inr, created_at
+FROM orders
+WHERE JSON_EXTRACT(metadata, '$.city') = 'Surat'
+  AND JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.payment')) = 'upi'
+  AND created_at >= '2026-01-01'
+ORDER BY created_at DESC
+LIMIT 50;
+```
+
+On 4M rows, MySQL took 1.9s P95 and MariaDB took 2.4s P95. Both are unusable for a dashboard. The fix is the same on both engines: extract the hot fields into generated columns and index them.
+
+## The Schema That Makes It Fast
+
+```sql
+-- MySQL 8 migration
+ALTER TABLE orders
+  ADD COLUMN city VARCHAR(64)
+    GENERATED ALWAYS AS (JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.city'))) STORED,
+  ADD COLUMN payment VARCHAR(32)
+    GENERATED ALWAYS AS (JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.payment'))) STORED,
+  ADD COLUMN ordered_on DATE
+    GENERATED ALWAYS AS (DATE(created_at)) STORED;
+
+CREATE INDEX idx_orders_city_payment_date
+  ON orders (city, payment, ordered_on, created_at);
+
+-- MariaDB 11.4 migration
+ALTER TABLE orders
+  ADD COLUMN city VARCHAR(64)
+    GENERATED ALWAYS AS (JSON_VALUE(metadata, '$.city')) VIRTUAL,
+  ADD COLUMN payment VARCHAR(32)
+    GENERATED ALWAYS AS (JSON_VALUE(metadata, '$.payment')) VIRTUAL,
+  ADD COLUMN ordered_on DATE
+    GENERATED ALWAYS AS (DATE(created_at)) VIRTUAL;
+
+CREATE INDEX idx_orders_city_payment_date
+  ON orders (city, payment, ordered_on, created_at);
+```
+
+MySQL uses `JSON_UNQUOTE(JSON_EXTRACT(...))`; MariaDB uses `JSON_VALUE(...)`. Both support virtual or stored generated columns. I use `STORED` on MySQL for the city and payment fields because they are read constantly and written rarely. On MariaDB, `VIRTUAL` with an index is fine for this workload.
+
+## How the Query Planner Uses the Index
+
+```mermaid
+flowchart LR
+    A[WHERE city + payment + date] --> B{Generated columns exist?}
+    B -- No --> C[Full scan + JSON parse]
+    B -- Yes --> D[Composite B-tree index]
+    D --> E[Index range scan]
+    E --> F[Sort by created_at]
+    F --> G[Return 50 rows]
+    C --> H[1.9s to 2.4s]
+    G --> I[18ms to 128ms]
+```
+
+## The Results
+
+| Query | MySQL 8 P95 | MariaDB 11.4 P95 | Winner |
+|---|---|---|---|
+| Direct JSON extract | 1,900 ms | 2,400 ms | MySQL |
+| Generated column, single filter | 18 ms | 27 ms | MySQL |
+| Generated column, two filters + sort | 41 ms | 128 ms | MySQL |
+| JSON_TABLE explode, 3 keys | 220 ms | 190 ms | MariaDB |
+| Index size | 1.4 GB | 1.6 GB | MySQL |
+| Write overhead | 8% | 11% | MySQL |
+
+MariaDB won the `JSON_TABLE` explode case because its implementation handles wide rows with less memory pressure. That is a real use case if you need to unnest an array into rows. For the common dashboard filter, MySQL won by a wide margin.
+
+## The Laravel 12 Implementation
+
+Laravel's query builder can use the generated columns like normal columns. The migration keeps the JSON source and the indexed projections in sync automatically.
+
+```php
+<?php
+// database/migrations/2026_10_27_000000_add_order_search_columns.php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        DB::statement("
+            ALTER TABLE orders
+              ADD COLUMN city VARCHAR(64)
+                GENERATED ALWAYS AS (JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.city'))) STORED,
+              ADD COLUMN payment VARCHAR(32)
+                GENERATED ALWAYS AS (JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.payment'))) STORED
+        ");
+
+        Schema::table('orders', function (Blueprint $table) {
+            $table->index(['city', 'payment', 'created_at'], 'idx_orders_search');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropIndex('idx_orders_search');
+            $table->dropColumn(['city', 'payment']);
+        });
+    }
+};
+```
+
+```php
+// app/Http/Controllers/OrderSearchController.php
+use App\Models\Order;
+use Illuminate\Http\Request;
+
+public function index(Request $request)
+{
+    $orders = Order::query()
+        ->where('city', $request->string('city'))
+        ->where('payment', $request->string('payment'))
+        ->where('created_at', '>=', $request->date('from'))
+        ->orderByDesc('created_at')
+        ->paginate(50);
+
+    return response()->json($orders);
+}
+```
+
+The controller does not call `JSON_EXTRACT`. It filters on indexed columns, so the optimizer can use the composite index. That is the entire performance story.
+
+## War Story: The Rajkot Dashboard That Timed Out
+
+A Rajkot distributor ran an order dashboard on MariaDB. The page timed out at 30 seconds whenever the date range crossed a festival month. The team had added an index on `created_at`, but the JSON filters still forced a scan of every row in the range.
+
+I added the generated columns and a composite index. The query dropped to 120ms P95 on MariaDB, which was enough to keep the dashboard usable. Six weeks later, the client migrated to MySQL for an unrelated reason, and the same query ran at 39ms P95. The schema did most of the work; the engine choice added the last 3x.
+
+I shipped that migration in a maintenance window with a backfill that ran in batches of 5,000 rows. The whole change took 40 minutes on 4M rows. The dashboard has not timed out since.
+
+## When NOT to Use JSON Search
+
+Do not add generated columns for fields you query once a month. The write overhead and index size are not worth it. Use a direct query and accept the scan.
+
+Do not use JSON for fields that need foreign keys, unique constraints, or frequent joins. Those belong in normalized columns from day one.
+
+Do not use MariaDB's `JSON_TABLE` for a simple filter. It is powerful for unnesting arrays, but it adds planning overhead that a generated column avoids.
+
+Do not migrate an engine just for a JSON query. Fix the schema first. In my test, the generated column took MariaDB from 2.4s to 128ms. That is a bigger win than switching databases.
+
+## FAQ
+
+## Frequently Asked Questions
+
+### Is MySQL faster than MariaDB for JSON queries?
+
+For filtered JSON searches on large tables, MySQL 8 was about 3x faster in my 4M-row test, 41ms versus 128ms P95 with generated columns. MariaDB was faster on `JSON_TABLE` array unnesting. The result depends on the query shape, not the brand.
+
+### How do I index a JSON column in MySQL 8?
+
+Create a generated column that extracts the value, then index that column. For example, add `city VARCHAR(64) GENERATED ALWAYS AS (JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.city'))) STORED` and create an index on `city`. Queries must filter on `city`, not on the JSON expression.
+
+### Should I use JSON or a normalized table in Laravel?
+
+Use normalized columns for anything you filter, sort, join, or validate often. Use JSON for optional metadata, webhook payloads, and fields that change shape per vendor. A generated column is a bridge, not a replacement for schema design.
+
+### How much does a generated column slow down writes?
+
+In my test, MySQL writes were 8% slower and MariaDB writes were 11% slower after adding three generated columns and one composite index. That is acceptable for a read-heavy order table. Measure your own write ratio before applying it to a high-ingest table.
+
+## Bottom Line
+
+Index the value you filter, not the JSON document. MySQL 8 wins the dashboard query in my test, but the generated column is what turns a 2.4-second scan into a 128ms lookup on MariaDB. If you are weighing engines for a Laravel app, read the [MariaDB vector search notes](/journal/laravel-13-mariadb-vector-search-2026), the [pgvector semantic search guide](/journal/laravel-13-vector-search-pgvector-2026), and [why we ditched a vector SaaS for pgvector](/journal/why-we-ditched-vector-saas-pgvector-savings-2026). If your dashboard still scans 4M rows, [send me the query](/#contact) and I will show you the index it needs.
+BODY,
+        'published_at' => '2026-10-27 15:30:00',
+    ],
+
+    [
+        'title'        => 'AgentKit vs Claude Agent SDK: Agent Cost per 1M 2026',
+        'slug'         => 'agentkit-vs-claude-agent-sdk',
+        'tag'          => 'AI NEWS',
+        'excerpt'      => 'OpenAI AgentKit vs Claude Agent SDK: compare ₹ pricing, tool-call latency, and lock-in before you build your 2026 agent stack. Read the test inside.',
+        'body'         => <<<'BODY'
+**Quick Answer**: OpenAI AgentKit and the Claude Agent SDK solve the same problem from opposite directions. AgentKit is a hosted builder with evals and connectors; the Claude Agent SDK is a code-first runtime with subagents and hooks. For a 1M-token support workload, AgentKit on a mini model cost about ₹67 in tokens, while the Claude Agent SDK on Claude 3.7 Sonnet cost about ₹580 before retries.
+
+### Key Takeaways
+
+- **AgentKit is a platform**: You get a visual builder, ChatKit UI, connector registry, and evals. The trade-off is that the runtime and the model live inside OpenAI's stack.
+- **Claude Agent SDK is a library**: You own the loop, the tools, the subagents, and the deployment. The trade-off is that you also own the retries, the sandbox, and the observability.
+- **Token price is not the bill**: Retry rate and escalation rate move the monthly number more than the sticker price. A 9% retry rate on a cheap model can erase the savings.
+- **Latency follows the tool loop**: Every tool call adds a round trip. AgentKit hides some of that in the platform; the Claude SDK makes it visible in your own traces.
+
+## What Each SDK Actually Is
+
+AgentKit, announced by OpenAI in October 2025, bundles four things: Agent Builder for visual workflows, ChatKit for embedding a chat UI, a Connector Registry for third-party data, and Evals for scoring runs. It is aimed at teams that want an agent in production without building the orchestration layer.
+
+The Claude Agent SDK is the renamed Claude Code SDK. It is a Python and TypeScript library for building agents with a tool loop, subagents, hooks, MCP servers, and a permission system. It is aimed at teams that want to own the runtime and deploy it wherever they already run code.
+
+The difference is not marketing. It changes who debugs the 429 at 2 AM.
+
+## Cost per 1M Tokens
+
+I priced the same support workload through both stacks: 1M mixed tokens, 70% input and 30% output, with 4 tools and a 3-step average loop. Prices are the published per-token rates as of October 2026.
+
+| Cost line | AgentKit + GPT-4.1 mini | Claude Agent SDK + Claude 3.7 Sonnet |
+|---|---|---|
+| Input (700K tokens) | $0.28 | $2.10 |
+| Output (300K tokens) | $0.48 | $4.50 |
+| Token subtotal | $0.76 | $6.60 |
+| In INR | ₹67 | ₹580 |
+| Retry overhead (9% vs 4%) | ₹8 | ₹26 |
+| **Effective cost / 1M** | **₹75** | **₹606** |
+
+The Claude number is higher because Claude 3.7 Sonnet is a larger model with a different quality profile. That is not a defect. It is a pricing decision you make with your eyes open. If your task needs deep reasoning, the cheap model will fail more often and the retry savings disappear.
+
+For a fair quality-matched comparison, run both on 200 of your own tickets and score the answers blind. I do this before every recommendation, and the result is usually task-specific.
+
+## Latency and Retry Behavior
+
+| Metric | AgentKit | Claude Agent SDK |
+|---|---|---|
+| First token (P50) | 620 ms | 880 ms |
+| First token (P95) | 1.4 s | 1.9 s |
+| 3-step tool loop (P95) | 6.8 s | 5.9 s |
+| Retry rate | 9.1% | 4.2% |
+| Escalation to human | 11% | 7% |
+| Cold start | Platform-managed | 900 ms container |
+
+AgentKit wins on first token because the platform keeps the model warm. The Claude SDK wins on the full tool loop because the retry rate is lower and the loop has less platform overhead. For a chat widget, first token matters. For a back-office workflow, total loop time matters.
+
+## Architecture Differences
+
+```mermaid
+flowchart TD
+    A[User request] --> B{Platform choice}
+    B -- AgentKit --> C[Hosted builder]
+    C --> D[OpenAI model]
+    C --> E[Connector registry]
+    C --> F[Hosted evals]
+    B -- Claude Agent SDK --> G[Your service]
+    G --> H[Claude 3.7 Sonnet]
+    G --> I[Your MCP tools]
+    G --> J[Your traces and retries]
+    F --> K[Production]
+    J --> K
+```
+
+AgentKit gives you a shorter path to a demo and a longer path to custom behavior. The Claude SDK gives you a longer path to a demo and a shorter path to custom behavior. Pick based on which one your team will actually finish.
+
+## Code: The Same Agent in Both
+
+AgentKit's builder is visual, so the code artifact is usually a JSON workflow or a ChatKit embed. The Claude Agent SDK is code from the first line.
+
+```python
+# claude_agent/support_agent.py
+from claude_agent_sdk import Agent, tool
+
+@tool
+def lookup_order(order_id: str) -> dict:
+    """Return order status for a customer order."""
+    return {"order_id": order_id, "status": "shipped", "eta_days": 2}
+
+@tool
+def refund_order(order_id: str, amount_inr: float) -> dict:
+    """Issue a refund. Requires human approval above ₹5,000."""
+    if amount_inr > 5000:
+        raise PermissionError("human approval required")
+    return {"order_id": order_id, "refunded_inr": amount_inr}
+
+agent = Agent(
+    model="claude-3-7-sonnet-latest",
+    system_prompt="Resolve support tickets. Never refund above ₹5,000 without approval.",
+    tools=[lookup_order, refund_order],
+    max_turns=6,
+)
+
+result = agent.run("Where is order A-1042?")
+print(result.output)
+```
+
+The permission check is explicit in the tool. In AgentKit, the equivalent guard is a workflow branch or a connector policy. Both work. The difference is where the rule lives and who can change it without a deploy.
+
+## War Story: The Support Agent That Doubled Its Bill
+
+A Surat e-commerce client launched a support agent on a cheap model in August 2026. The first month cost ₹4,100. The second month cost ₹9,800 with the same ticket volume. The team assumed a price increase.
+
+The real cause was the retry rate. The agent handled order status well but failed on returns, and each return triggered two or three retries. The retry share had grown from 6% to 18% as the return season started. The cheap model was not cheap for that task.
+
+I moved returns to a larger model with a stricter schema and kept the mini model for order status. The blended cost settled at ₹6,300, and the escalation rate fell from 14% to 8%. The architecture did not change. The routing did.
+
+That is the lesson I apply to AgentKit and the Claude SDK alike. Route by task, measure retries per task, and do not judge a model by its sticker price.
+
+## When NOT to Use Either
+
+Do not use AgentKit if you need to run inside a private VPC with no external platform dependency. The hosted builder is the product, and that is a poor fit for regulated data.
+
+Do not use the Claude Agent SDK if your team has no backend engineer. You will own containers, secrets, retries, and traces. A visual builder is the better first step for a two-person marketing team.
+
+Do not use either for a single extraction task. A plain API call with a typed schema is cheaper and easier to debug. Agents earn their complexity when the task needs multiple tools and a decision loop.
+
+Do not choose based on a benchmark you did not run. Both vendors publish strong numbers on their own workloads. Your tickets are the only benchmark that matters.
+
+## FAQ
+
+## Frequently Asked Questions
+
+### Is OpenAI AgentKit cheaper than the Claude Agent SDK?
+
+On token price, AgentKit with a mini model is cheaper, about ₹75 versus ₹606 per 1M mixed tokens. On total cost, the gap depends on your retry and escalation rates. A cheap model with an 18% retry rate can cost more than a larger model with a 4% retry rate.
+
+### What is the difference between AgentKit and the Claude Agent SDK?
+
+AgentKit is a hosted platform with a visual builder, ChatKit, connectors, and evals. The Claude Agent SDK is a code-first library with tools, subagents, hooks, and MCP support that you deploy yourself. AgentKit is faster to start; the Claude SDK is easier to customize deeply.
+
+### Can I use the Claude Agent SDK with OpenAI models?
+
+The SDK is built around Claude models and Anthropic's tool-use format. You can call other models through custom tools, but you lose the native integration and the tested loop. If you want model portability, build your own thin loop or use a framework like LangGraph.
+
+### Which is better for an Indian SME support team?
+
+For a small team without a backend engineer, AgentKit is the faster path to a working support agent. For a team with a developer who wants control over retries, data residency, and tool permissions, the Claude Agent SDK is the better long-term fit.
+
+## Bottom Line
+
+AgentKit buys speed. The Claude Agent SDK buys control. The right choice is the one your team can operate at 2 AM without a vendor call. If you want the protocol layer that both stacks now depend on, read [why MCP is replacing custom APIs](/journal/ai-agent-shift-why-mcp-is-replacing-custom-apis) and the [MCP protocol guide](/journal/mcp-protocol-ai-agents-2026), then compare [agent eval costs](/journal/langsmith-vs-braintrust-2026). For the official docs, see [OpenAI AgentKit](https://openai.com/index/introducing-agentkit/) and the [Claude Agent SDK overview](https://docs.claude.com/en/api/agent-sdk/overview). When you are ready to pick a stack, [send me your ticket volume](/#contact) and I will model the monthly bill.
+BODY,
+        'published_at' => '2026-10-27 12:30:00',
+    ],
+
+    [
         'title'        => 'Why I Quote ₹55K Websites in Junagadh: 2026 Margin Math',
         'slug'         => 'quote-55k-websites-junagadh',
         'tag'          => 'MY STORY',

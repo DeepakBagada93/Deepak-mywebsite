@@ -32,7 +32,7 @@
                 <span class="store-modal__submit-label">Pay & get download →</span>
                 <span class="store-modal__spinner" aria-hidden="true"></span>
             </button>
-            <p class="store-modal__note mono">🔒 Secured by Cashfree · No account needed · Download link emailed to you instantly</p>
+            <p class="store-modal__note mono">🔒 Secured by Razorpay · No account needed · Download link emailed to you instantly</p>
         </form>
 
         <div class="store-modal__success" id="store-success" style="display:none">
@@ -63,7 +63,6 @@
     var submitLabel = submit.querySelector('.store-modal__submit-label');
     var activeItems = [];
     var META = @json(\App\Support\Money::currencies());
-    var cashfreeMode = '{{ config('services.cashfree.env') }}';
 
     function currency() {
         return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'INR';
@@ -220,52 +219,95 @@
                 if (window.DBCart) window.DBCart.clear();
                 showSuccess(res.data);
             } else if (res.data.status === 'checkout') {
-                ensureCashfree(function (cashfree) {
-                    if (!cashfree) {
-                        showError('Could not initialize secure Cashfree payment window. Please check your network and refresh.');
-                        return;
-                    }
-                    cashfree.checkout({
-                        paymentSessionId: res.data.payment_session_id,
-                        redirectTarget: '_modal',
-                    }).then(function (result) {
-                        if (result.error) {
-                            showError(result.error.message || 'Payment window closed. You can retry whenever you are ready.');
-                        } else if (result.paymentDetails) {
-                            window.location.href = '{{ route('products.return') }}?order_id=' + encodeURIComponent(res.data.order_reference);
-                        }
-                    }).catch(function (err) {
-                        console.error('Cashfree error:', err);
-                        showError('Could not open payment window. Please refresh and try again.');
-                    });
-                });
+                openRazorpayModal(res.data);
             }
         })
         .catch(function () { showError('Network error. Please try again.'); });
     });
 
-    function ensureCashfree(cb) {
-        if (window.Cashfree) {
-            try {
-                var instance = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
-                cb(instance);
+    function openRazorpayModal(orderData) {
+        ensureRazorpay(function (Razorpay) {
+            if (!Razorpay) {
+                showError('Could not initialize secure Razorpay payment window. Please check your network and refresh.');
                 return;
-            } catch (e) {
-                console.error('Cashfree init error:', e);
             }
+
+            var options = {
+                key: orderData.razorpay_key,
+                amount: orderData.amount,
+                currency: orderData.currency,
+                name: 'Deepak Bagada',
+                description: 'Order ' + orderData.order_reference,
+                order_id: orderData.razorpay_order_id,
+                prefill: {
+                    name: orderData.customer.name,
+                    email: orderData.customer.email,
+                    contact: orderData.customer.phone || ''
+                },
+                theme: {
+                    color: '#0a0a0a'
+                },
+                modal: {
+                    ondismiss: function () {
+                        showError('Payment window was closed. You can retry whenever you are ready.');
+                    }
+                },
+                handler: function (response) {
+                    fetch('{{ route('products.verify') }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': csrf ? csrf.content : ''
+                        },
+                        body: JSON.stringify({
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_signature: response.razorpay_signature,
+                            order_reference: orderData.order_reference
+                        })
+                    })
+                    .then(function (r) { return r.json(); })
+                    .then(function (data) {
+                        if (data.status === 'success') {
+                            if (window.DBCart) window.DBCart.clear();
+                            window.location.href = data.redirect_url || ('{{ route('products.return') }}?order_id=' + encodeURIComponent(orderData.order_reference));
+                        } else {
+                            showError(data.message || 'Payment verification failed. Please contact support.');
+                        }
+                    })
+                    .catch(function () {
+                        window.location.href = '{{ route('products.return') }}?order_id=' + encodeURIComponent(orderData.order_reference) +
+                            '&razorpay_payment_id=' + encodeURIComponent(response.razorpay_payment_id) +
+                            '&razorpay_order_id=' + encodeURIComponent(response.razorpay_order_id) +
+                            '&razorpay_signature=' + encodeURIComponent(response.razorpay_signature);
+                    });
+                }
+            };
+
+            try {
+                var rzp = new Razorpay(options);
+                rzp.on('payment.failed', function (resp) {
+                    console.warn('Razorpay payment failed:', resp.error);
+                    showError((resp.error && resp.error.description) || 'Payment was unsuccessful. Please try again.');
+                });
+                rzp.open();
+            } catch (err) {
+                console.error('Razorpay modal open error:', err);
+                showError('Could not open payment window. Please refresh and try again.');
+            }
+        });
+    }
+
+    function ensureRazorpay(cb) {
+        if (window.Razorpay) {
+            cb(window.Razorpay);
+            return;
         }
         var s = document.createElement('script');
-        s.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';
+        s.src = 'https://checkout.razorpay.com/v1/checkout.js';
         s.async = true;
-        s.onload = function () {
-            try {
-                var instance = window.Cashfree({ mode: cashfreeMode === 'production' ? 'production' : 'sandbox' });
-                cb(instance);
-            } catch (e) {
-                console.error('Cashfree post-load error:', e);
-                cb(null);
-            }
-        };
+        s.onload = function () { cb(window.Razorpay); };
         s.onerror = function () { cb(null); };
         document.head.appendChild(s);
     }

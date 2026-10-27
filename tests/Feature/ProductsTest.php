@@ -6,7 +6,7 @@ use App\Mail\AdminPurchaseMail;
 use App\Mail\ProductDeliveryMail;
 use App\Models\ProductOrder;
 use App\Models\Subscriber;
-use App\Services\CashfreeService;
+use App\Services\RazorpayService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
@@ -61,8 +61,8 @@ class ProductsTest extends TestCase
     public function test_usd_checkout_prices_in_us_dollars(): void
     {
         Mail::fake();
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
-        Http::fake(['*/orders' => Http::response(['payment_session_id' => 'ps_usd', 'cf_order_id' => 'cf_usd'], 200)]);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
+        Http::fake(['*/orders' => Http::response(['id' => 'order_usd', 'amount' => 4900, 'currency' => 'USD', 'receipt' => 'rec_usd', 'status' => 'created'], 200)]);
 
         $response = $this->postJson('/products/checkout', [
             'items' => ['mcp-server-launch-kit'],
@@ -71,7 +71,11 @@ class ProductsTest extends TestCase
             'email' => 'us@example.com',
         ]);
 
-        $response->assertStatus(200)->assertJsonPath('status', 'checkout');
+        $response->assertStatus(200)
+            ->assertJsonPath('status', 'checkout')
+            ->assertJsonPath('currency', 'USD')
+            ->assertJsonPath('amount', 4900)
+            ->assertJsonPath('razorpay_order_id', 'order_usd');
 
         $order = ProductOrder::where('customer_email', 'us@example.com')->first();
         $this->assertNotNull($order);
@@ -89,13 +93,13 @@ class ProductsTest extends TestCase
         ])->assertStatus(422)->assertJsonValidationErrors(['currency']);
     }
 
-    public function test_checkout_sends_selected_currency_to_cashfree(): void
+    public function test_checkout_sends_selected_currency_to_razorpay(): void
     {
         Mail::fake();
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
 
         Http::fake([
-            '*/orders' => Http::response(['payment_session_id' => 'ps_1', 'cf_order_id' => 'cf_1'], 200),
+            '*/orders' => Http::response(['id' => 'order_1', 'amount' => 4900, 'currency' => 'USD', 'receipt' => 'rec_1', 'status' => 'created'], 200),
         ]);
 
         $response = $this->postJson('/products/checkout', [
@@ -109,8 +113,8 @@ class ProductsTest extends TestCase
 
         Http::assertSent(function ($request) {
             return str_contains($request->url(), '/orders')
-                && ($request['order_currency'] ?? null) === 'USD'
-                && (float) ($request['order_amount'] ?? 0) === 49.0;
+                && ($request['currency'] ?? null) === 'USD'
+                && (int) ($request['amount'] ?? 0) === 4900;
         });
     }
 
@@ -177,13 +181,13 @@ class ProductsTest extends TestCase
         Mail::assertSent(ProductDeliveryMail::class, fn ($mail) => $mail->hasTo('free@example.com'));
     }
 
-    public function test_paid_product_checkout_with_cashfree_and_download(): void
+    public function test_paid_product_checkout_with_razorpay_and_download(): void
     {
         Mail::fake();
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
 
         Http::fake([
-            '*/orders' => Http::response(['payment_session_id' => 'ps_paid', 'cf_order_id' => 'cf_paid'], 200),
+            '*/orders' => Http::response(['id' => 'order_paid', 'amount' => 249900, 'currency' => 'INR', 'receipt' => 'rec_paid', 'status' => 'created'], 200),
         ]);
 
         $response = $this->postJson('/products/checkout', [
@@ -195,7 +199,9 @@ class ProductsTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJsonPath('status', 'checkout')
-            ->assertJsonPath('payment_session_id', 'ps_paid');
+            ->assertJsonPath('razorpay_order_id', 'order_paid')
+            ->assertJsonPath('amount', 249900)
+            ->assertJsonPath('currency', 'INR');
 
         $order = ProductOrder::where('customer_email', 'paidtest@example.com')->first();
         $this->assertNotNull($order);
@@ -203,7 +209,7 @@ class ProductsTest extends TestCase
         $this->assertSame('INR', $order->currency);
 
         // Fulfill the order and verify download token streams the actual zip file
-        $order->markPaid();
+        $order->markPaid('order_paid', 'pay_123');
         $downloadResponse = $this->get('/download/'.$order->download_token);
         $downloadResponse->assertStatus(200);
         $downloadResponse->assertHeader('Content-Type', 'application/zip');
@@ -211,7 +217,7 @@ class ProductsTest extends TestCase
 
     public function test_paid_product_checkout_fails_safely_when_gateway_unconfigured(): void
     {
-        config(['services.cashfree.app_id' => null, 'services.cashfree.secret_key' => null]);
+        config(['services.razorpay.key_id' => null, 'services.razorpay.key_secret' => null]);
 
         $response = $this->postJson('/products/checkout', [
             'product_slug' => 'mcp-server-launch-kit',
@@ -245,8 +251,8 @@ class ProductsTest extends TestCase
     public function test_multi_item_cart_checkout_groups_items_under_one_reference(): void
     {
         Mail::fake();
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
-        Http::fake(['*/orders' => Http::response(['payment_session_id' => 'ps_cart', 'cf_order_id' => 'cf_cart'], 200)]);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
+        Http::fake(['*/orders' => Http::response(['id' => 'order_cart', 'amount' => 249900, 'currency' => 'INR', 'receipt' => 'rec_cart', 'status' => 'created'], 200)]);
 
         $response = $this->postJson('/products/checkout', [
             'items' => ['ai-project-kickoff-skills-kit', 'n8n-hardening-pack'],
@@ -256,7 +262,7 @@ class ProductsTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJsonPath('status', 'checkout')
-            ->assertJsonPath('payment_session_id', 'ps_cart');
+            ->assertJsonPath('razorpay_order_id', 'order_cart');
 
         $reference = $response->json('order_reference');
         $lines = ProductOrder::where('cart_reference', $reference)->get();
@@ -318,7 +324,7 @@ class ProductsTest extends TestCase
     public function test_grouped_webhook_fulfills_every_line_and_alerts_admin(): void
     {
         Mail::fake();
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret', 'services.razorpay.webhook_secret' => 'test_secret']);
 
         $reference = ProductOrder::generateReference();
         foreach (['mcp-server-launch-kit', 'agent-context-architect'] as $slug) {
@@ -336,16 +342,26 @@ class ProductsTest extends TestCase
         }
 
         $body = json_encode([
-            'type' => 'PAYMENT_SUCCESS_WEBHOOK',
-            'data' => ['order' => ['order_id' => $reference, 'cf_order_id' => 'cf_123']],
+            'event' => 'order.paid',
+            'payload' => [
+                'order' => [
+                    'entity' => [
+                        'id' => 'order_123',
+                        'receipt' => $reference,
+                    ],
+                ],
+                'payment' => [
+                    'entity' => [
+                        'id' => 'pay_123',
+                    ],
+                ],
+            ],
         ]);
-        $timestamp = (string) time();
-        $signature = base64_encode(hash_hmac('sha256', $timestamp.$body, 'test_secret', true));
+        $signature = hash_hmac('sha256', $body, 'test_secret');
 
-        $this->call('POST', '/webhooks/cashfree', [], [], [], [
+        $this->call('POST', '/webhooks/razorpay', [], [], [], [
             'CONTENT_TYPE' => 'application/json',
-            'HTTP_X_WEBHOOK_SIGNATURE' => $signature,
-            'HTTP_X_WEBHOOK_TIMESTAMP' => $timestamp,
+            'HTTP_X_RAZORPAY_SIGNATURE' => $signature,
         ], $body)->assertStatus(200);
 
         $lines = ProductOrder::group($reference);
@@ -357,13 +373,12 @@ class ProductsTest extends TestCase
 
     public function test_webhook_rejects_bad_signature(): void
     {
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
 
-        $this->call('POST', '/webhooks/cashfree', [], [], [], [
+        $this->call('POST', '/webhooks/razorpay', [], [], [], [
             'CONTENT_TYPE' => 'application/json',
-            'HTTP_X_WEBHOOK_SIGNATURE' => 'nonsense',
-            'HTTP_X_WEBHOOK_TIMESTAMP' => (string) time(),
-        ], '{"type":"PAYMENT_SUCCESS_WEBHOOK"}')->assertStatus(401);
+            'HTTP_X_RAZORPAY_SIGNATURE' => 'nonsense',
+        ], '{"event":"order.paid"}')->assertStatus(401);
     }
 
     public function test_checkout_requires_valid_input(): void
@@ -428,8 +443,8 @@ class ProductsTest extends TestCase
         ])->assertStatus(422)->assertJsonValidationErrors(['currency']);
 
         // INR checkout succeeds
-        config(['services.cashfree.app_id' => 'test_app', 'services.cashfree.secret_key' => 'test_secret']);
-        Http::fake(['*/orders' => Http::response(['payment_session_id' => 'ps_inr', 'cf_order_id' => 'cf_inr'], 200)]);
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
+        Http::fake(['*/orders' => Http::response(['id' => 'order_inr', 'amount' => 349900, 'currency' => 'INR', 'receipt' => 'rec_inr', 'status' => 'created'], 200)]);
 
         $this->postJson('/products/checkout', [
             'items' => ['mcp-server-launch-kit'],
@@ -439,64 +454,71 @@ class ProductsTest extends TestCase
         ])->assertStatus(200)->assertJsonPath('status', 'checkout');
     }
 
-    public function test_cashfree_service_is_configured_with_live_credentials(): void
+    public function test_razorpay_service_is_configured_with_credentials(): void
     {
-        $cashfree = app(CashfreeService::class);
-        // Under testing environment, verify service reads config
+        $razorpay = app(RazorpayService::class);
         config([
-            'services.cashfree.app_id' => 'test_app_id_mock',
-            'services.cashfree.secret_key' => 'test_secret_key_mock',
-            'services.cashfree.env' => 'production',
-            'services.cashfree.base_url' => 'https://api.cashfree.com/pg',
+            'services.razorpay.key_id' => 'rzp_live_test123',
+            'services.razorpay.key_secret' => 'test_secret_123',
         ]);
 
-        $this->assertTrue($cashfree->isConfigured());
-        $this->assertSame('production', config('services.cashfree.env'));
-        $this->assertSame('https://api.cashfree.com/pg', config('services.cashfree.base_url'));
+        $this->assertTrue($razorpay->isConfigured());
+        $this->assertSame('rzp_live_test123', $razorpay->getKeyId());
     }
 
-    public function test_cashfree_order_meta_urls_always_use_https(): void
-    {
-        config([
-            'services.cashfree.app_id' => 'test_app',
-            'services.cashfree.secret_key' => 'test_secret',
-            'site.url' => 'http://127.0.0.1:8000',
-        ]);
-
-        Http::fake([
-            '*/orders' => Http::response(['payment_session_id' => 'ps_https', 'cf_order_id' => 'cf_https'], 200),
-        ]);
-
-        $cashfree = app(CashfreeService::class);
-        $res = $cashfree->createPaymentSession('REF-123', 5, 'INR', [
-            'name' => 'Tester',
-            'email' => 't@example.com',
-            'phone' => '9999999999',
-        ]);
-
-        $this->assertNotNull($res);
-        $this->assertSame('ps_https', $res['payment_session_id']);
-
-        Http::assertSent(function ($request) {
-            $returnUrl = (string) ($request['order_meta']['return_url'] ?? '');
-            $notifyUrl = (string) ($request['order_meta']['notify_url'] ?? '');
-
-            return str_starts_with($returnUrl, 'https://') && str_starts_with($notifyUrl, 'https://');
-        });
-    }
-
-    public function test_return_from_payment_reconciles_order_using_merchant_reference(): void
+    public function test_verify_payment_endpoint_validates_signature_and_fulfills(): void
     {
         Mail::fake();
         config([
-            'services.cashfree.app_id' => 'test_app',
-            'services.cashfree.secret_key' => 'test_secret',
+            'services.razorpay.key_id' => 'test_key',
+            'services.razorpay.key_secret' => 'test_secret',
         ]);
 
         $reference = ProductOrder::generateReference();
         ProductOrder::create([
             'order_reference' => ProductOrder::generateReference(),
             'cart_reference' => $reference,
+            'razorpay_order_id' => 'order_test_1',
+            'product_slug' => 'n8n-hardening-pack',
+            'product_title' => 'n8n Production Hardening Pack',
+            'customer_name' => 'Verify User',
+            'customer_email' => 'verify@example.com',
+            'amount' => 2499,
+            'payment_status' => ProductOrder::STATUS_PENDING,
+        ]);
+
+        $orderId = 'order_test_1';
+        $paymentId = 'pay_test_999';
+        $signature = hash_hmac('sha256', $orderId.'|'.$paymentId, 'test_secret');
+
+        $response = $this->postJson('/products/verify', [
+            'razorpay_order_id' => $orderId,
+            'razorpay_payment_id' => $paymentId,
+            'razorpay_signature' => $signature,
+            'order_reference' => $reference,
+        ]);
+
+        $response->assertStatus(200)->assertJsonPath('status', 'success');
+
+        $order = ProductOrder::where('cart_reference', $reference)->first();
+        $this->assertSame(ProductOrder::STATUS_SUCCESS, $order->payment_status);
+        $this->assertSame($paymentId, $order->razorpay_payment_id);
+        $this->assertTrue($order->isDownloadable());
+    }
+
+    public function test_return_from_payment_reconciles_order_using_merchant_reference(): void
+    {
+        Mail::fake();
+        config([
+            'services.razorpay.key_id' => 'test_key',
+            'services.razorpay.key_secret' => 'test_secret',
+        ]);
+
+        $reference = ProductOrder::generateReference();
+        ProductOrder::create([
+            'order_reference' => ProductOrder::generateReference(),
+            'cart_reference' => $reference,
+            'razorpay_order_id' => 'order_paid_sync',
             'product_slug' => 'n8n-hardening-pack',
             'product_title' => 'n8n Production Hardening Pack',
             'customer_name' => 'Paid User',
@@ -506,7 +528,7 @@ class ProductsTest extends TestCase
         ]);
 
         Http::fake([
-            '*/orders/'.$reference => Http::response(['order_status' => 'PAID'], 200),
+            '*/orders/order_paid_sync' => Http::response(['id' => 'order_paid_sync', 'status' => 'paid'], 200),
         ]);
 
         $response = $this->get('/products/return?order_id='.$reference);
@@ -537,8 +559,8 @@ class ProductsTest extends TestCase
 
         // 2. Reactivate unsubscribed subscriber on paid order return/fulfillment
         config([
-            'services.cashfree.app_id' => 'test_app',
-            'services.cashfree.secret_key' => 'test_secret',
+            'services.razorpay.key_id' => 'test_key',
+            'services.razorpay.key_secret' => 'test_secret',
         ]);
 
         $inactiveSubscriber = Subscriber::create([
@@ -552,6 +574,7 @@ class ProductsTest extends TestCase
         ProductOrder::create([
             'order_reference' => ProductOrder::generateReference(),
             'cart_reference' => $reference,
+            'razorpay_order_id' => 'order_return_sub',
             'product_slug' => 'n8n-hardening-pack',
             'product_title' => 'n8n Production Hardening Pack',
             'customer_name' => 'Returning Customer',
@@ -561,7 +584,7 @@ class ProductsTest extends TestCase
         ]);
 
         Http::fake([
-            '*/orders/'.$reference => Http::response(['order_status' => 'PAID'], 200),
+            '*/orders/order_return_sub' => Http::response(['id' => 'order_return_sub', 'status' => 'paid'], 200),
         ]);
 
         $this->get('/products/return?order_id='.$reference)->assertStatus(200);

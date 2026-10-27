@@ -13,7 +13,7 @@
 | Both supported currencies are whole-unit priced (₹ and $), so minor = 0.
 */
 
-$enabled = array_filter(array_map('trim', explode(',', env('STORE_ENABLED_CURRENCIES', 'INR'))));
+$enabled = array_filter(array_map('trim', explode(',', env('STORE_ENABLED_CURRENCIES', 'INR,USD'))));
 
 $allCurrencies = [
     'INR' => [

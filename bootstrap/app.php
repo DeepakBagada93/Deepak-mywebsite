@@ -16,7 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->prepend(RedirectPublicPrefix::class);
 
         $middleware->validateCsrfTokens(except: [
-            'webhooks/cashfree',
+            'webhooks/razorpay',
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

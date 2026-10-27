@@ -3823,3 +3823,19 @@
   - Words: 1650
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **AgentKit vs Claude Agent SDK: Agent Cost per 1M 2026**
+  - Slug: `agentkit-vs-claude-agent-sdk`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-27 12:30:00`
+  - Words: 1519
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **MySQL JSON vs MariaDB JSON Search: 3x Faster 2026**
+  - Slug: `mysql-json-vs-mariadb-json-search`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-27 15:30:00`
+  - Words: 1449
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

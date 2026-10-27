@@ -18,6 +18,9 @@ class ProductOrder extends Model
         'order_reference',
         'cart_reference',
         'cf_order_id',
+        'razorpay_order_id',
+        'razorpay_payment_id',
+        'razorpay_signature',
         'product_slug',
         'product_title',
         'customer_name',
@@ -57,16 +60,30 @@ class ProductOrder extends Model
         return static::where('cart_reference', $cartReference)->orderBy('id')->get();
     }
 
-    public function markPaid(?string $cfOrderId = null): void
+    public function markPaid(?string $gatewayOrderId = null, ?string $paymentId = null, ?string $signature = null): void
     {
-        $this->update([
+        $attributes = [
             'payment_status' => self::STATUS_SUCCESS,
-            'cf_order_id' => $cfOrderId ?: $this->cf_order_id,
             'paid_at' => $this->paid_at ?? now(),
             'download_token' => $this->download_token ?: Str::random(48),
             'download_expires_at' => now()->addHours(48),
             'download_count' => 0,
-        ]);
+        ];
+
+        if ($gatewayOrderId) {
+            $attributes['razorpay_order_id'] = $gatewayOrderId;
+            $attributes['cf_order_id'] = $gatewayOrderId;
+        }
+
+        if ($paymentId) {
+            $attributes['razorpay_payment_id'] = $paymentId;
+        }
+
+        if ($signature) {
+            $attributes['razorpay_signature'] = $signature;
+        }
+
+        $this->update($attributes);
     }
 
     public function isDownloadable(): bool

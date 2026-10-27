@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\ProductOrder;
-use App\Services\CashfreeService;
 use App\Services\OrderFulfiller;
+use App\Services\RazorpayService;
 use App\Support\Money;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -12,7 +12,7 @@ use Illuminate\Validation\ValidationException;
 class OrderController extends Controller
 {
     public function __construct(
-        private readonly CashfreeService $cashfree,
+        private readonly RazorpayService $razorpay,
         private readonly OrderFulfiller $fulfiller,
     ) {}
 
@@ -28,7 +28,7 @@ class OrderController extends Controller
             'phone' => ['nullable', 'string', 'max:20'],
         ]);
 
-        // Resolve and validate the checkout currency (INR default, USD for US).
+        // Resolve and validate the checkout currency (INR default, USD for international).
         $currency = strtoupper((string) ($data['currency'] ?? Money::default()));
         if (! Money::supports($currency)) {
             throw ValidationException::withMessages([
@@ -89,21 +89,21 @@ class OrderController extends Controller
             ]);
         }
 
-        // Paid products must strictly go through Cashfree
-        if (! $this->cashfree->isConfigured()) {
+        // Paid products strictly go through Razorpay
+        if (! $this->razorpay->isConfigured()) {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Payment gateway is currently unavailable. Please try again shortly or contact '.config('site.email').'.',
             ], 503);
         }
 
-        $session = $this->cashfree->createPaymentSession($cartReference, $total, $currency, [
+        $order = $this->razorpay->createOrder($cartReference, $total, $currency, [
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'] ?? null,
         ]);
 
-        if (! $session) {
+        if (! $order) {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Could not start checkout. Please try again or email '.config('site.email').'.',
@@ -111,42 +111,123 @@ class OrderController extends Controller
         }
 
         ProductOrder::where('cart_reference', $cartReference)
-            ->update(['cf_order_id' => $session['cf_order_id']]);
+            ->update([
+                'razorpay_order_id' => $order['id'],
+                'cf_order_id' => $order['id'],
+            ]);
 
         return response()->json([
             'status' => 'checkout',
-            'payment_session_id' => $session['payment_session_id'],
+            'razorpay_order_id' => $order['id'],
+            'razorpay_key' => $this->razorpay->getKeyId(),
+            'amount' => $order['amount'],
+            'currency' => $order['currency'],
             'order_reference' => $cartReference,
+            'customer' => [
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'phone' => $data['phone'] ?? '',
+            ],
         ]);
     }
 
     /**
-     * Cashfree redirects here after checkout. Webhooks cannot reach a local
-     * box, so we reconcile the authoritative order status synchronously.
+     * Synchronous payment verification endpoint called by client JS upon Razorpay checkout completion.
+     */
+    public function verifyPayment(Request $request)
+    {
+        $data = $request->validate([
+            'razorpay_order_id' => ['required', 'string'],
+            'razorpay_payment_id' => ['required', 'string'],
+            'razorpay_signature' => ['required', 'string'],
+            'order_reference' => ['nullable', 'string'],
+        ]);
+
+        $orderId = $data['razorpay_order_id'];
+        $paymentId = $data['razorpay_payment_id'];
+        $signature = $data['razorpay_signature'];
+        $reference = $data['order_reference'] ?? null;
+
+        if (! $this->razorpay->verifyPaymentSignature($orderId, $paymentId, $signature)) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Payment verification failed. Please contact support.',
+            ], 400);
+        }
+
+        $orders = null;
+        if ($reference) {
+            $orders = ProductOrder::group($reference);
+        }
+        if (! $orders || $orders->isEmpty()) {
+            $orders = ProductOrder::where('razorpay_order_id', $orderId)
+                ->orWhere('cf_order_id', $orderId)
+                ->get();
+        }
+
+        if (! $orders || $orders->isEmpty()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Order not found.',
+            ], 404);
+        }
+
+        $cartReference = $orders->first()->cart_reference;
+        $this->fulfiller->fulfillGroup($cartReference, $orderId, $paymentId, $signature);
+
+        return response()->json([
+            'status' => 'success',
+            'redirect_url' => route('products.return', ['order_id' => $cartReference]),
+        ]);
+    }
+
+    /**
+     * Razorpay redirects or user returns here after checkout.
+     * We reconcile the authoritative order status synchronously.
      */
     public function returnFromPayment(Request $request)
     {
-        $reference = (string) $request->query('order_id');
+        $reference = (string) ($request->query('order_id') ?: $request->query('razorpay_order_id'));
         $orders = ProductOrder::group($reference);
+
+        if ($orders->isEmpty()) {
+            $orders = ProductOrder::where('razorpay_order_id', $reference)
+                ->orWhere('cf_order_id', $reference)
+                ->get();
+        }
 
         if ($orders->isEmpty()) {
             return redirect()->route('products.index');
         }
 
         $first = $orders->first();
+        $cartReference = $first->cart_reference;
 
-        if ($first->payment_status === ProductOrder::STATUS_PENDING && $this->cashfree->isConfigured()) {
-            // Cashfree's /orders/{order_id} endpoint expects the merchant order_id ($reference)
-            $status = $this->cashfree->fetchOrderStatus($reference)
-                ?? ($first->cf_order_id ? $this->cashfree->fetchOrderStatus($first->cf_order_id) : null);
+        if ($first->payment_status === ProductOrder::STATUS_PENDING && $this->razorpay->isConfigured()) {
+            $rzpPaymentId = (string) $request->query('razorpay_payment_id');
+            $rzpOrderId = (string) $request->query('razorpay_order_id');
+            $rzpSignature = (string) $request->query('razorpay_signature');
 
-            if ($status === 'PAID') {
-                $this->fulfiller->fulfillGroup($reference, $first->cf_order_id);
-                $orders = ProductOrder::group($reference);
-            } elseif (in_array($status, ['EXPIRED', 'TERMINATED', 'TERMINATION_REQUESTED'], true)) {
-                ProductOrder::where('cart_reference', $reference)
-                    ->update(['payment_status' => ProductOrder::STATUS_FAILED]);
-                $orders = ProductOrder::group($reference);
+            // 1. If payment verification params are present, verify signature
+            if ($rzpPaymentId && $rzpOrderId && $rzpSignature) {
+                if ($this->razorpay->verifyPaymentSignature($rzpOrderId, $rzpPaymentId, $rzpSignature)) {
+                    $this->fulfiller->fulfillGroup($cartReference, $rzpOrderId, $rzpPaymentId, $rzpSignature);
+                    $orders = ProductOrder::group($cartReference);
+                }
+            } else {
+                // 2. Otherwise fetch order status from Razorpay API
+                $lookupOrderId = $first->razorpay_order_id ?: $first->cf_order_id;
+                if ($lookupOrderId) {
+                    $rzpOrder = $this->razorpay->fetchOrder($lookupOrderId);
+                    if ($rzpOrder && ($rzpOrder['status'] ?? null) === 'paid') {
+                        $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId);
+                        $orders = ProductOrder::group($cartReference);
+                    } elseif ($rzpOrder && ($rzpOrder['status'] ?? null) === 'attempted' && (int) ($rzpOrder['attempts'] ?? 0) > 3) {
+                        ProductOrder::where('cart_reference', $cartReference)
+                            ->update(['payment_status' => ProductOrder::STATUS_FAILED]);
+                        $orders = ProductOrder::group($cartReference);
+                    }
+                }
             }
         }
 
@@ -240,7 +321,7 @@ class OrderController extends Controller
             'title' => $products->count() === 1
                 ? 'Checkout: '.$product['title'].' — '.$site['name']
                 : 'Checkout ('.$products->count().' items) — '.$site['name'],
-            'description' => 'Secure checkout for '.($products->count() === 1 ? $product['title'] : 'selected engineering toolkits').'. Instant digital delivery via Cashfree.',
+            'description' => 'Secure checkout for '.($products->count() === 1 ? $product['title'] : 'selected engineering toolkits').'. Instant digital delivery via Razorpay.',
             'canonical' => $products->count() === 1
                 ? route('products.checkout.single', $product['slug'])
                 : route('products.checkout.page'),
