@@ -29,3 +29,8 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+<IfModule mod_headers.c>
+    # Allow sensor features for payment gateway fraud-detection and telemetry
+    Header set Permissions-Policy "accelerometer=*, gyroscope=*"
+</IfModule>
