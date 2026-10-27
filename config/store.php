@@ -32,11 +32,9 @@ $allCurrencies = [
 
 $currencies = [];
 $enabledUpper = array_map('strtoupper', $enabled);
-if (! empty($enabledUpper)) {
-    foreach ($enabledUpper as $code) {
-        if (isset($allCurrencies[$code])) {
-            $currencies[$code] = $allCurrencies[$code];
-        }
+foreach ($allCurrencies as $code => $meta) {
+    if (empty($enabledUpper) || in_array($code, $enabledUpper, true)) {
+        $currencies[$code] = $meta;
     }
 }
 if (empty($currencies)) {
@@ -45,8 +43,8 @@ if (empty($currencies)) {
 
 return [
 
-    // Fallback currency when a visitor has not chosen one (default to USD).
-    'default' => env('STORE_DEFAULT_CURRENCY', 'USD'),
+    // Fallback currency when a visitor has not chosen one (primary is USD).
+    'default' => 'USD',
 
     // Cookie (and localStorage) key used to remember the visitor's choice.
     'cookie' => 'store_currency',
