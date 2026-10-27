@@ -3,8 +3,12 @@
     $priceInr = \App\Support\Money::priceFor($product, 'INR');
     $priceUsd = \App\Support\Money::priceFor($product, 'USD');
     $compareInr = \App\Support\Money::compareFor($product, 'INR');
-    $discount = $compareInr > $priceInr && $compareInr > 0
+    $compareUsd = \App\Support\Money::compareFor($product, 'USD');
+    $discountInr = $compareInr > $priceInr && $compareInr > 0
         ? (int) round((1 - $priceInr / $compareInr) * 100)
+        : 0;
+    $discountUsd = $compareUsd > $priceUsd && $compareUsd > 0
+        ? (int) round((1 - $priceUsd / $compareUsd) * 100)
         : 0;
 @endphp
 <article class="store-card {{ $product['is_featured'] ? 'store-card--featured' : '' }}" data-reveal>
@@ -37,8 +41,11 @@
         <div class="store__price">
             @include('products.partials.price', ['product' => $product])
         </div>
-        @if ($discount > 0)
-            <span class="mono store-card__off">{{ $discount }}% OFF</span>
+        @if ($discountUsd > 0)
+            <span class="mono store-card__off" data-cur="USD">{{ $discountUsd }}% OFF</span>
+        @endif
+        @if ($discountInr > 0)
+            <span class="mono store-card__off" data-cur="INR">{{ $discountInr }}% OFF</span>
         @endif
     </div>
 

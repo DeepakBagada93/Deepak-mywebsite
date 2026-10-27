@@ -118,17 +118,17 @@ class ProductsTest extends TestCase
         });
     }
 
-    public function test_live_payment_test_toolkit_prices_at_1_inr(): void
+    public function test_paid_product_prices_at_inr(): void
     {
         Mail::fake();
         config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
 
         Http::fake([
-            '*/orders' => Http::response(['id' => 'order_test_inr', 'amount' => 100, 'currency' => 'INR', 'receipt' => 'rec_inr_1', 'status' => 'created'], 200),
+            '*/orders' => Http::response(['id' => 'order_test_inr', 'amount' => 599900, 'currency' => 'INR', 'receipt' => 'rec_inr_1', 'status' => 'created'], 200),
         ]);
 
         $responseInr = $this->postJson('/products/checkout', [
-            'product_slug' => 'live-payment-test-toolkit',
+            'product_slug' => 'agency-delivery-os',
             'currency' => 'INR',
             'name' => 'Test Buyer INR',
             'email' => 'testinr@example.com',
@@ -136,21 +136,21 @@ class ProductsTest extends TestCase
 
         $responseInr->assertStatus(200)
             ->assertJsonPath('status', 'checkout')
-            ->assertJsonPath('amount', 100)
+            ->assertJsonPath('amount', 599900)
             ->assertJsonPath('currency', 'INR');
     }
 
-    public function test_live_payment_test_toolkit_prices_at_1_usd(): void
+    public function test_paid_product_prices_at_usd(): void
     {
         Mail::fake();
         config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
 
         Http::fake([
-            '*/orders' => Http::response(['id' => 'order_test_usd', 'amount' => 100, 'currency' => 'USD', 'receipt' => 'rec_usd_1', 'status' => 'created'], 200),
+            '*/orders' => Http::response(['id' => 'order_test_usd', 'amount' => 9900, 'currency' => 'USD', 'receipt' => 'rec_usd_1', 'status' => 'created'], 200),
         ]);
 
         $responseUsd = $this->postJson('/products/checkout', [
-            'product_slug' => 'live-payment-test-toolkit',
+            'product_slug' => 'agency-delivery-os',
             'currency' => 'USD',
             'name' => 'Test Buyer USD',
             'email' => 'testusd@example.com',
@@ -158,7 +158,7 @@ class ProductsTest extends TestCase
 
         $responseUsd->assertStatus(200)
             ->assertJsonPath('status', 'checkout')
-            ->assertJsonPath('amount', 100)
+            ->assertJsonPath('amount', 9900)
             ->assertJsonPath('currency', 'USD');
     }
 

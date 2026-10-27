@@ -36,6 +36,20 @@
             btn.classList.toggle('is-active', on);
             btn.setAttribute('aria-pressed', on ? 'true' : 'false');
         });
+        document.querySelectorAll('[data-cur]').forEach(function (el) {
+            if (el.getAttribute('data-cur') === c) {
+                el.style.removeProperty('display');
+            } else {
+                el.style.setProperty('display', 'none', 'important');
+            }
+        });
+        document.querySelectorAll('a[href*="/checkout"]').forEach(function (a) {
+            try {
+                var url = new URL(a.href, window.location.origin);
+                url.searchParams.set('currency', c);
+                a.href = url.pathname + url.search;
+            } catch (e) {}
+        });
     }
 
     function set(next, silent) {
