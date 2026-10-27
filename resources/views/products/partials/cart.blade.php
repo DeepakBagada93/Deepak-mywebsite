@@ -48,12 +48,6 @@
 
         {{-- Drawer Footer --}}
         <div class="cart-drawer__foot" id="cart-foot" style="display:none">
-            @if (count(\App\Support\Money::currencies()) > 1)
-                <div class="cart-drawer__currency">
-                    @include('products.partials.currency-switch')
-                </div>
-            @endif
-
             <div class="cart-drawer__subtotal">
                 <div class="cart-drawer__subtotal-meta">
                     <span class="mono cart-drawer__subtotal-label">Subtotal</span>
@@ -109,7 +103,12 @@
     }
 
     function currency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'USD';
+        var stored = null;
+        try { stored = localStorage.getItem('db_currency'); } catch (e) {}
+        return (stored && ['USD', 'INR'].indexOf(stored.toUpperCase()) !== -1 ? stored.toUpperCase() : null)
+            || (window.DBStoreCurrency && window.DBStoreCurrency.get())
+            || document.documentElement.getAttribute('data-store-currency')
+            || 'USD';
     }
 
     function money(n) {

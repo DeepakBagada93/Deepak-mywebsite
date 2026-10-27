@@ -5,10 +5,7 @@
         <button type="button" class="store-modal__close" data-store-close aria-label="Close checkout">✕</button>
 
         <div class="store-modal__head">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <p class="mono store-modal__kicker" style="margin-bottom:0;">Secure Checkout</p>
-                @include('products.partials.currency-switch')
-            </div>
+            <p class="mono store-modal__kicker">Secure Checkout</p>
             <h2 class="store-modal__title" id="store-modal-title">Complete your purchase</h2>
             <p class="store-modal__price" id="store-modal-price"></p>
         </div>
@@ -68,7 +65,12 @@
     var META = @json(\App\Support\Money::currencies());
 
     function currency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'USD';
+        var stored = null;
+        try { stored = localStorage.getItem('db_currency'); } catch (e) {}
+        return (stored && ['USD', 'INR'].indexOf(stored.toUpperCase()) !== -1 ? stored.toUpperCase() : null)
+            || (window.DBStoreCurrency && window.DBStoreCurrency.get())
+            || document.documentElement.getAttribute('data-store-currency')
+            || 'USD';
     }
     function money(n) {
         var code = currency();

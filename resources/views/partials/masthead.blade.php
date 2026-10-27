@@ -105,9 +105,6 @@
             <button type="button" class="masthead__cart-btn mono" data-open-cart aria-label="Open Shopping Cart">
                 🛒 Cart <span class="masthead__cart-badge" id="masthead-cart-count" style="display:none">0</span>
             </button>
-            <div class="masthead__currency" style="display:inline-flex;align-items:center;">
-                @include('products.partials.currency-switch')
-            </div>
             <a href="{{ route('journal.index') }}">Journal</a>
             <a href="{{ route('legal.contact') }}">Contact</a>
         </nav>
@@ -160,11 +157,6 @@
             <button type="button" class="mmenu__cart-btn" data-open-cart>
                 <span class="mono mmenu__num">🛒</span>Cart (<span class="mmenu-cart-count">0</span>)
             </button>
-        </li>
-        <li>
-            <div style="padding: 10px 0;">
-                @include('products.partials.currency-switch')
-            </div>
         </li>
         <li><a href="{{ route('blueprints.index') }}"><span class="mono mmenu__num">05</span>Blueprints</a></li>
         <li><a href="{{ route('repos.index') }}"><span class="mono mmenu__num">06</span>Repos</a></li>

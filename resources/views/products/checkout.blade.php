@@ -22,11 +22,8 @@
             <a href="{{ $products->count() === 1 ? route('products.show', $product['slug']) : route('products.index') }}" class="checkout-nav__back mono">
                 ← Back to {{ $products->count() === 1 ? 'Product Details' : 'Store' }}
             </a>
-            <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-                @include('products.partials.currency-switch')
-                <div class="checkout-nav__badge mono">
-                    <span class="checkout-nav__dot"></span> 256-Bit SSL Encrypted Checkout
-                </div>
+            <div class="checkout-nav__badge mono">
+                <span class="checkout-nav__dot"></span> 256-Bit SSL Encrypted Checkout
             </div>
         </div>
 
@@ -154,7 +151,6 @@
                 <div class="checkout-card checkout-summary-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
                         <h2 class="checkout-summary__title mono" style="margin-bottom:0;">Order Summary</h2>
-                        @include('products.partials.currency-switch')
                     </div>
 
                     {{-- Products List --}}
@@ -277,7 +273,12 @@
     var csrf = document.querySelector('meta[name="csrf-token"]');
 
     function currentCurrency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || document.documentElement.getAttribute('data-store-currency') || 'USD';
+        var stored = null;
+        try { stored = localStorage.getItem('db_currency'); } catch (e) {}
+        return (stored && ['USD', 'INR'].indexOf(stored.toUpperCase()) !== -1 ? stored.toUpperCase() : null)
+            || (window.DBStoreCurrency && window.DBStoreCurrency.get())
+            || document.documentElement.getAttribute('data-store-currency')
+            || 'USD';
     }
 
     function syncCurrency() {

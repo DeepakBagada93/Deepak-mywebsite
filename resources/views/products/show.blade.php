@@ -171,7 +171,6 @@
             {{-- Buy box --}}
             <aside class="store-detail__aside">
                 <div class="store-buybox">
-                    @include('products.partials.currency-switch', ['variant' => 'buybox'])
                     <div class="store__price store-buybox__price">
                         @include('products.partials.price', ['product' => $product])
                     </div>
