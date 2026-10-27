@@ -59,7 +59,7 @@
                     <span class="mono cart-drawer__subtotal-label">Subtotal</span>
                     <small class="mono cart-drawer__subtotal-tax">Taxes included · Lifetime access</small>
                 </div>
-                <strong class="cart-drawer__subtotal-val" id="cart-subtotal">₹0</strong>
+                <strong class="cart-drawer__subtotal-val" id="cart-subtotal">$0</strong>
             </div>
 
             <button type="button" class="btn btn--primary cart-drawer__checkout" id="cart-checkout">
@@ -67,7 +67,7 @@
             </button>
 
             <div class="cart-drawer__trust mono">
-                <span>🔒 Cashfree PG · 256-Bit SSL</span>
+                <span>🔒 Razorpay PG · 256-Bit SSL</span>
                 <span>⚡ Instant Download</span>
             </div>
         </div>
@@ -109,12 +109,12 @@
     }
 
     function currency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'INR';
+        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'USD';
     }
 
     function money(n) {
         var code = currency();
-        var meta = META[code] || { symbol: '₹', locale: 'en-IN', minor: 0 };
+        var meta = META[code] || { symbol: '$', locale: 'en-US', minor: 0 };
         try {
             return new Intl.NumberFormat(meta.locale.replace('_', '-'), {
                 style: 'currency', currency: code,

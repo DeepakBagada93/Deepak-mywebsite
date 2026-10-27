@@ -50,7 +50,7 @@
                         </a>
                         <button type="button" class="btn btn--ghost store-detail__mobile-cart-btn" data-add-cart="{{ $product['slug'] }}">+ Add to cart</button>
                     </div>
-                    <p class="store-buybox__secure mono">⚡ Instant delivery after payment · 🔒 Cashfree UPI, cards & netbanking</p>
+                    <p class="store-buybox__secure mono">⚡ Instant delivery after payment · 🔒 Razorpay UPI, cards & netbanking</p>
                 </div>
 
                 <div class="store-detail__body">
@@ -192,7 +192,7 @@
                         <li><span>🛠️</span>Commercial license included</li>
                     </ul>
 
-                    <p class="store-buybox__secure mono">🔒 Secure checkout via Cashfree — UPI, cards & international cards</p>
+                    <p class="store-buybox__secure mono">🔒 Secure checkout via Razorpay — cards, international cards & UPI</p>
                 </div>
             </aside>
         </div>

@@ -13,31 +13,40 @@
 | Both supported currencies are whole-unit priced (₹ and $), so minor = 0.
 */
 
-$enabled = array_filter(array_map('trim', explode(',', env('STORE_ENABLED_CURRENCIES', 'INR,USD'))));
+$enabled = array_filter(array_map('trim', explode(',', env('STORE_ENABLED_CURRENCIES', 'USD,INR'))));
 
 $allCurrencies = [
-    'INR' => [
-        'symbol' => '₹',
-        'locale' => 'en_IN',
-        'minor' => 0,
-        'label' => 'INR — Indian Rupee',
-    ],
     'USD' => [
         'symbol' => '$',
         'locale' => 'en_US',
         'minor' => 0,
         'label' => 'USD — US Dollar',
     ],
+    'INR' => [
+        'symbol' => '₹',
+        'locale' => 'en_IN',
+        'minor' => 0,
+        'label' => 'INR — Indian Rupee',
+    ],
 ];
 
-$currencies = ! empty($enabled)
-    ? array_intersect_key($allCurrencies, array_flip(array_map('strtoupper', $enabled)))
-    : ['INR' => $allCurrencies['INR']];
+$currencies = [];
+$enabledUpper = array_map('strtoupper', $enabled);
+if (! empty($enabledUpper)) {
+    foreach ($enabledUpper as $code) {
+        if (isset($allCurrencies[$code])) {
+            $currencies[$code] = $allCurrencies[$code];
+        }
+    }
+}
+if (empty($currencies)) {
+    $currencies = $allCurrencies;
+}
 
 return [
 
-    // Fallback currency when a visitor has not chosen one.
-    'default' => env('STORE_DEFAULT_CURRENCY', 'INR'),
+    // Fallback currency when a visitor has not chosen one (default to USD).
+    'default' => env('STORE_DEFAULT_CURRENCY', 'USD'),
 
     // Cookie (and localStorage) key used to remember the visitor's choice.
     'cookie' => 'store_currency',

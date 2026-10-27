@@ -29,7 +29,7 @@ class Money
 
     public static function default(): string
     {
-        return strtoupper((string) config('store.default', 'INR'));
+        return strtoupper((string) config('store.default', 'USD'));
     }
 
     /**

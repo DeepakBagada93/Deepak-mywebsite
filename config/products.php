@@ -105,7 +105,7 @@ return [
         'faq' => [
             'Do I get all 4 commercial toolkits?' => 'Yes. The archive contains the complete source code, tests, examples, and documentation for Agency Delivery OS, Agent Context Architect, MCP Server Launch Kit, and n8n Production Hardening Pack.',
             'Can I use these for client engagements?' => 'Yes. Every toolkit includes a commercial license permitting unlimited client engagements and internal company use. Only reselling the raw product files is prohibited.',
-            'How is it delivered?' => 'A secure, expiring download link is emailed instantly the moment your Cashfree payment succeeds.',
+            'How is it delivered?' => 'A secure, expiring download link is emailed instantly the moment your Razorpay payment succeeds.',
             'Do these toolkits require paid API keys?' => 'No external paid APIs are required to run the compilers, auditors, and planners. They operate 100% locally with zero network calls.',
         ],
     ],
@@ -1683,7 +1683,7 @@ return [
             1 => 'Commercial license for your agency and unlimited client campaigns',
             2 => 'Eight HTML templates, eight copy sheets, and 20+ subject-line pairings',
             3 => 'Builder, validator, and zero-dependency test suite',
-            4 => 'GST-inclusive pricing with UPI, cards, and netbanking via Cashfree',
+            4 => 'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
             5 => '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
@@ -1787,7 +1787,7 @@ return [
             1 => 'Commercial license for internal brands and unlimited client work',
             2 => '6 workflows, 7 templates, and 2 complete reference campaigns',
             3 => 'Deliverability DNS blueprint, 300+ spam-trigger blacklist, and validation CLI',
-            4 => 'GST-inclusive pricing with UPI, cards, and netbanking via Cashfree',
+            4 => 'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
             5 => '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
@@ -1889,7 +1889,7 @@ return [
             1 => 'Commercial license for internal use and client deployments',
             2 => 'Three n8n workflows, one Make blueprint, and the full Postgres schema',
             3 => 'Self-hosted Docker stack, PDF manual, tests, and QA reports',
-            4 => 'GST-inclusive pricing with UPI, cards, and netbanking via Cashfree',
+            4 => 'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
             5 => '30-day money-back satisfaction guarantee',
         ],
         'faq' => [

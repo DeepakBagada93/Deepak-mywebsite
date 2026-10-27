@@ -1,4 +1,4 @@
-{{-- Dual-currency price block (INR default, USD for international). Expects $product. --}}
+{{-- Dual-currency price block (USD default, INR option). Expects $product. --}}
 @php
     $pFree = ! empty($product['is_free']);
     $pInr = \App\Support\Money::priceFor($product, 'INR');
@@ -10,13 +10,13 @@
     <span class="store__price-now">Free</span>
 @else
     <span class="store__price-now">
-        <span data-cur="INR">{{ \App\Support\Money::format($pInr, 'INR') }}</span>
         <span data-cur="USD">{{ \App\Support\Money::format($pUsd, 'USD') }}</span>
+        <span data-cur="INR">{{ \App\Support\Money::format($pInr, 'INR') }}</span>
     </span>
     @if ($pCompareInr > 0 && $pCompareUsd > 0)
         <span class="store__price-was">
-            <span data-cur="INR">{{ \App\Support\Money::format($pCompareInr, 'INR') }}</span>
             <span data-cur="USD">{{ \App\Support\Money::format($pCompareUsd, 'USD') }}</span>
+            <span data-cur="INR">{{ \App\Support\Money::format($pCompareInr, 'INR') }}</span>
         </span>
     @endif
 @endif

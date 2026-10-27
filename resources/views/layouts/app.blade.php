@@ -15,7 +15,7 @@
     $jsVersion = file_exists($jsFile) ? substr(md5_file($jsFile), 0, 10) : '1';
 @endphp
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#" data-store-currency="{{ $storeCurrency ?? 'INR' }}">
+<html lang="en" prefix="og: https://ogp.me/ns#" data-store-currency="{{ $storeCurrency ?? \App\Support\Money::default() }}">
 <head>
     <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-4764950179214862">

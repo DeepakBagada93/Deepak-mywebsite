@@ -41,17 +41,17 @@
                 <div class="store__spotlight-foot">
                     <div class="store__price">
                         <span class="store__price-now">
-                            <span data-cur="INR">{{ \App\Support\Money::format($spInr, 'INR') }}</span>
                             <span data-cur="USD">{{ \App\Support\Money::format($spUsd, 'USD') }}</span>
+                            <span data-cur="INR">{{ \App\Support\Money::format($spInr, 'INR') }}</span>
                         </span>
                         @if ($spCompareInr > 0 && $spCompareUsd > 0)
                             <span class="store__price-was">
-                                <span data-cur="INR">{{ \App\Support\Money::format($spCompareInr, 'INR') }}</span>
                                 <span data-cur="USD">{{ \App\Support\Money::format($spCompareUsd, 'USD') }}</span>
+                                <span data-cur="INR">{{ \App\Support\Money::format($spCompareInr, 'INR') }}</span>
                             </span>
                             <span class="mono store__price-save">
-                                <span data-cur="INR">Save {{ \App\Support\Money::format($spCompareInr - $spInr, 'INR') }}</span>
                                 <span data-cur="USD">Save {{ \App\Support\Money::format($spCompareUsd - $spUsd, 'USD') }}</span>
+                                <span data-cur="INR">Save {{ \App\Support\Money::format($spCompareInr - $spInr, 'INR') }}</span>
                             </span>
                         @endif
                     </div>
@@ -85,7 +85,7 @@
 
         {{-- Guarantee strip --}}
         <div class="store__trust" data-reveal>
-            <div class="store__trust-item"><span>🔒</span><div><strong>Secure payments</strong><small>Cashfree · UPI, cards, international cards & netbanking</small></div></div>
+            <div class="store__trust-item"><span>🔒</span><div><strong>Secure payments</strong><small>Razorpay · International cards, UPI & netbanking</small></div></div>
             <div class="store__trust-item"><span>⚡</span><div><strong>Instant email delivery</strong><small>Download link emailed right after payment — no account</small></div></div>
             <div class="store__trust-item"><span>♻️</span><div><strong>Lifetime updates</strong><small>Free major-version upgrades</small></div></div>
             <div class="store__trust-item"><span>🛠️</span><div><strong>Commercial license</strong><small>Unlimited client & personal use</small></div></div>

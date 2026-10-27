@@ -68,7 +68,7 @@
     var META = @json(\App\Support\Money::currencies());
 
     function currency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'INR';
+        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'USD';
     }
     function money(n) {
         var code = currency();

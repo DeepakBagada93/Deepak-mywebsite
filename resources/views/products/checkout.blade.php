@@ -109,8 +109,8 @@
                                 @if ($isAllFree)
                                     Get Free Download →
                                 @else
+                                    <span data-cur="USD">Pay {{ \App\Support\Money::format($totalUsd, 'USD') }} & Download →</span>
                                     <span data-cur="INR">Pay {{ \App\Support\Money::format($totalInr, 'INR') }} & Download →</span>
-                                    <span data-cur="USD" style="display:none">Pay {{ \App\Support\Money::format($totalUsd, 'USD') }} & Download →</span>
                                 @endif
                             </span>
                             <span class="checkout-spinner" aria-hidden="true" style="display:none"></span>
@@ -180,8 +180,8 @@
                                     @if ($item['is_free'])
                                         <span class="checkout-badge--free">Free</span>
                                     @else
-                                        <span data-cur="INR">{{ \App\Support\Money::format($itemInr, 'INR') }}</span>
                                         <span data-cur="USD">{{ \App\Support\Money::format($itemUsd, 'USD') }}</span>
+                                        <span data-cur="INR">{{ \App\Support\Money::format($itemInr, 'INR') }}</span>
                                     @endif
                                 </div>
                             </div>
@@ -193,13 +193,13 @@
                         @if (! $isAllFree && ($savingsInr > 0 || $savingsUsd > 0))
                             <div class="checkout-totals__row checkout-totals__row--strike mono">
                                 <span>Regular Price</span>
-                                <span data-cur="INR">{{ \App\Support\Money::format($compareTotalInr, 'INR') }}</span>
                                 <span data-cur="USD">{{ \App\Support\Money::format($compareTotalUsd, 'USD') }}</span>
+                                <span data-cur="INR">{{ \App\Support\Money::format($compareTotalInr, 'INR') }}</span>
                             </div>
                             <div class="checkout-totals__row checkout-totals__row--discount mono">
                                 <span>Limited-Time Savings</span>
-                                <span data-cur="INR">-{{ \App\Support\Money::format($savingsInr, 'INR') }}</span>
                                 <span data-cur="USD">-{{ \App\Support\Money::format($savingsUsd, 'USD') }}</span>
+                                <span data-cur="INR">-{{ \App\Support\Money::format($savingsInr, 'INR') }}</span>
                             </div>
                         @endif
 
@@ -209,8 +209,8 @@
                                 @if ($isAllFree)
                                     Free
                                 @else
-                                    <span data-cur="INR">{{ \App\Support\Money::format($totalInr, 'INR') }}</span>
                                     <span data-cur="USD">{{ \App\Support\Money::format($totalUsd, 'USD') }}</span>
+                                    <span data-cur="INR">{{ \App\Support\Money::format($totalInr, 'INR') }}</span>
                                 @endif
                             </strong>
                         </div>
@@ -277,7 +277,7 @@
     var csrf = document.querySelector('meta[name="csrf-token"]');
 
     function currentCurrency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || document.documentElement.getAttribute('data-store-currency') || 'INR';
+        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || document.documentElement.getAttribute('data-store-currency') || 'USD';
     }
 
     function syncCurrency() {

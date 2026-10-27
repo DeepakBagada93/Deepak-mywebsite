@@ -302,6 +302,7 @@ class ProductsTest extends TestCase
             'items' => ['ai-project-kickoff-skills-kit', 'n8n-hardening-pack'],
             'name' => 'Cart Buyer',
             'email' => 'cart@example.com',
+            'currency' => 'INR',
         ]);
 
         $response->assertStatus(200)
