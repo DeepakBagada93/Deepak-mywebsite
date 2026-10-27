@@ -5,7 +5,10 @@
         <button type="button" class="store-modal__close" data-store-close aria-label="Close checkout">✕</button>
 
         <div class="store-modal__head">
-            <p class="mono store-modal__kicker">Secure Checkout</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <p class="mono store-modal__kicker" style="margin-bottom:0;">Secure Checkout</p>
+                @include('products.partials.currency-switch')
+            </div>
             <h2 class="store-modal__title" id="store-modal-title">Complete your purchase</h2>
             <p class="store-modal__price" id="store-modal-price"></p>
         </div>
@@ -101,6 +104,10 @@
 
         submitLabel.textContent = total > 0 ? ('Pay ' + money(total) + ' →') : 'Get download →';
     }
+
+    document.addEventListener('store:currency', function () {
+        if (activeItems.length > 0) render();
+    });
 
     function open(items) {
         activeItems = items;

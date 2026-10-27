@@ -56,10 +56,17 @@ class ProductController extends Controller
             ], JSON_UNESCAPED_SLASHES),
         ];
 
-        return view('products.index', compact('site', 'head', 'products', 'categories', 'filtered', 'activeCategory', 'featured', 'paid'));
+        $cookieCurrency = $request->cookie(config('store.cookie', 'store_currency'));
+        $queryCurrency = $request->query('currency');
+        $storeCurrency = strtoupper((string) ($queryCurrency ?: $cookieCurrency ?: Money::default()));
+        if (! Money::supports($storeCurrency)) {
+            $storeCurrency = Money::default();
+        }
+
+        return view('products.index', compact('site', 'head', 'products', 'categories', 'filtered', 'activeCategory', 'featured', 'paid', 'storeCurrency'));
     }
 
-    public function show(string $slug)
+    public function show(Request $request, string $slug)
     {
         $aliases = [
             'ads-creative-hub' => 'ad-creative-lab',
@@ -190,7 +197,14 @@ class ProductController extends Controller
             ], JSON_UNESCAPED_SLASHES),
         ];
 
-        return view('products.show', compact('site', 'head', 'product', 'related'));
+        $cookieCurrency = $request->cookie(config('store.cookie', 'store_currency'));
+        $queryCurrency = $request->query('currency');
+        $storeCurrency = strtoupper((string) ($queryCurrency ?: $cookieCurrency ?: Money::default()));
+        if (! Money::supports($storeCurrency)) {
+            $storeCurrency = Money::default();
+        }
+
+        return view('products.show', compact('site', 'head', 'product', 'related', 'storeCurrency'));
     }
 
     /**

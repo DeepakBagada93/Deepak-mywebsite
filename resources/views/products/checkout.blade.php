@@ -18,12 +18,15 @@
     <div class="checkout-page__container">
 
         {{-- Top Navigation & Trust Bar --}}
-        <div class="checkout-nav" data-reveal>
+        <div class="checkout-nav" data-reveal style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
             <a href="{{ $products->count() === 1 ? route('products.show', $product['slug']) : route('products.index') }}" class="checkout-nav__back mono">
                 ← Back to {{ $products->count() === 1 ? 'Product Details' : 'Store' }}
             </a>
-            <div class="checkout-nav__badge mono">
-                <span class="checkout-nav__dot"></span> 256-Bit SSL Encrypted Checkout
+            <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+                @include('products.partials.currency-switch')
+                <div class="checkout-nav__badge mono">
+                    <span class="checkout-nav__dot"></span> 256-Bit SSL Encrypted Checkout
+                </div>
             </div>
         </div>
 
@@ -149,7 +152,10 @@
             {{-- RIGHT COLUMN: Order Summary & Package Details --}}
             <aside class="checkout-sidebar" data-reveal>
                 <div class="checkout-card checkout-summary-card">
-                    <h2 class="checkout-summary__title mono">Order Summary</h2>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <h2 class="checkout-summary__title mono" style="margin-bottom:0;">Order Summary</h2>
+                        @include('products.partials.currency-switch')
+                    </div>
 
                     {{-- Products List --}}
                     <div class="checkout-items-list">
@@ -175,7 +181,7 @@
                                         <span class="checkout-badge--free">Free</span>
                                     @else
                                         <span data-cur="INR">{{ \App\Support\Money::format($itemInr, 'INR') }}</span>
-                                        <span data-cur="USD" style="display:none">{{ \App\Support\Money::format($itemUsd, 'USD') }}</span>
+                                        <span data-cur="USD">{{ \App\Support\Money::format($itemUsd, 'USD') }}</span>
                                     @endif
                                 </div>
                             </div>
@@ -188,12 +194,12 @@
                             <div class="checkout-totals__row checkout-totals__row--strike mono">
                                 <span>Regular Price</span>
                                 <span data-cur="INR">{{ \App\Support\Money::format($compareTotalInr, 'INR') }}</span>
-                                <span data-cur="USD" style="display:none">{{ \App\Support\Money::format($compareTotalUsd, 'USD') }}</span>
+                                <span data-cur="USD">{{ \App\Support\Money::format($compareTotalUsd, 'USD') }}</span>
                             </div>
                             <div class="checkout-totals__row checkout-totals__row--discount mono">
                                 <span>Limited-Time Savings</span>
                                 <span data-cur="INR">-{{ \App\Support\Money::format($savingsInr, 'INR') }}</span>
-                                <span data-cur="USD" style="display:none">-{{ \App\Support\Money::format($savingsUsd, 'USD') }}</span>
+                                <span data-cur="USD">-{{ \App\Support\Money::format($savingsUsd, 'USD') }}</span>
                             </div>
                         @endif
 
@@ -204,7 +210,7 @@
                                     Free
                                 @else
                                     <span data-cur="INR">{{ \App\Support\Money::format($totalInr, 'INR') }}</span>
-                                    <span data-cur="USD" style="display:none">{{ \App\Support\Money::format($totalUsd, 'USD') }}</span>
+                                    <span data-cur="USD">{{ \App\Support\Money::format($totalUsd, 'USD') }}</span>
                                 @endif
                             </strong>
                         </div>
@@ -271,16 +277,21 @@
     var csrf = document.querySelector('meta[name="csrf-token"]');
 
     function currentCurrency() {
-        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || 'INR';
+        return (window.DBStoreCurrency && window.DBStoreCurrency.get()) || document.documentElement.getAttribute('data-store-currency') || 'INR';
     }
 
-    // Sync currency switchers if enabled
-    document.addEventListener('store:currency', function (e) {
+    function syncCurrency() {
         var cur = currentCurrency();
         if (currencyInput) currencyInput.value = cur;
+        document.documentElement.setAttribute('data-store-currency', cur);
         document.querySelectorAll('[data-cur]').forEach(function (el) {
             el.style.display = el.getAttribute('data-cur') === cur ? '' : 'none';
         });
+    }
+
+    syncCurrency();
+    document.addEventListener('store:currency', function (e) {
+        syncCurrency();
     });
 
     function showError(msg) {

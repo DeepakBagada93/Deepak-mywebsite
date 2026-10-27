@@ -315,7 +315,13 @@ class OrderController extends Controller
         }
 
         $product = $products->first();
-        $currency = Money::default();
+        $cookieCurrency = $request->cookie(config('store.cookie', 'store_currency'));
+        $queryCurrency = $request->query('currency');
+        $currency = strtoupper((string) ($queryCurrency ?: $cookieCurrency ?: Money::default()));
+        if (! Money::supports($currency)) {
+            $currency = Money::default();
+        }
+        $storeCurrency = $currency;
 
         $head = [
             'title' => $products->count() === 1
@@ -328,6 +334,6 @@ class OrderController extends Controller
             'robots' => 'noindex, nofollow',
         ];
 
-        return view('products.checkout', compact('site', 'head', 'products', 'product', 'catalog', 'currency'));
+        return view('products.checkout', compact('site', 'head', 'products', 'product', 'catalog', 'currency', 'storeCurrency'));
     }
 }

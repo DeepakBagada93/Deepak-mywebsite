@@ -40,14 +40,12 @@
 
     function set(next, silent) {
         next = String(next || '').toUpperCase();
-        if (VALID.indexOf(next) === -1 || next === get()) { sync(); return; }
+        if (VALID.indexOf(next) === -1) { sync(); return; }
         try { localStorage.setItem(KEY, next); } catch (e) {}
         document.cookie = COOKIE + '=' + next + ';path=/;max-age=31536000;SameSite=Lax';
         root().setAttribute('data-store-currency', next);
         sync();
-        if (!silent) {
-            document.dispatchEvent(new CustomEvent('store:currency', { detail: { currency: next } }));
-        }
+        document.dispatchEvent(new CustomEvent('store:currency', { detail: { currency: next } }));
     }
 
     function detect() {
@@ -70,9 +68,19 @@
     var stored = null;
     try { stored = localStorage.getItem(KEY); } catch (e) {}
     if (stored && VALID.indexOf(stored.toUpperCase()) !== -1) {
-        set(stored, true);
-    } else if (!new RegExp('(?:^|;\\s*)' + COOKIE + '=').test(document.cookie)) {
-        set(detect(), true);
+        set(stored);
+    } else {
+        var cookieMatch = document.cookie.match(new RegExp('(?:^|;\\s*)' + COOKIE + '=([^;]+)'));
+        if (cookieMatch && VALID.indexOf(cookieMatch[1].toUpperCase()) !== -1) {
+            set(cookieMatch[1]);
+        } else {
+            var detected = detect();
+            if (detected && detected !== DEFAULT) {
+                set(detected);
+            } else {
+                sync();
+            }
+        }
     }
     sync();
 
