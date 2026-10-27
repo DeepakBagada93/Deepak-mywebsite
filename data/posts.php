@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'MySQL JSON vs MariaDB JSON Search: 3x Faster 2026',
-        'slug'         => 'mysql-json-vs-mariadb-json-search',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Laravel MySQL JSON vs MariaDB JSON search: 3x faster filtered queries at 4M rows, P95 41ms vs 128ms, with real EXPLAIN plans. Benchmark both engines now.',
-        'body'         => <<<'BODY'
+        'title' => 'MySQL JSON vs MariaDB JSON Search: 3x Faster 2026',
+        'slug' => 'mysql-json-vs-mariadb-json-search',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Laravel MySQL JSON vs MariaDB JSON search: 3x faster filtered queries at 4M rows, P95 41ms vs 128ms, with real EXPLAIN plans. Benchmark both engines now.',
+        'body' => <<<'BODY'
 **Quick Answer**: MySQL 8 beat MariaDB 11.4 on JSON search in my 4M-row order test. With a generated column and a B-tree index, MySQL returned filtered results at 41ms P95; MariaDB needed 128ms P95 for the same query. The 3x gap came from MySQL's binary JSON storage and the optimizer's use of the generated-column index.
 
 ### Key Takeaways
@@ -216,11 +216,11 @@ BODY,
     ],
 
     [
-        'title'        => 'AgentKit vs Claude Agent SDK: Agent Cost per 1M 2026',
-        'slug'         => 'agentkit-vs-claude-agent-sdk',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'OpenAI AgentKit vs Claude Agent SDK: compare ₹ pricing, tool-call latency, and lock-in before you build your 2026 agent stack. Read the test inside.',
-        'body'         => <<<'BODY'
+        'title' => 'AgentKit vs Claude Agent SDK: Agent Cost per 1M 2026',
+        'slug' => 'agentkit-vs-claude-agent-sdk',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'OpenAI AgentKit vs Claude Agent SDK: compare ₹ pricing, tool-call latency, and lock-in before you build your 2026 agent stack. Read the test inside.',
+        'body' => <<<'BODY'
 **Quick Answer**: OpenAI AgentKit and the Claude Agent SDK solve the same problem from opposite directions. AgentKit is a hosted builder with evals and connectors; the Claude Agent SDK is a code-first runtime with subagents and hooks. For a 1M-token support workload, AgentKit on a mini model cost about ₹67 in tokens, while the Claude Agent SDK on Claude 3.7 Sonnet cost about ₹580 before retries.
 
 ### Key Takeaways
@@ -368,11 +368,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Why I Quote ₹55K Websites in Junagadh: 2026 Margin Math',
-        'slug'         => 'quote-55k-websites-junagadh',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Learn why I quote ₹55K websites in Junagadh, the 2026 margin math behind it, and the three costs that make ₹15K builds fail. Read the ledger inside.',
-        'body'         => <<<'BODY'
+        'title' => 'Why I Quote ₹55K Websites in Junagadh: 2026 Margin Math',
+        'slug' => 'quote-55k-websites-junagadh',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Learn why I quote ₹55K websites in Junagadh, the 2026 margin math behind it, and the three costs that make ₹15K builds fail. Read the ledger inside.',
+        'body' => <<<'BODY'
 **Quick Answer**: I quote ₹55,000 for a business website in Junagadh because the build needs 38 hours of senior work, ₹6,200 of hosting and tooling, and a 20% buffer for scope changes. A ₹15,000 quote is not a cheaper version of the same site. It is a different product with no performance work, no analytics, and no one answering the phone after delivery.
 
 ### Key Takeaways
@@ -533,11 +533,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Gemma 3n vs Phi-4 Mini: Edge Agent Cost per 1M 2026',
-        'slug'         => 'gemma-3n-vs-phi-4-mini-edge-agent',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'Gemma 3n vs Phi-4 Mini for edge AI agents in India: ₹42 vs ₹310 per 1M tokens, 2GB RAM limits, and real device tests. Read the full benchmark today.',
-        'body'         => <<<'BODY'
+        'title' => 'Gemma 3n vs Phi-4 Mini: Edge Agent Cost per 1M 2026',
+        'slug' => 'gemma-3n-vs-phi-4-mini-edge-agent',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'Gemma 3n vs Phi-4 Mini for edge AI agents in India: ₹42 vs ₹310 per 1M tokens, 2GB RAM limits, and real device tests. Read the full benchmark today.',
+        'body' => <<<'BODY'
 **Quick Answer**: For edge AI agents in India, Gemma 3n wins on memory and Phi-4 Mini wins on reasoning density. On a ₹48,000 mini PC, Gemma 3n served 1M tokens for about ₹42 in amortized hardware and power, while Phi-4 Mini cost about ₹310 per 1M because it needed a larger quantized footprint and more retries on structured tasks.
 
 ### Key Takeaways
@@ -714,11 +714,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Why I Turned Down ₹6L: The Junagadh Margin Math 2026',
-        'slug'         => 'turning-down-6l-project-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Why I turned down a ₹6L AI project in 2026: the margin math, scope traps, and the qualification checklist that protects a solo studio in Junagadh.',
-        'body'         => <<<'BODY'
+        'title' => 'Why I Turned Down ₹6L: The Junagadh Margin Math 2026',
+        'slug' => 'turning-down-6l-project-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Why I turned down a ₹6L AI project in 2026: the margin math, scope traps, and the qualification checklist that protects a solo studio in Junagadh.',
+        'body' => <<<'BODY'
 # Why I Turned Down ₹6L: The Junagadh Margin Math 2026
 
 **Quick Answer**: I turned down a ₹6,00,000 project in 2026 because the real effective rate was ₹410 per hour after a 90-day payment delay, three revision rounds, and 40 hours of unpaid presales. The gross number looked like my best month; the margin math showed it was worse than a ₹2,40,000 project with a 14-day payment term.
@@ -876,11 +876,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Next.js 16.4 Partial Prefetching: 1 Shell Per Route 2026',
-        'slug'         => 'nextjs-16-4-partial-prefetching-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Adopt Next.js 16.4 Partial Prefetching in 2026 with one shell per route: config, Link behavior, server invocation costs, and measured navigation wins.',
-        'body'         => <<<'BODY'
+        'title' => 'Next.js 16.4 Partial Prefetching: 1 Shell Per Route 2026',
+        'slug' => 'nextjs-16-4-partial-prefetching-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Adopt Next.js 16.4 Partial Prefetching in 2026 with one shell per route: config, Link behavior, server invocation costs, and measured navigation wins.',
+        'body' => <<<'BODY'
 # Next.js 16.4 Partial Prefetching: 1 Shell Per Route 2026
 
 **Quick Answer**: Next.js 16.4 enables Cache Components and Partial Prefetching by default for new apps. With Partial Prefetching, a `<Link>` fetches one reusable App Shell per route instead of one full prefetch per link, so twenty links to the same route make one request. My chat sidebar dropped from 20 prefetch requests to 2 and navigation P95 fell from 1,840ms to 240ms.
@@ -1090,11 +1090,11 @@ BODY,
     ],
 
     [
-        'title'        => 'GPT-6.1 Sol Agent Cost 2026: $2 Input vs Astra $10',
-        'slug'         => 'gpt-61-sol-cost-benchmark-2026',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'AI agent cost for GPT-6.1 Sol in 2026: $2 per 1M input, $0.10 cached input, DeepSWE results, and the full workloads where GPT-6 Astra still wins.',
-        'body'         => <<<'BODY'
+        'title' => 'GPT-6.1 Sol Agent Cost 2026: $2 Input vs Astra $10',
+        'slug' => 'gpt-61-sol-cost-benchmark-2026',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'AI agent cost for GPT-6.1 Sol in 2026: $2 per 1M input, $0.10 cached input, DeepSWE results, and the full workloads where GPT-6 Astra still wins.',
+        'body' => <<<'BODY'
 # GPT-6.1 Sol Agent Cost 2026: $2 Input vs Astra $10
 
 **Quick Answer**: GPT-6.1 Sol costs $2 per million input tokens and $10 per million output tokens, with cached input at $0.10. OpenAI positions it as near GPT-6 Astra intelligence for agentic coding, computer use, and professional work at one-fifth of Astra's $10 input and $50 output price. The cached-input discount is the line item that changes agent economics.
@@ -1265,11 +1265,11 @@ BODY,
     ],
 
     [
-        'title'        => 'AI Agent Evals 2026: Braintrust $249 vs LangSmith Cost',
-        'slug'         => 'langsmith-vs-braintrust-2026',
-        'tag'          => 'AI AGENTS',
-        'excerpt'      => 'Compare LangSmith and Braintrust for AI agent evals in 2026: trace pricing, $249 Pro vs $39 seats, CI gates, and the break-even seat count for India teams.',
-        'body'         => <<<'BODY'
+        'title' => 'AI Agent Evals 2026: Braintrust $249 vs LangSmith Cost',
+        'slug' => 'langsmith-vs-braintrust-2026',
+        'tag' => 'AI AGENTS',
+        'excerpt' => 'Compare LangSmith and Braintrust for AI agent evals in 2026: trace pricing, $249 Pro vs $39 seats, CI gates, and the break-even seat count for India teams.',
+        'body' => <<<'BODY'
 # AI Agent Evals 2026: Braintrust $249 vs LangSmith Cost
 
 **Quick Answer**: For AI agent evals in 2026, Braintrust Pro costs $249 per month with unlimited users, while LangSmith Plus costs $39 per seat per month plus trace overage. Braintrust wins above seven seats or when you meter by processed data. LangSmith wins for small LangGraph teams that want native tracing and managed deployment in one place.
