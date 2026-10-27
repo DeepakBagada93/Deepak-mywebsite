@@ -1,6 +1,14 @@
 {{-- INR / USD currency switcher. Safe to include more than once per page. --}}
-@php $activeCurrency = $storeCurrency ?? \App\Support\Money::default(); @endphp
-<div class="currency-switch" role="group" aria-label="Choose currency">
+@php
+    $activeCurrency = $storeCurrency ?? \App\Support\Money::default();
+    $isFloating = $floating ?? true;
+@endphp
+<div class="currency-switch {{ $isFloating ? 'currency-switch--floating' : '' }}" role="group" aria-label="Choose currency">
+    @if ($isFloating)
+        <span class="currency-switch__icon" aria-hidden="true" title="Switch Store Currency">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </span>
+    @endif
     @foreach (\App\Support\Money::currencies() as $code => $meta)
         <button type="button" class="currency-switch__btn {{ $activeCurrency === $code ? 'is-active' : '' }}"
             data-currency-set="{{ $code }}"

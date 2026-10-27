@@ -3724,6 +3724,101 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
 .currency-switch__btn.is-active { background: var(--ink); color: var(--paper); }
 .currency-switch__symbol { font-size: 0.72rem; letter-spacing: 0; }
 
+/* ---------- Floating Currency Switcher (Bottom HUD) ---------- */
+.currency-switch--floating {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 9100;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 6px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(22, 22, 22, 0.16);
+    border-radius: 999px;
+    box-shadow: 0 12px 32px rgba(22, 22, 22, 0.14), 0 2px 6px rgba(22, 22, 22, 0.06);
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, bottom 0.25s ease;
+}
+
+.currency-switch--floating:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(22, 22, 22, 0.2), 0 4px 10px rgba(22, 22, 22, 0.08);
+}
+
+.currency-switch--floating .currency-switch__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding-left: 4px;
+    color: var(--muted);
+}
+
+.currency-switch--floating .currency-switch__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.currency-switch--floating .currency-switch__btn:hover {
+    color: var(--ink);
+}
+
+.currency-switch--floating .currency-switch__btn.is-active {
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(22, 22, 22, 0.22);
+}
+
+.currency-switch--floating .currency-switch__symbol {
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+@media (max-width: 980px) {
+    body:has(.store-mobile-sticky.is-visible) .currency-switch--floating {
+        bottom: calc(75px + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+@media (max-width: 640px) {
+    .currency-switch--floating {
+        left: 14px;
+        bottom: max(14px, env(safe-area-inset-bottom, 14px));
+        padding: 3px 5px;
+        gap: 2px;
+    }
+    .currency-switch--floating .currency-switch__icon {
+        display: none;
+    }
+    .currency-switch--floating .currency-switch__btn {
+        padding: 6px 11px;
+        font-size: 0.62rem;
+        gap: 3px;
+    }
+    .currency-switch--floating .currency-switch__symbol {
+        font-size: 0.72rem;
+    }
+}
+
 .store-buybox .currency-switch { margin-bottom: 18px; }
 .cart-drawer__currency { margin-bottom: 14px; }
 

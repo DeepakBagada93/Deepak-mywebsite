@@ -9,7 +9,6 @@
             <h1 class="section__title"><span class="split-lines">Buy once. Own forever. Ship today.</span></h1>
             <p class="store__lede">Battle-tested AI toolkits, boilerplates and automation engines I build with every day — packaged as instant downloads. No subscriptions, no lock-in, commercial license included.</p>
             <div class="store__hero-bar">
-                @include('products.partials.currency-switch')
                 <a href="{{ route('products.track') }}" class="mono store__track-link">Already bought? Track your order →</a>
             </div>
             <div class="section__rule" aria-hidden="true"></div>

@@ -54,8 +54,17 @@ class ProductsTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('data-store-currency', false);
         $response->assertSee('data-currency-set="USD"', false);
+        $response->assertSee('currency-switch--floating', false);
         // MCP Server Launch Kit is ₹3,499 / $49.
         $response->assertSee('$49');
+
+        $single = $this->get('/products/mcp-server-launch-kit');
+        $single->assertStatus(200);
+        $single->assertSee('currency-switch--floating', false);
+
+        $checkout = $this->get('/products/checkout');
+        $checkout->assertStatus(200);
+        $checkout->assertDontSee('currency-switch--floating', false);
     }
 
     public function test_usd_checkout_prices_in_us_dollars(): void

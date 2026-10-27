@@ -119,6 +119,10 @@
 
     @include('partials.footer')
 
+    @if (request()->routeIs('products.index', 'products.show'))
+        @include('products.partials.currency-switch', ['floating' => true])
+    @endif
+
     @include('products.partials.cart')
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
