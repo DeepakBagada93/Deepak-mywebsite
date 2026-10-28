@@ -129,7 +129,7 @@ jobs:
             echo "$SSH_RAW_OR_B64" | tr -d '\r ' | base64 -d > ~/.ssh/deploy_key 2>/dev/null || printf "%s\n" "$SSH_RAW_OR_B64" > ~/.ssh/deploy_key
           fi
           chmod 600 ~/.ssh/deploy_key
-          LATEST_SLUG=$(php -r '$p=require "data/posts.php"; usort($p, fn($a,$b)=>(strcmp($b["published_at"]??"", $a["published_at"]??"") ?: strcmp($a["slug"]??"", $b["slug"]??""))); foreach($p as $x){ if(!preg_match("/-(variant-\d+|v\d+)$/",$x["slug"])){ echo $x["slug"]; break; }}')
+          LATEST_SLUG=$(php -r '$p=require "data/posts.php"; $tz=new DateTimeZone("Asia/Kolkata"); $now=new DateTimeImmutable("now", $tz); $p=array_values(array_filter($p, fn($x)=>isset($x["published_at"]) && new DateTimeImmutable($x["published_at"], $tz) <= $now)); usort($p, fn($a,$b)=>(strcmp($b["published_at"]??"", $a["published_at"]??"") ?: strcmp($a["slug"]??"", $b["slug"]??""))); foreach($p as $x){ if(!preg_match("/-(variant-\d+|v\d+)$/",$x["slug"])){ echo $x["slug"]; break; }}')
           echo "Expecting latest post on live journal: $LATEST_SLUG"
           for i in 1 2 3; do
             PAGE1_MATCH=$(curl -sL "https://deepakbagada.in/journal" | grep "$LATEST_SLUG" || true)
