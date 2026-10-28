@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => '₹2L Build Deposit 2026: My 3-Stage Contract Rules',
-        'slug'         => 'build-deposit-3-stage-milestone-contract',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'India build deposit 2026: my ₹2L three-stage milestone contract keeps scope, cash flow, and delivery predictable. Includes the exact invoice clauses.',
-        'body'         => <<<'BODY'
+        'title' => '₹2L Build Deposit 2026: My 3-Stage Contract Rules',
+        'slug' => 'build-deposit-3-stage-milestone-contract',
+        'tag' => 'MY STORY',
+        'excerpt' => 'India build deposit 2026: my ₹2L three-stage milestone contract keeps scope, cash flow, and delivery predictable. Includes the exact invoice clauses.',
+        'body' => <<<'BODY'
 **Quick Answer**: A ₹2L build should be split into three milestones: 40% on signed scope, 40% on staging acceptance, and 20% on production handover. In 2026 I use this structure on every custom build in Junagadh because it keeps cash flow positive, gives the client a real exit at each gate, and leaves no single invoice large enough to become a hostage situation.
 
 ### Key Takeaways
@@ -202,11 +202,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Laravel Octane Concurrency: 3 Bugs at P95 42ms Fixed',
-        'slug'         => 'laravel-octane-concurrency-p95-bugs',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Laravel Octane concurrency: three real P95 bugs, why workers drift, and the exact fixes. Includes config, Valkey queue code, and a 10K-request test.',
-        'body'         => <<<'BODY'
+        'title' => 'Laravel Octane Concurrency: 3 Bugs at P95 42ms Fixed',
+        'slug' => 'laravel-octane-concurrency-p95-bugs',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Laravel Octane concurrency: three real P95 bugs, why workers drift, and the exact fixes. Includes config, Valkey queue code, and a 10K-request test.',
+        'body' => <<<'BODY'
 **Quick Answer**: Laravel Octane concurrency problems in 2026 usually come from three bugs: static state leaking between requests, a stale PDO connection after a worker fork, and blocking queue work inside the event loop. Fixing those three on a 4-vCPU Hostinger VPS moved a client dashboard from 610ms P95 to 42ms P95 across 10,000 requests.
 
 ### Key Takeaways
@@ -424,11 +424,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Qwen 3 vs Llama 3.3: Self-Hosted AI Agent Speed 2026',
-        'slug'         => 'qwen-3-vs-llama-3-3-self-hosted-agent-throughput',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'Self-hosted AI agents: Qwen 3 vs Llama 3.3 throughput, JSON reliability, and ₹ per 1M tokens on one 24GB GPU. Benchmarks and full vLLM flags inside.',
-        'body'         => <<<'BODY'
+        'title' => 'Qwen 3 vs Llama 3.3: Self-Hosted AI Agent Speed 2026',
+        'slug' => 'qwen-3-vs-llama-3-3-self-hosted-agent-throughput',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'Self-hosted AI agents: Qwen 3 vs Llama 3.3 throughput, JSON reliability, and ₹ per 1M tokens on one 24GB GPU. Benchmarks and full vLLM flags inside.',
+        'body' => <<<'BODY'
 **Quick Answer**: Qwen 3 30B-A3B is the faster self-hosted agent model in 2026 when one 24GB GPU is the budget: 62 tok/s single-stream and 410 tok/s aggregate at 16 concurrent requests. Llama 3.3 70B wins on hard tool-call accuracy, 94% versus 91%, but needs 48GB of VRAM and costs ₹126 per 1M tokens against ₹38 for Qwen.
 
 ### Key Takeaways
@@ -659,11 +659,11 @@ BODY,
     ],
 
     [
-        'title'        => 'MCP Tool Result Caching: Cut Agent Cost 38% in 2026',
-        'slug'         => 'mcp-tool-result-caching-agent-cost',
-        'tag'          => 'AI AGENTS',
-        'excerpt'      => 'MCP tool result caching cuts agent API spend 38% with content-addressed keys, TTL rules, and invalidation. Working code and a real cost table inside.',
-        'body'         => <<<'BODY'
+        'title' => 'MCP Tool Result Caching: Cut Agent Cost 38% in 2026',
+        'slug' => 'mcp-tool-result-caching-agent-cost',
+        'tag' => 'AI AGENTS',
+        'excerpt' => 'MCP tool result caching cuts agent API spend 38% with content-addressed keys, TTL rules, and invalidation. Working code and a real cost table inside.',
+        'body' => <<<'BODY'
 **Quick Answer**: MCP tool result caching cut agent cost 38% in my 2026 production deployments by storing read-only tool responses under content-addressed keys with short TTLs. The cache key hashes the server name, tool name, normalized arguments, and schema version. Write tools never cache. On 1.2 million monthly calls, hit rate reached 41% and the monthly bill fell from ₹48,200 to ₹29,800.
 
 ### Key Takeaways
@@ -918,11 +918,11 @@ BODY,
     ],
 
     [
-        'title'        => 'AI Agency Delivery OS: 7 SOPs Cut Rework 40% 2026',
-        'slug'         => 'ai-agency-delivery-os-7-sops',
-        'tag'          => 'AUTOMATION',
-        'excerpt'      => 'Deploy an AI agency delivery OS with 7 SOPs that cut rework 40%, protect margins, and make handoffs predictable. Includes checklists and a ledger.',
-        'body'         => <<<'BODY'
+        'title' => 'AI Agency Delivery OS: 7 SOPs Cut Rework 40% 2026',
+        'slug' => 'ai-agency-delivery-os-7-sops',
+        'tag' => 'AUTOMATION',
+        'excerpt' => 'Deploy an AI agency delivery OS with 7 SOPs that cut rework 40%, protect margins, and make handoffs predictable. Includes checklists and a ledger.',
+        'body' => <<<'BODY'
 **Quick Answer**: An AI agency delivery OS built on seven SOPs cut rework 40% in my Junagadh studio because every handoff has a named artifact, an owner, and a gate. The SOPs cover intake, scope, build handoff, QA evidence, demo, invoicing, and a 30-day review. Rework fell from 31% to 18% over 90 days across nine client builds.
 
 ### Key Takeaways
