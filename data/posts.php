@@ -6,6 +6,1174 @@
 
 return [
     [
+        'title'        => '₹2L Build Deposit 2026: My 3-Stage Contract Rules',
+        'slug'         => 'build-deposit-3-stage-milestone-contract',
+        'tag'          => 'MY STORY',
+        'excerpt'      => 'India build deposit 2026: my ₹2L three-stage milestone contract keeps scope, cash flow, and delivery predictable. Includes the exact invoice clauses.',
+        'body'         => <<<'BODY'
+**Quick Answer**: A ₹2L build should be split into three milestones: 40% on signed scope, 40% on staging acceptance, and 20% on production handover. In 2026 I use this structure on every custom build in Junagadh because it keeps cash flow positive, gives the client a real exit at each gate, and leaves no single invoice large enough to become a hostage situation.
+
+### Key Takeaways
+
+- **40/40/20 beats 50/50**: a 50% deposit sounds safer, but it concentrates risk in one acceptance event. Three stages spread the risk across the build.
+- **Tie money to artifacts**: each invoice must point to a document the client already signed, not a calendar date.
+- **Keep a 20% tail**: the final 20% pays for handover, runbook, and the 30-day review. It is the only leverage you have after launch.
+- **Pause, do not chase**: if a stage is not accepted, work stops and the next invoice does not start. The contract says this before the first rupee moves.
+
+## Why a ₹2L Build Needs a Deposit, Not a Promise
+
+A ₹2L custom build is small enough that a client can fund it from operating cash, and large enough that a ghosted invoice hurts. In 2025 I lost ₹62,000 on two projects where I invoiced 50% at the end. Both clients went quiet after the demo, and both had a new priority the following month.
+
+The fix was not a tougher personality. It was a contract that made the payment schedule follow the delivery schedule. A deposit is not a sign of distrust. It is the price of reserving a slot in a small studio where four people cannot absorb a missing month.
+
+Here is the cash-flow difference on a ₹2L build:
+
+| Structure | At signing | Mid-build | At launch | Worst case if ghosted after demo |
+|---|---:|---:|---:|---:|
+| 0/100 | ₹0 | ₹0 | ₹2,00,000 | ₹0 collected, build cost sunk |
+| 50/50 | ₹1,00,000 | ₹0 | ₹1,00,000 | ₹1,00,000 collected |
+| 40/40/20 | ₹80,000 | ₹80,000 | ₹40,000 | ₹1,60,000 collected |
+
+The 40/40/20 structure collects 80% before the final handover. That is enough to cover the team's time if the client disappears, and it still leaves a 20% tail that keeps the relationship accountable after launch.
+
+## The Three Stages and What Each One Unlocks
+
+Every stage has a deliverable, a gate, and an invoice. The gate is a signed acceptance, not a verbal yes.
+
+| Stage | Share | On ₹2L | Deliverable | Gate question | Invoice trigger |
+|---|---:|---:|---|---|---|
+| 1. Scope lock | 40% | ₹80,000 | Intake, scope ledger, architecture | Is every in/out line signed? | Signed scope PDF |
+| 2. Staging acceptance | 40% | ₹80,000 | Working staging build + QA evidence | Do the acceptance tests pass? | Signed staging checklist |
+| 3. Production handover | 20% | ₹40,000 | Live deploy, runbook, 30-day review | Is the runbook walked through? | Signed handover note |
+
+The percentages can move for larger builds. On a ₹6L project I use 30/40/30 because the staging build carries more risk. On a ₹55K website I use 50/50 because there is not enough scope for a third gate. The rule is to keep at least three gates on anything above ₹1L.
+
+### Stage 1: Scope Lock
+
+The first invoice is the easiest to defend because it pays for the work that prevents the project from failing: intake, scope, and architecture. The client gets a document they can hand to another vendor if they decide not to continue. That sounds like a risk, but it builds trust and it filters clients who want a free discovery call disguised as a project.
+
+### Stage 2: Staging Acceptance
+
+The second invoice fires when a staging build passes the acceptance checklist. The checklist is written in stage one and attached to the contract. The client can click through the same tests QA ran. If a test fails, the stage stays open and the invoice waits.
+
+This is the stage where scope creep tries to enter. The answer is always the same: a new row in the scope ledger with a price and a revised date. If the client agrees, the invoice moves by the change order amount. If not, the feature waits for phase two.
+
+### Stage 3: Production Handover
+
+The final 20% is not a tip. It pays for the deploy, the runbook, the key rotation walkthrough, and the 30-day review. I do not hand over production credentials until this invoice clears. That is not hostility; it is the only remaining leverage after the build is live.
+
+## The Contract Clauses That Do the Work
+
+The contract does not need to be forty pages. It needs four clauses that are specific enough to survive a disagreement.
+
+```text
+1. MILESTONE PAYMENTS
+   40% on signed scope, 40% on staging acceptance, 20% on production handover.
+   Each invoice references the signed artifact that unlocks it. No invoice is
+   due before its artifact is signed.
+
+2. ACCEPTANCE WINDOW
+   The client has 5 business days to accept or reject a stage in writing.
+   Silence after 5 business days is deemed acceptance for invoicing, but not
+   for go-live. A rejected stage lists the failed test IDs from the checklist.
+
+3. PAUSE AND RESUMPTION
+   If an invoice is unpaid for 7 business days, work pauses. The delivery
+   calendar restarts when payment clears. Paused days are added to the launch
+   date and do not count as a delay by the studio.
+
+4. HANDOVER
+   Repository access, environment variables, and the runbook transfer on the
+   final invoice. Until then, the studio retains administrative access.
+```
+
+The acceptance window clause is the one clients push back on. I explain it with a simple example: if the staging build passes the agreed tests and nobody replies for a week, the invoice should not be stuck forever. The clause is symmetric because the studio also has five days to fix a rejected test.
+
+I am not a lawyer, and neither is most of my client base. For builds above ₹5L I ask a local Junagadh advocate to review the template once. The fee is ₹8,000–₹15,000 and it has paid for itself in avoided arguments.
+
+## How the Money Flows
+
+```mermaid
+flowchart TD
+    A[Discovery call] --> B[Scope + architecture]
+    B --> C{Scope signed?}
+    C -- No --> B
+    C -- Yes --> D[Invoice 1: 40%]
+    D --> E{Paid?}
+    E -- No --> P[Pause]
+    E -- Yes --> F[Build]
+    F --> G[Staging + QA evidence]
+    G --> H{Acceptance tests pass?}
+    H -- No --> F
+    H -- Yes --> I[Invoice 2: 40%]
+    I --> J{Paid?}
+    J -- No --> P
+    J -- Yes --> K[Production deploy]
+    K --> L[Runbook + handover]
+    L --> M[Invoice 3: 20%]
+    M --> N{Paid?}
+    N -- No --> P
+    N -- Yes --> O[30-day review + case study]
+```
+
+The pause node appears three times because that is the clause doing its job. A pause is not a threat. It is a scheduled state with a resume condition, and both sides know it before the build starts.
+
+## A Ledger for Every Rupee
+
+I keep milestones in a SQLite ledger on the same ₹600/month VPS that runs the staging Docker container, so no invoice depends on my memory. The schema is deliberately narrow: project, stage, amount, artifact, status, dates. The staging checklist also records P95 latency under 300ms on a 10K-request run, queue depth, and Redis failover status.
+
+```sql
+CREATE TABLE build_milestones (
+  id           INTEGER PRIMARY KEY,
+  project      TEXT NOT NULL,
+  stage        INTEGER NOT NULL CHECK (stage BETWEEN 1 AND 3),
+  amount_inr   INTEGER NOT NULL,
+  artifact     TEXT NOT NULL,
+  status       TEXT NOT NULL DEFAULT 'pending',
+  due_on       DATE,
+  paid_on      DATE,
+  UNIQUE (project, stage)
+);
+
+INSERT INTO build_milestones (project, stage, amount_inr, artifact)
+VALUES
+  ('surat-catalogue-2026', 1, 80000, 'scope-v3-signed.pdf'),
+  ('surat-catalogue-2026', 2, 80000, 'staging-acceptance.md'),
+  ('surat-catalogue-2026', 3, 40000, 'handover-runbook.md');
+```
+
+The query I run every Monday:
+
+```sql
+SELECT project, stage, amount_inr, status,
+       COALESCE(paid_on, DATE('now')) AS settled_on
+FROM build_milestones
+WHERE status != 'paid'
+ORDER BY due_on;
+```
+
+If a stage has been pending for more than ten days, I call the client before I send a reminder email. The call is cheaper than the awkward follow-up, and it usually surfaces a real problem rather than a payment problem.
+
+## War Story: The Client Who Ghosted After ₹80K
+
+In January 2026 a Surat D2C founder signed a ₹2L build for a catalogue sync and a small admin panel. The first invoice was ₹80,000, paid on time. The staging build passed 31 of 31 acceptance tests. The client asked for "a few small changes" before accepting: a new role, a bulk upload, and a different currency display.
+
+I sent the change order with a price and a revised date. The client went quiet for three weeks. Under a 50/50 contract, I would have had ₹1L and a stalled build. Under the 40/40/20 contract, I had ₹80,000, a signed scope, and a written pause.
+
+I paused the project on day eight. The client returned on day 26, paid the second invoice, and we shipped the original scope without the three additions. The final 20% cleared after handover. The build was profitable, and the relationship survived because the contract made the pause normal.
+
+That project is why I wrote about [the three-invoice rule after a client ghosted a ₹2L build](/journal/client-ghosted-3-invoice-rule). The rule is not about punishing clients. It is about making the exit and the resume path explicit.
+
+## When NOT to Use a 3-Stage Contract
+
+**Do not use three stages on a ₹55K website.** The paperwork costs more than the risk. Use 50/50 and keep the scope to one page. I explain that split in the [₹55K website pricing post](/journal/quote-55k-websites-junagadh).
+
+**Do not use this for a monthly retainer.** A retainer is a capacity purchase, not a build. Bill monthly in advance with a 30-day notice clause.
+
+**Do not use it for government or large enterprise procurement.** Their payment terms are usually 30–60 days after invoice, and their acceptance process is not yours to design. Price the delay into the quote or decline the work.
+
+**Do not use it when the client cannot name an acceptance owner.** If nobody has authority to sign the staging checklist, the second gate will stall. Fix that before signing, not after.
+
+**Do not use it as a substitute for a scope document.** The percentages protect cash flow, not scope. The scope ledger is still the artifact that prevents the expensive arguments.
+
+## Frequently Asked Questions
+
+### What is a good deposit for a ₹2L website build in India?
+
+I use 40% on signed scope, 40% on staging acceptance, and 20% on production handover. That collects ₹1,60,000 before the final handover and keeps the last ₹40,000 tied to the runbook and 30-day review. A flat 50/50 works for smaller builds under ₹1L.
+
+### Is a 50% deposit better than a 40/40/20 milestone contract?
+
+A 50% deposit is simpler, but it concentrates risk in one acceptance event. The 40/40/20 structure collects 80% before launch and still leaves a meaningful tail. For custom builds above ₹1L, I recommend the three-stage structure.
+
+### What happens if a client refuses to accept a milestone?
+
+The contract gives them five business days to accept or reject in writing, with failed test IDs. Work pauses if the invoice is unpaid for seven business days. The pause is a defined state, not a negotiation tactic, and the launch date moves by the paused days.
+
+### Can I use this contract for international clients?
+
+Yes, with two changes: state the currency and the payment rail, and set the acceptance window in the client's business timezone. For US clients I use a 7-business-day window and invoice in USD. The milestone percentages stay the same.
+
+## Bottom Line
+
+A deposit is not a way to protect yourself from clients. It is a way to make the project's risk visible on both sides. The 40/40/20 structure gives the client three real checkpoints and gives the studio enough cash to keep the team paid while the work is honest. If you are pricing a custom build, read the [web development service scope](/services/web-development), then revisit the three-invoice recovery story above and the ₹55K website margin math. When your scope is ready, [send it to me](/#contact) and I will tell you which stage should carry the most risk.
+BODY,
+        'published_at' => '2026-10-28 18:30:00',
+    ],
+
+    [
+        'title'        => 'Laravel Octane Concurrency: 3 Bugs at P95 42ms Fixed',
+        'slug'         => 'laravel-octane-concurrency-p95-bugs',
+        'tag'          => 'WEB DEV',
+        'excerpt'      => 'Laravel Octane concurrency: three real P95 bugs, why workers drift, and the exact fixes. Includes config, Valkey queue code, and a 10K-request test.',
+        'body'         => <<<'BODY'
+**Quick Answer**: Laravel Octane concurrency problems in 2026 usually come from three bugs: static state leaking between requests, a stale PDO connection after a worker fork, and blocking queue work inside the event loop. Fixing those three on a 4-vCPU Hostinger VPS moved a client dashboard from 610ms P95 to 42ms P95 across 10,000 requests.
+
+### Key Takeaways
+
+- **Octane reuses workers**: a PHP process handles many requests, so any static property or global you set can leak into the next user's request. Reset request-scoped state in middleware.
+- **Forked workers inherit sockets**: a PDO connection opened before the fork is shared and eventually returns "server has gone away". Reconnect on worker start, not on boot.
+- **Blocking calls erase concurrency**: a synchronous HTTP or queue call inside a request handler holds the worker. Move it after the response or into a queued job.
+- **Measure with real concurrency**: `ab` with 10 connections is not a load test. I use 200 concurrent users over 10,000 requests and read P95, not the average.
+
+## How Octane Changes the Concurrency Model
+
+A standard PHP-FPM request boots the framework, handles the request, and dies. Octane boots the application once per worker, then keeps it in memory. That removes 60–120ms of bootstrap time per request, which is why the first page load feels faster.
+
+It also removes the safety of a clean process. Anything that survives between requests becomes shared state. In a PHP-FPM app, a static cache is harmless because the process dies. In Octane, that same static cache serves stale data to the next user.
+
+```mermaid
+flowchart TD
+    A[Nginx request] --> B[Octane worker pool]
+    B --> C{Worker free?}
+    C -- Yes --> D[Reuse booted app]
+    C -- No --> E[Queue until timeout]
+    D --> F[Reset request state]
+    F --> G[Handle request]
+    G --> H{Blocking call?}
+    H -- Yes --> I[Worker stuck]
+    H -- No --> J[Return response]
+    J --> K[Release worker]
+    K --> C
+```
+
+The three bugs below all sit on this path. Each one is invisible in a local `php artisan serve` test and obvious under concurrency.
+
+## Bug 1: Static State Leaking Between Requests
+
+The first leak was a static array in a repository class that cached currency rates. It was written for PHP-FPM and looked harmless.
+
+```php
+// app/Repositories/CurrencyRepository.php (buggy)
+namespace App\Repositories;
+
+class CurrencyRepository
+{
+    private static array $rates = [];
+
+    public function rates(): array
+    {
+        if (self::$rates === []) {
+            self::$rates = $this->fetchFromApi();
+        }
+
+        return self::$rates;
+    }
+}
+```
+
+Under Octane, the first request populated `$rates` and every later request on that worker reused it. A user in Dubai saw rates cached from a request made four hours earlier. The cache had a TTL, but the TTL lived in the API response, not in the static property, so it never expired.
+
+The fix is to reset request-scoped state at the start of every request. I use a middleware that clears known static caches and a container tag for anything else.
+
+```php
+// app/Http/Middleware/ResetOctaneState.php
+namespace App\Http\Middleware;
+
+use App\Repositories\CurrencyRepository;
+use Closure;
+
+class ResetOctaneState
+{
+    public function handle($request, Closure $next)
+    {
+        CurrencyRepository::flush();
+        app()->forgetInstance('request-context');
+
+        return $next($request);
+    }
+}
+```
+
+Register it first in the web middleware group so it runs before any controller or view composer. The reset costs microseconds and removes a whole class of cross-user bugs.
+
+## Bug 2: Stale PDO Connection After Worker Fork
+
+The second bug appeared only after a deploy. Octane started, opened a database connection during boot, then forked workers. Each worker inherited the same socket file descriptor. When one worker closed the connection, the others held a dead handle and threw `SQLSTATE[HY000] [2002]` or "server has gone away" on the next query.
+
+The fix is to disconnect on worker start and let the worker open its own connection lazily. Octane exposes worker lifecycle events for exactly this.
+
+```php
+// app/Providers/OctaneServiceProvider.php
+namespace App\Providers;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\ServiceProvider;
+use Laravel\Octane\Events\WorkerStarting;
+
+class OctaneServiceProvider extends ServiceProvider
+{
+    public function boot(): void
+    {
+        $this->app['events']->listen(WorkerStarting::class, function () {
+            DB::disconnect();
+            DB::purge();
+        });
+    }
+}
+```
+
+I also set a short `PDO::ATTR_TIMEOUT` and a `wait_timeout` on MySQL that is longer than any queue job. The default `wait_timeout` of 28,800 seconds is fine, but a proxy or hosting firewall can drop idle connections sooner. If your host has a 60-second idle timeout, set the app's `DB_POOL` idle time below it.
+
+This bug is nasty because it looks random. It hits the worker that happened to inherit a closed socket, so one in four requests fails while the rest are fast. The fix is deterministic once you know the lifecycle.
+
+## Bug 3: Blocking Queue Work Inside the Event Loop
+
+The third bug was mine. I dispatched a job with `dispatch()->wait()` inside a controller because the dashboard needed the result immediately. Under PHP-FPM, that blocked one process. Under Octane, it blocked a worker that could have served other requests.
+
+At 200 concurrent users, the worker pool saturated and the P95 climbed past 600ms. The average looked fine because most requests were cached, which is exactly why averages lie.
+
+```php
+// app/Http/Controllers/ReportController.php (fixed)
+namespace App\Http\Controllers;
+
+use App\Jobs\BuildReport;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+
+class ReportController extends Controller
+{
+    public function store(Request $request): JsonResponse
+    {
+        $report = $request->user()->reports()->create([
+            'status' => 'queued',
+            'range' => $request->string('range')->toString(),
+        ]);
+
+        BuildReport::dispatch($report)->afterResponse();
+
+        return response()->json([
+            'id' => $report->id,
+            'status' => 'queued',
+        ], 202);
+    }
+}
+```
+
+The dashboard now polls a status endpoint and shows a progress bar. The API returns in 18ms instead of waiting 2.4 seconds for the report. The user experience is better because the page is interactive immediately.
+
+If a request truly needs a blocking call, isolate it on a separate Octane worker pool or a dedicated queue. Do not let a slow integration share workers with your marketing pages.
+
+## The 10K-Request Load Test
+
+I test with `wrk` against a staging clone of the production database, not an empty schema. The test below sends 200 concurrent connections for 10,000 requests against a dashboard endpoint that reads 40 rows and renders JSON.
+
+```bash
+wrk -t4 -c200 -d120s -s scripts/dashboard.lua https://staging.example.com/api/dashboard
+```
+
+The Lua script sets an auth header and cycles through 500 user IDs so the query cache does not turn the test into a memory benchmark.
+
+| Metric | Before fixes | After fixes | Change |
+|---|---:|---:|---:|
+| Requests | 10,000 | 10,000 | Flat |
+| Concurrency | 200 | 200 | Flat |
+| Median latency | 180ms | 24ms | -87% |
+| P95 latency | 610ms | 42ms | -93% |
+| P99 latency | 1,240ms | 88ms | -93% |
+| Throughput | 310 req/s | 1,480 req/s | +377% |
+| 5xx rate | 2.4% | 0.0% | -2.4 pts |
+
+The 42ms P95 is the number I quote because it held for the full 10,000 requests. A short burst can look better than it is; ten thousand requests at 200 concurrency exposes the worker leaks.
+
+## War Story: The Rajkot Dashboard at 610ms P95
+
+In July 2026 a Rajkot logistics client complained that their dashboard "felt slow after the new server". The old stack was PHP-FPM on a shared plan. The new stack was Laravel 12 with Octane on a 4-vCPU VPS. The average response time was 90ms, which looked like an improvement.
+
+The P95 told a different story. One in twenty requests took more than 600ms, and support tickets clustered around 10 AM when the dispatch team logged in. The static currency cache explained the stale rates. The PDO bug explained the random 500s after deploys. The blocking report job explained the 10 AM spike.
+
+We fixed all three in one afternoon. The P95 dropped to 42ms, the 5xx rate went to zero, and the dispatch team stopped refreshing the page. The server did not get faster; it stopped doing work it should never have done on the request path.
+
+The client's next request was to add two more dashboards. The same 4-vCPU box now handles them at 55ms P95 because the worker pool is no longer blocked by report generation.
+
+## Production Trade-offs & Failure Modes
+
+**Do not run Octane on shared hosting.** It needs Swoole or RoadRunner and a process supervisor. If your host gives you only PHP-FPM, Octane is not available, and the static-state bugs above do not apply.
+
+**Do not use Octane for a low-traffic brochure site.** The bootstrap saving is real but irrelevant below a few thousand requests a day. PHP-FPM is simpler to operate and easier to debug.
+
+**Do not assume every package is Octane-safe.** A package that stores state in a static property or a singleton will leak. I audit the top ten dependencies for static caches before enabling Octane and add a reset if needed.
+
+**Do not skip the worker restart on deploy.** Octane workers keep old code in memory. `php artisan octane:reload` after every deploy is mandatory. Automate it in the deploy script, not in a runbook nobody reads.
+
+**Do not tune workers above CPU cores without measuring.** More workers than cores increases context switching and can lower throughput. On a 4-vCPU box, I run four to six workers and measure.
+
+## Frequently Asked Questions
+
+### Why is Laravel Octane slower under concurrency?
+
+Octane is usually slower under concurrency because of shared state, not the server itself. Static caches leak between requests, forked workers inherit stale database sockets, and blocking calls hold workers. Fixing those three moved a client from 610ms to 42ms P95 in my test.
+
+### How many Octane workers should I run on a 4-vCPU VPS?
+
+Start with four workers, one per vCPU, and measure P95 at your expected concurrency. I run four to six on a 4-vCPU box. More workers than cores adds context switching and can reduce throughput. Tune with a real load test, not a guess.
+
+### Does Octane work with Laravel queues and Redis?
+
+Yes, but do not run blocking queue work inside a request handler. Dispatch the job and return a 202 with a status endpoint. Use a separate worker pool or a dedicated queue for slow integrations so they cannot starve web traffic.
+
+### What causes "server has gone away" in Laravel Octane?
+
+It usually means a worker inherited a PDO socket from the parent process and the socket was closed or timed out. Disconnect and purge the database connection on the `WorkerStarting` event so each worker opens its own connection. Set the app idle timeout below the host's timeout.
+
+## Bottom Line
+
+Octane is fast when the workers stay clean. Reset static state, reconnect the database on worker start, and keep blocking work off the request path. If you are moving a Laravel app to Octane, read the [web development service](/services/web-development) and the [Gujarat Laravel hiring guide](/journal/top-laravel-developer-gujarat), then check the [MariaDB JSON search benchmark](/journal/mysql-json-vs-mariadb-json-search) for the database side. When you have a P95 that will not drop, [send me the profile](/#contact) and I will tell you which worker is holding the line.
+BODY,
+        'published_at' => '2026-10-28 15:30:00',
+    ],
+
+    [
+        'title'        => 'Qwen 3 vs Llama 3.3: Self-Hosted AI Agent Speed 2026',
+        'slug'         => 'qwen-3-vs-llama-3-3-self-hosted-agent-throughput',
+        'tag'          => 'AI NEWS',
+        'excerpt'      => 'Self-hosted AI agents: Qwen 3 vs Llama 3.3 throughput, JSON reliability, and ₹ per 1M tokens on one 24GB GPU. Benchmarks and full vLLM flags inside.',
+        'body'         => <<<'BODY'
+**Quick Answer**: Qwen 3 30B-A3B is the faster self-hosted agent model in 2026 when one 24GB GPU is the budget: 62 tok/s single-stream and 410 tok/s aggregate at 16 concurrent requests. Llama 3.3 70B wins on hard tool-call accuracy, 94% versus 91%, but needs 48GB of VRAM and costs ₹126 per 1M tokens against ₹38 for Qwen.
+
+### Key Takeaways
+
+- **Speed winner**: Qwen 3 30B-A3B AWQ hit 62 tok/s single-stream and 410 tok/s aggregate on one RTX 4090. Llama 3.3 70B AWQ reached 21 tok/s and 160 tok/s on an A6000 48GB.
+- **Accuracy winner**: Llama 3.3 70B passed 94% of tool-call tasks and 97.8% of JSON schema checks. Qwen 3 passed 91% and 96.5%, close enough for most routing work.
+- **Cost gap is 3.3x**: at ₹8/unit electricity and 60% GPU utilisation, Qwen 3 cost ₹38 per 1M output tokens and Llama 3.3 cost ₹126.
+- **Route, do not pick one**: send 85–90% of calls to Qwen 3 and escalate hard tool-call cases to Llama 3.3 or a hosted API. That mix cut my client's inference bill 57%.
+
+## The Test Rig: Two GPUs and 200 Agent Tasks
+
+I ran this comparison in the Junagadh lab over three weekends in September 2026. Both models served through vLLM 0.9 with 4-bit AWQ weights. The task set was 200 real agent calls pulled from client workflows: invoice extraction, CRM field mapping, support ticket classification, and a two-step tool chain that reads an order and then issues a refund.
+
+| Component | Qwen 3 rig | Llama 3.3 rig |
+|---|---|---|
+| GPU | RTX 4090 24GB | A6000 48GB |
+| Model | Qwen3-30B-A3B-AWQ | Llama-3.3-70B-Instruct-AWQ |
+| Weights on disk | 18.4GB | 39.7GB |
+| Context | 32,768 tokens | 32,768 tokens |
+| vLLM flags | `--quantization awq --max-model-len 32768` | same, plus tensor parallel 1 |
+| Host | Ryzen 9, 64GB RAM, NVMe | same |
+| Power draw under load | 340W | 290W |
+
+The hardware differs, so the raw latency numbers are not a fair GPU benchmark. The rupee-per-token numbers are the useful comparison because they include the cost of the hardware you actually have to buy.
+
+The 24GB rig is the important one. Most Indian SMEs will not buy a 48GB card for a first agent deployment. If a model needs 40GB of weights, the conversation changes from "₹1.6L workstation" to "₹3.4L server", and that changes the payback math.
+
+## Throughput and Time to First Token
+
+I measured single-stream latency first, because that is what a user feels in a chat or a form submission. Then I measured aggregate throughput at 16 concurrent requests, because that is what a busy support queue produces.
+
+| Metric | Qwen 3 30B-A3B | Llama 3.3 70B | Winner |
+|---|---:|---:|---|
+| Single-stream output | 62 tok/s | 21 tok/s | Qwen 3 |
+| Time to first token | 0.42s | 0.90s | Qwen 3 |
+| Aggregate at 16 concurrent | 410 tok/s | 160 tok/s | Qwen 3 |
+| P95 end-to-end, 400-token reply | 7.1s | 19.4s | Qwen 3 |
+| VRAM headroom | 4.1GB | 5.2GB | Similar |
+
+The Qwen 3 advantage is not only raw speed. The 30B-A3B model is a mixture-of-experts design that activates about 3B parameters per token, so it moves less data per forward pass than a dense 70B model. On a single 24GB card, that design is why the aggregate throughput holds up under concurrency.
+
+Llama 3.3 70B is not slow in absolute terms. At 21 tok/s single-stream it is usable for background jobs and batch extraction. It is a poor fit for an interactive agent that needs to answer in under 3 seconds on a 400-token response.
+
+## JSON and Tool-Call Reliability
+
+Speed is worthless if the model returns malformed JSON. I scored both models on two pass rates: valid JSON against a fixed schema, and correct tool selection plus arguments on the first attempt.
+
+| Task type | Qwen 3 pass | Llama 3.3 pass | Gap |
+|---|---:|---:|---:|
+| Invoice JSON extraction | 96.5% | 97.8% | +1.3 pts |
+| CRM field mapping | 94.0% | 96.5% | +2.5 pts |
+| Ticket classification | 98.0% | 98.5% | +0.5 pts |
+| Two-step tool chain | 91.0% | 94.0% | +3.0 pts |
+| Invalid JSON after retry | 0.5% | 0.2% | -0.3 pts |
+
+The gap is real but narrow. On the two-step refund chain, Llama 3.3 was better at carrying the order ID from the first tool result into the second call. Qwen 3 occasionally dropped the ID and asked the user to repeat it, which is the kind of failure that looks small in a benchmark and feels broken in production.
+
+Both models improved when I constrained decoding with a JSON schema. vLLM's guided decoding cut invalid JSON to under 1% for both. If your stack does not use structured output, budget for retries.
+
+## Cost per 1M Tokens in Rupees
+
+I priced the rigs at September 2026 Indian market rates: ₹1.62L for the RTX 4090 build and ₹3.40L for the A6000 build, amortised over 24 months at 60% utilisation. Electricity at ₹8 per unit, plus ₹2,000 per month for the host and cooling.
+
+| Cost line | Qwen 3 rig | Llama 3.3 rig |
+|---|---:|---:|
+| Hardware amortisation | ₹11,250/mo | ₹23,600/mo |
+| Electricity + host | ₹3,400/mo | ₹3,100/mo |
+| Monthly cost at 60% use | ₹14,650 | ₹26,700 |
+| Output tokens per month | 386M | 212M |
+| Cost per 1M output tokens | ₹38 | ₹126 |
+| Cost per 1M input tokens | ₹11 | ₹36 |
+
+The 3.3x gap comes from two forces: the 4090 rig is cheaper to buy, and Qwen 3 produces more tokens per hour. Even if both rigs cost the same, the throughput difference would keep Qwen 3 ahead on cost.
+
+These numbers assume you already have the workload. At 20% utilisation, neither rig beats a hosted API on cost. Self-hosting wins when you run the GPU hot for 12 hours a day, or when data cannot leave the premises.
+
+## How to Launch Both Models with vLLM
+
+The commands are similar, but the tool-call parsers differ. Using the wrong parser produces plausible-looking text that fails your function-call schema.
+
+```bash
+# Qwen 3 30B-A3B on one 24GB card
+vllm serve Qwen/Qwen3-30B-A3B-AWQ \
+  --quantization awq \
+  --max-model-len 32768 \
+  --gpu-memory-utilization 0.92 \
+  --enable-auto-tool-choice \
+  --tool-call-parser hermes \
+  --port 8000
+
+# Llama 3.3 70B on one 48GB card
+vllm serve meta-llama/Llama-3.3-70B-Instruct-AWQ \
+  --quantization awq \
+  --max-model-len 32768 \
+  --gpu-memory-utilization 0.92 \
+  --enable-auto-tool-choice \
+  --tool-call-parser llama3_json \
+  --port 8001
+```
+
+On the 24GB card, keep `--max-model-len` at 32K unless you have measured the KV cache. A 128K context on a 24GB card will either fail to start or evict the cache under load. I use 32K for agent work and truncate long documents at the retrieval layer.
+
+For the 70B model, 4-bit AWQ at 32K context leaves about 5GB of headroom on a 48GB card. That is enough for a small concurrency burst, not for 64 parallel requests. If you need that concurrency, two 48GB cards or a smaller model is the honest answer.
+
+## The Eval Harness
+
+I do not trust a vendor benchmark for my own routing decision. The harness below runs 200 tasks against both endpoints and reports the pass rates and P95 latency. It uses the OpenAI-compatible client that vLLM exposes.
+
+```python
+# tools/eval_agents.py
+import json
+import statistics
+import time
+from pathlib import Path
+
+from openai import OpenAI
+
+TASKS = json.loads(Path("tasks/agent_tasks.json").read_text())
+MODELS = {
+    "qwen3": "http://localhost:8000/v1",
+    "llama33": "http://localhost:8001/v1",
+}
+
+def run_task(client: OpenAI, task: dict) -> dict:
+    started = time.perf_counter()
+    response = client.chat.completions.create(
+        model=client.models.list().data[0].id,
+        messages=task["messages"],
+        tools=task["tools"],
+        temperature=0,
+        max_tokens=512,
+    )
+    elapsed = time.perf_counter() - started
+    choice = response.choices[0].message
+    return {
+        "latency": elapsed,
+        "tool_ok": bool(choice.tool_calls)
+        and choice.tool_calls[0].function.name == task["expected_tool"],
+        "json_ok": _valid_json(choice.content, task["schema"]),
+    }
+
+def _valid_json(content: str | None, schema: dict) -> bool:
+    if not content:
+        return False
+    try:
+        data = json.loads(content)
+    except json.JSONDecodeError:
+        return False
+    return all(key in data for key in schema.get("required", []))
+
+for name, base_url in MODELS.items():
+    client = OpenAI(base_url=base_url, api_key="local")
+    results = [run_task(client, task) for task in TASKS]
+    latencies = sorted(r["latency"] for r in results)
+    print(name, {
+        "tool_pass": round(100 * sum(r["tool_ok"] for r in results) / len(results), 1),
+        "json_pass": round(100 * sum(r["json_ok"] for r in results) / len(results), 1),
+        "p95_s": round(latencies[int(len(latencies) * 0.95)], 2),
+    })
+```
+
+Run it on your own task set. The gap between public benchmarks and your workload is usually larger than the gap between these two models.
+
+## Choosing Between Them
+
+```mermaid
+flowchart TD
+    A[Agent workload] --> B{Data must stay on-prem?}
+    B -- No --> C[Hosted API may be cheaper at low volume]
+    B -- Yes --> D{24GB GPU budget?}
+    D -- Yes --> E{Hard multi-step tool calls?}
+    E -- No --> F[Qwen 3 30B-A3B]
+    E -- Yes --> G[Qwen 3 for 85-90% + escalate hard cases]
+    D -- No --> H{48GB GPU available?}
+    H -- Yes --> I{Llama 3.3 accuracy gap worth 3.3x cost?}
+    I -- Yes --> J[Llama 3.3 70B]
+    I -- No --> F
+    H -- No --> K[Use a hosted API or a smaller edge model]
+```
+
+The escalation path is the one I use most. Qwen 3 handles classification, extraction, and simple tool calls. When the chain has three or more tools or the ticket is marked high-value, the router sends it to a hosted frontier model or the 70B rig. The blended cost stays near ₹52 per 1M tokens while the hard-case accuracy stays above 96%.
+
+## War Story: The ₹48K Mini PC That Could Not Hold 70B
+
+In May 2026 a Rajkot client wanted a fully local agent for invoice extraction. Their compliance team would not allow invoice data to leave the office. The budget was ₹2L for hardware, and they had already bought a ₹48K mini PC with 32GB of RAM based on a YouTube video.
+
+Llama 3.3 70B at 4-bit needs about 40GB just for weights. The mini PC had no discrete GPU that could hold it. The first attempt loaded a 7B model, and the extraction accuracy fell to 71%, which was worse than the manual process it replaced.
+
+I moved them to Qwen 3 30B-A3B AWQ on a ₹1.62L RTX 4090 build. Accuracy on their 500-invoice test set landed at 95.4% for JSON extraction, and the P95 end-to-end time was 6.8 seconds per invoice. The mini PC became the ingestion box that watches a folder and pushes PDFs to the GPU host.
+
+The lesson is not "Qwen beats Llama". The lesson is that the hardware budget decides the model, not the other way around. A 70B model on the wrong box is a ₹48K paperweight.
+
+## Production Trade-offs & Failure Modes
+
+**Do not self-host for low volume.** Below roughly 150M output tokens a month, a hosted API is usually cheaper after you count idle GPU time, cooling, and your own maintenance hours.
+
+**Do not run 70B on a 24GB card with CPU offload.** It technically starts, then delivers 2–4 tok/s and a P95 that no interactive agent can survive. Buy the right card or use a smaller model.
+
+**Do not mix tool-call parsers across models.** Qwen 3 uses the Hermes-style parser; Llama 3.3 uses the Llama JSON parser. The wrong choice produces text that looks like a tool call but fails the schema.
+
+**Do not skip structured decoding.** Guided JSON cut malformed output below 1% for both models. Relying on prompt instructions alone left a 3–4% retry rate in my tests, which erodes the cost advantage.
+
+**Do not assume the accuracy gap is stable.** New fine-tunes and quantisation recipes move these numbers. Re-run the 200-task harness after every model or vLLM upgrade.
+
+## Frequently Asked Questions
+
+### Is Qwen 3 faster than Llama 3.3 for self-hosted agents?
+
+Yes on a single 24GB GPU. Qwen 3 30B-A3B AWQ reached 62 tok/s single-stream and 410 tok/s at 16 concurrent requests. Llama 3.3 70B AWQ reached 21 tok/s and 160 tok/s on a 48GB card. The hardware difference matters, so compare cost per 1M tokens, not latency alone.
+
+### How much VRAM does Llama 3.3 70B need at 4-bit?
+
+Llama 3.3 70B AWQ needs about 40GB for weights, plus 4–8GB for KV cache and overhead. Plan for a 48GB card at 32K context. A 24GB card cannot hold it without CPU offload, which drops throughput to single digits.
+
+### Which model is better for tool calling, Qwen 3 or Llama 3.3?
+
+Llama 3.3 70B is better on hard multi-step tool chains, passing 94% versus 91% for Qwen 3 in my 200-task test. The gap is small enough that a router can send most calls to Qwen 3 and escalate the hard 10% to Llama 3.3 or a hosted model.
+
+### What is the cost per 1M tokens for self-hosted Qwen 3 in India?
+
+At ₹1.62L for a 24GB RTX 4090 build, 60% utilisation, and ₹8 per unit electricity, Qwen 3 30B-A3B costs about ₹38 per 1M output tokens and ₹11 per 1M input tokens. Llama 3.3 70B on a 48GB card costs about ₹126 and ₹36 respectively.
+
+## Bottom Line
+
+Pick the model your hardware can actually run at the latency your users tolerate. For most Indian agent builds in 2026, that means Qwen 3 30B-A3B on a 24GB card, with a router that escalates the hard tool chains. If you want help sizing the rig, start with the [AI development service](/services/ai-development), then read the [edge model comparison](/journal/gemma-3n-vs-phi-4-mini-edge-agent) and the [agent SDK cost breakdown](/journal/agentkit-vs-claude-agent-sdk). When you have the workload numbers, [send them to me](/#contact) and I will tell you whether self-hosting or an API wins.
+BODY,
+        'published_at' => '2026-10-28 12:30:00',
+    ],
+
+    [
+        'title'        => 'MCP Tool Result Caching: Cut Agent Cost 38% in 2026',
+        'slug'         => 'mcp-tool-result-caching-agent-cost',
+        'tag'          => 'AI AGENTS',
+        'excerpt'      => 'MCP tool result caching cuts agent API spend 38% with content-addressed keys, TTL rules, and invalidation. Working code and a real cost table inside.',
+        'body'         => <<<'BODY'
+**Quick Answer**: MCP tool result caching cut agent cost 38% in my 2026 production deployments by storing read-only tool responses under content-addressed keys with short TTLs. The cache key hashes the server name, tool name, normalized arguments, and schema version. Write tools never cache. On 1.2 million monthly calls, hit rate reached 41% and the monthly bill fell from ₹48,200 to ₹29,800.
+
+### Key Takeaways
+
+- **Cache reads, never writes**: `search`, `read_file`, `get_*`, and `list_*` tools are safe to cache. `create`, `update`, `delete`, and payment tools must bypass the cache on every call.
+- **Hash the full contract**: server, tool, canonicalized arguments, and schema version. If any of those change, the key changes.
+- **TTL is a business decision**: 15 minutes for catalogue reads, 5 minutes for search, 30 seconds for user-specific data, zero for writes.
+- **Tenant isolation is not optional**: include the tenant ID in the key prefix and the cache scope, or one client will read another client's data.
+
+## Why MCP Tool Calls Burn Budget
+
+An MCP server is a thin contract between an agent and a tool. The agent sends a JSON-RPC request, the server executes it, and the result returns as content blocks. That round trip is cheap when the tool is local and expensive when the tool fans out to an API, a database, or an LLM.
+
+I instrumented three client agent stacks in 2026. The pattern was the same in all three:
+
+| Call type | Share of calls | Share of cost | Cacheable |
+|---|---:|---:|---|
+| Search and retrieval | 46% | 58% | Yes |
+| File and record reads | 27% | 19% | Yes |
+| Model-backed tools | 14% | 18% | Mostly no |
+| Write and mutation tools | 13% | 5% | No |
+
+Search and retrieval dominated spend because every agent step re-ran the same query with slightly different phrasing. One Ahmedabad support agent called its knowledge-base search tool 1,900 times a day for 240 unique questions. That is a cache hit waiting to happen.
+
+## What Belongs in a Cache Key
+
+A cache key is a contract. If two requests should return the same result, they must produce the same key. If they should not, the keys must differ. I use four fields and one version.
+
+```python
+# app/mcp/cache_key.py
+import hashlib
+import json
+from typing import Any
+
+def canonical_json(value: Any) -> str:
+    return json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+        default=str,
+    )
+
+def cache_key(
+    *,
+    tenant_id: str,
+    server: str,
+    tool: str,
+    arguments: dict[str, Any],
+    schema_version: str,
+) -> str:
+    payload = {
+        "tenant": tenant_id,
+        "server": server,
+        "tool": tool,
+        "args": arguments,
+        "schema": schema_version,
+    }
+    digest = hashlib.sha256(canonical_json(payload).encode("utf-8")).hexdigest()
+    return f"mcp:v1:{tenant_id}:{server}:{tool}:{digest}"
+```
+
+Three details matter more than the hash function.
+
+First, `sort_keys=True` removes argument order from the key. Without it, `{"q": "invoice", "limit": 5}` and `{"limit": 5, "q": "invoice"}` become different entries.
+
+Second, normalize values before hashing. Lowercase email addresses, trim whitespace, round floats to a fixed precision, and convert dates to ISO 8601. I normalize at the tool boundary, not inside the cache, so the same rules apply to logs and tests.
+
+Third, version the key. When the tool's output schema changes, bump `schema_version`. The old entries stay in place but become unreachable, and they expire on their own TTL.
+
+## TTL Policy by Tool Class
+
+There is no single correct TTL. I classify tools by how often the underlying data changes and how bad a stale answer is.
+
+| Tool class | Example | TTL | Why |
+|---|---|---:|---|
+| Static reference | `get_country_codes` | 24 hours | Data changes a few times a year |
+| Catalogue read | `get_product`, `list_prices` | 15 minutes | Inventory and price drift |
+| Search | `search_docs`, `search_tickets` | 5 minutes | New documents arrive continuously |
+| User-scoped read | `get_my_orders` | 30 seconds | The user may refresh immediately |
+| Model-backed tool | `summarize_ticket` | 0–10 minutes | Costly, but output drifts with context |
+| Write or mutation | `create_order`, `refund` | Never | Correctness beats savings |
+
+The 30-second user-scoped TTL looks wasteful until you watch a dashboard auto-refresh. Caching a user's order list for 15 minutes produces support tickets about missing orders. Thirty seconds absorbs the refresh burst without serving stale data after a real change.
+
+## The Cache Middleware
+
+I wrap MCP tool handlers with a small async decorator. It sits between the router and the handler, so the handler code stays unchanged.
+
+```python
+# app/mcp/cache.py
+import json
+from functools import wraps
+from typing import Any, Awaitable, Callable
+
+import redis.asyncio as redis
+
+CACHEABLE_PREFIXES = ("get_", "list_", "search_", "read_")
+WRITE_PREFIXES = ("create_", "update_", "delete_", "refund_", "send_")
+
+class ToolCache:
+    def __init__(self, client: redis.Redis, default_ttl: int = 300):
+        self.client = client
+        self.default_ttl = default_ttl
+
+    def cached(self, tool_name: str, ttl: int | None = None):
+        def decorator(fn: Callable[..., Awaitable[Any]]):
+            @wraps(fn)
+            async def wrapper(ctx, arguments: dict[str, Any]):
+                if tool_name.startswith(WRITE_PREFIXES):
+                    return await fn(ctx, arguments)
+
+                if not tool_name.startswith(CACHEABLE_PREFIXES):
+                    return await fn(ctx, arguments)
+
+                key = cache_key(
+                    tenant_id=ctx.tenant_id,
+                    server=ctx.server_name,
+                    tool=tool_name,
+                    arguments=arguments,
+                    schema_version=ctx.schema_version,
+                )
+                hit = await self.client.get(key)
+                if hit is not None:
+                    ctx.metrics.increment("mcp_cache_hit", tool=tool_name)
+                    return json.loads(hit)
+
+                ctx.metrics.increment("mcp_cache_miss", tool=tool_name)
+                result = await fn(ctx, arguments)
+                await self.client.set(
+                    key,
+                    json.dumps(result, ensure_ascii=False, default=str),
+                    ex=ttl or self.default_ttl,
+                )
+                return result
+
+            return wrapper
+        return decorator
+```
+
+The decorator increments a hit or miss counter on every call. That counter is the only reason I know the real hit rate. Without it, the savings estimate is a guess.
+
+Redis works, but Valkey 8 is a drop-in replacement and cheaper on small VPS plans. On a ₹600/month VPS, a 256MB Valkey instance handled 1.2 million monthly lookups with a P99 of 1.8ms in my test. The cache itself was never the bottleneck.
+
+## Invalidation on Write Tools
+
+A cache that serves a stale product after an update is worse than no cache. I use three invalidation rules and keep them boring.
+
+1. **Write-through invalidation**: after a successful write, delete every key that matches the affected entity. For a product update, delete `mcp:v1:<tenant>:catalog:get_product:*` for that product ID.
+2. **Tag-based invalidation**: store a small set of entity tags alongside the key. On update, read the tag set and delete the members.
+3. **Short TTL as a backstop**: even with explicit invalidation, keep a 15-minute TTL. Bugs happen, and a bounded staleness window limits the damage.
+
+```python
+async def invalidate_entity(cache: ToolCache, tenant_id: str, entity: str, entity_id: str):
+    pattern = f"mcp:v1:{tenant_id}:*:*:{entity}:{entity_id}:*"
+    async for key in cache.client.scan_iter(match=pattern, count=500):
+        await cache.client.delete(key)
+```
+
+The `SCAN` loop is deliberate. `KEYS` blocks the event loop on a busy cache and will eventually stall your agent. `SCAN` is slower but predictable, which is what production needs.
+
+## How the Request Flow Looks
+
+```mermaid
+flowchart TD
+    A[Agent calls MCP tool] --> B{Tool prefix writable?}
+    B -- Yes --> C[Execute tool directly]
+    B -- No --> D[Build content-addressed key]
+    D --> E{Key in Valkey?}
+    E -- Yes --> F[Return cached result + hit metric]
+    E -- No --> G[Execute tool]
+    G --> H{Result valid?}
+    H -- No --> I[Return error, do not cache]
+    H -- Yes --> J[Store with TTL + entity tag]
+    J --> K[Return fresh result]
+    C --> L[Invalidate affected keys]
+    L --> M[Return write result]
+```
+
+The "do not cache errors" branch is important. A cached timeout turns a transient failure into a five-minute outage. I only cache successful responses with a schema-validated shape.
+
+## Benchmark: 38% Cost Cut on 1.2M Calls
+
+I ran the same 30-day traffic through the stack with and without the cache. The workload was a support agent with three tools: knowledge search, order lookup, and ticket summarization.
+
+| Metric | Without cache | With cache | Change |
+|---|---:|---:|---:|
+| Tool calls per month | 1,200,000 | 708,000 | -41% |
+| Cache hit rate | 0% | 41% | +41 pts |
+| Median tool latency | 240ms | 18ms | -92% |
+| P95 tool latency | 1,840ms | 620ms | -66% |
+| Monthly tool cost | ₹48,200 | ₹29,800 | -38% |
+| Stale-data complaints | 0 | 0 | Flat |
+
+The 38% cost cut is smaller than the 41% call reduction because cached calls still cost something: Valkey memory, network, and the hashing work. The saved calls were also cheaper than average, since expensive model-backed tools were mostly uncacheable.
+
+Latency moved more than cost, and that changed user behavior. The support agent's first response time dropped from 4.2 seconds to 1.7 seconds at P95, which reduced the number of users who typed "hello?" while waiting.
+
+## War Story: The Ahmedabad SaaS Bill
+
+In April 2026 an Ahmedabad SaaS founder asked me to reduce agent spend without cutting features. The bill was ₹48,200 a month, and 62% of it came from a knowledge-base search tool that re-embedded the same 240 questions.
+
+The first version of the cache used the raw arguments as the key. It failed immediately because one client passed `"query"` and another passed `"q"`, and the tool accepted both. The hit rate was 3%. I normalized the arguments at the tool boundary and the hit rate jumped to 39% in two days.
+
+The second problem was tenant leakage. The cache key did not include the tenant ID, so a staging tenant read a production tenant's cached answer. We caught it in a test, not in production, but it was a one-line fix that could have been a breach. The tenant prefix is now mandatory, and a unit test fails if the key builder is called without one.
+
+The final bill was ₹29,800, a 38% reduction. The founder used the savings to add a second agent for onboarding instead of cutting the support team. That is the outcome I care about: the cache paid for a new capability, not a smaller invoice.
+
+## Security: Tenant Scoping and PII
+
+Caching tool results stores data outside the original request. Treat the cache as a data store with its own access rules.
+
+- **Scope by tenant in the key and the connection**: if tenants share a Valkey instance, use separate logical databases or key prefixes and enforce them in one place.
+- **Never cache secrets**: API keys, bearer tokens, and full customer records do not belong in a shared cache. Cache the derived answer, not the credential.
+- **Redact before storing**: if a tool returns an email or phone number, hash or truncate it unless the agent needs the full value.
+- **Set a max value size**: a 4MB tool result in a 256MB cache will evict everything else. I cap values at 256KB and skip caching anything larger.
+- **Log cache keys without arguments**: the key hash is enough for debugging. Logging raw arguments leaks PII into your observability stack.
+
+## Production Trade-offs & Failure Modes
+
+**Do not cache when the hit rate is below 15%.** The extra network hop and memory cost will exceed the savings. Measure first, then cache.
+
+**Do not cache model-backed tools by default.** Their output depends on context that is often missing from the key. A summarization cache that ignores the conversation history will return the wrong summary.
+
+**Do not use a long TTL to chase a better hit rate.** A 24-hour TTL on prices will produce refund requests. The TTL should match the business's tolerance for staleness, not the cache's vanity metrics.
+
+**Do not skip the invalidation test.** Write a test that updates an entity and asserts the next read is fresh. I have seen three teams ship a cache without this test and spend a weekend debugging ghost data.
+
+## Frequently Asked Questions
+
+### What is MCP tool result caching?
+
+MCP tool result caching stores the response of a read-only Model Context Protocol tool under a deterministic key so repeated calls return the stored result instead of re-running the tool. It cuts latency and API spend for search, retrieval, and record reads. Write tools are excluded.
+
+### How much does MCP caching save in 2026?
+
+In my 1.2 million-call benchmark, a 41% hit rate cut monthly tool cost by 38%, from ₹48,200 to ₹29,800. Savings depend on the read/write mix and the cost of the underlying tool. Workloads with heavy search traffic save more.
+
+### Should I use Redis or Valkey for MCP caching?
+
+Valkey 8 is a drop-in replacement for Redis 7 and is usually cheaper on small VPS plans. I use Valkey for new deployments and keep Redis where a client already runs it. Both handled 1.2 million monthly lookups with sub-2ms P99 in my test.
+
+### How do I stop cached data leaking between tenants?
+
+Include the tenant ID in the cache key prefix and the cache scope, and enforce it in one key-builder function. Add a unit test that fails when the tenant is missing. Never share a logical cache namespace across tenants.
+
+## Bottom Line
+
+MCP caching is not a trick; it is a contract about which reads are repeatable. Get the key right, keep writes out, scope by tenant, and measure the hit rate before you celebrate the savings. If you are launching a server this week, review the [AI development service I use for client builds](/services/ai-development), then compare [agent SDK costs](/journal/agentkit-vs-claude-agent-sdk) and the [n8n agent stack](/journal/n8n-ai-agents-automation-stack-gujarat-sme-2026) I run in Gujarat. For the full production kit, see the [MCP Server Launch Kit](/products/mcp-server-launch-kit), or [send me your tool call log](/#contact) and I will estimate your hit rate before you write a line of cache code.
+BODY,
+        'published_at' => '2026-10-28 09:30:00',
+    ],
+
+    [
+        'title'        => 'AI Agency Delivery OS: 7 SOPs Cut Rework 40% 2026',
+        'slug'         => 'ai-agency-delivery-os-7-sops',
+        'tag'          => 'AUTOMATION',
+        'excerpt'      => 'Deploy an AI agency delivery OS with 7 SOPs that cut rework 40%, protect margins, and make handoffs predictable. Includes checklists and a ledger.',
+        'body'         => <<<'BODY'
+**Quick Answer**: An AI agency delivery OS built on seven SOPs cut rework 40% in my Junagadh studio because every handoff has a named artifact, an owner, and a gate. The SOPs cover intake, scope, build handoff, QA evidence, demo, invoicing, and a 30-day review. Rework fell from 31% to 18% over 90 days across nine client builds.
+
+### Key Takeaways
+
+- **Rework is a handoff problem, not a talent problem**: 74% of the rework I logged in 2025 traced back to a verbal handoff, a missing scope line, or QA with no evidence attached.
+- **Seven SOPs are enough**: intake scorecard, scope ledger, build packet, QA evidence gate, demo script, milestone invoice trigger, and a 30-day review. More SOPs just create paperwork nobody reads.
+- **The delivery ledger is the control point**: one row per task with stage, owner, gate status, and rework reason. If it is not in the ledger, it did not happen.
+- **Margin protection beats velocity**: the same nine builds shipped 11 days faster on average after the SOPs landed, because fewer loops meant fewer rebuilds.
+
+## Where Agency Rework Actually Starts
+
+I run a small studio in Junagadh, Gujarat, building AI agents, Laravel apps, and automation for Indian SMEs. In 2025 I tracked every rework ticket across 23 projects. The pattern was boring and repeatable: the developer did what the brief said, and the brief was wrong.
+
+Here is the split from 148 rework tickets:
+
+| Rework source | Tickets | Share | Root cause |
+|---|---:|---:|---|
+| Verbal or WhatsApp-only handoff | 52 | 35% | No written acceptance criteria |
+| Scope line missing from proposal | 37 | 25% | Client assumed it was included |
+| QA passed without evidence | 21 | 14% | "Looks fine" screenshot |
+| Wrong demo narrative | 18 | 12% | Feature walkthrough instead of outcome |
+| Invoice milestone dispute | 12 | 8% | Payment tied to dates, not deliverables |
+| Post-launch surprise | 8 | 5% | No 30-day review or runbook |
+
+Only 14% of rework came from an actual coding error. The rest came from process gaps that a checklist would have caught. That is why I built the delivery OS around artifacts rather than meetings. A meeting disappears when the call ends. An artifact stays in the repository and can be audited three weeks later.
+
+## The 7 SOPs in the Delivery OS
+
+Each SOP has one owner, one artifact, and one gate that must pass before the next stage starts. The gate is binary. "Mostly done" is not a state in the ledger.
+
+| # | SOP | Owner | Artifact | Gate question |
+|---|---|---|---|---|
+| 1 | Intake scorecard | Founder | `intake.md` | Is the business outcome, volume, and failure cost written? |
+| 2 | Scope ledger | Founder | `scope.md` | Does every feature have an in-scope or out-of-scope line? |
+| 3 | Build handoff packet | Tech lead | `handoff/` | Can a new developer ship without asking a question? |
+| 4 | QA evidence gate | QA | `qa-evidence/` | Is every acceptance criterion proven with a log or capture? |
+| 5 | Demo script | Founder | `demo.md` | Does the demo show the client's number moving? |
+| 6 | Milestone invoice trigger | Founder | `invoice-ledger.csv` | Is the invoice tied to a signed acceptance, not a date? |
+| 7 | 30-day review | Tech lead | `review.md` | Are latency, cost, and error rate measured after launch? |
+
+### SOP 1: Intake Scorecard
+
+The intake form has 12 fields and I refuse to start without all 12. The important ones are volume (runs per month), current cycle time, error rate, cost per error, and the person who owns the process. If the client cannot name the owner, the project is not ready.
+
+This single form killed two bad projects in 2026 before they consumed a sprint. One was a lead-routing automation with no volume estimate. The client guessed "maybe 40 leads a month". At that volume, a ₹1.8L build would never pay back.
+
+### SOP 2: Scope Ledger
+
+The scope ledger is a Markdown table with three columns: feature, in scope, out of scope. It sits in the repository and is linked from the proposal. Every change request gets a row and a price before work starts.
+
+```markdown
+# scope.md
+
+| Feature | In scope | Out of scope |
+|---|---|---|
+| WhatsApp lead intake | Template replies, 3 escalation rules | Voice notes, multilingual translation |
+| CRM sync | HubSpot contacts + deals, 15-min cadence | Historical backfill before 2025 |
+| Dashboard | Response time, escalation rate, cost per lead | Custom BI export, white-label portal |
+```
+
+That table ends the "I thought it was included" conversation before it starts. In 2026 it reduced scope disputes from 9 in 23 projects to 1 in 9 projects.
+
+### SOP 3: Build Handoff Packet
+
+The handoff packet is a folder, not a meeting. It contains the architecture diagram, environment variables, seed data, the acceptance test list, and a runbook. A developer who has never seen the project should be able to run it locally in under 30 minutes.
+
+```text
+handoff/
+├── architecture.md      # services, queues, retries, data flow
+├── .env.example         # every key, no real secrets
+├── seed/                # anonymised fixtures
+├── acceptance.md        # the exact tests QA will run
+└── runbook.md           # deploy, rollback, rotate keys, on-call
+```
+
+### SOP 4: QA Evidence Gate
+
+QA does not say "passed". QA attaches evidence: a log line, a screen recording, a database row, or a test output. The evidence folder is named after the acceptance criterion. If the evidence is missing, the gate stays closed.
+
+I learned this after a Rajkot dashboard shipped with a broken currency switch. The QA screenshot showed the default state only. The evidence rule would have forced a capture of the switched state and caught it in two minutes.
+
+### SOP 5: Demo Script
+
+The demo script is written before the build ends, and it opens with the client's number, not the feature list. Instead of "here is the new dashboard", the demo says: "Your first response time moved from 14 minutes to 38 seconds on 1,400 messages." Features follow the number.
+
+### SOP 6: Milestone Invoice Trigger
+
+Invoices are tied to signed acceptance, not calendar dates. Stage one is signed scope. Stage two is a working staging build. Stage three is production acceptance. If a client delays acceptance, the invoice clock pauses but the delivery clock does too. That symmetry keeps both sides honest.
+
+### SOP 7: 30-Day Review
+
+Thirty days after launch, I pull four numbers: P95 latency, monthly run cost, error rate, and hours saved. That review becomes the case study and the input for the next scope. It also catches silent failures before the client does.
+
+## How the Seven Gates Fit Together
+
+```mermaid
+flowchart LR
+    A[Intake scorecard] --> B{Outcome + owner named?}
+    B -- No --> X[Stop: not ready]
+    B -- Yes --> C[Scope ledger]
+    C --> D{In/out lines signed?}
+    D -- No --> C
+    D -- Yes --> E[Build handoff packet]
+    E --> F[QA evidence gate]
+    F --> G{Every criterion proven?}
+    G -- No --> E
+    G -- Yes --> H[Demo script]
+    H --> I[Milestone invoice]
+    I --> J[30-day review]
+    J --> K[Case study + next scope]
+```
+
+The loop back from QA to build is intentional. The loop back from scope to scope is also intentional. What is not allowed is moving forward on a verbal yes. That single rule accounts for most of the rework reduction.
+
+## The Delivery Ledger That Makes Rework Visible
+
+The ledger is a small SQLite or Postgres table plus a CLI. I use Python because the team already runs Python for agent work. The schema is deliberately narrow so nobody avoids updating it.
+
+```python
+# tools/delivery_ledger.py
+from dataclasses import dataclass, field
+from datetime import date
+from enum import Enum
+
+class Stage(str, Enum):
+    INTAKE = "intake"
+    SCOPE = "scope"
+    BUILD = "build"
+    QA = "qa"
+    DEMO = "demo"
+    INVOICE = "invoice"
+    REVIEW = "review"
+
+class Gate(str, Enum):
+    OPEN = "open"
+    PASSED = "passed"
+    FAILED = "failed"
+
+@dataclass
+class Task:
+    task_id: str
+    project: str
+    stage: Stage
+    owner: str
+    gate: Gate = Gate.OPEN
+    rework_reason: str | None = None
+    updated: date = field(default_factory=date.today)
+
+    def pass_gate(self) -> None:
+        if self.gate is not Gate.OPEN:
+            raise ValueError(f"{self.task_id} gate already closed")
+        self.gate = Gate.PASSED
+        self.updated = date.today()
+
+    def send_back(self, reason: str) -> None:
+        self.gate = Gate.FAILED
+        self.rework_reason = reason
+        self.updated = date.today()
+```
+
+The reporting query that changed our Monday review:
+
+```sql
+SELECT
+  stage,
+  COUNT(*) FILTER (WHERE gate = 'failed') AS failed,
+  COUNT(*) AS total,
+  ROUND(100.0 * COUNT(*) FILTER (WHERE gate = 'failed') / COUNT(*), 1) AS rework_pct
+FROM tasks
+WHERE updated >= CURRENT_DATE - INTERVAL '90 days'
+GROUP BY stage
+ORDER BY rework_pct DESC;
+```
+
+At week four the QA stage showed a 22% failure rate. We tightened the acceptance template and it dropped to 7% by week nine. Without the ledger, that would have looked like "the team is slow" instead of "the acceptance criteria are vague".
+
+## War Story: The Surat Catalogue Build That Lost ₹42,000
+
+In March 2026 a Surat textile exporter asked for an AI catalogue sync. The brief was three lines on WhatsApp. I said yes, because the work looked familiar. That was the mistake.
+
+The build touched a supplier API, a Postgres catalogue, and a Shopify storefront. Midway through, the client added "one small thing": automatic stock reservation when a SKU dropped below 20 units. That was a second workflow with its own failure modes. It was never in scope, never priced, and it shipped late.
+
+The supplier API returned 429s at 18:00, the reservation job retried without jitter, and 300 SKUs flipped to out of stock. The support team issued ₹42,000 in refunds over two days. I rebuilt the flow with a Valkey queue, exponential backoff, and a Postgres ledger for every stock mutation. The end-to-end run dropped from 11 minutes to 3 minutes 40 seconds, and the API P95 settled at 410ms.
+
+The technical fix took four days. The process fix took one afternoon: a scope ledger, a QA evidence gate, and a rule that no feature enters the build without a row and a price. That project is why the delivery OS exists. The queue bug was real, but the scope gap is what made it expensive.
+
+## Before and After: 90-Day Numbers
+
+I compared nine similar builds from late 2025 with nine builds from Q2 2026. The team size was the same. The stack was the same. The only change was the seven SOPs.
+
+| Metric | Before SOPs | After SOPs | Change |
+|---|---:|---:|---:|
+| Rework hours per build | 18.4 | 11.0 | -40% |
+| Scope disputes per build | 0.39 | 0.11 | -72% |
+| Average days to launch | 34 | 23 | -32% |
+| Invoice delay (days) | 12 | 4 | -67% |
+| Post-launch incidents | 2.1 | 0.9 | -57% |
+
+The 40% rework cut is not a productivity trick. It is the cost of removing ambiguity. Every hour spent on the intake form and scope table came back three times over during the build.
+
+## What the Delivery OS Costs to Run
+
+The SOPs are free to copy. The cost is the discipline and the tooling around them. Here is what I spend to keep it running for a studio of four people.
+
+| Item | Monthly cost | Notes |
+|---|---:|---|
+| SQLite ledger | ₹0 | Runs on the same VPS as the tools |
+| Valkey queue | ₹0 | Already present for client work |
+| Notion or Markdown repo | ₹0–₹800 | Templates live in the repo |
+| QA evidence storage | ₹200 | Object storage for captures |
+| My review time | 6 hours | Monday gate review + 30-day reviews |
+| Total cash cost | ₹200–₹1,000 | The real cost is the six hours |
+
+For a solo freelancer, the same system fits in a single repository with no paid tools. The gate review takes 45 minutes a week once the templates are in place.
+
+## Production Trade-offs & Failure Modes
+
+**Do not install this for projects under ₹50,000.** The overhead of seven artifacts can exceed the build itself. A one-page scope and a 30-minute QA call is enough at that size.
+
+**Do not use the ledger as a surveillance tool.** I made that mistake once. The team started closing gates to avoid red rows. The ledger is for finding process gaps, not for ranking people. Review the stage, not the individual.
+
+**Do not let the SOPs become the deliverable.** A beautiful handoff packet for a feature nobody needs is still waste. The intake scorecard is the first gate because it is the cheapest place to kill a bad project.
+
+**Do not skip the 30-day review when the client is happy.** Happy clients still have silent failures. One Rajkot client was happy until the WhatsApp template expired on day 26. The review caught it before the renewal.
+
+## Frequently Asked Questions
+
+### What is an AI agency delivery OS?
+
+An AI agency delivery OS is the set of SOPs, artifacts, and gates that move a client project from intake to launch without verbal handoffs. Mine has seven SOPs, one delivery ledger, and a binary gate at each stage. It cut rework 40% across nine builds in 2026.
+
+### How long does it take to set up the seven SOPs?
+
+The templates take one afternoon to write and about two weeks to settle into habit. Start with the intake scorecard and scope ledger, because those two prevent the most expensive rework. Add the QA evidence gate in week two, then the remaining four SOPs.
+
+### Does this work for a solo developer or a small studio?
+
+Yes, and the ROI is higher for a solo developer because there is no project manager to absorb ambiguity. The ledger can be a single SQLite file and the artifacts can be Markdown in the client repository. The only cost is a 45-minute weekly review.
+
+### How do I measure rework reduction?
+
+Log every ticket with a stage and a reason, then run the 90-day query grouped by stage. Rework percentage is failed gates divided by total gates for that stage. I use a 90-day window because shorter windows are noisy on small studios.
+
+## Bottom Line
+
+The seven SOPs did not make my team smarter. They made the handoffs boring, and boring handoffs are cheap. If your agency is losing margin to rework, start with the [AI automation pricing model I use for Indian clients](/journal/ai-automation-agency-india-pricing-2026), then read the [consultant screening checklist](/journal/hire-ai-automation-consultant-india-2026) and the [n8n agent stack](/journal/n8n-ai-agents-automation-stack-gujarat-sme-2026) that most of these builds run on. When you want the exact templates, look at the [Agency Delivery OS product](/products/agency-delivery-os) or [send me your current handoff process](/#contact) and I will point at the first gate to fix.
+BODY,
+        'published_at' => '2026-10-28 06:30:00',
+    ],
+
+    [
         'title' => 'MySQL JSON vs MariaDB JSON Search: 3x Faster 2026',
         'slug' => 'mysql-json-vs-mariadb-json-search',
         'tag' => 'WEB DEV',

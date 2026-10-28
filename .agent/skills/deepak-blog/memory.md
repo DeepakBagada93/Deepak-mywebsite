@@ -3839,3 +3839,38 @@
   - Words: 1449
   - Scheduled Slot: `03:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agency Delivery OS: 7 SOPs Cut Rework 40% 2026**
+  - Slug: `ai-agency-delivery-os-7-sops`
+  - Tag: `AUTOMATION`
+  - Published: `2026-10-28 06:30:00`
+  - Words: 2311
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-agency-delivery-os-7-sops
+
+- **MCP Tool Result Caching: Cut Agent Cost 38% in 2026**
+  - Slug: `mcp-tool-result-caching-agent-cost`
+  - Tag: `AI AGENTS`
+  - Published: `2026-10-28 09:30:00`
+  - Words: 2202
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/mcp-tool-result-caching-agent-cost
+
+- **Qwen 3 vs Llama 3.3: Self-Hosted AI Agent Speed 2026**
+  - Slug: `qwen-3-vs-llama-3-3-self-hosted-agent-throughput`
+  - Tag: `AI NEWS`
+  - Published: `2026-10-28 12:30:00`
+  - Words: 2126
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/qwen-3-vs-llama-3-3-self-hosted-agent-throughput
+
+- **Laravel Octane Concurrency: 3 Bugs at P95 42ms Fixed**
+  - Slug: `laravel-octane-concurrency-p95-bugs`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-28 15:30:00`
+  - Words: 1791
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/laravel-octane-concurrency-p95-bugs
+
+- **₹2L Build Deposit 2026: My 3-Stage Contract Rules**
+  - Slug: `build-deposit-3-stage-milestone-contract`
+  - Tag: `MY STORY`
+  - Published: `2026-10-28 18:30:00`
+  - Words: 1982
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/build-deposit-3-stage-milestone-contract
