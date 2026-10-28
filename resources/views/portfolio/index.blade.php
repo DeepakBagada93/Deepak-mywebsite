@@ -2,6 +2,7 @@
 
 @section('content')
     @include('portfolio.partials.hero')
+    @include('portfolio.partials.products')
     @include('portfolio.partials.about')
     @include('portfolio.partials.skills')
     @include('portfolio.partials.projects')

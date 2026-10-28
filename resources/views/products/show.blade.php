@@ -9,6 +9,10 @@
     $discount = $compareInr > $priceInr && $compareInr > 0
         ? (int) round((1 - $priceInr / $compareInr) * 100)
         : 0;
+    $demoCommands = collect($product['how_to_use'] ?? [])
+        ->filter(fn ($step) => ! empty($step['command']) && preg_match('/^\s*(cat|head|ls|tree)\b/', $step['command']))
+        ->take(2)
+        ->values();
 @endphp
 <article class="store-detail">
     <div class="container">
@@ -28,8 +32,8 @@
                     <h1 class="store-detail__title">{{ $product['title'] }}</h1>
                     <p class="store-detail__tagline">{{ $product['tagline'] }}</p>
                     <div class="store-detail__rating mono">
-                        <span>★ {{ $product['rating'] }}</span>
-                        <span>{{ number_format($product['rating_count']) }} developers</span>
+                        <span>Production-tested</span>
+                        <span>Commercial license</span>
                         @if (! empty($product['badge']))<span class="store-detail__badge">{{ $product['badge'] }}</span>@endif
                     </div>
                 </div>
@@ -114,6 +118,21 @@
                     </ul>
                 </div>
 
+                @if ($demoCommands->isNotEmpty())
+                <div class="store-detail__block">
+                    <h2 class="store-detail__h2">See what ships</h2>
+                    <p class="store-preview__lede">Read-only previews of files inside the download. The same commands appear in the step-by-step guide below.</p>
+                    <div class="store-preview">
+                        @foreach ($demoCommands as $step)
+                        <div class="store-preview__row">
+                            <span class="store-preview__prompt mono">$</span>
+                            <pre class="store-preview__code"><code>{{ str_replace('\\"', '"', $step['command']) }}</code></pre>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+
                 <div class="store-detail__block">
                     <h2 class="store-detail__h2">Built with</h2>
                     <ul class="store-detail__tech">
@@ -136,7 +155,7 @@
                             </div>
                             <p class="store-step__desc">{{ $step['desc'] }}</p>
                             @if (! empty($step['command']))
-                            <pre class="store-step__code"><code>{{ $step['command'] }}</code></pre>
+                            <pre class="store-step__code"><code>{{ str_replace('\\"', '"', $step['command']) }}</code></pre>
                             @endif
                         </div>
                         @endforeach
@@ -151,6 +170,28 @@
                             <li>{{ $item }}</li>
                         @endforeach
                     </ul>
+                </div>
+
+                <div class="store-detail__block">
+                    <h2 class="store-detail__h2">Before you buy</h2>
+                    <div class="store-detail__faq">
+                        <details class="store-detail__faq-item">
+                            <summary>Will it work with my stack?</summary>
+                            <p>It ships as {{ $product['format'] }} and is built with {{ implode(', ', $product['tech']) }}. You run it in your own workspace — there is no hosted account or platform lock-in on my side.</p>
+                        </details>
+                        <details class="store-detail__faq-item">
+                            <summary>Is this a subscription?</summary>
+                            <p>No. It is a one-time payment. {{ $isFree ? 'The download is free forever' : 'Lifetime free updates' }} and a commercial license are included.</p>
+                        </details>
+                        <details class="store-detail__faq-item">
+                            <summary>How fast do I get the files?</summary>
+                            <p>Immediately after payment. Razorpay confirms the order and the download link appears on the confirmation screen and in your receipt email.</p>
+                        </details>
+                        <details class="store-detail__faq-item">
+                            <summary>What if it does not fit my workflow?</summary>
+                            <p>Email the order number within 30 days for a refund — no form to fill in.</p>
+                        </details>
+                    </div>
                 </div>
 
                 @if (! empty($product['faq']))
@@ -192,6 +233,7 @@
                     </ul>
 
                     <p class="store-buybox__secure mono">🔒 Secure checkout via Razorpay — cards, international cards & UPI</p>
+                    <p class="store-buybox__guarantee mono">♻️ 30-day guarantee — if it does not fit your workflow, email the order number for a refund.</p>
                 </div>
             </aside>
         </div>
@@ -258,6 +300,38 @@
     }, { passive: true });
     window.addEventListener('resize', checkScroll, { passive: true });
     checkScroll();
+})();
+</script>
+
+@php
+    $analyticsItem = [
+        'item_id' => $product['slug'],
+        'item_name' => $product['title'],
+        'item_category' => $product['category'],
+        'price' => \App\Support\Money::priceFor($product, $storeCurrency),
+        'currency' => $storeCurrency,
+        'quantity' => 1,
+    ];
+@endphp
+<script>
+(function () {
+    var item = @json($analyticsItem);
+    if (typeof window.gtag === 'function') {
+        window.gtag('event', 'view_item', {
+            currency: item.currency,
+            value: item.price,
+            items: [item]
+        });
+    }
+    if (typeof window.fbq === 'function') {
+        window.fbq('track', 'ViewContent', {
+            content_ids: [item.item_id],
+            content_type: 'product',
+            content_name: item.item_name,
+            currency: item.currency,
+            value: item.price
+        });
+    }
 })();
 </script>
 

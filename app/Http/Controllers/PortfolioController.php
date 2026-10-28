@@ -21,6 +21,11 @@ class PortfolioController extends Controller
         $projects = Project::orderBy('sort_order')->get();
         $faqs = Faq::orderBy('sort_order')->get();
         $services = Service::orderBy('id')->get();
+        $featuredProducts = collect(config('products'))
+            ->where('is_featured', true)
+            ->sortBy('sort_order')
+            ->take(3)
+            ->values();
 
         $faqEntities = $faqs->map(static fn (Faq $faq) => [
             '@type' => 'Question',
@@ -41,8 +46,8 @@ class PortfolioController extends Controller
         $portraitUrl = $url.'/images/about-portrait.png';
 
         $head = [
-            'title' => 'Deepak Bagada — Best AI Expert & AI Developer in Gujarat, India | Autonomous AI Agents & Automation',
-            'description' => 'Deepak Bagada is the leading AI Expert, AI Agent Architect, and Web Developer in Gujarat, India. Developing autonomous multi-agent AI systems, custom RAG knowledge bases, LLM integrations, and enterprise automation for businesses in Ahmedabad, Surat, Vadodara, Rajkot, Junagadh, and worldwide.',
+            'title' => 'Best AI Expert in Gujarat | AI Consultant in Gujarat',
+            'description' => 'Best AI expert in Gujarat and AI consultant in Gujarat. I build custom AI agent development India-wide, enterprise automation and high-performance websites.',
             'canonical' => $url.'/',
             'og_image' => '/images/about-portrait.png',
             'og_image_alt' => 'Deepak Bagada — Best AI Expert & AI Agent Developer in Gujarat, India',
@@ -168,6 +173,6 @@ class PortfolioController extends Controller
             ], JSON_UNESCAPED_SLASHES),
         ];
 
-        return view('portfolio.index', compact('site', 'url', 'posts', 'postsTotal', 'projects', 'faqs', 'services', 'head'));
+        return view('portfolio.index', compact('site', 'url', 'posts', 'postsTotal', 'projects', 'faqs', 'services', 'head', 'featuredProducts'));
     }
 }

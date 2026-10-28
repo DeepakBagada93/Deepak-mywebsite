@@ -34,7 +34,7 @@
     <div class="store-card__meta mono">
         <span>📦 {{ $product['format'] }}</span>
         @if (! empty($product['file_size']))<span>💾 {{ $product['file_size'] }}</span>@endif
-        <span>★ {{ $product['rating'] }}</span>
+        <span>Commercial license</span>
     </div>
 
     <div class="store-card__foot">

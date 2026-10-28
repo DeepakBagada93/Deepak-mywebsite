@@ -78,4 +78,48 @@
         @endif
     </div>
 </article>
+
+@if ($paid)
+@php
+    $purchaseItems = $orders->map(static fn ($order) => [
+        'item_id' => $order->product_slug,
+        'item_name' => $order->product_title,
+        'price' => (float) $order->amount,
+        'quantity' => 1,
+    ])->values();
+    $purchaseValue = (float) $orders->sum('amount');
+@endphp
+<script>
+(function () {
+    var reference = @json($first->cart_reference);
+    var storageKey = 'db_purchase_' + reference;
+    try {
+        if (window.sessionStorage.getItem(storageKey)) return;
+        window.sessionStorage.setItem(storageKey, '1');
+    } catch (e) {}
+
+    var items = @json($purchaseItems);
+    var currency = @json($first->currency);
+    var value = @json($purchaseValue);
+
+    if (typeof window.gtag === 'function') {
+        window.gtag('event', 'purchase', {
+            transaction_id: reference,
+            currency: currency,
+            value: value,
+            items: items
+        });
+    }
+    if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Purchase', {
+            content_ids: items.map(function (i) { return i.item_id; }),
+            content_type: 'product',
+            currency: currency,
+            value: value,
+            num_items: items.length
+        }, { eventID: reference });
+    }
+})();
+</script>
+@endif
 @endsection

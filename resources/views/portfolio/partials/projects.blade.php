@@ -10,18 +10,15 @@
             @foreach ($projects as $index => $project)
                 @php($link = ($project->link ?? '') ?: '#')
                 <article class="work reveal" data-reveal>
-                    <a class="work__media" href="{{ $link }}" target="{{ ($project->link ?? '') ? '_blank' : '_self' }}" rel="noopener" aria-label="{{ $project->title }}">
-                        <img src="{{ ($project->image ?? '') ?: '/images/projects/project-1.png' }}"
-                             alt="{{ $project->title }} — project preview"
-                             loading="lazy" width="1122" height="1402">
-                    </a>
+                    <p class="work__index mono">{{ str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) }}</p>
                     <div class="work__body">
                         <p class="mono work__meta">
-                            <span>Project {{ str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) }}</span>
                             <span>{{ ($project->tags ?? '') ?: 'Project' }}</span>
                         </p>
                         <h3 class="work__title">{{ $project->title }}</h3>
                         <p class="work__summary">{{ $project->summary }}</p>
+                    </div>
+                    <div class="work__detail">
                         <p class="work__desc">{{ $project->description }}</p>
                         <a class="work__link mono" href="{{ $link }}" target="{{ ($project->link ?? '') ? '_blank' : '_self' }}" rel="noopener">
                             Visit project →

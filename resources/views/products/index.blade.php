@@ -5,9 +5,9 @@
     <div class="container">
         {{-- Hero --}}
         <div class="section__head store__head" data-reveal>
-            <p class="mono section__label">Digital Products</p>
-            <h1 class="section__title"><span class="split-lines">Buy once. Own forever. Ship today.</span></h1>
-            <p class="store__lede">Battle-tested AI toolkits, boilerplates and automation engines I build with every day — packaged as instant downloads. No subscriptions, no lock-in, commercial license included.</p>
+            <p class="mono section__label">AI Toolkits · Digital Products · India</p>
+            <h1 class="section__title"><span class="split-lines">AI Toolkits &amp; Digital Products India</span></h1>
+            <p class="store__lede">Buy once, own forever. Production AI toolkits, n8n automation systems, performance marketing kits and business engines for Indian founders, developers and agencies. Instant download, commercial license, 30-day guarantee.</p>
             <div class="store__hero-bar">
                 <a href="{{ route('products.track') }}" class="mono store__track-link">Already bought? Track your order →</a>
             </div>
@@ -63,6 +63,76 @@
         </div>
         @endif
 
+        {{-- Who this is for --}}
+        <div class="store__split" data-reveal>
+            <div class="store__split-col">
+                <p class="mono section__label">Who this is for</p>
+                <ul class="store__split-list">
+                    <li>Founders and agencies shipping AI agents, automation, or growth systems in India.</li>
+                    <li>Developers who want production-tested artifacts instead of a blank-page build.</li>
+                    <li>Teams that need a commercial license without another monthly subscription.</li>
+                </ul>
+            </div>
+            <div class="store__split-col">
+                <p class="mono section__label">Not for you if</p>
+                <ul class="store__split-list store__split-list--muted">
+                    <li>You want a done-for-you custom build — use the contact page instead.</li>
+                    <li>You are looking for a free tutorial; start with the free kickoff kit.</li>
+                </ul>
+            </div>
+        </div>
+
+        {{-- Bundle comparison --}}
+        @if ($spotlight && $spotlight['is_bundle'])
+        @php $single = $paid->where('is_bundle', false)->sortBy('price_inr')->first(); @endphp
+        <div class="store__compare" data-reveal>
+            <div class="store__compare-head">
+                <p class="mono section__label">Buy separate vs bundle vs custom</p>
+                <h2 class="store__compare-title">The bundle is the cheapest path to the full stack.</h2>
+            </div>
+            <div class="store__compare-scroll">
+                <table class="store__compare-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Option</th>
+                            <th scope="col">Best for</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Time to deploy</th>
+                            <th scope="col">Ownership</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">One toolkit</th>
+                            <td>One specific bottleneck</td>
+                            <td>{{ $single ? \App\Support\Money::format(\App\Support\Money::priceFor($single, 'INR'), 'INR') : 'From '.\App\Support\Money::format(\App\Support\Money::priceFor($spotlight, 'INR'), 'INR') }}</td>
+                            <td>Same day</td>
+                            <td>Commercial license</td>
+                        </tr>
+                        <tr class="is-highlight">
+                            <th scope="row">The bundle</th>
+                            <td>The full production stack</td>
+                            <td>{{ \App\Support\Money::format(\App\Support\Money::priceFor($spotlight, 'INR'), 'INR') }} <s>{{ \App\Support\Money::format(\App\Support\Money::compareFor($spotlight, 'INR'), 'INR') }}</s></td>
+                            <td>Same day</td>
+                            <td>Commercial license + 12 months updates</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Custom build</th>
+                            <td>Your exact stack and workflow</td>
+                            <td>Scoped per project</td>
+                            <td>2-6 weeks</td>
+                            <td>Your codebase</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="store__compare-foot">
+                <a class="btn btn--primary" href="{{ route('products.checkout.single', $spotlight['slug']) }}">Get the bundle →</a>
+                <a class="mono" href="{{ route('legal.contact') }}">Or scope a custom build →</a>
+            </div>
+        </div>
+        @endif
+
         {{-- Category filter --}}
         <div class="store__filters" data-reveal>
             <a href="{{ route('products.index') }}" class="pill-btn {{ ! $activeCategory ? 'is-active' : '' }}">All Products</a>
@@ -90,6 +160,35 @@
             <div class="store__trust-item"><span>🛠️</span><div><strong>Commercial license</strong><small>Unlimited client & personal use</small></div></div>
         </div>
 
+        {{-- Store FAQ --}}
+        <div class="store__faq" data-reveal>
+            <div class="store__faq-head">
+                <p class="mono section__label">Store FAQ</p>
+                <h2 class="store__faq-title">Delivery, license, refunds and support.</h2>
+            </div>
+            <div class="store__faq-list">
+                @foreach ($storeFaqs as $question => $answer)
+                    <details class="store__faq-item">
+                        <summary>{{ $question }}</summary>
+                        <p>{{ $answer }}</p>
+                    </details>
+                @endforeach
+            </div>
+        </div>
+
+        {{-- FAQ schema --}}
+        <script type="application/ld+json">
+        {!! json_encode([
+            '@context' => 'https://schema.org',
+            '@type' => 'FAQPage',
+            'mainEntity' => collect($storeFaqs)->map(static fn (string $answer, string $question) => [
+                '@type' => 'Question',
+                'name' => $question,
+                'acceptedAnswer' => ['@type' => 'Answer', 'text' => $answer],
+            ])->values()->all(),
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+        </script>
+
         {{-- FAQ teaser / contact --}}
         <div class="store__cta" data-reveal>
             <div>
@@ -100,6 +199,37 @@
         </div>
     </div>
 </section>
+
+@php
+    $analyticsItems = collect($filtered)->map(static fn (array $p) => [
+        'item_id' => $p['slug'],
+        'item_name' => $p['title'],
+        'price' => \App\Support\Money::priceFor($p, $storeCurrency),
+        'currency' => $storeCurrency,
+        'quantity' => 1,
+    ])->values();
+@endphp
+<script>
+(function () {
+    var items = @json($analyticsItems);
+    if (!items.length) return;
+    if (typeof window.gtag === 'function') {
+        window.gtag('event', 'view_item_list', {
+            item_list_id: 'store',
+            item_list_name: 'AI Toolkits & Digital Products',
+            items: items
+        });
+    }
+    if (typeof window.fbq === 'function') {
+        window.fbq('track', 'ViewContent', {
+            content_ids: items.map(function (i) { return i.item_id; }),
+            content_type: 'product',
+            currency: items[0].currency,
+            value: items.reduce(function (sum, i) { return sum + i.price; }, 0)
+        });
+    }
+})();
+</script>
 
 @include('products.partials.checkout-modal')
 @endsection

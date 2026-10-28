@@ -50,6 +50,10 @@
     const preloaderEl = $("#preloader");
     const heroTitle = $(".hero__title");
     const isHomePageWithPreloader = !!preloaderEl && !!heroTitle;
+    let skipIntro = false;
+    try {
+        skipIntro = isHomePageWithPreloader && sessionStorage.getItem("db_intro_seen") === "1";
+    } catch (e) {}
 
     /* ---------- Ensure scroll is always unlocked on non-homepage / reload ---------- */
     if (!isHomePageWithPreloader) {
@@ -77,7 +81,7 @@
         });
     });
 
-    if (isHomePageWithPreloader) {
+    if (isHomePageWithPreloader && !skipIntro) {
         /* ---------- Preloader counter ---------- */
         const counter = { v: 0 };
         const countEl = $("#preloader-count");
@@ -101,7 +105,7 @@
 
         gsap.to(counter, {
             v: 100,
-            duration: 1.5,
+            duration: 0.9,
             ease: "power2.inOut",
             onUpdate: () => {
                 if (countEl) countEl.textContent = String(Math.round(counter.v)).padStart(3, "0");
@@ -116,8 +120,9 @@
         gsap.set(".hero__rule", { scaleX: 0 });
 
         const intro = gsap.timeline({
-            delay: 1.6,
+            delay: 0.75,
             onComplete: () => {
+                try { sessionStorage.setItem("db_intro_seen", "1"); } catch (e) {}
                 clearTimeout(unlockFailsafe);
                 document.removeEventListener("touchmove", preventTouch);
                 if (preloaderEl) {
@@ -133,7 +138,7 @@
         });
 
         intro
-            .to(preloaderEl, { opacity: 0, duration: 0.5, ease: "power2.inOut" })
+            .to(preloaderEl, { opacity: 0, duration: 0.4, ease: "power2.inOut" })
             .add(() => {
                 // hide preloader visually but KEEP scroll locked until timeline fully completes
                 if (preloaderEl) {
@@ -157,10 +162,16 @@
 
     } else {
         /* ---------- Smooth Subpage Entrance ---------- */
+        if (skipIntro && preloaderEl) {
+            preloaderEl.classList.add("is-hidden");
+            preloaderEl.style.display = "none";
+        }
         unlockScroll();
-        gsap.set(".masthead", { yPercent: -100, opacity: 0 });
-        gsap.to(".masthead", { yPercent: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
-        gsap.fromTo("main", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.08 });
+        if (!skipIntro) {
+            gsap.set(".masthead", { yPercent: -100, opacity: 0 });
+            gsap.to(".masthead", { yPercent: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+            gsap.fromTo("main", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.08 });
+        }
     }
 
     /* ---------- Silky Smooth Scroll Reveals ---------- */

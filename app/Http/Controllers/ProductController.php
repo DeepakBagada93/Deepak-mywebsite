@@ -23,9 +23,18 @@ class ProductController extends Controller
         $featured = $products->where('is_featured', true)->sortBy('sort_order')->values();
         $paid = $products->where('is_free', false);
 
+        $storeFaqs = [
+            'How is the product delivered?' => 'After Razorpay confirms payment, the download link is emailed instantly and shown on the order page. No account is required.',
+            'What license do I get?' => 'Every paid toolkit includes a commercial license for unlimited personal and client projects. You can use it in paid client work; you cannot resell the source as a competing template.',
+            'Do the toolkits work with my stack?' => 'The kits are stack-agnostic Markdown, JSON, Node.js, and workflow files. They work with Claude Code, Cursor, Codex, Gemini CLI, n8n, and standard CI pipelines.',
+            'Are updates included?' => 'Yes. You get free major-version updates, and the bundle includes 12 months of priority updates.',
+            'What is the refund policy?' => 'There is a 30-day guarantee. If the toolkit does not fit your workflow, email the order number and a short reason for a refund.',
+            'Do you offer support or a custom build?' => 'Support is by email for installation and usage questions. For a tailored system, use the contact page to scope a custom build.',
+        ];
+
         $head = [
-            'title' => 'Digital Products & AI Toolkits — Buy Once, Own Forever | '.$site['name'],
-            'description' => 'Buy once, own forever — AI agent toolkits, n8n workflow automation systems, performance marketing kits, and business growth engines for Indian founders, developers, and agencies. Instant download, commercial license, 30-day guarantee.',
+            'title' => 'AI Toolkits & Digital Products India | Deepak Bagada',
+            'description' => 'Buy production AI toolkits and digital products in India. Instant download, commercial license, lifetime updates and a 30-day guarantee. Own the system.',
             'canonical' => $url.'/products',
             'og_type' => 'website',
             'og_image' => '/images/about-portrait.png',
@@ -45,11 +54,6 @@ class ProductController extends Controller
                         'url' => $url.'/products/'.$product['slug'],
                         'category' => $product['category'],
                         'brand' => ['@type' => 'Person', 'name' => $site['name']],
-                        'aggregateRating' => $product['is_free'] ? null : [
-                            '@type' => 'AggregateRating',
-                            'ratingValue' => (string) $product['rating'],
-                            'reviewCount' => (string) $product['rating_count'],
-                        ],
                         'offers' => self::offers($product, $url.'/products/'.$product['slug']),
                     ],
                 ])->all(),
@@ -63,7 +67,7 @@ class ProductController extends Controller
             $storeCurrency = Money::default();
         }
 
-        return view('products.index', compact('site', 'head', 'products', 'categories', 'filtered', 'activeCategory', 'featured', 'paid', 'storeCurrency'));
+        return view('products.index', compact('site', 'head', 'products', 'categories', 'filtered', 'activeCategory', 'featured', 'paid', 'storeCurrency', 'storeFaqs'));
     }
 
     public function show(Request $request, string $slug)
@@ -88,6 +92,10 @@ class ProductController extends Controller
         if (! $product) {
             abort(404);
         }
+
+        $productSeo = config('product-seo.'.$slug, []);
+        $seoTitle = $productSeo['title'] ?? $product['seo_title'] ?? ($product['title'].' — '.($product['is_free'] ? 'Free Download' : '₹'.number_format($product['price_inr'])).' | '.$site['name']);
+        $seoDescription = $productSeo['description'] ?? $product['seo_description'] ?? ($product['tagline'].' '.$product['description']);
 
         $related = $products
             ->where('slug', '!=', $slug)
@@ -115,11 +123,7 @@ class ProductController extends Controller
                 'url' => $url.'/products/'.$slug,
                 'category' => $product['category'],
                 'brand' => ['@type' => 'Person', 'name' => $site['name']],
-                'aggregateRating' => [
-                    '@type' => 'AggregateRating',
-                    'ratingValue' => (string) $product['rating'],
-                    'reviewCount' => (string) $product['rating_count'],
-                ],
+                'sku' => $product['slug'],
                 'offers' => self::offers($product, $url.'/products/'.$slug),
                 'hasMerchantReturnPolicy' => [
                     '@type' => 'MerchantReturnPolicy',
@@ -149,8 +153,8 @@ class ProductController extends Controller
                 '@type' => 'WebPage',
                 '@id' => $url.'/products/'.$slug,
                 'url' => $url.'/products/'.$slug,
-                'name' => $product['seo_title'] ?? $product['title'],
-                'description' => $product['seo_description'] ?? $product['tagline'],
+                'name' => $seoTitle,
+                'description' => $seoDescription,
                 'speakable' => ['@type' => 'SpeakableSpecification', 'cssSelector' => ['.store-detail__head', '.store-detail__body', '.store-detail__aeo']],
             ],
             [
@@ -181,9 +185,6 @@ class ProductController extends Controller
                 ])->all(),
             ];
         }
-
-        $seoTitle = $product['seo_title'] ?? ($product['title'].' — '.($product['is_free'] ? 'Free Download' : '₹'.number_format($product['price_inr'])).' | '.$site['name']);
-        $seoDescription = $product['seo_description'] ?? ($product['tagline'].' '.$product['description']);
 
         $head = [
             'title' => $seoTitle,

@@ -11,8 +11,7 @@
                 <img src="/images/about-portrait.png" 
                      alt="Deepak Bagada — Best AI Expert, AI Developer & AI Agent Architect in Junagadh Gujarat India" 
                      title="Deepak Bagada — Best AI Expert in Junagadh, Gujarat, India"
-                     loading="eager"
-                     fetchpriority="high"
+                     loading="lazy"
                      width="1122" 
                      height="1402">
                 <figcaption class="mono">Fig. 02 — Deepak Bagada, AI Architect</figcaption>
@@ -24,7 +23,7 @@
                 </p>
 
                 <p class="reveal" data-reveal>
-                    I am <strong>Deepak Bagada</strong>, an <strong>AI Expert, AI Agent Architect, and Developer based in Junagadh, Gujarat</strong>. 
+                    I am <strong>Deepak Bagada</strong>, an <strong>AI Expert, AI Agent Architect, and AI Developer in Gujarat</strong>, based in Junagadh. 
                     I engineer cutting-edge <strong>autonomous AI agents, multi-agent pipelines, RAG knowledge bases, and custom AI automations</strong> 
                     that eliminate manual friction and multiply team output.
                 </p>
