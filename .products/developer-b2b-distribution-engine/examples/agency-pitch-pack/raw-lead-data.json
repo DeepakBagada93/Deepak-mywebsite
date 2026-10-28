@@ -1,0 +1,25 @@
+[
+  {
+    "company": "SaaSMetrics Inc",
+    "website": "https://saasmetrics-example.com",
+    "contactName": "Marcus Vance",
+    "contactRole": "VP of Engineering",
+    "signals": ["STALLED_JOB", "TECH_MIGRATION"],
+    "details": {
+      "role": "Senior Fullstack Engineer (Next.js)",
+      "days": "38",
+      "tech": "Next.js 15 App Router & Prisma"
+    }
+  },
+  {
+    "company": "FleetPulse Logistics",
+    "website": "https://fleetpulse-example.com",
+    "contactName": "Priya Sharma",
+    "contactRole": "Head of Product",
+    "signals": ["UX_PERFORMANCE", "MISSING_INTEGRATION"],
+    "details": {
+      "issue": "Slow 3.8s mobile dashboard load",
+      "feature": "Real-time webhook notifications"
+    }
+  }
+]

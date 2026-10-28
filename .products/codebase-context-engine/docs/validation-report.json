@@ -1,0 +1,32 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/codebase-context-engine",
+  "checkedAt": "2026-10-28T09:33:17.929Z",
+  "passed": [
+    "Required path exists: README.md",
+    "Required path exists: LICENSE.md",
+    "Required path exists: CHANGELOG.md",
+    "Required path exists: COMPATIBILITY.md",
+    "Required path exists: product-manifest.json",
+    "Required path exists: docs",
+    "Required path exists: examples",
+    "Required path exists: tests",
+    "Required path exists: dist",
+    "Manifest parses and has required fields",
+    "Documentation exists: docs/product-specification.md",
+    "Documentation exists: docs/test-plan.md",
+    "Documentation exists: docs/test-results.md",
+    "Documentation exists: docs/store-listing.md",
+    "Documentation exists: docs/release-report.md",
+    "Structured file checked: docs/package-audit-report.json",
+    "Structured file checked: docs/validation-report.json",
+    "Structured file checked: examples/react-nextjs-repo/package.json",
+    "Structured file checked: product-manifest.json",
+    "Structured file checked: progress.json",
+    "Skill frontmatter valid: context-engine"
+  ],
+  "failures": [],
+  "warnings": [],
+  "manualReview": [
+    "Clean-environment installation, commercial terms, and store fulfillment require manual review unless separately evidenced."
+  ]
+}

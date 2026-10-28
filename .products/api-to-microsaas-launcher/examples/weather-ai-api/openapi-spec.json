@@ -1,0 +1,16 @@
+{
+  "title": "WeatherAI Prediction API",
+  "version": "1.0.0",
+  "endpoints": [
+    {
+      "path": "/api/v1/forecast",
+      "method": "POST",
+      "description": "High-precision AI microclimate weather prediction"
+    },
+    {
+      "path": "/api/v1/radar",
+      "method": "GET",
+      "description": "Real-time precipitation radar tile data"
+    }
+  ]
+}

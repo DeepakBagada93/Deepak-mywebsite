@@ -1,0 +1,102 @@
+{
+  "name": "cro-landing-page-architect",
+  "slug": "cro-landing-page-architect",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-28T09:32:59.976Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1069,
+      "sha256": "848e0ae5ee6257b2a9a9b219c47c8476e164f959f9e4f7eb892b451352ddbff8"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 621,
+      "sha256": "880a12b8ee23e8c024cd55e28d11425f70ce1790a4759ad655abe57bdfba93b8"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 3334,
+      "sha256": "7e27a26f30777d1fb2e23c3c40d0d08c2d2fcfa2af5ee503ebf5615e8f5e9251"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1808,
+      "sha256": "90ba9a2c9f24e3e4765dd19a1f694b01c2a36d3c410801e7bac8b961502737cd"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 1568,
+      "sha256": "921189c97062f1da0835e95cdc0365a126ada3c31b3a5dc0600f38628bb80a84"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 2685,
+      "sha256": "f183e4727b9f1df315f4a5a3e469205e2d300128fe7f88a184f5fb05636b9f68"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1023,
+      "sha256": "3657f9f72b80e582c80fef4a165c5fba8d72fee2bfdc7332fb9a3c72481785f2"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1064,
+      "sha256": "0f99e15336e51410e66de74dadf839e8592fc668be2d9808f9d6fea567557219"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 2643,
+      "sha256": "64f923e16dede7f1dfff3a399e7c1599f1ec620948a46f680989adfa78bc1544"
+    },
+    {
+      "path": "examples/saas-landing-page/CRO-AUDIT-REPORT.md",
+      "bytes": 810,
+      "sha256": "5577adf7aa67c4142af883bdc26a0c3d4f71da80ff974af400fa9d875b76d124"
+    },
+    {
+      "path": "examples/saas-landing-page/high-converting-hero.html",
+      "bytes": 3438,
+      "sha256": "465495fc57f0f7f2550ecddd11f443068ea63bc6ec06ec6c7cdbcfd596171e6e"
+    },
+    {
+      "path": "examples/saas-landing-page/low-converting-hero.html",
+      "bytes": 330,
+      "sha256": "42c36496d4aaff8c6e445641432854f8bed2bc3a8f4303c1b6c6fad8ff8ea25d"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 818,
+      "sha256": "a75cd6177e2a9129af68e7653f4440544386638cfdedc0cb1d0668bcde58191f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2616,
+      "sha256": "8d6dc4ca62f102179e813be9dec0243e8361e67f3c80f86d484188efb75dbac9"
+    },
+    {
+      "path": "scripts/cro-audit.mjs",
+      "bytes": 3404,
+      "sha256": "0807b57db2c99b254ccdf753befb9fbda16299f04eba907e33018a8fca62c080"
+    },
+    {
+      "path": "skills/cro-architect/SKILL.md",
+      "bytes": 3888,
+      "sha256": "9d987e9cfe2cff456a350ab08a0e1cdc90e63ccc113662b80bfd60fd3ec940bb"
+    },
+    {
+      "path": "tests/cro-audit.test.mjs",
+      "bytes": 1346,
+      "sha256": "913ba58698eef0996f2d4a2691a44d618998b6c48be6ffe5f4f534312caba673"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 1937,
+      "sha256": "93438345fed8ebad80539be1a137a2aaff744ced93d4c0f88c80dc88000340ad"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

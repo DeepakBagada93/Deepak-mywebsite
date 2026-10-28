@@ -1,0 +1,36 @@
+[
+  {
+    "company": "SaaSMetrics Inc",
+    "contact": "Marcus Vance (VP of Engineering)",
+    "intentScore": 55,
+    "priorityTier": "Tier 1 (High Intent - Send Custom Loom)",
+    "recommendedAngle": "Saw you have an open role for Senior Fullstack Engineer (Next.js) since 38 days—most founders get bogged down screening resumes rather than shipping.",
+    "detectedTriggers": [
+      {
+        "signal": "Open Dev Job > 30 Days",
+        "hook": "Saw you have an open role for Senior Fullstack Engineer (Next.js) since 38 days—most founders get bogged down screening resumes rather than shipping."
+      },
+      {
+        "signal": "Tech Stack Migration (e.g. Next.js / AI / Supabase)",
+        "hook": "Noticed your team is adopting Next.js 15 App Router & Prisma—we recently helped a similar team migrate without downtime."
+      }
+    ]
+  },
+  {
+    "company": "FleetPulse Logistics",
+    "contact": "Priya Sharma (Head of Product)",
+    "intentScore": 30,
+    "priorityTier": "Tier 2 (Standard Email)",
+    "recommendedAngle": "Ran a quick audit on your web app and spotted a 3.4s LCP delay on the checkout flow.",
+    "detectedTriggers": [
+      {
+        "signal": "Slow Performance / Mobile UX Friction",
+        "hook": "Ran a quick audit on your web app and spotted a 3.4s LCP delay on the checkout flow."
+      },
+      {
+        "signal": "Missing Key Integration (Stripe, AI, Webhooks)",
+        "hook": "Saw your users requesting Real-time webhook notifications on public forums—we built a drop-in integration for this."
+      }
+    ]
+  }
+]

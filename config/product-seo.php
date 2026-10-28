@@ -81,4 +81,24 @@ return [
         'title' => 'AI Project Kickoff Skills Kit — Free Scoping Tools | Deepak',
         'description' => 'Turn fuzzy AI product ideas into build-ready project plans with test evidence. 2 battle-tested agent skills free forever for personal & client use.',
     ],
+    'codebase-context-engine' => [
+        'title' => 'Codebase Context Engine: .cursorrules in 3s | Deepak',
+        'description' => 'Generate token-dense .cursorrules and CLAUDE.md from your exact Next.js, React, Tailwind and Prisma versions. Runs 100% locally in about 3 seconds.',
+    ],
+    'cro-landing-page-architect' => [
+        'title' => 'CRO Landing Page Architect: 10-Point Audit | Deepak',
+        'description' => 'Audit landing pages across 10 conversion dimensions, rewrite the hero, and ship copy-paste Tailwind sections that turn traffic into paying customers.',
+    ],
+    'saas-launch-hardening-sentinel' => [
+        'title' => 'SaaS Launch Hardening Sentinel: 12 Checks | Deepak',
+        'description' => 'Scan AI-built SaaS apps for 12 launch-blocking risks: Stripe webhooks, server actions, rate limits, RLS leaks and secrets. Get a readiness score and fixes.',
+    ],
+    'api-to-microsaas-launcher' => [
+        'title' => 'API to MicroSaaS Launcher: Stripe Billing Kit | Deepak',
+        'description' => 'Turn any Python or Node API into a paid micro-SaaS with API keys, usage metering and Stripe billing. Includes a working OpenAPI-to-SaaS generator.',
+    ],
+    'developer-b2b-distribution-engine' => [
+        'title' => 'Developer B2B Distribution Engine: $10K Clients | Deepak',
+        'description' => 'Score intent signals, write 4-sentence outreach, and send fixed-price proposals that land high-ticket clients. Built for developers and technical agencies.',
+    ],
 ];

@@ -1,0 +1,112 @@
+{
+  "name": "developer-b2b-distribution-engine",
+  "slug": "developer-b2b-distribution-engine",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-28T09:20:24.025Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1211,
+      "sha256": "a65172232e63edd40c25be04039bae30e426fa115a25049108450a34a2d5e6cc"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 890,
+      "sha256": "5b8921ec81b6bd0f7f6ed5247219414ee743da39fb1ca23e08392816ad17d130"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 4189,
+      "sha256": "c71406b230299cb26e9e05c44b2892c464683a4ab0b55d1a6b9aee72e42a1591"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1910,
+      "sha256": "92e8e423514979c7ab465a8857da4c78b2bc4fdc5683d43e870a8346220794b4"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 2984,
+      "sha256": "474b27651d3b22f07f48ec71c42b450262e3b54f2791445629c5f6393150228b"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 3833,
+      "sha256": "ddae8d84c904d0f016ecde62f057748986c252292fead94375f17da3700f7234"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1014,
+      "sha256": "47001697470fbf5658e51cca734c398788bd90ede713c485bdb48c6e4766e08f"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1046,
+      "sha256": "aa085d01758c9a006c625046fe5a6ad05d52f431baca1accb82c7afb8ac0d68c"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 3283,
+      "sha256": "7455362c8b23a5223db7b5b867db6744f8874ae0734b9dee4aca6b9fd6b969dc"
+    },
+    {
+      "path": "examples/agency-pitch-pack/closed-proposal-template.md",
+      "bytes": 1846,
+      "sha256": "62c3e08b6d487fa74593434495b63fbff6bd1bfbdb79e9021c469e5349d03a2b"
+    },
+    {
+      "path": "examples/agency-pitch-pack/cold-email-sequence.md",
+      "bytes": 2195,
+      "sha256": "efc4373dd88680f6737662649cbb8565aa350e84f077d0207e759abf6e4d77ea"
+    },
+    {
+      "path": "examples/agency-pitch-pack/loom-audit-script.md",
+      "bytes": 1616,
+      "sha256": "34877ee1a7b2d043b35dcbbf088b8df402679350bc69dbf6b0a55dda35ebe4ee"
+    },
+    {
+      "path": "examples/agency-pitch-pack/raw-lead-data.json",
+      "bytes": 716,
+      "sha256": "05dc7580320d6ed55c09ef2604b2f27362a8eff743f0ca3d3ae425976c1274fd"
+    },
+    {
+      "path": "examples/agency-pitch-pack/scored-leads.json",
+      "bytes": 1565,
+      "sha256": "f7755b8cabba85733217cca7808a87b887ed74b1e7fd0631742450bb5338fd64"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1070,
+      "sha256": "9d5d13594c2244d546f37747794624b5174118cb67806e5defabb675191307f9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2869,
+      "sha256": "838c3a84d02e2defeee4632d77a12428bd1918a3262f592189c0b674b12e2648"
+    },
+    {
+      "path": "scripts/intent-scraper.mjs",
+      "bytes": 4163,
+      "sha256": "49286c41a083a99c79a0d06520909c9ab2da2f25e430caa26afc227b428bc4ed"
+    },
+    {
+      "path": "skills/b2b-distribution-engine/SKILL.md",
+      "bytes": 6623,
+      "sha256": "af490c9d8c6625aa99fc2df608a2230e8ed5679eed282a71df47da709519bcb9"
+    },
+    {
+      "path": "tests/intent-scraper.test.mjs",
+      "bytes": 1093,
+      "sha256": "b61a5a3a9ad927cbf88261eca35d47199c2c73246727c6dab281ececeb9c3134"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 2074,
+      "sha256": "3e60ecdf7ebfde8e74c6fb5c8d5ff34adc5818224cbdb8b5160a3a5da3d4d7d4"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

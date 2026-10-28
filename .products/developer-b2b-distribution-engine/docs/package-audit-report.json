@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/developer-b2b-distribution-engine",
+  "checkedAt": "2026-10-28T09:22:01.620Z",
+  "passed": [
+    "developer-b2b-distribution-engine-1.0.0.zip has 30 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

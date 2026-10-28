@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/api-to-microsaas-launcher",
+  "checkedAt": "2026-10-28T09:29:26.954Z",
+  "passed": [
+    "api-to-microsaas-launcher-1.0.0.zip has 27 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

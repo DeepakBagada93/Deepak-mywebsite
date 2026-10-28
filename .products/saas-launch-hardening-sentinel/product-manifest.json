@@ -1,0 +1,172 @@
+{
+  "name": "saas-launch-hardening-sentinel",
+  "slug": "saas-launch-hardening-sentinel",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-28T08:55:55.137Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1751,
+      "sha256": "37a282ab857c4f805e4114d3e7343ba64d0d9e0104816f3503f921048e37886f"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 2775,
+      "sha256": "d2d1e92505509ce4c8214918fbb3cf5fc6d02f3a8fe3bdb7a59ba065158db972"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 352,
+      "sha256": "cda5489bcd4e1cb5a0cdbce4814cbce9b3cf48dc310487397a9d3645480f10ae"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 10363,
+      "sha256": "0820021bcbf25b865113a61610cefa063c24c31eff1a987b35aabfb6b8b5b4d1"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 2975,
+      "sha256": "3e7fc09f3818fe971c50adf1c5c8619563ce1d0ee0b29d72fdec4e3367a8e966"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 7376,
+      "sha256": "ef194ea328e50c9d33cd26a2f1092111b642ffb41c4bd71e9137e4802b06a480"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 7473,
+      "sha256": "b4a0ba065975a24e8c9e9f3118eaed022e1072f94858ce3eee5f5214406f4c1a"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 2254,
+      "sha256": "f4f502998eed42c9c3cc6729c2796781ddd91df45bf642f75985b37b402b3c99"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 2005,
+      "sha256": "7fc849de6439be33c25c1b01d77b67866c4138567c36bad8221928f1ab1b83f4"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 10066,
+      "sha256": "b43d29dbaf24ae6b558a82c097c7b3652476107337c7ad37510c2346136cf348"
+    },
+    {
+      "path": "docs/validation-report.json",
+      "bytes": 1380,
+      "sha256": "7547ef7dbc7b4c4cdc123d67eb5097c5c2949b4141ff3855f9db21015d608ff9"
+    },
+    {
+      "path": "examples/hardened-mvp/.env.example",
+      "bytes": 451,
+      "sha256": "751d2106de1b58cb15090b6cb85825fb53bd82ace2730b1b82e81910b6e879fc"
+    },
+    {
+      "path": "examples/hardened-mvp/.gitignore",
+      "bytes": 183,
+      "sha256": "35ff1d51d22c6de27fd6f86154bbaf72da3bc17bab59ac5d1e3da1cdc01e4763"
+    },
+    {
+      "path": "examples/hardened-mvp/app/actions/user.ts",
+      "bytes": 882,
+      "sha256": "029aba8e2bd0e4492910c54a3ce57a4d7b3cb7445b9e787677329567fa0bc4a2"
+    },
+    {
+      "path": "examples/hardened-mvp/app/api/ai/generate/route.ts",
+      "bytes": 1868,
+      "sha256": "aac837569e31488dfc74b857120b76c8638131cc27dda344466f41167946ec55"
+    },
+    {
+      "path": "examples/hardened-mvp/app/api/stripe/webhook/route.ts",
+      "bytes": 2209,
+      "sha256": "12883ee9e5b6de3b4a9917340b36d90c8f54ec372e4859e8fa730ed46dcc41b1"
+    },
+    {
+      "path": "examples/hardened-mvp/app/error.tsx",
+      "bytes": 831,
+      "sha256": "05f71c1f765a40e5718c209fa1337e674b46b118587f2d083bd80816b933b0dc"
+    },
+    {
+      "path": "examples/hardened-mvp/app/layout.tsx",
+      "bytes": 916,
+      "sha256": "6201d8a33bed31a17950c27208eca2ea024fc102149d96575940431423165dc1"
+    },
+    {
+      "path": "examples/hardened-mvp/app/lib/db.ts",
+      "bytes": 375,
+      "sha256": "d8c9e60b9a25b86da4075a1da88a7ae380135879c9002edd3a53c743b5318825"
+    },
+    {
+      "path": "examples/hardened-mvp/LAUNCH-AUDIT-REPORT.md",
+      "bytes": 1386,
+      "sha256": "69702ec4a57d1cfce65a7e1728de7773fb494faaa9f085074ed74e160ee31c60"
+    },
+    {
+      "path": "examples/hardened-mvp/package.json",
+      "bytes": 392,
+      "sha256": "5f82bded2d3a4303af22d766cdc54cfc478d207437cebe5d0e04184b613ccd67"
+    },
+    {
+      "path": "examples/vulnerable-mvp/app/actions/user.ts",
+      "bytes": 334,
+      "sha256": "e213bc05451cce590d303ef2b9655738b08e31cff2f49c413edb156492d4926a"
+    },
+    {
+      "path": "examples/vulnerable-mvp/app/api/ai/generate/route.ts",
+      "bytes": 443,
+      "sha256": "ca751125653f8da21358b5c25833f4b963fa754293ae3ab21b0c3a3daade81ed"
+    },
+    {
+      "path": "examples/vulnerable-mvp/app/api/stripe/webhook/route.ts",
+      "bytes": 647,
+      "sha256": "b56648230e7813bbb392bb13652104eea649a0a805ad68e3f4c899c0767186fd"
+    },
+    {
+      "path": "examples/vulnerable-mvp/LAUNCH-AUDIT-REPORT.md",
+      "bytes": 3666,
+      "sha256": "7330ab0978a438fc9b8ba55f384e9364f0fc6f5e9d1396682aa83c98854f6e39"
+    },
+    {
+      "path": "examples/vulnerable-mvp/package.json",
+      "bytes": 270,
+      "sha256": "85f739403172014ae2b63a237649dedeb2d526a7aea8e1f7e79658000773e379"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1955,
+      "sha256": "e481d68bbe3f9e8c835491bc7c26394275216d405900ae07b1f67356c0391ff3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5999,
+      "sha256": "fdfe6c6900ade27947658a0ded5837352e647e13a8daf28fd0f0726c919c03b6"
+    },
+    {
+      "path": "scripts/launch-sentinel.mjs",
+      "bytes": 12755,
+      "sha256": "e44cac1d7651a7fd88794aeaebd24780096ca60eb5ecd18fb1f51e35ac61f151"
+    },
+    {
+      "path": "skills/launch-hardening-sentinel/SKILL.md",
+      "bytes": 9482,
+      "sha256": "c33887de25a2fcbd4715d7e6a4c3509a2799d3580b6fb25264bfc19645514e1f"
+    },
+    {
+      "path": "tests/sentinel-scanner.test.mjs",
+      "bytes": 1836,
+      "sha256": "50f29e2156087f2e9c5951e0ac20069a07faf976ab799fb324d16ca2881b66bf"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 1962,
+      "sha256": "13ca6c12941509c4c2e67527cfdfe424643d9d838fd218a7a5da13ea12d3eb36"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

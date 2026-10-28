@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/saas-launch-hardening-sentinel",
+  "checkedAt": "2026-10-28T08:55:55.236Z",
+  "passed": [
+    "saas-launch-hardening-sentinel-1.0.0.zip has 52 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

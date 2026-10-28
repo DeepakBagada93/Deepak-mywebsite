@@ -1,0 +1,112 @@
+{
+  "name": "codebase-context-engine",
+  "slug": "codebase-context-engine",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-28T09:25:55.302Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1111,
+      "sha256": "f70b786f9adfac1b8709deac56a6d83ee33b05b2799318fc5a760ecf4b9ae658"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 555,
+      "sha256": "7b9946a3da340681e773101ae5b25f3c9e65f29ad056e5dcb909d3c7230334cb"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 338,
+      "sha256": "19d1ae4ca17e6b72989d70b31662053e57be0a93d9a53f7f0f4de740af7e3a1b"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 3494,
+      "sha256": "23cec5b99f2ebccf050c9dd13b85250855a08a19ce78e20b1349c8a90889854c"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1827,
+      "sha256": "06a585b646e3ce09a9b95b90bc311fbe723de4caecc8e7406ca3547a8d3f3653"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 1668,
+      "sha256": "85aaf9df8e367a43fcda9688a130a50bd7dbf281b59c2aabce7255b4d6da6bc7"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 2650,
+      "sha256": "ec5cc98be48b417c282bc8781eb5179a69e3412668732579f625b75d736fbd20"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 984,
+      "sha256": "e4010aaf64ab171eaa119babc18111129f8c3cfc5b8b9e211ae58d16ce8368a6"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1004,
+      "sha256": "8061ec1b1fe26a1eb48d4f9151268649e040da8ff30b395529afbbfe99583241"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 1919,
+      "sha256": "79d580599c580f93123cb3b25be1892ccd7a8205252a18b0d8ee321d82678e35"
+    },
+    {
+      "path": "docs/validation-report.json",
+      "bytes": 1238,
+      "sha256": "2cd5d250a5595eba2365ed182f05357757a9a99da47c419f54e638dce8a83427"
+    },
+    {
+      "path": "examples/react-nextjs-repo/expected-claude.md",
+      "bytes": 908,
+      "sha256": "b94dd42abd2a3dc2140060c56c00e280576aff7e6d738323c138bebf5bafb689"
+    },
+    {
+      "path": "examples/react-nextjs-repo/expected-cursorrules.md",
+      "bytes": 908,
+      "sha256": "b94dd42abd2a3dc2140060c56c00e280576aff7e6d738323c138bebf5bafb689"
+    },
+    {
+      "path": "examples/react-nextjs-repo/package.json",
+      "bytes": 269,
+      "sha256": "8aa94ba73fb76461cf7e620c85eb7d49b088d8a90bfbc867ffe3fbead12d2b43"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 825,
+      "sha256": "3fbc00278906adf1631a204105b2353959a6d83f3bbab794ec647bf7f68a204f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2163,
+      "sha256": "a40b9be377520f5f78106c2660485b94a743aee1c5184d76a0198db4208a9dcf"
+    },
+    {
+      "path": "scripts/context-builder.mjs",
+      "bytes": 3764,
+      "sha256": "bb09f0701b5aba5ff6f88d5fe0a722066607b06450e7fbbf6f78924cf1d1f6ec"
+    },
+    {
+      "path": "skills/context-engine/SKILL.md",
+      "bytes": 3249,
+      "sha256": "d77af753610ff743d52403af539c352f0a1b7b43eb5589b29898bb15e423d574"
+    },
+    {
+      "path": "tests/context-builder.test.mjs",
+      "bytes": 870,
+      "sha256": "5e8bb379e9cdbdae528ef97d6efcd6ace659542e27286ad610c933028793b42a"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 1918,
+      "sha256": "c17353e152c0f73f2e26a77f2be42d90a387d003c0d96ed857e625827b52f39f"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

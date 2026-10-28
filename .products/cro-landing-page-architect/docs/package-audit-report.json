@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/cro-landing-page-architect",
+  "checkedAt": "2026-10-28T09:33:04.876Z",
+  "passed": [
+    "cro-landing-page-architect-1.0.0.zip has 27 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

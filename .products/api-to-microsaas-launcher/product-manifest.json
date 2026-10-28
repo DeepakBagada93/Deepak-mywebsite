@@ -1,0 +1,102 @@
+{
+  "name": "api-to-microsaas-launcher",
+  "slug": "api-to-microsaas-launcher",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-28T09:29:20.818Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1120,
+      "sha256": "266f1afa98e8cf16aa258234bdc0697178f86f60b8b953c750a15d050ddf9595"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 710,
+      "sha256": "be713695a3f06517d9e1a8c216e6f3a13e15ac1cc2521b46fbbf34ebec8275a8"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 3169,
+      "sha256": "1e379bb63776cf33564106e63e32de914d2c47b909aa7264878afeeb1cc2a31e"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 1819,
+      "sha256": "a43c6bc5256304b7b01e4fe899f514347ccfb973847e36d5700958ab2236c5d4"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 1552,
+      "sha256": "53b85015d69bde7ecf813ae6f1f831bdd916f930179c25bcaad4ed850f455912"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 2788,
+      "sha256": "7f8a89226eef76432b2f0fc09dbc0e02cc12062973351ffe6b00385af8b387ac"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1000,
+      "sha256": "93b02db7202ed1230f62e28a66b4e1cb7b675f098e79a5aa118c524ee2f00bf8"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 977,
+      "sha256": "85c16ced03acf07e823156d14729f712bbe64e4c4a6994c0719323081925a44f"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 2365,
+      "sha256": "da9036c173833ef67dd9ddc742149041e1c855782ff9d2581a081b01c13cc4d1"
+    },
+    {
+      "path": "examples/weather-ai-api/generated-dashboard-route.tsx",
+      "bytes": 2361,
+      "sha256": "3cd6b85a543993ded70fd361e235c08dd7b43354db7ea4c0936e4ca11a445481"
+    },
+    {
+      "path": "examples/weather-ai-api/generated-metered-billing.ts",
+      "bytes": 647,
+      "sha256": "edda8d6b2a82dc4a02cd229e0f1918a7590b61c096988b231a7967aaee914b50"
+    },
+    {
+      "path": "examples/weather-ai-api/openapi-spec.json",
+      "bytes": 359,
+      "sha256": "f9b8e784ee75478b0c31cfe257cd503f76e4f250cb61027967a14db23989803f"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 795,
+      "sha256": "03c7db986125a2412f3d8a8096cbadaf43a8a3b2a6062e6b2531f1d067ccfe6a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2566,
+      "sha256": "3bfb0ead53e34d2c49f18d893e202bb61f1be6c0de4fa49496a9f4094b4efa8e"
+    },
+    {
+      "path": "scripts/schema-to-saas.mjs",
+      "bytes": 3229,
+      "sha256": "5812b7b419c40a462687f756b3419646de3461a5a19edfc3ea0d229413dfe3dc"
+    },
+    {
+      "path": "skills/microsaas-launcher/SKILL.md",
+      "bytes": 3795,
+      "sha256": "d2a38205720cf77584e228bb1e45861f24a37e7d8a87542670a5eaf3261ec919"
+    },
+    {
+      "path": "tests/schema-to-saas.test.mjs",
+      "bytes": 778,
+      "sha256": "14de3456a7f61cfb8322bd1cc2d957c8c266040ae44ca53c63a5c4aefcceef3e"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 1948,
+      "sha256": "d1eaccb6ea407fc679ca2dd31a5d69b85e85776a5f6dfdf7d5f5c5c35b5884b1"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

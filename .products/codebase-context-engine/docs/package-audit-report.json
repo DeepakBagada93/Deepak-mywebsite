@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/codebase-context-engine",
+  "checkedAt": "2026-10-28T09:25:55.395Z",
+  "passed": [
+    "codebase-context-engine-1.0.0.zip has 28 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}
