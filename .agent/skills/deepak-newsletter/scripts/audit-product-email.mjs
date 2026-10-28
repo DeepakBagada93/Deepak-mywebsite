@@ -102,7 +102,7 @@ for (const item of files) {
   if (/@import\s+url/i.test(html)) fails.push('css_import_found');
   if (!/display\s*:\s*none/i.test(html)) fails.push('preheader_hidden_missing');
   if (!/href="https:\/\/deepakbagada\.in\/products\//i.test(html)) fails.push('product_cta_missing');
-  if (!/₹/.test(html)) fails.push('price_missing');
+  if (!/[$₹]/.test(html)) fails.push('price_missing');
   if (!/unsubscribe/i.test(html)) fails.push('unsubscribe_missing');
   if (!/junagadh/i.test(html) || !/362001/.test(html)) fails.push('physical_address_missing');
   if (!/Deepak Bagada/i.test(html)) fails.push('sender_identity_missing');

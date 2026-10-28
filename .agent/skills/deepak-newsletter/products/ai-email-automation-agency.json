@@ -1,0 +1,45 @@
+{
+  "slug": "ai-email-automation-agency",
+  "name": "AI Email Automation for Agencies",
+  "tagline": "AI drafts, code checks, you approve in Slack, then it sends and follows up automatically.",
+  "outcome": "Turn one inbound lead into a personalized subject, preview, body and two follow-ups in seconds — with code-level guardrails, a mandatory Slack approval token, and automatic day-4 and day-9 follow-ups.",
+  "outcome_short": "ship human-approved AI outbound without the accidental send",
+  "pain_short": "the manual outbound bottleneck",
+  "pain_points": [
+    "Manual personalization caps founder-led outbound at a handful of emails a day.",
+    "Autonomous AI senders risk hallucinated claims, burned domains and accidental sends.",
+    "Follow-ups and silent failures live in a spreadsheet instead of a queue."
+  ],
+  "price_label": "$149",
+  "compare_label": "$299",
+  "price_usd": 149,
+  "compare_usd": 299,
+  "price_note": "One-time · commercial license · 3 n8n workflows + PDF manual",
+  "proof_bullets": [
+    "3 production n8n workflows: draft/review, approval/sequence, error handler",
+    "Code guardrails: no links, no calendar links, no spam phrases, strict length limits",
+    "Slack approval token required before Gmail sends anything",
+    "Day-4 and day-9 follow-ups scheduled automatically",
+    "Postgres dead-letter recovery with instant Slack alerts"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "3 n8n workflows + Make.com blueprint" },
+    { "label": "License", "value": "Commercial — unlimited client deployments" },
+    { "label": "Format", "value": "ZIP · workflows, schema, PDF manual" },
+    { "label": "Updates", "value": "12 months free" }
+  ],
+  "bonus": "The Postgres schema, Docker Compose stack, .env.example, sample lead and curl test script ship in the same archive.",
+  "guarantee": "If the three workflows do not import and the sample lead does not run end to end, reply within 30 days and I will fix it or refund the purchase.",
+  "cta_url": "https://deepakbagada.in/products/ai-email-automation-agency",
+  "cta_label": "Get AI Email Automation for Agencies — {{PRICE}}",
+  "ps": "Reply with your current outbound stack (Gmail, Slack, CRM) and I will tell you which workflow to import first.",
+  "preheader": "Human-approved AI outbound for agencies: AI drafts, code checks, Slack approves, Gmail sends.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, your outbound can't scale on founder time",
+    "{{COMPANY_SHORT}}: draft outbound in seconds, approve in Slack",
+    "{{CITY}} agencies: human-approved AI outbound",
+    "{{FIRST_NAME}}, 3 n8n workflows for agency outbound",
+    "A $149 outbound system for {{COMPANY_SHORT}}"
+  ],
+  "audience_cities": ["United States"]
+}

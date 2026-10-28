@@ -622,3 +622,44 @@
 - Product non-opener follow-up: **2026-11-01** (7 days).
 - Do not re-contact any of these leads before **2026-11-08** (14 days).
 - Next batch: build 10–25 more verified leads before sending again; do not send the same product to the same company twice in 30 days.
+
+---
+
+## 2026-10-27 — US AI Email Automation campaign (50)
+
+### Batch
+- **Product:** AI Email Automation for Agencies · $149 (compare $299)
+- **Market:** United States · 50 US AI/workflow automation agencies
+- **Source:** AI Automation DB public agency profiles (email, city, services, founded year)
+- **Leads:** `research/us-automation/leads-us-raw.json` → `-enriched.json` → `-audit.md`
+- **Campaign:** `campaigns/2026-10-27-us-ai-email-automation/` (50 HTML + TXT + manifest + audit)
+- **Product config:** `.agent/skills/deepak-newsletter/products/ai-email-automation-agency.json`
+
+### Audit
+- Lead audit: PASS — 50 clean, 0 failed; 50 non-metro warnings, 28 name_incomplete, 2 role-based.
+- Email audit: PASS — 50/50.
+- Dry run: 50 would send, 0 skipped.
+- `audit-product-email.mjs` price check updated to accept `$` or `₹` for USD campaigns.
+
+### Live send
+- Mode: LIVE via `smtp-relay.brevo.com` · 5s throttle · `--allow-non-metro --allow-generic --min-score=60`
+- Result: **50 sent, 0 skipped, 0 failed**
+- Sent log: `campaigns/2026-10-27-us-ai-email-automation/sent.json`
+
+### Follow-up
+- Watch bounces/replies 24–48h; stop and re-verify on the first hard bounce.
+- Follow-up non-openers 2026-11-03 (7 days).
+- Do not re-contact these leads before 2026-11-10 (14 days).
+
+---
+
+## 2026-10-27 — US AI Email Automation batch 2 (50)
+
+- Leads: `research/us-automation/leads-us-batch2-raw.json` → `-enriched.json` → `-audit.md` (50 clean).
+- Every address website-verified before sending; 72 verified candidates, top 50 selected.
+- Campaign: `campaigns/2026-10-27-us-ai-email-automation-batch2/`.
+- Email audit: 50/50 PASS. Dry run: 50 would send.
+- Live send: 6s throttle · `--allow-non-metro --allow-generic --min-score=60` · **50 sent, 0 skipped, 0 failed**.
+- Brevo: 47 delivered, 0 hard bounces, 3 awaiting delivery events at report time.
+- Combined US total: 100 sent, 94 delivered, 3 bounces (all batch 1).
+- Follow-up: 2026-11-03 (7 days). Cooldown until 2026-11-10.
