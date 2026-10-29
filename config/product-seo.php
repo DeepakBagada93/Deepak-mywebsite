@@ -105,4 +105,8 @@ return [
         'title' => 'AI Codebase Doc Agent: Auto-Doc Codebase in 3m | Deepak',
         'description' => 'Point this AI agent at any codebase to generate living READMEs, full API references, architecture decision records, and onboarding guides in 3 minutes.',
     ],
+    'ugc-ad-studio' => [
+        'title' => 'UGC Ad Studio: 6 Audited AI UGC Ad Packs 2026 | Deepak',
+        'description' => 'One brief to 6 audited UGC ad angles: timed scripts, Veo 3.1 & Flow prompts, HeyGen avatars, image ads, and a deterministic 38-check pre-spend audit.',
+    ],
 ];
