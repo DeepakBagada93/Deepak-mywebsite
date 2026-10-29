@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'AI Agent Development in Surat: Architecture & ₹85K Costs',
-        'slug'         => 'ai-agent-development-company-surat',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'Build custom AI agent systems for Surat enterprises with LangGraph swarms, ₹85K pricing models, and low-latency architectures from Gujarat engineering labs.',
-        'body'         => <<<'BODY'
+        'title' => 'AI Agent Development in Surat: Architecture & ₹85K Costs',
+        'slug' => 'ai-agent-development-company-surat',
+        'tag' => 'AI DEV',
+        'excerpt' => 'Build custom AI agent systems for Surat enterprises with LangGraph swarms, ₹85K pricing models, and low-latency architectures from Gujarat engineering labs.',
+        'body' => <<<'BODY'
 An enterprise AI agent system is an autonomous software architecture that coordinates task planning, tool execution, and database state transitions without manual human intervention.
 
 **Quick Answer**: Production AI agent development in Surat costs between ₹85,000 for single-agent automation workflows to ₹3,50,000 for enterprise multi-agent swarms with LangGraph and ERP integrations. Deploying local inference or scoped FastMCP tool execution cuts recurring API tokens by 64% while maintaining sub-850ms latency across high-throughput textile and diamond manufacturing pipelines.
@@ -254,11 +254,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Junagadh Internet Outage: 4-Hour Deploy Recovery 2026',
-        'slug'         => 'junagadh-internet-outage-deploy-recovery',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Junagadh internet outage 2026: a four-hour fiber cut hit a client deploy. 4G failover, P95 recovery, and a rollback ledger kept data loss at zero.',
-        'body'         => <<<'BODY'
+        'title' => 'Junagadh Internet Outage: 4-Hour Deploy Recovery 2026',
+        'slug' => 'junagadh-internet-outage-deploy-recovery',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Junagadh internet outage 2026: a four-hour fiber cut hit a client deploy. 4G failover, P95 recovery, and a rollback ledger kept data loss at zero.',
+        'body' => <<<'BODY'
 **Quick Answer**: A four-hour fiber cut in Junagadh hit in the middle of a client deploy in 2026. I kept the release moving over a 4G hotspot, capped the blast radius with a rollback ledger, and finished with zero rows lost. The fix was not heroics; it was a failover lane, a 42 MB artifact, and a rule that every migration step gets a written reverse.
 
 ### Key Takeaways
@@ -431,11 +431,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Laravel Inertia 2: Kill 3 Partial Reload Waterfalls 2026',
-        'slug'         => 'inertia-2-partial-reloads-waterfall-fixes',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Laravel Inertia 2 partial reloads 2026: kill three request waterfalls that make dashboards feel slow. Code, network traces, and the 42ms P95 fix inside.',
-        'body'         => <<<'BODY'
+        'title' => 'Laravel Inertia 2: Kill 3 Partial Reload Waterfalls 2026',
+        'slug' => 'inertia-2-partial-reloads-waterfall-fixes',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Laravel Inertia 2 partial reloads 2026: kill three request waterfalls that make dashboards feel slow. Code, network traces, and the 42ms P95 fix inside.',
+        'body' => <<<'BODY'
 **Quick Answer**: Inertia 2 partial reloads cut dashboard latency by asking the server for only the props a visit needs. On a Rajkot SaaS dashboard I moved from full visits to `router.reload({ only: [...] })`, lazy closures, and `Inertia::optional`, and P95 dropped from 420 ms to 42 ms while the JSON payload fell from 184 KB to 28 KB.
 
 ### Key Takeaways
@@ -659,11 +659,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Custom AI Agent Cost India: ₹85K Build Breakdown 2026',
-        'slug'         => 'custom-ai-agent-cost-india-85k-breakdown',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'Custom AI agent cost India 2026: what ₹85K buys, where ₹8K API bills hide, and the scope lines that decide price. Full build breakdown and hiring guide.',
-        'body'         => <<<'BODY'
+        'title' => 'Custom AI Agent Cost India: ₹85K Build Breakdown 2026',
+        'slug' => 'custom-ai-agent-cost-india-85k-breakdown',
+        'tag' => 'AI DEV',
+        'excerpt' => 'Custom AI agent cost India 2026: what ₹85K buys, where ₹8K API bills hide, and the scope lines that decide price. Full build breakdown and hiring guide.',
+        'body' => <<<'BODY'
 **Quick Answer**: A ₹85,000 custom AI agent in India in 2026 buys one workflow, two integrations, three tools, a 50-case eval set, deployment, and 30 days of support. The build is about 94 hours at ₹900 per hour. The part most quotes hide is the ₹8,000–₹14,000 monthly bill for model calls, retries, embeddings, and monitoring.
 
 ### Key Takeaways
