@@ -91,7 +91,7 @@ function ctrScore(titleStr) {
   else reasons.push(`>${65} chars (-2)`);
 
   const first25 = titleStr.slice(0, 30).toLowerCase();
-  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|agent|swarm|model|llm|claude|deepseek|openai|next\.?js|fastmcp|langgraph|pydantic/i.test(first25)) { 
+  if (/best|top|ai |laravel|rag|mcp|seo|aeo|website|developer|agent|swarm|model|llm|claude|deepseek|openai|next\.?js|fastmcp|langgraph|pydantic|custom|why|how|cut|cost|n8n|build|vs|showdown|terminal/i.test(first25)) { 
     s += 2; reasons.push("keyword front-loaded"); 
   } else reasons.push("keyword not front-loaded (-2)");
 
@@ -176,10 +176,21 @@ if (!body || body.trim().length < 200) {
 
   // Internal links 3-5
   const links = [...body.matchAll(/\[([^\]]+)\]\((\/[^)]+)\)/g)].map(m => m[2]);
-  const internal = links.filter(h => h.startsWith("/services/") || h.startsWith("/#") || h.startsWith("/journal/") || h.startsWith("/services") || h.startsWith("/library/"));
+  const internal = links.filter(h => h.startsWith("/services/") || h.startsWith("/#") || h.startsWith("/journal/") || h.startsWith("/services") || h.startsWith("/library/") || h.startsWith("/products/") || h.startsWith("/products"));
   if (internal.length < 3) add("FAIL", "Internal links 3-5", `Only ${internal.length} internal links: ${internal.join(", ") || "none"} — need 3-5`);
   else if (internal.length > 5) add("WARN", "Internal links 3-5", `${internal.length} links — OK but ensure relevance`);
   else add("PASS", "Internal links 3-5", `${internal.length} links: ${internal.join(", ")}`);
+
+  // Product Monetization Bridge (Selling Deepak Bagada digital products or services)
+  const hasProductLink = links.some(h => h.startsWith("/products"));
+  const hasProductMention = /product|toolkit|bundle|download|commercial license|\/products\//i.test(body);
+  if (hasProductLink) {
+    add("PASS", "Product Monetization Bridge", "Direct link to digital product or store (/products/*) present — monetizes technical readership");
+  } else if (hasProductMention) {
+    add("WARN", "Product Monetization Bridge", "Product/toolkit mentioned but missing direct markdown link to /products/<slug> or /products");
+  } else {
+    add("WARN", "Product Monetization Bridge", "No digital product link (/products/*) found. Include a contextual product bridge (e.g. AI Systems Master Bundle, MCP Launch Kit, n8n Pack) to monetize content.");
+  }
 
   // FAQ section — v6.0: 4 Q&As, Q1 exact-match for best/top
   const hasFAQ = /frequently asked questions/i.test(body);

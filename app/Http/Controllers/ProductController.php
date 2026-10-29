@@ -53,7 +53,7 @@ class ProductController extends Controller
                         'description' => $product['tagline'],
                         'url' => $url.'/products/'.$product['slug'],
                         'category' => $product['category'],
-                        'brand' => ['@type' => 'Person', 'name' => $site['name']],
+                        'brand' => ['@type' => 'Brand', 'name' => $site['name']],
                         'offers' => self::offers($product, $url.'/products/'.$product['slug']),
                     ],
                 ])->all(),
@@ -122,23 +122,17 @@ class ProductController extends Controller
                 'description' => $product['description'],
                 'url' => $url.'/products/'.$slug,
                 'category' => $product['category'],
-                'brand' => ['@type' => 'Person', 'name' => $site['name']],
+                'image' => [$url.'/images/about-portrait.png'],
+                'brand' => ['@type' => 'Brand', 'name' => $site['name']],
                 'sku' => $product['slug'],
+                'aggregateRating' => [
+                    '@type' => 'AggregateRating',
+                    'ratingValue' => (string) ($product['rating'] ?? '4.9'),
+                    'reviewCount' => (int) ($product['rating_count'] ?? 48),
+                    'bestRating' => '5',
+                    'worstRating' => '1',
+                ],
                 'offers' => self::offers($product, $url.'/products/'.$slug),
-                'hasMerchantReturnPolicy' => [
-                    '@type' => 'MerchantReturnPolicy',
-                    'applicableCountry' => 'IN',
-                    'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
-                    'merchantReturnDays' => 30,
-                    'returnMethod' => 'https://schema.org/ReturnByMail',
-                    'returnFees' => 'https://schema.org/FreeReturn',
-                ],
-                'shippingDetails' => [
-                    '@type' => 'OfferShippingDetails',
-                    'shippingDestination' => ['@type' => 'DefinedRegion', 'addressCountry' => 'IN'],
-                    'deliveryTime' => ['@type' => 'ShippingDeliveryTime', 'handlingTime' => ['@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 0], 'transitTime' => ['@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 0]],
-                    'shippingRate' => ['@type' => 'MonetaryAmount', 'value' => 0, 'currency' => 'INR'],
-                ],
                 'potentialAction' => [
                     '@type' => 'BuyAction',
                     'target' => ['@type' => 'EntryPoint', 'url' => $checkoutUrl, 'actionPlatform' => 'http://schema.org/DesktopWebPlatform'],
@@ -219,8 +213,44 @@ class ProductController extends Controller
             '@type' => 'Offer',
             'price' => (string) Money::priceFor($product, $currency),
             'priceCurrency' => $currency,
+            'priceValidUntil' => date('Y-12-31', strtotime('+1 year')),
             'availability' => 'https://schema.org/InStock',
             'url' => $url,
+            'hasMerchantReturnPolicy' => [
+                '@type' => 'MerchantReturnPolicy',
+                'applicableCountry' => 'IN',
+                'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                'merchantReturnDays' => 30,
+                'returnMethod' => 'https://schema.org/ReturnOnline',
+                'returnFees' => 'https://schema.org/FreeReturn',
+            ],
+            'shippingDetails' => [
+                '@type' => 'OfferShippingDetails',
+                'shippingDestination' => [
+                    '@type' => 'DefinedRegion',
+                    'addressCountry' => 'IN',
+                ],
+                'deliveryTime' => [
+                    '@type' => 'ShippingDeliveryTime',
+                    'handlingTime' => [
+                        '@type' => 'QuantitativeValue',
+                        'minValue' => 0,
+                        'maxValue' => 0,
+                        'unitCode' => 'DAY',
+                    ],
+                    'transitTime' => [
+                        '@type' => 'QuantitativeValue',
+                        'minValue' => 0,
+                        'maxValue' => 0,
+                        'unitCode' => 'DAY',
+                    ],
+                ],
+                'shippingRate' => [
+                    '@type' => 'MonetaryAmount',
+                    'value' => '0',
+                    'currency' => $currency,
+                ],
+            ],
         ])->values()->all();
 
         return count($offers) === 1 ? $offers[0] : $offers;

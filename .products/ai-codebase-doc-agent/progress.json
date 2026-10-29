@@ -1,0 +1,57 @@
+{
+  "product": "ai-codebase-doc-agent",
+  "version": "1.0.0",
+  "createdAt": "2026-10-28",
+  "skill": "prebuilt-ai-agent-product",
+  "brief": "A portable AI agent that reads any codebase and generates/updates comprehensive documentation — READMEs, API references, architecture decision records, developer onboarding guides, and knowledge base entries.",
+  "stages": {
+    "research": "completed",
+    "specification": "completed",
+    "agent-definition": "completed",
+    "runtime-artifacts": "completed",
+    "documentation": "completed",
+    "store-listing": "completed",
+    "testing": "completed",
+    "packaging": "completed",
+    "audit": "completed"
+  },
+  "currentStage": "completed",
+  "decisions": [
+    {
+      "stage": "pricing-strategy",
+      "decision": "Established dual-market pricing ($79/$149 USD and ₹1,999/₹3,999 INR) with sub-₹2,000 frictionless UPI checkout and cross-sell bundling with codebase-context-engine",
+      "evidence": "PRICING-STRATEGY.md approved and synchronized across DEVELOPER-COMMERCIAL-PRICING.md and store listings",
+      "date": "2026-10-28"
+    },
+    {
+      "stage": "research",
+      "decision": "Build AI Codebase Documentation Agent as highest-value product",
+      "evidence": "Market research shows developers avoid writing docs, paid alternatives exist ($8-40/mo), and no one-time-purchase portable agent exists in the market",
+      "date": "2026-10-28"
+    },
+    {
+      "stage": "specification",
+      "decision": "Agent contract: buyer provides codebase path → agent generates README, API reference, ADRs, onboarding guide → human reviews before commit",
+      "evidence": "Pricing matrix aligned with portfolio standards ($79-149 US, ₹1,999-3,999 India)",
+      "date": "2026-10-28"
+    },
+    {
+      "stage": "agent-definition",
+      "decision": "Portable SKILL.md with 4-stage pipeline (discovery → analysis → generation → output) operating on local files only",
+      "evidence": "12 languages supported, 4 doc types, 5 refusal/escalation rules for safety",
+      "date": "2026-10-28"
+    }
+  ],
+  "assumptions": [
+    "Buyer has an existing codebase they want documented",
+    "Buyer uses a CLI/IDE that supports SKILL.md-based AI agents",
+    "Buyer is willing to provide read-only filesystem access to their codebase",
+    "Agent operates on local files — no cloud API dependencies beyond the LLM provider",
+    "Model: Claude 3.5 Sonnet / GPT-4o / Gemini 2.5 Pro for code analysis"
+  ],
+  "testResults": {
+    "passed": 5,
+    "total": 5,
+    "summary": "All structural and functional checks pass. Runtime LLM-dependent behavior not tested in offline mode."
+  }
+}

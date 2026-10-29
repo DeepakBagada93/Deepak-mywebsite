@@ -101,4 +101,8 @@ return [
         'title' => 'Developer B2B Distribution Engine: $10K Clients | Deepak',
         'description' => 'Score intent signals, write 4-sentence outreach, and send fixed-price proposals that land high-ticket clients. Built for developers and technical agencies.',
     ],
+    'ai-codebase-doc-agent' => [
+        'title' => 'AI Codebase Doc Agent: Auto-Doc Codebase in 3m | Deepak',
+        'description' => 'Point this AI agent at any codebase to generate living READMEs, full API references, architecture decision records, and onboarding guides in 3 minutes.',
+    ],
 ];

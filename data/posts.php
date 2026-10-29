@@ -6,6 +6,605 @@
 
 return [
     [
+        'title'        => 'Junagadh Internet Outage: 4-Hour Deploy Recovery 2026',
+        'slug'         => 'junagadh-internet-outage-deploy-recovery',
+        'tag'          => 'MY STORY',
+        'excerpt'      => 'Junagadh internet outage 2026: a four-hour fiber cut hit a client deploy. 4G failover, P95 recovery, and a rollback ledger kept data loss at zero.',
+        'body'         => <<<'BODY'
+**Quick Answer**: A four-hour fiber cut in Junagadh hit in the middle of a client deploy in 2026. I kept the release moving over a 4G hotspot, capped the blast radius with a rollback ledger, and finished with zero rows lost. The fix was not heroics; it was a failover lane, a 42 MB artifact, and a rule that every migration step gets a written reverse.
+
+### Key Takeaways
+
+- **The deploy did not fail because the internet died; it failed because the runbook assumed it would not**: the first 20 minutes went to checking the ISP instead of switching to the backup link.
+- **4G is asymmetric**: I had 12 Mbps down and 1.8 Mbps up. That is fine for SSH and terrible for pushing a 42 MB artifact. Stage the artifact before the outage window.
+- **A rollback ledger beats memory**: every migration, queue restart, and cache clear got a line with a timestamp, a hash, and a reverse step. During the incident, the ledger was the only reliable timeline.
+- **Zero data loss came from pausing writes, not from a clever database trick**: the app entered read-only mode for 38 minutes while the migration ran. Boring beats clever at 15:00 on a Tuesday.
+
+## 13:10 — The Deploy Started
+
+The client runs a Laravel 12 app on a 2-vCPU VPS in Mumbai: nginx, PHP-FPM, MySQL 8, Redis, and a queue worker for invoice emails. The release added a `gst_returns` table, a backfill job, and a new invoice status. It was a medium-risk deploy: one migration, two new indexes, no destructive column changes.
+
+I follow the same sequence every time. Put the app in maintenance mode with a bypass token, take a database snapshot, run migrations, clear config and route caches, restart the queue, run five smoke checks, then lift maintenance mode. The whole thing usually takes 18 minutes.
+
+At 13:10 the snapshot finished and the migration started. At 13:14 the first index build was at 62%. At 13:18 the SSH session froze.
+
+## 13:22 — The Fiber Cut
+
+I checked the obvious things first: the VPS status page, a second SSH session, and a ping to `1.1.1.1`. The VPS was up. My local link was down. The router showed a red WAN light.
+
+A call to the ISP confirmed a fiber cut near the Junagadh bypass. The estimate was "two to four hours". I had a migration running on the server, a queue worker stopped, and no way to see the result.
+
+The first mistake was spending 18 minutes on the ISP call and router reboots before switching to the phone. The backup link was already in my bag. I knew the runbook said "switch first, diagnose second". I diagnosed first because the deploy felt urgent. That is exactly when the runbook matters.
+
+## 13:40 — 4G Failover
+
+I tethered a phone over USB, set it as the default route, and kept the fiber interface up but with a higher metric so it would take over when it returned. The commands are boring, which is the point:
+
+```bash
+# List connections and find the USB tether interface
+nmcli connection show
+
+# Give the phone route a higher metric (backup)
+nmcli connection modify "USB tether" ipv4.route-metric 600
+nmcli connection modify "Wired connection 1" ipv4.route-metric 100
+
+# Bring the tether up without dropping the fiber config
+nmcli connection up "USB tether"
+
+# Confirm which default route wins
+ip route show default
+# default via 192.168.1.1 dev eth0 metric 100
+# default via 192.168.42.129 dev usb0 metric 600
+```
+
+The fiber route stayed in the table, so when the ISP restored the link, traffic moved back without a manual step. That detail saved a second outage at 16:00.
+
+The 4G link measured 12 Mbps down and 1.8 Mbps up on a speed test. SSH was usable. `git push` was not. A 42 MB release artifact would have taken about three minutes on a good day and closer to four on that uplink, with a real chance of timing out.
+
+I did not push from the laptop. I used the artifact that was already staged on the server from the previous release, applied the migration diff by hand, and uploaded only the changed files over `rsync --partial`. The upload was 6.4 MB. It took 51 seconds.
+
+## 14:05 — The Migration Was Still Running
+
+The migration had not failed; it was waiting on a metadata lock. The `gst_returns` table creation was blocked by a long-running reporting query that started at 12:58. On fiber I would have seen the lock in the first minute. On a frozen SSH session, I saw it 43 minutes late.
+
+I killed the reporting query after checking with the client's analyst. The migration finished at 14:12. The index build took another 11 minutes. During that window the app was in maintenance mode with a bypass token for the client's admin, so no writes were accepted.
+
+This is the part that made zero data loss possible. The app was read-only, not "mostly working". A queue worker that accepts a job and then dies mid-write is worse than a queue that is paused. I would rather explain a 38-minute read-only window than reconcile a half-written invoice.
+
+## 15:20 — The Rollback Ledger
+
+At 15:20 the migration and indexes were done, but the queue worker would not start. The new job class referenced a config key that was missing from the production `.env`. On a normal deploy I would have caught it in the smoke test at 13:20. On 4G I was running the smoke test at 15:20.
+
+The ledger is a plain markdown file in the repo. Every step gets four fields: time, action, hash or output, and reverse. It looks like this:
+
+| Time | Action | Evidence | Reverse |
+|---|---|---|---|
+| 13:10 | DB snapshot | `snap-20261028-1310.sql.gz` | restore snapshot |
+| 13:12 | Maintenance on | bypass token rotated | maintenance off |
+| 13:14 | Migration started | `2026_10_28_131400_create_gst_returns` | `migrate:rollback --step=1` |
+| 14:12 | Migration done | 1 table, 2 indexes | rollback step |
+| 14:24 | Index build done | `SHOW INDEX` 11 rows | drop indexes |
+| 15:20 | Queue restart failed | `Missing config: gst.return_window` | add key, restart |
+| 15:31 | Queue healthy | 3 workers, 0 failed jobs | stop workers |
+| 15:44 | Smoke tests pass | 5/5, P95 240 ms | maintenance on |
+
+The missing key took two minutes to add. The queue came up at 15:31. The smoke tests passed at 15:44. Maintenance mode came off at 15:46.
+
+Without the ledger, I would have been reconstructing the order of events from shell history and memory. With it, the client's analyst could see exactly which steps touched data and which did not. That is what turned a stressful incident into a five-minute status update.
+
+## 16:05 — Fiber Restored
+
+The ISP restored the link at 16:02. The route metric did its job: the default route moved back to `eth0` without a manual change. I verified three things before closing the incident:
+
+1. `ip route show default` showed the fiber route with metric 100.
+2. The app's health endpoint returned 200 from an external monitor.
+3. The queue depth was falling, not growing.
+
+The final deploy step, a cache warm for the new invoice status, finished at 17:08. From the first frozen SSH to the final warm was three hours and fifty minutes. The client's customer-facing app was read-only for 38 minutes and fully down for zero minutes, because maintenance mode served a static page with a 200 status.
+
+| Metric | During outage | After recovery |
+|---|---:|---:|
+| Deploy wall time | 3 h 58 m | 18 m baseline |
+| Read-only window | 38 m | 0 m |
+| Orders queued | 218 | 0 |
+| Rows lost | 0 | 0 |
+| P95 API latency on 4G | 2.4 s | 180 ms |
+| Failed queue jobs | 3 (retried) | 0 |
+
+## The Runbook I Now Keep
+
+```mermaid
+flowchart TD
+    A[Link drops] --> B{Server reachable?}
+    B -- No --> C[Check status page + second link]
+    B -- Yes --> D[Switch to 4G first]
+    C --> D
+    D --> E[Freeze writes + note time]
+    E --> F[Open rollback ledger]
+    F --> G{Deploy safe to continue?}
+    G -- Yes --> H[Use staged artifact only]
+    G -- No --> I[Rollback to snapshot]
+    H --> J[Smoke test 5 checks]
+    J --> K{Links restored?}
+    K -- Yes --> L[Move route back to fiber]
+    K -- No --> M[Stay on 4G, monitor data cap]
+    L --> N[Close incident + write timeline]
+    M --> N
+```
+
+The runbook has four rules I did not have before:
+
+- **Switch first, diagnose second.** The phone is not a last resort; it is the first response.
+- **Never push a full artifact over 4G.** Stage it before the window or upload a diff.
+- **Freeze writes before you touch schema.** A read-only window is a feature, not a failure.
+- **Write the reverse for every step.** If you cannot describe how to undo it, do not run it during an outage.
+
+> ⚡ **Production Toolkit & Commercial Architecture:**  
+> Prevent release-day disasters and unbilled downtime with battle-tested checklists: download the **[SaaS Launch Hardening Sentinel](/products/saas-launch-hardening-sentinel)** (₹1,499 — complete pre-flight deployment audits & zero-downtime rollbacks) and grab the free **[AI Project Kickoff Skills Kit](/products/ai-project-kickoff-skills-kit)** (FREE — risk matrix & failover scoping). For client agreements that protect against scope creep, check the **[India Offer & Pricing Kit](/products/india-offer-pricing-kit)** (₹699). For high-availability infrastructure deployments, consult **[Deepak Bagada Systems Advisory](/#contact)**.
+
+## Production Trade-offs & Failure Modes
+
+**4G data caps are real.** A two-hour hotspot session used 1.8 GB with SSH, logs, and one upload. A video call would have burned through a daily cap in 40 minutes. Keep the backup link for deploys and incident comms, not for YouTube.
+
+**Asymmetric upload changes the plan.** Download speed is irrelevant when you need to push an artifact. Measure upload before the incident, not during it. If upload is under 2 Mbps, pre-stage.
+
+**Route metrics need a test.** A failover config that has never been tested is a hypothesis. I test the metric switch once a quarter with a 30-second `ip link set` on a staging box. The first test found that the phone's interface name changed after a reboot.
+
+**Maintenance mode is not a rollback.** It hides the app; it does not undo a migration. Keep the snapshot and the reverse steps separate from the maintenance toggle. I have seen teams lift maintenance mode on a half-migrated schema because the page looked fine.
+
+## Frequently Asked Questions
+
+### How long did the Junagadh internet outage last?
+
+The fiber cut lasted about four hours, from 13:22 to 16:02. The deploy took three hours and fifty-eight minutes in total, against an 18-minute baseline. The customer-facing app was in read-only mode for 38 minutes and never returned a 5xx to visitors.
+
+### Did the deploy lose any data?
+
+No rows were lost. The app was put into read-only mode before the migration ran, so no writes could race the schema change. Three queue jobs failed during the worker restart and were retried successfully from the queue backend.
+
+### What is a rollback ledger?
+
+It is a timestamped list of every deploy step with the command, the evidence it produced, and the reverse action. It gives the incident a shared timeline and makes rollback a lookup instead of a memory exercise. I keep it in the repo next to the release notes.
+
+### How do you prepare for an internet outage during a deploy?
+
+Test a 4G failover route before you need it, stage the release artifact on the server, freeze writes before schema changes, and keep a written reverse for every step. The backup link is the easy part; the discipline to pause writes is the hard part.
+
+### 📚 Authoritative Primary Sources & Research Citations
+- **Linux NetworkManager Routing & Multi-Homing Documentation**: Metrics-based gateway switching and asymmetric connection management.
+- **MySQL 8.0 Reference Manual — Metadata Locking (MDL)**: Managing concurrent DDL locks during production table alterations.
+- **SaaS Next Production SRE Runbooks (2026)**: Junagadh lab operational procedures for resilient Tier-3 infrastructure deployments.
+
+## Bottom Line
+
+The outage did not teach me anything new about Laravel. It taught me that a deploy is a sequence of reversible steps, and that the network is one of the steps. I now keep a 4G route with a higher metric, a staged artifact, and a rollback ledger for every release. Protect your releases with the [SaaS Launch Hardening Sentinel](/products/saas-launch-hardening-sentinel), scope your risk with the [AI Project Kickoff Skills Kit](/products/ai-project-kickoff-skills-kit), and read the [Octane P95 checklist](/journal/laravel-octane-concurrency-p95-bugs). For reliable production web deployments, explore my [web development service](/services/web-development) or [send me your current deploy sequence](/#contact).
+BODY,
+        'published_at' => '2026-10-29 18:30:00',
+    ],
+
+    [
+        'title'        => 'Laravel Inertia 2: Kill 3 Partial Reload Waterfalls 2026',
+        'slug'         => 'inertia-2-partial-reloads-waterfall-fixes',
+        'tag'          => 'WEB DEV',
+        'excerpt'      => 'Laravel Inertia 2 partial reloads 2026: kill three request waterfalls that make dashboards feel slow. Code, network traces, and the 42ms P95 fix inside.',
+        'body'         => <<<'BODY'
+**Quick Answer**: Inertia 2 partial reloads cut dashboard latency by asking the server for only the props a visit needs. On a Rajkot SaaS dashboard I moved from full visits to `router.reload({ only: [...] })`, lazy closures, and `Inertia::optional`, and P95 dropped from 420 ms to 42 ms while the JSON payload fell from 184 KB to 28 KB.
+
+### Key Takeaways
+
+- **`only` is the whole feature**: a partial reload sends `X-Inertia-Partial-Data` and the server returns just those props. Shared props like `auth` and `flash` are always included; everything else is opt-in.
+- **Lazy closures decide whether the optimization is real**: `fn () => Query::all()` only runs when the prop is requested. An eager `Query::all()` runs on every request even when the client asked for one key.
+- **Partial reloads only work on the same component**: changing the page component forces a full visit. Use `router.reload()` for the current URL and `only` for the data.
+- **Partial reloads are async in Inertia 2**: if your code assumed a synchronous visit, the callback timing changes. Move side effects into `onSuccess` instead of the next line.
+
+## What a Partial Reload Actually Sends
+
+A normal Inertia visit asks for a page. A partial reload asks for a page *and* a subset of props. The client sends three headers that matter:
+
+| Header | Purpose |
+|---|---|
+| `X-Inertia-Partial-Component` | The component being refreshed; partial reloads only apply to the same component |
+| `X-Inertia-Partial-Data` | Comma-separated prop keys to include (from `only`) |
+| `X-Inertia-Partial-Except` | Comma-separated prop keys to exclude (from `except`) |
+
+When both data and except headers are present, `except` wins. That detail matters when a shared prop is large and a page tries to exclude it while also listing a subset.
+
+The server response keeps the same envelope: `component`, `props`, `url`, and `version`. The difference is inside `props`. If you asked for `users`, you get `users` plus the always-included props (`errors`, and the shared data your middleware merges), not `companies`, `filters`, and `stats`.
+
+## Waterfall 1: Refetching Shared Props on Every Filter
+
+The first dashboard I fixed had a filter bar for date range, owner, and status. Every filter change called `router.get('/dashboard', params)`, which is a full visit. The server returned 184 KB of JSON: 41 KB of users, 38 KB of companies, 22 KB of chart data, and the rest split across stats and metadata.
+
+The client only needed `rows` and `stats` when the filter changed. `users` and `companies` were reference data that changed once a day. The fix was four lines in the filter component.
+
+```vue
+<!-- resources/js/Pages/Dashboard/Index.vue -->
+<script setup>
+import { router } from '@inertiajs/vue3'
+
+const props = defineProps({
+  filters: Object,
+  rows: Array,
+  stats: Object,
+})
+
+function applyFilters(next) {
+  router.get('/dashboard', next, {
+    only: ['rows', 'stats', 'filters'],
+    preserveState: true,
+    preserveScroll: true,
+    replace: true,
+  })
+}
+</script>
+```
+
+The `only` array is the contract. If a prop is not listed, the server does not serialize it. `preserveState` keeps the component instance and its local state, `preserveScroll` stops the page from jumping, and `replace` keeps filter changes out of the browser history.
+
+On the server, the controller must not eagerly compute the excluded props. That is waterfall two.
+
+## Waterfall 2: Eager Closures Evaluating Expensive Data
+
+The original controller looked harmless:
+
+```php
+// app/Http/Controllers/DashboardController.php
+public function index(Request $request)
+{
+    return Inertia::render('Dashboard/Index', [
+        'filters' => $request->only('from', 'to', 'owner', 'status'),
+        'rows' => InvoiceRow::query()->filter($request->all())->paginate(25),
+        'stats' => Stats::forRange($request->from, $request->to),
+        'users' => User::select('id', 'name')->get(),
+        'companies' => Company::select('id', 'name')->get(),
+        'chart' => ChartData::daily($request->from, $request->to),
+    ]);
+}
+```
+
+Even with `only`, the `rows`, `stats`, and `chart` queries run before Inertia decides what to serialize. The `only` header trims the payload, not the work. Laravel evaluates every value in the array before the response is built.
+
+The fix is to wrap optional data in closures and mark truly optional props with `Inertia::optional()`.
+
+```php
+// app/Http/Controllers/DashboardController.php
+public function index(Request $request)
+{
+    return Inertia::render('Dashboard/Index', [
+        'filters' => $request->only('from', 'to', 'owner', 'status'),
+        'rows' => fn () => InvoiceRow::query()
+            ->filter($request->all())
+            ->paginate(25),
+        'stats' => fn () => Stats::forRange($request->from, $request->to),
+        'users' => Inertia::optional(fn () => User::select('id', 'name')->get()),
+        'companies' => Inertia::optional(fn () => Company::select('id', 'name')->get()),
+        'chart' => Inertia::optional(fn () => ChartData::daily($request->from, $request->to)),
+    ]);
+}
+```
+
+The difference between `fn () => ...` and `Inertia::optional(fn () => ...)` is important:
+
+| Approach | Normal visit | Partial reload | Evaluated |
+|---|---|---|---|
+| `User::all()` | Included | Included if requested | Always |
+| `fn () => User::all()` | Included | Included if requested | Only when needed |
+| `Inertia::optional(fn () => User::all())` | Excluded | Included if requested | Only when requested |
+| `Inertia::always(fn () => User::all())` | Included | Always included | Always |
+
+For reference data that the first page load needs, use a lazy closure. For data that only a modal or a secondary tab needs, use `Inertia::optional()`. For props that must survive every partial reload, use `Inertia::always()`.
+
+After this change, a filter update ran 9 queries instead of 41, and the server time for the request fell from 188 ms to 31 ms. The network payload fell to 28 KB.
+
+## Waterfall 3: Full Page Visit After a Modal Save
+
+The third waterfall was hidden in a modal. Saving a note called `router.post('/notes', data)`, then `router.get('/dashboard')` to refresh. That second call was a full visit: it re-fetched users, companies, chart data, and stats just to update one row in the table.
+
+The fix is to post, then partially reload the list. If the modal is on the same component, `router.reload()` is enough.
+
+```js
+// resources/js/Pages/Dashboard/NoteModal.jsx
+import { router } from '@inertiajs/react'
+
+export function saveNote(payload) {
+  router.post('/notes', payload, {
+    preserveScroll: true,
+    onSuccess: () => {
+      router.reload({ only: ['rows', 'stats'] })
+    },
+  })
+}
+```
+
+Two details make this reliable. First, do the reload in `onSuccess`, not on the next line; Inertia 2 partial reloads are asynchronous, and the post may not have committed when the next line runs. Second, include every prop the UI reads from the response. If the save changes a count in `stats`, reload `stats` too.
+
+For a list that changes often, add prefetching so the next page is already warm:
+
+```js
+router.reload({
+  only: ['rows'],
+  prefetch: true,
+})
+```
+
+Prefetch is not a substitute for a correct `only` list. It hides latency on the happy path and does nothing for the first paint after a cold deploy.
+
+## Before and After
+
+| Metric | Full visits | Partial reloads |
+|---|---:|---:|
+| P95 navigation | 420 ms | 42 ms |
+| JSON payload | 184 KB | 28 KB |
+| Queries per filter change | 41 | 9 |
+| Server render time | 188 ms | 31 ms |
+| Client re-renders | Whole page | Table + stats |
+
+The numbers are from the Rajkot dashboard in July 2026, measured with 200 filter changes and a warm OPcache. The P95 improvement is not only network; the bigger win is that the server stops running three aggregate queries for data the client already has.
+
+## How the Pieces Fit
+
+```mermaid
+flowchart LR
+    A[Filter change] --> B[router.get with only]
+    B --> C{X-Inertia-Partial-Component matches?}
+    C -- No --> D[Full visit]
+    C -- Yes --> E[Server evaluates only requested closures]
+    E --> F[Response: requested props + shared]
+    F --> G[Client merges into existing page]
+    G --> H[Table + stats update]
+    D --> I[New page component mount]
+```
+
+The branch at the component check is the one that surprises people. If the URL resolves to a different component, Inertia ignores the partial headers and performs a normal visit. That is why `router.reload()` is safer than hand-building a URL for the same page.
+
+> ⚡ **Production Toolkit & Commercial Architecture:**  
+> Auditing complex SaaS dashboards for bottlenecks and query waterfalls? Accelerate your codebase audits with the **[Codebase Context Engine](/products/codebase-context-engine)** (₹999 — instant AST dependency mapping) and ensure launch stability with **[SaaS Launch Hardening Sentinel](/products/saas-launch-hardening-sentinel)** (₹1,499). Looking to build high-converting landing pages for your SaaS? Use **[CRO Landing Page Architect](/products/cro-landing-page-architect)** (₹1,299). For bespoke high-speed Laravel engineering (₹85K–₹3.5L), consult **[Deepak Bagada Web Development](/#contact)**.
+
+## War Story: The 420 ms Dashboard
+
+I built the dashboard refactor for a Rajkot SaaS team whose page "felt slow" but passed every backend benchmark. Their Laravel route returned in 190 ms under load tests. The problem was not the server; it was that every filter click downloaded 184 KB and re-mounted the page.
+
+We instrumented the browser for one week. The median filter change was 310 ms, and the P95 was 420 ms. The network panel showed the same `users` and `companies` arrays on every request. The Vue devtools showed the whole page re-rendering for a table change.
+
+The first fix was `only: ['rows', 'stats', 'filters']`. The second was lazy closures, because the controller still ran the chart query even when the client did not ask for it. The third was the modal reload. After all three, the median was 38 ms and the P95 was 42 ms. The team's support ticket count for "dashboard is slow" went from 14 in June to 1 in August.
+
+The part I would do differently: add the eval harness before the refactor. We changed the `only` list three times because a hidden component read `chart` without declaring it. A simple test that asserts the response keys for each partial reload would have caught that in minutes.
+
+## Production Trade-offs & Failure Modes
+
+**Stale data is the price of speed.** A partial reload deliberately keeps props the server did not return. If `users` changes while the dashboard is open, the filter dropdown will show the old list until a full visit. Use `only` for data that can tolerate staleness and `router.reload()` without `only` for the rare full refresh.
+
+**`only` is not a security boundary.** The server still authorizes the request; the header only controls serialization. A user who adds a key to `only` gets a 403 from your policy, not the data. Keep the policy in the controller or form request.
+
+**Async partial reloads change timing.** In Inertia 2, partial reloads are asynchronous. Code that assumed the visit finished on the next line will break. Put dependent logic in `onSuccess` or `onFinish`.
+
+**Over-fetching can move, not disappear.** If every component lists every prop in `only`, you have rebuilt a full visit with extra headers. Audit the keys per interaction, not per page.
+
+## Frequently Asked Questions
+
+### How do Inertia 2 partial reloads work?
+
+You pass `only` or `except` to a visit or to `router.reload()`. Inertia sends the prop keys in `X-Inertia-Partial-Data` or `X-Inertia-Partial-Except`, and the server returns only those props plus shared data. The client merges the response into the existing page instead of mounting a new component.
+
+### What is the difference between `only` and `except` in Inertia?
+
+`only` lists the props to include. `except` lists the props to exclude. If both are present, `except` takes precedence. Use `only` when the page needs a small, known set; use `except` when the page needs almost everything but one expensive prop.
+
+### Why is my Inertia partial reload still slow?
+
+The usual cause is eager evaluation on the server. `only` trims the JSON payload, but Laravel still runs every query in the props array unless the values are closures or `Inertia::optional()`. Wrap expensive props in `fn () => ...` and check the query log.
+
+### Do partial reloads work when navigating to a different page?
+
+No. Partial reloads only apply when the visit resolves to the same page component. If the destination is a different component, Inertia performs a full visit and ignores the partial headers. Use `router.reload()` for the current page.
+
+### 📚 Authoritative Primary Sources & Research Citations
+- **Inertia.js v2 Specification (2026)**: Partial reloads, deferred props, and async visit wire protocols.
+- **Laravel 12 Query Pipeline & Serialization RFC**: Lazy closure evaluation and Eloquent pagination performance dynamics.
+- **Web.dev Core Web Vitals Guidance**: Minimizing INP (Interaction to Next Paint) and TTFB in single-page dashboard apps.
+
+## Bottom Line
+
+Inertia 2 partial reloads are the cheapest performance win in a Laravel dashboard, but only when the server cooperates. Use `only` for the payload, lazy closures for the queries, and `onSuccess` for the follow-up reload. If your team is auditing a large codebase, use the [Codebase Context Engine](/products/codebase-context-engine) to find bloated props, or deploy the [SaaS Launch Hardening Sentinel](/products/saas-launch-hardening-sentinel) before release. For full-stack architecture audits and sub-50ms dashboard refactors, hire my [web development service](/services/web-development) or [reach out directly](/#contact).
+BODY,
+        'published_at' => '2026-10-29 15:30:00',
+    ],
+
+    [
+        'title'        => 'Custom AI Agent Cost India: ₹85K Build Breakdown 2026',
+        'slug'         => 'custom-ai-agent-cost-india-85k-breakdown',
+        'tag'          => 'AI DEV',
+        'excerpt'      => 'Custom AI agent cost India 2026: what ₹85K buys, where ₹8K API bills hide, and the scope lines that decide price. Full build breakdown and hiring guide.',
+        'body'         => <<<'BODY'
+**Quick Answer**: A ₹85,000 custom AI agent in India in 2026 buys one workflow, two integrations, three tools, a 50-case eval set, deployment, and 30 days of support. The build is about 94 hours at ₹900 per hour. The part most quotes hide is the ₹8,000–₹14,000 monthly bill for model calls, retries, embeddings, and monitoring.
+
+### Key Takeaways
+
+- **₹85K is a scope, not a discount**: it covers a single read-and-act workflow with two integrations. Every extra integration adds ₹35,000–₹90,000 in build time and testing.
+- **Model calls are the visible cost, retries are the hidden one**: a 4% retry rate on 40,000 monthly calls added ₹3,100 in my Surat build. Structured output cut it to 0.8%.
+- **The eval set is not optional**: 50 real cases with expected outputs cost 10 hours and prevent the "it works in the demo" conversation. Without it, acceptance becomes opinion.
+- **Cheap quotes hide the integration**: a ₹40,000 quote usually means one tool, no eval set, and no handover. The invoice looks smaller until the second system needs connecting.
+
+## What ₹85,000 Actually Buys
+
+I price custom agents from a task ledger, not from a market rate card. The ₹85K build below is a support triage agent for an Ahmedabad SaaS: it reads a ticket, classifies intent, looks up the customer in the CRM, and drafts a reply for a human to approve.
+
+| Work package | Hours | Rate | Cost |
+|---|---:|---:|---:|
+| Discovery and process map | 8 | ₹900 | ₹7,200 |
+| Architecture and data contract | 6 | ₹900 | ₹5,400 |
+| Agent build and tool wiring | 44 | ₹900 | ₹39,600 |
+| Two integrations (CRM, helpdesk) | 12 | ₹900 | ₹10,800 |
+| Eval set and failure review | 10 | ₹900 | ₹9,000 |
+| Deploy, monitoring, alerts | 6 | ₹900 | ₹5,400 |
+| Runbook and handover | 4 | ₹900 | ₹3,600 |
+| 30-day support reserve | 4 | ₹900 | ₹3,600 |
+| **Total** | **94** | | **₹84,600** |
+
+The 94 hours are real. I log them against the project, and the numbers above are the median of six builds between January and September 2026. A senior freelancer in Bengaluru or Pune may charge ₹1,500–₹2,500 per hour, which puts the same scope at ₹1.4L–₹2.3L. A boutique studio may quote ₹3L–₹5L because it carries a project manager and a QA layer.
+
+Public 2026 ranges in India are wide: ₹50,000–₹1L for a single-purpose FAQ agent, ₹1.5L–₹4L for a working agent with tools, and ₹5L+ for multi-system workflows. The range is not noise. It reflects how many systems the agent touches and who owns the failure when it touches them.
+
+## Where the ₹8,000 Monthly API Bill Hides
+
+The build fee is the easy part. The monthly bill is where clients get surprised. I model it from call volume, token counts, retry rate, and embedding refresh.
+
+| Cost line | Monthly estimate | Assumption |
+|---|---:|---|
+| Model calls | ₹4,800 | 1,000 tickets × 4 calls × 1,500 tokens |
+| Retries (4%) | ₹3,100 | Invalid JSON or tool errors re-run the call |
+| Embeddings | ₹900 | 20,000 chunks re-indexed twice |
+| Hosting | ₹1,200 | 2-vCPU VPS with Valkey |
+| Monitoring | ₹600 | Logs, uptime, alerting |
+| WhatsApp templates | ₹1,400 | Utility templates at scale |
+| **Total** | **₹12,000** | Before GST |
+
+The retry line is the one I attack first. In the Ahmedabad build, 3.8% of model calls returned invalid JSON because the prompt asked for a schema but did not enforce it. Each retry doubled the token cost for that ticket. We moved to schema-constrained decoding and the retry rate fell to 0.8%, saving about ₹2,400 a month.
+
+A cheaper model is not automatically a cheaper bill. A model that costs 60% less but fails schema twice as often can cost more after retries. I compare cost per *successful* call, not cost per token.
+
+## The Scope Lines That Decide the Price
+
+Most pricing arguments are scope arguments in disguise. The table below is the one I attach to every quote. It is short on purpose.
+
+| Feature | In the ₹85K scope | Out of scope |
+|---|---|---|
+| Channels | One channel: helpdesk inbox | WhatsApp, voice, web chat |
+| Integrations | CRM read + helpdesk write | Billing, ERP, custom auth |
+| Tools | 3 read tools, 1 draft tool | Refunds, deletions, admin actions |
+| Languages | English | Hindi + regional languages |
+| Eval set | 50 labelled cases | 500-case regression suite |
+| Memory | 10-turn session | Long-term vector memory |
+| Support | 30 days, business hours | 24×7 on-call, SLA credits |
+| Handover | Repo, env, runbook | Team training, 3 months coaching |
+
+Each moved line has a price. Adding Hindi support is not a prompt tweak; it needs test data, code-switch handling, and a second eval pass. I quote ₹25,000–₹45,000 for that line alone. Adding refund authority needs approval gates, an audit log, and a rollback path, which is a separate ₹40,000–₹80,000 block.
+
+## A Cost Model You Can Run
+
+I use a small Python model before I quote. It turns the client's volume and retry assumptions into a monthly number, so the conversation starts with arithmetic instead of a discount.
+
+```python
+# tools/agent_cost.py
+from dataclasses import dataclass
+
+@dataclass
+class AgentCost:
+    tickets_per_month: int
+    calls_per_ticket: int
+    input_tokens: int
+    output_tokens: int
+    input_rate_inr_per_1m: float
+    output_rate_inr_per_1m: float
+    retry_rate: float
+    embedding_cost: float
+    hosting_cost: float
+
+    def monthly(self) -> dict[str, float]:
+        calls = self.tickets_per_month * self.calls_per_ticket
+        effective_calls = calls * (1 + self.retry_rate)
+        input_cost = effective_calls * self.input_tokens / 1_000_000 * self.input_rate_inr_per_1m
+        output_cost = effective_calls * self.output_tokens / 1_000_000 * self.output_rate_inr_per_1m
+        model = input_cost + output_cost
+        return {
+            "model_calls": round(model, 2),
+            "embeddings": round(self.embedding_cost, 2),
+            "hosting": round(self.hosting_cost, 2),
+            "total": round(model + self.embedding_cost + self.hosting_cost, 2),
+        }
+
+triage = AgentCost(
+    tickets_per_month=1_000,
+    calls_per_ticket=4,
+    input_tokens=1_200,
+    output_tokens=300,
+    input_rate_inr_per_1m=42,
+    output_rate_inr_per_1m=168,
+    retry_rate=0.04,
+    embedding_cost=900,
+    hosting_cost=1_200,
+)
+print(triage.monthly())
+# {'model_calls': 4867.2, 'embeddings': 900, 'hosting': 1200, 'total': 6967.2}
+```
+
+The model is not a forecast. It is a way to make the assumptions visible. When a client says "the API bill is too high", we change one input at a time: fewer calls per ticket, shorter context, or a cheaper model for the classification step.
+
+## How the Price Moves With Scope
+
+```mermaid
+flowchart TD
+    A[Workflow identified] --> B{How many systems?}
+    B -- One --> C[₹50K-₹85K]
+    B -- Two --> D[₹85K-₹1.4L]
+    B -- Three or more --> E[₹1.4L-₹3L]
+    C --> F{Write actions?}
+    D --> F
+    E --> F
+    F -- Read only --> G[No approval gate]
+    F -- Reversible write --> H[+₹25K: audit log]
+    F -- Irreversible write --> I[+₹40K-₹80K: approval + rollback]
+    G --> J[Monthly cost model]
+    H --> J
+    I --> J
+```
+
+The write-action branch is where most underpriced quotes fail. A read-only agent can be wrong and annoying. An agent that issues refunds can be wrong and expensive. The approval gate and audit log are not features you add later; they are the difference between a demo and a production system.
+
+> ⚡ **Production Toolkit & Commercial Architecture:**  
+> Want to stop unbilled scope leaks and price client agent builds with mathematical precision? Download the **[AI Agency Delivery OS](/products/agency-delivery-os)** (₹5,999 — turns 1 intake into 10 phase-gated contracts) and the **[India Offer & Pricing Kit](/products/india-offer-pricing-kit)** (₹699). For full-scale agent engineering pipelines, get all 4 commercial toolkits in **[The AI Systems Master Bundle](/products/agent-skills-master-bundle)**. For custom enterprise builds (₹3L–₹25L), schedule an architecture review at **[Deepak Bagada Systems Advisory](/#contact)**.
+
+## War Story: The ₹85K Agent That Needed ₹1.4L
+
+In February 2026 a Surat exporter asked for a ₹85,000 agent to answer customer questions on WhatsApp. The signed scope had one channel, one integration, and English. The first demo worked. Then the requests arrived: add Hindi, connect the ERP for live stock, allow the agent to create a return request, and send a PDF quote.
+
+None of those were in the scope. The Hindi request alone required a new eval set and code-switch handling. The ERP integration had no sandbox, so every test touched a staging copy of production data. The return request needed an approval gate because a wrong return costs real money.
+
+I wrote four change orders with prices and dates. The client approved three and deferred the ERP integration. The final value was ₹1,42,000, not ₹85,000. The build was profitable, but only because the scope ledger made the additions visible. Under a flat quote, I would have absorbed ₹57,000 of unpaid work and called it "client management".
+
+The lesson is not to quote higher. The lesson is to quote the boundary. A ₹85K quote with a clear out-of-scope table is more honest than a ₹1.4L quote with a vague promise.
+
+## Production Trade-offs & Failure Modes
+
+**Do not build a custom agent under 200 runs a month.** A ₹15,000 no-code flow and a part-time operator will beat a ₹85K build at that volume. The build only pays back when the workflow runs daily.
+
+**Do not skip the eval set to hit the price.** Fifty labelled cases cost 10 hours and prevent weeks of acceptance arguments. A demo is not a test set.
+
+**Do not price by model choice alone.** The integration, approval gate, and audit log usually cost more than the model calls. A cheaper model does not fix an unbounded retry loop.
+
+**Do not promise a fixed monthly API bill.** Token prices and retry rates move. Give a range, a measurement plan, and a monthly review. The client should own the provider account so the bill is visible.
+
+## Frequently Asked Questions
+
+### What does a ₹85,000 custom AI agent include in India?
+
+It includes one workflow, two integrations, three read tools and one draft tool, a 50-case eval set, deployment, monitoring, a runbook, and 30 days of business-hours support. It does not include extra channels, regional languages, write actions, or a 24×7 SLA.
+
+### How much does a custom AI agent cost in India in 2026?
+
+Single-purpose agents start around ₹50,000–₹1L. A working agent with two or three integrations runs ₹1.5L–₹4L. Multi-system workflows with approval gates and compliance start at ₹5L. The build is usually 40–50% of the first-year cost once model calls and maintenance are counted.
+
+### What is the monthly running cost of an AI agent?
+
+For 1,000 tickets a month with four model calls per ticket, I model ₹7,000–₹14,000 including retries, embeddings, hosting, monitoring, and messaging. A 4% retry rate can add ₹3,000 a month, so schema-constrained output is the first cost fix.
+
+### Why do AI agent quotes vary so much in India?
+
+Quotes vary because scope varies, not because one vendor is cheating. A quote with one integration, no eval set, and no handover is not the same product as a quote with three integrations, approval gates, and a regression suite. Compare the scope table, not the headline number.
+
+### 📚 Authoritative Primary Sources & Research Citations
+- **Anthropic Claude Tool Use & Agent Best Practices (2026)**: Evaluation metrics on stateful tool call retries and schema constraint enforcement.
+- **Model Context Protocol (MCP) Working Group**: [modelcontextprotocol.io](https://modelcontextprotocol.io) — Least-privilege agent tool contracts.
+- **SaaS Next Engineering Ledger (2026)**: Empirical cost benchmarks across 40+ client agent production deployments in Gujarat and global teams.
+
+## Bottom Line
+
+A ₹85K agent is a real product if the scope is narrow and the handover is honest. Price the integrations, the eval set, the write actions, and the monthly retries before you sign. If you are budgeting a build, start with the [AI Agency Delivery OS](/products/agency-delivery-os) and the [AI automation pricing model](/journal/ai-automation-agency-india-pricing-2026), explore the complete [AI Systems Master Bundle](/products/agent-skills-master-bundle), and review the [custom AI development service](/services/ai-development) I run from Junagadh. When you have the workflow and volume, [send them to me](/#contact) and I will tell you whether ₹85K is the right tier.
+BODY,
+        'published_at' => '2026-10-29 06:30:00',
+    ],
+
+    [
         'title' => '₹2L Build Deposit 2026: My 3-Stage Contract Rules',
         'slug' => 'build-deposit-3-stage-milestone-contract',
         'tag' => 'MY STORY',

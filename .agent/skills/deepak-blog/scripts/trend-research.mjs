@@ -136,7 +136,7 @@ const PILLARS = [
     label: "Web Dev & High-Speed Laravel",
     seed: "Laravel web development speed Core Web Vitals",
     keywords: ["best web developer Junagadh", "Laravel developer Gujarat", "custom website cost India"],
-    angles: ["Sub-second load times", "Core Web Vitals", "Conversion architecture", "Laravel 13 AI SDK"],
+    angles: ["Sub-second load times", "Core Web Vitals", "Conversion architecture", "Laravel 12 AI SDK"],
     trendSources: ["Laravel News", "Web.dev trending", "Hacker News Show HN"],
   },
   {
@@ -159,9 +159,9 @@ const PILLARS = [
     id: "custom-mcp",
     label: "Custom MCP + Workflow (Next.js & Laravel)",
     seed: "custom MCP server workflow Next.js Laravel",
-    keywords: ["custom MCP server Next.js", "MCP workflow Laravel 2026", "MCP Next.js 15.5 Laravel 13", "n8n MCP workflow automation"],
-    angles: ["Custom MCP server from scratch", "Next.js 15.5 + MCP (Turbopack, Cache Components)", "Laravel 13 + MCP (AI SDK, pgvector, Boost)", "Workflow automation n8n+MCP for both stacks"],
-    trendSources: ["MCP spec 2026-03-26", "Next.js 15.5 release notes", "Laravel 13 AI SDK docs", "n8n MCP community"],
+    keywords: ["custom MCP server Next.js", "MCP workflow Laravel 2026", "MCP Next.js 15.5 Laravel 12", "n8n MCP workflow automation"],
+    angles: ["Custom MCP server from scratch", "Next.js 15.5 + MCP (Turbopack, Cache Components)", "Laravel 12 + MCP (AI SDK, pgvector, Boost)", "Workflow automation n8n+MCP for both stacks"],
+    trendSources: ["MCP spec 2026-03-26", "Next.js 15.5 release notes", "Laravel 12 AI SDK docs", "n8n MCP community"],
   },
 ];
 
@@ -205,7 +205,7 @@ const TOPIC_TEMPLATES = {
     { title: "AI Swarms for Indian SMEs: Architecture That Pays for Itself in 30 Days", kw: "AI automation Indian SMEs", intent: "Commercial", viral: "India SME automation searches +210% YoY", ctr: 9 },
   ],
   "web-dev": [
-    { title: "Laravel 13 in 2026: 98 Lighthouse, No SPA", kw: "Laravel 13 performance 2026", intent: "Commercial", viral: "Laravel News trending #1, HN discussion 340 comments", ctr: 8 },
+    { title: "Laravel 12 in 2026: 98 Lighthouse, No SPA", kw: "Laravel 12 performance 2026", intent: "Commercial", viral: "Laravel News trending #1, HN discussion 340 comments", ctr: 8 },
     { title: "Best Website Developer Gujarat 2026: Costs & Proof", kw: "best website developer Gujarat 2026", intent: "Commercial", viral: "Google PAA volume 1.2K/mo, local intent spike + best modifier 3x CTR", ctr: 9 },
     { title: "Website Cost Gujarat 2026: Honest ₹ Breakdown", kw: "website cost Gujarat 2026", intent: "Commercial", viral: "Commercial intent + ₹ table gap", ctr: 9 },
     { title: "Next.js 15.5 in 2026: Turbopack 5x, TTFB 700→60ms", kw: "Next.js 15.5 performance 2026", intent: "Commercial", viral: "Next.js 15.5 Turbopack beta viral, HN 400+ comments", ctr: 9 },
@@ -226,7 +226,7 @@ const TOPIC_TEMPLATES = {
   "custom-mcp": [
     { title: "Custom MCP Server 2026: Build in 30 Mins — Next+Laravel", kw: "custom MCP server build 2026", intent: "Commercial", viral: "MCP spec 2026-03-26 viral, builder demand +340%", ctr: 9 },
     { title: "Next.js 15.5 + MCP 2026: Tool Calling in 20 Lines", kw: "Next.js MCP integration 2026", intent: "Commercial", viral: "Next.js MCP SDK 18K stars, high intent", ctr: 9 },
-    { title: "Laravel 13 + MCP 2026: pgvector to n8n Flow", kw: "Laravel MCP workflow 2026", intent: "Commercial", viral: "Laravel 13 MCP + Boost trending, workflow gap", ctr: 9 },
+    { title: "Laravel 12 + MCP 2026: pgvector to n8n Flow", kw: "Laravel MCP workflow 2026", intent: "Commercial", viral: "Laravel 12 MCP + Boost trending, workflow gap", ctr: 9 },
     { title: "MCP Workflow 2026: n8n + Next.js + Laravel — One Ledger", kw: "MCP workflow Next.js Laravel n8n 2026", intent: "Commercial", viral: "n8n 400 integrations + MCP = viral automation stack", ctr: 9 },
     { title: "MCP Security 2026: Auth & JWT for Both Stacks", kw: "MCP security deployment Next.js Laravel 2026", intent: "Commercial", viral: "MCP security gap — 26% skills vulnerable per SkillSpector", ctr: 8 },
   ],

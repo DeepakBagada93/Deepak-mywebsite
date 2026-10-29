@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/ai-codebase-doc-agent",
+  "checkedAt": "2026-10-28T12:34:35.147Z",
+  "passed": [
+    "ai-codebase-doc-agent-v1.0.0.zip has 34 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

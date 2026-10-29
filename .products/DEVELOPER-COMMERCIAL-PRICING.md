@@ -21,7 +21,7 @@
 
 ---
 
-## 2. Complete 5-Product Commercial Pricing Matrix
+## 2. Complete 6-Product Commercial Pricing Matrix
 
 Here is the exact dual-market price matrix engineered for maximum conversion:
 
@@ -30,9 +30,10 @@ Here is the exact dual-market price matrix engineered for maximum conversion:
 | **01** | **`saas-launch-hardening-sentinel`**<br>*Pre-flight security & Stripe idempotency hardener* | **$69**<br>*(Reg. $99)* | **$149**<br>*(Reg. $199)* | **₹1,499**<br>*(Reg. ₹2,499)* | **₹3,999**<br>*(Reg. ₹5,999)* |
 | **02** | **`developer-b2b-distribution-engine`**<br>*Autonomous client acquisition & outbound sales pipeline* | **$97**<br>*(Reg. $149)* | **$197**<br>*(Reg. $297)* | **₹1,999**<br>*(Reg. ₹3,499)* | **₹4,999**<br>*(Reg. ₹7,999)* |
 | **03** | **`codebase-context-engine`**<br>*Multi-IDE context generator (.cursorrules, CLAUDE.md)* | **$49**<br>*(Reg. $79)* | **$99**<br>*(Reg. $149)* | **₹999**<br>*(Reg. ₹1,999)* | **₹2,499**<br>*(Reg. ₹3,999)* |
-| **04** | **`api-to-microsaas-launcher`**<br>*Turn any Python/Node API into a monetized SaaS* | **$89**<br>*(Reg. $129)* | **$179**<br>*(Reg. $249)* | **₹1,799**<br>*(Reg. ₹2,999)* | **₹4,499**<br>*(Reg. ₹6,999)* |
-| **05** | **`cro-landing-page-architect`**<br>*High-converting developer landing page & checkout builder* | **$59**<br>*(Reg. $89)* | **$129**<br>*(Reg. $179)* | **₹1,299**<br>*(Reg. ₹2,199)* | **₹3,299**<br>*(Reg. ₹4,999)* |
-| 💎 | **ALL-IN-ONE DEVELOPER FOUNDER SUITE**<br>*(All 5 Commercial Products Bundled)* | **$297**<br>*(Value: $750)* | **$597**<br>*(Value: $1,450)* | **₹5,999**<br>*(Value: ₹17,000)* | **₹14,999**<br>*(Value: ₹35,000)* |
+| **04** | **`ai-codebase-doc-agent`**<br>*Autonomous codebase documentation & architecture knowledge agent* | **$79**<br>*(Reg. $99)* | **$149**<br>*(Reg. $199)* | **₹1,999**<br>*(Reg. ₹2,999)* | **₹3,999**<br>*(Reg. ₹5,999)* |
+| **05** | **`api-to-microsaas-launcher`**<br>*Turn any Python/Node API into a monetized SaaS* | **$89**<br>*(Reg. $129)* | **$179**<br>*(Reg. $249)* | **₹1,799**<br>*(Reg. ₹2,999)* | **₹4,499**<br>*(Reg. ₹6,999)* |
+| **06** | **`cro-landing-page-architect`**<br>*High-converting developer landing page & checkout builder* | **$59**<br>*(Reg. $89)* | **$129**<br>*(Reg. $179)* | **₹1,299**<br>*(Reg. ₹2,199)* | **₹3,299**<br>*(Reg. ₹4,999)* |
+| 💎 | **ALL-IN-ONE DEVELOPER FOUNDER SUITE**<br>*(All 6 Commercial Products Bundled)* | **$349**<br>*(Value: $850)* | **$699**<br>*(Value: $1,650)* | **₹6,999**<br>*(Value: ₹20,000)* | **₹16,999**<br>*(Value: ₹41,000)* |
 
 ---
 

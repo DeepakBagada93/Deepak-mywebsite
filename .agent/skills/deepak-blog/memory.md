@@ -3874,3 +3874,27 @@
   - Published: `2026-10-28 18:30:00`
   - Words: 1982
   - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/build-deposit-3-stage-milestone-contract
+
+- **Custom AI Agent Cost India: ₹85K Build Breakdown 2026**
+  - Slug: `custom-ai-agent-cost-india-85k-breakdown`
+  - Tag: `AI DEV`
+  - Published: `2026-10-29 06:30:00`
+  - Words: 1840
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel Inertia 2: Kill 3 Partial Reload Waterfalls 2026**
+  - Slug: `inertia-2-partial-reloads-waterfall-fixes`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-29 15:30:00`
+  - Words: 2059
+  - Scheduled Slot: `03:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Junagadh Internet Outage: 4-Hour Deploy Recovery 2026**
+  - Slug: `junagadh-internet-outage-deploy-recovery`
+  - Tag: `MY STORY`
+  - Published: `2026-10-29 18:30:00`
+  - Words: 2138
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

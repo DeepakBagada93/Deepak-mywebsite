@@ -99,7 +99,13 @@ function deobfuscate(text) {
 }
 
 function stripTags(html) {
-  return deobfuscate(html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' '))
+  if (!html) return '';
+  return deobfuscate(
+    html
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ' ')
+      .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+  )
     .replace(/&nbsp;/gi, ' ')
     .replace(/&amp;/gi, '&')
     .replace(/\s+/g, ' ');
@@ -114,7 +120,7 @@ function domainOf(url) {
 }
 
 async function fetchText(url) {
-  try {
+  const work = (async () => {
     const res = await fetch(url, {
       redirect: 'follow',
       signal: AbortSignal.timeout(timeoutMs),
@@ -125,8 +131,19 @@ async function fetchText(url) {
     if (!/text\/html|text\/plain/i.test(type)) return '';
     const body = await res.text();
     return body.length > 700000 ? body.slice(0, 700000) : body;
+  })();
+
+  let timer;
+  const hardStop = new Promise((resolve) => {
+    timer = setTimeout(() => resolve(''), timeoutMs + 1500);
+  });
+
+  try {
+    return await Promise.race([work, hardStop]);
   } catch {
     return '';
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -271,7 +288,7 @@ if (inputFile) {
   const raw = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
   companies = Array.isArray(raw) ? raw : raw.leads || raw.companies || [];
 } else if (domainsFile) {
-  companies = fs.readFileSync(domainsFile, 'utf8').split(/\r?\n/).map((d) => d.trim()).filter(Boolean).map((d) => ({ company: domainOf(d), website: d }));
+  companies = fs.readFileSync(domainsFile, 'utf8').split(/\r?\n/).map((d) => d.trim()).filter(Boolean).map((d) => ({ company: domainOf(d), website: d, country: args.country || 'Australia' }));
 } else {
   console.error('Pass --in profiles.json or --domains domains.txt');
   process.exit(2);

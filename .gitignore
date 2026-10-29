@@ -65,5 +65,8 @@ storage/logs/scheduled-posts.log
 # OAuth client secrets — never commit
 client_secret_*.json
 .agent/skills/deepak-blog/client_secret_*.apps.googleusercontent.com.json
+saasnext-kpi-*.json
+*-service-account*.json
+*credentials*.json
 
 
