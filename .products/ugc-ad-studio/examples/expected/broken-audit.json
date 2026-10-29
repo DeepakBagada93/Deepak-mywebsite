@@ -1,0 +1,496 @@
+{
+  "schemaVersion": "1.0.0",
+  "campaign": "Nara Vitamin C Face Serum",
+  "checkedAt": "2026-10-29T14:02:55.697Z",
+  "score": 38,
+  "minScore": 85,
+  "verdict": "DO NOT SHIP",
+  "stats": {
+    "angles": 6,
+    "videoScenes": 30,
+    "imagePrompts": 24,
+    "checks": 38,
+    "passed": 14,
+    "failed": 24,
+    "critical": 7,
+    "high": 13,
+    "medium": 3,
+    "low": 1
+  },
+  "findings": [
+    {
+      "id": "structure.placeholders",
+      "severity": "critical",
+      "message": "1 placeholder string(s) found.",
+      "where": "{{INSERT_HOOK}}",
+      "fix": "Replace every TODO, {{token}} or [insert] with real content."
+    },
+    {
+      "id": "hooks.length",
+      "severity": "high",
+      "message": "Every hook is 3–14 words.",
+      "where": "{{INSERT_HOOK}}",
+      "fix": "Cut the hook to one idea and 14 words or fewer."
+    },
+    {
+      "id": "scripts.hookWindow",
+      "severity": "high",
+      "message": "Hook is not delivered inside 3 seconds in 1 angle(s).",
+      "where": "pain-agitate",
+      "fix": "Move the hook to beat 1, cut it to 12 words, and make sure it ends by 3s."
+    },
+    {
+      "id": "scripts.cta",
+      "severity": "high",
+      "message": "Missing a clear CTA in 1 angle(s).",
+      "where": "identity",
+      "fix": "End on one action: tap the link, check the price, see the routine."
+    },
+    {
+      "id": "video.model",
+      "severity": "high",
+      "message": "Unknown video model: sora-3.",
+      "where": "A6-S2",
+      "fix": "Use a model listed in the skill (veo-3.1-flow, kling-2.5, runway-gen4, …)."
+    },
+    {
+      "id": "video.aspect",
+      "severity": "critical",
+      "message": "Scene A2-S1 is 16:9, not 9:16.",
+      "where": "A2-S1",
+      "fix": "Vertical 9:16 is the delivery format; regenerate this scene."
+    },
+    {
+      "id": "video.character",
+      "severity": "critical",
+      "message": "Character block missing from scene A1-S2.",
+      "where": "A1-S2",
+      "fix": "Paste the full character block verbatim; do not paraphrase it."
+    },
+    {
+      "id": "video.product",
+      "severity": "high",
+      "message": "Product block missing from scene A6-S1.",
+      "where": "A6-S1",
+      "fix": "Paste the full product block verbatim into every prompt."
+    },
+    {
+      "id": "video.grade",
+      "severity": "high",
+      "message": "Grade block missing from scene A6-S1.",
+      "where": "A6-S1",
+      "fix": "Use one grade block for the whole campaign."
+    },
+    {
+      "id": "video.negative",
+      "severity": "high",
+      "message": "Negative prompt missing from scene A3-S1.",
+      "where": "A3-S1",
+      "fix": "Add the labeled negative prompt line."
+    },
+    {
+      "id": "video.seed",
+      "severity": "medium",
+      "message": "Scene A3-S1 has no locked seed.",
+      "where": "A3-S1",
+      "fix": "Lock a positive integer seed per scene."
+    },
+    {
+      "id": "video.duration",
+      "severity": "high",
+      "message": "Scene A4-S3 is 12s (allowed 2–8s).",
+      "where": "A4-S3",
+      "fix": "Split the scene or trim it into the 2–8s window."
+    },
+    {
+      "id": "video.noText",
+      "severity": "high",
+      "message": "Scene A6-S1 requests baked-in text or is missing the no-text guard.",
+      "where": "A6-S1",
+      "fix": "Generate a clean plate; add text in the edit."
+    },
+    {
+      "id": "video.length",
+      "severity": "medium",
+      "message": "Scene A6-S1 prompt is only 9 words.",
+      "where": "A6-S1",
+      "fix": "Restore the full consistency blocks and camera detail."
+    },
+    {
+      "id": "image.model",
+      "severity": "high",
+      "message": "Unknown image model: dalle-3.",
+      "where": "hook-frame",
+      "fix": "Use nano-banana-pro, midjourney-v7, flux-1.1-pro or imagen-4."
+    },
+    {
+      "id": "image.grade",
+      "severity": "high",
+      "message": "Grade block missing from image product-hero.",
+      "where": "product-hero",
+      "fix": "Use the same grade block as the video."
+    },
+    {
+      "id": "image.noText",
+      "severity": "critical",
+      "message": "Image hook-frame is missing the no-text/no-watermark guard.",
+      "where": "hook-frame",
+      "fix": "Generate clean plates; add copy in the editor."
+    },
+    {
+      "id": "captions.cta",
+      "severity": "medium",
+      "message": "Missing CTA in 1 Instagram caption(s).",
+      "where": "proof",
+      "fix": "Add one CTA line above the hashtags."
+    },
+    {
+      "id": "captions.disclosure",
+      "severity": "critical",
+      "message": "Disclosure missing from 1 caption(s).",
+      "where": "proof",
+      "fix": "Add #ad and the AI-generated disclosure."
+    },
+    {
+      "id": "captions.hashtags",
+      "severity": "low",
+      "message": "1 caption(s) have 0 or more than 5 hashtags.",
+      "where": "proof",
+      "fix": "Use 1–5 specific hashtags instead of a wall of tags."
+    },
+    {
+      "id": "compliance.bannedClaims",
+      "severity": "critical",
+      "message": "Blocked claim language: absolute claim (100%), guarantee language.",
+      "where": "claims",
+      "fix": "Rewrite the claim as mechanism language or attach evidence and get human approval."
+    },
+    {
+      "id": "compliance.urgency",
+      "severity": "high",
+      "message": "Fake urgency or countdown language found.",
+      "where": "claims",
+      "fix": "Remove countdowns and false scarcity."
+    },
+    {
+      "id": "compliance.personalAttributes",
+      "severity": "critical",
+      "message": "Personal-attribute phrasing found (Meta policy risk).",
+      "where": "claims",
+      "fix": "Describe the product, not the viewer’s body, debt or identity."
+    },
+    {
+      "id": "compliance.price",
+      "severity": "high",
+      "message": "Price mismatch: ₹999 vs ₹799.",
+      "where": "price",
+      "fix": "Use one price everywhere; re-check the checkout before publishing."
+    }
+  ],
+  "checks": [
+    {
+      "id": "structure.meta",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Brand, product and price are present.",
+      "where": "meta"
+    },
+    {
+      "id": "structure.platforms",
+      "weight": 2,
+      "severity": "medium",
+      "passed": true,
+      "message": "At least one publishing platform is declared.",
+      "where": "meta.platforms"
+    },
+    {
+      "id": "structure.angles",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "6 angles built (minimum 4).",
+      "where": "angles"
+    },
+    {
+      "id": "structure.tokens",
+      "weight": 2,
+      "severity": "critical",
+      "passed": true,
+      "message": "All four consistency blocks are present.",
+      "where": "consistency"
+    },
+    {
+      "id": "structure.placeholders",
+      "weight": 2,
+      "severity": "critical",
+      "passed": false,
+      "message": "1 placeholder string(s) found.",
+      "where": "{{INSERT_HOOK}}"
+    },
+    {
+      "id": "hooks.length",
+      "weight": 4,
+      "severity": "high",
+      "passed": false,
+      "message": "Every hook is 3–14 words.",
+      "where": "{{INSERT_HOOK}}"
+    },
+    {
+      "id": "hooks.signals",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "Every hook carries at least 2 hook signal(s).",
+      "where": "hooks"
+    },
+    {
+      "id": "hooks.unique",
+      "weight": 3,
+      "severity": "medium",
+      "passed": true,
+      "message": "No two angles open with the same three words.",
+      "where": "hooks"
+    },
+    {
+      "id": "hooks.fluff",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "No fluff language in hooks.",
+      "where": "hooks"
+    },
+    {
+      "id": "scripts.pacing",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "Pacing is at or below 3.5 words/second.",
+      "where": "angles"
+    },
+    {
+      "id": "scripts.hookWindow",
+      "weight": 3,
+      "severity": "high",
+      "passed": false,
+      "message": "Hook is not delivered inside 3 seconds in 1 angle(s).",
+      "where": "pain-agitate"
+    },
+    {
+      "id": "scripts.cta",
+      "weight": 3,
+      "severity": "high",
+      "passed": false,
+      "message": "Missing a clear CTA in 1 angle(s).",
+      "where": "identity"
+    },
+    {
+      "id": "scripts.disclosure",
+      "weight": 3,
+      "severity": "critical",
+      "passed": true,
+      "message": "Every angle carries an AI/paid disclosure.",
+      "where": "compliance"
+    },
+    {
+      "id": "scripts.beats",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Beat timings are contiguous and match the runtime.",
+      "where": "angles"
+    },
+    {
+      "id": "video.model",
+      "weight": 3,
+      "severity": "high",
+      "passed": false,
+      "message": "Unknown video model: sora-3.",
+      "where": "A6-S2"
+    },
+    {
+      "id": "video.aspect",
+      "weight": 3,
+      "severity": "critical",
+      "passed": false,
+      "message": "Scene A2-S1 is 16:9, not 9:16.",
+      "where": "A2-S1"
+    },
+    {
+      "id": "video.character",
+      "weight": 4,
+      "severity": "critical",
+      "passed": false,
+      "message": "Character block missing from scene A1-S2.",
+      "where": "A1-S2"
+    },
+    {
+      "id": "video.product",
+      "weight": 3,
+      "severity": "high",
+      "passed": false,
+      "message": "Product block missing from scene A6-S1.",
+      "where": "A6-S1"
+    },
+    {
+      "id": "video.grade",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Grade block missing from scene A6-S1.",
+      "where": "A6-S1"
+    },
+    {
+      "id": "video.negative",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Negative prompt missing from scene A3-S1.",
+      "where": "A3-S1"
+    },
+    {
+      "id": "video.seed",
+      "weight": 2,
+      "severity": "medium",
+      "passed": false,
+      "message": "Scene A3-S1 has no locked seed.",
+      "where": "A3-S1"
+    },
+    {
+      "id": "video.duration",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Scene A4-S3 is 12s (allowed 2–8s).",
+      "where": "A4-S3"
+    },
+    {
+      "id": "video.noText",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Scene A6-S1 requests baked-in text or is missing the no-text guard.",
+      "where": "A6-S1"
+    },
+    {
+      "id": "video.length",
+      "weight": 2,
+      "severity": "medium",
+      "passed": false,
+      "message": "Scene A6-S1 prompt is only 9 words.",
+      "where": "A6-S1"
+    },
+    {
+      "id": "image.model",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Unknown image model: dalle-3.",
+      "where": "hook-frame"
+    },
+    {
+      "id": "image.aspect",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Every image aspect is valid.",
+      "where": "images"
+    },
+    {
+      "id": "image.product",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Product block is verbatim in every image prompt.",
+      "where": "images"
+    },
+    {
+      "id": "image.grade",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Grade block missing from image product-hero.",
+      "where": "product-hero"
+    },
+    {
+      "id": "image.craft",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Craft block is in every image prompt.",
+      "where": "images"
+    },
+    {
+      "id": "image.noText",
+      "weight": 4,
+      "severity": "critical",
+      "passed": false,
+      "message": "Image hook-frame is missing the no-text/no-watermark guard.",
+      "where": "hook-frame"
+    },
+    {
+      "id": "captions.limit",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Captions are inside every platform limit.",
+      "where": "captions"
+    },
+    {
+      "id": "captions.cta",
+      "weight": 2,
+      "severity": "medium",
+      "passed": false,
+      "message": "Missing CTA in 1 Instagram caption(s).",
+      "where": "proof"
+    },
+    {
+      "id": "captions.disclosure",
+      "weight": 3,
+      "severity": "critical",
+      "passed": false,
+      "message": "Disclosure missing from 1 caption(s).",
+      "where": "proof"
+    },
+    {
+      "id": "captions.hashtags",
+      "weight": 2,
+      "severity": "low",
+      "passed": false,
+      "message": "1 caption(s) have 0 or more than 5 hashtags.",
+      "where": "proof"
+    },
+    {
+      "id": "compliance.bannedClaims",
+      "weight": 4,
+      "severity": "critical",
+      "passed": false,
+      "message": "Blocked claim language: absolute claim (100%), guarantee language.",
+      "where": "claims"
+    },
+    {
+      "id": "compliance.urgency",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Fake urgency or countdown language found.",
+      "where": "claims"
+    },
+    {
+      "id": "compliance.personalAttributes",
+      "weight": 2,
+      "severity": "critical",
+      "passed": false,
+      "message": "Personal-attribute phrasing found (Meta policy risk).",
+      "where": "claims"
+    },
+    {
+      "id": "compliance.price",
+      "weight": 2,
+      "severity": "high",
+      "passed": false,
+      "message": "Price mismatch: ₹999 vs ₹799.",
+      "where": "price"
+    }
+  ]
+}

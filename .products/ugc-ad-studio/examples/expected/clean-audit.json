@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "1.0.0",
+  "campaign": "Nara Vitamin C Face Serum",
+  "checkedAt": "2026-10-29T14:02:52.539Z",
+  "score": 100,
+  "minScore": 85,
+  "verdict": "PASS",
+  "stats": {
+    "angles": 6,
+    "videoScenes": 30,
+    "imagePrompts": 24,
+    "checks": 38,
+    "passed": 38,
+    "failed": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "structure.meta",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Brand, product and price are present.",
+      "where": "meta"
+    },
+    {
+      "id": "structure.platforms",
+      "weight": 2,
+      "severity": "medium",
+      "passed": true,
+      "message": "At least one publishing platform is declared.",
+      "where": "meta.platforms"
+    },
+    {
+      "id": "structure.angles",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "6 angles built (minimum 4).",
+      "where": "angles"
+    },
+    {
+      "id": "structure.tokens",
+      "weight": 2,
+      "severity": "critical",
+      "passed": true,
+      "message": "All four consistency blocks are present.",
+      "where": "consistency"
+    },
+    {
+      "id": "structure.placeholders",
+      "weight": 2,
+      "severity": "critical",
+      "passed": true,
+      "message": "No placeholders or unreplaced tokens.",
+      "where": "pack"
+    },
+    {
+      "id": "hooks.length",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "Every hook is 3–14 words.",
+      "where": "hooks"
+    },
+    {
+      "id": "hooks.signals",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "Every hook carries at least 2 hook signal(s).",
+      "where": "hooks"
+    },
+    {
+      "id": "hooks.unique",
+      "weight": 3,
+      "severity": "medium",
+      "passed": true,
+      "message": "No two angles open with the same three words.",
+      "where": "hooks"
+    },
+    {
+      "id": "hooks.fluff",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "No fluff language in hooks.",
+      "where": "hooks"
+    },
+    {
+      "id": "scripts.pacing",
+      "weight": 4,
+      "severity": "high",
+      "passed": true,
+      "message": "Pacing is at or below 3.5 words/second.",
+      "where": "angles"
+    },
+    {
+      "id": "scripts.hookWindow",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Hook lands inside the first 3 seconds in every angle.",
+      "where": "angles"
+    },
+    {
+      "id": "scripts.cta",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Every angle has one clear CTA.",
+      "where": "angles"
+    },
+    {
+      "id": "scripts.disclosure",
+      "weight": 3,
+      "severity": "critical",
+      "passed": true,
+      "message": "Every angle carries an AI/paid disclosure.",
+      "where": "compliance"
+    },
+    {
+      "id": "scripts.beats",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Beat timings are contiguous and match the runtime.",
+      "where": "angles"
+    },
+    {
+      "id": "video.model",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Every scene uses a supported video model.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.aspect",
+      "weight": 3,
+      "severity": "critical",
+      "passed": true,
+      "message": "Every video scene is 9:16.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.character",
+      "weight": 4,
+      "severity": "critical",
+      "passed": true,
+      "message": "Character block is verbatim in every scene prompt.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.product",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Product block is verbatim in every scene prompt.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.grade",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Grade block is in every scene prompt.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.negative",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Every scene has a negative prompt.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.seed",
+      "weight": 2,
+      "severity": "medium",
+      "passed": true,
+      "message": "Every scene has a locked integer seed.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.duration",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Every scene is between 2 and 8 seconds.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.noText",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "No scene asks the model to bake in text.",
+      "where": "scenes"
+    },
+    {
+      "id": "video.length",
+      "weight": 2,
+      "severity": "medium",
+      "passed": true,
+      "message": "Every scene prompt is at least 90 words.",
+      "where": "scenes"
+    },
+    {
+      "id": "image.model",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Every image uses a supported model.",
+      "where": "images"
+    },
+    {
+      "id": "image.aspect",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Every image aspect is valid.",
+      "where": "images"
+    },
+    {
+      "id": "image.product",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Product block is verbatim in every image prompt.",
+      "where": "images"
+    },
+    {
+      "id": "image.grade",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Grade block is in every image prompt.",
+      "where": "images"
+    },
+    {
+      "id": "image.craft",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Craft block is in every image prompt.",
+      "where": "images"
+    },
+    {
+      "id": "image.noText",
+      "weight": 4,
+      "severity": "critical",
+      "passed": true,
+      "message": "Every image prompt forbids baked-in text and watermarks.",
+      "where": "images"
+    },
+    {
+      "id": "captions.limit",
+      "weight": 3,
+      "severity": "high",
+      "passed": true,
+      "message": "Captions are inside every platform limit.",
+      "where": "captions"
+    },
+    {
+      "id": "captions.cta",
+      "weight": 2,
+      "severity": "medium",
+      "passed": true,
+      "message": "Every Instagram caption has a CTA.",
+      "where": "captions"
+    },
+    {
+      "id": "captions.disclosure",
+      "weight": 3,
+      "severity": "critical",
+      "passed": true,
+      "message": "Every caption carries the disclosure.",
+      "where": "captions"
+    },
+    {
+      "id": "captions.hashtags",
+      "weight": 2,
+      "severity": "low",
+      "passed": true,
+      "message": "Every caption uses 1–5 hashtags.",
+      "where": "captions"
+    },
+    {
+      "id": "compliance.bannedClaims",
+      "weight": 4,
+      "severity": "critical",
+      "passed": true,
+      "message": "No blocked claim language in ad copy.",
+      "where": "claims"
+    },
+    {
+      "id": "compliance.urgency",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "No fake urgency or countdown language.",
+      "where": "claims"
+    },
+    {
+      "id": "compliance.personalAttributes",
+      "weight": 2,
+      "severity": "critical",
+      "passed": true,
+      "message": "No personal-attribute phrasing.",
+      "where": "claims"
+    },
+    {
+      "id": "compliance.price",
+      "weight": 2,
+      "severity": "high",
+      "passed": true,
+      "message": "Every price in the copy matches the brief.",
+      "where": "price"
+    }
+  ]
+}

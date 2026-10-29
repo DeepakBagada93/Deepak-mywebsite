@@ -1,0 +1,35 @@
+{
+  "product": "ugc-ad-studio",
+  "version": "1.0.0",
+  "createdAt": "2026-10-29T00:00:00.000Z",
+  "stages": {
+    "research": "completed",
+    "strategy": "completed",
+    "build": "completed",
+    "quality": "completed",
+    "documentation": "completed",
+    "packaging": "completed",
+    "listing": "completed",
+    "releaseAudit": "completed"
+  },
+  "decisions": [
+    "Scope is the production spec and pre-spend audit, not rendering or media buying, so it works with Veo/Flow, Kling, Runway, HeyGen and image tools the buyer already pays for.",
+    "One brief produces six angles, video prompts, image ads, an avatar pack, captions and a claims ledger so the buyer gets a testable batch rather than one hero clip.",
+    "Every scene carries verbatim character, product, grade and craft blocks, and the audit fails the pack if any block is missing.",
+    "The audit is deterministic (38 weighted checks, no model judgement) and exits 1 unless the pack passes, so CI and agencies can gate spend.",
+    "AI/paid disclosure is mandatory for UGC styles; the HeyGen pack warns against presenting an AI actor as a real customer, per HeyGen's 2026 policy guidance.",
+    "India-first pricing at ₹2,999 / ₹6,999 / ₹14,999 with a ₹1,999 launch tier, positioned above copy-only audits and below an agency retainer."
+  ],
+  "unresolved": [
+    "Owner approval for final pricing, license and publication.",
+    "Live ad-library and performance data has not been attached; research is a dated reference, not a conversion guarantee.",
+    "A real brand render has not been produced end-to-end; the sample pack is structural evidence, not a performance case study."
+  ],
+  "evidence": [
+    "Clean fixture audits at 100/100 with exit 0.",
+    "Broken fixture audits at 38/100 with 7 critical and 13 high findings, exit 1.",
+    "15s, 30s, 45s and cinematic variants each audit at 100/100.",
+    "18/18 tests pass; two builds of the same brief produce byte-identical campaign.json.",
+    "Package audit passes with no secrets, symlinks or excluded paths in the ZIP."
+  ]
+}

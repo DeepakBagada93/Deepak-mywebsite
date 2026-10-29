@@ -1,0 +1,178 @@
+{
+  "name": "UGC Ad Studio",
+  "slug": "ugc-ad-studio",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-29T14:10:59.539Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1689,
+      "sha256": "fc696f0f2dd34bcc44e50acfbc27697f1d6206e4e4749a572762b19e2c0091fe"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 2529,
+      "sha256": "099c737856f9d7a44cce87051222683c5cd859af9df3a19afd10931a0ce699b4"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 318,
+      "sha256": "4b6ba2a666b8a1d2619dc390a4326290389fbec9fe984fe1580d49637e1f5ee7"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 6541,
+      "sha256": "0d8bdfb035da2343f3096e091c56f2cdae4c4bebfb862b02bc2b389da39fff88"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 4780,
+      "sha256": "f866272059112d0ca396efcc329eeb9b97c4aa3fb065e2e3e41cb036f97b9505"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 9521,
+      "sha256": "2af33f37441cf55bb9af8d0c8fb8b64ae07f2e92fa1fedd46ea6e19e698d540d"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 9512,
+      "sha256": "594e1bcb032a7561a3ad9ed0cd942241169b37b48672b5fa911a101d726ac60d"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 6814,
+      "sha256": "301ad748440f6b9966920bc23f4b5ef4227c1f5a7b96981cddd8b64ef3ccf2f1"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 6477,
+      "sha256": "8b2c5143a4a1830182dc4cd0543faccf2418a440ac1e050a125cb6b9863c8759"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 11615,
+      "sha256": "95a47c1fbe914e63053d4d5526ff3a4a7f491ebd502371ccae7205b171ecbd61"
+    },
+    {
+      "path": "docs/validation-report.json",
+      "bytes": 1597,
+      "sha256": "71a351eb943d105672fcc8345b0a9f144318ffcdc10ca08459602fa8e1c26b11"
+    },
+    {
+      "path": "examples/broken-pack.json",
+      "bytes": 185833,
+      "sha256": "61fd0f2232d971aedbbc47f3fedd143510679c2f219c5dec80f5f9f1881ca076"
+    },
+    {
+      "path": "examples/expected/broken-audit.json",
+      "bytes": 13446,
+      "sha256": "0e3485900830d17b123137f9ce0cfe123264c84cc2206211553a876cd3e405aa"
+    },
+    {
+      "path": "examples/expected/broken-audit.md",
+      "bytes": 6842,
+      "sha256": "b5846a52d60a6aa0522e71a1d47891bf88cb40184095e00807b1a7b4e0cf44d1"
+    },
+    {
+      "path": "examples/expected/clean-audit.json",
+      "bytes": 7849,
+      "sha256": "42b6c610a1aa76bfdef37046346ef475f02ab30fb07acf3a57dbe8629eb76f78"
+    },
+    {
+      "path": "examples/expected/clean-audit.md",
+      "bytes": 3328,
+      "sha256": "d37a15c6ac44d09d4e587ab509a8b61f67a0c507d2d9ff6cfaa62e185011c230"
+    },
+    {
+      "path": "examples/nara-brief.json",
+      "bytes": 2129,
+      "sha256": "59495abd8c8b4f23486b97e9618e7288b40b5d100a581dedfa15578d61b15e47"
+    },
+    {
+      "path": "examples/nara-campaign/campaign.json",
+      "bytes": 188784,
+      "sha256": "c91a1499e215232371c82c571f2f41d85947b1071531ff89e12ba059108854f9"
+    },
+    {
+      "path": "examples/nara-campaign/captions.md",
+      "bytes": 7491,
+      "sha256": "9cd539c3add0be7e979cb4686deec4eca3f496a9f8543d01103a931fbf5174c0"
+    },
+    {
+      "path": "examples/nara-campaign/compliance.md",
+      "bytes": 2253,
+      "sha256": "47a1f1d0e93026ded2d2337549dd7a42b81e28528f22180695e49f5da3e131bc"
+    },
+    {
+      "path": "examples/nara-campaign/heygen-pack.md",
+      "bytes": 8070,
+      "sha256": "fb578c216fc764f97bc23e2525404362d177b7813e2306c09ba62dbb90613320"
+    },
+    {
+      "path": "examples/nara-campaign/prompts-image.md",
+      "bytes": 50337,
+      "sha256": "30bead5c218693c898f958dbe576150bd47c517ed227edf845271d856a87645f"
+    },
+    {
+      "path": "examples/nara-campaign/prompts-video.md",
+      "bytes": 76151,
+      "sha256": "f08763cae2fe201604d3c01dcd016f159513528cbd054f4bdafac20eb946bb45"
+    },
+    {
+      "path": "examples/nara-campaign/README.md",
+      "bytes": 1176,
+      "sha256": "98c0b51687b598729455729cf4a0b09fb743c9d7e0f47b7813d0a51829a0a87f"
+    },
+    {
+      "path": "examples/nara-campaign/scripts.md",
+      "bytes": 13108,
+      "sha256": "5e35e07da451af9bdd8b142bf5444017bb1ef1aec486c840878e80613acd372a"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 2482,
+      "sha256": "e45078ec424db530a18614ca38a432abe17f413de644046f321b8b225ad0c07a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5733,
+      "sha256": "10e89e9a4273f78010a592d1c0be51d9a2c920ae1b33070715255711967869f5"
+    },
+    {
+      "path": "skills/ugc-ad-studio/scripts/audit-ugc-pack.mjs",
+      "bytes": 24109,
+      "sha256": "45384cd2ce0a559c37d6d80721d96234d8c01fc89cee7c07438d0aeb04b485e6"
+    },
+    {
+      "path": "skills/ugc-ad-studio/scripts/build-ugc-campaign.mjs",
+      "bytes": 15283,
+      "sha256": "29e06af5e988f12cef29656638a6c4a55982aef84fd536eb9602f2a946231956"
+    },
+    {
+      "path": "skills/ugc-ad-studio/scripts/lib.mjs",
+      "bytes": 50528,
+      "sha256": "a7f1dcce6dc0664b51491d08025e9fabdb2ba2d459ab40053880b736c3bf2583"
+    },
+    {
+      "path": "skills/ugc-ad-studio/SKILL.md",
+      "bytes": 18469,
+      "sha256": "cb21804da91880e2e4fcc88f7577b56e9bb663d8506f51475774a2b0598f7f0f"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 3933,
+      "sha256": "2e4ba6c7d7e34a0a3bc6b11cff8805d4a575cf279ef4068cf9234c856a7dd64f"
+    },
+    {
+      "path": "tests/ugc-ad-studio.test.mjs",
+      "bytes": 6033,
+      "sha256": "e95a3254131c257508be5057229d25ff2847394c1703af31ec0e811056edfdff"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review.",
+    "HeyGen synthetic-presenter policy and platform AI disclosure require human review before publishing."
+  ]
+}

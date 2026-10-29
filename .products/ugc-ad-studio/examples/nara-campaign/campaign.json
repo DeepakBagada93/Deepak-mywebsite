@@ -1,0 +1,1639 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "brand": "Nara",
+    "product": "Vitamin C Face Serum",
+    "category": "skincare serum",
+    "style": "ugc-testimonial",
+    "styleLabel": "UGC testimonial · front-camera",
+    "mode": "ugc",
+    "duration": 30,
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "youtube-shorts"
+    ],
+    "seed": 0,
+    "videoModel": "veo-3.1-flow",
+    "imageModel": "nano-banana-pro",
+    "angleCount": 6,
+    "sceneCount": 30,
+    "totalVideoPrompts": 30,
+    "totalImagePrompts": 24
+  },
+  "brief": {
+    "schemaVersion": "1.0.0",
+    "brand": "Nara",
+    "product": "Vitamin C Face Serum",
+    "category": "skincare serum",
+    "productShort": "the serum",
+    "buyer": "women aged 24-35 in Indian metros who are tired of dull, uneven-looking skin",
+    "buyerShort": "women in their late twenties",
+    "pain": "dull, tired-looking skin that makes me look exhausted even after eight hours of sleep",
+    "painShort": "dull, tired-looking skin",
+    "painAction": "concealer first, coffee second, and still looking tired in photos",
+    "promise": "a brighter-looking, more even finish in your existing morning routine",
+    "promiseShort": "a brighter-looking, more even finish in your existing",
+    "mechanism": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen",
+    "mechanismShort": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+    "proof": "Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+    "proofShort": "Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+    "hasProof": true,
+    "offer": "the 30ml bottle with a seven-day routine card",
+    "offerShort": "the 30ml bottle with a seven-day routine card",
+    "price": {
+      "amount": 799,
+      "currency": "INR",
+      "label": "₹799"
+    },
+    "priceLabel": "₹799",
+    "differentiator": "it layers under sunscreen without pilling, which is why it survives a real morning",
+    "failedAlt": "ten-step routines and random viral serums",
+    "flaw": "hide dullness with makeup instead of changing the routine",
+    "badThing": "sticky residue",
+    "badThing2": "a ten-step routine",
+    "comparison": "one weekend takeaway order",
+    "wasteTime": "two years",
+    "demoTime": "thirty seconds",
+    "demoAction": "three drops pressed into the cheeks and forehead",
+    "visibleChange": "the finish, not the filter",
+    "unit": "bottle",
+    "bodyPart": "skin",
+    "packaging": "an amber glass bottle with a dropper",
+    "accent": "warm amber and cream",
+    "labelStyle": "a small serif wordmark",
+    "features": [
+      "10% stabilised vitamin C",
+      "ferulic acid for stability",
+      "absorbs before sunscreen"
+    ],
+    "objections": [
+      "Vitamin C serums always oxidise before I finish them",
+      "It will pill under my sunscreen"
+    ],
+    "creator": {
+      "name": "Maya",
+      "age": 29,
+      "gender": "woman",
+      "build": "slim build",
+      "face": "warm medium skin, round face, faint freckles, expressive dark eyes",
+      "hair": "dark shoulder-length hair with a centre part",
+      "wardrobe": "an oversized cream cotton shirt and small gold hoops",
+      "prop": "the product held at chest height"
+    },
+    "style": "ugc-testimonial",
+    "duration": 30,
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "youtube-shorts"
+    ],
+    "hashtags": [
+      "#skincare",
+      "#vitaminc",
+      "#ugc",
+      "#ad",
+      "#naraskin"
+    ],
+    "disclosure": "Ad · AI-generated creator, real product. Results vary.",
+    "verifiedProof": true,
+    "claimRewrites": [],
+    "model": "veo-3.1-flow",
+    "imageModel": "nano-banana-pro",
+    "heygen": {}
+  },
+  "consistency": {
+    "characterBlock": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+    "productBlock": "the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots.",
+    "gradeBlock": "Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise.",
+    "craftBlock": "Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss.",
+    "worldBlock": "World: a lived-in apartment bedroom with a made bed, a plant and soft window light; lighting stays soft natural window light from the left, no studio setup, gentle shadow falloff."
+  },
+  "angles": [
+    {
+      "id": "pain-agitate",
+      "title": "Cost of inaction",
+      "whyItWorks": "Names the daily cost of the problem before the product appears, so the product feels like relief.",
+      "hook": "I wasted two years on dull, tired-looking skin before this.",
+      "hookWordCount": 10,
+      "hookSignals": 3,
+      "beats": [
+        {
+          "index": 1,
+          "beat": "Hook",
+          "spoken": "I wasted two years on dull, tired-looking skin before this.",
+          "onScreen": "dull, tired-looking skin",
+          "visual": "creator leans into the front camera mid-sentence, product still out of frame",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "index": 2,
+          "beat": "Agitate",
+          "spoken": "Every morning it was the same: concealer first, coffee second, and still looking tired in photos. I tried ten-step routines and random viral serums and nothing stuck.",
+          "onScreen": "same routine, same result",
+          "visual": "creator glances at a makeup brush on the counter, then back to the camera, small frustrated exhale",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "index": 3,
+          "beat": "Mechanism",
+          "spoken": "Then I switched to Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "onScreen": "the switch",
+          "visual": "product enters frame label-first, one clean demonstration, no jump cuts",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "index": 4,
+          "beat": "Payoff",
+          "spoken": "Here is the part I checked before buying: Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+          "onScreen": "the difference",
+          "visual": "creator looks at the product with a small genuine reaction, no exaggerated smile",
+          "start": 19,
+          "end": 27
+        },
+        {
+          "index": 5,
+          "beat": "CTA",
+          "spoken": "Tap the link and check the full routine at ₹799.",
+          "onScreen": "link below",
+          "visual": "product held beside the face, bottom third clear for the caption and CTA",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "totalDuration": 30,
+      "scenes": [
+        {
+          "id": "A1-S1",
+          "index": 1,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 412703,
+          "bridge": "Generate the reference still first, then this scene.",
+          "action": "creator leans into the front camera mid-sentence, product still out of frame",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "I wasted two years on dull, tired-looking skin before this.",
+          "sfx": "quiet room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator leans into the front camera mid-sentence, product still out of frame. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"I wasted two years on dull, tired-looking skin before this.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: quiet room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 412703. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A1-S2",
+          "index": 2,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 111112,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator glances at a makeup brush on the counter, then back to the camera, small frustrated exhale",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Every morning it was the same: concealer first, coffee second, and still looking tired in photos. I tried ten-step routines and random viral serums and nothing stuck.",
+          "sfx": "fabric movement and a quiet room",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator glances at a makeup brush on the counter, then back to the camera, small frustrated exhale. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Every morning it was the same: concealer first, coffee second, and still looking tired in photos. I tried ten-step routines and random viral serums and nothing stuck.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: fabric movement and a quiet room. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 111112. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A1-S3",
+          "index": 3,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 649789,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product enters frame label-first, one clean demonstration, no jump cuts",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Then I switched to Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "sfx": "product cap click and soft room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product enters frame label-first, one clean demonstration, no jump cuts. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Then I switched to Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: product cap click and soft room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 649789. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A1-S4",
+          "index": 4,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 709070,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator looks at the product with a small genuine reaction, no exaggerated smile",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Here is the part I checked before buying: Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+          "sfx": "natural room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator looks at the product with a small genuine reaction, no exaggerated smile. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Here is the part I checked before buying: Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: natural room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 709070. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A1-S5",
+          "index": 5,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 952651,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product held beside the face, bottom third clear for the caption and CTA",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Tap the link and check the full routine at ₹799.",
+          "sfx": "hand brushing fabric",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product held beside the face, bottom third clear for the caption and CTA. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Tap the link and check the full routine at ₹799.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: hand brushing fabric. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 952651. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        }
+      ],
+      "images": [
+        {
+          "id": "hook-frame",
+          "purpose": "Scroll-stopping first frame / thumbnail",
+          "model": "nano-banana-pro",
+          "aspect": "4:5",
+          "seed": 220893,
+          "prompt": "4:5 Authentic UGC-style photograph, candid phone-camera realism. the creator mid-expression, holding Vitamin C Face Serum label-first beside the face. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: eye-level medium close-up, face and product both readable at thumbnail size, clean negative space on the right for the hook text added in the edit. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 220893.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        },
+        {
+          "id": "product-hero",
+          "purpose": "Product hero for the landing page and catalog",
+          "model": "nano-banana-pro",
+          "aspect": "1:1",
+          "seed": 372804,
+          "prompt": "1:1 Authentic UGC-style photograph, candid phone-camera realism. a clean hero photograph of Nara Vitamin C Face Serum alone on a simple surface. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: centered product, label square to camera, soft contact shadow, generous negative space. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 372804.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the product and label exactly as they are; replace only the background with a warm off-white seamless surface and add a soft contact shadow."
+        },
+        {
+          "id": "lifestyle",
+          "purpose": "In-use lifestyle frame for Stories and Shorts covers",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 574117,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. the creator applying Vitamin C Face Serum — three drops pressed into the cheeks and forehead — candid and mid-motion. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: vertical framing, hands and product in the lower two-thirds, face partially in frame, room for caption at the top. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 574117.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the creator, hands and product exactly as they are; replace only the background with a brighter window-lit room and lift exposure by a third of a stop."
+        },
+        {
+          "id": "detail-macro",
+          "purpose": "Texture and label proof frame for the proof slide",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 559171,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. an extreme macro photograph of the an amber glass bottle with a dropper, label and warm amber and cream accent. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: fill the frame with texture, label edge sharp, shallow depth of field. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 559171.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        }
+      ],
+      "heygen": {
+        "mode": "avatar-talking-head",
+        "configureBeforeRender": [
+          "avatarId",
+          "voiceId",
+          "backgroundAsset"
+        ],
+        "avatarDescription": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+        "script": "I wasted two years on dull, tired-looking skin before this. Every morning it was the same: concealer first, coffee second, and still looking tired in photos. I tried ten-step routines and random viral serums and nothing stuck. Then I switched to Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen. Here is the part I checked before buying: Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews. Tap the link and check the full routine at ₹799.",
+        "voiceDirection": "Conversational, slightly imperfect, like a voice note to a friend. No announcer voice, no upward inflection at the end of every line.",
+        "background": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+        "captions": {
+          "enabled": true,
+          "style": "word-by-word, high contrast, bottom safe zone",
+          "language": "en"
+        },
+        "disclosure": "Label the video as AI-generated and keep the paid-partnership disclosure in the caption.",
+        "output": "30s vertical 9:16, 1080x1920, 30fps"
+      },
+      "captions": {
+        "instagram": {
+          "text": "I wasted two years on dull, tired-looking skin before this.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "tiktok": {
+          "text": "I wasted two years on dull, tired-looking skin before this.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "youtubeShorts": {
+          "title": "I wasted two years on dull, tired-looking skin before this.",
+          "description": "A brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 5000
+        }
+      },
+      "cta": "Tap the link to see Vitamin C Face Serum at ₹799.",
+      "disclosure": "Ad · AI-generated creator, real product. Results vary."
+    },
+    {
+      "id": "failed-alternative",
+      "title": "Failed alternative",
+      "whyItWorks": "Borrows credibility from what the buyer already wasted money on, then positions the product as the last stop.",
+      "hook": "I tried ten-step routines and random viral serums. Same result.",
+      "hookWordCount": 10,
+      "hookSignals": 2,
+      "beats": [
+        {
+          "index": 1,
+          "beat": "Hook",
+          "spoken": "I tried ten-step routines and random viral serums. Same result.",
+          "onScreen": "ten-step routines and random viral serums",
+          "visual": "creator holds up an imaginary list, then drops it, direct to camera",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "index": 2,
+          "beat": "Agitate",
+          "spoken": "Three months, more money than I want to admit, and zero change.",
+          "onScreen": "three months, zero change",
+          "visual": "creator sets a crowded tray of bottles down and pushes it out of frame",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "index": 3,
+          "beat": "Mechanism",
+          "spoken": "Nara Vitamin C Face Serum is different: 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "onScreen": "the difference",
+          "visual": "product enters frame, label square to camera, one clean demonstration",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "index": 4,
+          "beat": "Payoff",
+          "spoken": "No sticky residue. No a ten-step routine. Just it layers under sunscreen without pilling, which is why it survives a real morning.",
+          "onScreen": "it layers under sunscreen without pilling, which is why it survives a real morning",
+          "visual": "hands setting the product down, calm and unhurried, natural light",
+          "start": 19,
+          "end": 27
+        },
+        {
+          "index": 5,
+          "beat": "CTA",
+          "spoken": "Link in the caption. Check the price before you decide.",
+          "onScreen": "link in caption",
+          "visual": "product held beside the face, bottom third clear",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "totalDuration": 30,
+      "scenes": [
+        {
+          "id": "A2-S1",
+          "index": 1,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 962360,
+          "bridge": "Generate the reference still first, then this scene.",
+          "action": "creator holds up an imaginary list, then drops it, direct to camera",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "I tried ten-step routines and random viral serums. Same result.",
+          "sfx": "quiet room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator holds up an imaginary list, then drops it, direct to camera. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"I tried ten-step routines and random viral serums. Same result.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: quiet room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 962360. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A2-S2",
+          "index": 2,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 410831,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator sets a crowded tray of bottles down and pushes it out of frame",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Three months, more money than I want to admit, and zero change.",
+          "sfx": "fabric movement and a quiet room",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator sets a crowded tray of bottles down and pushes it out of frame. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Three months, more money than I want to admit, and zero change.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: fabric movement and a quiet room. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 410831. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A2-S3",
+          "index": 3,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 685490,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product enters frame, label square to camera, one clean demonstration",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Nara Vitamin C Face Serum is different: 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "sfx": "product cap click and soft room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product enters frame, label square to camera, one clean demonstration. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Nara Vitamin C Face Serum is different: 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: product cap click and soft room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 685490. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A2-S4",
+          "index": 4,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 792409,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "hands setting the product down, calm and unhurried, natural light",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "No sticky residue. No a ten-step routine. Just it layers under sunscreen without pilling, which is why it survives a real morning.",
+          "sfx": "natural room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. hands setting the product down, calm and unhurried, natural light. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"No sticky residue. No a ten-step routine. Just it layers under sunscreen without pilling, which is why it survives a real morning.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: natural room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 792409. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A2-S5",
+          "index": 5,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 597396,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product held beside the face, bottom third clear",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Link in the caption. Check the price before you decide.",
+          "sfx": "hand brushing fabric",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product held beside the face, bottom third clear. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Link in the caption. Check the price before you decide.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: hand brushing fabric. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 597396. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        }
+      ],
+      "images": [
+        {
+          "id": "hook-frame",
+          "purpose": "Scroll-stopping first frame / thumbnail",
+          "model": "nano-banana-pro",
+          "aspect": "4:5",
+          "seed": 513296,
+          "prompt": "4:5 Authentic UGC-style photograph, candid phone-camera realism. the creator mid-expression, holding Vitamin C Face Serum label-first beside the face. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: eye-level medium close-up, face and product both readable at thumbnail size, clean negative space on the right for the hook text added in the edit. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 513296.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        },
+        {
+          "id": "product-hero",
+          "purpose": "Product hero for the landing page and catalog",
+          "model": "nano-banana-pro",
+          "aspect": "1:1",
+          "seed": 997445,
+          "prompt": "1:1 Authentic UGC-style photograph, candid phone-camera realism. a clean hero photograph of Nara Vitamin C Face Serum alone on a simple surface. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: centered product, label square to camera, soft contact shadow, generous negative space. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 997445.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the product and label exactly as they are; replace only the background with a warm off-white seamless surface and add a soft contact shadow."
+        },
+        {
+          "id": "lifestyle",
+          "purpose": "In-use lifestyle frame for Stories and Shorts covers",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 362298,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. the creator applying Vitamin C Face Serum — three drops pressed into the cheeks and forehead — candid and mid-motion. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: vertical framing, hands and product in the lower two-thirds, face partially in frame, room for caption at the top. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 362298.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the creator, hands and product exactly as they are; replace only the background with a brighter window-lit room and lift exposure by a third of a stop."
+        },
+        {
+          "id": "detail-macro",
+          "purpose": "Texture and label proof frame for the proof slide",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 144746,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. an extreme macro photograph of the an amber glass bottle with a dropper, label and warm amber and cream accent. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: fill the frame with texture, label edge sharp, shallow depth of field. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 144746.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        }
+      ],
+      "heygen": {
+        "mode": "avatar-talking-head",
+        "configureBeforeRender": [
+          "avatarId",
+          "voiceId",
+          "backgroundAsset"
+        ],
+        "avatarDescription": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+        "script": "I tried ten-step routines and random viral serums. Same result. Three months, more money than I want to admit, and zero change. Nara Vitamin C Face Serum is different: 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen. No sticky residue. No a ten-step routine. Just it layers under sunscreen without pilling, which is why it survives a real morning. Link in the caption. Check the price before you decide.",
+        "voiceDirection": "Conversational, slightly imperfect, like a voice note to a friend. No announcer voice, no upward inflection at the end of every line.",
+        "background": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+        "captions": {
+          "enabled": true,
+          "style": "word-by-word, high contrast, bottom safe zone",
+          "language": "en"
+        },
+        "disclosure": "Label the video as AI-generated and keep the paid-partnership disclosure in the caption.",
+        "output": "30s vertical 9:16, 1080x1920, 30fps"
+      },
+      "captions": {
+        "instagram": {
+          "text": "I tried ten-step routines and random viral serums. Same result.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "tiktok": {
+          "text": "I tried ten-step routines and random viral serums. Same result.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "youtubeShorts": {
+          "title": "I tried ten-step routines and random viral serums. Same result.",
+          "description": "A brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 5000
+        }
+      },
+      "cta": "Tap the link to see Vitamin C Face Serum at ₹799.",
+      "disclosure": "Ad · AI-generated creator, real product. Results vary."
+    },
+    {
+      "id": "mechanism",
+      "title": "Mechanism",
+      "whyItWorks": "Explains why this works when other options did not, which converts skeptical buyers.",
+      "hook": "Why Vitamin C Face Serum works when the rest did not.",
+      "hookWordCount": 11,
+      "hookSignals": 2,
+      "beats": [
+        {
+          "index": 1,
+          "beat": "Hook",
+          "spoken": "Why Vitamin C Face Serum works when the rest did not.",
+          "onScreen": "Vitamin C Face Serum",
+          "visual": "creator holds the product with the label readable, deadpan to camera",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "index": 2,
+          "beat": "Problem",
+          "spoken": "Most options hide dullness with makeup instead of changing the routine.",
+          "onScreen": "hide dullness with makeup instead of changing the routine",
+          "visual": "creator sets a cluttered tray aside and holds the single product in the centre of the frame",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "index": 3,
+          "beat": "Mechanism",
+          "spoken": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "onScreen": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "visual": "clear demonstration of the product in use, hands and product only",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "index": 4,
+          "beat": "Payoff",
+          "spoken": "No sticky residue, no a ten-step routine.",
+          "onScreen": "no fuss",
+          "visual": "product set down, creator shrugs naturally, no exaggerated reaction",
+          "start": 19,
+          "end": 27
+        },
+        {
+          "index": 5,
+          "beat": "CTA",
+          "spoken": "See it on your own skin. Link below.",
+          "onScreen": "link below",
+          "visual": "product beside face, bottom third clear for caption",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "totalDuration": 30,
+      "scenes": [
+        {
+          "id": "A3-S1",
+          "index": 1,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 206528,
+          "bridge": "Generate the reference still first, then this scene.",
+          "action": "creator holds the product with the label readable, deadpan to camera",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Why Vitamin C Face Serum works when the rest did not.",
+          "sfx": "quiet room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator holds the product with the label readable, deadpan to camera. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Why Vitamin C Face Serum works when the rest did not.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: quiet room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 206528. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A3-S2",
+          "index": 2,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 903575,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator sets a cluttered tray aside and holds the single product in the centre of the frame",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Most options hide dullness with makeup instead of changing the routine.",
+          "sfx": "fabric movement and a quiet room",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator sets a cluttered tray aside and holds the single product in the centre of the frame. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Most options hide dullness with makeup instead of changing the routine.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: fabric movement and a quiet room. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 903575. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A3-S3",
+          "index": 3,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 278234,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "clear demonstration of the product in use, hands and product only",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "sfx": "product cap click and soft room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. clear demonstration of the product in use, hands and product only. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: product cap click and soft room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 278234. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A3-S4",
+          "index": 4,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 520385,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product set down, creator shrugs naturally, no exaggerated reaction",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "No sticky residue, no a ten-step routine.",
+          "sfx": "natural room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product set down, creator shrugs naturally, no exaggerated reaction. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"No sticky residue, no a ten-step routine.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: natural room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 520385. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A3-S5",
+          "index": 5,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 574268,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product beside face, bottom third clear for caption",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "See it on your own skin. Link below.",
+          "sfx": "hand brushing fabric",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product beside face, bottom third clear for caption. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"See it on your own skin. Link below.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: hand brushing fabric. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 574268. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        }
+      ],
+      "images": [
+        {
+          "id": "hook-frame",
+          "purpose": "Scroll-stopping first frame / thumbnail",
+          "model": "nano-banana-pro",
+          "aspect": "4:5",
+          "seed": 812424,
+          "prompt": "4:5 Authentic UGC-style photograph, candid phone-camera realism. the creator mid-expression, holding Vitamin C Face Serum label-first beside the face. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: eye-level medium close-up, face and product both readable at thumbnail size, clean negative space on the right for the hook text added in the edit. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 812424.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        },
+        {
+          "id": "product-hero",
+          "purpose": "Product hero for the landing page and catalog",
+          "model": "nano-banana-pro",
+          "aspect": "1:1",
+          "seed": 423357,
+          "prompt": "1:1 Authentic UGC-style photograph, candid phone-camera realism. a clean hero photograph of Nara Vitamin C Face Serum alone on a simple surface. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: centered product, label square to camera, soft contact shadow, generous negative space. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 423357.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the product and label exactly as they are; replace only the background with a warm off-white seamless surface and add a soft contact shadow."
+        },
+        {
+          "id": "lifestyle",
+          "purpose": "In-use lifestyle frame for Stories and Shorts covers",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 763970,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. the creator applying Vitamin C Face Serum — three drops pressed into the cheeks and forehead — candid and mid-motion. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: vertical framing, hands and product in the lower two-thirds, face partially in frame, room for caption at the top. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 763970.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the creator, hands and product exactly as they are; replace only the background with a brighter window-lit room and lift exposure by a third of a stop."
+        },
+        {
+          "id": "detail-macro",
+          "purpose": "Texture and label proof frame for the proof slide",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 561826,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. an extreme macro photograph of the an amber glass bottle with a dropper, label and warm amber and cream accent. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: fill the frame with texture, label edge sharp, shallow depth of field. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 561826.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        }
+      ],
+      "heygen": {
+        "mode": "avatar-talking-head",
+        "configureBeforeRender": [
+          "avatarId",
+          "voiceId",
+          "backgroundAsset"
+        ],
+        "avatarDescription": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+        "script": "Why Vitamin C Face Serum works when the rest did not. Most options hide dullness with makeup instead of changing the routine. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen. No sticky residue, no a ten-step routine. See it on your own skin. Link below.",
+        "voiceDirection": "Conversational, slightly imperfect, like a voice note to a friend. No announcer voice, no upward inflection at the end of every line.",
+        "background": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+        "captions": {
+          "enabled": true,
+          "style": "word-by-word, high contrast, bottom safe zone",
+          "language": "en"
+        },
+        "disclosure": "Label the video as AI-generated and keep the paid-partnership disclosure in the caption.",
+        "output": "30s vertical 9:16, 1080x1920, 30fps"
+      },
+      "captions": {
+        "instagram": {
+          "text": "Why Vitamin C Face Serum works when the rest did not.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "tiktok": {
+          "text": "Why Vitamin C Face Serum works when the rest did not.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "youtubeShorts": {
+          "title": "Why Vitamin C Face Serum works when the rest did not.",
+          "description": "A brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 5000
+        }
+      },
+      "cta": "Tap the link to see Vitamin C Face Serum at ₹799.",
+      "disclosure": "Ad · AI-generated creator, real product. Results vary."
+    },
+    {
+      "id": "proof",
+      "title": "Proof",
+      "whyItWorks": "Leads with the strongest available evidence instead of adjectives.",
+      "hook": "The only skincare serum number I actually track.",
+      "hookWordCount": 8,
+      "hookSignals": 2,
+      "beats": [
+        {
+          "index": 1,
+          "beat": "Hook",
+          "spoken": "The only skincare serum number I actually track.",
+          "onScreen": "the number I track",
+          "visual": "creator holds up the product, then taps the label twice",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "index": 2,
+          "beat": "Proof",
+          "spoken": "Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+          "onScreen": "verified by the buyer",
+          "visual": "creator talks directly to camera, same framing, no cutaways",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "index": 3,
+          "beat": "Mechanism",
+          "spoken": "That is Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "onScreen": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "visual": "product demonstration, labels readable, natural light",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "index": 4,
+          "beat": "Payoff",
+          "spoken": "Same routine, tracked over time, no sticky residue.",
+          "onScreen": "same routine, tracked",
+          "visual": "product on the counter beside a notebook, calm frame",
+          "start": 19,
+          "end": 27
+        },
+        {
+          "index": 5,
+          "beat": "CTA",
+          "spoken": "Link is below if you want the same setup.",
+          "onScreen": "link below",
+          "visual": "product held beside face, bottom third clear",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "totalDuration": 30,
+      "scenes": [
+        {
+          "id": "A4-S1",
+          "index": 1,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 668449,
+          "bridge": "Generate the reference still first, then this scene.",
+          "action": "creator holds up the product, then taps the label twice",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "The only skincare serum number I actually track.",
+          "sfx": "quiet room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator holds up the product, then taps the label twice. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"The only skincare serum number I actually track.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: quiet room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 668449. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A4-S2",
+          "index": 2,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 697638,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator talks directly to camera, same framing, no cutaways",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+          "sfx": "fabric movement and a quiet room",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator talks directly to camera, same framing, no cutaways. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: fabric movement and a quiet room. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 697638. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A4-S3",
+          "index": 3,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 431363,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product demonstration, labels readable, natural light",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "That is Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "sfx": "product cap click and soft room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product demonstration, labels readable, natural light. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"That is Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: product cap click and soft room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 431363. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A4-S4",
+          "index": 4,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 354592,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product on the counter beside a notebook, calm frame",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Same routine, tracked over time, no sticky residue.",
+          "sfx": "natural room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product on the counter beside a notebook, calm frame. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Same routine, tracked over time, no sticky residue.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: natural room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 354592. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A4-S5",
+          "index": 5,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 128501,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product held beside face, bottom third clear",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Link is below if you want the same setup.",
+          "sfx": "hand brushing fabric",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product held beside face, bottom third clear. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Link is below if you want the same setup.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: hand brushing fabric. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 128501. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        }
+      ],
+      "images": [
+        {
+          "id": "hook-frame",
+          "purpose": "Scroll-stopping first frame / thumbnail",
+          "model": "nano-banana-pro",
+          "aspect": "4:5",
+          "seed": 734235,
+          "prompt": "4:5 Authentic UGC-style photograph, candid phone-camera realism. the creator mid-expression, holding Vitamin C Face Serum label-first beside the face. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: eye-level medium close-up, face and product both readable at thumbnail size, clean negative space on the right for the hook text added in the edit. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 734235.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        },
+        {
+          "id": "product-hero",
+          "purpose": "Product hero for the landing page and catalog",
+          "model": "nano-banana-pro",
+          "aspect": "1:1",
+          "seed": 791478,
+          "prompt": "1:1 Authentic UGC-style photograph, candid phone-camera realism. a clean hero photograph of Nara Vitamin C Face Serum alone on a simple surface. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: centered product, label square to camera, soft contact shadow, generous negative space. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 791478.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the product and label exactly as they are; replace only the background with a warm off-white seamless surface and add a soft contact shadow."
+        },
+        {
+          "id": "lifestyle",
+          "purpose": "In-use lifestyle frame for Stories and Shorts covers",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 522147,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. the creator applying Vitamin C Face Serum — three drops pressed into the cheeks and forehead — candid and mid-motion. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: vertical framing, hands and product in the lower two-thirds, face partially in frame, room for caption at the top. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 522147.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the creator, hands and product exactly as they are; replace only the background with a brighter window-lit room and lift exposure by a third of a stop."
+        },
+        {
+          "id": "detail-macro",
+          "purpose": "Texture and label proof frame for the proof slide",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 786349,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. an extreme macro photograph of the an amber glass bottle with a dropper, label and warm amber and cream accent. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: fill the frame with texture, label edge sharp, shallow depth of field. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 786349.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        }
+      ],
+      "heygen": {
+        "mode": "avatar-talking-head",
+        "configureBeforeRender": [
+          "avatarId",
+          "voiceId",
+          "backgroundAsset"
+        ],
+        "avatarDescription": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+        "script": "The only skincare serum number I actually track. Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews. That is Nara Vitamin C Face Serum. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen. Same routine, tracked over time, no sticky residue. Link is below if you want the same setup.",
+        "voiceDirection": "Conversational, slightly imperfect, like a voice note to a friend. No announcer voice, no upward inflection at the end of every line.",
+        "background": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+        "captions": {
+          "enabled": true,
+          "style": "word-by-word, high contrast, bottom safe zone",
+          "language": "en"
+        },
+        "disclosure": "Label the video as AI-generated and keep the paid-partnership disclosure in the caption.",
+        "output": "30s vertical 9:16, 1080x1920, 30fps"
+      },
+      "captions": {
+        "instagram": {
+          "text": "The only skincare serum number I actually track.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "tiktok": {
+          "text": "The only skincare serum number I actually track.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "youtubeShorts": {
+          "title": "The only skincare serum number I actually track.",
+          "description": "A brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 5000
+        }
+      },
+      "cta": "Tap the link to see Vitamin C Face Serum at ₹799.",
+      "disclosure": "Ad · AI-generated creator, real product. Results vary."
+    },
+    {
+      "id": "objection-reversal",
+      "title": "Objection reversal",
+      "whyItWorks": "Says the objection out loud, then answers it with specifics instead of reassurance.",
+      "hook": "\"Vitamin C serums always oxidise before I finish them\" — same here.",
+      "hookWordCount": 12,
+      "hookSignals": 4,
+      "beats": [
+        {
+          "index": 1,
+          "beat": "Hook",
+          "spoken": "\"Vitamin C serums always oxidise before I finish them\" — same here.",
+          "onScreen": "Vitamin C serums always oxidise before I finish them",
+          "visual": "creator raises an eyebrow at the camera, product in hand",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "index": 2,
+          "beat": "Answer",
+          "spoken": "Then I read the label and did the maths: ₹799 for bottle.",
+          "onScreen": "₹799",
+          "visual": "close-up of the label and pump, product detail sharp",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "index": 3,
+          "beat": "Mechanism",
+          "spoken": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "onScreen": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "visual": "one clean demonstration, hands and product only",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "index": 4,
+          "beat": "Payoff",
+          "spoken": "If it is not for you, check the terms on the page before you buy.",
+          "onScreen": "read the terms first",
+          "visual": "creator sets the product down, calm and direct",
+          "start": 19,
+          "end": 27
+        },
+        {
+          "index": 5,
+          "beat": "CTA",
+          "spoken": "Link below. Read it properly, then decide.",
+          "onScreen": "link below",
+          "visual": "product beside face, bottom third clear",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "totalDuration": 30,
+      "scenes": [
+        {
+          "id": "A5-S1",
+          "index": 1,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 360317,
+          "bridge": "Generate the reference still first, then this scene.",
+          "action": "creator raises an eyebrow at the camera, product in hand",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "\"Vitamin C serums always oxidise before I finish them\" — same here.",
+          "sfx": "quiet room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator raises an eyebrow at the camera, product in hand. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Vitamin C serums always oxidise before I finish them — same here.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: quiet room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 360317. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A5-S2",
+          "index": 2,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 142978,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "close-up of the label and pump, product detail sharp",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Then I read the label and did the maths: ₹799 for bottle.",
+          "sfx": "fabric movement and a quiet room",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. close-up of the label and pump, product detail sharp. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Then I read the label and did the maths: ₹799 for bottle.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: fabric movement and a quiet room. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 142978. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A5-S3",
+          "index": 3,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 887999,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "one clean demonstration, hands and product only",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "sfx": "product cap click and soft room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. one clean demonstration, hands and product only. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: product cap click and soft room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 887999. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A5-S4",
+          "index": 4,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 142500,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator sets the product down, calm and direct",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "If it is not for you, check the terms on the page before you buy.",
+          "sfx": "natural room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator sets the product down, calm and direct. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"If it is not for you, check the terms on the page before you buy.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: natural room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 142500. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A5-S5",
+          "index": 5,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 504809,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product beside face, bottom third clear",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Link below. Read it properly, then decide.",
+          "sfx": "hand brushing fabric",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product beside face, bottom third clear. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Link below. Read it properly, then decide.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: hand brushing fabric. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 504809. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        }
+      ],
+      "images": [
+        {
+          "id": "hook-frame",
+          "purpose": "Scroll-stopping first frame / thumbnail",
+          "model": "nano-banana-pro",
+          "aspect": "4:5",
+          "seed": 479991,
+          "prompt": "4:5 Authentic UGC-style photograph, candid phone-camera realism. the creator mid-expression, holding Vitamin C Face Serum label-first beside the face. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: eye-level medium close-up, face and product both readable at thumbnail size, clean negative space on the right for the hook text added in the edit. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 479991.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        },
+        {
+          "id": "product-hero",
+          "purpose": "Product hero for the landing page and catalog",
+          "model": "nano-banana-pro",
+          "aspect": "1:1",
+          "seed": 561906,
+          "prompt": "1:1 Authentic UGC-style photograph, candid phone-camera realism. a clean hero photograph of Nara Vitamin C Face Serum alone on a simple surface. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: centered product, label square to camera, soft contact shadow, generous negative space. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 561906.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the product and label exactly as they are; replace only the background with a warm off-white seamless surface and add a soft contact shadow."
+        },
+        {
+          "id": "lifestyle",
+          "purpose": "In-use lifestyle frame for Stories and Shorts covers",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 933511,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. the creator applying Vitamin C Face Serum — three drops pressed into the cheeks and forehead — candid and mid-motion. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: vertical framing, hands and product in the lower two-thirds, face partially in frame, room for caption at the top. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 933511.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the creator, hands and product exactly as they are; replace only the background with a brighter window-lit room and lift exposure by a third of a stop."
+        },
+        {
+          "id": "detail-macro",
+          "purpose": "Texture and label proof frame for the proof slide",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 365657,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. an extreme macro photograph of the an amber glass bottle with a dropper, label and warm amber and cream accent. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: fill the frame with texture, label edge sharp, shallow depth of field. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 365657.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        }
+      ],
+      "heygen": {
+        "mode": "avatar-talking-head",
+        "configureBeforeRender": [
+          "avatarId",
+          "voiceId",
+          "backgroundAsset"
+        ],
+        "avatarDescription": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+        "script": "\"Vitamin C serums always oxidise before I finish them\" — same here. Then I read the label and did the maths: ₹799 for bottle. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen. If it is not for you, check the terms on the page before you buy. Link below. Read it properly, then decide.",
+        "voiceDirection": "Conversational, slightly imperfect, like a voice note to a friend. No announcer voice, no upward inflection at the end of every line.",
+        "background": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+        "captions": {
+          "enabled": true,
+          "style": "word-by-word, high contrast, bottom safe zone",
+          "language": "en"
+        },
+        "disclosure": "Label the video as AI-generated and keep the paid-partnership disclosure in the caption.",
+        "output": "30s vertical 9:16, 1080x1920, 30fps"
+      },
+      "captions": {
+        "instagram": {
+          "text": "\"Vitamin C serums always oxidise before I finish them\" — same here.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "tiktok": {
+          "text": "\"Vitamin C serums always oxidise before I finish them\" — same here.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "youtubeShorts": {
+          "title": "\"Vitamin C serums always oxidise before I finish them\" — same here.",
+          "description": "A brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 5000
+        }
+      },
+      "cta": "Tap the link to see Vitamin C Face Serum at ₹799.",
+      "disclosure": "Ad · AI-generated creator, real product. Results vary."
+    },
+    {
+      "id": "identity",
+      "title": "Identity",
+      "whyItWorks": "Calls out the buyer by role, so the right person stops scrolling.",
+      "hook": "If you are women in their late twenties, start here.",
+      "hookWordCount": 10,
+      "hookSignals": 2,
+      "beats": [
+        {
+          "index": 1,
+          "beat": "Hook",
+          "spoken": "If you are women in their late twenties, start here.",
+          "onScreen": "women in their late twenties",
+          "visual": "creator points at the camera, product in the other hand",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "index": 2,
+          "beat": "Contrast",
+          "spoken": "You do not need ten-step routines and random viral serums. You need a routine that is built for a brighter-looking, more even finish in your existing.",
+          "onScreen": "built for you",
+          "visual": "creator slides a crowded tray aside and places the single product in the centre of the frame",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "index": 3,
+          "beat": "Mechanism",
+          "spoken": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "onScreen": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "visual": "product demonstration, label readable, no studio gloss",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "index": 4,
+          "beat": "Payoff",
+          "spoken": "it layers under sunscreen without pilling, which is why it survives a real morning",
+          "onScreen": "it layers under sunscreen without pilling, which is why it survives a real morning",
+          "visual": "creator uses the product once, natural reaction",
+          "start": 19,
+          "end": 27
+        },
+        {
+          "index": 5,
+          "beat": "CTA",
+          "spoken": "Link in bio. Start with the the serum.",
+          "onScreen": "link in bio",
+          "visual": "product held beside face, bottom third clear",
+          "start": 27,
+          "end": 30
+        }
+      ],
+      "totalDuration": 30,
+      "scenes": [
+        {
+          "id": "A6-S1",
+          "index": 1,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 140463,
+          "bridge": "Generate the reference still first, then this scene.",
+          "action": "creator points at the camera, product in the other hand",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "If you are women in their late twenties, start here.",
+          "sfx": "quiet room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator points at the camera, product in the other hand. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"If you are women in their late twenties, start here.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: quiet room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 140463. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A6-S2",
+          "index": 2,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 738872,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator slides a crowded tray aside and places the single product in the centre of the frame",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "You do not need ten-step routines and random viral serums. You need a routine that is built for a brighter-looking, more even finish in your existing.",
+          "sfx": "fabric movement and a quiet room",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator slides a crowded tray aside and places the single product in the centre of the frame. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"You do not need ten-step routines and random viral serums. You need a routine that is built for a brighter-looking, more even finish in your existing.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: fabric movement and a quiet room. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 738872. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A6-S3",
+          "index": 3,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 600397,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product demonstration, label readable, no studio gloss",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.",
+          "sfx": "product cap click and soft room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product demonstration, label readable, no studio gloss. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: product cap click and soft room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 600397. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A6-S4",
+          "index": 4,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 8,
+          "seed": 525182,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "creator uses the product once, natural reaction",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "it layers under sunscreen without pilling, which is why it survives a real morning",
+          "sfx": "natural room tone",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. creator uses the product once, natural reaction. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, slight push-in on the product. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"it layers under sunscreen without pilling, which is why it survives a real morning\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: natural room tone. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 525182. Duration: 8 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        },
+        {
+          "id": "A6-S5",
+          "index": 5,
+          "model": "veo-3.1-flow",
+          "modelLabel": "Google Flow / Veo 3.1",
+          "aspect": "9:16",
+          "duration": 3,
+          "seed": 680411,
+          "bridge": "Use the previous scene’s last frame as this scene’s start frame for a seamless cut.",
+          "action": "product held beside face, bottom third clear",
+          "setting": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+          "camera": "handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat",
+          "lighting": "soft natural window light from the left, no studio setup, gentle shadow falloff",
+          "dialogue": "Link in bio. Start with the the serum.",
+          "sfx": "hand brushing fabric",
+          "prompt": "9:16 Authentic vertical UGC testimonial shot on a phone, front-camera selfie realism. product held beside face, bottom third clear. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Setting: a lived-in apartment bedroom with a made bed, a plant and soft window light. Camera: handheld front-camera selfie at arm's length, 24mm phone lens, gentle natural sway, eye-level, locked-off final beat. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Native audio: the creator says, \"Link in bio. Start with the the serum.\" in a calm conversational voice at a natural pace, close to the phone mic; SFX: hand brushing fabric. Framing: vertical 9:16, product label readable and square to camera in at least one frame, bottom 20% clear for captions and CTA, no on-screen text, no watermark, no fake UI. Negative prompt: warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in. Seed: 680411. Duration: 3 seconds.",
+          "negativePrompt": "warped hands, extra fingers, face morphing, plastic skin, beauty filter, text artifacts, watermark, logo distortion, jump cuts, camera shake, oversaturated colors, studio backdrop, fake product label, duplicate product, subtitles baked in"
+        }
+      ],
+      "images": [
+        {
+          "id": "hook-frame",
+          "purpose": "Scroll-stopping first frame / thumbnail",
+          "model": "nano-banana-pro",
+          "aspect": "4:5",
+          "seed": 927469,
+          "prompt": "4:5 Authentic UGC-style photograph, candid phone-camera realism. the creator mid-expression, holding Vitamin C Face Serum label-first beside the face. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: eye-level medium close-up, face and product both readable at thumbnail size, clean negative space on the right for the hook text added in the edit. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 927469.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        },
+        {
+          "id": "product-hero",
+          "purpose": "Product hero for the landing page and catalog",
+          "model": "nano-banana-pro",
+          "aspect": "1:1",
+          "seed": 212468,
+          "prompt": "1:1 Authentic UGC-style photograph, candid phone-camera realism. a clean hero photograph of Nara Vitamin C Face Serum alone on a simple surface. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: centered product, label square to camera, soft contact shadow, generous negative space. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 212468.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the product and label exactly as they are; replace only the background with a warm off-white seamless surface and add a soft contact shadow."
+        },
+        {
+          "id": "lifestyle",
+          "purpose": "In-use lifestyle frame for Stories and Shorts covers",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 866709,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. the creator applying Vitamin C Face Serum — three drops pressed into the cheeks and forehead — candid and mid-motion. Subject: the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: vertical framing, hands and product in the lower two-thirds, face partially in frame, room for caption at the top. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 866709.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the creator, hands and product exactly as they are; replace only the background with a brighter window-lit room and lift exposure by a third of a stop."
+        },
+        {
+          "id": "detail-macro",
+          "purpose": "Texture and label proof frame for the proof slide",
+          "model": "nano-banana-pro",
+          "aspect": "9:16",
+          "seed": 547091,
+          "prompt": "9:16 Authentic UGC-style photograph, candid phone-camera realism. an extreme macro photograph of the an amber glass bottle with a dropper, label and warm amber and cream accent. Product: the exact product: Nara Vitamin C Face Serum; category: skincare serum; packaging: an amber glass bottle with a dropper; accent colors: warm amber and cream; label: a small serif wordmark, reading \"Nara\"; the product shape, cap and label must not change between shots. Composition: fill the frame with texture, label edge sharp, shallow depth of field. Lighting: soft natural window light from the left, no studio setup, gentle shadow falloff. Grade: natural unedited phone-camera color, true-to-life skin tones, soft contrast, subtle sensor noise. Craft: shot on a modern flagship phone rear camera, 26mm equivalent, f/1.8, natural available light, realistic skin texture with visible pores, no beauty filter, no studio gloss. Authentic user-generated look: real home, imperfect framing, available light, phone-camera depth of field, no set dressing, no actors-in-a-studio feel. Realistic texture, natural imperfections, correct product label, no text, no watermark, no fake UI, no extra logos. Negative: deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile. Seed: 547091.",
+          "negativePrompt": "deformed hands, extra fingers, distorted face, plastic skin, airbrushed, text overlay, watermark, misspelled label, duplicate product, clutter, HDR halos, stock-photo smile",
+          "editPrompt": "Keep the subject and product exactly as they are; change only the background tone to match the brand palette, and do not alter the label."
+        }
+      ],
+      "heygen": {
+        "mode": "avatar-talking-head",
+        "configureBeforeRender": [
+          "avatarId",
+          "voiceId",
+          "backgroundAsset"
+        ],
+        "avatarDescription": "the same creator in every shot: Maya, a 29-year-old woman, slim build, warm medium skin, round face, faint freckles, expressive dark eyes, dark shoulder-length hair with a centre part, wearing an oversized cream cotton shirt and small gold hoops, with the product held at chest height.",
+        "script": "If you are women in their late twenties, start here. You do not need ten-step routines and random viral serums. You need a routine that is built for a brighter-looking, more even finish in your existing. 10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen. it layers under sunscreen without pilling, which is why it survives a real morning Link in bio. Start with the the serum.",
+        "voiceDirection": "Conversational, slightly imperfect, like a voice note to a friend. No announcer voice, no upward inflection at the end of every line.",
+        "background": "a lived-in apartment bedroom with a made bed, a plant and soft window light",
+        "captions": {
+          "enabled": true,
+          "style": "word-by-word, high contrast, bottom safe zone",
+          "language": "en"
+        },
+        "disclosure": "Label the video as AI-generated and keep the paid-partnership disclosure in the caption.",
+        "output": "30s vertical 9:16, 1080x1920, 30fps"
+      },
+      "captions": {
+        "instagram": {
+          "text": "If you are women in their late twenties, start here.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "tiktok": {
+          "text": "If you are women in their late twenties, start here.\n\nA brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 2200
+        },
+        "youtubeShorts": {
+          "title": "If you are women in their late twenties, start here.",
+          "description": "A brighter-looking, more even finish in your existing morning routine. It layers under sunscreen without pilling, which is why it survives a real morning.\n\nTap the link to see Vitamin C Face Serum at ₹799.\n\nAd · AI-generated creator, real product. Results vary.\n\n#skincare #vitaminc #ugc #ad #naraskin",
+          "hashtags": [
+            "#skincare",
+            "#vitaminc",
+            "#ugc",
+            "#ad",
+            "#naraskin"
+          ],
+          "limit": 5000
+        }
+      },
+      "cta": "Tap the link to see Vitamin C Face Serum at ₹799.",
+      "disclosure": "Ad · AI-generated creator, real product. Results vary."
+    }
+  ],
+  "claimsLedger": [
+    {
+      "claim": "a brighter-looking, more even finish in your existing morning routine",
+      "type": "promise",
+      "source": "buyer brief",
+      "status": "buyer-verified",
+      "action": "Keep only if the landing page can substantiate it."
+    },
+    {
+      "claim": "Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+      "type": "proof",
+      "source": "buyer brief",
+      "status": "buyer-verified",
+      "action": "Attach the source (test report, order data, review count) to the product page."
+    },
+    {
+      "claim": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen",
+      "type": "mechanism",
+      "source": "buyer brief",
+      "status": "mechanism language, not an outcome claim",
+      "action": "Safe if it describes how the product works, not what it cures."
+    },
+    {
+      "claim": "₹799",
+      "type": "price",
+      "source": "buyer brief",
+      "status": "must match the checkout",
+      "action": "Re-check the live price before publishing."
+    }
+  ],
+  "compliance": {
+    "disclosureRequired": true,
+    "disclosure": "Ad · AI-generated creator, real product. Results vary.",
+    "rules": [
+      "Use the exact character, product and grade blocks in every prompt; drift is the main cause of unusable ads.",
+      "Disclose AI-generated presenters and paid partnerships on every platform that requires it.",
+      "Do not imply results that the buyer cannot substantiate on the landing page.",
+      "Keep before-and-after frames under identical lighting, framing and grade; do not retouch the result.",
+      "Use licensed music only; platform libraries are the safe default.",
+      "Never invent reviews, testimonials, user counts, certifications or medical claims."
+    ],
+    "claimRewrites": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/ugc-ad-studio",
+  "checkedAt": "2026-10-29T14:10:51.284Z",
+  "passed": [
+    "ugc-ad-studio-1.0.0.zip has 41 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

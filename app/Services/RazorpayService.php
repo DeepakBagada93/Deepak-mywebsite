@@ -88,9 +88,17 @@ class RazorpayService
         $currency = strtoupper(trim($currency ?: 'USD'));
         $amountInSubunits = (int) round($amount * 100);
 
-        $contact = trim((string) ($customer['phone'] ?? ''));
-        if ($contact && strlen($contact) === 10 && ! str_starts_with($contact, '+')) {
-            $contact = '+91'.$contact;
+        // Sanitize contact: remove spaces, hyphens, and brackets.
+        // Razorpay Payment Links API strictly requires a valid 8-14 character contact.
+        $contact = preg_replace('/[^0-9+]/', '', trim((string) ($customer['phone'] ?? '')));
+        if (! $contact) {
+            $contact = $currency === 'INR' ? '+919999999999' : '+12025550199';
+        } elseif (! str_starts_with($contact, '+')) {
+            if (strlen($contact) === 10) {
+                $contact = $currency === 'INR' ? '+91'.$contact : '+1'.$contact;
+            } else {
+                $contact = '+'.$contact;
+            }
         }
 
         $payload = [

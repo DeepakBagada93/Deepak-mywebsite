@@ -1,0 +1,36 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/ugc-ad-studio",
+  "checkedAt": "2026-10-29T14:10:51.011Z",
+  "passed": [
+    "Required path exists: README.md",
+    "Required path exists: LICENSE.md",
+    "Required path exists: CHANGELOG.md",
+    "Required path exists: COMPATIBILITY.md",
+    "Required path exists: product-manifest.json",
+    "Required path exists: docs",
+    "Required path exists: examples",
+    "Required path exists: tests",
+    "Required path exists: dist",
+    "Manifest parses and has required fields",
+    "Documentation exists: docs/product-specification.md",
+    "Documentation exists: docs/test-plan.md",
+    "Documentation exists: docs/test-results.md",
+    "Documentation exists: docs/store-listing.md",
+    "Documentation exists: docs/release-report.md",
+    "Structured file checked: docs/package-audit-report.json",
+    "Structured file checked: docs/validation-report.json",
+    "Structured file checked: examples/broken-pack.json",
+    "Structured file checked: examples/expected/broken-audit.json",
+    "Structured file checked: examples/expected/clean-audit.json",
+    "Structured file checked: examples/nara-brief.json",
+    "Structured file checked: examples/nara-campaign/campaign.json",
+    "Structured file checked: product-manifest.json",
+    "Structured file checked: progress.json",
+    "Skill frontmatter valid: ugc-ad-studio"
+  ],
+  "failures": [],
+  "warnings": [],
+  "manualReview": [
+    "Clean-environment installation, commercial terms, and store fulfillment require manual review unless separately evidenced."
+  ]
+}

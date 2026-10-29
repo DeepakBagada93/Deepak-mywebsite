@@ -1,0 +1,49 @@
+{
+  "brand": "Nara",
+  "product": "Vitamin C Face Serum",
+  "productShort": "the serum",
+  "category": "skincare serum",
+  "buyer": "women aged 24-35 in Indian metros who are tired of dull, uneven-looking skin",
+  "buyerShort": "women in their late twenties",
+  "pain": "dull, tired-looking skin that makes me look exhausted even after eight hours of sleep",
+  "painShort": "dull, tired-looking skin",
+  "painAction": "concealer first, coffee second, and still looking tired in photos",
+  "promise": "a brighter-looking, more even finish in your existing morning routine",
+  "mechanism": "10% stabilised vitamin C with ferulic acid, in a lightweight base that absorbs before sunscreen",
+  "proof": "Sold 4,200 bottles in the last six months, with a 4.6 average from 870 verified reviews.",
+  "verifiedProof": true,
+  "differentiator": "it layers under sunscreen without pilling, which is why it survives a real morning",
+  "failedAlt": "ten-step routines and random viral serums",
+  "flaw": "hide dullness with makeup instead of changing the routine",
+  "badThing": "sticky residue",
+  "badThing2": "a ten-step routine",
+  "comparison": "one weekend takeaway order",
+  "wasteTime": "two years",
+  "demoTime": "thirty seconds",
+  "demoAction": "three drops pressed into the cheeks and forehead",
+  "visibleChange": "the finish, not the filter",
+  "unit": "bottle",
+  "bodyPart": "skin",
+  "packaging": "an amber glass bottle with a dropper",
+  "accent": "warm amber and cream",
+  "labelStyle": "a small serif wordmark",
+  "features": [
+    "10% stabilised vitamin C",
+    "ferulic acid for stability",
+    "absorbs before sunscreen"
+  ],
+  "objections": [
+    "Vitamin C serums always oxidise before I finish them",
+    "It will pill under my sunscreen"
+  ],
+  "price": {
+    "amount": 799,
+    "currency": "INR"
+  },
+  "offer": "the 30ml bottle with a seven-day routine card",
+  "platforms": ["instagram", "tiktok", "youtube-shorts"],
+  "hashtags": ["#skincare", "#vitaminc", "#ugc", "#ad", "#naraskin"],
+  "style": "ugc-testimonial",
+  "duration": 30,
+  "disclosure": "Ad · AI-generated creator, real product. Results vary."
+}
