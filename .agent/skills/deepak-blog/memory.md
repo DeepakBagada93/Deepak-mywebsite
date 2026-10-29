@@ -3898,3 +3898,10 @@
   - Words: 2138
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Agent Development in Surat: Architecture & ₹85K Costs**
+  - Slug: `ai-agent-development-company-surat`
+  - Tag: `AI DEV`
+  - Published: `2026-10-29`
+  - Words: 1977
+  - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-agent-development-company-surat
