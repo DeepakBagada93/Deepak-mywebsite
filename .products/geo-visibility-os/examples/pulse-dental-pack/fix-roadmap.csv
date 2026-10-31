@@ -1,0 +1,29 @@
+id,priority,owner,effort,impact,action,verification
+A01,P0,marketing,2h,high,Record the 30-prompt baseline before changing the site so improvement is measurable.,"Baseline sheet has prompt, engine, date, mention, citation and position."
+A02,P0,content,2h,high,"Confirm the service list, service area and primary offer with the client before publishing.",Client signs off on one canonical description of the offer.
+A03,P1,content,1d,high,Publish the six answer-first content briefs with evidence and internal links.,"Each brief is live, indexed and linked from the service page."
+A04,P1,dev,2h,high,"Install the Organization, Service, FAQPage, BreadcrumbList and Article JSON-LD.",All blocks validate and match the visible content.
+A05,P1,marketing,1d,high,Build the 30-prompt panel and record a baseline across the chosen engines.,"Baseline file has prompt, engine, date, mention, citation and position."
+A06,P1,marketing,2h,high,Set up the GA4 AI referral segment and the Search Console generative AI report.,AI referrals and AI impressions are visible in the reports.
+A07,P1,marketing,1d,high,Work the citation plan: three sources per month with a factual contribution.,"Each placement is logged with URL, date and status."
+A08,P1,content,3h,medium,"Add a visible ""last reviewed"" date and a named owner to every priority page.",Date and owner are visible and match the schema.
+A09,P1,content,4h,medium,Add a pricing explainer that names the cost drivers and what the quote includes.,Page answers cost questions without inventing a fixed price.
+A10,P1,content,4h,medium,"Add a proof section with consented, substantiated examples where the category allows it.",Consent and substantiation are on file.
+A11,P1,content,1d,medium,Add a service-area page for each priority city with genuinely local detail.,"Each page names local logistics, hours and coverage limits."
+A12,P1,content,4h,medium,"Add an ""Our process"" section with steps, timing and decision points.",A buyer can describe the process after reading the page.
+A13,P1,content,3h,medium,"Add a ""who this is for and who it is not for"" section to the main service page.",The page disqualifies poor-fit buyers honestly.
+A14,P1,dev,2h,medium,"Add a contact page with the real business name, address, phone and hours.",NAP matches the Google Business Profile and schema.
+A15,P1,content,4h,medium,"Add a comparison table of options, inclusions and cost drivers.",Table is readable on mobile and matches the visible copy.
+A16,P1,marketing,2h,medium,Store the baseline and every re-measure in one shared sheet with dates.,Sheet is accessible to the client and the delivery team.
+A17,P2,content,4h,medium,"Add a comparison table for options, inclusions or cost drivers.",Table is readable on mobile and matches the schema.
+A18,P2,marketing,1d,medium,Create one honest comparison page against the top two alternatives.,Page names the alternatives and the real trade-offs.
+A19,P2,content,4h,medium,Add internal links from the highest-traffic pages to the priority pages.,Every priority page has at least three contextual internal links.
+A20,P2,content,1d,medium,Refresh the priority pages every quarter with new evidence and dates.,Visible updated date and changelog.
+A21,P2,marketing,2h,medium,Add a monthly prompt-panel review to the client reporting cadence.,"Report shows movement, not a single score."
+A22,P2,dev,2h,low,"Add an optional llms.txt for agent readability only, not as a visibility lever.",File exists and the report says it is optional.
+A23,P2,marketing,4h,medium,Pitch one podcast or trade publication with a genuine expert angle.,Pitch logged; no paid placement.
+A24,P2,content,4h,medium,"Add a proof page with real, consented before-and-after evidence where allowed.",Consent and substantiation are on file.
+A25,P2,dev,2h,low,"Keep robots.txt, sitemap and schema in a deploy checklist.",Checklist runs on every release.
+A26,P2,marketing,2h,medium,Add the brand to the three most relevant industry directories.,Listings are complete and consistent.
+A27,P2,content,4h,medium,Add an FAQ block to the comparison page using real sales objections.,Questions match the prompt panel and schema.
+A28,P2,marketing,1d,medium,"Run a 30-day re-measure and compare citation rate, mention rate and referrals.",Before/after table with dates and limits.

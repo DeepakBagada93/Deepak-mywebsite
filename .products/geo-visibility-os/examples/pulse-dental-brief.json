@@ -1,0 +1,48 @@
+{
+  "brand": "Pulse Dental Studio",
+  "domain": "pulsedental.example",
+  "market": "US",
+  "category": "cosmetic dentistry",
+  "buyer": "adults 30-55 in Austin comparing veneers and implants",
+  "offer": "consultation and written treatment plan",
+  "city": "Austin, TX",
+  "serviceArea": ["Austin", "Round Rock", "Cedar Park"],
+  "vertical": "local_service",
+  "competitors": ["Lone Star Dental", "Riverbend Smiles"],
+  "differentiators": [
+    "same-day crowns",
+    "sedation options",
+    "a written treatment plan before any work"
+  ],
+  "proof": [
+    "a 4.9 average from 380 verified reviews collected between 2024 and 2026"
+  ],
+  "faqs": [
+    {
+      "q": "What does Pulse Dental Studio offer?",
+      "a": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin, TX, including veneers, implants and same-day crowns."
+    },
+    {
+      "q": "Where does Pulse Dental Studio work?",
+      "a": "Pulse Dental Studio serves Austin, Round Rock and Cedar Park. Confirm the current service area and hours with the studio before booking."
+    },
+    {
+      "q": "How do I book a consultation?",
+      "a": "Use the official Pulse Dental Studio website or call the studio. The first visit includes an exam and a written treatment plan with cost drivers."
+    },
+    {
+      "q": "What makes Pulse Dental Studio different?",
+      "a": "Pulse Dental Studio offers same-day crowns, sedation options and a written treatment plan before any work begins. Verify current availability with the studio."
+    },
+    {
+      "q": "How is pricing determined?",
+      "a": "Pricing depends on the number of teeth, the material, lab work and whether sedation is used. The studio provides a written quote after the exam."
+    }
+  ],
+  "platforms": ["chatgpt", "perplexity", "google_ai", "gemini", "copilot", "claude"],
+  "agencyName": "Northline SEO",
+  "primaryPages": ["/", "/services/veneers", "/about"],
+  "baselineDate": "2026-10-29",
+  "reMeasureDate": "2026-11-28",
+  "reportDate": "2026-10-29"
+}

@@ -1,0 +1,122 @@
+{
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://pulsedental.example/#organization",
+    "name": "Pulse Dental Studio",
+    "url": "https://pulsedental.example",
+    "description": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX.",
+    "areaServed": [
+      "Austin",
+      "Round Rock",
+      "Cedar Park"
+    ],
+    "knowsAbout": [
+      "cosmetic dentistry",
+      "same-day crowns",
+      "sedation options",
+      "a written treatment plan before any work"
+    ],
+    "sameAs": []
+  },
+  "service": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "cosmetic dentistry — Pulse Dental Studio",
+    "serviceType": "cosmetic dentistry",
+    "provider": {
+      "@id": "https://pulsedental.example/#organization"
+    },
+    "areaServed": [
+      "Austin",
+      "Round Rock",
+      "Cedar Park"
+    ],
+    "description": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX.",
+    "url": "https://pulsedental.example/services/cosmetic-dentistry"
+  },
+  "faq": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Pulse Dental Studio offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin, TX, including veneers, implants and same-day crowns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does Pulse Dental Studio work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pulse Dental Studio serves Austin, Round Rock and Cedar Park. Confirm the current service area and hours with the studio before booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the official Pulse Dental Studio website or call the studio. The first visit includes an exam and a written treatment plan with cost drivers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Pulse Dental Studio different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pulse Dental Studio offers same-day crowns, sedation options and a written treatment plan before any work begins. Verify current availability with the studio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is pricing determined?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the number of teeth, the material, lab work and whether sedation is used. The studio provides a written quote after the exam."
+        }
+      }
+    ]
+  },
+  "breadcrumb": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pulsedental.example"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://pulsedental.example/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "cosmetic dentistry",
+        "item": "https://pulsedental.example/services/cosmetic-dentistry"
+      }
+    ]
+  },
+  "article": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cosmetic dentistry in Austin, TX",
+    "description": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains category + location, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+    "about": "cosmetic dentistry",
+    "author": {
+      "@id": "https://pulsedental.example/#organization"
+    },
+    "publisher": {
+      "@id": "https://pulsedental.example/#organization"
+    },
+    "mainEntityOfPage": "https://pulsedental.example/services/cosmetic-dentistry"
+  }
+}

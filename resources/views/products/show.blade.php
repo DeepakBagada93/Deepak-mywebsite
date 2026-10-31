@@ -99,8 +99,14 @@
                             <tbody>
                                 @foreach ($product['comparison'] as $row)
                                 <tr>
-                                    <td class="store-comparison__td store-comparison__td--without">✕ {{ $row['without'] }}</td>
-                                    <td class="store-comparison__td store-comparison__td--with">✓ {{ $row['with'] }}</td>
+                                    <td class="store-comparison__td store-comparison__td--without">
+                                        <span class="store-comparison__cell-label mono store-comparison__cell-label--without">Without this skill</span>
+                                        ✕ {{ $row['without'] }}
+                                    </td>
+                                    <td class="store-comparison__td store-comparison__td--with">
+                                        <span class="store-comparison__cell-label mono store-comparison__cell-label--with">With this skill</span>
+                                        ✓ {{ $row['with'] }}
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -278,15 +284,18 @@
     if (!bar) return;
     var ticking = false;
     function checkScroll() {
-        if (window.innerWidth > 980) {
+        if (window.innerWidth > 1024) {
             bar.classList.remove('is-visible');
+            document.body.classList.remove('has-mobile-sticky');
             return;
         }
         var scrollY = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollY > 280) {
             bar.classList.add('is-visible');
+            document.body.classList.add('has-mobile-sticky');
         } else {
             bar.classList.remove('is-visible');
+            document.body.classList.remove('has-mobile-sticky');
         }
     }
     window.addEventListener('scroll', function() {

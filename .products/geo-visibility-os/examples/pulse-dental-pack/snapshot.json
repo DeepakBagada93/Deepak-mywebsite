@@ -1,0 +1,259 @@
+{
+  "site": {
+    "url": "https://pulsedental.example",
+    "https": true,
+    "source": "local",
+    "robotsTxt": true,
+    "robotsSitemaps": [
+      "https://pulsedental.example/sitemap.xml"
+    ],
+    "sitemapPresent": true,
+    "sitemapUrls": [
+      "https://pulsedental.example/",
+      "https://pulsedental.example/services/veneers",
+      "https://pulsedental.example/about"
+    ],
+    "llmsTxt": false,
+    "aiBots": {
+      "GPTBot": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "OAI-SearchBot": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "ChatGPT-User": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "ClaudeBot": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "Claude-SearchBot": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "PerplexityBot": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "Google-Extended": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "Applebot-Extended": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      },
+      "CCBot": {
+        "allowed": true,
+        "reason": "Allowed by \"Allow: /\"."
+      }
+    },
+    "blockedBots": []
+  },
+  "pages": [
+    {
+      "path": "/",
+      "url": "/",
+      "title": "Cosmetic Dentistry in Austin, TX | Pulse Dental Studio",
+      "metaDescription": "Pulse Dental Studio provides cosmetic dentistry in Austin, TX: veneers, implants and same-day crowns with a written treatment plan before any work begins.",
+      "canonical": "https://pulsedental.example/",
+      "h1": [
+        "Cosmetic Dentistry in Austin, TX"
+      ],
+      "h2": [
+        "What does cosmetic dentistry include?",
+        "How much does cosmetic dentistry cost in Austin?",
+        "Who is a good candidate?",
+        "What should you ask before booking?",
+        "Frequently asked questions"
+      ],
+      "h3": [
+        "Do you offer sedation for cosmetic work?",
+        "How long do veneers last?",
+        "Where can I see the full service list?"
+      ],
+      "headings": [
+        "What does cosmetic dentistry include?",
+        "How much does cosmetic dentistry cost in Austin?",
+        "Who is a good candidate?",
+        "What should you ask before booking?",
+        "Frequently asked questions",
+        "Do you offer sedation for cosmetic work?",
+        "How long do veneers last?",
+        "Where can I see the full service list?"
+      ],
+      "wordCount": 705,
+      "schemaTypes": [
+        "Organization",
+        "Dentist",
+        "Service",
+        "FAQPage",
+        "Question",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "hasFaqSchema": true,
+      "hasComparisonTable": true,
+      "questionHeadings": 7,
+      "answerFirst": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin, TX. This page explains veneers, implants and same-day crowns, what changes the outcome, how pricing is usually determined, and how to decide whether our team is the right fit. It also names the limits so you can compare providers fairly instead of relying on a single rating.",
+      "answerFirstWords": 58,
+      "internalLinks": [
+        "/",
+        "/services/veneers",
+        "/about",
+        "/contact",
+        "/services/veneers",
+        "/about",
+        "/contact"
+      ],
+      "externalLinks": [],
+      "imageCount": 1,
+      "imagesWithAlt": 1,
+      "hasAuthor": true,
+      "hasDate": true,
+      "visibleDate": true,
+      "hasStats": true,
+      "hasPrice": true,
+      "hasContact": true,
+      "jsonLdValid": true,
+      "jsonLdBlocks": 1,
+      "jsOnly": false,
+      "sameAs": [
+        "https://www.google.com/maps/place/pulse-dental-studio",
+        "https://www.healthgrades.com/group-directory/tx-texas/austin/pulse-dental-studio"
+      ]
+    },
+    {
+      "path": "/about",
+      "url": "/about",
+      "title": "About Pulse Dental Studio | Austin, TX",
+      "metaDescription": "Meet the team behind Pulse Dental Studio in Austin, TX. Our approach, credentials, service area and the standards we use for cosmetic dentistry consultations.",
+      "canonical": "https://pulsedental.example/about",
+      "h1": [
+        "About Pulse Dental Studio"
+      ],
+      "h2": [
+        "Who does the work?",
+        "How do we plan treatment?",
+        "Where do we practise?",
+        "What standards do we hold?",
+        "Frequently asked questions"
+      ],
+      "h3": [
+        "Is Dr. Maya Patel accepting new patients?",
+        "Do you treat patients outside Austin?",
+        "How can I verify the practice details?"
+      ],
+      "headings": [
+        "Who does the work?",
+        "How do we plan treatment?",
+        "Where do we practise?",
+        "What standards do we hold?",
+        "Frequently asked questions",
+        "Is Dr. Maya Patel accepting new patients?",
+        "Do you treat patients outside Austin?",
+        "How can I verify the practice details?"
+      ],
+      "wordCount": 605,
+      "schemaTypes": [
+        "AboutPage",
+        "Organization",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "Person"
+      ],
+      "hasFaqSchema": false,
+      "hasComparisonTable": false,
+      "questionHeadings": 7,
+      "answerFirst": "Pulse Dental Studio is a cosmetic dentistry practice in Austin, TX, serving adults 30-55 who want veneers, implants or same-day crowns. We publish our approach, our credentials and our limits because a website should help you judge a provider, not just impress you. This page explains who does the work, how we plan treatment, where we practise, and what we will not claim.",
+      "answerFirstWords": 63,
+      "internalLinks": [
+        "/",
+        "/services/veneers",
+        "/about",
+        "/contact",
+        "/",
+        "/services/veneers",
+        "/contact"
+      ],
+      "externalLinks": [],
+      "imageCount": 1,
+      "imagesWithAlt": 1,
+      "hasAuthor": true,
+      "hasDate": true,
+      "visibleDate": true,
+      "hasStats": true,
+      "hasPrice": false,
+      "hasContact": true,
+      "jsonLdValid": true,
+      "jsonLdBlocks": 1,
+      "jsOnly": false,
+      "sameAs": []
+    },
+    {
+      "path": "/services/veneers",
+      "url": "/services/veneers",
+      "title": "Veneers in Austin, TX: Process, Cost and Limits",
+      "metaDescription": "How porcelain veneers work at Pulse Dental Studio in Austin, TX: candidacy, the two-visit process, cost drivers, aftercare and the honest limits of the result.",
+      "canonical": "https://pulsedental.example/services/veneers",
+      "h1": [
+        "Veneers in Austin, TX"
+      ],
+      "h2": [
+        "What do veneers change, and what do they not?",
+        "How does the two-visit process work?",
+        "What changes the cost?",
+        "Who is not a good candidate?",
+        "How do you care for veneers?"
+      ],
+      "h3": [],
+      "headings": [
+        "What do veneers change, and what do they not?",
+        "How does the two-visit process work?",
+        "What changes the cost?",
+        "Who is not a good candidate?",
+        "How do you care for veneers?"
+      ],
+      "wordCount": 646,
+      "schemaTypes": [
+        "Service",
+        "Organization",
+        "FAQPage",
+        "Question",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "Person"
+      ],
+      "hasFaqSchema": true,
+      "hasComparisonTable": true,
+      "questionHeadings": 5,
+      "answerFirst": "Pulse Dental Studio provides porcelain veneers for adults in Austin, TX. This page explains who is a good candidate, what happens at each visit, which factors change the cost, how to care for veneers, and the limits of what a veneer can fix. The goal is to help you decide with a clear treatment plan rather than a promise.",
+      "answerFirstWords": 59,
+      "internalLinks": [
+        "/",
+        "/services/veneers",
+        "/about",
+        "/contact"
+      ],
+      "externalLinks": [],
+      "imageCount": 1,
+      "imagesWithAlt": 1,
+      "hasAuthor": true,
+      "hasDate": true,
+      "visibleDate": true,
+      "hasStats": true,
+      "hasPrice": false,
+      "hasContact": true,
+      "jsonLdValid": true,
+      "jsonLdBlocks": 1,
+      "jsOnly": false,
+      "sameAs": []
+    }
+  ]
+}

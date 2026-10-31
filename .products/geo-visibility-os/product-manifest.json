@@ -1,0 +1,238 @@
+{
+  "name": "GEO Visibility OS",
+  "slug": "geo-visibility-os",
+  "version": "1.1.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-10-31T16:25:40.084Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 3579,
+      "sha256": "4d2ae2665119ff65e2996d9e1bfee949b8b53b36ffb5f14b7d127e044218c0fe"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 2858,
+      "sha256": "096c096bcee5f2e1c0a66c5bb38648d1a2889f3055fd8d24b5b3bee5eabefeb8"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 326,
+      "sha256": "0b749fcb3cd8b737e3bf51e97016f9943dba4eb7ab8c551037d519eb22dd6a50"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 9004,
+      "sha256": "2d3818c3deab26dc009de37d3d8933fdca1d956c3075d5ffb060b0a2d48e16d0"
+    },
+    {
+      "path": "docs/production-readiness.md",
+      "bytes": 3895,
+      "sha256": "44e6a363be7794f015621dfaddb2128ec4fbfa3fa149e540192f568f3eec7ebe"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 5078,
+      "sha256": "c24ac1020866da17ea679be7d15b3f7f835d6f0192a61048b78c0312392e0931"
+    },
+    {
+      "path": "docs/research-report.md",
+      "bytes": 13943,
+      "sha256": "6c1926452fd5d089578ede0793135429506ae5ad1fc191ac4a261ddd0ed37264"
+    },
+    {
+      "path": "docs/security-and-privacy.md",
+      "bytes": 3097,
+      "sha256": "57e00ee2f88c3a3d9dfbe0e84f24b8b6c498b3d7ec430c226f66065bf8485a04"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 7312,
+      "sha256": "e3889bf8e892d2e3cb428eeb7b20340cb05da0011a47c577d962e9c6efd6598a"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 4916,
+      "sha256": "4ec0682445cbdb2f508ffb5bb067c4661086eec2edbfdd3011aa9af5a4513368"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 4341,
+      "sha256": "372776a2bdb9366cf1d9b99eba74a3720e9a14e3583723123fc7ad5ba3de06c8"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 11170,
+      "sha256": "74d013ca454c97ea2957a9e79b54da93414be01c7c93d4979540db05bd9e722d"
+    },
+    {
+      "path": "docs/validation-report.json",
+      "bytes": 1747,
+      "sha256": "0cf3bfb0b07d38a1b6dbdc37639aaa5f0248e197fed6b8df5fd63fff2480aacf"
+    },
+    {
+      "path": "examples/broken-pack.json",
+      "bytes": 28682,
+      "sha256": "6ee7d77f819f37b47ae9042d767b879e96a6287ea6162142382051c489acc34e"
+    },
+    {
+      "path": "examples/expected/broken-audit.json",
+      "bytes": 17393,
+      "sha256": "4cc07ac9cb6473650512477925525ffeaed39e41b22d5ba8c30ed331e600067f"
+    },
+    {
+      "path": "examples/expected/broken-audit.md",
+      "bytes": 10470,
+      "sha256": "0eeb8461434468cefbad61c8a789490705f12d75dcf0006574d1c9fed2e2f1fa"
+    },
+    {
+      "path": "examples/expected/clean-audit.json",
+      "bytes": 7600,
+      "sha256": "eec5548ec254f3a6903fbef9c7c9c476bbb5d30d200e25397f73fae66618bc91"
+    },
+    {
+      "path": "examples/expected/clean-audit.md",
+      "bytes": 4512,
+      "sha256": "ff7ebd2b12d81e75485391a78dc1f08aeb0e4e27853e6faf4ab3aa23c743070a"
+    },
+    {
+      "path": "examples/pulse-dental-brief.json",
+      "bytes": 2012,
+      "sha256": "2f7d4383f5a036fc9a49b5be5725dffa0dcc827d9c7cf58d6d38b9c36df9a5b5"
+    },
+    {
+      "path": "examples/pulse-dental-pack/citation-plan.md",
+      "bytes": 4237,
+      "sha256": "a350b6076e043766bf6d071da88523f9196c30e7d8ff53d5135edefc6eea451e"
+    },
+    {
+      "path": "examples/pulse-dental-pack/client-report.md",
+      "bytes": 6350,
+      "sha256": "06835b1087071db185afa88b8106e9f0860268c8c5423069d5478b7017c503cb"
+    },
+    {
+      "path": "examples/pulse-dental-pack/content-briefs.md",
+      "bytes": 14956,
+      "sha256": "91423124244b473cc9078183276914e0dba016604601a74c03bf1feaaec02201"
+    },
+    {
+      "path": "examples/pulse-dental-pack/fix-roadmap.csv",
+      "bytes": 4309,
+      "sha256": "7c7dbb73a650bfc26ff1b1e26c28930e7220f09d3e7a5a98b4b0ae6b93e8858f"
+    },
+    {
+      "path": "examples/pulse-dental-pack/measurement-plan.md",
+      "bytes": 1851,
+      "sha256": "c4760c3b41ddef1ac030891a53ed3ef6946ee8fb3e9854f398673af5d77ba274"
+    },
+    {
+      "path": "examples/pulse-dental-pack/pack.json",
+      "bytes": 70092,
+      "sha256": "fae74d3586900f778430e7453e968f6cf903595583aef3b0c863d2ee28b391a6"
+    },
+    {
+      "path": "examples/pulse-dental-pack/prompt-panel.csv",
+      "bytes": 4449,
+      "sha256": "e478568d3d51e5e071aeb49236479d92de803b44c20dffd9dfd4c4a11b76d9fb"
+    },
+    {
+      "path": "examples/pulse-dental-pack/README.md",
+      "bytes": 1335,
+      "sha256": "4938218031e4d393078f7f7cf27ff01b2107761a57d5fe085e1d5ccab65b1829"
+    },
+    {
+      "path": "examples/pulse-dental-pack/schema-install.md",
+      "bytes": 626,
+      "sha256": "bc0886847e938e9391d57a6fb203ff4924eb5017f9a5f30e874d81046d59723e"
+    },
+    {
+      "path": "examples/pulse-dental-pack/schema-pack.json",
+      "bytes": 4364,
+      "sha256": "8fcc620dbe24463cbdf110a976912f3fd7854afbf4b2bebbae9bc289a99b4b61"
+    },
+    {
+      "path": "examples/pulse-dental-pack/snapshot.json",
+      "bytes": 8428,
+      "sha256": "2095106f4646bfa0b1472d5bc1b1d8bdd2736db498bdbc8abffc05e4a84af185"
+    },
+    {
+      "path": "examples/pulse-dental-site/about/index.html",
+      "bytes": 5808,
+      "sha256": "d8a83058b9c2c9ca5ceb57f0510a649b3606102a780d1622da5f2fed94d4f56b"
+    },
+    {
+      "path": "examples/pulse-dental-site/index.html",
+      "bytes": 8451,
+      "sha256": "214baa44ee8f74c601dfa2e179d7a306f91e9002a3f57b3dcb41fe0ec3880e42"
+    },
+    {
+      "path": "examples/pulse-dental-site/robots.txt",
+      "bytes": 73,
+      "sha256": "13692c20db834add67e833044d500c37c166e3d198c0d32cac849bb04f49e7c8"
+    },
+    {
+      "path": "examples/pulse-dental-site/services/veneers/index.html",
+      "bytes": 7378,
+      "sha256": "f48901f9f0992613a8853c5707e8ffb6952c681706383af7b7abd3d1b8a7609a"
+    },
+    {
+      "path": "examples/pulse-dental-site/sitemap.xml",
+      "bytes": 377,
+      "sha256": "b8d9eca2ebb9a4b46b2253758a54d248d7d2d99257cf993f32dd93d4cd2f31e7"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 2448,
+      "sha256": "6abe8f9f288a8f9ca923212c65318abf8df6e841a932700cb41c50628c1738a3"
+    },
+    {
+      "path": "package.json",
+      "bytes": 777,
+      "sha256": "fd027ba831f21155d1d7beaf902a72558322b2d4a4941e0f6b7b22b9c327d44f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5638,
+      "sha256": "2012f89b318830ed1189fdafefd9a2200911def1103fa50eb41122bceebe397e"
+    },
+    {
+      "path": "skills/geo-visibility-os/scripts/audit-geo-pack.mjs",
+      "bytes": 6090,
+      "sha256": "7c7dc19b7811e1fd108d917b534b3011f8671c7e30d8713f30d7ce8fc94ab828"
+    },
+    {
+      "path": "skills/geo-visibility-os/scripts/build-geo-pack.mjs",
+      "bytes": 11956,
+      "sha256": "6ae29c89deadeefa1e28ef8e4f8e2fc5619a6b577cec0046a8e1b35559970f73"
+    },
+    {
+      "path": "skills/geo-visibility-os/scripts/lib.mjs",
+      "bytes": 76171,
+      "sha256": "91e1990e5674cddd2656303496205e2dd1c2503784167f0155329634ee561562"
+    },
+    {
+      "path": "skills/geo-visibility-os/scripts/scan-site.mjs",
+      "bytes": 4378,
+      "sha256": "b7617cacf1a65df4d37d2762073891c07cc02685b52cfd4155bcd23ff782df8d"
+    },
+    {
+      "path": "skills/geo-visibility-os/SKILL.md",
+      "bytes": 15432,
+      "sha256": "930a6e7c7ca4651b1f17deb872068c08cf2e04055dc9b192530531b61d7f6fb0"
+    },
+    {
+      "path": "tests/geo-visibility-os.test.mjs",
+      "bytes": 15574,
+      "sha256": "af6e8fc65a2056903c64d9daae4030af7a39d5ca082cf0bff3f32d1afacd4dcc"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 5853,
+      "sha256": "3c98bc9f0b54e3bc3fe22d8c73b0545586e5682b331ef5c6bbfc3e446aa4ba2a"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review.",
+    "A real client audit and outcome measurement have not been attached."
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "campaign": "Pulse Dental Studio",
+  "score": 100,
+  "verdict": "PASS",
+  "min": 85,
+  "stats": {
+    "checks": 40,
+    "passed": 40,
+    "findings": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "prompts": 30,
+    "briefs": 6,
+    "roadmap": 28
+  },
+  "checks": [
+    {
+      "id": "structure.identity",
+      "class": "structure",
+      "weight": 3,
+      "passed": true,
+      "message": "Brand, domain and market are present."
+    },
+    {
+      "id": "structure.competitors",
+      "class": "structure",
+      "weight": 2,
+      "passed": true,
+      "message": "At least two competitors are named."
+    },
+    {
+      "id": "structure.platforms",
+      "class": "structure",
+      "weight": 2,
+      "passed": true,
+      "message": "At least four AI platforms are covered."
+    },
+    {
+      "id": "structure.placeholders",
+      "class": "structure",
+      "weight": 1,
+      "passed": true,
+      "message": "No placeholders or unreplaced tokens."
+    },
+    {
+      "id": "crawl.robots",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "robots.txt is present."
+    },
+    {
+      "id": "crawl.chatgptUser",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "ChatGPT-User is allowed at the root."
+    },
+    {
+      "id": "crawl.oaiSearch",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "OAI-SearchBot is allowed at the root."
+    },
+    {
+      "id": "crawl.perplexity",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "PerplexityBot is allowed at the root."
+    },
+    {
+      "id": "crawl.claude",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "Claude-SearchBot is allowed at the root."
+    },
+    {
+      "id": "crawl.renderable",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "Critical content is present in the HTML."
+    },
+    {
+      "id": "crawl.siteBasics",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "At least three pages are scanned and canonicals are present where needed."
+    },
+    {
+      "id": "crawl.sitemap",
+      "class": "crawl",
+      "weight": 2,
+      "passed": true,
+      "message": "An XML sitemap is present."
+    },
+    {
+      "id": "entity.organizationSchema",
+      "class": "entity",
+      "weight": 3,
+      "passed": true,
+      "message": "Organization schema is present."
+    },
+    {
+      "id": "entity.serviceSchema",
+      "class": "entity",
+      "weight": 3,
+      "passed": true,
+      "message": "A Service, Product or business schema is present."
+    },
+    {
+      "id": "entity.structuredData",
+      "class": "entity",
+      "weight": 2,
+      "passed": true,
+      "message": "FAQPage and BreadcrumbList schema are present."
+    },
+    {
+      "id": "entity.sameAs",
+      "class": "entity",
+      "weight": 2,
+      "passed": true,
+      "message": "sameAs profile links are present."
+    },
+    {
+      "id": "entity.consistency",
+      "class": "entity",
+      "weight": 2,
+      "passed": true,
+      "message": "Brand name and service description are consistent across the pack."
+    },
+    {
+      "id": "entity.author",
+      "class": "entity",
+      "weight": 2,
+      "passed": true,
+      "message": "A named author or reviewer is present."
+    },
+    {
+      "id": "content.answerFirst",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "Most priority pages have a 40+ word answer-first summary."
+    },
+    {
+      "id": "content.questionHeadings",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "At least half the pages use two question-form headings."
+    },
+    {
+      "id": "content.depth",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "Priority pages have at least 400 words."
+    },
+    {
+      "id": "content.evidence",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "Pages carry dated evidence and every brief names its evidence."
+    },
+    {
+      "id": "content.comparison",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "A comparison page or table is planned."
+    },
+    {
+      "id": "content.maintenance",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "Freshness, internal links and image alt coverage are present."
+    },
+    {
+      "id": "citation.sourceMap",
+      "class": "citation",
+      "weight": 4,
+      "passed": true,
+      "message": "The citation plan covers at least eight source types with actions."
+    },
+    {
+      "id": "citation.thirdParty",
+      "class": "citation",
+      "weight": 3,
+      "passed": true,
+      "message": "Review and community sources are included."
+    },
+    {
+      "id": "citation.pr",
+      "class": "citation",
+      "weight": 2,
+      "passed": true,
+      "message": "Earned media and expert sources are included."
+    },
+    {
+      "id": "citation.ethics",
+      "class": "citation",
+      "weight": 3,
+      "passed": true,
+      "message": "The citation plan rejects fake reviews, paid placement and spam."
+    },
+    {
+      "id": "prompt.funnel",
+      "class": "prompt",
+      "weight": 3,
+      "passed": true,
+      "message": "The prompt panel covers at least four funnel stages."
+    },
+    {
+      "id": "prompt.mix",
+      "class": "prompt",
+      "weight": 3,
+      "passed": true,
+      "message": "The panel mixes branded, non-branded and competitor prompts."
+    },
+    {
+      "id": "prompt.coverage",
+      "class": "prompt",
+      "weight": 3,
+      "passed": true,
+      "message": "Every prompt is assigned to a platform and at least four platforms are covered."
+    },
+    {
+      "id": "prompt.testPlan",
+      "class": "prompt",
+      "weight": 3,
+      "passed": true,
+      "message": "The panel has 30+ prompts, each with runs and a success signal."
+    },
+    {
+      "id": "measurement.gsc",
+      "class": "measurement",
+      "weight": 3,
+      "passed": true,
+      "message": "Search Console generative AI reporting is in the plan."
+    },
+    {
+      "id": "measurement.analytics",
+      "class": "measurement",
+      "weight": 2,
+      "passed": true,
+      "message": "Bing citation share and GA4 AI referrals are in the plan."
+    },
+    {
+      "id": "measurement.cadence",
+      "class": "measurement",
+      "weight": 3,
+      "passed": true,
+      "message": "Baseline, re-measure date and cadence are defined."
+    },
+    {
+      "id": "measurement.honesty",
+      "class": "measurement",
+      "weight": 2,
+      "passed": true,
+      "message": "The measurement plan states variance and attribution limits."
+    },
+    {
+      "id": "delivery.report",
+      "class": "delivery",
+      "weight": 3,
+      "passed": true,
+      "message": "A white-label report with limits is present."
+    },
+    {
+      "id": "delivery.roadmap",
+      "class": "delivery",
+      "weight": 3,
+      "passed": true,
+      "message": "The roadmap has 20+ owned actions with verification."
+    },
+    {
+      "id": "delivery.schemaInstall",
+      "class": "delivery",
+      "weight": 2,
+      "passed": true,
+      "message": "Schema install instructions are present."
+    },
+    {
+      "id": "delivery.limits",
+      "class": "delivery",
+      "weight": 2,
+      "passed": true,
+      "message": "The delivery states the limits and the no-guarantee rule."
+    }
+  ],
+  "findings": [],
+  "checkedAt": "2026-10-31T16:19:30.595Z"
+}

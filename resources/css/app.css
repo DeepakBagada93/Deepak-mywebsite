@@ -148,13 +148,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    z-index: 8900;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid var(--hair, rgba(22, 22, 22, 0.16));
     padding: 10px 16px;
-    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    padding-bottom: max(10px, env(safe-area-inset-bottom, 10px));
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
     display: none;
     transform: translateY(100%);
@@ -276,9 +276,12 @@
     font-weight: 500;
     background: #ffffff;
 }
+.store-comparison__cell-label {
+    display: none;
+}
 
 /* Responsive Media Queries */
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
     .store-detail {
         padding: 40px 0 90px;
         overflow-x: clip;
@@ -316,6 +319,7 @@
     }
     .store-step__title {
         word-break: break-word;
+        overflow-wrap: anywhere;
     }
     .store-step__code {
         max-width: 100%;
@@ -323,7 +327,14 @@
         -webkit-overflow-scrolling: touch;
         white-space: pre-wrap;
         word-break: break-all;
+        overflow-wrap: anywhere;
         box-sizing: border-box;
+    }
+    .store-preview__code {
+        max-width: 100%;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow-wrap: anywhere;
     }
     .store-detail__aside {
         position: static;
@@ -339,6 +350,22 @@
     }
     .store-comparison__hint {
         display: inline-block;
+    }
+    body.has-mobile-sticky .currency-switch--floating,
+    body:has(.store-mobile-sticky.is-visible) .currency-switch--floating {
+        bottom: calc(75px + env(safe-area-inset-bottom, 10px)) !important;
+    }
+    body.has-mobile-sticky .cart-fab,
+    body:has(.store-mobile-sticky.is-visible) .cart-fab {
+        bottom: calc(75px + env(safe-area-inset-bottom, 10px)) !important;
+    }
+    .checkout-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .checkout-sidebar {
+        position: static;
+        order: -1;
     }
 }
 
@@ -365,6 +392,7 @@
         line-height: 1.15;
         margin-bottom: 12px;
         word-break: break-word;
+        overflow-wrap: anywhere;
     }
     .store-detail__tagline {
         font-size: 1.05rem;
@@ -411,6 +439,16 @@
         font-size: 0.78rem;
         white-space: pre-wrap;
         word-break: break-all;
+        overflow-wrap: anywhere;
+    }
+    .store-preview {
+        padding: 16px 14px;
+    }
+    .store-preview__code {
+        font-size: 0.78rem;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow-wrap: anywhere;
     }
     .store-buybox {
         padding: 22px 16px;
@@ -427,6 +465,156 @@
     .store-detail__tech li {
         font-size: 0.6rem;
         padding: 4px 8px;
+    }
+    /* Mobile Card Transformation for Comparison */
+    .store-comparison {
+        border: none;
+        background: transparent;
+        overflow-x: visible;
+        margin-top: 14px;
+    }
+    .store-comparison__hint {
+        display: none !important;
+    }
+    .store-comparison__table {
+        display: block;
+        min-width: 0 !important;
+        width: 100%;
+    }
+    .store-comparison__table thead {
+        display: none;
+    }
+    .store-comparison__table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .store-comparison__table tr {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        border: 1px solid var(--hair, #e9ecef);
+        border-radius: 6px;
+        padding: 12px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .store-comparison__td {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: none;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
+    .store-comparison__td--without {
+        background: #fdf2f2;
+        color: #991b1b;
+        border-left: 3px solid #ef4444;
+    }
+    .store-comparison__td--with {
+        background: #f0fdf4;
+        color: #166534;
+        border-left: 3px solid #22c55e;
+    }
+    .store-comparison__cell-label {
+        display: block;
+        font-size: 0.62rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 4px;
+    }
+    .store-comparison__cell-label--without {
+        color: #b91c1c;
+    }
+    .store-comparison__cell-label--with {
+        color: #15803d;
+    }
+    .checkout-card {
+        padding: 22px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 14px;
+    }
+    .store-detail {
+        padding: 24px 0 90px;
+    }
+    .store-detail__title {
+        font-size: 1.55rem;
+        line-height: 1.18;
+    }
+    .store-detail__tagline {
+        font-size: 0.95rem;
+    }
+    .store-detail__mobile-buybox {
+        padding: 16px 14px;
+    }
+    .store-detail__mobile-buy-btn {
+        padding: 12px 14px;
+        font-size: 0.88rem;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    .store-detail__mobile-cart-btn {
+        padding: 10px 14px;
+        font-size: 0.84rem;
+    }
+    .store-mobile-sticky {
+        padding: 8px 12px;
+        padding-bottom: max(8px, env(safe-area-inset-bottom, 8px));
+    }
+    .store-mobile-sticky__inner {
+        gap: 8px;
+    }
+    .store-mobile-sticky__title {
+        max-width: 120px;
+        font-size: 0.78rem;
+    }
+    .store-mobile-sticky__price {
+        font-size: 0.82rem;
+    }
+    .store-mobile-sticky__price .store__price-was {
+        display: none;
+    }
+    .store-mobile-sticky__actions {
+        gap: 6px;
+    }
+    .store-mobile-sticky__btn {
+        padding: 8px 12px;
+        font-size: 0.76rem;
+    }
+    .store-mobile-sticky__cart {
+        padding: 8px 10px;
+        font-size: 0.76rem;
+    }
+    .store-step {
+        padding: 12px 10px;
+    }
+    .store-step__head {
+        gap: 8px;
+    }
+    .store-step__title {
+        font-size: 0.9rem;
+    }
+    .store-step__desc {
+        font-size: 0.84rem;
+    }
+    .store-step__code {
+        padding: 8px 10px;
+        font-size: 0.74rem;
+    }
+    .store-preview {
+        padding: 14px 12px;
+    }
+    .store-preview__code {
+        font-size: 0.75rem;
     }
 }
 

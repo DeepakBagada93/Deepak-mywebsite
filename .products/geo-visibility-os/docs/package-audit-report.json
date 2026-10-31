@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/geo-visibility-os",
+  "checkedAt": "2026-10-31T16:25:40.193Z",
+  "passed": [
+    "geo-visibility-os-1.1.0.zip has 58 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

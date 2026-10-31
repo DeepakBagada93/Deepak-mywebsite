@@ -1,0 +1,576 @@
+{
+  "campaign": "Unknown brand",
+  "score": 3,
+  "verdict": "DO NOT SHIP",
+  "min": 85,
+  "stats": {
+    "checks": 40,
+    "passed": 1,
+    "findings": 39,
+    "critical": 5,
+    "high": 21,
+    "medium": 13,
+    "low": 0,
+    "prompts": 0,
+    "briefs": 6,
+    "roadmap": 0
+  },
+  "checks": [
+    {
+      "id": "structure.identity",
+      "class": "structure",
+      "weight": 3,
+      "passed": false,
+      "message": "Brand, domain and market are present."
+    },
+    {
+      "id": "structure.competitors",
+      "class": "structure",
+      "weight": 2,
+      "passed": false,
+      "message": "At least two competitors are named."
+    },
+    {
+      "id": "structure.platforms",
+      "class": "structure",
+      "weight": 2,
+      "passed": false,
+      "message": "At least four AI platforms are covered."
+    },
+    {
+      "id": "structure.placeholders",
+      "class": "structure",
+      "weight": 1,
+      "passed": false,
+      "message": "No placeholders or unreplaced tokens."
+    },
+    {
+      "id": "crawl.robots",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "robots.txt is present."
+    },
+    {
+      "id": "crawl.chatgptUser",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "ChatGPT-User is allowed at the root."
+    },
+    {
+      "id": "crawl.oaiSearch",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "OAI-SearchBot is allowed at the root."
+    },
+    {
+      "id": "crawl.perplexity",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "PerplexityBot is allowed at the root."
+    },
+    {
+      "id": "crawl.claude",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "Claude-SearchBot is allowed at the root."
+    },
+    {
+      "id": "crawl.renderable",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "Critical content is present in the HTML."
+    },
+    {
+      "id": "crawl.siteBasics",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "At least three pages are scanned and canonicals are present where needed."
+    },
+    {
+      "id": "crawl.sitemap",
+      "class": "crawl",
+      "weight": 2,
+      "passed": false,
+      "message": "An XML sitemap is present."
+    },
+    {
+      "id": "entity.organizationSchema",
+      "class": "entity",
+      "weight": 3,
+      "passed": false,
+      "message": "Organization schema is present."
+    },
+    {
+      "id": "entity.serviceSchema",
+      "class": "entity",
+      "weight": 3,
+      "passed": false,
+      "message": "A Service, Product or business schema is present."
+    },
+    {
+      "id": "entity.structuredData",
+      "class": "entity",
+      "weight": 2,
+      "passed": false,
+      "message": "FAQPage and BreadcrumbList schema are present."
+    },
+    {
+      "id": "entity.sameAs",
+      "class": "entity",
+      "weight": 2,
+      "passed": false,
+      "message": "sameAs profile links are present."
+    },
+    {
+      "id": "entity.consistency",
+      "class": "entity",
+      "weight": 2,
+      "passed": false,
+      "message": "Brand name and service description are consistent across the pack."
+    },
+    {
+      "id": "entity.author",
+      "class": "entity",
+      "weight": 2,
+      "passed": false,
+      "message": "A named author or reviewer is present."
+    },
+    {
+      "id": "content.answerFirst",
+      "class": "content",
+      "weight": 3,
+      "passed": false,
+      "message": "Most priority pages have a 40+ word answer-first summary."
+    },
+    {
+      "id": "content.questionHeadings",
+      "class": "content",
+      "weight": 3,
+      "passed": false,
+      "message": "At least half the pages use two question-form headings."
+    },
+    {
+      "id": "content.depth",
+      "class": "content",
+      "weight": 3,
+      "passed": false,
+      "message": "Priority pages have at least 400 words."
+    },
+    {
+      "id": "content.evidence",
+      "class": "content",
+      "weight": 3,
+      "passed": false,
+      "message": "Pages carry dated evidence and every brief names its evidence."
+    },
+    {
+      "id": "content.comparison",
+      "class": "content",
+      "weight": 3,
+      "passed": true,
+      "message": "A comparison page or table is planned."
+    },
+    {
+      "id": "content.maintenance",
+      "class": "content",
+      "weight": 3,
+      "passed": false,
+      "message": "Freshness, internal links and image alt coverage are present."
+    },
+    {
+      "id": "citation.sourceMap",
+      "class": "citation",
+      "weight": 4,
+      "passed": false,
+      "message": "The citation plan covers at least eight source types with actions."
+    },
+    {
+      "id": "citation.thirdParty",
+      "class": "citation",
+      "weight": 3,
+      "passed": false,
+      "message": "Review and community sources are included."
+    },
+    {
+      "id": "citation.pr",
+      "class": "citation",
+      "weight": 2,
+      "passed": false,
+      "message": "Earned media and expert sources are included."
+    },
+    {
+      "id": "citation.ethics",
+      "class": "citation",
+      "weight": 3,
+      "passed": false,
+      "message": "The citation plan rejects fake reviews, paid placement and spam."
+    },
+    {
+      "id": "prompt.funnel",
+      "class": "prompt",
+      "weight": 3,
+      "passed": false,
+      "message": "The prompt panel covers at least four funnel stages."
+    },
+    {
+      "id": "prompt.mix",
+      "class": "prompt",
+      "weight": 3,
+      "passed": false,
+      "message": "The panel mixes branded, non-branded and competitor prompts."
+    },
+    {
+      "id": "prompt.coverage",
+      "class": "prompt",
+      "weight": 3,
+      "passed": false,
+      "message": "Every prompt is assigned to a platform and at least four platforms are covered."
+    },
+    {
+      "id": "prompt.testPlan",
+      "class": "prompt",
+      "weight": 3,
+      "passed": false,
+      "message": "The panel has 30+ prompts, each with runs and a success signal."
+    },
+    {
+      "id": "measurement.gsc",
+      "class": "measurement",
+      "weight": 3,
+      "passed": false,
+      "message": "Search Console generative AI reporting is in the plan."
+    },
+    {
+      "id": "measurement.analytics",
+      "class": "measurement",
+      "weight": 2,
+      "passed": false,
+      "message": "Bing citation share and GA4 AI referrals are in the plan."
+    },
+    {
+      "id": "measurement.cadence",
+      "class": "measurement",
+      "weight": 3,
+      "passed": false,
+      "message": "Baseline, re-measure date and cadence are defined."
+    },
+    {
+      "id": "measurement.honesty",
+      "class": "measurement",
+      "weight": 2,
+      "passed": false,
+      "message": "The measurement plan states variance and attribution limits."
+    },
+    {
+      "id": "delivery.report",
+      "class": "delivery",
+      "weight": 3,
+      "passed": false,
+      "message": "A white-label report with limits is present."
+    },
+    {
+      "id": "delivery.roadmap",
+      "class": "delivery",
+      "weight": 3,
+      "passed": false,
+      "message": "The roadmap has 20+ owned actions with verification."
+    },
+    {
+      "id": "delivery.schemaInstall",
+      "class": "delivery",
+      "weight": 2,
+      "passed": false,
+      "message": "Schema install instructions are present."
+    },
+    {
+      "id": "delivery.limits",
+      "class": "delivery",
+      "weight": 2,
+      "passed": false,
+      "message": "The delivery states the limits and the no-guarantee rule."
+    }
+  ],
+  "findings": [
+    {
+      "id": "structure.identity",
+      "class": "structure",
+      "severity": "critical",
+      "message": "Brand, domain and market are present.",
+      "fix": "Add brand, domain and market to the brief."
+    },
+    {
+      "id": "structure.competitors",
+      "class": "structure",
+      "severity": "high",
+      "message": "At least two competitors are named.",
+      "fix": "Add two real competitors so comparison prompts are meaningful."
+    },
+    {
+      "id": "structure.platforms",
+      "class": "structure",
+      "severity": "high",
+      "message": "At least four AI platforms are covered.",
+      "fix": "Add ChatGPT, Perplexity, Google AI, Gemini, Copilot or Claude."
+    },
+    {
+      "id": "structure.placeholders",
+      "class": "structure",
+      "severity": "critical",
+      "message": "No placeholders or unreplaced tokens.",
+      "fix": "Replace every template token with a real value."
+    },
+    {
+      "id": "crawl.robots",
+      "class": "crawl",
+      "severity": "high",
+      "message": "robots.txt is present.",
+      "fix": "Publish robots.txt and allow the AI search agents you want."
+    },
+    {
+      "id": "crawl.chatgptUser",
+      "class": "crawl",
+      "severity": "high",
+      "message": "ChatGPT-User is allowed at the root.",
+      "fix": "Allow ChatGPT-User for user-initiated retrieval without enabling model training."
+    },
+    {
+      "id": "crawl.oaiSearch",
+      "class": "crawl",
+      "severity": "high",
+      "message": "OAI-SearchBot is allowed at the root.",
+      "fix": "Allow OAI-SearchBot separately from GPTBot; blocking training does not have to block search."
+    },
+    {
+      "id": "crawl.perplexity",
+      "class": "crawl",
+      "severity": "high",
+      "message": "PerplexityBot is allowed at the root.",
+      "fix": "Allow PerplexityBot if Perplexity matters for the category."
+    },
+    {
+      "id": "crawl.claude",
+      "class": "crawl",
+      "severity": "high",
+      "message": "Claude-SearchBot is allowed at the root.",
+      "fix": "Allow Claude-SearchBot for Claude retrieval; ClaudeBot is a separate training decision."
+    },
+    {
+      "id": "crawl.renderable",
+      "class": "crawl",
+      "severity": "high",
+      "message": "Critical content is present in the HTML.",
+      "fix": "Server-render the main copy; several AI fetchers do not execute JavaScript."
+    },
+    {
+      "id": "crawl.siteBasics",
+      "class": "crawl",
+      "severity": "medium",
+      "message": "At least three pages are scanned and canonicals are present where needed.",
+      "fix": "Add self-referencing canonicals and scan at least three priority pages."
+    },
+    {
+      "id": "crawl.sitemap",
+      "class": "crawl",
+      "severity": "medium",
+      "message": "An XML sitemap is present.",
+      "fix": "Publish a sitemap with canonical URLs and accurate lastmod dates."
+    },
+    {
+      "id": "entity.organizationSchema",
+      "class": "entity",
+      "severity": "high",
+      "message": "Organization schema is present.",
+      "fix": "Add Organization JSON-LD with name, url, description, areaServed and sameAs."
+    },
+    {
+      "id": "entity.serviceSchema",
+      "class": "entity",
+      "severity": "high",
+      "message": "A Service, Product or business schema is present.",
+      "fix": "Add Service or Product JSON-LD that matches the visible offer."
+    },
+    {
+      "id": "entity.structuredData",
+      "class": "entity",
+      "severity": "medium",
+      "message": "FAQPage and BreadcrumbList schema are present.",
+      "fix": "Add FAQPage and BreadcrumbList after the visible content exists."
+    },
+    {
+      "id": "entity.sameAs",
+      "class": "entity",
+      "severity": "medium",
+      "message": "sameAs profile links are present.",
+      "fix": "Add verified sameAs links to profiles and directories."
+    },
+    {
+      "id": "entity.consistency",
+      "class": "entity",
+      "severity": "high",
+      "message": "Brand name and service description are consistent across the pack.",
+      "fix": "Use one brand name, one service description and one service area everywhere."
+    },
+    {
+      "id": "entity.author",
+      "class": "entity",
+      "severity": "medium",
+      "message": "A named author or reviewer is present.",
+      "fix": "Add a visible byline and credentials, and keep the schema author consistent."
+    },
+    {
+      "id": "content.answerFirst",
+      "class": "content",
+      "severity": "high",
+      "message": "Most priority pages have a 40+ word answer-first summary.",
+      "fix": "Add a 40–60 word answer under the H1 on every priority page."
+    },
+    {
+      "id": "content.questionHeadings",
+      "class": "content",
+      "severity": "medium",
+      "message": "At least half the pages use two question-form headings.",
+      "fix": "Rewrite two H2s per priority page as buyer questions."
+    },
+    {
+      "id": "content.depth",
+      "class": "content",
+      "severity": "medium",
+      "message": "Priority pages have at least 400 words.",
+      "fix": "Expand thin pages to cover the decision, cost, risks and next step."
+    },
+    {
+      "id": "content.evidence",
+      "class": "content",
+      "severity": "high",
+      "message": "Pages carry dated evidence and every brief names its evidence.",
+      "fix": "Add one dated, verifiable fact per page and keep the evidence list in every brief."
+    },
+    {
+      "id": "content.maintenance",
+      "class": "content",
+      "severity": "medium",
+      "message": "Freshness, internal links and image alt coverage are present.",
+      "fix": "Show an updated date, add three contextual internal links and write useful alt text."
+    },
+    {
+      "id": "citation.sourceMap",
+      "class": "citation",
+      "severity": "high",
+      "message": "The citation plan covers at least eight source types with actions.",
+      "fix": "Build a source map with a concrete action per source type."
+    },
+    {
+      "id": "citation.thirdParty",
+      "class": "citation",
+      "severity": "medium",
+      "message": "Review and community sources are included.",
+      "fix": "Add the review platforms and communities buyers actually use."
+    },
+    {
+      "id": "citation.pr",
+      "class": "citation",
+      "severity": "medium",
+      "message": "Earned media and expert sources are included.",
+      "fix": "Add publications, podcasts or associations where an expert contribution is credible."
+    },
+    {
+      "id": "citation.ethics",
+      "class": "citation",
+      "severity": "critical",
+      "message": "The citation plan rejects fake reviews, paid placement and spam.",
+      "fix": "Remove manipulative tactics and add disclosure rules."
+    },
+    {
+      "id": "prompt.funnel",
+      "class": "prompt",
+      "severity": "high",
+      "message": "The prompt panel covers at least four funnel stages.",
+      "fix": "Add awareness, comparison, decision and objection prompts."
+    },
+    {
+      "id": "prompt.mix",
+      "class": "prompt",
+      "severity": "high",
+      "message": "The panel mixes branded, non-branded and competitor prompts.",
+      "fix": "Add branded, non-branded and at least one competitor prompt."
+    },
+    {
+      "id": "prompt.coverage",
+      "class": "prompt",
+      "severity": "high",
+      "message": "Every prompt is assigned to a platform and at least four platforms are covered.",
+      "fix": "Assign each prompt to a platform and cover the four engines that matter."
+    },
+    {
+      "id": "prompt.testPlan",
+      "class": "prompt",
+      "severity": "high",
+      "message": "The panel has 30+ prompts, each with runs and a success signal.",
+      "fix": "Add 30 prompts, three runs each, and define what success means."
+    },
+    {
+      "id": "measurement.gsc",
+      "class": "measurement",
+      "severity": "medium",
+      "message": "Search Console generative AI reporting is in the plan.",
+      "fix": "Add the GSC generative AI performance report to the measurement plan."
+    },
+    {
+      "id": "measurement.analytics",
+      "class": "measurement",
+      "severity": "medium",
+      "message": "Bing citation share and GA4 AI referrals are in the plan.",
+      "fix": "Add Bing Webmaster Tools and a GA4 AI referral segment."
+    },
+    {
+      "id": "measurement.cadence",
+      "class": "measurement",
+      "severity": "high",
+      "message": "Baseline, re-measure date and cadence are defined.",
+      "fix": "Set a baseline date, a 30-day re-measure and a reporting cadence."
+    },
+    {
+      "id": "measurement.honesty",
+      "class": "measurement",
+      "severity": "high",
+      "message": "The measurement plan states variance and attribution limits.",
+      "fix": "Add the variance, undercount and modelled-number limits."
+    },
+    {
+      "id": "delivery.report",
+      "class": "delivery",
+      "severity": "critical",
+      "message": "A white-label report with limits is present.",
+      "fix": "Generate the client report with a prepared-for block and a limits section."
+    },
+    {
+      "id": "delivery.roadmap",
+      "class": "delivery",
+      "severity": "high",
+      "message": "The roadmap has 20+ owned actions with verification.",
+      "fix": "Add a prioritized roadmap with owner, effort and verification."
+    },
+    {
+      "id": "delivery.schemaInstall",
+      "class": "delivery",
+      "severity": "medium",
+      "message": "Schema install instructions are present.",
+      "fix": "Add placement and validation instructions for every schema block."
+    },
+    {
+      "id": "delivery.limits",
+      "class": "delivery",
+      "severity": "critical",
+      "message": "The delivery states the limits and the no-guarantee rule.",
+      "fix": "Add the audit limits and a no-guarantee statement."
+    }
+  ],
+  "checkedAt": "2026-10-31T16:19:41.581Z"
+}

@@ -1,0 +1,1725 @@
+{
+  "version": "1.1.0",
+  "meta": {
+    "brand": "Pulse Dental Studio",
+    "domain": "pulsedental.example",
+    "market": "US",
+    "category": "cosmetic dentistry",
+    "buyer": "adults 30-55 in Austin comparing veneers and implants",
+    "city": "Austin, TX",
+    "vertical": "local_service",
+    "competitors": [
+      "Lone Star Dental",
+      "Riverbend Smiles"
+    ],
+    "platforms": [
+      "chatgpt",
+      "perplexity",
+      "google_ai",
+      "gemini",
+      "copilot",
+      "claude"
+    ],
+    "seed": "bc8afcb45577",
+    "reportDate": "2026-10-29"
+  },
+  "snapshot": {
+    "site": {
+      "url": "https://pulsedental.example",
+      "https": true,
+      "source": "local",
+      "robotsTxt": true,
+      "robotsSitemaps": [
+        "https://pulsedental.example/sitemap.xml"
+      ],
+      "sitemapPresent": true,
+      "sitemapUrls": [
+        "https://pulsedental.example/",
+        "https://pulsedental.example/services/veneers",
+        "https://pulsedental.example/about"
+      ],
+      "llmsTxt": false,
+      "aiBots": {
+        "GPTBot": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "OAI-SearchBot": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "ChatGPT-User": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "ClaudeBot": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "Claude-SearchBot": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "PerplexityBot": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "Google-Extended": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "Applebot-Extended": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        },
+        "CCBot": {
+          "allowed": true,
+          "reason": "Allowed by \"Allow: /\"."
+        }
+      },
+      "blockedBots": []
+    },
+    "pages": [
+      {
+        "path": "/",
+        "url": "/",
+        "title": "Cosmetic Dentistry in Austin, TX | Pulse Dental Studio",
+        "metaDescription": "Pulse Dental Studio provides cosmetic dentistry in Austin, TX: veneers, implants and same-day crowns with a written treatment plan before any work begins.",
+        "canonical": "https://pulsedental.example/",
+        "h1": [
+          "Cosmetic Dentistry in Austin, TX"
+        ],
+        "h2": [
+          "What does cosmetic dentistry include?",
+          "How much does cosmetic dentistry cost in Austin?",
+          "Who is a good candidate?",
+          "What should you ask before booking?",
+          "Frequently asked questions"
+        ],
+        "h3": [
+          "Do you offer sedation for cosmetic work?",
+          "How long do veneers last?",
+          "Where can I see the full service list?"
+        ],
+        "headings": [
+          "What does cosmetic dentistry include?",
+          "How much does cosmetic dentistry cost in Austin?",
+          "Who is a good candidate?",
+          "What should you ask before booking?",
+          "Frequently asked questions",
+          "Do you offer sedation for cosmetic work?",
+          "How long do veneers last?",
+          "Where can I see the full service list?"
+        ],
+        "wordCount": 705,
+        "schemaTypes": [
+          "Organization",
+          "Dentist",
+          "Service",
+          "FAQPage",
+          "Question",
+          "BreadcrumbList",
+          "ListItem"
+        ],
+        "hasFaqSchema": true,
+        "hasComparisonTable": true,
+        "questionHeadings": 7,
+        "answerFirst": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin, TX. This page explains veneers, implants and same-day crowns, what changes the outcome, how pricing is usually determined, and how to decide whether our team is the right fit. It also names the limits so you can compare providers fairly instead of relying on a single rating.",
+        "answerFirstWords": 58,
+        "internalLinks": [
+          "/",
+          "/services/veneers",
+          "/about",
+          "/contact",
+          "/services/veneers",
+          "/about",
+          "/contact"
+        ],
+        "externalLinks": [],
+        "imageCount": 1,
+        "imagesWithAlt": 1,
+        "hasAuthor": true,
+        "hasDate": true,
+        "visibleDate": true,
+        "hasStats": true,
+        "hasPrice": true,
+        "hasContact": true,
+        "jsonLdValid": true,
+        "jsonLdBlocks": 1,
+        "jsOnly": false,
+        "sameAs": [
+          "https://www.google.com/maps/place/pulse-dental-studio",
+          "https://www.healthgrades.com/group-directory/tx-texas/austin/pulse-dental-studio"
+        ]
+      },
+      {
+        "path": "/about",
+        "url": "/about",
+        "title": "About Pulse Dental Studio | Austin, TX",
+        "metaDescription": "Meet the team behind Pulse Dental Studio in Austin, TX. Our approach, credentials, service area and the standards we use for cosmetic dentistry consultations.",
+        "canonical": "https://pulsedental.example/about",
+        "h1": [
+          "About Pulse Dental Studio"
+        ],
+        "h2": [
+          "Who does the work?",
+          "How do we plan treatment?",
+          "Where do we practise?",
+          "What standards do we hold?",
+          "Frequently asked questions"
+        ],
+        "h3": [
+          "Is Dr. Maya Patel accepting new patients?",
+          "Do you treat patients outside Austin?",
+          "How can I verify the practice details?"
+        ],
+        "headings": [
+          "Who does the work?",
+          "How do we plan treatment?",
+          "Where do we practise?",
+          "What standards do we hold?",
+          "Frequently asked questions",
+          "Is Dr. Maya Patel accepting new patients?",
+          "Do you treat patients outside Austin?",
+          "How can I verify the practice details?"
+        ],
+        "wordCount": 605,
+        "schemaTypes": [
+          "AboutPage",
+          "Organization",
+          "BreadcrumbList",
+          "ListItem",
+          "Article",
+          "Person"
+        ],
+        "hasFaqSchema": false,
+        "hasComparisonTable": false,
+        "questionHeadings": 7,
+        "answerFirst": "Pulse Dental Studio is a cosmetic dentistry practice in Austin, TX, serving adults 30-55 who want veneers, implants or same-day crowns. We publish our approach, our credentials and our limits because a website should help you judge a provider, not just impress you. This page explains who does the work, how we plan treatment, where we practise, and what we will not claim.",
+        "answerFirstWords": 63,
+        "internalLinks": [
+          "/",
+          "/services/veneers",
+          "/about",
+          "/contact",
+          "/",
+          "/services/veneers",
+          "/contact"
+        ],
+        "externalLinks": [],
+        "imageCount": 1,
+        "imagesWithAlt": 1,
+        "hasAuthor": true,
+        "hasDate": true,
+        "visibleDate": true,
+        "hasStats": true,
+        "hasPrice": false,
+        "hasContact": true,
+        "jsonLdValid": true,
+        "jsonLdBlocks": 1,
+        "jsOnly": false,
+        "sameAs": []
+      },
+      {
+        "path": "/services/veneers",
+        "url": "/services/veneers",
+        "title": "Veneers in Austin, TX: Process, Cost and Limits",
+        "metaDescription": "How porcelain veneers work at Pulse Dental Studio in Austin, TX: candidacy, the two-visit process, cost drivers, aftercare and the honest limits of the result.",
+        "canonical": "https://pulsedental.example/services/veneers",
+        "h1": [
+          "Veneers in Austin, TX"
+        ],
+        "h2": [
+          "What do veneers change, and what do they not?",
+          "How does the two-visit process work?",
+          "What changes the cost?",
+          "Who is not a good candidate?",
+          "How do you care for veneers?"
+        ],
+        "h3": [],
+        "headings": [
+          "What do veneers change, and what do they not?",
+          "How does the two-visit process work?",
+          "What changes the cost?",
+          "Who is not a good candidate?",
+          "How do you care for veneers?"
+        ],
+        "wordCount": 646,
+        "schemaTypes": [
+          "Service",
+          "Organization",
+          "FAQPage",
+          "Question",
+          "BreadcrumbList",
+          "ListItem",
+          "Article",
+          "Person"
+        ],
+        "hasFaqSchema": true,
+        "hasComparisonTable": true,
+        "questionHeadings": 5,
+        "answerFirst": "Pulse Dental Studio provides porcelain veneers for adults in Austin, TX. This page explains who is a good candidate, what happens at each visit, which factors change the cost, how to care for veneers, and the limits of what a veneer can fix. The goal is to help you decide with a clear treatment plan rather than a promise.",
+        "answerFirstWords": 59,
+        "internalLinks": [
+          "/",
+          "/services/veneers",
+          "/about",
+          "/contact"
+        ],
+        "externalLinks": [],
+        "imageCount": 1,
+        "imagesWithAlt": 1,
+        "hasAuthor": true,
+        "hasDate": true,
+        "visibleDate": true,
+        "hasStats": true,
+        "hasPrice": false,
+        "hasContact": true,
+        "jsonLdValid": true,
+        "jsonLdBlocks": 1,
+        "jsOnly": false,
+        "sameAs": []
+      }
+    ]
+  },
+  "readiness": 100,
+  "promptPanel": [
+    {
+      "id": "P01",
+      "stage": "awareness",
+      "prompt": "best cosmetic dentistry in Austin, TX",
+      "intent": "commercial investigation",
+      "platform": "chatgpt",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand named in the answer or cited as a source",
+      "runs": 3
+    },
+    {
+      "id": "P02",
+      "stage": "awareness",
+      "prompt": "how to choose cosmetic dentistry in Austin, TX",
+      "intent": "informational",
+      "platform": "perplexity",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand named in the answer or cited as a source",
+      "runs": 3
+    },
+    {
+      "id": "P03",
+      "stage": "awareness",
+      "prompt": "cosmetic dentistry near me",
+      "intent": "local commercial",
+      "platform": "google_ai",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand named in the answer or cited as a source",
+      "runs": 3
+    },
+    {
+      "id": "P04",
+      "stage": "awareness",
+      "prompt": "what should adults 30-55 in Austin comparing veneers and implants know before cosmetic dentistry",
+      "intent": "informational",
+      "platform": "gemini",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand named in the answer or cited as a source",
+      "runs": 3
+    },
+    {
+      "id": "P05",
+      "stage": "awareness",
+      "prompt": "is cosmetic dentistry worth it for adults 30-55 in Austin comparing veneers and implants",
+      "intent": "commercial investigation",
+      "platform": "copilot",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand named in the answer or cited as a source",
+      "runs": 3
+    },
+    {
+      "id": "P06",
+      "stage": "awareness",
+      "prompt": "cosmetic dentistry options in Austin, TX",
+      "intent": "commercial investigation",
+      "platform": "claude",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand named in the answer or cited as a source",
+      "runs": 3
+    },
+    {
+      "id": "P07",
+      "stage": "comparison",
+      "prompt": "Pulse Dental Studio vs Lone Star Dental",
+      "intent": "comparison",
+      "platform": "chatgpt",
+      "branded": true,
+      "competitor": true,
+      "successSignal": "Brand included in the shortlist with a correct differentiator",
+      "runs": 3
+    },
+    {
+      "id": "P08",
+      "stage": "comparison",
+      "prompt": "best cosmetic dentistry providers in Austin, TX",
+      "intent": "comparison",
+      "platform": "perplexity",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand included in the shortlist with a correct differentiator",
+      "runs": 3
+    },
+    {
+      "id": "P09",
+      "stage": "comparison",
+      "prompt": "Pulse Dental Studio alternatives",
+      "intent": "comparison",
+      "platform": "google_ai",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand included in the shortlist with a correct differentiator",
+      "runs": 3
+    },
+    {
+      "id": "P10",
+      "stage": "comparison",
+      "prompt": "Lone Star Dental vs Riverbend Smiles for adults 30-55 in Austin comparing veneers and implants",
+      "intent": "comparison",
+      "platform": "gemini",
+      "branded": false,
+      "competitor": true,
+      "successSignal": "Brand included in the shortlist with a correct differentiator",
+      "runs": 3
+    },
+    {
+      "id": "P11",
+      "stage": "comparison",
+      "prompt": "top rated cosmetic dentistry in Austin, TX",
+      "intent": "comparison",
+      "platform": "copilot",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand included in the shortlist with a correct differentiator",
+      "runs": 3
+    },
+    {
+      "id": "P12",
+      "stage": "comparison",
+      "prompt": "which cosmetic dentistry is best for adults 30-55 in Austin comparing veneers and implants",
+      "intent": "comparison",
+      "platform": "claude",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand included in the shortlist with a correct differentiator",
+      "runs": 3
+    },
+    {
+      "id": "P13",
+      "stage": "decision",
+      "prompt": "Pulse Dental Studio reviews",
+      "intent": "decision",
+      "platform": "chatgpt",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand recommended with a correct next step",
+      "runs": 3
+    },
+    {
+      "id": "P14",
+      "stage": "decision",
+      "prompt": "Pulse Dental Studio pricing",
+      "intent": "decision",
+      "platform": "perplexity",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand recommended with a correct next step",
+      "runs": 3
+    },
+    {
+      "id": "P15",
+      "stage": "decision",
+      "prompt": "is Pulse Dental Studio legit",
+      "intent": "decision",
+      "platform": "google_ai",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand recommended with a correct next step",
+      "runs": 3
+    },
+    {
+      "id": "P16",
+      "stage": "decision",
+      "prompt": "Pulse Dental Studio consultation",
+      "intent": "decision",
+      "platform": "gemini",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand recommended with a correct next step",
+      "runs": 3
+    },
+    {
+      "id": "P17",
+      "stage": "decision",
+      "prompt": "Pulse Dental Studio near Austin, TX",
+      "intent": "local decision",
+      "platform": "copilot",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand recommended with a correct next step",
+      "runs": 3
+    },
+    {
+      "id": "P18",
+      "stage": "decision",
+      "prompt": "book cosmetic dentistry in Austin, TX",
+      "intent": "transactional",
+      "platform": "claude",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand recommended with a correct next step",
+      "runs": 3
+    },
+    {
+      "id": "P19",
+      "stage": "objection",
+      "prompt": "does cosmetic dentistry hurt",
+      "intent": "objection",
+      "platform": "chatgpt",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand answer corrects the objection without inventing proof",
+      "runs": 3
+    },
+    {
+      "id": "P20",
+      "stage": "objection",
+      "prompt": "how long does cosmetic dentistry take",
+      "intent": "objection",
+      "platform": "perplexity",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand answer corrects the objection without inventing proof",
+      "runs": 3
+    },
+    {
+      "id": "P21",
+      "stage": "objection",
+      "prompt": "cosmetic dentistry cost without insurance in Austin, TX",
+      "intent": "objection",
+      "platform": "google_ai",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand answer corrects the objection without inventing proof",
+      "runs": 3
+    },
+    {
+      "id": "P22",
+      "stage": "objection",
+      "prompt": "is Pulse Dental Studio worth the price",
+      "intent": "objection",
+      "platform": "gemini",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand answer corrects the objection without inventing proof",
+      "runs": 3
+    },
+    {
+      "id": "P23",
+      "stage": "objection",
+      "prompt": "risks of cosmetic dentistry",
+      "intent": "objection",
+      "platform": "copilot",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand answer corrects the objection without inventing proof",
+      "runs": 3
+    },
+    {
+      "id": "P24",
+      "stage": "objection",
+      "prompt": "cosmetic dentistry before and after",
+      "intent": "objection",
+      "platform": "claude",
+      "branded": false,
+      "competitor": false,
+      "successSignal": "Brand answer corrects the objection without inventing proof",
+      "runs": 3
+    },
+    {
+      "id": "P25",
+      "stage": "branded",
+      "prompt": "Pulse Dental Studio",
+      "intent": "navigational",
+      "platform": "chatgpt",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand facts are accurate and the official page is cited",
+      "runs": 3
+    },
+    {
+      "id": "P26",
+      "stage": "branded",
+      "prompt": "Pulse Dental Studio Austin, TX",
+      "intent": "navigational",
+      "platform": "perplexity",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand facts are accurate and the official page is cited",
+      "runs": 3
+    },
+    {
+      "id": "P27",
+      "stage": "branded",
+      "prompt": "Pulse Dental Studio services",
+      "intent": "navigational",
+      "platform": "google_ai",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand facts are accurate and the official page is cited",
+      "runs": 3
+    },
+    {
+      "id": "P28",
+      "stage": "branded",
+      "prompt": "Pulse Dental Studio reviews Austin, TX",
+      "intent": "reputation",
+      "platform": "gemini",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand facts are accurate and the official page is cited",
+      "runs": 3
+    },
+    {
+      "id": "P29",
+      "stage": "branded",
+      "prompt": "Pulse Dental Studio vs Lone Star Dental",
+      "intent": "comparison",
+      "platform": "copilot",
+      "branded": true,
+      "competitor": true,
+      "successSignal": "Brand facts are accurate and the official page is cited",
+      "runs": 3
+    },
+    {
+      "id": "P30",
+      "stage": "branded",
+      "prompt": "Pulse Dental Studio appointment",
+      "intent": "transactional",
+      "platform": "claude",
+      "branded": true,
+      "competitor": false,
+      "successSignal": "Brand facts are accurate and the official page is cited",
+      "runs": 3
+    }
+  ],
+  "contentBriefs": [
+    {
+      "id": "B1",
+      "targetPrompt": "best cosmetic dentistry in Austin, TX",
+      "stage": "awareness",
+      "intent": "commercial investigation",
+      "pageType": "service page",
+      "urlSuggestion": "/services/cosmetic-dentistry",
+      "title": "Cosmetic dentistry in Austin, TX",
+      "h1": "Cosmetic dentistry in Austin, TX",
+      "angle": "category + location",
+      "answerBlock": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains category + location, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "sections": [
+        {
+          "h2": "What cosmetic dentistry includes",
+          "points": [
+            "Define the service in plain language",
+            "Name who it is for and who it is not for",
+            "List the steps and the decision points"
+          ]
+        },
+        {
+          "h2": "How to judge a provider",
+          "points": [
+            "Explain same-day crowns and why it matters",
+            "List the credentials, training and safety checks to verify",
+            "Explain what a fair quote should include"
+          ]
+        },
+        {
+          "h2": "Cosmetic dentistry cost and what changes it",
+          "points": [
+            "Explain the cost drivers without inventing a price",
+            "Name what is included and what is not",
+            "Offer a next step to get a specific quote"
+          ]
+        },
+        {
+          "h2": "Risks, comfort and recovery",
+          "points": [
+            "State the common risks and side effects",
+            "Explain who should not proceed",
+            "Explain the aftercare and escalation path"
+          ]
+        },
+        {
+          "h2": "Evidence and limits",
+          "points": [
+            "Cite a 4.9 average from 380 verified reviews collected between 2024 and 2026 with a date",
+            "Separate first-party evidence from third-party claims",
+            "State what the page cannot prove"
+          ]
+        },
+        {
+          "h2": "Next step",
+          "points": [
+            "Offer consultation and written treatment plan",
+            "Explain what happens after the form or call",
+            "Give a response-time expectation"
+          ]
+        }
+      ],
+      "evidenceRequired": [
+        "a 4.9 average from 380 verified reviews collected between 2024 and 2026",
+        "the current service list and service area",
+        "the real credential or license number",
+        "the actual aftercare policy"
+      ],
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about",
+        "/pricing",
+        "/faq"
+      ],
+      "cta": "consultation and written treatment plan",
+      "wordTarget": 1400,
+      "extractionRules": [
+        "Answer in the first 45 words",
+        "Use question-form headings",
+        "Use a table for options, costs or comparison",
+        "Put one verifiable fact in every section",
+        "Keep the answer consistent with the JSON-LD"
+      ],
+      "doNot": [
+        "Invent a review or rating",
+        "Promise a guaranteed outcome",
+        "Use a competitor trademark in a misleading way",
+        "Hide the price drivers"
+      ]
+    },
+    {
+      "id": "B2",
+      "targetPrompt": "Pulse Dental Studio vs Lone Star Dental",
+      "stage": "comparison",
+      "intent": "comparison",
+      "pageType": "comparison page",
+      "urlSuggestion": "/compare/pulse-dental-studio-vs-lone-star-dental",
+      "title": "Pulse Dental Studio vs Lone Star Dental",
+      "h1": "Pulse Dental Studio vs Lone Star Dental",
+      "angle": "honest comparison",
+      "answerBlock": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains honest comparison, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "sections": [
+        {
+          "h2": "What cosmetic dentistry includes",
+          "points": [
+            "Define the service in plain language",
+            "Name who it is for and who it is not for",
+            "List the steps and the decision points"
+          ]
+        },
+        {
+          "h2": "How to judge a provider",
+          "points": [
+            "Explain same-day crowns and why it matters",
+            "List the credentials, training and safety checks to verify",
+            "Explain what a fair quote should include"
+          ]
+        },
+        {
+          "h2": "Cosmetic dentistry cost and what changes it",
+          "points": [
+            "Explain the cost drivers without inventing a price",
+            "Name what is included and what is not",
+            "Offer a next step to get a specific quote"
+          ]
+        },
+        {
+          "h2": "Risks, comfort and recovery",
+          "points": [
+            "State the common risks and side effects",
+            "Explain who should not proceed",
+            "Explain the aftercare and escalation path"
+          ]
+        },
+        {
+          "h2": "Evidence and limits",
+          "points": [
+            "Cite a 4.9 average from 380 verified reviews collected between 2024 and 2026 with a date",
+            "Separate first-party evidence from third-party claims",
+            "State what the page cannot prove"
+          ]
+        },
+        {
+          "h2": "Next step",
+          "points": [
+            "Offer consultation and written treatment plan",
+            "Explain what happens after the form or call",
+            "Give a response-time expectation"
+          ]
+        }
+      ],
+      "evidenceRequired": [
+        "a 4.9 average from 380 verified reviews collected between 2024 and 2026",
+        "the current service list and service area",
+        "the real credential or license number",
+        "the actual aftercare policy"
+      ],
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about",
+        "/pricing",
+        "/faq"
+      ],
+      "cta": "consultation and written treatment plan",
+      "wordTarget": 1400,
+      "extractionRules": [
+        "Answer in the first 45 words",
+        "Use question-form headings",
+        "Use a table for options, costs or comparison",
+        "Put one verifiable fact in every section",
+        "Keep the answer consistent with the JSON-LD"
+      ],
+      "doNot": [
+        "Invent a review or rating",
+        "Promise a guaranteed outcome",
+        "Use a competitor trademark in a misleading way",
+        "Hide the price drivers"
+      ]
+    },
+    {
+      "id": "B3",
+      "targetPrompt": "Pulse Dental Studio pricing",
+      "stage": "decision",
+      "intent": "decision",
+      "pageType": "pricing page",
+      "urlSuggestion": "/pricing",
+      "title": "cosmetic dentistry pricing: what changes the cost",
+      "h1": "cosmetic dentistry pricing: what changes the cost",
+      "angle": "price transparency",
+      "answerBlock": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains price transparency, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "sections": [
+        {
+          "h2": "What cosmetic dentistry includes",
+          "points": [
+            "Define the service in plain language",
+            "Name who it is for and who it is not for",
+            "List the steps and the decision points"
+          ]
+        },
+        {
+          "h2": "How to judge a provider",
+          "points": [
+            "Explain same-day crowns and why it matters",
+            "List the credentials, training and safety checks to verify",
+            "Explain what a fair quote should include"
+          ]
+        },
+        {
+          "h2": "Cosmetic dentistry cost and what changes it",
+          "points": [
+            "Explain the cost drivers without inventing a price",
+            "Name what is included and what is not",
+            "Offer a next step to get a specific quote"
+          ]
+        },
+        {
+          "h2": "Risks, comfort and recovery",
+          "points": [
+            "State the common risks and side effects",
+            "Explain who should not proceed",
+            "Explain the aftercare and escalation path"
+          ]
+        },
+        {
+          "h2": "Evidence and limits",
+          "points": [
+            "Cite a 4.9 average from 380 verified reviews collected between 2024 and 2026 with a date",
+            "Separate first-party evidence from third-party claims",
+            "State what the page cannot prove"
+          ]
+        },
+        {
+          "h2": "Next step",
+          "points": [
+            "Offer consultation and written treatment plan",
+            "Explain what happens after the form or call",
+            "Give a response-time expectation"
+          ]
+        }
+      ],
+      "evidenceRequired": [
+        "a 4.9 average from 380 verified reviews collected between 2024 and 2026",
+        "the current service list and service area",
+        "the real credential or license number",
+        "the actual aftercare policy"
+      ],
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about",
+        "/pricing",
+        "/faq"
+      ],
+      "cta": "consultation and written treatment plan",
+      "wordTarget": 1400,
+      "extractionRules": [
+        "Answer in the first 45 words",
+        "Use question-form headings",
+        "Use a table for options, costs or comparison",
+        "Put one verifiable fact in every section",
+        "Keep the answer consistent with the JSON-LD"
+      ],
+      "doNot": [
+        "Invent a review or rating",
+        "Promise a guaranteed outcome",
+        "Use a competitor trademark in a misleading way",
+        "Hide the price drivers"
+      ]
+    },
+    {
+      "id": "B4",
+      "targetPrompt": "does cosmetic dentistry hurt",
+      "stage": "objection",
+      "intent": "objection",
+      "pageType": "FAQ page",
+      "urlSuggestion": "/faq",
+      "title": "Cosmetic dentistry: risks, comfort and recovery",
+      "h1": "Cosmetic dentistry: risks, comfort and recovery",
+      "angle": "objection handling",
+      "answerBlock": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains objection handling, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "sections": [
+        {
+          "h2": "What cosmetic dentistry includes",
+          "points": [
+            "Define the service in plain language",
+            "Name who it is for and who it is not for",
+            "List the steps and the decision points"
+          ]
+        },
+        {
+          "h2": "How to judge a provider",
+          "points": [
+            "Explain same-day crowns and why it matters",
+            "List the credentials, training and safety checks to verify",
+            "Explain what a fair quote should include"
+          ]
+        },
+        {
+          "h2": "Cosmetic dentistry cost and what changes it",
+          "points": [
+            "Explain the cost drivers without inventing a price",
+            "Name what is included and what is not",
+            "Offer a next step to get a specific quote"
+          ]
+        },
+        {
+          "h2": "Risks, comfort and recovery",
+          "points": [
+            "State the common risks and side effects",
+            "Explain who should not proceed",
+            "Explain the aftercare and escalation path"
+          ]
+        },
+        {
+          "h2": "Evidence and limits",
+          "points": [
+            "Cite a 4.9 average from 380 verified reviews collected between 2024 and 2026 with a date",
+            "Separate first-party evidence from third-party claims",
+            "State what the page cannot prove"
+          ]
+        },
+        {
+          "h2": "Next step",
+          "points": [
+            "Offer consultation and written treatment plan",
+            "Explain what happens after the form or call",
+            "Give a response-time expectation"
+          ]
+        }
+      ],
+      "evidenceRequired": [
+        "a 4.9 average from 380 verified reviews collected between 2024 and 2026",
+        "the current service list and service area",
+        "the real credential or license number",
+        "the actual aftercare policy"
+      ],
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about",
+        "/pricing",
+        "/faq"
+      ],
+      "cta": "consultation and written treatment plan",
+      "wordTarget": 1400,
+      "extractionRules": [
+        "Answer in the first 45 words",
+        "Use question-form headings",
+        "Use a table for options, costs or comparison",
+        "Put one verifiable fact in every section",
+        "Keep the answer consistent with the JSON-LD"
+      ],
+      "doNot": [
+        "Invent a review or rating",
+        "Promise a guaranteed outcome",
+        "Use a competitor trademark in a misleading way",
+        "Hide the price drivers"
+      ]
+    },
+    {
+      "id": "B5",
+      "targetPrompt": "cosmetic dentistry before and after",
+      "stage": "objection",
+      "intent": "objection",
+      "pageType": "proof page",
+      "urlSuggestion": "/results",
+      "title": "Cosmetic dentistry before and after: what the evidence shows",
+      "h1": "Cosmetic dentistry before and after: what the evidence shows",
+      "angle": "proof and expectations",
+      "answerBlock": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains proof and expectations, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "sections": [
+        {
+          "h2": "What cosmetic dentistry includes",
+          "points": [
+            "Define the service in plain language",
+            "Name who it is for and who it is not for",
+            "List the steps and the decision points"
+          ]
+        },
+        {
+          "h2": "How to judge a provider",
+          "points": [
+            "Explain same-day crowns and why it matters",
+            "List the credentials, training and safety checks to verify",
+            "Explain what a fair quote should include"
+          ]
+        },
+        {
+          "h2": "Cosmetic dentistry cost and what changes it",
+          "points": [
+            "Explain the cost drivers without inventing a price",
+            "Name what is included and what is not",
+            "Offer a next step to get a specific quote"
+          ]
+        },
+        {
+          "h2": "Risks, comfort and recovery",
+          "points": [
+            "State the common risks and side effects",
+            "Explain who should not proceed",
+            "Explain the aftercare and escalation path"
+          ]
+        },
+        {
+          "h2": "Evidence and limits",
+          "points": [
+            "Cite a 4.9 average from 380 verified reviews collected between 2024 and 2026 with a date",
+            "Separate first-party evidence from third-party claims",
+            "State what the page cannot prove"
+          ]
+        },
+        {
+          "h2": "Next step",
+          "points": [
+            "Offer consultation and written treatment plan",
+            "Explain what happens after the form or call",
+            "Give a response-time expectation"
+          ]
+        }
+      ],
+      "evidenceRequired": [
+        "a 4.9 average from 380 verified reviews collected between 2024 and 2026",
+        "the current service list and service area",
+        "the real credential or license number",
+        "the actual aftercare policy"
+      ],
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about",
+        "/pricing",
+        "/faq"
+      ],
+      "cta": "consultation and written treatment plan",
+      "wordTarget": 1400,
+      "extractionRules": [
+        "Answer in the first 45 words",
+        "Use question-form headings",
+        "Use a table for options, costs or comparison",
+        "Put one verifiable fact in every section",
+        "Keep the answer consistent with the JSON-LD"
+      ],
+      "doNot": [
+        "Invent a review or rating",
+        "Promise a guaranteed outcome",
+        "Use a competitor trademark in a misleading way",
+        "Hide the price drivers"
+      ]
+    },
+    {
+      "id": "B6",
+      "targetPrompt": "Pulse Dental Studio reviews Austin, TX",
+      "stage": "branded",
+      "intent": "reputation",
+      "pageType": "about and author page",
+      "urlSuggestion": "/about",
+      "title": "About Pulse Dental Studio: who does the work",
+      "h1": "About Pulse Dental Studio: who does the work",
+      "angle": "entity and trust",
+      "answerBlock": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains entity and trust, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "sections": [
+        {
+          "h2": "What cosmetic dentistry includes",
+          "points": [
+            "Define the service in plain language",
+            "Name who it is for and who it is not for",
+            "List the steps and the decision points"
+          ]
+        },
+        {
+          "h2": "How to judge a provider",
+          "points": [
+            "Explain same-day crowns and why it matters",
+            "List the credentials, training and safety checks to verify",
+            "Explain what a fair quote should include"
+          ]
+        },
+        {
+          "h2": "Cosmetic dentistry cost and what changes it",
+          "points": [
+            "Explain the cost drivers without inventing a price",
+            "Name what is included and what is not",
+            "Offer a next step to get a specific quote"
+          ]
+        },
+        {
+          "h2": "Risks, comfort and recovery",
+          "points": [
+            "State the common risks and side effects",
+            "Explain who should not proceed",
+            "Explain the aftercare and escalation path"
+          ]
+        },
+        {
+          "h2": "Evidence and limits",
+          "points": [
+            "Cite a 4.9 average from 380 verified reviews collected between 2024 and 2026 with a date",
+            "Separate first-party evidence from third-party claims",
+            "State what the page cannot prove"
+          ]
+        },
+        {
+          "h2": "Next step",
+          "points": [
+            "Offer consultation and written treatment plan",
+            "Explain what happens after the form or call",
+            "Give a response-time expectation"
+          ]
+        }
+      ],
+      "evidenceRequired": [
+        "a 4.9 average from 380 verified reviews collected between 2024 and 2026",
+        "the current service list and service area",
+        "the real credential or license number",
+        "the actual aftercare policy"
+      ],
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about",
+        "/pricing",
+        "/faq"
+      ],
+      "cta": "consultation and written treatment plan",
+      "wordTarget": 1400,
+      "extractionRules": [
+        "Answer in the first 45 words",
+        "Use question-form headings",
+        "Use a table for options, costs or comparison",
+        "Put one verifiable fact in every section",
+        "Keep the answer consistent with the JSON-LD"
+      ],
+      "doNot": [
+        "Invent a review or rating",
+        "Promise a guaranteed outcome",
+        "Use a competitor trademark in a misleading way",
+        "Hide the price drivers"
+      ]
+    }
+  ],
+  "schema": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://pulsedental.example/#organization",
+      "name": "Pulse Dental Studio",
+      "url": "https://pulsedental.example",
+      "description": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX.",
+      "areaServed": [
+        "Austin",
+        "Round Rock",
+        "Cedar Park"
+      ],
+      "knowsAbout": [
+        "cosmetic dentistry",
+        "same-day crowns",
+        "sedation options",
+        "a written treatment plan before any work"
+      ],
+      "sameAs": []
+    },
+    "service": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "cosmetic dentistry — Pulse Dental Studio",
+      "serviceType": "cosmetic dentistry",
+      "provider": {
+        "@id": "https://pulsedental.example/#organization"
+      },
+      "areaServed": [
+        "Austin",
+        "Round Rock",
+        "Cedar Park"
+      ],
+      "description": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX.",
+      "url": "https://pulsedental.example/services/cosmetic-dentistry"
+    },
+    "faq": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Pulse Dental Studio offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin, TX, including veneers, implants and same-day crowns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Pulse Dental Studio work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pulse Dental Studio serves Austin, Round Rock and Cedar Park. Confirm the current service area and hours with the studio before booking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the official Pulse Dental Studio website or call the studio. The first visit includes an exam and a written treatment plan with cost drivers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Pulse Dental Studio different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pulse Dental Studio offers same-day crowns, sedation options and a written treatment plan before any work begins. Verify current availability with the studio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is pricing determined?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing depends on the number of teeth, the material, lab work and whether sedation is used. The studio provides a written quote after the exam."
+          }
+        }
+      ]
+    },
+    "breadcrumb": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pulsedental.example"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://pulsedental.example/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "cosmetic dentistry",
+          "item": "https://pulsedental.example/services/cosmetic-dentistry"
+        }
+      ]
+    },
+    "article": {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cosmetic dentistry in Austin, TX",
+      "description": "Pulse Dental Studio provides cosmetic dentistry for adults 30-55 in Austin comparing veneers and implants in Austin, TX. This page explains category + location, what to expect, what changes the outcome, and how to decide whether Pulse Dental Studio is the right fit. It cites a 4.9 average from 380 verified reviews collected between 2024 and 2026 and names the limits instead of promising a result.",
+      "about": "cosmetic dentistry",
+      "author": {
+        "@id": "https://pulsedental.example/#organization"
+      },
+      "publisher": {
+        "@id": "https://pulsedental.example/#organization"
+      },
+      "mainEntityOfPage": "https://pulsedental.example/services/cosmetic-dentistry"
+    }
+  },
+  "citations": [
+    {
+      "id": "C1",
+      "sourceType": "Google Business Profile",
+      "why": "Google Business Profile is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in Google Business Profile, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C2",
+      "sourceType": "review platforms in the category",
+      "why": "review platforms in the category is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in review platforms in the category, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C3",
+      "sourceType": "local news and city publications",
+      "why": "local news and city publications is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in local news and city publications, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C4",
+      "sourceType": "chamber of commerce and local directories",
+      "why": "chamber of commerce and local directories is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in chamber of commerce and local directories, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C5",
+      "sourceType": "health or trade directories",
+      "why": "health or trade directories is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in health or trade directories, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C6",
+      "sourceType": "community forums and local subreddits",
+      "why": "community forums and local subreddits is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in community forums and local subreddits, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C7",
+      "sourceType": "podcasts and local YouTube shows",
+      "why": "podcasts and local YouTube shows is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in podcasts and local YouTube shows, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C8",
+      "sourceType": "partner and referral pages",
+      "why": "partner and referral pages is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in partner and referral pages, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C9",
+      "sourceType": "comparison and best-of listicles",
+      "why": "comparison and best-of listicles is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in comparison and best-of listicles, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    },
+    {
+      "id": "C10",
+      "sourceType": "professional association pages",
+      "why": "professional association pages is a source type AI answers use to verify and recommend cosmetic dentistry.",
+      "action": "Find the 3 most relevant pages in professional association pages, check whether Pulse Dental Studio is mentioned or cited, and pitch a factual correction, inclusion or expert contribution where the rules allow.",
+      "kpi": "Brand mentioned or cited with a correct fact",
+      "caution": "No paid placement disguised as editorial, no fabricated reviews, and follow each community rule."
+    }
+  ],
+  "roadmap": [
+    {
+      "id": "A01",
+      "priority": "P0",
+      "owner": "marketing",
+      "effort": "2h",
+      "impact": "high",
+      "action": "Record the 30-prompt baseline before changing the site so improvement is measurable.",
+      "verification": "Baseline sheet has prompt, engine, date, mention, citation and position."
+    },
+    {
+      "id": "A02",
+      "priority": "P0",
+      "owner": "content",
+      "effort": "2h",
+      "impact": "high",
+      "action": "Confirm the service list, service area and primary offer with the client before publishing.",
+      "verification": "Client signs off on one canonical description of the offer."
+    },
+    {
+      "id": "A03",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "1d",
+      "impact": "high",
+      "action": "Publish the six answer-first content briefs with evidence and internal links.",
+      "verification": "Each brief is live, indexed and linked from the service page."
+    },
+    {
+      "id": "A04",
+      "priority": "P1",
+      "owner": "dev",
+      "effort": "2h",
+      "impact": "high",
+      "action": "Install the Organization, Service, FAQPage, BreadcrumbList and Article JSON-LD.",
+      "verification": "All blocks validate and match the visible content."
+    },
+    {
+      "id": "A05",
+      "priority": "P1",
+      "owner": "marketing",
+      "effort": "1d",
+      "impact": "high",
+      "action": "Build the 30-prompt panel and record a baseline across the chosen engines.",
+      "verification": "Baseline file has prompt, engine, date, mention, citation and position."
+    },
+    {
+      "id": "A06",
+      "priority": "P1",
+      "owner": "marketing",
+      "effort": "2h",
+      "impact": "high",
+      "action": "Set up the GA4 AI referral segment and the Search Console generative AI report.",
+      "verification": "AI referrals and AI impressions are visible in the reports."
+    },
+    {
+      "id": "A07",
+      "priority": "P1",
+      "owner": "marketing",
+      "effort": "1d",
+      "impact": "high",
+      "action": "Work the citation plan: three sources per month with a factual contribution.",
+      "verification": "Each placement is logged with URL, date and status."
+    },
+    {
+      "id": "A08",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "3h",
+      "impact": "medium",
+      "action": "Add a visible \"last reviewed\" date and a named owner to every priority page.",
+      "verification": "Date and owner are visible and match the schema."
+    },
+    {
+      "id": "A09",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add a pricing explainer that names the cost drivers and what the quote includes.",
+      "verification": "Page answers cost questions without inventing a fixed price."
+    },
+    {
+      "id": "A10",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add a proof section with consented, substantiated examples where the category allows it.",
+      "verification": "Consent and substantiation are on file."
+    },
+    {
+      "id": "A11",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "1d",
+      "impact": "medium",
+      "action": "Add a service-area page for each priority city with genuinely local detail.",
+      "verification": "Each page names local logistics, hours and coverage limits."
+    },
+    {
+      "id": "A12",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add an \"Our process\" section with steps, timing and decision points.",
+      "verification": "A buyer can describe the process after reading the page."
+    },
+    {
+      "id": "A13",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "3h",
+      "impact": "medium",
+      "action": "Add a \"who this is for and who it is not for\" section to the main service page.",
+      "verification": "The page disqualifies poor-fit buyers honestly."
+    },
+    {
+      "id": "A14",
+      "priority": "P1",
+      "owner": "dev",
+      "effort": "2h",
+      "impact": "medium",
+      "action": "Add a contact page with the real business name, address, phone and hours.",
+      "verification": "NAP matches the Google Business Profile and schema."
+    },
+    {
+      "id": "A15",
+      "priority": "P1",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add a comparison table of options, inclusions and cost drivers.",
+      "verification": "Table is readable on mobile and matches the visible copy."
+    },
+    {
+      "id": "A16",
+      "priority": "P1",
+      "owner": "marketing",
+      "effort": "2h",
+      "impact": "medium",
+      "action": "Store the baseline and every re-measure in one shared sheet with dates.",
+      "verification": "Sheet is accessible to the client and the delivery team."
+    },
+    {
+      "id": "A17",
+      "priority": "P2",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add a comparison table for options, inclusions or cost drivers.",
+      "verification": "Table is readable on mobile and matches the schema."
+    },
+    {
+      "id": "A18",
+      "priority": "P2",
+      "owner": "marketing",
+      "effort": "1d",
+      "impact": "medium",
+      "action": "Create one honest comparison page against the top two alternatives.",
+      "verification": "Page names the alternatives and the real trade-offs."
+    },
+    {
+      "id": "A19",
+      "priority": "P2",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add internal links from the highest-traffic pages to the priority pages.",
+      "verification": "Every priority page has at least three contextual internal links."
+    },
+    {
+      "id": "A20",
+      "priority": "P2",
+      "owner": "content",
+      "effort": "1d",
+      "impact": "medium",
+      "action": "Refresh the priority pages every quarter with new evidence and dates.",
+      "verification": "Visible updated date and changelog."
+    },
+    {
+      "id": "A21",
+      "priority": "P2",
+      "owner": "marketing",
+      "effort": "2h",
+      "impact": "medium",
+      "action": "Add a monthly prompt-panel review to the client reporting cadence.",
+      "verification": "Report shows movement, not a single score."
+    },
+    {
+      "id": "A22",
+      "priority": "P2",
+      "owner": "dev",
+      "effort": "2h",
+      "impact": "low",
+      "action": "Add an optional llms.txt for agent readability only, not as a visibility lever.",
+      "verification": "File exists and the report says it is optional."
+    },
+    {
+      "id": "A23",
+      "priority": "P2",
+      "owner": "marketing",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Pitch one podcast or trade publication with a genuine expert angle.",
+      "verification": "Pitch logged; no paid placement."
+    },
+    {
+      "id": "A24",
+      "priority": "P2",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add a proof page with real, consented before-and-after evidence where allowed.",
+      "verification": "Consent and substantiation are on file."
+    },
+    {
+      "id": "A25",
+      "priority": "P2",
+      "owner": "dev",
+      "effort": "2h",
+      "impact": "low",
+      "action": "Keep robots.txt, sitemap and schema in a deploy checklist.",
+      "verification": "Checklist runs on every release."
+    },
+    {
+      "id": "A26",
+      "priority": "P2",
+      "owner": "marketing",
+      "effort": "2h",
+      "impact": "medium",
+      "action": "Add the brand to the three most relevant industry directories.",
+      "verification": "Listings are complete and consistent."
+    },
+    {
+      "id": "A27",
+      "priority": "P2",
+      "owner": "content",
+      "effort": "4h",
+      "impact": "medium",
+      "action": "Add an FAQ block to the comparison page using real sales objections.",
+      "verification": "Questions match the prompt panel and schema."
+    },
+    {
+      "id": "A28",
+      "priority": "P2",
+      "owner": "marketing",
+      "effort": "1d",
+      "impact": "medium",
+      "action": "Run a 30-day re-measure and compare citation rate, mention rate and referrals.",
+      "verification": "Before/after table with dates and limits."
+    }
+  ],
+  "measurement": {
+    "baselineDate": "2026-10-29",
+    "reMeasureDate": "2026-11-28",
+    "cadence": "Baseline, then weekly checks for the first month, then monthly for 90 days.",
+    "kpis": [
+      {
+        "name": "Mention rate",
+        "definition": "Share of tracked prompts where the brand is named",
+        "target": "Up and to the right; no fixed guarantee"
+      },
+      {
+        "name": "Citation rate",
+        "definition": "Share of tracked prompts where the official domain is cited",
+        "target": "Track the delta, not a single run"
+      },
+      {
+        "name": "Share of voice",
+        "definition": "Brand mentions divided by all brand and competitor mentions",
+        "target": "Compare against the two named competitors"
+      },
+      {
+        "name": "AI referral sessions",
+        "definition": "Sessions from ChatGPT, Perplexity, Gemini, Copilot and Claude referrers",
+        "target": "Track weekly; expect undercounting"
+      },
+      {
+        "name": "Assisted conversions",
+        "definition": "Conversions where an AI referral or branded-search touch appears in the path",
+        "target": "Report as modelled, not causal"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Google Search Console",
+        "action": "Open the Generative AI performance report and export impressions by page and country.",
+        "note": "AI Overviews and AI Mode clicks are not cleanly separable from organic."
+      },
+      {
+        "name": "Bing Webmaster Tools",
+        "action": "Review citation share, cited pages and grounding queries for Microsoft AI experiences.",
+        "note": "Citation presence is not traffic share."
+      },
+      {
+        "name": "GA4",
+        "action": "Create a custom channel group for chatgpt.com, perplexity.ai, gemini.google.com, copilot.microsoft.com and claude.ai.",
+        "note": "Some AI clients strip the referrer; direct traffic may hide AI visits."
+      },
+      {
+        "name": "Manual prompt panel",
+        "action": "Run all 30 prompts three times per engine on the same day and log mention, citation, position and sentiment.",
+        "note": "AI answers vary by user, location and model; report a distribution."
+      }
+    ],
+    "reporting": [
+      "Show the baseline and the current run side by side.",
+      "Label every modelled number as modelled.",
+      "Do not claim causality from a visibility change alone.",
+      "Include what did not move and what you could not measure."
+    ]
+  },
+  "delivery": {
+    "agencyName": "Northline SEO",
+    "preparedFor": "Pulse Dental Studio",
+    "reportDate": "2026-10-29",
+    "schemaInstall": [
+      "Paste Organization into the sitewide head or the home page template.",
+      "Paste Service on the primary service page and keep the name identical to the visible service.",
+      "Paste FAQPage only after the same questions and answers are visible on the page.",
+      "Paste BreadcrumbList on the service and comparison pages.",
+      "Paste Article on each content brief page and keep the author consistent with the visible byline.",
+      "Validate every block before deploy and re-scan after deploy."
+    ],
+    "limits": [
+      "The scan reads public HTML; it does not execute JavaScript or log in.",
+      "The prompt panel is a manual test plan, not a live rank tracker.",
+      "AI answers vary by user, location, model and date; this is a sample, not a guarantee.",
+      "The report does not verify that the business claims are true.",
+      "No citation, ranking or revenue outcome is guaranteed.",
+      "This is not legal advice and does not replace platform policy review."
+    ],
+    "llmsTxtNote": "llms.txt is optional for agent readability. In 2026 crawler studies it was rarely fetched by AI search bots and did not measurably lift citations. Do not sell it as a visibility lever."
+  },
+  "report": "# AI Search Visibility Audit — Pulse Dental Studio\n\n**Prepared for:** Pulse Dental Studio  \n**Prepared by:** Northline SEO  \n**Date:** 2026-10-29  \n**Market:** US  \n**Readiness score:** 100/100\n\n## Executive summary\n\nPulse Dental Studio is being evaluated by buyers in AI answers for cosmetic dentistry in Austin, TX. This audit checked the public site, the entity signals, the answer-first content, the citation surface and the measurement plan. The readiness score is a diagnostic, not a prediction of revenue.\n\nThe highest-leverage fixes are: Record the 30-prompt baseline before changing the site so improvement is measurable; Confirm the service list, service area and primary offer with the client before publishing.\n\n## Score breakdown\n\n| Area | What we checked | Result |\n| --- | --- | --- |\n| Crawl access | robots.txt, sitemap, AI user agents | robots.txt found; blocked: none detected |\n| Structured data | Organization, Service, FAQ, Breadcrumb | Organization, Dentist, Service, FAQPage, BreadcrumbList, AboutPage, Article |\n| Answer-first content | summary, question headings, depth | 3/3 pages have an answer-first summary |\n| Entity | sameAs, author, consistency | sameAs found |\n| Citation surface | third-party sources | plan generated; audit the live sources |\n\n## What we found\n\n- **/** — Cosmetic Dentistry in Austin, TX | Pulse Dental Studio; 705 words; 7 question headings; schema: Organization, Dentist, Service, FAQPage, Question, BreadcrumbList, ListItem.\n- **/about** — About Pulse Dental Studio | Austin, TX; 605 words; 7 question headings; schema: AboutPage, Organization, BreadcrumbList, ListItem, Article, Person.\n- **/services/veneers** — Veneers in Austin, TX: Process, Cost and Limits; 646 words; 5 question headings; schema: Service, Organization, FAQPage, Question, BreadcrumbList, ListItem, Article, Person.\n\n## 90-day plan\n\n| Priority | Action | Owner | Effort | Verification |\n| --- | --- | --- | --- | --- |\n| P0 | Record the 30-prompt baseline before changing the site so improvement is measurable. | marketing | 2h | Baseline sheet has prompt, engine, date, mention, citation and position. |\n| P0 | Confirm the service list, service area and primary offer with the client before publishing. | content | 2h | Client signs off on one canonical description of the offer. |\n| P1 | Publish the six answer-first content briefs with evidence and internal links. | content | 1d | Each brief is live, indexed and linked from the service page. |\n| P1 | Install the Organization, Service, FAQPage, BreadcrumbList and Article JSON-LD. | dev | 2h | All blocks validate and match the visible content. |\n| P1 | Build the 30-prompt panel and record a baseline across the chosen engines. | marketing | 1d | Baseline file has prompt, engine, date, mention, citation and position. |\n| P1 | Set up the GA4 AI referral segment and the Search Console generative AI report. | marketing | 2h | AI referrals and AI impressions are visible in the reports. |\n| P1 | Work the citation plan: three sources per month with a factual contribution. | marketing | 1d | Each placement is logged with URL, date and status. |\n| P1 | Add a visible \"last reviewed\" date and a named owner to every priority page. | content | 3h | Date and owner are visible and match the schema. |\n| P1 | Add a pricing explainer that names the cost drivers and what the quote includes. | content | 4h | Page answers cost questions without inventing a fixed price. |\n| P1 | Add a proof section with consented, substantiated examples where the category allows it. | content | 4h | Consent and substantiation are on file. |\n| P1 | Add a service-area page for each priority city with genuinely local detail. | content | 1d | Each page names local logistics, hours and coverage limits. |\n| P1 | Add an \"Our process\" section with steps, timing and decision points. | content | 4h | A buyer can describe the process after reading the page. |\n| P1 | Add a \"who this is for and who it is not for\" section to the main service page. | content | 3h | The page disqualifies poor-fit buyers honestly. |\n| P1 | Add a contact page with the real business name, address, phone and hours. | dev | 2h | NAP matches the Google Business Profile and schema. |\n| P1 | Add a comparison table of options, inclusions and cost drivers. | content | 4h | Table is readable on mobile and matches the visible copy. |\n| P1 | Store the baseline and every re-measure in one shared sheet with dates. | marketing | 2h | Sheet is accessible to the client and the delivery team. |\n| P2 | Add a comparison table for options, inclusions or cost drivers. | content | 4h | Table is readable on mobile and matches the schema. |\n| P2 | Create one honest comparison page against the top two alternatives. | marketing | 1d | Page names the alternatives and the real trade-offs. |\n| P2 | Add internal links from the highest-traffic pages to the priority pages. | content | 4h | Every priority page has at least three contextual internal links. |\n| P2 | Refresh the priority pages every quarter with new evidence and dates. | content | 1d | Visible updated date and changelog. |\n\n## Prompt panel\n\nThe pack includes 30 buyer prompts across 5 stages. Run three times per engine and record mention, citation, position and sentiment. See `prompt-panel.csv`.\n\n## Content and schema delivered\n\n- 6 answer-first content briefs\n- 5 JSON-LD blocks (Organization, Service, FAQPage, BreadcrumbList, Article)\n- Citation plan, measurement plan and install notes\n\n## Measurement\n\nBaseline: 2026-10-29. Re-measure: 2026-11-28. Baseline, then weekly checks for the first month, then monthly for 90 days.\n\nTrack mention rate, citation rate, share of voice, AI referral sessions and assisted conversions. Treat all revenue-impact numbers as modelled.\n\n## What this audit does not do\n\n- The scan reads public HTML; it does not execute JavaScript or log in.\n- The prompt panel is a manual test plan, not a live rank tracker.\n- AI answers vary by user, location, model and date; this is a sample, not a guarantee.\n- The report does not verify that the business claims are true.\n- No citation, ranking or revenue outcome is guaranteed.\n- This is not legal advice and does not replace platform policy review.\n\n## Next step\n\nApprove the P0 fixes, then the first two content briefs. Re-scan after deploy and start the prompt panel.\n"
+}

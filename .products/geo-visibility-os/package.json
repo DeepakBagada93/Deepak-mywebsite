@@ -1,0 +1,17 @@
+{
+  "name": "geo-visibility-os",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local, zero-dependency GEO/AEO audit and fix system for AI search visibility.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "audit": "node skills/geo-visibility-os/scripts/audit-geo-pack.mjs examples/pulse-dental-pack/pack.json",
+    "scan": "node skills/geo-visibility-os/scripts/scan-site.mjs --dir examples/pulse-dental-site --domain pulsedental.example --out snapshot.json",
+    "build": "node skills/geo-visibility-os/scripts/build-geo-pack.mjs --brief examples/pulse-dental-brief.json --snapshot examples/pulse-dental-pack/snapshot.json --out geo-pack"
+  }
+}

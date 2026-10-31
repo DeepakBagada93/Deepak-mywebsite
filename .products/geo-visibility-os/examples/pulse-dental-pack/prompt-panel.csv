@@ -1,0 +1,31 @@
+id,stage,intent,platform,prompt,branded,competitor,runs,success_signal
+P01,awareness,commercial investigation,chatgpt,"best cosmetic dentistry in Austin, TX",false,false,3,Brand named in the answer or cited as a source
+P02,awareness,informational,perplexity,"how to choose cosmetic dentistry in Austin, TX",false,false,3,Brand named in the answer or cited as a source
+P03,awareness,local commercial,google_ai,cosmetic dentistry near me,false,false,3,Brand named in the answer or cited as a source
+P04,awareness,informational,gemini,what should adults 30-55 in Austin comparing veneers and implants know before cosmetic dentistry,false,false,3,Brand named in the answer or cited as a source
+P05,awareness,commercial investigation,copilot,is cosmetic dentistry worth it for adults 30-55 in Austin comparing veneers and implants,false,false,3,Brand named in the answer or cited as a source
+P06,awareness,commercial investigation,claude,"cosmetic dentistry options in Austin, TX",false,false,3,Brand named in the answer or cited as a source
+P07,comparison,comparison,chatgpt,Pulse Dental Studio vs Lone Star Dental,true,true,3,Brand included in the shortlist with a correct differentiator
+P08,comparison,comparison,perplexity,"best cosmetic dentistry providers in Austin, TX",false,false,3,Brand included in the shortlist with a correct differentiator
+P09,comparison,comparison,google_ai,Pulse Dental Studio alternatives,true,false,3,Brand included in the shortlist with a correct differentiator
+P10,comparison,comparison,gemini,Lone Star Dental vs Riverbend Smiles for adults 30-55 in Austin comparing veneers and implants,false,true,3,Brand included in the shortlist with a correct differentiator
+P11,comparison,comparison,copilot,"top rated cosmetic dentistry in Austin, TX",false,false,3,Brand included in the shortlist with a correct differentiator
+P12,comparison,comparison,claude,which cosmetic dentistry is best for adults 30-55 in Austin comparing veneers and implants,false,false,3,Brand included in the shortlist with a correct differentiator
+P13,decision,decision,chatgpt,Pulse Dental Studio reviews,true,false,3,Brand recommended with a correct next step
+P14,decision,decision,perplexity,Pulse Dental Studio pricing,true,false,3,Brand recommended with a correct next step
+P15,decision,decision,google_ai,is Pulse Dental Studio legit,true,false,3,Brand recommended with a correct next step
+P16,decision,decision,gemini,Pulse Dental Studio consultation,true,false,3,Brand recommended with a correct next step
+P17,decision,local decision,copilot,"Pulse Dental Studio near Austin, TX",true,false,3,Brand recommended with a correct next step
+P18,decision,transactional,claude,"book cosmetic dentistry in Austin, TX",false,false,3,Brand recommended with a correct next step
+P19,objection,objection,chatgpt,does cosmetic dentistry hurt,false,false,3,Brand answer corrects the objection without inventing proof
+P20,objection,objection,perplexity,how long does cosmetic dentistry take,false,false,3,Brand answer corrects the objection without inventing proof
+P21,objection,objection,google_ai,"cosmetic dentistry cost without insurance in Austin, TX",false,false,3,Brand answer corrects the objection without inventing proof
+P22,objection,objection,gemini,is Pulse Dental Studio worth the price,true,false,3,Brand answer corrects the objection without inventing proof
+P23,objection,objection,copilot,risks of cosmetic dentistry,false,false,3,Brand answer corrects the objection without inventing proof
+P24,objection,objection,claude,cosmetic dentistry before and after,false,false,3,Brand answer corrects the objection without inventing proof
+P25,branded,navigational,chatgpt,Pulse Dental Studio,true,false,3,Brand facts are accurate and the official page is cited
+P26,branded,navigational,perplexity,"Pulse Dental Studio Austin, TX",true,false,3,Brand facts are accurate and the official page is cited
+P27,branded,navigational,google_ai,Pulse Dental Studio services,true,false,3,Brand facts are accurate and the official page is cited
+P28,branded,reputation,gemini,"Pulse Dental Studio reviews Austin, TX",true,false,3,Brand facts are accurate and the official page is cited
+P29,branded,comparison,copilot,Pulse Dental Studio vs Lone Star Dental,true,true,3,Brand facts are accurate and the official page is cited
+P30,branded,transactional,claude,Pulse Dental Studio appointment,true,false,3,Brand facts are accurate and the official page is cited
