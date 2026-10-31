@@ -109,4 +109,8 @@ return [
         'title' => 'UGC Ad Studio: 6 Audited AI UGC Ad Packs 2026 | Deepak',
         'description' => 'One brief to 6 audited UGC ad angles: timed scripts, Veo 3.1 & Flow prompts, HeyGen avatars, image ads, and a deterministic 38-check pre-spend audit.',
     ],
+    'geo-visibility-os' => [
+        'title' => 'GEO Visibility OS: 40-Rule AI Search & AEO Audit | Deepak',
+        'description' => 'Turn "are we visible in ChatGPT?" into a paid $2,500 audit: 40-check scanner, 30-prompt panel, 6 briefs, schema generator & white-label report. 100% offline.',
+    ],
 ];

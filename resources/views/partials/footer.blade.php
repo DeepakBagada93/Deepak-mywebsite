@@ -19,11 +19,13 @@
             <div class="footer__col">
                 <p class="mono footer__col-title">Explore</p>
                 <ul class="footer__col-list">
+                    <li><a href="{{ route('products.index') }}">Products &amp; AI toolkits</a></li>
                     <li><a href="{{ route('services.index') }}">Services — web, AI &amp; SEO/AEO</a></li>
+                    <li><a href="{{ route('stack.index') }}">Architecture &amp; AI stack</a></li>
                     <li><a href="{{ route('legal.about') }}">About — my story</a></li>
                     <li><a href="#skills" data-scroll>AI skills &amp; services</a></li>
                     <li><a href="#projects" data-scroll>Main projects</a></li>
-                    <li><a href="#journal" data-scroll>The news &amp; journal</a></li>
+                    <li><a href="{{ route('journal.index') }}">The news &amp; journal</a></li>
                     <li><a href="{{ route('legal.contact') }}">Contact</a></li>
                 </ul>
             </div>
