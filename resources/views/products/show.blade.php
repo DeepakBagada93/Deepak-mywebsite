@@ -45,7 +45,7 @@
                             @include('products.partials.price', ['product' => $product])
                         </div>
                         @if ($discount > 0)
-                            <span class="mono store-buybox__off">{{ $discount }}% OFF · limited-time launch price</span>
+                            <span class="store-buybox__badge">{{ $discount }}% OFF · limited-time launch price</span>
                         @endif
                     </div>
                     <div class="store-detail__mobile-btn-group">
@@ -54,7 +54,7 @@
                         </a>
                         <button type="button" class="btn btn--ghost store-detail__mobile-cart-btn" data-add-cart="{{ $product['slug'] }}">+ Add to cart</button>
                     </div>
-                    <p class="store-buybox__secure mono">⚡ Instant delivery after payment · 🔒 Razorpay UPI, cards & netbanking</p>
+                    <p class="store-buybox__secure">⚡ Instant delivery after payment · 🔒 Razorpay UPI, cards &amp; netbanking</p>
                 </div>
 
                 <div class="store-detail__body">
@@ -222,7 +222,7 @@
                         @include('products.partials.price', ['product' => $product])
                     </div>
                     @if ($discount > 0)
-                        <span class="mono store-buybox__off">{{ $discount }}% OFF · limited-time launch price</span>
+                        <span class="store-buybox__badge">{{ $discount }}% OFF · limited-time launch price</span>
                     @endif
 
                     <a href="{{ route('products.checkout.single', $product['slug']) }}" class="btn btn--primary store-buybox__btn">
@@ -238,8 +238,8 @@
                         <li><span>🛠️</span>Commercial license included</li>
                     </ul>
 
-                    <p class="store-buybox__secure mono">🔒 Secure checkout via Razorpay — cards, international cards & UPI</p>
-                    <p class="store-buybox__guarantee mono">♻️ 30-day guarantee — if it does not fit your workflow, email the order number for a refund.</p>
+                    <p class="store-buybox__secure">🔒 Secure checkout via Razorpay — cards, international cards &amp; UPI</p>
+                    <p class="store-buybox__guarantee">♻️ 30-day guarantee — if it does not fit your workflow, email the order number for a refund.</p>
                 </div>
             </aside>
         </div>
