@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'First ₹1L Product Month: The Real Ledger and Cost Breakdown',
-        'slug'         => 'first-1l-product-month-ledger',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'First ₹1L product month: raw ledger breakdown of digital toolkit sales in India, Razorpay fees, 18% GST math, and client consulting conversions compared.',
-        'body'         => <<<'BODY'
+        'title' => 'First ₹1L Product Month: The Real Ledger and Cost Breakdown',
+        'slug' => 'first-1l-product-month-ledger',
+        'tag' => 'MY STORY',
+        'excerpt' => 'First ₹1L product month: raw ledger breakdown of digital toolkit sales in India, Razorpay fees, 18% GST math, and client consulting conversions compared.',
+        'body' => <<<'BODY'
 A ₹1L digital product month is the operational milestone where a software engineer's productized developer toolkits and digital code packages generate over ₹1,00,000 in net monthly recurring revenue without selling hourly client labor.
 
 **Quick Answer**: Reaching my first ₹1,00,000 digital product month operating from Junagadh, Gujarat required shifting from general tutorials to high-intent production toolkits (₹999 to ₹2,999), optimizing for Indian payment behaviors via UPI and Razorpay, and converting technical journal readers through contextual in-article product callout boxes rather than expensive paid ads.
@@ -179,11 +179,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Postgres 17 Logical Replication: Zero-Downtime Cutover Guide',
-        'slug'         => 'postgres-17-logical-replication-cutover',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Postgres 17 logical replication: zero-downtime cutover guide for Laravel apps, 42ms failover scripts, and zero data loss. Download the production playbook.',
-        'body'         => <<<'BODY'
+        'title' => 'Postgres 17 Logical Replication: Zero-Downtime Cutover Guide',
+        'slug' => 'postgres-17-logical-replication-cutover',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Postgres 17 logical replication: zero-downtime cutover guide for Laravel apps, 42ms failover scripts, and zero data loss. Download the production playbook.',
+        'body' => <<<'BODY'
 Postgres 17 logical replication is the database synchronization mechanism that streams row-level changes from a publisher database to a subscriber database across disparate physical clusters using write-ahead log (WAL) decoding without locking application tables.
 
 **Quick Answer**: Executing a zero-downtime database migration in Postgres 17 requires configuring logical publications on your primary database, initializing subscriptions with slot synchronization enabled, verifying replication lag reaches sub-10ms, and swapping connection pool DNS records within a 5-second maintenance window without dropping transactions.
@@ -393,11 +393,11 @@ BODY,
     ],
 
     [
-        'title'        => 'LangGraph Interrupts: Human Approval at 42ms P95 in 2026',
-        'slug'         => 'langgraph-interrupts-human-approval',
-        'tag'          => 'AI AGENTS',
-        'excerpt'      => 'LangGraph interrupts 2026: human approval workflows at 42ms P95 without losing graph state or wasting token budgets. Complete code and architecture inside.',
-        'body'         => <<<'BODY'
+        'title' => 'LangGraph Interrupts: Human Approval at 42ms P95 in 2026',
+        'slug' => 'langgraph-interrupts-human-approval',
+        'tag' => 'AI AGENTS',
+        'excerpt' => 'LangGraph interrupts 2026: human approval workflows at 42ms P95 without losing graph state or wasting token budgets. Complete code and architecture inside.',
+        'body' => <<<'BODY'
 LangGraph interrupts are the stateful execution breakpoints in an agentic directed acyclic graph (DAG) that allow autonomous AI workflows to pause execution, persist state into a durable checkpoint store, and await external human authorization before resuming.
 
 **Quick Answer**: Implementing LangGraph interrupts in 2026 requires utilizing `interrupt()` directives paired with persistent Postgres or Valkey checkpoint savers. This architecture pauses multi-step LLM reasoning before critical side-effects, maintaining sub-42ms P95 resume latency without restarting execution graphs or re-generating upstream context tokens.
@@ -625,11 +625,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Why I Refuse Hourly Billing: 3 Invoices for ₹2L Scope',
-        'slug'         => 'refuse-hourly-billing-3-invoices',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Hourly billing alternative 2026: why I refuse hourly rates and use 3 milestone invoices for ₹2L+ client builds. Real scope clauses and payment terms.',
-        'body'         => <<<'BODY'
+        'title' => 'Why I Refuse Hourly Billing: 3 Invoices for ₹2L Scope',
+        'slug' => 'refuse-hourly-billing-3-invoices',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Hourly billing alternative 2026: why I refuse hourly rates and use 3 milestone invoices for ₹2L+ client builds. Real scope clauses and payment terms.',
+        'body' => <<<'BODY'
 The transition from hourly billing to milestone-based fixed deliverable contracts represents the single most significant operational shift software developers can make to protect profit margins and client alignment.
 
 **Quick Answer**: Hourly billing penalizes senior engineering efficiency and incentivizes endless scope creep, whereas structuring software contracts into three milestone invoices (50% deposit, 30% staging demo, 20% production cutover) guarantees cash flow predictability, eliminates timesheet disputes, and protects healthy 65% net profit margins on ₹2,00,000+ builds.
@@ -762,11 +762,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Next.js Server Actions: CSRF & Replay Protection 2026',
-        'slug'         => 'nextjs-server-actions-csrf-replay',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Next.js Server Actions CSRF 2026: replay and double-submit guards that production apps need. Working code, threat table and the 42ms P95 latency test.',
-        'body'         => <<<'BODY'
+        'title' => 'Next.js Server Actions: CSRF & Replay Protection 2026',
+        'slug' => 'nextjs-server-actions-csrf-replay',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Next.js Server Actions CSRF 2026: replay and double-submit guards that production apps need. Working code, threat table and the 42ms P95 latency test.',
+        'body' => <<<'BODY'
 The security implementation for Next.js Server Actions requires cryptographic token validation, idempotency caching, and strict request origin verification to prevent Cross-Site Request Forgery and malicious transaction replays in production web applications.
 
 **Quick Answer**: Next.js Server Actions provide baseline POST origin verification by default, but remain vulnerable to replay attacks, double-form submissions, and session-riding without cryptographic idempotency keys and stateful CSRF token rotation. Implementing a Valkey-backed idempotency middleware protects payment and state mutation actions with only 1.2ms added latency.
@@ -987,11 +987,11 @@ BODY,
     ],
 
     [
-        'title'        => 'MCP Server Launch: 60-Minute Production Checklist 2026',
-        'slug'         => 'mcp-server-launch-60-minute-checklist',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'MCP server launch 2026: 60-minute production checklist covering stdio to SSE, JWT auth, P95 42ms tools and health probes. Download the full checklist.',
-        'body'         => <<<'BODY'
+        'title' => 'MCP Server Launch: 60-Minute Production Checklist 2026',
+        'slug' => 'mcp-server-launch-60-minute-checklist',
+        'tag' => 'AI DEV',
+        'excerpt' => 'MCP server launch 2026: 60-minute production checklist covering stdio to SSE, JWT auth, P95 42ms tools and health probes. Download the full checklist.',
+        'body' => <<<'BODY'
 The Model Context Protocol server launch process is the structured operational workflow required to transition experimental AI agent tools from local stdio streams into hardened, stateless HTTP Server-Sent Events microservices capable of servicing enterprise LLM runtimes.
 
 **Quick Answer**: Launching an enterprise MCP server in 2026 requires shifting from local stdio pipes to asynchronous Server-Sent Events, implementing scoped JWT token authentication, constraining schemas with strict Pydantic models, and maintaining sub-42ms P95 latency across tool calls. Following this 60-minute checklist prevents runaway agent loops, credential leaks, and high memory thrashing.
