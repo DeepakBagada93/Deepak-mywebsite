@@ -1,0 +1,51 @@
+{
+  "slug": "ugc-ad-studio",
+  "name": "UGC Ad Studio",
+  "tagline": "One product brief to six audited UGC ad angles, timed scripts and Veo 3.1 prompts.",
+  "outcome": "Turn one brief into six psychology-backed ad angles, timed 15s / 30s / 45s scripts, 30 video prompts, 24 image prompts, HeyGen avatar scripts and a deterministic 38-check pre-spend audit.",
+  "outcome_short": "six audited UGC angles before you spend",
+  "pain_short": "the creative production bottleneck",
+  "pain_points": [
+    "Creator-led UGC takes 10-14 days per batch, so the trend peaks before the ads ship.",
+    "AI video tools drift on faces, packaging and lighting between scenes.",
+    "Unverified claims and missing AI disclosures get ad accounts rejected."
+  ],
+  "price_label": "$79",
+  "compare_label": "$129",
+  "price_usd": 79,
+  "compare_usd": 129,
+  "price_note": "One-time · commercial license · 38-check audit CLI",
+  "proof_bullets": [
+    "6 psychological angles: cost of inaction, failed alternative, mechanism, proof, objection reversal, identity",
+    "Timed 15s / 30s / 45s scripts with strict hook and pacing limits",
+    "30 video prompts with locked character, product, grade and craft tokens",
+    "24 static image prompts for Nano Banana Pro, Midjourney and Flux",
+    "38-check pre-spend audit catches drift, banned claims and missing AI disclosure"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "6 angles + 54 prompts + audit CLI" },
+    { "label": "License", "value": "Commercial — unlimited client campaigns" },
+    { "label": "Format", "value": "ZIP · agent skill + Node CLI + docs" },
+    { "label": "Updates", "value": "12 months free" }
+  ],
+  "bonus": "The HeyGen avatar script, voice direction, platform captions and clean static plates ship in the same archive.",
+  "guarantee": "If the first audited pack does not give you six testable angles, reply within 30 days and I will fix it or refund the purchase.",
+  "cta_url": "https://deepakbagada.in/products/ugc-ad-studio",
+  "cta_label": "Get UGC Ad Studio — {{PRICE}}",
+  "ps": "Reply with your product category and I will tell you which of the six angles to test first.",
+  "preheader": "Six audited UGC ad angles from one brief — timed scripts, Veo 3.1 prompts and a 38-check pre-spend audit.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, six ad angles before your next spend",
+    "{{COMPANY_SHORT}}: UGC ads without the creator wait",
+    "{{CITY}} brands: a 38-check UGC ad audit",
+    "{{FIRST_NAME}}, one brief to six audited UGC angles",
+    "A $79 UGC ad studio for {{COMPANY_SHORT}}"
+  ],
+  "audience_cities": [
+    "Sydney",
+    "Melbourne",
+    "Brisbane",
+    "Perth",
+    "Newcastle"
+  ]
+}

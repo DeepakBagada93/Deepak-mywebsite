@@ -3345,12 +3345,20 @@ code { font-family: var(--mono); font-size: 0.85em; }
 .store-detail__crumb a:hover { color: var(--ink); }
 .store-detail__layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 380px;
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr) clamp(320px, 28vw, 380px);
+    gap: clamp(24px, 3.5vw, 48px);
     align-items: start;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+}
+.store-detail__main {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 .store-detail__icon { font-size: 3rem; line-height: 1; display: block; margin-bottom: 16px; }
 .store-detail__cat { color: var(--muted); margin-bottom: 10px; }
@@ -3395,10 +3403,12 @@ code { font-family: var(--mono); font-size: 0.85em; }
     top: 96px;
     width: 100%;
     max-width: 380px;
+    min-width: 0;
     box-sizing: border-box;
     max-height: calc(100vh - 110px);
     overflow-y: auto;
     scrollbar-width: none;
+    z-index: 10;
 }
 .store-detail__aside::-webkit-scrollbar { display: none; }
 .store-buybox {
@@ -4734,22 +4744,39 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
     color: var(--muted, #555555);
     margin: 0;
 }
+.store-detail__block {
+    margin-top: 48px;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 .store-steps {
     display: grid;
     gap: 16px;
     margin-top: 16px;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 .store-step {
     border: 1px solid var(--hair, #e9ecef);
     border-radius: 4px;
     padding: 18px 20px;
     background: #ffffff;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .store-step__head {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 8px;
+    min-width: 0;
+    max-width: 100%;
 }
 .store-step__num {
     background: var(--ink, #111111);
@@ -4769,12 +4796,18 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
     font-weight: 600;
     margin: 0;
     color: var(--ink, #111111);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
 }
 .store-step__desc {
     font-size: 0.94rem;
     line-height: 1.6;
     color: var(--muted, #555555);
     margin: 0 0 10px 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
 }
 .store-step__code {
     background: #f8f9fa;
@@ -4785,7 +4818,20 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
     font-size: 0.85rem;
     color: #212529;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    box-sizing: border-box;
     margin: 0;
+}
+.store-step__code code {
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    display: block;
+    max-width: 100%;
 }
 .store-preview__lede {
     color: var(--muted);

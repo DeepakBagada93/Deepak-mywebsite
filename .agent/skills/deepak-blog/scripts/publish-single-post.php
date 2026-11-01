@@ -250,7 +250,7 @@ if (empty($options['skip-live-audit'])) {
 }
 
 // ─── Step 4: Log to memory.md ────────────────────────────────────────────────
-echo "⏳ [4/4] Logging entry to memory.md...\n";
+echo "⏳ [4/5] Logging entry to memory.md...\n";
 $memoryFile = __DIR__ . '/../memory.md';
 if (file_exists($memoryFile)) {
     $memEntry = "\n- **{$title}**\n" .
@@ -261,6 +261,23 @@ if (file_exists($memoryFile)) {
         "  - Status: Pushed directly to Live DB + verified live at {$liveUrl}\n";
     file_put_contents($memoryFile, $memEntry, FILE_APPEND);
     echo "  ✓ Logged to memory.md.\n";
+}
+
+// ─── Step 5: Google Indexing API Notification ────────────────────────────────
+echo "⏳ [5/5] Submitting URL to Google Indexing API...\n";
+$pythonBin = base_path('.venv/bin/python');
+if (!file_exists($pythonBin)) {
+    $pythonBin = 'python3';
+}
+$indexingScript = base_path('scripts/google-indexing.py');
+if (file_exists($indexingScript)) {
+    $idxCmd = escapeshellcmd($pythonBin) . ' ' . escapeshellarg($indexingScript) . ' --url ' . escapeshellarg($liveUrl);
+    exec($idxCmd, $idxOut, $idxCode);
+    if ($idxCode === 0) {
+        echo "  ✓ Google Indexing API: Submitted {$liveUrl} successfully!\n";
+    } else {
+        echo "  ⚠️ Google Indexing API notice: " . implode(" ", array_slice($idxOut, -1)) . "\n";
+    }
 }
 
 echo "----------------------------------------------------------\n";

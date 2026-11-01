@@ -58,11 +58,10 @@ description: >
 > - **Step 2 — Anti-Duplication & Live DB Collision Pre-Check**: Run `php .agent/skills/deepak-blog/scripts/check-collision.php "<Keyword or Slug>"`. Prohibit duplicate numeric suffixes (`-[0-9]+` like `-2`, `-3` strictly banned; year `2026` allowed).
 > - **Step 3 — Write 1 High-Value Dispatch Payload**: (1,400–2,000+ words, clean high-CTR bracket-free title, front-loaded keyword, first-person Deepak Bagada voice, AEO 40–60 word direct answer block, Key Takeaways box, visual architecture diagram via Mermaid or clean SVG/ASCII, runnable multi-file code, comparison/pricing table, "When NOT to Use This" section, **mandatory Contextual Product Monetization Box**, 2–4 authoritative external citations, 3–5 internal cluster links including `/tools/*` utilities, 4 FAQs).
 > - **Step 4 — Pre-Publish Audit**: Run `node .agent/skills/deepak-blog/scripts/audit-blog.mjs` to ensure 0 FAIL (checks title length 50-60 chars, zero brackets, AEO answer block, takeaways, visual architecture, comparison table, word count, product monetization bridge, no generic stock photos, no speculative tool versions, anti-slop).
-> - **Step 5 — Direct Push to Live DB + Frontend**: Run `php .agent/skills/deepak-blog/scripts/publish-single-post.php` to insert/upsert directly into Hostinger Live MySQL DB (`posts` table), update `data/posts.php`, and clear application cache.
+> - **Step 5 — Direct Push to Live DB + Frontend**: Run `php .agent/skills/deepak-blog/scripts/publish-single-post.php` to insert/upsert directly into Hostinger Live MySQL DB (`posts` table), update `data/posts.php`, clear application cache, log to `memory.md`, and **automatically dispatch the URL to the Google Indexing API**.
 > - **Step 6 — Live URL Quality Audit**: Script automatically verifies `https://deepakbagada.in/journal/<slug>` for HTTP 200, SEO title, meta description, H1, content formatting, and visual architecture layout.
-> - **Step 7 — Log to `memory.md`**: Append title, slug, tag, date, product promoted, and metrics.
-> - **Step 8 — GSC Indexing Protocol**: Confirm slug in `sitemap.xml` with today's `<lastmod>` → URL Inspection → Request Indexing (≤ phase quota/day).
-> - **Step 9 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota: 5/day in Phase 2).
+> - **Step 7 — Google Indexing API & GSC Sitemaps Dispatch**: Handled natively in step 5 via `scripts/google-indexing.py --url <liveUrl>`. Triggers real-time Googlebot crawl notification (`URL_UPDATED`) protected by the `google-indexing-sentinel` quota engine (HTTP 200 preflight check, daily 190 cap, and graceful 429 handling). Sitemap submission pings full XML sitemap.
+> - **Step 8 — Advance to Next Dispatch**: Proceed to the next topic only after current is verified live (up to the current phase quota: 5/day in Phase 2).
 > - **ZERO GIT PUSH NEEDED**: Publishing goes directly into the live database and updates local files. Zero git commits/pushes protects search engine indexing stability.
 
 ---
@@ -334,9 +333,10 @@ Run this strict closed loop for each article up to today's phase quota (Phase 1:
   ├── 4. PRE-AUDIT: Automated pre-publish audit
   │      node .agent/skills/deepak-blog/scripts/audit-blog.mjs --body draft.md --title "..." --excerpt "..."
   │
-  ├── 5. DIRECT PUSH: Insert into Live Hostinger MySQL DB + update data/posts.php
+  ├── 5. DIRECT PUSH & INDEXING: Insert into Live Hostinger MySQL DB + update data/posts.php
   │      php .agent/skills/deepak-blog/scripts/publish-single-post.php --json payload.json
   │      (Zero git push — live immediately!)
+  │      Natively triggers Google Indexing API notification (URL_UPDATED) for instant Googlebot crawl
   │
   ├── 6. VERIFY LIVE URL: Automated audit of https://deepakbagada.in/journal/<slug>
   │      node .agent/skills/deepak-blog/scripts/audit-live-url.mjs --slug <slug>
@@ -345,6 +345,34 @@ Run this strict closed loop for each article up to today's phase quota (Phase 1:
   │
   └── 8. NEXT: Only after 100% verified, proceed to next item in sequence (stop at current phase quota: 5/day)!
 ```
+
+---
+
+## ⚡ GOOGLE INDEXING GUIDELINES & CRAWL BUDGET GOVERNANCE
+
+To maximize organic search footprint without exhausting Googlebot crawl budget or triggering "Discovered - currently not indexed" backlogs, `deepak-blog` adheres to strict Google Webmaster & Indexing Guidelines:
+
+### 1. Dual-Track Indexing Architecture:
+* **Track 1: Google Indexing API (`URL_UPDATED`)**:
+  - Automatically fired on publication via `scripts/google-indexing.py --url <url>`.
+  - Bypasses days-long passive crawl delays; queues immediate render & indexing.
+  - Quota & Preflight Governance (via `google-indexing-sentinel`): Preflights URL for HTTP 200 (prevents 404 indexing), tracks daily project quota in `.agent/indexing_quota.json` (ceiling 190/day), and catches 429 rate limit exceptions gracefully without failing blog dispatches.
+  - Phase 2 dispatches (5 posts/day) consume only **2.5% of the daily quota**, keeping a massive safety margin.
+* **Track 2: Clean Dynamic XML Sitemap (`https://deepakbagada.in/sitemap.xml`)**:
+  - Automatically pings GSC Sitemaps API upon batch completions.
+  - **Thin Post Crawl Protection**: Posts with word count < 900 words, duplicate variant slugs, and 410 gone slugs are automatically filtered out of the sitemap in `App\Http\Controllers\SitemapController`. This forces Googlebot to focus 100% of its crawl budget exclusively on substantial, monetizable assets.
+
+### 2. Search Console Driven Content Strategies (Validated October 2026):
+Empirical Search Console analytics reveal clear high-performing topical clusters:
+1. **Commercial Money Queries (Top Conversion)**:
+   - Target queries like `"ai development services in india"` (currently ranking position 4.2), `"best ai expert in india"`, `"ai agents development"`.
+   - Focus on specific scopes (P95 latency, fixed price ₹85K–₹2.5L, architecture stacks) and link directly to `/services/ai-development` and `/#contact`.
+2. **High-CTR Showdowns (20%–25% CTR)**:
+   - Target architectural showdowns (`"gpt-6.1 sol" vs "opus 5.5"`, `"pgvector vs pinecone"`, `"valkey vs redis"`) with runnable code and empirical latency graphs.
+3. **Internal Product Bridges**:
+   - Every post must bridge to one of the 27 live digital products in `.products/` (e.g., `agent-skills-master-bundle`, `n8n-hardening-pack`, `mcp-server-launch-kit`, `agency-delivery-os`, `cro-landing-page-architect`) to generate direct commercial revenue.
+4. **Utility & Tool Recirculation**:
+   - Link contextual free tools from `/tools/*` (e.g., PDF compressor, image to webp, base64) to capture high-volume utility queries and reduce bounce rate below 40%.
 
 ---
 

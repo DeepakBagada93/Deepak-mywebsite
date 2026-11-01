@@ -663,3 +663,15 @@
 - Brevo: 47 delivered, 0 hard bounces, 3 awaiting delivery events at report time.
 - Combined US total: 100 sent, 94 delivered, 3 bounces (all batch 1).
 - Follow-up: 2026-11-03 (7 days). Cooldown until 2026-11-10.
+
+---
+
+## 2026-10-30 — Australia UGC Ad Studio (7) — PREVIEW ONLY
+
+- Product: UGC Ad Studio · $79 (was $129) · config `products/ugc-ad-studio.json`.
+- Market: Australian consumer-brand founders / CEOs from 30 Oct 2026 news plus this week.
+- Leads: `research/australia-2026-10-30/leads-raw.json` → `-enriched.json` → `-audit.md` (7 clean, all Tier B, 67–77).
+- Campaign: `campaigns/2026-10-30-au-ugc-ad-studio/` (7 HTML + TXT + manifest + audit + report).
+- Email audit: 7/7 PASS. Dry run: 7 would send, 0 skipped, 0 failed.
+- **No live send.** 6 of 7 are generic company inboxes; only `yasemin@alchemycharge.com.au` is a named personal mailbox. Australia consent gate still applies.
+- Follow-up if approved: 2026-11-06 (7 days). Cooldown until 2026-11-13.

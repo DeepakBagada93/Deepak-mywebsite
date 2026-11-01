@@ -313,10 +313,27 @@ foreach ($duePosts as $p) {
             ."  - Scheduled Slot: `{$p->slot_label}`\n"
             ."  - Status: Automatically published from scheduled_posts to Live DB\n";
         file_put_contents($memoryFile, $entry, FILE_APPEND);
-        echo "  ✓ [4/4] Appended to memory.md ledger\n";
+        echo "  ✓ [4/5] Appended to memory.md ledger\n";
     }
 
-    echo "  🎉 LIVE at https://deepakbagada.in/journal/{$p->slug}\n";
+    // 5. Google Indexing API Notification
+    $livePostUrl = "https://deepakbagada.in/journal/{$p->slug}";
+    $pythonBin = base_path('.venv/bin/python');
+    if (!file_exists($pythonBin)) {
+        $pythonBin = 'python3';
+    }
+    $indexingScript = base_path('scripts/google-indexing.py');
+    if (file_exists($indexingScript)) {
+        $idxCmd = escapeshellcmd($pythonBin) . ' ' . escapeshellarg($indexingScript) . ' --skip-sitemap --url ' . escapeshellarg($livePostUrl);
+        exec($idxCmd, $idxOut, $idxCode);
+        if ($idxCode === 0) {
+            echo "  ✓ [5/5] Google Indexing API: Submitted {$livePostUrl} successfully!\n";
+        } else {
+            echo "  ⚠️ [5/5] Google Indexing API notice: " . implode(" ", array_slice($idxOut, -1)) . "\n";
+        }
+    }
+
+    echo "  🎉 LIVE at {$livePostUrl}\n";
 }
 
 echo "\n==========================================================\n";

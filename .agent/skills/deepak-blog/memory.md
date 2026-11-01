@@ -4,6 +4,23 @@
 > This ledger tracks all past topics, titles, and slugs for deepakbagada.in journal posts.
 > ALWAYS inspect this file before generating new topics to ensure 0% duplicate content.
 
+## 📊 Live Google Search Analytics & Crawl Budget Governance (Updated 2026-10-31)
+
+### 1. Empirical GSC Performance Baseline (Last 28 Days)
+- **Impressions:** 1,802 impressions | **Clicks:** 28 clicks | **CTR:** 1.55% ( climbed to **2.11%** in last 7 days)
+- **Average Position:** 12.4
+- **Top Converting Themes:**
+  1. *Commercial Authority Queries*: `"ai development services in india"` (Pos 4.2), `"best ai expert in india"` (Pos 16.8, CTR 25%), `"aeo services ahmedabad"`.
+  2. *High-CTR Technical Showdowns*: `ondc-ai-agents-agentic-commerce-bharat-2026` (25.0% CTR), `stateful-agent-swarms-self-healing-loops-2026` (12.5% CTR), `vibe-coding-cursor-claude-code-production-review-2026` (14.3% CTR).
+  3. *Utility Recirculation*: `/tools/pdf-compress` converts at 66.7% CTR.
+- **Audience Breakdown:** 85.7% India, 14.3% US & International; 64.3% Desktop, 35.1% Mobile.
+
+### 2. Google Indexing API & Crawl Budget Rules
+- **Automated Real-Time Indexing**: All publications from `publish-single-post.php` and `process-scheduled-posts.php` automatically trigger Google Indexing API (`URL_UPDATED`).
+- **Quota Health**: Google limits accounts to 200 URLs/day. In Phase 2 (5 posts/day) and Phase 4 (10 posts/day), publication consumes only 2.5% to 5% of daily quota.
+- **Crawl Budget Protection**: Posts under 900 words, duplicates, and gone slugs are automatically filtered out from `sitemap.xml`.
+- **Monetization Mandate**: Every new article MUST link to at least 1 digital product from `.products/` (e.g. `agent-skills-master-bundle`, `agency-delivery-os`, `mcp-server-launch-kit`) or consulting (`/#contact`), and 1 utility tool (`/tools/*`).
+
 ## Existing Posts Ledger
 
 - **The 2026 AI Agent Shift: Why MCP Is Replacing Custom APIs**
@@ -3905,3 +3922,67 @@
   - Published: `2026-10-29`
   - Words: 1977
   - Status: Pushed directly to Live DB + verified live at https://deepakbagada.in/journal/ai-agent-development-company-surat
+
+- **MCP Server Launch: 60-Minute Production Checklist 2026**
+  - Slug: `mcp-server-launch-60-minute-checklist`
+  - Tag: `AI DEV`
+  - Published: `2026-10-31 06:30:00`
+  - Words: 1636
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **MCP Server Launch: 60-Minute Production Checklist 2026**
+  - Slug: `mcp-server-launch-60-minute-checklist`
+  - Tag: `AI DEV`
+  - Published: `2026-10-31 06:30:00`
+  - Words: 1629
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **MCP Server Launch: 60-Minute Production Checklist 2026**
+  - Slug: `mcp-server-launch-60-minute-checklist`
+  - Tag: `AI DEV`
+  - Published: `2026-10-31 06:30:00`
+  - Words: 1629
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js Server Actions: CSRF & Replay Protection 2026**
+  - Slug: `nextjs-server-actions-csrf-replay`
+  - Tag: `WEB DEV`
+  - Published: `2026-10-31 15:30:00`
+  - Words: 1457
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why I Refuse Hourly Billing: 3 Invoices for ₹2L Scope**
+  - Slug: `refuse-hourly-billing-3-invoices`
+  - Tag: `MY STORY`
+  - Published: `2026-10-31 18:30:00`
+  - Words: 1557
+  - Scheduled Slot: `18:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **LangGraph Interrupts: Human Approval at 42ms P95 in 2026**
+  - Slug: `langgraph-interrupts-human-approval`
+  - Tag: `AI AGENTS`
+  - Published: `2026-11-01 09:30:00`
+  - Words: 1413
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Postgres 17 Logical Replication: Zero-Downtime Cutover Guide**
+  - Slug: `postgres-17-logical-replication-cutover`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-01 15:30:00`
+  - Words: 1327
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **First ₹1L Product Month: The Real Ledger and Cost Breakdown**
+  - Slug: `first-1l-product-month-ledger`
+  - Tag: `MY STORY`
+  - Published: `2026-11-01 18:30:00`
+  - Words: 1483
+  - Scheduled Slot: `18:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

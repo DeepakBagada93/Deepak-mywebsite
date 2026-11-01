@@ -176,7 +176,7 @@ if (!body || body.trim().length < 200) {
 
   // Internal links 3-5
   const links = [...body.matchAll(/\[([^\]]+)\]\((\/[^)]+)\)/g)].map(m => m[2]);
-  const internal = links.filter(h => h.startsWith("/services/") || h.startsWith("/#") || h.startsWith("/journal/") || h.startsWith("/services") || h.startsWith("/library/") || h.startsWith("/products/") || h.startsWith("/products"));
+  const internal = links.filter(h => h.startsWith("/services/") || h.startsWith("/#") || h.startsWith("/journal/") || h.startsWith("/services") || h.startsWith("/library/") || h.startsWith("/products/") || h.startsWith("/products") || h.startsWith("/tools/") || h.startsWith("/tools"));
   if (internal.length < 3) add("FAIL", "Internal links 3-5", `Only ${internal.length} internal links: ${internal.join(", ") || "none"} — need 3-5`);
   else if (internal.length > 5) add("WARN", "Internal links 3-5", `${internal.length} links — OK but ensure relevance`);
   else add("PASS", "Internal links 3-5", `${internal.length} links: ${internal.join(", ")}`);

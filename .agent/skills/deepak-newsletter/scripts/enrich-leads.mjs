@@ -75,6 +75,7 @@ const PRODUCT_PRICES = {
   'n8n Production Hardening Pack': 2499,
   'GST Invoice & HSN Compliance Kit': 1499,
   'ITC Recovery Desk': 1499,
+  'UGC Ad Studio': 1999,
   'Ad Creative Lab': 999,
   'Global Client Hunter OS': 999,
   'Content Repurpose Engine': 899,
