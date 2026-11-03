@@ -1,0 +1,117 @@
+{
+  "name": "ai-code-security-sentinel",
+  "slug": "ai-code-security-sentinel",
+  "version": "1.0.0",
+  "category": "ai-skill-bundle",
+  "generatedAt": "2026-11-03T16:36:36.271Z",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1637,
+      "sha256": "3fb8b98d9460f44d9148ae70ceaa402b55086d2adab28442947f248017f0f20e"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1779,
+      "sha256": "d85364590328cf1029e61e2180e2c08797efcef0689dfcc217f101e999551c4c"
+    },
+    {
+      "path": "docs/package-audit-report.json",
+      "bytes": 342,
+      "sha256": "9c6c828456999f7db56fddd525d1ce32b63fbffb6f8199792ae86bb0e66c74ff"
+    },
+    {
+      "path": "docs/product-specification.md",
+      "bytes": 6431,
+      "sha256": "45a728cee78399e46a4b76dac7e7d46fc70791e4ca455b853b120b2756a2187f"
+    },
+    {
+      "path": "docs/release-report.md",
+      "bytes": 2872,
+      "sha256": "561fdfc949a7bbd1686b713c4a76ba47e7ad22f624fa62cdd5007c3447962b11"
+    },
+    {
+      "path": "docs/research-dossier.md",
+      "bytes": 4740,
+      "sha256": "3e50f2f4be38a425eb02db3c6bf5542abb062d4a876a63a93870fd1ca941b4a7"
+    },
+    {
+      "path": "docs/store-listing.md",
+      "bytes": 5209,
+      "sha256": "571fcc7fb14b0f51dc1c60517454b8736be7b111b2c10d69513206f5333f29b8"
+    },
+    {
+      "path": "docs/test-plan.md",
+      "bytes": 1510,
+      "sha256": "fdd500ba4c92babcc5a2f2c453ae1d567c940ee0a6fd6253173320d8a1ad94e4"
+    },
+    {
+      "path": "docs/test-results.md",
+      "bytes": 1722,
+      "sha256": "0a96c5aaf81b3c257ab15dfd3ef57bbc8ac33ec55b229fc127d1038809328452"
+    },
+    {
+      "path": "docs/tutorial-guide.md",
+      "bytes": 5422,
+      "sha256": "e030fa3634a9dcaa5fd85407dd459f7522f3d986aa77285858d8a6fd76adf0c8"
+    },
+    {
+      "path": "docs/validation-report.json",
+      "bytes": 1352,
+      "sha256": "9255f8db31cfc156db4d52a47fed0d9c7530c18e86ee3e4f93c64f935a644b0f"
+    },
+    {
+      "path": "examples/sample-scan-report.json",
+      "bytes": 3649,
+      "sha256": "734165a0d6e441b95af03ae1980d00dda7767c73ec0817115f9c3264e6413eab"
+    },
+    {
+      "path": "examples/secure-hardened-sample.js",
+      "bytes": 3797,
+      "sha256": "f7c7d1932b0f0a472574983430e73a744b07feaead1079b31e0edd981f85f65b"
+    },
+    {
+      "path": "examples/vulnerable-code-sample.js",
+      "bytes": 2198,
+      "sha256": "d7b7272c1ed51a7e11a1f372d95326fdc0b0f2a48429b26222cd72da59676167"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1956,
+      "sha256": "8e75ed3c2c36d1cd6eba6e1fa296b85e931e770ae7d89d32c669b0704411027e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 795,
+      "sha256": "3969a6f1af055ab3a31d94b8e8addd7e753e368f00740f2b6e27132218c98775"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3051,
+      "sha256": "799ccb9f7cb7a8c61a7f10ef1592eaa3584dc723b1d0fca0587ad603ef642367"
+    },
+    {
+      "path": "scripts/scan.mjs",
+      "bytes": 13482,
+      "sha256": "921a25ce837c5d831a9427b30ef2d08919fd5fc2a64e64c611da0ae4552310cf"
+    },
+    {
+      "path": "skills/ai-code-security-sentinel/SKILL.md",
+      "bytes": 7608,
+      "sha256": "d5c23a0080cbeb41383a9507f4c9d7ae717743441a5f6d00f7769646ef013087"
+    },
+    {
+      "path": "tests/security-sentinel.test.mjs",
+      "bytes": 2691,
+      "sha256": "5b13adbd69e44d42e0c54b94dfdea61dec933cc5feb2dd330ce678f29a521dd1"
+    },
+    {
+      "path": "tests/skill-structure.test.mjs",
+      "bytes": 1622,
+      "sha256": "e509e42fc3f878fe0785b8daa29fa0e2f5fdc8d6305f1425ec51e78f3a0619da"
+    }
+  ],
+  "manualReview": [
+    "Commercial license, pricing, and owner approval require manual review."
+  ]
+}

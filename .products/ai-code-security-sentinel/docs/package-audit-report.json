@@ -1,0 +1,11 @@
+{
+  "product": "/Users/deepakbagada/saasnext project/deepak-skills/products/ai-code-security-sentinel",
+  "checkedAt": "2026-11-03T16:36:36.366Z",
+  "passed": [
+    "ai-code-security-sentinel-1.0.0.zip has 28 safe entries"
+  ],
+  "failures": [],
+  "manualReview": [
+    "Archive functionality and owner approval require manual review."
+  ]
+}

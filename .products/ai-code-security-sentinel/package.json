@@ -1,0 +1,28 @@
+{
+  "name": "ai-code-security-sentinel",
+  "version": "1.0.0",
+  "description": "Autonomous pre-commit, pull request, and prompt-time security hardening & OWASP vulnerability audit agent for AI-assisted codebases.",
+  "type": "module",
+  "main": "scripts/scan.mjs",
+  "bin": {
+    "security-sentinel": "scripts/scan.mjs"
+  },
+  "scripts": {
+    "scan": "node scripts/scan.mjs",
+    "scan:json": "node scripts/scan.mjs --json",
+    "scan:strict": "node scripts/scan.mjs --fail-on-high",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "ai-agent",
+    "security-scanner",
+    "owasp",
+    "prompt-injection",
+    "claude-code",
+    "cursor-rules",
+    "zero-dependency",
+    "secret-scanner"
+  ],
+  "author": "Deepak Bagada Systems",
+  "license": "SEE LICENSE IN LICENSE.md"
+}

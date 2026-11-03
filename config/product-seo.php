@@ -113,4 +113,8 @@ return [
         'title' => 'GEO Visibility OS: 40-Rule AI Search & AEO Audit | Deepak',
         'description' => 'Turn "are we visible in ChatGPT?" into a paid $2,500 audit: 40-check scanner, 30-prompt panel, 6 briefs, schema generator & white-label report. 100% offline.',
     ],
+    'ai-code-security-sentinel' => [
+        'title' => 'AI Code Security Sentinel: Pre-Commit OWASP Scanner | Deepak',
+        'description' => 'Stop shipping AI-generated vulnerabilities. Catch secret leaks, prompt injections, and OWASP flaws in under 2 seconds with zero dependencies and 100% offline execution.',
+    ],
 ];

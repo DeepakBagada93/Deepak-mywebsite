@@ -1,0 +1,85 @@
+{
+  "target": "examples/vulnerable-code-sample.js",
+  "scannedAt": "2026-11-03T21:58:00.000Z",
+  "filesScanned": 1,
+  "summary": {
+    "total": 6,
+    "critical": 4,
+    "high": 2,
+    "medium": 0
+  },
+  "findings": [
+    {
+      "ruleId": "SEC-003",
+      "ruleName": "OpenAI API Key Exposure",
+      "severity": "CRITICAL",
+      "category": "secrets",
+      "file": "examples/vulnerable-code-sample.js",
+      "line": 18,
+      "column": 21,
+      "matchSnippet": "const OPENAI_AUTH = \"sk-proj-999999999999999999999999999999999999999999999999\";",
+      "description": "Hardcoded OpenAI Project or Legacy Secret Key detected.",
+      "remediation": "Store in environment variables or cloud secrets management; rotate immediately if exposed."
+    },
+    {
+      "ruleId": "SEC-007",
+      "ruleName": "Embedded Database Connection Credentials",
+      "severity": "CRITICAL",
+      "category": "secrets",
+      "file": "examples/vulnerable-code-sample.js",
+      "line": 19,
+      "column": 17,
+      "matchSnippet": "const DB_URL = \"postgres://dbadmin:SuperSecretP@ssword123!@db.internal.company.com:5432/production\";",
+      "description": "Database connection URI contains hardcoded username and password.",
+      "remediation": "Inject database connection URI from environment variable (e.g. DATABASE_URL)."
+    },
+    {
+      "ruleId": "INJ-001",
+      "ruleName": "SQL Query String Interpolation",
+      "severity": "CRITICAL",
+      "category": "injection",
+      "file": "examples/vulnerable-code-sample.js",
+      "line": 25,
+      "column": 22,
+      "matchSnippet": "const sql = \"SELECT * FROM users WHERE id = \" + userId;",
+      "description": "SQL statement constructed via string concatenation instead of parameterized placeholders.",
+      "remediation": "Use parameterized queries ($1, ?), prepared statements, or a verified ORM query builder."
+    },
+    {
+      "ruleId": "LLM-002",
+      "ruleName": "Direct Execution of Dynamic Code (Eval / Function)",
+      "severity": "CRITICAL",
+      "category": "rce",
+      "file": "examples/vulnerable-code-sample.js",
+      "line": 42,
+      "column": 20,
+      "matchSnippet": "const parsed = eval(req.body.customParser);",
+      "description": "Dynamic code execution detected (eval / Function constructor). If used with LLM outputs or user input, enables arbitrary Remote Code Execution.",
+      "remediation": "Replace eval() with structured parser (JSON.parse), safe AST evaluators, or dedicated sandbox."
+    },
+    {
+      "ruleId": "INJ-004",
+      "ruleName": "Permissive CORS with Credentials Wildcard",
+      "severity": "HIGH",
+      "category": "cors",
+      "file": "examples/vulnerable-code-sample.js",
+      "line": 15,
+      "column": 16,
+      "matchSnippet": "app.use(cors({ origin: true, credentials: true }));",
+      "description": "CORS policy enables wildcard origin alongside credentials: true, exposing user sessions to cross-origin abuse.",
+      "remediation": "Specify explicit, trusted origins in the CORS configuration rather than wildcard or boolean true."
+    },
+    {
+      "ruleId": "SEC-008",
+      "ruleName": "Weak Fallback / Hardcoded JWT Secret",
+      "severity": "HIGH",
+      "category": "auth",
+      "file": "examples/vulnerable-code-sample.js",
+      "line": 20,
+      "column": 20,
+      "matchSnippet": "const JWT_SECRET = process.env.JWT_SECRET || 'insecure_default_fallback_secret_123';",
+      "description": "Cryptographic secret falls back to a weak static string if environment variable is missing.",
+      "remediation": "Throw a startup configuration error if required secret environment variable is undefined."
+    }
+  ]
+}
