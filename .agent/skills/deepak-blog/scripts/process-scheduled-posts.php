@@ -273,7 +273,7 @@ foreach ($duePosts as $p) {
 
             // Lint-guard: a broken data/posts.php takes down the whole site.
             $phpBin = defined('PHP_BINARY') && PHP_BINARY ? PHP_BINARY : '/opt/homebrew/bin/php';
-            exec(escapeshellcmd($phpBin).' -l '.escapeshellarg($postsFile).' 2>&1', $lintOut, $lintCode);
+            exec(escapeshellarg($phpBin).' -l '.escapeshellarg($postsFile).' 2>&1', $lintOut, $lintCode);
             if ($lintCode !== 0) {
                 fwrite(STDERR, '  ❌ PHP syntax error in data/posts.php after edit: '.implode("\n", $lintOut)."\n");
             }
@@ -324,7 +324,7 @@ foreach ($duePosts as $p) {
     }
     $indexingScript = base_path('scripts/google-indexing.py');
     if (file_exists($indexingScript)) {
-        $idxCmd = escapeshellcmd($pythonBin) . ' ' . escapeshellarg($indexingScript) . ' --skip-sitemap --url ' . escapeshellarg($livePostUrl);
+        $idxCmd = escapeshellarg($pythonBin) . ' ' . escapeshellarg($indexingScript) . ' --skip-sitemap --url ' . escapeshellarg($livePostUrl);
         exec($idxCmd, $idxOut, $idxCode);
         if ($idxCode === 0) {
             echo "  ✓ [5/5] Google Indexing API: Submitted {$livePostUrl} successfully!\n";

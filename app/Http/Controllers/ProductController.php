@@ -125,13 +125,6 @@ class ProductController extends Controller
                 'image' => [$url.'/images/about-portrait.png'],
                 'brand' => ['@type' => 'Brand', 'name' => $site['name']],
                 'sku' => $product['slug'],
-                'aggregateRating' => [
-                    '@type' => 'AggregateRating',
-                    'ratingValue' => (string) ($product['rating'] ?? '4.9'),
-                    'reviewCount' => (int) ($product['rating_count'] ?? 48),
-                    'bestRating' => '5',
-                    'worstRating' => '1',
-                ],
                 'offers' => self::offers($product, $url.'/products/'.$slug),
                 'potentialAction' => [
                     '@type' => 'BuyAction',

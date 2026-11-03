@@ -271,7 +271,7 @@ if (!file_exists($pythonBin)) {
 }
 $indexingScript = base_path('scripts/google-indexing.py');
 if (file_exists($indexingScript)) {
-    $idxCmd = escapeshellcmd($pythonBin) . ' ' . escapeshellarg($indexingScript) . ' --url ' . escapeshellarg($liveUrl);
+    $idxCmd = escapeshellarg($pythonBin) . ' ' . escapeshellarg($indexingScript) . ' --url ' . escapeshellarg($liveUrl);
     exec($idxCmd, $idxOut, $idxCode);
     if ($idxCode === 0) {
         echo "  ✓ Google Indexing API: Submitted {$liveUrl} successfully!\n";

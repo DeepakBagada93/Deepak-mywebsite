@@ -3986,3 +3986,43 @@
   - Words: 1483
   - Scheduled Slot: `18:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel Pulse: 5 Queries Killing Your P95 Latency 2026**
+  - Slug: `laravel-pulse-5-slow-queries`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-02 15:30:00`
+  - Words: 1537
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel Hostinger MySQL Outage: 6 Retries Saved Launch 2026**
+  - Slug: `hostinger-mysql-down-6-retries`
+  - Tag: `MY STORY`
+  - Published: `2026-11-02 18:30:00`
+  - Words: 1503
+  - Scheduled Slot: `18:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel GST Invoice Automation: 4 HSN Rules Guide 2026**
+  - Slug: `gst-invoice-automation-hsn-einvoice-laravel`
+  - Tag: `AUTOMATION`
+  - Published: `2026-11-03 06:30:00`
+  - Words: 1680
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Laravel Reverb: 1K WebSocket Connections on ₹6K VPS 2026**
+  - Slug: `laravel-reverb-1k-websockets-vps`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-03 15:30:00`
+  - Words: 1408
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why I Productized Services: ₹55K Builds to ₹499 Kits 2026**
+  - Slug: `productized-services-55k-to-499-kits`
+  - Tag: `MY STORY`
+  - Published: `2026-11-03 18:30:00`
+  - Words: 1543
+  - Scheduled Slot: `18:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

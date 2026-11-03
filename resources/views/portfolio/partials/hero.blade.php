@@ -8,7 +8,7 @@
             <span class="split-lines"><span>AI systems,</span></span>
             <span class="split-lines"><span>built to <span class="accent">ship.</span></span></span>
         </h1>
-        <p class="hero__roles reveal" data-reveal>AI Agent Developer India · Enterprise AI Automation India · Web Developer Junagadh</p>
+        <p class="hero__roles reveal" data-reveal>AI Agent Developer India · AI Automation Agency India · Enterprise AI Automation India · Web Developer Junagadh</p>
 
         <div class="hero__rule" aria-hidden="true"></div>
 
@@ -17,7 +17,7 @@
                 <p class="hero__lede reveal" data-reveal>
                     I architect <strong>autonomous AI agents</strong>, <strong>multi-agent systems</strong>, and
                     <strong>custom AI agent development India</strong>-wide that runs 24/7.
-                    Based in <strong>Junagadh, Gujarat</strong>, I help teams across India ship production AI
+                    As a dedicated <strong>AI automation agency India</strong> partner based in <strong>Junagadh, Gujarat</strong>, I help teams across India ship production AI
                     systems — not demos.
                 </p>
                 <div class="hero__cta reveal" data-reveal>
