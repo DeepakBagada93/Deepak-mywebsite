@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                @if (! empty($product['image']))
+                @if (! empty($product['image']) && file_exists(public_path(ltrim($product['image'], '/'))))
                 <div class="store-detail__hero-visual" data-reveal style="margin:24px 0 28px 0;border:1px solid var(--hair);border-radius:8px;overflow:hidden;background:#0a0d14;box-shadow:0 12px 32px rgba(0,0,0,0.08);">
                     <div style="position:relative;">
                         <picture>
@@ -55,8 +55,8 @@
                             <img src="{{ $product['image'] }}" alt="{{ $product['title'] }} — Product Mockup & Architecture Dashboard" width="1200" height="675" style="width:100%;height:auto;display:block;object-fit:cover;" loading="eager" fetchpriority="high">
                         </picture>
                         <div style="padding:10px 16px;background:rgba(10,13,20,0.92);border-top:1px solid rgba(255,255,255,0.08);color:#94a3b8;font-size:0.78rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-                            <span class="mono" style="color:#38bdf8;">⚡ Scored 40-Rule Auditor · 30-Prompt Panel · White-Label Deliverables</span>
-                            <span class="mono" style="color:#10b981;">✓ 100% Offline · Zero API Subscriptions</span>
+                            <span class="mono" style="color:#38bdf8;">⚡ {{ $product['image_badge'] ?? (! empty($product['badge']) ? $product['badge'].' · Production Architecture' : 'Production-Ready Architecture · Verified Deliverables') }}</span>
+                            <span class="mono" style="color:#10b981;">✓ Instant Private Download · Commercial License</span>
                         </div>
                     </div>
                 </div>

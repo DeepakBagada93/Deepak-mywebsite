@@ -114,7 +114,8 @@ class ProductController extends Controller
         ])->values()->all();
 
         $checkoutUrl = $url.'/products/'.$slug.'/checkout';
-        $productImage = ! empty($product['image']) ? $url.$product['image'] : $url.'/images/about-portrait.png';
+        $hasCustomImage = ! empty($product['image']) && file_exists(public_path(ltrim($product['image'], '/')));
+        $productImage = $hasCustomImage ? $url.$product['image'] : $url.'/images/about-portrait.png';
 
         $productEntity = [
             '@type' => 'Product',

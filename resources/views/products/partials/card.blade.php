@@ -14,9 +14,16 @@
 <article class="store-card {{ $product['is_featured'] ? 'store-card--featured' : '' }}" data-reveal>
     <div class="store-card__top">
         <span class="store-card__icon">{{ $product['icon'] }}</span>
-        @if (! empty($product['badge']))
-            <span class="mono store-card__badge {{ $isFree ? 'store-card__badge--free' : '' }}">{{ $product['badge'] }}</span>
-        @endif
+        <div style="display:flex;align-items:center;gap:8px;">
+            @if (! empty($product['rating']))
+                <span class="mono" style="font-size:0.75rem;color:#eab308;display:inline-flex;align-items:center;gap:3px;" title="{{ $product['rating'] }} rating">
+                    ★ <strong style="color:var(--ink);">{{ number_format($product['rating'], 1) }}</strong>
+                </span>
+            @endif
+            @if (! empty($product['badge']))
+                <span class="mono store-card__badge {{ $isFree ? 'store-card__badge--free' : '' }}">{{ $product['badge'] }}</span>
+            @endif
+        </div>
     </div>
 
     <p class="mono store-card__cat">{{ $product['category'] }}</p>
