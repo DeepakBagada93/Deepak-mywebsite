@@ -12,6 +12,13 @@
     $isAllFree = $products->every(fn ($p) => $p['is_free']);
     $savingsInr = $compareTotalInr > $totalInr ? ($compareTotalInr - $totalInr) : 0;
     $savingsUsd = $compareTotalUsd > $totalUsd ? ($compareTotalUsd - $totalUsd) : 0;
+    $checkoutAnalyticsItems = $products->map(fn ($p) => [
+        'item_id' => $p['slug'],
+        'item_name' => $p['title'],
+        'item_category' => $p['category'] ?? 'Digital Product',
+        'price_inr' => \App\Support\Money::priceFor($p, 'INR'),
+        'price_usd' => \App\Support\Money::priceFor($p, 'USD'),
+    ])->values()->all();
 @endphp
 
 <section class="checkout-page">
@@ -377,6 +384,41 @@
         syncCurrency();
     });
 
+    // GA4 & Meta organic e-commerce event: begin_checkout
+    (function () {
+        try {
+            var cur = currentCurrency();
+            var val = cur === 'INR' ? @json($totalInr) : @json($totalUsd);
+            var analyticsItems = @json($checkoutAnalyticsItems);
+            var itemsPayload = analyticsItems.map(function (i) {
+                return {
+                    item_id: i.item_id,
+                    item_name: i.item_name,
+                    item_category: i.item_category,
+                    price: cur === 'INR' ? i.price_inr : i.price_usd,
+                    currency: cur,
+                    quantity: 1
+                };
+            });
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'begin_checkout', {
+                    currency: cur,
+                    value: val,
+                    items: itemsPayload
+                });
+            }
+            if (typeof window.fbq === 'function') {
+                window.fbq('track', 'InitiateCheckout', {
+                    content_ids: items,
+                    content_type: 'product',
+                    currency: cur,
+                    value: val,
+                    num_items: items.length
+                });
+            }
+        } catch (e) {}
+    })();
+
     function showError(msg) {
         if (!errorEl) return;
         errorEl.textContent = msg;
@@ -502,6 +544,29 @@
                     if (window.DBCart) window.DBCart.clear();
                     showSuccess(res.data);
                 } else if (res.data.status === 'checkout') {
+                    // GA4 organic e-commerce event: add_payment_info
+                    try {
+                        var cur = currentCurrency();
+                        var val = cur === 'INR' ? @json($totalInr) : @json($totalUsd);
+                        var analyticsItems = @json($checkoutAnalyticsItems);
+                        if (typeof window.gtag === 'function') {
+                            window.gtag('event', 'add_payment_info', {
+                                currency: cur,
+                                value: val,
+                                payment_type: cur === 'INR' ? 'UPI / Netbanking / Cards' : 'International Card',
+                                items: analyticsItems.map(function (i) {
+                                    return {
+                                        item_id: i.item_id,
+                                        item_name: i.item_name,
+                                        price: cur === 'INR' ? i.price_inr : i.price_usd,
+                                        currency: cur,
+                                        quantity: 1
+                                    };
+                                })
+                            });
+                        }
+                    } catch (e) {}
+
                     if (res.data.payment_url) {
                         if (window.DBCart) window.DBCart.clear();
                         window.location.href = res.data.payment_url;

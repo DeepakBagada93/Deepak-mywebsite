@@ -169,6 +169,37 @@
         document.body.classList.add('no-scroll');
         var first = form.querySelector('input[name="name"]');
         if (first) setTimeout(function () { first.focus(); }, 60);
+
+        // GA4 & Meta organic e-commerce: begin_checkout
+        try {
+            var cur = currency();
+            var totalVal = items.reduce(function (sum, i) { return sum + Number(priceOf(i)); }, 0);
+            var eventItems = items.map(function (i) {
+                return {
+                    item_id: i.slug,
+                    item_name: i.title,
+                    price: priceOf(i),
+                    currency: cur,
+                    quantity: 1
+                };
+            });
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'begin_checkout', {
+                    currency: cur,
+                    value: totalVal,
+                    items: eventItems
+                });
+            }
+            if (typeof window.fbq === 'function') {
+                window.fbq('track', 'InitiateCheckout', {
+                    content_ids: items.map(function (i) { return i.slug; }),
+                    content_type: 'product',
+                    currency: cur,
+                    value: totalVal,
+                    num_items: items.length
+                });
+            }
+        } catch (e) {}
     }
 
     document.addEventListener('store:currency', function () {
@@ -307,6 +338,28 @@
             }
             submit.classList.remove('is-loading');
             spinner.style.display = 'none';
+
+            // GA4 organic e-commerce: add_payment_info
+            try {
+                var cur = currency();
+                var totalVal = activeItems.reduce(function (sum, i) { return sum + Number(priceOf(i)); }, 0);
+                if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'add_payment_info', {
+                        currency: cur,
+                        value: totalVal,
+                        payment_type: cur === 'INR' ? 'UPI / Netbanking / Cards' : 'International Card',
+                        items: activeItems.map(function (i) {
+                            return {
+                                item_id: i.slug,
+                                item_name: i.title,
+                                price: priceOf(i),
+                                currency: cur,
+                                quantity: 1
+                            };
+                        })
+                    });
+                }
+            } catch (e) {}
 
             if (res.data.status === 'fulfilled') {
                 if (window.DBCart) window.DBCart.clear();
