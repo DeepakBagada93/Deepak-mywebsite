@@ -6,7 +6,8 @@
     $canon = $head['canonical'] ?? $url . '/';
     $ogType = $head['og_type'] ?? 'website';
     $ogTitle = $head['og_title'] ?? $title;
-    $ogImg = $url . ($head['og_image'] ?? '/images/about-portrait.png');
+    $rawOg = $head['og_image'] ?? '/images/about-portrait.png';
+    $ogImg = str_starts_with($rawOg, 'http') ? $rawOg : $url . '/' . ltrim($rawOg, '/');
     $ogImgAlt = $head['og_image_alt'] ?? 'Deepak Bagada — Best AI Expert & AI Developer in Junagadh, Gujarat, India';
     $robots = $head['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
     $cssFile = public_path('css/app.css');

@@ -114,28 +114,55 @@ class ProductController extends Controller
         ])->values()->all();
 
         $checkoutUrl = $url.'/products/'.$slug.'/checkout';
+        $productImage = ! empty($product['image']) ? $url.$product['image'] : $url.'/images/about-portrait.png';
+
+        $productEntity = [
+            '@type' => 'Product',
+            'name' => $product['title'],
+            'description' => $product['description'],
+            'url' => $url.'/products/'.$slug,
+            'category' => $product['category'],
+            'image' => [$productImage],
+            'brand' => ['@type' => 'Brand', 'name' => $site['name']],
+            'sku' => $product['slug'],
+            'offers' => self::offers($product, $url.'/products/'.$slug),
+            'potentialAction' => [
+                '@type' => 'BuyAction',
+                'target' => ['@type' => 'EntryPoint', 'url' => $checkoutUrl, 'actionPlatform' => 'http://schema.org/DesktopWebPlatform'],
+                'priceSpecification' => self::offers($product, $url.'/products/'.$slug),
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => $url.'/products/'.$slug,
+            ],
+        ];
+
+        if (! empty($product['rating'])) {
+            $productEntity['aggregateRating'] = [
+                '@type' => 'AggregateRating',
+                'ratingValue' => (string) $product['rating'],
+                'reviewCount' => (string) ($product['rating_count'] ?? 1),
+                'bestRating' => '5',
+                'worstRating' => '1',
+            ];
+        }
+
+        if (! empty($product['testimonials']) && is_array($product['testimonials'])) {
+            $productEntity['review'] = collect($product['testimonials'])->map(static fn ($t) => [
+                '@type' => 'Review',
+                'author' => ['@type' => 'Person', 'name' => $t['author']],
+                'reviewBody' => $t['quote'],
+                'reviewRating' => [
+                    '@type' => 'Rating',
+                    'ratingValue' => (string) ($t['rating'] ?? 5),
+                    'bestRating' => '5',
+                    'worstRating' => '1',
+                ],
+            ])->all();
+        }
 
         $graph = [
-            [
-                '@type' => 'Product',
-                'name' => $product['title'],
-                'description' => $product['description'],
-                'url' => $url.'/products/'.$slug,
-                'category' => $product['category'],
-                'image' => [$url.'/images/about-portrait.png'],
-                'brand' => ['@type' => 'Brand', 'name' => $site['name']],
-                'sku' => $product['slug'],
-                'offers' => self::offers($product, $url.'/products/'.$slug),
-                'potentialAction' => [
-                    '@type' => 'BuyAction',
-                    'target' => ['@type' => 'EntryPoint', 'url' => $checkoutUrl, 'actionPlatform' => 'http://schema.org/DesktopWebPlatform'],
-                    'priceSpecification' => self::offers($product, $url.'/products/'.$slug),
-                ],
-                'mainEntityOfPage' => [
-                    '@type' => 'WebPage',
-                    '@id' => $url.'/products/'.$slug,
-                ],
-            ],
+            $productEntity,
             [
                 '@type' => 'WebPage',
                 '@id' => $url.'/products/'.$slug,
@@ -179,6 +206,7 @@ class ProductController extends Controller
             'canonical' => $url.'/products/'.$slug,
             'og_title' => $product['title'].' | '.$site['name'],
             'og_description' => $seoDescription,
+            'og_image' => $productImage,
             'json_ld' => json_encode([
                 '@context' => 'https://schema.org',
                 '@graph' => $graph,
