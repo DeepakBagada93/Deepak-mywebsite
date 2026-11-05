@@ -25,8 +25,14 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::directive('markdown', static fn (string $expression) => "<?php echo \App\Support\Markdown::render($expression); ?>");
 
-        // Active storefront currency (INR/USD), shared with every view so the
-        // layout and product pages can render the correct default instantly.
+        // Active storefront currency (INR/USD), shared globally with every view
+        // so layouts and product pages render the detected currency.
+        View::composer('*', static function ($view): void {
+            if (! array_key_exists('storeCurrency', $view->getData())) {
+                $view->with('storeCurrency', StoreCurrency::current());
+            }
+        });
+
         View::share('storeCurrency', StoreCurrency::current());
 
         // The footer lists projects on every page, so provide them via a composer.

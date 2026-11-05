@@ -74,6 +74,14 @@
         var lang = (navigator.language || '').replace('_', '-').toLowerCase();
         var tz = '';
         try { tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '').toLowerCase(); } catch (e) {}
+
+        // Automatically detect Indian timezone or language and default to INR
+        var isIndianTz = tz === 'asia/kolkata' || tz === 'asia/calcutta' || tz.indexOf('kolkata') !== -1 || tz.indexOf('calcutta') !== -1;
+        var isIndianLang = lang.indexOf('-in') !== -1 || lang === 'hi' || lang.indexOf('hi-') === 0;
+        if ((isIndianTz || isIndianLang) && VALID.indexOf('INR') !== -1) {
+            return 'INR';
+        }
+
         for (var i = 0; i < HINTS.length; i++) {
             var h = String(HINTS[i]).replace('_', '-').toLowerCase();
             if (h.slice(-1) === '/') { if (tz.indexOf(h) === 0) return 'USD'; }
@@ -97,13 +105,18 @@
             set(cookieMatch[1]);
         } else {
             var detected = detect();
-            if (detected && detected !== DEFAULT) {
+            if (detected) {
                 set(detected);
             } else {
                 sync();
             }
         }
     }
+
+    document.addEventListener('store:currency', function () {
+        sync();
+    });
+
     sync();
 
     window.DBStoreCurrency = {

@@ -4066,3 +4066,11 @@
   - Words: 1339
   - Scheduled Slot: `18:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Engineer Salary in India: 2026 Hiring & Rate Matrix**
+  - Slug: `ai-engineer-salary-india-2026-rates`
+  - Tag: `BUSINESS`
+  - Published: `2026-11-05 06:30:00`
+  - Words: 1608
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB

@@ -87,11 +87,17 @@
                                         <span class="mono">Secured by Razorpay Payments</span>
                                         <span class="checkout-methods-banner__ssl mono">🔒 RBI Authorized</span>
                                     </div>
-                                    <div class="checkout-methods-banner__icons">
-                                        <span class="pay-badge">⚡ UPI (GPay / PhonePe / Paytm / BHIM)</span>
-                                        <span class="pay-badge">💳 Credit & Debit Cards (Visa / MC / RuPay)</span>
+                                    <div class="checkout-methods-banner__icons" data-cur="INR">
+                                        <span class="pay-badge pay-badge--highlight" style="border-color:var(--ink);background:var(--surface);font-weight:600;box-shadow:0 0 0 1px var(--ink);">⚡ UPI (Google Pay / PhonePe / Paytm / QR)</span>
+                                        <span class="pay-badge">💳 Credit &amp; Debit Cards (Visa / MC / RuPay)</span>
                                         <span class="pay-badge">🏦 Net Banking (50+ Banks)</span>
-                                        <span class="pay-badge">🌐 International Cards</span>
+                                        <span class="pay-badge">⚡ Instant Authorization</span>
+                                    </div>
+                                    <div class="checkout-methods-banner__icons" data-cur="USD" style="display:none;">
+                                        <span class="pay-badge pay-badge--highlight" style="border-color:var(--ink);background:var(--surface);font-weight:600;box-shadow:0 0 0 1px var(--ink);">💳 International Cards (Visa / Mastercard / Amex)</span>
+                                        <span class="pay-badge">🌐 Global Card Checkout</span>
+                                        <span class="pay-badge">🔒 256-Bit SSL Encrypted</span>
+                                        <span class="pay-badge">⚡ Instant USD Processing</span>
                                     </div>
                                 </div>
                             @endif
@@ -106,8 +112,8 @@
                                 @if ($isAllFree)
                                     Get Free Download →
                                 @else
-                                    <span data-cur="USD">Pay {{ \App\Support\Money::format($totalUsd, 'USD') }} & Download →</span>
-                                    <span data-cur="INR">Pay {{ \App\Support\Money::format($totalInr, 'INR') }} & Download →</span>
+                                    <span data-cur="INR">Pay {{ \App\Support\Money::format($totalInr, 'INR') }} via UPI / Cards →</span>
+                                    <span data-cur="USD" style="display:none;">Pay {{ \App\Support\Money::format($totalUsd, 'USD') }} with Card →</span>
                                 @endif
                             </span>
                             <span class="checkout-spinner" aria-hidden="true" style="display:none"></span>
@@ -413,6 +419,37 @@
         successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    var phoneInput = form ? form.querySelector('input[name="phone"]') : null;
+    if (phoneInput) {
+        function checkPhoneForEmail(val) {
+            if (!val) return false;
+            if (val.indexOf('@') !== -1 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim())) {
+                phoneInput.value = '';
+                showError('Please enter a valid phone number, not an email address.');
+                return true;
+            }
+            return false;
+        }
+
+        phoneInput.addEventListener('paste', function (e) {
+            var pasted = '';
+            if (e.clipboardData && e.clipboardData.getData) {
+                pasted = e.clipboardData.getData('text');
+            } else if (window.clipboardData && window.clipboardData.getData) {
+                pasted = window.clipboardData.getData('Text');
+            }
+            if (pasted && (pasted.indexOf('@') !== -1 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(pasted.trim()))) {
+                e.preventDefault();
+                phoneInput.value = '';
+                showError('Please enter a valid phone number, not an email address.');
+            }
+        });
+
+        phoneInput.addEventListener('input', function () {
+            checkPhoneForEmail(this.value);
+        });
+    }
+
     if (form) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -420,8 +457,14 @@
 
             var name = form.name.value.trim();
             var email = form.email.value.trim();
+            var phone = form.phone ? form.phone.value.trim() : '';
             if (!name || !email) {
                 showError('Please provide your name and email address to proceed.');
+                return;
+            }
+            if (phone && (phone.indexOf('@') !== -1 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(phone))) {
+                if (form.phone) form.phone.value = '';
+                showError('Please enter a valid phone number, not an email address.');
                 return;
             }
 

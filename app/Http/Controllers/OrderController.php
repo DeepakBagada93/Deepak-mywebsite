@@ -6,6 +6,7 @@ use App\Models\ProductOrder;
 use App\Services\OrderFulfiller;
 use App\Services\RazorpayService;
 use App\Support\Money;
+use App\Support\StoreCurrency;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -18,6 +19,15 @@ class OrderController extends Controller
 
     public function initiate(Request $request)
     {
+        if ($request->filled('phone')) {
+            $rawPhone = trim((string) $request->input('phone'));
+            if (str_contains($rawPhone, '@') || filter_var($rawPhone, FILTER_VALIDATE_EMAIL)) {
+                throw ValidationException::withMessages([
+                    'phone' => 'Please provide a valid phone number. An email address cannot be used as a phone number.',
+                ]);
+            }
+        }
+
         $data = $request->validate([
             'items' => ['nullable', 'array', 'min:1', 'max:12'],
             'items.*' => ['required', 'string'],
@@ -25,11 +35,13 @@ class OrderController extends Controller
             'currency' => ['nullable', 'string', 'max:8'],
             'name' => ['required', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:180'],
-            'phone' => ['nullable', 'string', 'max:20'],
+            'phone' => ['nullable', 'string', 'max:25', 'regex:/^[0-9+\s()\-]{7,25}$/'],
+        ], [
+            'phone.regex' => 'Please enter a valid phone number (digits, +, hyphens, or parentheses only).',
         ]);
 
-        // Resolve and validate the checkout currency (INR default, USD for international).
-        $currency = strtoupper((string) ($data['currency'] ?? Money::default()));
+        // Resolve and validate the checkout currency (defaults to StoreCurrency::current($request)).
+        $currency = strtoupper((string) (! empty($data['currency']) ? $data['currency'] : StoreCurrency::current($request)));
         if (! Money::supports($currency)) {
             throw ValidationException::withMessages([
                 'currency' => 'Unsupported currency.',
@@ -361,12 +373,7 @@ class OrderController extends Controller
         }
 
         $product = $products->first();
-        $cookieCurrency = $request->cookie(config('store.cookie', 'store_currency'));
-        $queryCurrency = $request->query('currency');
-        $currency = strtoupper((string) ($queryCurrency ?: $cookieCurrency ?: Money::default()));
-        if (! Money::supports($currency)) {
-            $currency = Money::default();
-        }
+        $currency = StoreCurrency::current($request);
         $storeCurrency = $currency;
 
         $head = [

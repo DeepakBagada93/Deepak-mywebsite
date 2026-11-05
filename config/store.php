@@ -53,7 +53,8 @@ return [
 
     // Country/timezone hints used to auto-select a currency for new visitors.
     'auto_detect' => count($currencies) > 1 ? [
-        'USD' => ['America/', 'en_US', 'en-US', 'en_CA', 'en-CA'],
+        'INR' => ['Asia/Kolkata', 'Asia/Calcutta', 'en-IN', 'hi-IN', 'hi', 'IN'],
+        'USD' => ['America/', 'en_US', 'en-US', 'en_CA', 'en-CA', 'US', 'CA', 'GB'],
     ] : [],
 
 ];

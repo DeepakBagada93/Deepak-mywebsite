@@ -7,7 +7,9 @@ use App\Mail\ProductDeliveryMail;
 use App\Models\ProductOrder;
 use App\Models\Subscriber;
 use App\Services\RazorpayService;
+use App\Support\StoreCurrency;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
@@ -645,5 +647,91 @@ class ProductsTest extends TestCase
 
         $inactiveSubscriber->refresh();
         $this->assertSame('active', $inactiveSubscriber->status);
+    }
+
+    public function test_currency_geo_detection_via_cloudflare_headers(): void
+    {
+        $responseIn = $this->withHeaders(['CF-IPCountry' => 'IN'])->get('/products');
+        $responseIn->assertStatus(200);
+        $this->assertSame('INR', StoreCurrency::current(request()));
+
+        $responseUs = $this->withHeaders(['CF-IPCountry' => 'US'])->get('/products');
+        $responseUs->assertStatus(200);
+        $this->assertSame('USD', StoreCurrency::current(request()));
+    }
+
+    public function test_currency_detection_via_accept_language(): void
+    {
+        $req = Request::create('/products', 'GET', [], [], [], [
+            'HTTP_ACCEPT_LANGUAGE' => 'en-IN,en;q=0.9,hi;q=0.8',
+        ]);
+        $this->assertSame('INR', StoreCurrency::current($req));
+
+        $reqHi = Request::create('/products', 'GET', [], [], [], [
+            'HTTP_ACCEPT_LANGUAGE' => 'hi,en;q=0.5',
+        ]);
+        $this->assertSame('INR', StoreCurrency::current($reqHi));
+
+        $reqUs = Request::create('/products', 'GET', [], [], [], [
+            'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9',
+        ]);
+        $this->assertSame('USD', StoreCurrency::current($reqUs));
+    }
+
+    public function test_order_phone_validation_rejects_email(): void
+    {
+        $response = $this->postJson('/products/checkout', [
+            'items' => ['mcp-server-launch-kit'],
+            'name' => 'Test User',
+            'email' => 'user@example.com',
+            'phone' => 'user@example.com',
+        ]);
+
+        $response->assertStatus(422)
+            ->assertJsonValidationErrors(['phone']);
+    }
+
+    public function test_order_phone_validation_rejects_letters(): void
+    {
+        $response = $this->postJson('/products/checkout', [
+            'items' => ['mcp-server-launch-kit'],
+            'name' => 'Test User',
+            'email' => 'user@example.com',
+            'phone' => 'call-me-maybe',
+        ]);
+
+        $response->assertStatus(422)
+            ->assertJsonValidationErrors(['phone']);
+    }
+
+    public function test_order_initiate_defaults_currency_to_geo_detected_store_currency(): void
+    {
+        config(['services.razorpay.key_id' => 'test_key', 'services.razorpay.key_secret' => 'test_secret']);
+        Http::fake([
+            '*/orders' => Http::response([
+                'id' => 'order_auto_inr',
+                'amount' => 349900,
+                'currency' => 'INR',
+                'receipt' => 'rec_auto_inr',
+                'status' => 'created',
+            ], 200),
+        ]);
+
+        $response = $this->withHeaders(['CF-IPCountry' => 'IN'])
+            ->postJson('/products/checkout', [
+                'items' => ['mcp-server-launch-kit'],
+                'name' => 'India Visitor',
+                'email' => 'indiavisitor@example.com',
+                'phone' => '+91 98765 43210',
+            ]);
+
+        $response->assertStatus(200)
+            ->assertJsonPath('status', 'checkout')
+            ->assertJsonPath('currency', 'INR');
+
+        $order = ProductOrder::where('customer_email', 'indiavisitor@example.com')->first();
+        $this->assertNotNull($order);
+        $this->assertSame('INR', $order->currency);
+        $this->assertSame(3499, (int) $order->amount);
     }
 }

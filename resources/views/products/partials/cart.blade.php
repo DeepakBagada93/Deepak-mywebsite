@@ -57,12 +57,18 @@
             </div>
 
             <button type="button" class="btn btn--primary cart-drawer__checkout" id="cart-checkout">
-                <span>Proceed to Checkout →</span>
+                <span class="cart-drawer__checkout-label">Proceed to Checkout →</span>
             </button>
 
-            <div class="cart-drawer__trust mono">
-                <span>🔒 Razorpay PG · 256-Bit SSL</span>
-                <span>⚡ Instant Download</span>
+            <div class="cart-drawer__trust mono" id="cart-drawer-trust">
+                <div data-cur="INR" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;flex-wrap:wrap;">
+                    <span>⚡ Instant UPI &amp; Cards · Razorpay</span>
+                    <span>⚡ Instant Download</span>
+                </div>
+                <div data-cur="USD" style="display:none;align-items:center;justify-content:center;gap:8px;width:100%;flex-wrap:wrap;">
+                    <span>🔒 International Cards · Razorpay</span>
+                    <span>⚡ Instant Download</span>
+                </div>
             </div>
         </div>
     </aside>
@@ -213,6 +219,32 @@
 
         if (subtotalEl) {
             subtotalEl.textContent = total > 0 ? money(total) : 'Free';
+        }
+
+        var cur = currency();
+        var checkoutLabel = drawer ? drawer.querySelector('.cart-drawer__checkout-label') : null;
+        if (checkoutLabel) {
+            if (total > 0) {
+                if (cur === 'INR') {
+                    checkoutLabel.textContent = 'Pay ' + money(total) + ' via UPI / Cards →';
+                } else {
+                    checkoutLabel.textContent = 'Pay ' + money(total) + ' with Card →';
+                }
+            } else {
+                checkoutLabel.textContent = 'Get Free Download →';
+            }
+        }
+
+        var inrTrust = drawer ? drawer.querySelector('#cart-drawer-trust [data-cur="INR"]') : null;
+        var usdTrust = drawer ? drawer.querySelector('#cart-drawer-trust [data-cur="USD"]') : null;
+        if (inrTrust && usdTrust) {
+            if (cur === 'INR') {
+                inrTrust.style.removeProperty('display');
+                usdTrust.style.setProperty('display', 'none', 'important');
+            } else {
+                inrTrust.style.setProperty('display', 'none', 'important');
+                usdTrust.style.removeProperty('display');
+            }
         }
     }
 

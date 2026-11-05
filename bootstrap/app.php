@@ -15,6 +15,10 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->prepend(RedirectPublicPrefix::class);
 
+        $middleware->encryptCookies(except: [
+            'store_currency',
+        ]);
+
         $middleware->validateCsrfTokens(except: [
             'webhooks/razorpay',
         ]);

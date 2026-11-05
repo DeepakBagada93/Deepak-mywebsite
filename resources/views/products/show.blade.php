@@ -326,9 +326,29 @@
                         <p class="mono" style="font-weight:600;color:var(--ink);margin:0 0 6px 0;display:flex;align-items:center;gap:6px;">
                             <span>🔒</span> 256-Bit SSL Encrypted Checkout
                         </p>
-                        <p style="color:var(--muted);margin:0 0 8px 0;line-height:1.4;">
-                            Secured by Razorpay · UPI (GPay, PhonePe, Paytm, BHIM), Cards &amp; Netbanking.
-                        </p>
+                        <div data-cur="INR">
+                            <p style="color:var(--muted);margin:0 0 8px 0;line-height:1.4;">
+                                ⚡ Instant UPI (Google Pay, PhonePe, Paytm, QR) &amp; Cards · Secured by Razorpay
+                            </p>
+                            <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;">
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">⚡ UPI</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Google Pay</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">PhonePe</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Paytm</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Cards</span>
+                            </div>
+                        </div>
+                        <div data-cur="USD" style="display:none;">
+                            <p style="color:var(--muted);margin:0 0 8px 0;line-height:1.4;">
+                                🔒 International Credit &amp; Debit Cards (Visa, Mastercard, Amex) · Secured by Razorpay
+                            </p>
+                            <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;">
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">💳 Visa</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Mastercard</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Amex</span>
+                                <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">International Cards</span>
+                            </div>
+                        </div>
                         <p class="mono" style="color:#15803d;font-weight:600;margin:0;">
                             🛡️ 30-Day 100% Money-Back Guarantee
                         </p>
@@ -359,10 +379,21 @@
             <div class="store__price store-mobile-sticky__price">
                 @include('products.partials.price', ['product' => $product])
             </div>
+            @if (! $isFree)
+                <div class="mono" style="font-size:0.62rem;color:var(--text-muted);display:flex;align-items:center;gap:4px;margin-top:2px;">
+                    <span data-cur="INR">⚡ UPI · GPay · PhonePe · Cards</span>
+                    <span data-cur="USD" style="display:none;">💳 Visa · Mastercard · Amex</span>
+                </div>
+            @endif
         </div>
         <div class="store-mobile-sticky__actions">
             <a href="{{ route('products.checkout.single', $product['slug']) }}" class="btn btn--primary store-mobile-sticky__btn">
-                {{ $isFree ? 'Download' : 'Buy now' }}
+                @if ($isFree)
+                    Download
+                @else
+                    <span data-cur="INR">⚡ Pay UPI →</span>
+                    <span data-cur="USD" style="display:none;">Pay Card →</span>
+                @endif
             </a>
             <button type="button" class="btn btn--ghost store-mobile-sticky__cart" data-add-cart="{{ $product['slug'] }}" aria-label="Add to cart">
                 + Cart

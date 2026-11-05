@@ -23,7 +23,7 @@
             </label>
             <label class="store-field">
                 <span class="mono">Phone (optional)</span>
-                <input type="tel" name="phone" autocomplete="tel" placeholder="+91 98765 43210">
+                <input type="tel" name="phone" id="store-modal-phone" autocomplete="tel" placeholder="+91 98765 43210">
             </label>
 
             <p class="store-modal__error" id="store-modal-error" style="display:none"></p>
@@ -32,7 +32,22 @@
                 <span class="store-modal__submit-label">Pay & get download →</span>
                 <span class="store-modal__spinner" aria-hidden="true"></span>
             </button>
-            <p class="store-modal__note mono">🔒 Secured by Razorpay · No account needed · Download link emailed to you instantly</p>
+            <div class="store-modal__badges" id="store-modal-badges" style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:4px 0 2px;">
+                <div data-cur="INR" style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;">
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">⚡ UPI</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Google Pay</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">PhonePe</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Paytm</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Cards</span>
+                </div>
+                <div data-cur="USD" style="display:none;gap:4px;flex-wrap:wrap;justify-content:center;">
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">💳 Visa</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Mastercard</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">Amex</span>
+                    <span class="pay-badge" style="font-size:0.62rem;padding:3px 7px;">International Cards</span>
+                </div>
+            </div>
+            <p class="store-modal__note mono" id="store-modal-trust">⚡ Instant UPI (Google Pay, PhonePe, Paytm, QR) &amp; Cards · Secured by Razorpay</p>
         </form>
 
         <div class="store-modal__success" id="store-success" style="display:none">
@@ -89,6 +104,7 @@
     function render() {
         var items = activeItems;
         var total = items.reduce(function (sum, i) { return sum + Number(priceOf(i)); }, 0);
+        var cur = currency();
 
         titleEl.textContent = items.length > 1 ? ('Checkout · ' + items.length + ' items') : items[0].title;
         priceEl.innerHTML = total > 0
@@ -104,7 +120,38 @@
         });
         itemsEl.style.display = items.length > 1 ? '' : 'none';
 
-        submitLabel.textContent = total > 0 ? ('Pay ' + money(total) + ' →') : 'Get download →';
+        var trustEl = document.getElementById('store-modal-trust');
+        var badgesInr = modal.querySelector('.store-modal__badges [data-cur="INR"]');
+        var badgesUsd = modal.querySelector('.store-modal__badges [data-cur="USD"]');
+
+        if (badgesInr && badgesUsd) {
+            if (cur === 'INR') {
+                badgesInr.style.display = total > 0 ? 'flex' : 'none';
+                badgesUsd.style.display = 'none';
+            } else {
+                badgesInr.style.display = 'none';
+                badgesUsd.style.display = total > 0 ? 'flex' : 'none';
+            }
+        }
+
+        if (total > 0) {
+            if (cur === 'INR') {
+                submitLabel.textContent = 'Pay ' + money(total) + ' via UPI / Cards →';
+                if (trustEl) {
+                    trustEl.textContent = '⚡ Instant UPI (Google Pay, PhonePe, Paytm, QR) & Cards · Secured by Razorpay';
+                }
+            } else {
+                submitLabel.textContent = 'Pay ' + money(total) + ' with Card →';
+                if (trustEl) {
+                    trustEl.textContent = '🔒 International Credit & Debit Cards (Visa, Mastercard, Amex) · Secured by Razorpay';
+                }
+            }
+        } else {
+            submitLabel.textContent = 'Get download →';
+            if (trustEl) {
+                trustEl.textContent = '🎁 Free download · Instant access link emailed to you';
+            }
+        }
     }
 
     document.addEventListener('store:currency', function () {
@@ -186,13 +233,50 @@
         }
     }
 
+    var phoneInput = form.querySelector('input[name="phone"]');
+    if (phoneInput) {
+        function checkPhoneForEmail(val) {
+            if (!val) return false;
+            if (val.indexOf('@') !== -1 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim())) {
+                phoneInput.value = '';
+                showError('Please enter a valid phone number, not an email address.');
+                return true;
+            }
+            return false;
+        }
+
+        phoneInput.addEventListener('paste', function (e) {
+            var pasted = '';
+            if (e.clipboardData && e.clipboardData.getData) {
+                pasted = e.clipboardData.getData('text');
+            } else if (window.clipboardData && window.clipboardData.getData) {
+                pasted = window.clipboardData.getData('Text');
+            }
+            if (pasted && (pasted.indexOf('@') !== -1 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(pasted.trim()))) {
+                e.preventDefault();
+                phoneInput.value = '';
+                showError('Please enter a valid phone number, not an email address.');
+            }
+        });
+
+        phoneInput.addEventListener('input', function () {
+            checkPhoneForEmail(this.value);
+        });
+    }
+
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (submit.classList.contains('is-loading')) return;
 
         var name = form.name.value.trim();
         var email = form.email.value.trim();
+        var phone = form.phone.value.trim();
         if (!name || !email) { showError('Name and email are required.'); return; }
+        if (phone && (phone.indexOf('@') !== -1 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(phone))) {
+            form.phone.value = '';
+            showError('Please enter a valid phone number, not an email address.');
+            return;
+        }
 
         submit.classList.add('is-loading');
         submitLabel.textContent = 'Processing…';
