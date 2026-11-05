@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'Why AI SaaS MVPs Bleed Cash: The ₹2.4L LLM Token Audit 2026',
-        'slug'         => 'ai-saas-token-cost-audit-bleed',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Why AI SaaS MVPs bleed cash in 2026: the ₹2.4L monthly token leak audit. How schema caching, prompt pruning, and semantic deduplication save 74% on bills.',
-        'body'         => <<<'BODY'
+        'title' => 'Why AI SaaS MVPs Bleed Cash: The ₹2.4L LLM Token Audit 2026',
+        'slug' => 'ai-saas-token-cost-audit-bleed',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Why AI SaaS MVPs bleed cash in 2026: the ₹2.4L monthly token leak audit. How schema caching, prompt pruning, and semantic deduplication save 74% on bills.',
+        'body' => <<<'BODY'
 An AI token leak is the unmonitored operational overhead where automated agent loops, redundant system prompts, and hallucinated schema retries consume hundreds of thousands of billed API tokens without generating user value.
 
 **Quick Answer**: In our Junagadh engineering lab audit of 12 Indian AI SaaS MVPs for 2026, the average startup bled ₹2,40,000 monthly in wasted LLM inference costs due to bloated system instructions, uncompressed document context, and runaway agent retry loops. By implementing prompt prefix caching, semantic similarity deduplication, and strict Pydantic perimeter validation, engineering teams cut monthly token bills by 74% while improving response speeds.
@@ -180,11 +180,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Next.js WebAssembly PDF: Cut Server Load 85% in 2026',
-        'slug'         => 'webassembly-pdf-processing-nextjs',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Next.js WebAssembly PDF guide 2026: client-side processing cutting server load 85%. Production code, Web Worker threads, and sub-1s document compression.',
-        'body'         => <<<'BODY'
+        'title' => 'Next.js WebAssembly PDF: Cut Server Load 85% in 2026',
+        'slug' => 'webassembly-pdf-processing-nextjs',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Next.js WebAssembly PDF guide 2026: client-side processing cutting server load 85%. Production code, Web Worker threads, and sub-1s document compression.',
+        'body' => <<<'BODY'
 WebAssembly PDF processing is the architectural technique of compiling C++ or Rust document processing engines into client-side WASM binaries that execute directly inside the user's browser thread.
 
 **Quick Answer**: Migrating PDF compression, merging, and rendering to client-side WebAssembly in Next.js 15 cuts backend server compute loads by 85% and eliminates server memory exhaustion spikes. By offloading resource-heavy Ghostscript or pdfcpu operations to browser Web Worker threads, engineering teams achieve zero upload latency, guarantee complete document privacy, and support unlimited concurrent operations without expanding VPS infrastructure.
@@ -420,11 +420,11 @@ BODY,
     ],
 
     [
-        'title'        => 'DeepSeek R1 vs OpenAI o3-mini: Agent Benchmark Guide 2026',
-        'slug'         => 'deepseek-r1-vs-o3-mini-reasoning',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'DeepSeek R1 vs OpenAI o3-mini 2026: 100K synthetic agent runs benchmarked for 42ms P95 latency, tool accuracy, and an 82% token cost reduction ledger.',
-        'body'         => <<<'BODY'
+        'title' => 'DeepSeek R1 vs OpenAI o3-mini: Agent Benchmark Guide 2026',
+        'slug' => 'deepseek-r1-vs-o3-mini-reasoning',
+        'tag' => 'AI DEV',
+        'excerpt' => 'DeepSeek R1 vs OpenAI o3-mini 2026: 100K synthetic agent runs benchmarked for 42ms P95 latency, tool accuracy, and an 82% token cost reduction ledger.',
+        'body' => <<<'BODY'
 DeepSeek R1 and OpenAI o3-mini are state-of-the-art reasoning models engineered to solve complex logic, coding, and multi-step tool-calling workflows via test-time reinforcement learning.
 
 **Quick Answer**: In our 100,000-run autonomous agent benchmark for 2026, DeepSeek R1 outperforms OpenAI o3-mini in structured tool argument accuracy (97.4% vs 95.8%) while reducing API inference costs by 82%. However, OpenAI o3-mini maintains a significant advantage in Time to First Token (TTFT of 410ms vs 890ms) and multi-turn conversational context preservation, making o3-mini superior for real-time human interaction while DeepSeek R1 dominates asynchronous background swarms.
@@ -611,11 +611,11 @@ BODY,
     ],
 
     [
-        'title'        => 'FastMCP Python Server: Build Low-Latency AI Agent Tools 2026',
-        'slug'         => 'fastmcp-python-server-agent-tools',
-        'tag'          => 'AI DEV',
-        'excerpt'      => 'FastMCP Python server guide 2026: build async tool servers with sub-42ms P95 latency. Working code, Pydantic schemas, and secure stdio/SSE deployment.',
-        'body'         => <<<'BODY'
+        'title' => 'FastMCP Python Server: Build Low-Latency AI Agent Tools 2026',
+        'slug' => 'fastmcp-python-server-agent-tools',
+        'tag' => 'AI DEV',
+        'excerpt' => 'FastMCP Python server guide 2026: build async tool servers with sub-42ms P95 latency. Working code, Pydantic schemas, and secure stdio/SSE deployment.',
+        'body' => <<<'BODY'
 FastMCP is a high-speed Python framework designed to build Model Context Protocol (MCP) servers that expose secure tools, resources, and prompt templates to LLM reasoning agents.
 
 **Quick Answer**: Building a FastMCP Python server in 2026 allows engineering teams to cut agent tool execution latency to sub-42ms P95 while enforcing strict Pydantic schema validation. By switching from monolithic REST wrapper endpoints to lightweight FastMCP servers running over asynchronous Server-Sent Events (SSE) or stdio transport, developers eliminate JSON hallucination errors and protect private infrastructure with granular permission controls.
@@ -803,11 +803,11 @@ BODY,
     ],
 
     [
-        'title'        => 'JSON-LD Schema Automation: Boost Rich Snippets 35% in 2026',
-        'slug'         => 'json-ld-schema-automation-rich-snippets',
-        'tag'          => 'AUTOMATION',
-        'excerpt'      => 'JSON-LD schema automation in 2026: programmatic Schema.org pipelines that lift CTR 35%. Complete Laravel code, validator rules, and zero-error Rich Snippets.',
-        'body'         => <<<'BODY'
+        'title' => 'JSON-LD Schema Automation: Boost Rich Snippets 35% in 2026',
+        'slug' => 'json-ld-schema-automation-rich-snippets',
+        'tag' => 'AUTOMATION',
+        'excerpt' => 'JSON-LD schema automation in 2026: programmatic Schema.org pipelines that lift CTR 35%. Complete Laravel code, validator rules, and zero-error Rich Snippets.',
+        'body' => <<<'BODY'
 JSON-LD schema automation is the programmatic pipeline that extracts structured data entities from database models, generates Schema.org compliant graph arrays, and injects validated JSON-LD scripts into web responses.
 
 **Quick Answer**: Automating JSON-LD schema generation in Laravel for 2026 increases organic search CTR by 35% and secures Google AI Overview citations by programmatically validating Article, Product, and FAQPage schemas before HTML rendering. By storing structured schemas in Valkey cache and running automated schema linters against Google's Rich Results criteria, engineering teams completely eliminate syntax parse errors and invalid entity nesting.
