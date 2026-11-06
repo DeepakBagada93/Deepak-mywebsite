@@ -1,6 +1,6 @@
 # Image Generation Roadmap & Tomorrow's Action Plan
 
-**Scheduled Execution Window:** Tomorrow (Nov 6, 2026 onwards)  
+**Scheduled Execution Window:** Current Active Batch (Nov 6, 2026 onwards)  
 *Note: The Gemini 3.1 Flash Image quota resets every 4.5 hours.*
 
 ---
@@ -11,30 +11,27 @@
 3. ✅ **Indian D2C ROAS & Anti-RTO Engine** (`/products/d2c-roas-anti-rto-engine`) — [`public/images/products/d2c-roas-anti-rto-engine-mockup.webp`](file:///Users/deepakbagada/saasnext%20project/my-website/public/images/products/d2c-roas-anti-rto-engine-mockup.webp)
 4. ✅ **AI Agency Delivery OS** (`/products/agency-delivery-os`) — [`public/images/products/agency-delivery-os-mockup.webp`](file:///Users/deepakbagada/saasnext%20project/my-website/public/images/products/agency-delivery-os-mockup.webp)
 5. ✅ **MCP Server Launch Kit** (`/products/mcp-server-launch-kit`) — [`public/images/products/mcp-server-launch-kit-mockup.webp`](file:///Users/deepakbagada/saasnext%20project/my-website/public/images/products/mcp-server-launch-kit-mockup.webp)
+6. ✅ **Agent Context Architect** (`/products/agent-context-architect`) — [`public/images/products/agent-context-architect-mockup.webp`](file:///Users/deepakbagada/saasnext%20project/my-website/public/images/products/agent-context-architect-mockup.webp)
+7. ✅ **n8n Production Hardening Pack** (`/products/n8n-hardening-pack`) — [`public/images/products/n8n-hardening-pack-mockup.webp`](file:///Users/deepakbagada/saasnext%20project/my-website/public/images/products/n8n-hardening-pack-mockup.webp)
+8. ✅ **UGC Ad Studio** (`/products/ugc-ad-studio`) — [`public/images/products/ugc-ad-studio-mockup.webp`](file:///Users/deepakbagada/saasnext%20project/my-website/public/images/products/ugc-ad-studio-mockup.webp)
 
 ---
 
-## 📋 Queue for Tomorrow (Batch 2 & 3)
+## 📋 Queue for Next Batch (Batch 3)
 
 When resuming, the exact copy-paste prompts are in [`docs/IMAGE-PROMPTS-CATALOG.md`](file:///Users/deepakbagada/saasnext%20project/my-website/docs/IMAGE-PROMPTS-CATALOG.md):
 
-1. **Agent Context Architect** (`agent-context-architect`)
-   * Target: `public/images/products/agent-context-architect-mockup.webp`
-2. **n8n Production Hardening Pack** (`n8n-hardening-pack`)
-   * Target: `public/images/products/n8n-hardening-pack-mockup.webp`
-3. **UGC Ad Studio** (`ugc-ad-studio`)
-   * Target: `public/images/products/ugc-ad-studio-mockup.webp`
-4. **Ad Creative Lab** (`ad-creative-lab`)
+1. **Ad Creative Lab** (`ad-creative-lab`)
    * Target: `public/images/products/ad-creative-lab-mockup.webp`
-5. **CRO Landing Page Architect** (`cro-landing-page-architect`)
+2. **CRO Landing Page Architect** (`cro-landing-page-architect`)
    * Target: `public/images/products/cro-landing-page-architect-mockup.webp`
-6. **Bharat Local SEO Kit** (`bharat-local-seo-kit`)
+3. **Bharat Local SEO Kit** (`bharat-local-seo-kit`)
    * Target: `public/images/products/bharat-local-seo-kit-mockup.webp`
-7. **AI Inbound Lead Qualification** (`ai-lead-intelligence-engine`)
+4. **AI Inbound Lead Qualification** (`ai-lead-intelligence-engine`)
    * Target: `public/images/products/ai-lead-intelligence-engine-mockup.webp`
-8. **AI Customer Support Sentinel** (`ai-support-triage-sentinel`)
+5. **AI Customer Support Sentinel** (`ai-support-triage-sentinel`)
    * Target: `public/images/products/ai-support-triage-sentinel-mockup.webp`
-9. **AI Content Factory Pipeline** (`ai-content-factory-pipeline`)
+6. **AI Content Factory Pipeline** (`ai-content-factory-pipeline`)
    * Target: `public/images/products/ai-content-factory-pipeline-mockup.webp`
 
 ---
