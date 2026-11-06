@@ -26,4 +26,3 @@ Schedule::command('google:index-compliant')
     ->dailyAt('08:15')
     ->withoutOverlapping()
     ->appendOutputTo(storage_path('logs/google_indexing_cron.log'));
-

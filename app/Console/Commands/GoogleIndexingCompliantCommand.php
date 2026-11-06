@@ -5,9 +5,8 @@ namespace App\Console\Commands;
 use App\Services\GoogleIndexingService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class GoogleIndexingCompliantCommand extends Command
 {
@@ -20,53 +19,56 @@ class GoogleIndexingCompliantCommand extends Command
 
     public function handle(): int
     {
-        $isDryRun = (bool)$this->option('dry-run');
-        $batchSize = (int)$this->option('batch');
-        $cooldownDays = (int)$this->option('cooldown');
+        $isDryRun = (bool) $this->option('dry-run');
+        $batchSize = (int) $this->option('batch');
+        $cooldownDays = (int) $this->option('cooldown');
 
-        $this->info("=========================================================================");
-        $this->info("🌐 DEEPAK BAGADA — GOOGLE COMPLIANT INDEXING ENGINE (v2.0)");
-        $this->info("Mode: " . ($isDryRun ? "DRY-RUN (Simulated)" : "LIVE EXECUTION"));
+        $this->info('=========================================================================');
+        $this->info('🌐 DEEPAK BAGADA — GOOGLE COMPLIANT INDEXING ENGINE (v2.0)');
+        $this->info('Mode: '.($isDryRun ? 'DRY-RUN (Simulated)' : 'LIVE EXECUTION'));
         $this->info("Batch Size: {$batchSize} | Cooldown: {$cooldownDays} days | Pacing: 300ms");
-        $this->info("=========================================================================");
+        $this->info('=========================================================================');
 
         // 1. Quota Check
         $quotaUsed = GoogleIndexingService::getDailyQuotaUsed();
         $remainingQuota = max(0, GoogleIndexingService::MAX_DAILY_QUOTA - $quotaUsed);
 
-        $this->info("📊 Daily Quota Status: {$quotaUsed} / " . GoogleIndexingService::MAX_DAILY_QUOTA . " used ({$remainingQuota} remaining)");
+        $this->info("📊 Daily Quota Status: {$quotaUsed} / ".GoogleIndexingService::MAX_DAILY_QUOTA." used ({$remainingQuota} remaining)");
 
         if ($remainingQuota <= 0) {
-            $this->warn("✅ Daily quota ceiling reached (" . GoogleIndexingService::MAX_DAILY_QUOTA . "/" . GoogleIndexingService::MAX_DAILY_QUOTA . "). Exiting cleanly to protect API reputation.");
+            $this->warn('✅ Daily quota ceiling reached ('.GoogleIndexingService::MAX_DAILY_QUOTA.'/'.GoogleIndexingService::MAX_DAILY_QUOTA.'). Exiting cleanly to protect API reputation.');
+
             return Command::SUCCESS;
         }
 
         $effectiveBatch = min($batchSize, $remainingQuota);
 
         // 2. Ping Sitemap in Search Console
-        if (!$isDryRun) {
-            $this->info("📡 Pinging Google Search Console Sitemap...");
+        if (! $isDryRun) {
+            $this->info('📡 Pinging Google Search Console Sitemap...');
             $pingSuccess = GoogleIndexingService::pingSitemap();
-            $this->line($pingSuccess ? "  ✓ Sitemap ping successful" : "  ⚠️ Sitemap ping returned non-200 (continuing)");
+            $this->line($pingSuccess ? '  ✓ Sitemap ping successful' : '  ⚠️ Sitemap ping returned non-200 (continuing)');
         }
 
         // 3. Fetch Live Sitemap URLs
-        $this->info("🔍 Reading live sitemap URLs...");
+        $this->info('🔍 Reading live sitemap URLs...');
         $allUrls = $this->fetchSitemapUrls();
-        $this->info("  ✓ Found " . count($allUrls) . " total URLs in sitemap.xml");
+        $this->info('  ✓ Found '.count($allUrls).' total URLs in sitemap.xml');
 
         if (empty($allUrls)) {
-            $this->error("No URLs found in sitemap.xml. Aborting.");
+            $this->error('No URLs found in sitemap.xml. Aborting.');
+
             return Command::FAILURE;
         }
 
         // 4. Build Anti-Spam Rotating Queue
         $history = GoogleIndexingService::loadHistory();
         $queue = $this->buildRotatingQueue($allUrls, $history, $effectiveBatch, $cooldownDays);
-        $this->info("📋 Selected " . count($queue) . " URLs for compliant rotation queue.");
+        $this->info('📋 Selected '.count($queue).' URLs for compliant rotation queue.');
 
         if (empty($queue)) {
-            $this->info("✅ All URLs are within cooldown window or already submitted today. Nothing to dispatch.");
+            $this->info('✅ All URLs are within cooldown window or already submitted today. Nothing to dispatch.');
+
             return Command::SUCCESS;
         }
 
@@ -80,15 +82,17 @@ class GoogleIndexingCompliantCommand extends Command
             $total = count($queue);
 
             // Preflight HTTP 200 gate
-            if (!GoogleIndexingService::verifyHttp200($url)) {
+            if (! GoogleIndexingService::verifyHttp200($url)) {
                 $this->warn("  [{$idx}/{$total}] ⚠️ Preflight Failed (Non-200 status): {$url} — Skipped");
                 $skippedCount++;
+
                 continue;
             }
 
             if ($isDryRun) {
                 $this->line("  [{$idx}/{$total}] [SIMULATED] ✓ {$url}");
                 $successCount++;
+
                 continue;
             }
 
@@ -108,8 +112,8 @@ class GoogleIndexingCompliantCommand extends Command
 
                     $prev = $history[$url] ?? [];
                     $history[$url] = [
-                        'last_submitted'   => $nowIso,
-                        'status'           => 200,
+                        'last_submitted' => $nowIso,
+                        'status' => 200,
                         'submission_count' => ($prev['submission_count'] ?? 0) + 1,
                     ];
 
@@ -118,19 +122,19 @@ class GoogleIndexingCompliantCommand extends Command
                     $this->error("  [{$idx}/{$total}] ✗ {$url} -> HTTP {$res['status']}");
                 }
             } catch (\Throwable $e) {
-                $this->error("  [{$idx}/{$total}] ✗ {$url} -> " . $e->getMessage());
+                $this->error("  [{$idx}/{$total}] ✗ {$url} -> ".$e->getMessage());
             }
         }
 
         // 6. Save updated history
-        if (!$isDryRun && $successCount > 0) {
+        if (! $isDryRun && $successCount > 0) {
             GoogleIndexingService::saveHistory($history);
         }
 
-        $this->info("=========================================================================");
+        $this->info('=========================================================================');
         $this->info("🎉 Batch Complete: {$successCount} submitted, {$skippedCount} skipped.");
-        $this->info("📈 Total Daily Quota Now: " . GoogleIndexingService::getDailyQuotaUsed() . " / " . GoogleIndexingService::MAX_DAILY_QUOTA);
-        $this->info("=========================================================================");
+        $this->info('📈 Total Daily Quota Now: '.GoogleIndexingService::getDailyQuotaUsed().' / '.GoogleIndexingService::MAX_DAILY_QUOTA);
+        $this->info('=========================================================================');
 
         return Command::SUCCESS;
     }
@@ -139,20 +143,22 @@ class GoogleIndexingCompliantCommand extends Command
     {
         try {
             $response = Http::timeout(12)->get(GoogleIndexingService::SITEMAP_URL);
-            if (!$response->successful()) {
+            if (! $response->successful()) {
                 return [];
             }
             $xml = simplexml_load_string($response->body());
             $urls = [];
             foreach ($xml->url as $entry) {
-                $loc = trim((string)$entry->loc);
-                if (!empty($loc)) {
+                $loc = trim((string) $entry->loc);
+                if (! empty($loc)) {
                     $urls[] = $loc;
                 }
             }
+
             return $urls;
         } catch (\Throwable $e) {
-            $this->error("Failed to parse sitemap: " . $e->getMessage());
+            $this->error('Failed to parse sitemap: '.$e->getMessage());
+
             return [];
         }
     }
@@ -167,8 +173,9 @@ class GoogleIndexingCompliantCommand extends Command
 
         foreach ($allUrls as $u) {
             $meta = $history[$u] ?? null;
-            if (!$meta || empty($meta['last_submitted'])) {
+            if (! $meta || empty($meta['last_submitted'])) {
                 $neverSubmitted[] = $u;
+
                 continue;
             }
 
@@ -176,6 +183,7 @@ class GoogleIndexingCompliantCommand extends Command
                 $lastSub = Carbon::parse($meta['last_submitted']);
             } catch (\Throwable $e) {
                 $neverSubmitted[] = $u;
+
                 continue;
             }
 
@@ -191,7 +199,7 @@ class GoogleIndexingCompliantCommand extends Command
         }
 
         // Circular fair queue: oldest submitted first
-        usort($eligibleUrls, fn($a, $b) => $a['date']->timestamp <=> $b['date']->timestamp);
+        usort($eligibleUrls, fn ($a, $b) => $a['date']->timestamp <=> $b['date']->timestamp);
 
         $corePrefixes = ['/products', '/services', '/library', '/tools'];
         $tierCore = [];
@@ -200,7 +208,7 @@ class GoogleIndexingCompliantCommand extends Command
         foreach ($eligibleUrls as $item) {
             $u = $item['url'];
             $path = str_replace(GoogleIndexingService::SITE_URL, '', $u);
-            if ($u === GoogleIndexingService::SITE_URL . '/' || \Illuminate\Support\Str::startsWith($path, $corePrefixes)) {
+            if ($u === GoogleIndexingService::SITE_URL.'/' || Str::startsWith($path, $corePrefixes)) {
                 $tierCore[] = $u;
             } else {
                 $tierArchive[] = $u;
@@ -209,13 +217,13 @@ class GoogleIndexingCompliantCommand extends Command
 
         $queue = [];
         foreach ($neverSubmitted as $u) {
-            if (!in_array($u, $queue, true)) {
+            if (! in_array($u, $queue, true)) {
                 $queue[] = $u;
             }
         }
 
         foreach (array_slice($tierCore, 0, 15) as $u) {
-            if (!in_array($u, $queue, true)) {
+            if (! in_array($u, $queue, true)) {
                 $queue[] = $u;
             }
         }
@@ -224,7 +232,7 @@ class GoogleIndexingCompliantCommand extends Command
             if (count($queue) >= $limit) {
                 break;
             }
-            if (!in_array($u, $queue, true)) {
+            if (! in_array($u, $queue, true)) {
                 $queue[] = $u;
             }
         }

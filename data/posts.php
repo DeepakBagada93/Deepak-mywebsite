@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'Why Indian AI Startups Bleed: The Curro AI Playbook 2026',
-        'slug'         => 'why-indian-ai-startups-bleed-curro-ai-playbook-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Why Indian AI startups bleed cash: lessons from building Curro AI in Junagadh. How embedding into ERP workflows cut churn to 2.4% and saved ₹1.2L in 2026.',
-        'body'         => <<<'BODY'
+        'title' => 'Why Indian AI Startups Bleed: The Curro AI Playbook 2026',
+        'slug' => 'why-indian-ai-startups-bleed-curro-ai-playbook-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Why Indian AI startups bleed cash: lessons from building Curro AI in Junagadh. How embedding into ERP workflows cut churn to 2.4% and saved ₹1.2L in 2026.',
+        'body' => <<<'BODY'
 The commercial failure rate of Indian AI startups stems from building standalone chat wrappers that lack deep workflow integration, charge USD pricing in a price-sensitive market, and suffer from catastrophic 60-day customer churn.
 
 **Quick Answer**: In 2026, building a profitable AI software business in India requires ditching standalone chat interfaces and embedding autonomous micro-agents directly into existing enterprise workflows (such as WhatsApp, Tally, and custom ERP systems). At Curro AI and SaaS Next in Junagadh, we survived the AI wrapper bloodbath by pivoting from generic prompt interfaces to deterministic backend systems that charge for measurable business outcomes rather than seat licenses.
@@ -183,11 +183,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Color Palette Generator from Image: Sub-12ms Canvas API 2026',
-        'slug'         => 'color-palette-generator-from-image-canvas-api-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Color palette generator from image: build a sub-12ms client-side extraction tool using HTML5 Canvas & Web Workers in Next.js, cutting server costs to zero.',
-        'body'         => <<<'BODY'
+        'title' => 'Color Palette Generator from Image: Sub-12ms Canvas API 2026',
+        'slug' => 'color-palette-generator-from-image-canvas-api-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Color palette generator from image: build a sub-12ms client-side extraction tool using HTML5 Canvas & Web Workers in Next.js, cutting server costs to zero.',
+        'body' => <<<'BODY'
 A color palette generator from image extracts dominant colors, accent hues, and WCAG-compliant contrast ratios directly in the user's browser using the HTML5 Canvas API and Web Workers without server-side compute.
 
 **Quick Answer**: In 2026, building a high-speed color palette generator from an image requires executing k-means or median-cut color quantization inside an asynchronous Web Worker using an OffscreenCanvas. This client-side architecture delivers sub-12ms palette extraction speeds on mobile devices, eliminates 100% of server image bandwidth costs, and guarantees complete user privacy by never uploading photos to an external server.
