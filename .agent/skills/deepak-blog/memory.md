@@ -4074,3 +4074,89 @@
   - Words: 1608
   - Scheduled Slot: `06:30 AM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI Development Services in India: 2026 Agency Cost Guide**
+  - Slug: `ai-development-services-india-2026-agency-cost`
+  - Tag: `SERVICES`
+  - Scheduled: `2026-11-06 06:30:00`
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **AI Agent Development for SaaS: Multi-Tenant Schema 2026**
+  - Slug: `ai-agent-development-saas-multi-tenant-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-06 09:30:00`
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **Claude 3.7 Sonnet vs DeepSeek R1: 42ms Agent Benchmark 2026**
+  - Slug: `claude-3-7-sonnet-vs-deepseek-r1-benchmark-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-06 12:30:00`
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **Color Palette Generator from Image: Sub-12ms Canvas API 2026**
+  - Slug: `color-palette-generator-from-image-canvas-api-2026`
+  - Tag: `WEB DEV`
+  - Scheduled: `2026-11-06 15:30:00`
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **Why Indian AI Startups Bleed: The Curro AI Playbook 2026**
+  - Slug: `why-indian-ai-startups-bleed-curro-ai-playbook-2026`
+  - Tag: `MY STORY`
+  - Scheduled: `2026-11-06 18:30:00`
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **AEO Services in Ahmedabad: 2026 AI Search Engine Guide**
+  - Slug: `aeo-services-ahmedabad-2026-geo-ranking-playbook`
+  - Tag: `AEO`
+  - Scheduled: `2026-11-07 06:30:00`
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **LangGraph Self-Healing Loops: Auto-Recovery in 2026**
+  - Slug: `langgraph-self-healing-loops-auto-recovery-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-07 09:30:00`
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **DeepSeek V3 vs Llama 3.3 70B: Self-Hosted Agent Test 2026**
+  - Slug: `deepseek-v3-vs-llama-3-3-70b-benchmark-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-07 12:30:00`
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **PDF Merge & Compression in Browser: WebAssembly 2026**
+  - Slug: `pdf-merge-compression-browser-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Scheduled: `2026-11-07 15:30:00`
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **Why I Killed Hourly Billing: The ₹55K Sprint Model 2026**
+  - Slug: `why-i-killed-hourly-billing-55k-sprint-model-2026`
+  - Tag: `MY STORY`
+  - Scheduled: `2026-11-07 18:30:00`
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Audited 100% PASS, Scheduled in Live MySQL scheduled_posts table
+
+- **Color Palette Generator from Image: Sub-12ms Canvas API 2026**
+  - Slug: `color-palette-generator-from-image-canvas-api-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-06 15:30:00`
+  - Words: 1341
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why Indian AI Startups Bleed: The Curro AI Playbook 2026**
+  - Slug: `why-indian-ai-startups-bleed-curro-ai-playbook-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-06 18:30:00`
+  - Words: 1748
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
