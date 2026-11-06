@@ -249,7 +249,10 @@
                     {{-- Builder Signature Card --}}
                     <div class="checkout-author-note">
                         <div class="checkout-author-note__avatar">
-                            <img src="/images/about-portrait.png" alt="Deepak Bagada" width="44" height="44" class="checkout-avatar-img">
+                            <picture>
+                                <source srcset="/images/about-portrait.webp" type="image/webp">
+                                <img src="/images/about-portrait.png" alt="Deepak Bagada" width="44" height="44" class="checkout-avatar-img" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="checkout-author-note__text">
                             <p class="checkout-author-note__quote">

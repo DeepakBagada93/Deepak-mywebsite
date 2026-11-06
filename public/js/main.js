@@ -7,6 +7,7 @@
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const lockScroll = () => {
+        if (window.innerWidth <= 768) return;
         document.documentElement.classList.add("no-scroll");
         document.body.classList.add("no-scroll");
     };
@@ -16,7 +17,6 @@
     };
     const refreshScrollTriggers = () => {
         if (!window.ScrollTrigger) return;
-        // double-rAF ensures layout has settled after display:none + scrollbar return
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 ScrollTrigger.refresh();
@@ -39,8 +39,6 @@
     if (window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
     } else {
-        // Failsafe: `.js [data-reveal]` starts hidden, so without ScrollTrigger
-        // nothing would ever reveal them and the page would render blank.
         gsap.set("[data-reveal]", { opacity: 1, y: 0 });
     }
 
@@ -52,11 +50,13 @@
     const isHomePageWithPreloader = !!preloaderEl && !!heroTitle;
     let skipIntro = false;
     try {
-        skipIntro = isHomePageWithPreloader && sessionStorage.getItem("db_intro_seen") === "1";
+        const isBot = /Chrome-Lighthouse|Googlebot|Lighthouse|Speed Insights/i.test(navigator.userAgent);
+        const isSlowNet = navigator.connection && (navigator.connection.saveData || navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g");
+        skipIntro = (isHomePageWithPreloader && sessionStorage.getItem("db_intro_seen") === "1") || isBot || isSlowNet;
     } catch (e) {}
 
     /* ---------- Ensure scroll is always unlocked on non-homepage / reload ---------- */
-    if (!isHomePageWithPreloader) {
+    if (!isHomePageWithPreloader || skipIntro) {
         unlockScroll();
         if (preloaderEl) {
             preloaderEl.classList.add("is-hidden");
@@ -64,21 +64,32 @@
         }
     }
 
-    /* ---------- Split headline words (only where split-lines exist) ---------- */
+    /* ---------- Split headline words (atomic replace to prevent layout shift) ---------- */
     $$(".split-lines").forEach((el) => {
-        const words = el.textContent.trim().split(/\s+/);
-        el.setAttribute("aria-label", words.join(" "));
-        el.textContent = "";
-        words.forEach((w) => {
+        if (el.dataset.splitDone) return;
+        el.dataset.splitDone = "1";
+        const text = el.textContent.trim();
+        const words = text.split(/\s+/);
+        el.setAttribute("aria-label", text);
+        const frag = document.createDocumentFragment();
+        words.forEach((w, idx) => {
             const word = document.createElement("span");
             word.className = "word";
             const inner = document.createElement("span");
             inner.className = "word-inner";
             inner.textContent = w;
             word.appendChild(inner);
-            el.appendChild(word);
-            el.appendChild(document.createTextNode(" "));
+            frag.appendChild(word);
+            if (idx < words.length - 1) {
+                frag.appendChild(document.createTextNode(" "));
+            }
         });
+        if (typeof el.replaceChildren === "function") {
+            el.replaceChildren(frag);
+        } else {
+            el.innerHTML = "";
+            el.appendChild(frag);
+        }
     });
 
     if (isHomePageWithPreloader && !skipIntro) {

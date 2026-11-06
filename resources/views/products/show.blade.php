@@ -97,9 +97,12 @@
                 </div>
 
                 @if (! empty($product['aeo_summary']))
-                <div class="store-detail__aeo" data-reveal>
-                    <div class="store-detail__aeo-label mono">⚡ Direct Answer & Architecture Blueprint</div>
-                    <p style="font-size:1.02rem;line-height:1.7;margin:0 0 14px 0;color:var(--ink);"><strong>{{ $product['aeo_summary']['definition'] }}</strong></p>
+                <div class="store-detail__aeo store-detail__aeo--premium" data-reveal>
+                    <div class="store-detail__aeo-label mono">
+                        <span>⚡</span>
+                        <span>DIRECT ANSWER &amp; ARCHITECTURE BLUEPRINT</span>
+                    </div>
+                    <p class="store-detail__aeo-definition"><strong>{{ $product['aeo_summary']['definition'] }}</strong></p>
                     <div class="store-detail__aeo-grid">
                         <div class="store-detail__aeo-item">
                             <strong class="mono">Target Audience</strong>
@@ -124,11 +127,11 @@
                         <span class="store-comparison__hint mono">Swipe to compare ↔</span>
                     </div>
                     <div class="store-comparison">
-                        <table class="store-comparison__table">
+                        <table class="store-comparison__table store-comparison__table--premium">
                             <thead>
                                 <tr>
-                                    <th class="store-comparison__th store-comparison__th--without">Without this skill (Manual & Flawed)</th>
-                                    <th class="store-comparison__th store-comparison__th--with">With this skill (Deterministic & Gated)</th>
+                                    <th class="store-comparison__th store-comparison__th--without">Without this skill (Manual &amp; Flawed)</th>
+                                    <th class="store-comparison__th store-comparison__th--with">With this skill (Deterministic &amp; Gated)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -151,26 +154,34 @@
                 @endif
 
                 <div class="store-detail__block">
-                    <h2 class="store-detail__h2">What's inside</h2>
-                    <ul class="store-detail__deliverables">
-                        @foreach ($product['deliverables'] as $item)
-                            <li><span class="store__check">✓</span>{{ $item }}</li>
-                        @endforeach
-                    </ul>
+                    <h2 class="store-detail__h2">What's inside the download</h2>
+                    @include('products.partials.file-explorer', ['product' => $product])
                 </div>
 
                 @if ($demoCommands->isNotEmpty())
                 <div class="store-detail__block">
                     <h2 class="store-detail__h2">See what ships</h2>
-                    <p class="store-preview__lede">Read-only previews of files inside the download. The same commands appear in the step-by-step guide below.</p>
-                    <div class="store-preview">
-                        @foreach ($demoCommands as $step)
-                        <div class="store-preview__row">
-                            <span class="store-preview__prompt mono">$</span>
-                            <pre class="store-preview__code"><code>{{ str_replace('\\"', '"', $step['command']) }}</code></pre>
+                    <p class="store-preview__lede">Production-ready scripts and terminal blueprints included inside the package.</p>
+                    @foreach ($demoCommands as $step)
+                        @php
+                            $cmdClean = str_replace('\"', '"', $step['command']);
+                        @endphp
+                        <div class="store-terminal">
+                            <div class="store-terminal__bar">
+                                <div class="store-terminal__dots">
+                                    <span class="store-terminal__dot store-terminal__dot--red"></span>
+                                    <span class="store-terminal__dot store-terminal__dot--yellow"></span>
+                                    <span class="store-terminal__dot store-terminal__dot--green"></span>
+                                </div>
+                                <span class="store-terminal__title">terminal — {{ strtolower($step['title'] ?? 'preview') }}</span>
+                                <button type="button" class="store-terminal__copy" data-copy-cmd="{{ e($cmdClean) }}">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                            <pre class="store-terminal__body"><code class="store-terminal__code">{{ $cmdClean }}</code></pre>
                         </div>
-                        @endforeach
-                    </div>
+                    @endforeach
                 </div>
                 @endif
 
@@ -196,7 +207,24 @@
                             </div>
                             <p class="store-step__desc">{{ $step['desc'] }}</p>
                             @if (! empty($step['command']))
-                            <pre class="store-step__code"><code>{{ str_replace('\\"', '"', $step['command']) }}</code></pre>
+                                @php
+                                    $stepCmdClean = str_replace('\"', '"', $step['command']);
+                                @endphp
+                                <div class="store-terminal">
+                                    <div class="store-terminal__bar">
+                                        <div class="store-terminal__dots">
+                                            <span class="store-terminal__dot store-terminal__dot--red"></span>
+                                            <span class="store-terminal__dot store-terminal__dot--yellow"></span>
+                                            <span class="store-terminal__dot store-terminal__dot--green"></span>
+                                        </div>
+                                        <span class="store-terminal__title">bash — step {{ $step['step'] ?? $loop->iteration }}</span>
+                                        <button type="button" class="store-terminal__copy" data-copy-cmd="{{ e($stepCmdClean) }}">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                                            <span>Copy</span>
+                                        </button>
+                                    </div>
+                                    <pre class="store-terminal__body"><code class="store-terminal__code">{{ $stepCmdClean }}</code></pre>
+                                </div>
                             @endif
                         </div>
                         @endforeach
@@ -240,14 +268,14 @@
                 @endif
 
                 <div class="store-detail__block" data-reveal>
-                    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:6px;padding:24px;display:flex;gap:18px;align-items:flex-start;">
-                        <span style="font-size:2.2rem;line-height:1;">🛡️</span>
+                    <div class="store-guarantee--luxury">
+                        <span class="store-guarantee--luxury__icon">🛡️</span>
                         <div>
-                            <h3 class="mono" style="font-size:1.05rem;font-weight:700;color:#166534;margin:0 0 6px 0;">
-                                30-Day 100% Risk-Free Guarantee
+                            <h3 class="store-guarantee--luxury__title mono">
+                                <span>30-Day 100% Technical Accuracy &amp; ROI Guarantee</span>
                             </h3>
-                            <p style="font-size:0.95rem;line-height:1.7;color:#14532d;margin:0;">
-                                Run {{ $product['title'] }} on your or your client's website. If the deliverables don't save you at least 15 hours of manual work or help you win an AI audit retainer, email me at <strong>ceo@saasnext.in</strong> with your order reference for a prompt 100% refund. No questions asked.
+                            <p class="store-guarantee--luxury__desc">
+                                Deploy <strong>{{ $product['title'] }}</strong> in your local workspace or client architecture. If the deliverables fail to save you at least 15 hours of manual engineering or don't perform deterministically as documented, email Deepak Bagada directly at <a href="mailto:ceo@saasnext.in" class="store-guarantee--luxury__email">ceo@saasnext.in</a> with your order reference for an immediate, no-questions-asked 100% refund.
                             </p>
                         </div>
                     </div>
@@ -371,69 +399,28 @@
     </div>
 </article>
 
-{{-- Mobile Sticky Action Bar --}}
-<div class="store-mobile-sticky" id="storeMobileSticky">
-    <div class="store-mobile-sticky__inner">
-        <div class="store-mobile-sticky__info">
-            <span class="store-mobile-sticky__title">{{ $product['title'] }}</span>
-            <div class="store__price store-mobile-sticky__price">
-                @include('products.partials.price', ['product' => $product])
-            </div>
-            @if (! $isFree)
-                <div class="mono" style="font-size:0.62rem;color:var(--text-muted);display:flex;align-items:center;gap:4px;margin-top:2px;">
-                    <span data-cur="INR">⚡ UPI · GPay · PhonePe · Cards</span>
-                    <span data-cur="USD" style="display:none;">💳 Visa · Mastercard · Amex</span>
-                </div>
-            @endif
-        </div>
-        <div class="store-mobile-sticky__actions">
-            <a href="{{ route('products.checkout.single', $product['slug']) }}" class="btn btn--primary store-mobile-sticky__btn">
-                @if ($isFree)
-                    Download
-                @else
-                    <span data-cur="INR">⚡ Pay UPI →</span>
-                    <span data-cur="USD" style="display:none;">Pay Card →</span>
-                @endif
-            </a>
-            <button type="button" class="btn btn--ghost store-mobile-sticky__cart" data-add-cart="{{ $product['slug'] }}" aria-label="Add to cart">
-                + Cart
-            </button>
-        </div>
-    </div>
-</div>
+{{-- Universal Floating Conversion Dock (Desktop & Mobile) --}}
+@include('products.partials.floating-dock', ['product' => $product])
 
 <script>
-(function() {
-    var bar = document.getElementById('storeMobileSticky');
-    if (!bar) return;
-    var ticking = false;
-    function checkScroll() {
-        if (window.innerWidth > 1024) {
-            bar.classList.remove('is-visible');
-            document.body.classList.remove('has-mobile-sticky');
-            return;
-        }
-        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollY > 280) {
-            bar.classList.add('is-visible');
-            document.body.classList.add('has-mobile-sticky');
-        } else {
-            bar.classList.remove('is-visible');
-            document.body.classList.remove('has-mobile-sticky');
-        }
+document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-copy-cmd]');
+    if (!btn) return;
+    var cmd = btn.getAttribute('data-copy-cmd');
+    if (!cmd) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(cmd).then(function() {
+            var label = btn.querySelector('span');
+            var prev = label ? label.textContent : '';
+            btn.classList.add('copied');
+            if (label) label.textContent = 'Copied! ✓';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                if (label) label.textContent = prev || 'Copy';
+            }, 2000);
+        });
     }
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                checkScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }, { passive: true });
-    window.addEventListener('resize', checkScroll, { passive: true });
-    checkScroll();
-})();
+});
 </script>
 
 @php

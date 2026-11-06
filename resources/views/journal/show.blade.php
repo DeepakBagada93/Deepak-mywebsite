@@ -33,7 +33,10 @@
             </div>
 
             <aside class="author-box" style="margin-top:36px;padding:24px;border:1px solid var(--hair);border-radius:8px;display:flex;gap:16px;align-items:flex-start;">
-                <img src="/images/about-portrait.png" alt="Deepak Bagada — AI Developer in Junagadh, Gujarat" width="72" height="90" style="border-radius:6px;object-fit:cover;" loading="lazy">
+                <picture>
+                    <source srcset="/images/about-portrait.webp" type="image/webp">
+                    <img src="/images/about-portrait.png" alt="Deepak Bagada — AI Developer in Junagadh, Gujarat" width="72" height="90" style="border-radius:6px;object-fit:cover;" loading="lazy" decoding="async">
+                </picture>
                 <div>
                     <p class="mono" style="font-size:12px;margin:0 0 6px;">WRITTEN BY</p>
                     <p style="margin:0 0 6px;"><strong>Deepak Bagada</strong> — AI developer, web developer &amp; automation expert, Junagadh, Gujarat, India. Founder of SaaS Next, creator of Curro. 5+ years, 40+ production builds.</p>

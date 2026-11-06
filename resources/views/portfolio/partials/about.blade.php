@@ -8,12 +8,16 @@
 
         <div class="about__grid">
             <figure class="about__figure reveal" data-reveal>
-                <img src="/images/about-portrait.png" 
-                     alt="Deepak Bagada — Best AI Expert, AI Developer & AI Agent Architect in Junagadh Gujarat India" 
-                     title="Deepak Bagada — Best AI Expert in Junagadh, Gujarat, India"
-                     loading="lazy"
-                     width="1122" 
-                     height="1402">
+                <picture>
+                    <source srcset="/images/about-portrait.webp" type="image/webp">
+                    <img src="/images/about-portrait.png" 
+                         alt="Deepak Bagada — Best AI Expert, AI Developer & AI Agent Architect in Junagadh Gujarat India" 
+                         title="Deepak Bagada — Best AI Expert in Junagadh, Gujarat, India"
+                         loading="lazy"
+                         decoding="async"
+                         width="1122" 
+                         height="1402">
+                </picture>
                 <figcaption class="mono">Fig. 02 — Deepak Bagada, AI Architect</figcaption>
             </figure>
 
