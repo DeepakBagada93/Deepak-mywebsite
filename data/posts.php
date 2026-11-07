@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'Why I Killed Hourly Billing: The ₹55K Sprint Model 2026',
-        'slug'         => 'why-i-killed-hourly-billing-55k-sprint-model-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Why I killed hourly billing at SaaS Next: moving from ₹1,500/hr time-tracking to ₹55,000 productized sprints in Gujarat, boosting margins to 78% in 2026.',
-        'body'         => <<<'BODY'
+        'title' => 'Why I Killed Hourly Billing: The ₹55K Sprint Model 2026',
+        'slug' => 'why-i-killed-hourly-billing-55k-sprint-model-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Why I killed hourly billing at SaaS Next: moving from ₹1,500/hr time-tracking to ₹55,000 productized sprints in Gujarat, boosting margins to 78% in 2026.',
+        'body' => <<<'BODY'
 The commercial trap of hourly billing in software consultancies penalizes engineering speed, misaligns client incentives, and caps agency profitability at manual time limits.
 
 **Quick Answer**: In 2026, scaling a profitable software and AI engineering consultancy requires replacing hourly billing with fixed-scope productized sprints (such as our ₹55,000 two-week delivery package). At SaaS Next in Junagadh, killing hourly timesheets boosted our gross margins from 32% to 78%, eliminated invoice disputes, and enabled us to deliver production systems 3x faster using automated starter kits.
@@ -133,11 +133,11 @@ BODY,
     ],
 
     [
-        'title'        => 'PDF Merge & Compression in Browser: WebAssembly 2026',
-        'slug'         => 'pdf-merge-compression-browser-webassembly-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Merge and compress PDFs directly in the browser using WebAssembly and Next.js. Cut server egress 90% and keep document processing private on client in 2026.',
-        'body'         => <<<'BODY'
+        'title' => 'PDF Merge & Compression in Browser: WebAssembly 2026',
+        'slug' => 'pdf-merge-compression-browser-webassembly-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Merge and compress PDFs directly in the browser using WebAssembly and Next.js. Cut server egress 90% and keep document processing private on client in 2026.',
+        'body' => <<<'BODY'
 A client-side PDF merger and compression engine combines multiple document files and resamples embedded raster graphics directly inside the user's browser using WebAssembly (Wasm) and HTML5 Web Workers without uploading files to a remote server.
 
 **Quick Answer**: In 2026, building a high-speed browser-based PDF utility requires compiling PDFium or MuPDF to WebAssembly and running file processing in a dedicated background Web Worker. This client-side architecture merges 50-page documents in under 450ms, cuts backend cloud egress bandwidth by 90%, and eliminates server disk liabilities by keeping confidential customer PDFs completely private on-device.
