@@ -4160,3 +4160,19 @@
   - Words: 1748
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **PDF Merge & Compression in Browser: WebAssembly 2026**
+  - Slug: `pdf-merge-compression-browser-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-07 15:30:00`
+  - Words: 1451
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why I Killed Hourly Billing: The ₹55K Sprint Model 2026**
+  - Slug: `why-i-killed-hourly-billing-55k-sprint-model-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-07 18:30:00`
+  - Words: 1441
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
