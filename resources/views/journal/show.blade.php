@@ -1,46 +1,49 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="reading-progress-bar" class="read-progress-bar" aria-hidden="true"></div>
+    <div id="reading-progress-bar" class="read-progress-bar read-progress-bar--bifrost" aria-hidden="true"></div>
 
-    <article class="article article--page">
+    <article class="article article--page marvel-halftone">
         <div class="container">
             <nav class="mono article__crumbs" aria-label="Breadcrumb" style="margin-bottom:16px;font-size:12px;">
                 <a href="/">Home</a> / <a href="{{ route('journal.index') }}">Journal</a> / {{ $post->title }}
             </nav>
-            <div class="article__meta mono">
-                <span class="article__tag">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
-                <span class="article__date">{{ $post->date?->format('d M Y, h:i A T') ?? '' }}</span>
-                @if (!empty($post->read_time))
-                    <span class="article__readtime">· {{ $post->read_time }}</span>
-                @endif
-                <span class="article__byline">· By {{ $post->author ?? $site['name'] }}</span>
+            <div style="margin-bottom:12px;">
+                <span class="thor-banner">⚡ ASGARDIAN DECREE // INTEL REPORT</span>
             </div>
-            <h1 class="article__title">{{ $post->title }}</h1>
-            <div class="article__rule"></div>
+            <div class="article__meta mono" style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+                <span class="comic-issue-box" style="font-size:0.62rem;padding:2px 7px;">{{ strtoupper(($post->category ?? '') ?: 'AI DEV') }}</span>
+                <span class="article__date" style="font-size:0.75rem;color:#64748b;">{{ $post->date?->format('d M Y, h:i A T') ?? '' }}</span>
+                @if (!empty($post->read_time))
+                    <span class="mjolnir-worthy-tag">⚡ {{ $post->read_time }} // WORTHY ONLY</span>
+                @endif
+                <span class="article__byline" style="font-weight:600;">· Forged by {{ $post->author ?? $site['name'] }}</span>
+            </div>
+            <h1 class="article__title font-comic" style="font-size:clamp(2.6rem,6vw,4.5rem);line-height:1.02;letter-spacing:0.02em;margin-top:8px;">{{ $post->title }}</h1>
+            <div class="article__rule" style="border-top:2px solid #000;margin:24px 0 32px 0;"></div>
             <div class="article__body">
                 @markdown($post->content)
             </div>
 
             {{-- Interactive Developer Suite Callout (Reduces Bounce Rate & Boosts Dwell Time) --}}
-            <div class="journal-tools-callout" style="margin-top:40px;padding:24px;border:1px solid var(--hair);border-left:3px solid var(--accent);border-radius:8px;background:var(--surface,#fcfbf9);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+            <div class="journal-tools-callout comic-card" style="margin-top:40px;padding:24px;border:3px solid #000;box-shadow:6px 6px 0 #f59e0b;background:#ffffff;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
                 <div>
-                    <span class="mono" style="font-size:11px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase;">// FREE DEVELOPER WORKBENCH</span>
-                    <h3 style="margin:4px 0 6px;font-size:18px;">Build, format, or test your architecture in real time</h3>
-                    <p style="margin:0;font-size:14px;color:var(--muted);max-width:580px;">Need to test schemas, regex, tokens, or JWTs? Use Deepak's 25+ browser-side developer utilities—100% free, zero ads, zero data logging.</p>
+                    <span class="font-hud" style="font-size:11px;letter-spacing:0.1em;color:var(--marvel-red);text-transform:uppercase;font-weight:700;">// STARK &amp; ASGARDIAN DEVELOPER WORKBENCH</span>
+                    <h3 class="font-comic" style="margin:4px 0 6px;font-size:22px;letter-spacing:0.03em;">Build, format, or test your architecture in real time</h3>
+                    <p style="margin:0;font-size:14px;color:#475569;max-width:580px;">Need to test schemas, regex, tokens, or JWTs? Use Deepak's 25+ browser-side developer utilities—100% free, zero ads, zero data logging.</p>
                 </div>
-                <a href="{{ route('tools.index') }}" class="btn btn--outline" style="white-space:nowrap;">Open Developer Tools →</a>
+                <a href="{{ route('tools.index') }}" class="btn--marvel" style="font-size:1.05rem;padding:10px 20px;white-space:nowrap;">Open Developer Tools →</a>
             </div>
 
-            <aside class="author-box" style="margin-top:36px;padding:24px;border:1px solid var(--hair);border-radius:8px;display:flex;gap:16px;align-items:flex-start;">
+            <aside class="author-box comic-card" style="margin-top:36px;padding:24px;border:2.5px solid #000;box-shadow:5px 5px 0 #000;display:flex;gap:18px;align-items:flex-start;background:#fafafa;">
                 <picture>
                     <source srcset="/images/about-portrait.webp" type="image/webp">
-                    <img src="/images/about-portrait.png" alt="Deepak Bagada — AI Developer in Junagadh, Gujarat" width="72" height="90" style="border-radius:6px;object-fit:cover;" loading="lazy" decoding="async">
+                    <img src="/images/about-portrait.png" alt="Deepak Bagada — AI Developer in Junagadh, Gujarat" width="76" height="95" style="border-radius:6px;object-fit:cover;border:2px solid #000;" loading="lazy" decoding="async">
                 </picture>
                 <div>
-                    <p class="mono" style="font-size:12px;margin:0 0 6px;">WRITTEN BY</p>
-                    <p style="margin:0 0 6px;"><strong>Deepak Bagada</strong> — AI developer, web developer &amp; automation expert, Junagadh, Gujarat, India. Founder of SaaS Next, creator of Curro. 5+ years, 40+ production builds.</p>
-                    <p style="margin:0;font-size:14px;"><a href="{{ route('legal.about') }}">About me</a> · <a href="{{ $site['socials']['LinkedIn'] }}">LinkedIn</a> · <a href="{{ $site['socials']['GitHub'] }}">GitHub</a> · <a href="mailto:{{ $site['email'] }}">{{ $site['email'] }}</a></p>
+                    <div class="font-hud" style="font-size:11px;margin:0 0 4px;color:var(--marvel-red);font-weight:700;">FORGED BY ARCHITECT</div>
+                    <p style="margin:0 0 6px;line-height:1.6;"><strong>Deepak Bagada</strong> — Chief AI architect, web engineer &amp; automation specialist in Junagadh, Gujarat, India. Creator of SaaS Next, Curro, and Daily AI World. 5+ years, 40+ production AI builds.</p>
+                    <p style="margin:0;font-size:14px;font-family:var(--hud-font);"><a href="{{ route('legal.about') }}" style="color:#0284c7;font-weight:600;">About me</a> · <a href="{{ $site['socials']['LinkedIn'] }}">LinkedIn</a> · <a href="{{ $site['socials']['GitHub'] }}">GitHub</a> · <a href="mailto:{{ $site['email'] }}">{{ $site['email'] }}</a></p>
                 </div>
             </aside>
 

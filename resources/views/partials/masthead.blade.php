@@ -1,7 +1,13 @@
 @php $toolsCount = count(config('tools')); @endphp
 <header class="masthead" id="masthead">
     <div class="masthead__row">
-        <a class="masthead__logo" href="/">{{ $site['name'] }}</a>
+        <a class="masthead__logo" href="/" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;min-width:0;flex-shrink:0;">
+            <span class="marvel-logo-badge">{{ $site['name'] }}</span>
+            <span class="font-hud masthead__stark-beacon" style="font-size:0.68rem;color:#64748b;display:inline-flex;align-items:center;gap:6px;font-weight:600;">
+                <span class="arc-reactor-dot"></span>
+                <span class="masthead__beacon-text" style="letter-spacing:0.08em;">JARVIS // ONLINE</span>
+            </span>
+        </a>
 
         <nav class="masthead__nav" id="nav">
             <a href="{{ route('services.index') }}">Services</a>
@@ -101,7 +107,10 @@
                 </div>
             </div>
             <a href="{{ route('library.index') }}">Library</a>
-            <a href="{{ route('products.index') }}">Store</a>
+            <a href="{{ route('products.index') }}" style="color:var(--marvel-red);font-weight:700;display:inline-flex;align-items:center;gap:4px;">
+                <span>Armory</span>
+                <span style="font-size:0.65rem;background:var(--marvel-red);color:#fff;padding:1px 5px;border-radius:2px;font-family:var(--hud-font);">PRO</span>
+            </a>
             <button type="button" class="masthead__cart-btn mono" data-open-cart aria-label="Open Shopping Cart">
                 🛒 Cart <span class="masthead__cart-badge" id="masthead-cart-count" style="display:none">0</span>
             </button>
@@ -110,10 +119,14 @@
         </nav>
 
         <div class="masthead__meta">
+            {{-- Mobile Quick Cart Button --}}
+            <button type="button" class="masthead__cart-btn-mobile mono" data-open-cart aria-label="Open Shopping Cart">
+                🛒<span class="masthead__cart-badge mmenu-cart-count" style="display:none">0</span>
+            </button>
             <button type="button" class="btn btn--sm btn--primary masthead__subscribe-btn mono" data-newsletter-trigger aria-haspopup="dialog" aria-controls="newsletter-modal">
                 Subscribe
             </button>
-            <span class="masthead__issue mono">Vol. 01 — 2026</span>
+            <span class="comic-issue-box masthead__issue">ISSUE #01 — 2026</span>
             <button class="masthead__burger mono" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button>
         </div>
     </div>
@@ -122,7 +135,7 @@
 {{-- Mobile Menu Drawer --}}
 <div class="mmenu" id="mmenu">
     <div class="mmenu__top">
-        <span class="mono mmenu__brand">{{ $site['name'] }}</span>
+        <span class="marvel-logo-badge" style="font-size:1.15rem;padding:2px 8px;">{{ $site['name'] }}</span>
         <button type="button" class="mmenu__close mono" id="mmenu-close" aria-label="Close menu">✕ Close</button>
     </div>
     <ul class="mmenu__list">

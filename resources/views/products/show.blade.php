@@ -267,15 +267,41 @@
                 </div>
                 @endif
 
+                {{-- Captain America & Hulk Synergy Power Block --}}
                 <div class="store-detail__block" data-reveal>
-                    <div class="store-guarantee--luxury">
-                        <span class="store-guarantee--luxury__icon">🛡️</span>
+                    {{-- Hulk Gamma Power Meter --}}
+                    <div class="gamma-power-meter" style="margin-bottom:24px;">
+                        <div class="gamma-power-meter__label">
+                            <span style="display:flex;align-items:center;gap:6px;">
+                                <span style="color:#22c55e;">💥 HULK GAMMA CAPACITY</span>
+                                <span>// SMASH MANUAL WORKLOADS</span>
+                            </span>
+                            <span style="color:#ffffff;background:#16a34a;padding:2px 8px;border-radius:3px;">100,000 REQS / HR</span>
+                        </div>
+                        <div class="gamma-power-meter__bar-track">
+                            <div class="gamma-power-meter__bar-fill"></div>
+                        </div>
+                        <div style="font-size:0.75rem;color:#86efac;margin-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+                            <span>✔ Pulverizes 20+ hours of manual boilerplate coding</span>
+                            <span>✔ Zero system thermal spikes or brittle crashes</span>
+                        </div>
+                    </div>
+
+                    {{-- Captain America Vibranium Shield Guarantee --}}
+                    <div class="vibranium-guarantee-card">
+                        <div class="vibranium-shield-icon" aria-hidden="true">
+                            <div class="shield-ring-white">
+                                <div class="shield-ring-red">
+                                    <div class="shield-center-blue">★</div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
-                            <h3 class="store-guarantee--luxury__title mono">
-                                <span>30-Day 100% Technical Accuracy &amp; ROI Guarantee</span>
+                            <h3 class="font-comic" style="font-size:1.45rem;color:#ffffff;letter-spacing:0.04em;margin:0 0 6px 0;display:flex;align-items:center;gap:8px;">
+                                <span>FIRST AVENGER VIBRANIUM SHIELD GUARANTEE</span>
                             </h3>
-                            <p class="store-guarantee--luxury__desc">
-                                Deploy <strong>{{ $product['title'] }}</strong> in your local workspace or client architecture. If the deliverables fail to save you at least 15 hours of manual engineering or don't perform deterministically as documented, email Deepak Bagada directly at <a href="mailto:ceo@saasnext.in" class="store-guarantee--luxury__email">ceo@saasnext.in</a> with your order reference for an immediate, no-questions-asked 100% refund.
+                            <p class="store-guarantee--luxury__desc" style="color:#cbd5e1;line-height:1.65;font-size:0.92rem;">
+                                Deploy <strong>{{ $product['title'] }}</strong> in your local workspace or enterprise cluster. Engineered with defensive typing and RFC stability. If this toolkit fails to save your team at least 20 hours or crashes on your stack, email Deepak directly at <a href="mailto:ceo@saasnext.in" style="color:#38bdf8;text-decoration:underline;font-family:var(--hud-font);">ceo@saasnext.in</a> within 14 days for a prompt, 100% no-questions-asked refund.
                             </p>
                         </div>
                     </div>

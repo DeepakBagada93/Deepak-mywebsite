@@ -5,13 +5,20 @@
     <div class="container">
         {{-- Hero --}}
         <div class="section__head store__head" data-reveal>
-            <p class="mono section__label">AI Toolkits · Digital Products · India</p>
-            <h1 class="section__title"><span class="split-lines">AI Toolkits &amp; Digital Products India</span></h1>
-            <p class="store__lede">Buy once, own forever. Production AI toolkits, n8n automation systems, performance marketing kits and business engines for Indian founders, developers and agencies. Instant download, commercial license, 30-day guarantee.</p>
-            <div class="store__hero-bar">
-                <a href="{{ route('products.track') }}" class="mono store__track-link">Already bought? Track your order →</a>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;">
+                <span class="comic-issue-box">CAPTAIN AMERICA SHIELD DEFENSE</span>
+                <span class="gamma-smash-badge">⚡ HULK GAMMA POWER</span>
             </div>
-            <div class="section__rule" aria-hidden="true"></div>
+            <h1 class="section__title font-comic" style="font-size:clamp(2.8rem,7vw,5.5rem);line-height:0.95;letter-spacing:0.02em;">
+                VIBRANIUM BULLETPROOF CODE. <span style="color:#22c55e;">UNSTOPPABLE GAMMA SCALE.</span>
+            </h1>
+            <p class="store__lede" style="font-size:1.15rem;line-height:1.8;color:#334155;max-width:72ch;margin-top:14px;">
+                Engineered with the <strong>defensive precision of Captain America</strong> (RFC schemas, zero-drift error handling, 100% test coverage) and the <strong>raw brute-force power of The Incredible Hulk</strong> (smashing 20+ hours of manual toil, crushing cloud compute burn, scaling to 100k records/hr). Instant repo invite, commercial license, and our First Avenger Guarantee.
+            </p>
+            <div class="store__hero-bar" style="margin-top:18px;">
+                <a href="{{ route('products.track') }}" class="mono store__track-link" style="color:var(--marvel-red);font-weight:700;">Already bought? Track your order →</a>
+            </div>
+            <div class="section__rule" aria-hidden="true" style="margin:24px 0 36px 0;border-top:2px solid #000;"></div>
         </div>
 
         {{-- Featured bundle spotlight --}}
@@ -29,12 +36,28 @@
                 <span class="mono store__spotlight-tag">{{ $spotlight['badge'] }}</span>
             </div>
             <div class="store__spotlight-body">
-                <p class="mono store__spotlight-kicker">Featured · {{ $spotlight['category'] }}</p>
-                <h2 class="store__spotlight-title">{{ $spotlight['title'] }}</h2>
+                <p class="mono store__spotlight-kicker" style="color:var(--marvel-red);font-weight:700;">AVENGERS SPOTLIGHT // {{ strtoupper($spotlight['category']) }}</p>
+                <h2 class="store__spotlight-title font-comic" style="font-size:2.4rem;line-height:1.05;letter-spacing:0.03em;">{{ $spotlight['title'] }}</h2>
                 <p class="store__spotlight-desc">{{ $spotlight['tagline'] }}</p>
+
+                {{-- Hulk Gamma Strength Power Meter --}}
+                <div class="gamma-power-meter">
+                    <div class="gamma-power-meter__label">
+                        <span>⚡ HULK GAMMA CAPACITY // BOTTLENECK SMASH</span>
+                        <span style="color:#ffffff;">100,000 REQS / HR</span>
+                    </div>
+                    <div class="gamma-power-meter__bar-track">
+                        <div class="gamma-power-meter__bar-fill"></div>
+                    </div>
+                    <div style="font-size:0.7rem;color:#86efac;margin-top:6px;display:flex;justify-content:space-between;">
+                        <span>CRUSHES 20+ HOURS OF MANUAL DEV TOIL</span>
+                        <span>0% SYSTEM CRACK</span>
+                    </div>
+                </div>
+
                 <ul class="store__spotlight-list">
                     @foreach (array_slice($spotlight['deliverables'], 0, 4) as $item)
-                        <li><span class="store__check" aria-hidden="true">✓</span>{{ $item }}</li>
+                        <li><span class="store__check" aria-hidden="true" style="color:#22c55e;font-weight:900;">✓</span>{{ $item }}</li>
                     @endforeach
                 </ul>
                 <div class="store__spotlight-foot">

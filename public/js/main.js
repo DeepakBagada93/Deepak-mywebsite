@@ -605,4 +605,85 @@
         unlockScroll();
         refreshScrollTriggers();
     });
+
+    /* =========================================================================
+       MARVEL INTERACTIVE IMMERSION ENGINE
+       1. Comic SFX Action Burst on clicks
+       2. Jarvis Live Telemetry Typewriter
+       3. Floating Arc Reactor FAB
+       ========================================================================= */
+    (function initMarvelImmersion() {
+        // 1. Comic Action Burst on Button / Card clicks
+        const burstWords = [
+            "⚡ KABOOM!",
+            "🚀 ASSEMBLED!",
+            "💥 3000 WATTS!",
+            "🛡️ IRONCLAD!",
+            "🔥 UNLOCKED!",
+            "⚡ JARVIS READY!",
+            "✨ PRODUCTION GRADE!"
+        ];
+
+        document.addEventListener("click", function(e) {
+            const target = e.target.closest(".btn--marvel, .btn--stark, .btn--solid, .store-card, [data-add-cart], .concentric-arc-reactor");
+            if (!target) return;
+
+            const burst = document.createElement("div");
+            burst.className = "comic-action-burst";
+            const randomWord = burstWords[Math.floor(Math.random() * burstWords.length)];
+            burst.textContent = randomWord;
+
+            const x = e.clientX || (target.getBoundingClientRect().left + target.offsetWidth / 2);
+            const y = e.clientY || (target.getBoundingClientRect().top + target.offsetHeight / 2);
+
+            burst.style.left = x + "px";
+            burst.style.top = y + "px";
+
+            document.body.appendChild(burst);
+            setTimeout(() => {
+                if (burst.parentNode) burst.parentNode.removeChild(burst);
+            }, 900);
+        });
+
+        // 2. Jarvis Live Telemetry Ticker
+        const tickerEl = document.getElementById("jarvis-ticker-text");
+        if (tickerEl) {
+            const telemetryLogs = [
+                "14 Autonomous Agent Swarms Active [100% ONLINE]",
+                "DPDP Sovereign Architecture: Gujarat Command Lab",
+                "Enterprise Latency: P95 < 740ms [NOMINAL]",
+                "Arc Core Output @ 100% [READY TO SHIP]",
+                "Universal MCP Bridges Connected: LangGraph + n8n",
+                "Comics Code AI Authority: 100% Production Code"
+            ];
+            let logIdx = 0;
+            let charIdx = 0;
+            let isDeleting = false;
+
+            function typeTelemetry() {
+                const currentText = telemetryLogs[logIdx];
+                if (isDeleting) {
+                    tickerEl.textContent = currentText.substring(0, charIdx - 1);
+                    charIdx--;
+                } else {
+                    tickerEl.textContent = currentText.substring(0, charIdx + 1);
+                    charIdx++;
+                }
+
+                let typingSpeed = isDeleting ? 25 : 55;
+
+                if (!isDeleting && charIdx === currentText.length) {
+                    typingSpeed = 2600; // Pause at end of text
+                    isDeleting = true;
+                } else if (isDeleting && charIdx === 0) {
+                    isDeleting = false;
+                    logIdx = (logIdx + 1) % telemetryLogs.length;
+                    typingSpeed = 400; // Pause before typing next
+                }
+
+                setTimeout(typeTelemetry, typingSpeed);
+            }
+            setTimeout(typeTelemetry, 1200);
+        }
+    })();
 })();

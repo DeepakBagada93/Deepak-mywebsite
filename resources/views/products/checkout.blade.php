@@ -262,12 +262,18 @@
                         </div>
                     </div>
 
-                    {{-- Guarantee Card --}}
-                    <div class="checkout-guarantee mono">
-                        <span class="checkout-guarantee__shield">🛡️</span>
-                        <div>
-                            <strong>30-Day Money-Back Guarantee</strong>
-                            <p>Run the test fixtures. If any command or gate fails to behave as documented, email me for a full refund.</p>
+                    {{-- Marvel Tony Stark Zero-Risk Guarantee Card --}}
+                    <div class="comic-card" style="padding:18px;background:#f8fafc;border-color:#000;margin-top:18px;">
+                        <div style="display:flex;align-items:flex-start;gap:14px;">
+                            <span style="font-size:2rem;line-height:1;">🛡️</span>
+                            <div>
+                                <div class="font-comic" style="font-size:1.3rem;letter-spacing:0.04em;color:var(--marvel-red);margin-bottom:2px;">
+                                    THE TONY STARK ZERO-RISK GUARANTEE
+                                </div>
+                                <p style="font-size:0.86rem;line-height:1.55;color:#334155;margin:0;">
+                                    Deploy the toolkit on your machine. If any workflow, JSON schema, or test fixture fails to behave as documented — or doesn't save your engineering team at least 20 hours — email me within 14 days for a prompt, 100% no-questions-asked refund.
+                                </p>
+                            </div>
                         </div>
                     </div>
 

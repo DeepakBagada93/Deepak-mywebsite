@@ -1,7 +1,9 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
-            <a class="footer__logo" href="#top" data-scroll>{{ $site['name'] }}</a>
+            <a class="footer__logo" href="#top" data-scroll style="text-decoration:none;">
+                <span class="marvel-logo-badge">{{ $site['name'] }}</span>
+            </a>
             <p class="footer__tagline">AI developer · Web developer · SEO &amp; AEO expert — building websites, AI systems and automation from {{ $site['location'] }}.</p>
         </div>
 
@@ -96,6 +98,24 @@
                         <li><a href="{{ $href }}">{{ $label }}</a></li>
                     @endforeach
                 </ul>
+            </div>
+        </div>
+
+        {{-- Marvel Post-Credits Teaser --}}
+        <div class="comic-card comic-card--dark" style="margin:48px 0 28px 0;padding:24px 28px;border-color:var(--marvel-red);">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+                <div>
+                    <span class="comic-issue-box" style="font-size:0.65rem;background:var(--marvel-red);">POST-CREDITS SCENE // CLASSIFIED</span>
+                    <h3 class="font-comic" style="font-size:1.8rem;margin:8px 0 4px 0;color:#ffffff;letter-spacing:0.04em;">
+                        DEEPAK BAGADA WILL RETURN IN <span class="text-stark-cyan">AUTONOMOUS MULTI-AGENT SWARMS VOL. 02</span>
+                    </h3>
+                    <p style="font-size:0.9rem;color:#94a3b8;margin:0;">
+                        Building the future of agentic AI systems, enterprise MCP bridges, and zero-downtime automation from Junagadh, Gujarat.
+                    </p>
+                </div>
+                <a href="#top" class="btn--stark" data-scroll style="font-size:0.8rem;padding:8px 16px;">
+                    <span>Assemble To Top ↑</span>
+                </a>
             </div>
         </div>
 

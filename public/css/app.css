@@ -16,6 +16,26 @@
     --serif: "Fraunces", Georgia, Cambria, "Times New Roman", Times, serif;
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* =========================================================================
+       MARVEL THEME & STARK HUD DESIGN TOKENS
+       ========================================================================= */
+    --marvel-red: #E62429;
+    --marvel-red-dark: #B31B1F;
+    --marvel-red-glow: rgba(230, 36, 41, 0.4);
+    --marvel-gold: #FDB827;
+    --marvel-gold-dark: #D49010;
+    --stark-cyan: #00E5FF;
+    --stark-cyan-glow: rgba(0, 229, 255, 0.45);
+    --stark-blue: #0A84FF;
+    --wakanda-purple: #7928CA;
+    --cosmic-void: #0B0C10;
+    --cosmic-card: #14161F;
+    --cosmic-card-hover: #1A1D2B;
+    --comic-ink: #111111;
+    --comic-paper: #FDFBF7;
+    --comic-font: "Bebas Neue", "Impact", "Arial Black", sans-serif;
+    --hud-font: "IBM Plex Mono", "JetBrains Mono", monospace;
 }
 
 /* ---------- Reset ---------- */
@@ -143,6 +163,87 @@ code { font-family: var(--mono); font-size: 0.85em; }
 .preloader__line span { display: block; height: 100%; width: 0; background: var(--ink); }
 .preloader__count { color: var(--muted); }
 
+/* Marvel Cinematic Preloader Styling */
+.preloader--marvel {
+    background: var(--cosmic-void);
+    color: #ffffff;
+    background-image: radial-gradient(rgba(230, 36, 41, 0.15) 1.5px, transparent 0);
+    background-size: 16px 16px;
+}
+.preloader__issue-tag {
+    font-size: 0.72rem;
+    color: var(--marvel-gold);
+    letter-spacing: 0.18em;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+}
+.preloader__marvel-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--marvel-red);
+    padding: 16px 36px 12px 36px;
+    border: 3.5px solid #000000;
+    box-shadow: 8px 8px 0px #000000, 0 0 35px rgba(230, 36, 41, 0.6);
+    border-radius: 4px;
+    animation: marvel-box-pulse 3s infinite ease-in-out;
+}
+@keyframes marvel-box-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 8px 8px 0px #000000, 0 0 30px rgba(230, 36, 41, 0.5); }
+    50% { transform: scale(1.02); box-shadow: 10px 10px 0px #000000, 0 0 45px rgba(230, 36, 41, 0.85); }
+}
+.preloader--marvel .preloader__name {
+    font-family: var(--comic-font);
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    line-height: 0.9;
+    text-shadow: 3px 3px 0px #000000;
+}
+.preloader__sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    color: #ffffff;
+    background: #000000;
+    padding: 3px 12px;
+    border-radius: 2px;
+    margin-top: 8px;
+    font-weight: 700;
+}
+.preloader--marvel .preloader__line {
+    background: rgba(255, 255, 255, 0.15);
+    height: 3px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+.preloader--marvel .preloader__line span {
+    background: var(--stark-cyan);
+    box-shadow: 0 0 14px var(--stark-cyan);
+}
+.preloader__status-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 14px;
+}
+.preloader--marvel .preloader__count {
+    color: var(--stark-cyan);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+.preloader__status-text {
+    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    color: #cbd5e1;
+}
+
 /* ==========================================================================
    Masthead
    ========================================================================== */
@@ -206,6 +307,24 @@ code { font-family: var(--mono); font-size: 0.85em; }
     background: var(--ink);
     color: var(--paper);
     border-color: var(--ink);
+}
+.masthead__cart-btn-mobile {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: 1px solid var(--hair);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    line-height: 1;
+    color: var(--ink);
+    transition: all 0.2s ease;
+}
+.masthead__cart-btn-mobile:hover {
+    border-color: var(--ink);
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .masthead__subscribe-btn {
@@ -1406,19 +1525,28 @@ code { font-family: var(--mono); font-size: 0.85em; }
     .entry { grid-template-columns: 1fr; gap: 14px; }
     .entry__meta { flex-direction: row; gap: 18px; align-items: baseline; }
     .contact__grid { grid-template-columns: 1fr; gap: 70px; }
-    .masthead__issue { display: none; }
+    .masthead__issue,
+    .comic-issue-box.masthead__issue { display: none !important; }
+    .masthead__beacon-text { display: none !important; }
     .masthead__nav { display: none !important; }
     .tools-popover { display: none !important; }
     .masthead__burger { display: inline-flex !important; align-items: center; justify-content: center; }
-    .masthead__row { padding: 18px 24px; }
+    .masthead__cart-btn-mobile { display: inline-flex !important; }
+    .masthead__row { padding: 14px 20px; }
+}
+
+@media (max-width: 768px) {
+    .masthead__subscribe-btn { display: none !important; }
+    .masthead__meta { gap: 10px; }
+    .marvel-logo-badge { font-size: 1.18rem !important; padding: 2px 8px !important; }
 }
 
 @media (max-width: 720px) {
     .section { padding: 84px 0; }
     .footer__grid { grid-template-columns: 1fr 1fr; gap: 30px; }
     .footer__top { padding: 44px 0 36px; }
-    .masthead__row { padding: 16px 20px; }
-    .masthead__logo { font-size: 1.3rem; }
+    .masthead__row { padding: 12px 16px; }
+    .masthead__logo { font-size: 1.15rem; }
     .mmenu { padding: calc(76px + env(safe-area-inset-top, 0px)) 24px calc(40px + env(safe-area-inset-bottom, 0px)); }
     .mmenu__sub { padding-left: 20px; }
     .mmenu__sub-cat ul { grid-template-columns: 1fr; }
@@ -1435,10 +1563,12 @@ code { font-family: var(--mono); font-size: 0.85em; }
 }
 
 @media (max-width: 480px) {
-    .container { padding: 0 20px; }
-    .masthead__row { padding: 12px 16px; gap: 10px; }
-    .masthead__logo { font-size: 1.15rem; }
-    .masthead__burger { padding: 5px 12px; font-size: 0.62rem; }
+    .container { padding: 0 16px; }
+    .masthead__row { padding: 10px 12px; gap: 8px; }
+    .masthead__meta { gap: 6px; }
+    .marvel-logo-badge { font-size: 1.05rem !important; padding: 2px 6px !important; }
+    .masthead__burger { padding: 5px 10px; font-size: 0.62rem; }
+    .masthead__cart-btn-mobile { padding: 5px 8px; font-size: 0.78rem; }
     .mmenu { padding: calc(66px + env(safe-area-inset-top, 0px)) 16px calc(36px + env(safe-area-inset-bottom, 0px)); }
     .mmenu__list a,
     .mmenu__expand-btn { font-size: 1.32rem; gap: 12px; padding: 6px 0; }
@@ -6037,3 +6167,818 @@ html[data-store-currency="USD"] [data-cur="INR"] { display: none !important; }
     text-decoration: underline;
     font-family: var(--mono);
 }
+
+/* =============================================================================
+   MARVEL CINEMATIC & COMIC BOOK THEME ENGINE (VOL. 2026)
+   Tony Stark Tactical HUD · Marvel Crimson · High-Converting CRO
+   ============================================================================= */
+
+/* Typography classes */
+.font-comic {
+    font-family: var(--comic-font);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 0.95;
+}
+.font-hud {
+    font-family: var(--hud-font);
+    letter-spacing: 0.06em;
+}
+
+/* Text & Colors */
+.text-marvel-red { color: var(--marvel-red) !important; }
+.text-marvel-gold { color: var(--marvel-gold) !important; }
+.text-stark-cyan { color: var(--stark-cyan) !important; }
+.bg-marvel-red { background-color: var(--marvel-red) !important; color: #ffffff !important; }
+.bg-cosmic { background-color: var(--cosmic-void) !important; color: #f1f5f9 !important; }
+
+/* Halftone / Ben-Day Dot Pattern Overlay */
+.marvel-halftone {
+    background-image: radial-gradient(rgba(230, 36, 41, 0.12) 1.5px, transparent 0);
+    background-size: 14px 14px;
+}
+.stark-grid {
+    background-image: linear-gradient(to right, rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* Marvel Comic Logo Block (Red Box with White Bold All-Caps) */
+.marvel-logo-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--marvel-red);
+    color: #ffffff;
+    font-family: var(--comic-font);
+    font-size: 1.45rem;
+    padding: 3px 12px 1px 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(230, 36, 41, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.marvel-logo-badge:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: 0 6px 18px rgba(230, 36, 41, 0.6);
+}
+
+/* Stark Arc Reactor Pulse Indicator */
+.arc-reactor-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--stark-cyan);
+    box-shadow: 0 0 10px var(--stark-cyan), 0 0 20px var(--stark-cyan);
+    display: inline-block;
+    animation: arc-pulse 2s infinite ease-in-out;
+}
+@keyframes arc-pulse {
+    0%, 100% { opacity: 0.7; transform: scale(0.95); box-shadow: 0 0 8px var(--stark-cyan); }
+    50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 18px var(--stark-cyan), 0 0 30px rgba(0, 229, 255, 0.6); }
+}
+
+/* Comic Book Panels & Cards with Solid Shadow */
+.comic-card {
+    background: #ffffff;
+    border: 3px solid var(--comic-ink);
+    border-radius: 6px;
+    box-shadow: 6px 6px 0px var(--comic-ink);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+.comic-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px var(--comic-ink);
+}
+.comic-card--dark {
+    background: var(--cosmic-card);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 6px 6px 0px var(--marvel-red);
+    color: #f1f5f9;
+}
+.comic-card--dark:hover {
+    transform: translate(-3px, -3px);
+    border-color: var(--stark-cyan);
+    box-shadow: 8px 8px 0px var(--marvel-red), 0 0 24px rgba(0, 229, 255, 0.25);
+}
+
+/* Comic Issue Header Banner (Volume / Price / Issue Box) */
+.comic-issue-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid var(--marvel-red);
+    padding: 4px 12px;
+    font-family: var(--hud-font);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-radius: 3px;
+    box-shadow: 3px 3px 0 var(--marvel-red);
+}
+
+/* "Approved by AI Systems Authority" Comic Stamp */
+.comic-authority-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    background: #ffffff;
+    color: #000000;
+    padding: 6px 10px;
+    font-family: var(--comic-font);
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 3px 3px 0 #000000;
+    transform: rotate(2deg);
+}
+.comic-authority-badge span:first-child {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--marvel-red);
+}
+.comic-authority-badge strong {
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    margin: 2px 0;
+}
+.comic-authority-badge span:last-child {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: #555555;
+}
+
+/* Primary High-Converting Buttons */
+.btn--marvel {
+    background: var(--marvel-red);
+    color: #ffffff !important;
+    font-family: var(--comic-font);
+    font-size: 1.35rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 12px 28px 10px 28px;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    box-shadow: 5px 5px 0px #000000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.btn--marvel::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: rotate(25deg);
+    transition: none;
+}
+.btn--marvel:hover {
+    background: var(--marvel-red-dark);
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #000000;
+}
+.btn--marvel:hover::after {
+    left: 140%;
+    transition: left 0.65s ease;
+}
+.btn--marvel:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.btn--stark {
+    background: #0d131f;
+    color: var(--stark-cyan) !important;
+    font-family: var(--hud-font);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: 1.5px solid var(--stark-cyan);
+    border-radius: 4px;
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.25), inset 0 0 10px rgba(0, 229, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn--stark:hover {
+    background: rgba(0, 229, 255, 0.15);
+    color: #ffffff !important;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5), inset 0 0 15px rgba(0, 229, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* High-Converting Product Store Armory Pack */
+.armory-pack-card {
+    background: #ffffff;
+    border: 3px solid var(--comic-ink);
+    border-radius: 8px;
+    box-shadow: 7px 7px 0px var(--comic-ink);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    position: relative;
+}
+.armory-pack-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 11px 11px 0px var(--marvel-red);
+}
+.armory-pack-card__tag {
+    font-family: var(--hud-font);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--marvel-red);
+    background: rgba(230, 36, 41, 0.08);
+    border: 1px solid rgba(230, 36, 41, 0.25);
+    padding: 3px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+.armory-pack-card__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 16px 0 12px 0;
+}
+.armory-pack-card__current-price {
+    font-family: var(--comic-font);
+    font-size: 2.2rem;
+    color: var(--comic-ink);
+    line-height: 1;
+}
+.armory-pack-card__anchor-price {
+    font-family: var(--hud-font);
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+.armory-pack-card__checklist {
+    list-style: none;
+    margin: 16px 0 24px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.armory-pack-card__checklist li {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.armory-pack-card__checklist li strong {
+    color: #0f172a;
+}
+.armory-pack-card__check-icon {
+    color: #10b981;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+/* Sticky Mobile Buy Bar */
+.store-sticky-bar--marvel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0f172a;
+    border-top: 3px solid var(--marvel-red);
+    padding: 12px 16px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35);
+    transform: translateY(110%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.store-sticky-bar--marvel.is-active {
+    transform: translateY(0);
+}
+
+/* =============================================================================
+   PHASE 7: ADVANCED MARVEL IMMERSION & CINEMATIC ANIMATIONS ENGINE
+   Concentric Arc Reactor · Iron Man Target HUD · Action Burst SFX · Jarvis Ticker
+   ============================================================================= */
+
+/* 1. Concentric Animated Arc Reactor */
+.concentric-arc-reactor {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    filter: drop-shadow(0 0 16px rgba(0, 229, 255, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.concentric-arc-reactor:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 28px rgba(0, 229, 255, 0.85)) drop-shadow(0 0 45px rgba(230, 36, 41, 0.5));
+}
+.concentric-arc-reactor .ring-outer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: arc-rotate-cw 14s linear infinite;
+}
+.concentric-arc-reactor .ring-inner {
+    position: absolute;
+    inset: 12%;
+    width: 76%;
+    height: 76%;
+    animation: arc-rotate-ccw 8s linear infinite;
+}
+.concentric-arc-reactor .reactor-core {
+    position: absolute;
+    width: 32%;
+    height: 32%;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 14px #ffffff, 0 0 25px var(--stark-cyan), inset 0 0 8px var(--stark-cyan);
+    animation: arc-core-throb 2s ease-in-out infinite alternate;
+}
+.concentric-arc-reactor:hover .ring-outer {
+    animation-duration: 3s;
+}
+.concentric-arc-reactor:hover .ring-inner {
+    animation-duration: 2s;
+}
+@keyframes arc-rotate-cw {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes arc-rotate-ccw {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+@keyframes arc-core-throb {
+    0% { transform: scale(0.9); opacity: 0.85; }
+    100% { transform: scale(1.15); opacity: 1; }
+}
+
+/* 2. Iron Man HUD Target Lock Reticles on Cards */
+.hud-target-card {
+    position: relative;
+    overflow: hidden;
+}
+.hud-target-card::before,
+.hud-target-card::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.hud-target-card::before {
+    top: 8px;
+    left: 8px;
+    border-top: 2px solid var(--stark-cyan);
+    border-left: 2px solid var(--stark-cyan);
+    transform: translate(-4px, -4px);
+}
+.hud-target-card::after {
+    bottom: 8px;
+    right: 8px;
+    border-bottom: 2px solid var(--marvel-red);
+    border-right: 2px solid var(--marvel-red);
+    transform: translate(4px, 4px);
+}
+.hud-target-card:hover::before,
+.hud-target-card:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.hud-target-card__scanline {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--stark-cyan), transparent);
+    box-shadow: 0 0 12px var(--stark-cyan);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 15;
+}
+.hud-target-card:hover .hud-target-card__scanline {
+    animation: hud-scan 1.2s ease-in-out infinite;
+    opacity: 0.8;
+}
+@keyframes hud-scan {
+    0% { top: -5%; }
+    100% { top: 105%; }
+}
+
+/* 3. Vintage Comic Yellow Narrator Caption Box */
+.comic-narrator-box {
+    background: #FEF08A;
+    color: #0f172a;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--comic-font);
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
+    transition: transform 0.2s ease;
+}
+.comic-narrator-box:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+.comic-narrator-box strong {
+    color: var(--marvel-red);
+    font-size: 1.35rem;
+}
+
+/* 4. Jarvis Live Telemetry Terminal Widget */
+.jarvis-terminal {
+    background: #07090e;
+    border: 2px solid rgba(0, 229, 255, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 229, 255, 0.08);
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-family: var(--hud-font);
+    font-size: 0.8rem;
+    color: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+.jarvis-terminal__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--stark-cyan);
+    letter-spacing: 0.12em;
+}
+.jarvis-terminal__dots {
+    display: flex;
+    gap: 5px;
+}
+.jarvis-terminal__dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.jarvis-terminal__line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.6;
+    color: #94a3b8;
+}
+.jarvis-terminal__prompt {
+    color: var(--marvel-red);
+    font-weight: 700;
+}
+.jarvis-terminal__dynamic-text {
+    color: #ffffff;
+    font-weight: 600;
+}
+.jarvis-terminal__cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: var(--stark-cyan);
+    animation: blink-cursor 0.9s infinite;
+    vertical-align: middle;
+}
+@keyframes blink-cursor {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* 5. Comic Action SFX Burst Stickers (Spawn on click) */
+.comic-action-burst {
+    position: fixed;
+    z-index: 999999;
+    pointer-events: none;
+    font-family: var(--comic-font);
+    font-size: 1.45rem;
+    letter-spacing: 0.05em;
+    padding: 8px 18px;
+    background: var(--marvel-gold);
+    color: #000000;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    transform: translate(-50%, -50%) scale(0.6) rotate(-8deg);
+    animation: comic-burst-anim 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    clip-path: polygon(
+        0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%,
+        100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%
+    );
+}
+@keyframes comic-burst-anim {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.4) rotate(-15deg);
+    }
+    30% {
+        opacity: 1;
+        transform: translate(-50%, -80%) scale(1.25) rotate(6deg);
+    }
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -100%) scale(1.1) rotate(-4deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -140%) scale(0.8) rotate(12deg);
+    }
+}
+
+/* 6. Floating Quick-Mission Arc Reactor FAB */
+.arc-reactor-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9000;
+    background: #090c12;
+    border: 2px solid var(--stark-cyan);
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.4), 0 8px 24px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.arc-reactor-fab:hover {
+    transform: scale(1.15) translateY(-4px);
+    box-shadow: 0 0 35px var(--stark-cyan), 0 0 50px rgba(230, 36, 41, 0.5);
+    border-color: #ffffff;
+}
+.arc-reactor-fab__tooltip {
+    position: absolute;
+    right: 70px;
+    background: #000000;
+    color: var(--stark-cyan);
+    border: 1px solid var(--stark-cyan);
+    font-family: var(--hud-font);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.arc-reactor-fab:hover .arc-reactor-fab__tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =============================================================================
+   CAPTAIN AMERICA & INCREDIBLE HULK PRODUCT PAGE ENGINE
+   Vibranium Shield Defense · Super-Soldier Code · Gamma Strength Smash
+   ============================================================================= */
+
+/* Vibranium Shield Badge (Red / White / Navy / Silver Star) */
+.vibranium-shield-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e62429;
+    box-shadow: 0 0 12px rgba(230, 36, 41, 0.4), inset 0 0 4px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+}
+.vibranium-shield-icon .shield-ring-white {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vibranium-shield-icon .shield-ring-red {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e62429;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vibranium-shield-icon .shield-center-blue {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    color: #ffffff;
+    font-size: 9px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+/* Captain America Shield Guarantee Box */
+.vibranium-guarantee-card {
+    background: linear-gradient(135deg, #090d16 0%, #0e172a 100%);
+    border: 2.5px solid #1d4ed8;
+    border-radius: 6px;
+    padding: 20px 24px;
+    box-shadow: 6px 6px 0 #e62429, 0 8px 30px rgba(29, 78, 216, 0.25);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin: 28px 0;
+}
+
+/* Hulk Gamma Green Strength & Bottleneck Smash */
+.gamma-power-meter {
+    background: #051008;
+    border: 2px solid #22c55e;
+    border-radius: 6px;
+    padding: 14px 18px;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.25), inset 0 0 10px rgba(34, 197, 94, 0.1);
+    margin: 20px 0;
+    font-family: var(--hud-font);
+}
+.gamma-power-meter__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #4ade80;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.gamma-power-meter__bar-track {
+    width: 100%;
+    height: 12px;
+    background: rgba(34, 197, 94, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+}
+.gamma-power-meter__bar-fill {
+    height: 100%;
+    width: 94%;
+    background: linear-gradient(90deg, #16a34a, #22c55e, #86efac);
+    box-shadow: 0 0 12px #22c55e;
+    animation: gamma-pulse 2s infinite ease-in-out;
+}
+@keyframes gamma-pulse {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+}
+.gamma-smash-badge {
+    background: #22c55e;
+    color: #000000;
+    font-family: var(--comic-font);
+    font-size: 1.15rem;
+    padding: 3px 10px;
+    border: 2.5px solid #000000;
+    box-shadow: 3px 3px 0 #6b21a8;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transform: rotate(-1.5deg);
+}
+
+/* =============================================================================
+   THOR GOD OF THUNDER JOURNAL ENGINE
+   Asgardian Gold · Bifrost Lightning Progress Bar · Mjolnir Worthy Protocol
+   ============================================================================= */
+
+/* Bifrost Lightning Reading Bar */
+.read-progress-bar--bifrost {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(90deg, #f59e0b, #ec4899, #38bdf8, #10b981);
+    box-shadow: 0 0 14px #38bdf8, 0 0 25px #f59e0b;
+    z-index: 99999;
+    transition: width 0.1s ease-out;
+}
+
+/* Thor Asgardian Header Badge */
+.thor-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    border: 2px solid #f59e0b;
+    color: #fde68a;
+    padding: 6px 14px;
+    font-family: var(--hud-font);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 #f59e0b;
+    margin-bottom: 16px;
+}
+
+/* Mjolnir Worthy Reading Badge */
+.mjolnir-worthy-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid #f59e0b;
+    color: #f59e0b;
+    font-family: var(--hud-font);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 3px;
+    letter-spacing: 0.08em;
+}
+
+/* Thor Lightning Entry Cards */
+.thor-journal-card {
+    background: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 6px 6px 0px #f59e0b;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+.thor-journal-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #38bdf8;
+    border-color: #000000;
+}
+.thor-journal-card::before {
+    content: '⚡';
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 1.4rem;
+    opacity: 0.25;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.thor-journal-card:hover::before {
+    opacity: 1;
+    transform: scale(1.3) rotate(15deg);
+}
+
+
+
