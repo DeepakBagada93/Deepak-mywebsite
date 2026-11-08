@@ -67,7 +67,9 @@ Route::prefix('products')->group(function () {
     Route::get('/{slug}', [ProductController::class, 'show'])->name('products.show');
 });
 
-Route::get('/download/{token}', [DownloadController::class, 'show'])->name('products.download');
+Route::get('/download/{token}', [DownloadController::class, 'show'])
+    ->middleware('throttle:15,1')
+    ->name('products.download');
 
 Route::post('/webhooks/razorpay', [RazorpayWebhookController::class, 'handle'])
     ->name('webhooks.razorpay');

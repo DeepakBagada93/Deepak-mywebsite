@@ -177,15 +177,29 @@ class OrderController extends Controller
             'order_reference' => ['nullable', 'string'],
         ]);
 
-        $orderId = $data['razorpay_order_id'];
-        $paymentId = $data['razorpay_payment_id'];
-        $signature = $data['razorpay_signature'];
-        $reference = $data['order_reference'] ?? null;
+        $orderId = trim($data['razorpay_order_id']);
+        $paymentId = trim($data['razorpay_payment_id']);
+        $signature = trim($data['razorpay_signature']);
+        $reference = isset($data['order_reference']) ? trim($data['order_reference']) : null;
 
+        // 1. Verify HMAC-SHA256 signature
         if (! $this->razorpay->verifyPaymentSignature($orderId, $paymentId, $signature)) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'Payment verification failed. Please contact support.',
+                'message' => 'Payment verification failed. Invalid signature.',
+            ], 400);
+        }
+
+        // 2. Anti-Replay Gate: Ensure this payment hasn't already been redeemed for any other checkout
+        $alreadyUsed = ProductOrder::where('razorpay_payment_id', $paymentId)
+            ->when($reference, fn ($q) => $q->where('cart_reference', '!=', $reference))
+            ->where('payment_status', ProductOrder::STATUS_SUCCESS)
+            ->exists();
+
+        if ($alreadyUsed) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Payment already redeemed.',
             ], 400);
         }
 
@@ -206,7 +220,47 @@ class OrderController extends Controller
             ], 404);
         }
 
-        $cartReference = $orders->first()->cart_reference;
+        $first = $orders->first();
+        $cartReference = $first->cart_reference;
+
+        // 3. Strict Order ID binding: Must match registered gateway order
+        if ($first->razorpay_order_id && $first->razorpay_order_id !== $orderId) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Order mismatch. Payment does not belong to this checkout.',
+            ], 400);
+        }
+
+        // 4. Authoritative Gateway Verification: Validate status, amount, and currency via Razorpay API
+        $payment = $this->razorpay->fetchPayment($paymentId);
+        if (! $payment || ! in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Payment has not been captured.',
+            ], 400);
+        }
+
+        $expectedSubunits = (int) round($orders->sum('amount') * 100);
+        $expectedCurrency = strtoupper((string) $first->currency);
+        $paidSubunits = (int) ($payment['amount'] ?? 0);
+        $paidCurrency = strtoupper((string) ($payment['currency'] ?? ''));
+
+        if ($paidSubunits < $expectedSubunits || $paidCurrency !== $expectedCurrency) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Payment amount or currency mismatch.',
+            ], 400);
+        }
+
+        // 5. Notes reference binding check if present
+        $noteRef = $payment['notes']['cart_reference'] ?? null;
+        if ($noteRef && $noteRef !== $cartReference) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Payment reference mismatch.',
+            ], 400);
+        }
+
         $this->fulfiller->fulfillGroup($cartReference, $orderId, $paymentId, $signature);
 
         return response()->json([
@@ -217,7 +271,7 @@ class OrderController extends Controller
 
     /**
      * Razorpay redirects or user returns here after checkout.
-     * We reconcile the authoritative order status synchronously.
+     * We reconcile the authoritative order status synchronously with strict anti-bypass gates.
      */
     public function returnFromPayment(Request $request)
     {
@@ -250,35 +304,106 @@ class OrderController extends Controller
             $rzpPlinkStatus = (string) $request->query('razorpay_payment_link_status');
             $rzpPlinkId = (string) $request->query('razorpay_payment_link_id');
 
+            $expectedSubunits = (int) round($orders->sum('amount') * 100);
+            $expectedCurrency = strtoupper((string) $first->currency);
+
             // 1. If returning from Payment Link with captured payment
             if ($rzpPaymentId && ($rzpPlinkStatus === 'paid' || $rzpPlinkId)) {
-                $payment = $this->razorpay->fetchPayment($rzpPaymentId);
-                if ($payment && in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
-                    $this->fulfiller->fulfillGroup($cartReference, $rzpPlinkId ?: $rzpOrderId, $rzpPaymentId, $rzpSignature);
-                    $orders = ProductOrder::group($cartReference);
+                // Anti-Replay check: Ensure this payment hasn't already been used in another order
+                $alreadyUsed = ProductOrder::where('razorpay_payment_id', $rzpPaymentId)
+                    ->where('cart_reference', '!=', $cartReference)
+                    ->where('payment_status', ProductOrder::STATUS_SUCCESS)
+                    ->exists();
+
+                if (! $alreadyUsed) {
+                    $payment = $this->razorpay->fetchPayment($rzpPaymentId);
+
+                    if ($payment && in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
+                        $paidSubunits = (int) ($payment['amount'] ?? 0);
+                        $paidCurrency = strtoupper((string) ($payment['currency'] ?? ''));
+                        $noteRef = (string) ($payment['notes']['cart_reference'] ?? '');
+
+                        // Must verify amount & currency
+                        $amountValid = ($paidSubunits >= $expectedSubunits) && ($paidCurrency === $expectedCurrency);
+
+                        // Must verify reference binding:
+                        // notes.cart_reference matches OR payment order_id matches registered order id
+                        // OR payment link reference matches cart_reference
+                        $linkValid = false;
+                        if ($noteRef === $cartReference) {
+                            $linkValid = true;
+                        } elseif (! empty($payment['order_id']) && $payment['order_id'] === $first->razorpay_order_id) {
+                            $linkValid = true;
+                        } elseif ($rzpPlinkId || str_starts_with((string) $first->razorpay_order_id, 'plink_')) {
+                            $checkPlinkId = $rzpPlinkId ?: $first->razorpay_order_id;
+                            $plink = $this->razorpay->fetchPaymentLink($checkPlinkId);
+                            if ($plink && ($plink['reference_id'] ?? null) === $cartReference) {
+                                $linkValid = true;
+                            }
+                        }
+
+                        if ($amountValid && $linkValid) {
+                            $this->fulfiller->fulfillGroup($cartReference, $rzpPlinkId ?: $rzpOrderId, $rzpPaymentId, $rzpSignature);
+                            $orders = ProductOrder::group($cartReference);
+                        }
+                    }
                 }
             }
             // 2. Standard modal signature verification
             elseif ($rzpPaymentId && $rzpOrderId && $rzpSignature) {
-                if ($this->razorpay->verifyPaymentSignature($rzpOrderId, $rzpPaymentId, $rzpSignature)) {
-                    $this->fulfiller->fulfillGroup($cartReference, $rzpOrderId, $rzpPaymentId, $rzpSignature);
-                    $orders = ProductOrder::group($cartReference);
+                // Anti-Replay check
+                $alreadyUsed = ProductOrder::where('razorpay_payment_id', $rzpPaymentId)
+                    ->where('cart_reference', '!=', $cartReference)
+                    ->where('payment_status', ProductOrder::STATUS_SUCCESS)
+                    ->exists();
+
+                // Order binding check
+                $orderMatches = empty($first->razorpay_order_id) || $first->razorpay_order_id === $rzpOrderId;
+
+                if (! $alreadyUsed && $orderMatches && $this->razorpay->verifyPaymentSignature($rzpOrderId, $rzpPaymentId, $rzpSignature)) {
+                    $payment = $this->razorpay->fetchPayment($rzpPaymentId);
+                    if ($payment && in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
+                        $paidSubunits = (int) ($payment['amount'] ?? 0);
+                        $paidCurrency = strtoupper((string) ($payment['currency'] ?? ''));
+
+                        if ($paidSubunits >= $expectedSubunits && $paidCurrency === $expectedCurrency) {
+                            $this->fulfiller->fulfillGroup($cartReference, $rzpOrderId, $rzpPaymentId, $rzpSignature);
+                            $orders = ProductOrder::group($cartReference);
+                        }
+                    }
                 }
             } else {
-                // 3. Fallback: check status via API
+                // 3. Fallback: authoritative check via gateway API
                 $lookupOrderId = $first->razorpay_order_id ?: $first->cf_order_id;
                 if ($lookupOrderId) {
-                    if (str_starts_with($lookupOrderId, 'plink_') && $rzpPaymentId) {
-                        $payment = $this->razorpay->fetchPayment($rzpPaymentId);
-                        if ($payment && in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
-                            $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId, $rzpPaymentId);
-                            $orders = ProductOrder::group($cartReference);
+                    if (str_starts_with($lookupOrderId, 'plink_')) {
+                        $plink = $this->razorpay->fetchPaymentLink($lookupOrderId);
+                        if ($plink && in_array($plink['status'] ?? '', ['paid', 'partially_paid'], true)) {
+                            $paidSubunits = (int) ($plink['amount_paid'] ?? 0);
+                            $plinkRef = (string) ($plink['reference_id'] ?? ($plink['notes']['cart_reference'] ?? ''));
+
+                            if ($paidSubunits >= $expectedSubunits && $plinkRef === $cartReference) {
+                                $latestPaymentId = null;
+                                if (! empty($plink['payments']) && is_array($plink['payments'])) {
+                                    $latestPaymentId = end($plink['payments'])['payment_id'] ?? null;
+                                }
+
+                                if (! $latestPaymentId || ! ProductOrder::where('razorpay_payment_id', $latestPaymentId)->where('cart_reference', '!=', $cartReference)->where('payment_status', ProductOrder::STATUS_SUCCESS)->exists()) {
+                                    $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId, $latestPaymentId);
+                                    $orders = ProductOrder::group($cartReference);
+                                }
+                            }
                         }
                     } else {
                         $rzpOrder = $this->razorpay->fetchOrder($lookupOrderId);
                         if ($rzpOrder && ($rzpOrder['status'] ?? null) === 'paid') {
-                            $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId);
-                            $orders = ProductOrder::group($cartReference);
+                            $paidSubunits = (int) ($rzpOrder['amount_paid'] ?? 0);
+                            $orderReceipt = (string) ($rzpOrder['receipt'] ?? ($rzpOrder['notes']['cart_reference'] ?? ''));
+
+                            if ($paidSubunits >= $expectedSubunits && ($orderReceipt === $cartReference || str_starts_with($cartReference, $orderReceipt))) {
+                                $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId);
+                                $orders = ProductOrder::group($cartReference);
+                            }
                         } elseif ($rzpOrder && ($rzpOrder['status'] ?? null) === 'attempted' && (int) ($rzpOrder['attempts'] ?? 0) > 3) {
                             ProductOrder::where('cart_reference', $cartReference)
                                 ->update(['payment_status' => ProductOrder::STATUS_FAILED]);

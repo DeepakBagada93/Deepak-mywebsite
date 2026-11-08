@@ -42,7 +42,7 @@
                     <p class="newsletter-form__message newsletter-form__message--success">{{ session('newsletter_success') }}</p>
                 @elseif (session('newsletter_info'))
                     <p class="newsletter-form__message newsletter-form__message--info">{{ session('newsletter_info') }}</p>
-                @elseif ($errors->has('email'))
+                @elseif (isset($errors) && $errors->has('email'))
                     <p class="newsletter-form__message newsletter-form__message--error">{{ $errors->first('email') }}</p>
                 @endif
             </div>

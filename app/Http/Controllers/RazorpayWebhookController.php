@@ -52,6 +52,20 @@ class RazorpayWebhookController extends Controller
         $cartReference = $orders->first()->cart_reference;
 
         if (in_array($event, ['order.paid', 'payment.captured', 'payment_link.paid'], true)) {
+            // Amount & currency verification gate
+            $expectedSubunits = (int) round($orders->sum('amount') * 100);
+            $eventAmount = (int) ($paymentEntity['amount'] ?? ($orderEntity['amount_paid'] ?? ($paymentLinkEntity['amount_paid'] ?? 0)));
+
+            if ($eventAmount > 0 && $eventAmount < $expectedSubunits) {
+                \Illuminate\Support\Facades\Log::warning('Razorpay Webhook: Amount underpayment detected, fulfillment aborted', [
+                    'expected' => $expectedSubunits,
+                    'received' => $eventAmount,
+                    'cart_reference' => $cartReference,
+                ]);
+
+                return response()->json(['status' => 'amount mismatch'], 400);
+            }
+
             $this->fulfiller->fulfillGroup($cartReference, $orderId, $paymentId);
         } elseif ($event === 'payment.failed') {
             ProductOrder::where('cart_reference', $cartReference)

@@ -23,6 +23,23 @@ class OrderFulfiller
             return;
         }
 
+        // Anti-Replay Gate: If a paymentId is provided, guarantee it hasn't been used on any other fulfilled order
+        if ($paymentId) {
+            $alreadyUsed = ProductOrder::where('razorpay_payment_id', $paymentId)
+                ->where('cart_reference', '!=', $cartReference)
+                ->where('payment_status', ProductOrder::STATUS_SUCCESS)
+                ->exists();
+
+            if ($alreadyUsed) {
+                \Illuminate\Support\Facades\Log::warning('CRITICAL SECURITY: Blocked attempted payment replay attack', [
+                    'payment_id' => $paymentId,
+                    'cart_reference' => $cartReference,
+                ]);
+
+                return;
+            }
+        }
+
         $pending = $orders->where('payment_status', '!=', ProductOrder::STATUS_SUCCESS);
 
         if ($pending->isEmpty()) {

@@ -184,6 +184,26 @@ class RazorpayService
     }
 
     /**
+     * Fetch payment link details from Razorpay.
+     */
+    public function fetchPaymentLink(string $paymentLinkId): ?array
+    {
+        if (! $this->isConfigured()) {
+            return null;
+        }
+
+        $response = $this->client()->get('/payment_links/'.$paymentLinkId);
+
+        if ($response->failed()) {
+            report(new \RuntimeException('Razorpay fetch payment link failed: '.$response->body()));
+
+            return null;
+        }
+
+        return $response->json();
+    }
+
+    /**
      * Verify payment checkout signature using HMAC-SHA256.
      * signature = hmac_sha256(order_id + "|" + payment_id, secret)
      */
