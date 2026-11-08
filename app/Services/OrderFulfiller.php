@@ -7,6 +7,7 @@ use App\Mail\ProductDeliveryMail;
 use App\Models\ProductOrder;
 use App\Models\Subscriber;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class OrderFulfiller
@@ -31,7 +32,7 @@ class OrderFulfiller
                 ->exists();
 
             if ($alreadyUsed) {
-                \Illuminate\Support\Facades\Log::warning('CRITICAL SECURITY: Blocked attempted payment replay attack', [
+                Log::warning('CRITICAL SECURITY: Blocked attempted payment replay attack', [
                     'payment_id' => $paymentId,
                     'cart_reference' => $cartReference,
                 ]);

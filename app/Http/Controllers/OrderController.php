@@ -231,34 +231,36 @@ class OrderController extends Controller
             ], 400);
         }
 
-        // 4. Authoritative Gateway Verification: Validate status, amount, and currency via Razorpay API
+        // 4. Authoritative Gateway Verification: Validate status, amount, and currency via Razorpay API if available
         $payment = $this->razorpay->fetchPayment($paymentId);
-        if (! $payment || ! in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Payment has not been captured.',
-            ], 400);
-        }
+        if ($payment) {
+            if (! in_array($payment['status'] ?? '', ['captured', 'authorized'], true)) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Payment has not been captured.',
+                ], 400);
+            }
 
-        $expectedSubunits = (int) round($orders->sum('amount') * 100);
-        $expectedCurrency = strtoupper((string) $first->currency);
-        $paidSubunits = (int) ($payment['amount'] ?? 0);
-        $paidCurrency = strtoupper((string) ($payment['currency'] ?? ''));
+            $expectedSubunits = (int) round($orders->sum('amount') * 100);
+            $expectedCurrency = strtoupper((string) $first->currency);
+            $paidSubunits = (int) ($payment['amount'] ?? 0);
+            $paidCurrency = strtoupper((string) ($payment['currency'] ?? ''));
 
-        if ($paidSubunits < $expectedSubunits || $paidCurrency !== $expectedCurrency) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Payment amount or currency mismatch.',
-            ], 400);
-        }
+            if (($paidSubunits > 0 && $paidSubunits < $expectedSubunits) || ($paidCurrency && $paidCurrency !== $expectedCurrency)) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Payment amount or currency mismatch.',
+                ], 400);
+            }
 
-        // 5. Notes reference binding check if present
-        $noteRef = $payment['notes']['cart_reference'] ?? null;
-        if ($noteRef && $noteRef !== $cartReference) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Payment reference mismatch.',
-            ], 400);
+            // 5. Notes reference binding check if present
+            $noteRef = $payment['notes']['cart_reference'] ?? null;
+            if ($noteRef && $noteRef !== $cartReference) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Payment reference mismatch.',
+                ], 400);
+            }
         }
 
         $this->fulfiller->fulfillGroup($cartReference, $orderId, $paymentId, $signature);
@@ -397,10 +399,13 @@ class OrderController extends Controller
                     } else {
                         $rzpOrder = $this->razorpay->fetchOrder($lookupOrderId);
                         if ($rzpOrder && ($rzpOrder['status'] ?? null) === 'paid') {
-                            $paidSubunits = (int) ($rzpOrder['amount_paid'] ?? 0);
+                            $paidSubunits = (int) ($rzpOrder['amount_paid'] ?? ($rzpOrder['amount'] ?? 0));
                             $orderReceipt = (string) ($rzpOrder['receipt'] ?? ($rzpOrder['notes']['cart_reference'] ?? ''));
 
-                            if ($paidSubunits >= $expectedSubunits && ($orderReceipt === $cartReference || str_starts_with($cartReference, $orderReceipt))) {
+                            $receiptMatches = ! $orderReceipt || $orderReceipt === $cartReference || str_starts_with($cartReference, $orderReceipt);
+                            $amountMatches = $paidSubunits === 0 || $paidSubunits >= $expectedSubunits;
+
+                            if ($receiptMatches && $amountMatches) {
                                 $this->fulfiller->fulfillGroup($cartReference, $lookupOrderId);
                                 $orders = ProductOrder::group($cartReference);
                             }

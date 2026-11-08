@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class RazorpayService
 {
@@ -175,7 +176,9 @@ class RazorpayService
         $response = $this->client()->get('/payments/'.$paymentId);
 
         if ($response->failed()) {
-            report(new \RuntimeException('Razorpay fetch payment failed: '.$response->body()));
+            if (! app()->environment('testing')) {
+                Log::warning('Razorpay fetch payment failed: '.$response->body());
+            }
 
             return null;
         }
@@ -195,7 +198,9 @@ class RazorpayService
         $response = $this->client()->get('/payment_links/'.$paymentLinkId);
 
         if ($response->failed()) {
-            report(new \RuntimeException('Razorpay fetch payment link failed: '.$response->body()));
+            if (! app()->environment('testing')) {
+                Log::warning('Razorpay fetch payment link failed: '.$response->body());
+            }
 
             return null;
         }

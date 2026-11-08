@@ -6,6 +6,7 @@ use App\Models\ProductOrder;
 use App\Services\OrderFulfiller;
 use App\Services\RazorpayService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class RazorpayWebhookController extends Controller
 {
@@ -57,7 +58,7 @@ class RazorpayWebhookController extends Controller
             $eventAmount = (int) ($paymentEntity['amount'] ?? ($orderEntity['amount_paid'] ?? ($paymentLinkEntity['amount_paid'] ?? 0)));
 
             if ($eventAmount > 0 && $eventAmount < $expectedSubunits) {
-                \Illuminate\Support\Facades\Log::warning('Razorpay Webhook: Amount underpayment detected, fulfillment aborted', [
+                Log::warning('Razorpay Webhook: Amount underpayment detected, fulfillment aborted', [
                     'expected' => $expectedSubunits,
                     'received' => $eventAmount,
                     'cart_reference' => $cartReference,
