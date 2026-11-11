@@ -329,6 +329,7 @@ Run this strict closed loop for each article up to today's phase quota (Phase 1:
   │      - "When NOT to Use This" senior trade-offs
   │      - 4 FAQ Q&As (Schema.org ready)
   │      - Quotable Bottom Line with client advisory CTA
+  │      - STRICT ZERO /public/ RULE: All internal links must be clean (/journal/..., /products/..., /tools/...). Never write /public/!
   │
   ├── 4. PRE-AUDIT: Automated pre-publish audit
   │      node .agent/skills/deepak-blog/scripts/audit-blog.mjs --body draft.md --title "..." --excerpt "..."

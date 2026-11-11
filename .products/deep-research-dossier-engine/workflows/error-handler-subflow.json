@@ -1,0 +1,40 @@
+{
+  "name": "Deep Research Error Handler Subflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "deep-research-error-handler",
+        "options": {}
+      },
+      "id": "node-research-err-trigger",
+      "name": "Error Trigger Ingestion",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 260]
+    },
+    {
+      "parameters": {
+        "text": "=🚨 *CRITICAL: Deep Research Query Failed*\\n*Error:* {{ $json.execution ? $json.execution.error.message : 'Timeout during search crawling' }}\\n*Timestamp:* {{ new Date().toISOString() }}"
+      },
+      "id": "node-research-discord",
+      "name": "Send Discord Error Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [440, 260]
+    }
+  ],
+  "connections": {
+    "Error Trigger Ingestion": {
+      "main": [
+        [
+          {
+            "node": "Send Discord Error Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

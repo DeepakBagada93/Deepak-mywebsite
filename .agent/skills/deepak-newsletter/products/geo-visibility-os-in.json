@@ -1,0 +1,40 @@
+{
+  "slug": "geo-visibility-os",
+  "name": "GEO Visibility OS",
+  "tagline": "Turn an AI-search question into a paid, white-label GEO audit in 60 minutes — with no API fees or monthly SaaS.",
+  "outcome": "Audit any client site across 40 deterministic GEO and AEO checks, then generate a 30-prompt buyer panel, six answer-first briefs, a JSON-LD schema pack, a 90-day roadmap and a white-label report.",
+  "outcome_short": "turn AI-search questions into paid audits",
+  "pain_short": "unrepeatable GEO audits",
+  "price_label": "₹2,499",
+  "compare_label": "₹4,999",
+  "price_inr": 2499,
+  "compare_inr": 4999,
+  "price_note": "One-time · lifetime agency commercial licence · instant download · GST invoice",
+  "proof_bullets": [
+    "40 deterministic GEO/AEO checks, including AI crawler access and answer-first architecture",
+    "30-prompt buyer panel across ChatGPT, Perplexity, Claude, Gemini and Copilot",
+    "Six answer-first content briefs, a complete JSON-LD schema pack and a 90-day roadmap",
+    "White-label Markdown report for client delivery",
+    "Runs locally with Node.js — zero subscriptions, API keys or per-scan fees"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "scanner + audit + report generator" },
+    { "label": "Licence", "value": "lifetime agency commercial use" },
+    { "label": "Format", "value": "ZIP · CLI + agent skill" },
+    { "label": "Updates", "value": "12 months included" }
+  ],
+  "bonus": "Reference fixtures and a deliberately broken audit case are included so your team can verify the workflow before client delivery.",
+  "guarantee": "If the package cannot produce a usable first client audit and report, reply within 30 days for a fix or refund.",
+  "cta_url": "https://deepakbagada.in/products/geo-visibility-os",
+  "cta_label": "Get GEO Visibility OS — {{PRICE}}",
+  "ps": "Reply with the client vertical you audit most, and I will tell you which GEO checks usually surface first.",
+  "preheader": "A 40-check, white-label GEO audit system for Mumbai agencies — ₹2,499 once, no recurring tool cost.",
+  "subject_variants": [
+    "{{FIRST_NAME}}, a repeatable GEO audit for {{COMPANY_SHORT}}",
+    "{{COMPANY_SHORT}}: a 40-check GEO audit your clients can see",
+    "{{CITY}} agencies: white-label GEO audits without SaaS fees",
+    "{{FIRST_NAME}}, turn AI-search work into a client-ready report",
+    "A ₹2,499 GEO audit system for {{COMPANY_SHORT}}"
+  ],
+  "audience_cities": ["Mumbai"]
+}

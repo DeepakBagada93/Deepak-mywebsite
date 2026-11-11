@@ -1,0 +1,33 @@
+{
+  "name": "ai-invoice-recon-sentinel",
+  "version": "1.0.0",
+  "title": "Autonomous Financial Bookkeeper & Invoice Recon Sentinel",
+  "description": "Production n8n financial automation system that ingests PDF invoices and receipts via Vision OCR, validates tax compliance, reconciles payout batches with bank transactions, and flags audit anomalies.",
+  "author": "Deepak Bagada Systems",
+  "category": "workflow-automation",
+  "platforms": ["n8n", "Make.com", "Docker"],
+  "pricing": {
+    "us": {
+      "solo": 119,
+      "agency": 229,
+      "white_label": 449
+    },
+    "india": {
+      "solo": 1799,
+      "agency": 3999,
+      "white_label": 7499
+    }
+  },
+  "deliverables": [
+    "workflows/main-automation.json",
+    "workflows/error-handler-subflow.json",
+    ".env.example",
+    "docker-compose.yml",
+    "docs/research-dossier.md",
+    "docs/system-architecture.md",
+    "docs/tutorial-guide.md",
+    "docs/store-listing.md",
+    "tests/sample-payload.json",
+    "tests/test-invoice-recon.test.mjs"
+  ]
+}

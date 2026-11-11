@@ -1,0 +1,14 @@
+{
+  "id": "chk_8829104",
+  "customer": {
+    "first_name": "Marcus",
+    "last_name": "Vance"
+  },
+  "email": "marcus.v@gmail.com",
+  "phone": "+14155552671",
+  "total_price": "148.50",
+  "line_items": [
+    { "title": "Merino Wool Thermal Jacket - Charcoal L" },
+    { "title": "Everyday Water Repellent Cap" }
+  ]
+}

@@ -132,12 +132,12 @@ try {
             $issues[] = "contains embedded image (violates zero-images-in-body policy)";
         }
 
-        // Check title length & bracket tag
+        // Check title length & zero square brackets policy
         if (mb_strlen($p->title) > 60) {
             $issues[] = "title exceeds 60 chars (" . mb_strlen($p->title) . " chars)";
         }
-        if (!preg_match('/\[[^\]]+\]$/', $p->title)) {
-            $issues[] = "title missing bracket tag at end";
+        if (preg_match('/\[.*?\]/', $p->title)) {
+            $issues[] = "contains square brackets (violates zero-square-brackets policy)";
         }
 
         if (empty($issues)) {

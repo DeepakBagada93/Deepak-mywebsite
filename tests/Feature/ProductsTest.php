@@ -36,6 +36,11 @@ class ProductsTest extends TestCase
         $response->assertSee('Agency Email Template Pack');
         $response->assertSee('Email Marketing &amp; Cold Outreach Engine', false);
         $response->assertSee('AI Email Automation for Agencies');
+        $response->assertSee('Autonomous AI SDR & Inbound Lead Closer');
+        $response->assertSee('Full-Stack AI Coding Guardrails &amp; Agent Skill Pack', false);
+        $response->assertSee('Multi-Agent Deep Research &amp; Competitive Dossier Engine', false);
+        $response->assertSee('D2C Autonomous Retention &amp; Win-Back Bot', false);
+        $response->assertSee('Autonomous Financial Bookkeeper &amp; Invoice Recon Sentinel', false);
     }
 
     public function test_ads_creative_hub_alias_redirects_to_ad_creative_lab(): void

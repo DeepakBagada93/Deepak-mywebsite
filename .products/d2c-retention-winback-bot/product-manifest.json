@@ -1,0 +1,33 @@
+{
+  "name": "d2c-retention-winback-bot",
+  "version": "1.0.0",
+  "title": "D2C / E-Commerce Autonomous Retention & Win-Back Bot",
+  "description": "Production-ready turnkey n8n automation for Shopify, WooCommerce, and Stripe. Recovers abandoned checkouts, predicts customer churn, generates dynamic discount incentives, and triggers hyper-personalized WhatsApp and email win-back flows.",
+  "author": "Deepak Bagada Systems",
+  "category": "workflow-automation",
+  "platforms": ["n8n", "Make.com", "Shopify", "Stripe", "Docker"],
+  "pricing": {
+    "us": {
+      "solo": 139,
+      "agency": 279,
+      "white_label": 549
+    },
+    "india": {
+      "solo": 2199,
+      "agency": 4799,
+      "white_label": 8999
+    }
+  },
+  "deliverables": [
+    "workflows/main-automation.json",
+    "workflows/error-handler-subflow.json",
+    ".env.example",
+    "docker-compose.yml",
+    "docs/research-dossier.md",
+    "docs/system-architecture.md",
+    "docs/tutorial-guide.md",
+    "docs/store-listing.md",
+    "tests/sample-payload.json",
+    "tests/test-retention-scoring.test.mjs"
+  ]
+}

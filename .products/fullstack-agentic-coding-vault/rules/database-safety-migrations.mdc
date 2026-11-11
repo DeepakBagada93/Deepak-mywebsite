@@ -1,0 +1,14 @@
+---
+description: Database Safety, Schema Migration & Transaction Guardrails
+globs: ["prisma/**/*", "drizzle/**/*", "migrations/**/*", "db/**/*"]
+---
+
+# Database Safety & Schema Migration Guardrails
+
+1. **Non-Destructive Migrations:**
+   - Always prefer additive schema evolutions (e.g., add new column with default value, deprecate old column, then drop in separate release).
+   - Never run unverified `prisma db push` or raw `DROP TABLE` in production environments.
+
+2. **Transaction Isolation:**
+   - Wrap multi-table mutation sequences in ACID transactions.
+   - Set sensible statement timeouts to prevent connection pool exhaustion.

@@ -1,0 +1,152 @@
+{
+  "name": "AI SDR & Inbound Lead Closer",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "inbound-lead",
+        "options": {}
+      },
+      "id": "node-webhook-inbound",
+      "name": "Webhook Inbound Lead",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [180, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Validate schema and sanitize payload\nconst body = $json.body || $json;\nif (!body.email || !body.name) {\n  throw new Error('Invalid payload: Missing email or name');\n}\nreturn [{\n  json: {\n    lead_id: body.id || 'lead_' + Date.now(),\n    name: body.name.trim(),\n    email: body.email.trim().toLowerCase(),\n    company: (body.company || '').trim(),\n    message: (body.message || '').trim(),\n    received_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "node-payload-validator",
+      "name": "Validate & Sanitize Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [400, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Intent scoring & ICP evaluation\nconst lead = $json;\nlet score = 50;\nconst highValueKeywords = ['agency', 'enterprise', 'urgent', 'scale', 'pricing', 'hire', 'contract', 'team'];\nconst lowValueKeywords = ['student', 'free', 'internship', 'unpaid'];\n\nconst content = (lead.company + ' ' + lead.message).toLowerCase();\nfor (const kw of highValueKeywords) {\n  if (content.includes(kw)) score += 15;\n}\nfor (const kw of lowValueKeywords) {\n  if (content.includes(kw)) score -= 25;\n}\n\nscore = Math.max(0, Math.min(100, score));\nconst tier = score >= 75 ? 'HIGH_PRIORITY' : (score >= 45 ? 'MEDIUM_QUALIFIED' : 'NURTURE');\n\nreturn [{\n  json: {\n    ...lead,\n    lead_score: score,\n    tier: tier,\n    auto_book_eligible: score >= 75\n  }\n}];"
+      },
+      "id": "node-intent-scorer",
+      "name": "AI Intent & ICP Scorer",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 240]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.auto_book_eligible }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-tier-router",
+      "name": "High Priority Tier Router",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [840, 240]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-5-sonnet-20241022",
+        "prompt": "=Write an ultra-crisp, personalized 4-sentence B2B email reply to {{ $json.name }} at {{ $json.company }}.\nContext of their inquiry: \"{{ $json.message }}\".\nGoal: Acknowledge their specific bottleneck, state how we solve it in 7 days, and invite them to select a time via our instant calendar link: {{ $env.BOOKING_URL }}.\nTone: Peer-to-peer executive, zero fluff, zero sales clichés.",
+        "options": {
+          "temperature": 0.3
+        }
+      },
+      "id": "node-claude-drafter",
+      "name": "Draft VIP Outreach (Claude 3.5)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1060, 160]
+    },
+    {
+      "parameters": {
+        "text": "=🚀 *High Priority Inbound Lead Alert*\\n*Name:* {{ $json.name }}\\n*Company:* {{ $json.company }}\\n*Score:* {{ $json.lead_score }}/100 (Tier: {{ $json.tier }})\\n*Email:* {{ $json.email }}\\n*Inquiry:* {{ $json.message }}"
+      },
+      "id": "node-slack-alert",
+      "name": "Alert Sales Team on Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1280, 160]
+    },
+    {
+      "parameters": {
+        "text": "=ℹ️ *Standard Lead Received (Nurture Pool)*\\n*Name:* {{ $json.name }}\\n*Score:* {{ $json.lead_score }}/100"
+      },
+      "id": "node-slack-nurture",
+      "name": "Log Nurture Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1060, 340]
+    }
+  ],
+  "connections": {
+    "Webhook Inbound Lead": {
+      "main": [
+        [
+          {
+            "node": "Validate & Sanitize Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & Sanitize Lead": {
+      "main": [
+        [
+          {
+            "node": "AI Intent & ICP Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Intent & ICP Scorer": {
+      "main": [
+        [
+          {
+            "node": "High Priority Tier Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "High Priority Tier Router": {
+      "main": [
+        [
+          {
+            "node": "Draft VIP Outreach (Claude 3.5)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log Nurture Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Draft VIP Outreach (Claude 3.5)": {
+      "main": [
+        [
+          {
+            "node": "Alert Sales Team on Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

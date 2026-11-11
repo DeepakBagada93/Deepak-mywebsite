@@ -1,0 +1,40 @@
+{
+  "name": "Invoice Recon Error Handler Subflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "invoice-recon-error-handler",
+        "options": {}
+      },
+      "id": "node-inv-err-trigger",
+      "name": "Error Trigger Ingestion",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 260]
+    },
+    {
+      "parameters": {
+        "text": "=🚨 *CRITICAL: Invoice OCR or Reconcile Failure*\\n*Error:* {{ $json.execution ? $json.execution.error.message : 'Unknown OCR parser timeout' }}\\n*Timestamp:* {{ new Date().toISOString() }}"
+      },
+      "id": "node-inv-err-alert",
+      "name": "Alert Finance Controller",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [440, 260]
+    }
+  ],
+  "connections": {
+    "Error Trigger Ingestion": {
+      "main": [
+        [
+          {
+            "node": "Alert Finance Controller",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

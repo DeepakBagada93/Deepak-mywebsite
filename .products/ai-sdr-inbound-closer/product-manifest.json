@@ -1,0 +1,33 @@
+{
+  "name": "ai-sdr-inbound-closer",
+  "version": "1.0.0",
+  "title": "Autonomous AI SDR & Inbound Lead Closer System",
+  "description": "Production-ready turnkey n8n automation system that ingests inbound leads, enriches company data, scores intent, generates hyper-personalized 4-sentence outreach, and autonomously routes meeting links.",
+  "author": "Deepak Bagada Systems",
+  "category": "workflow-automation",
+  "platforms": ["n8n", "Make.com", "Docker"],
+  "pricing": {
+    "us": {
+      "solo": 147,
+      "agency": 297,
+      "white_label": 597
+    },
+    "india": {
+      "solo": 2499,
+      "agency": 4999,
+      "white_label": 9999
+    }
+  },
+  "deliverables": [
+    "workflows/main-automation.json",
+    "workflows/error-handler-subflow.json",
+    ".env.example",
+    "docker-compose.yml",
+    "docs/research-dossier.md",
+    "docs/system-architecture.md",
+    "docs/tutorial-guide.md",
+    "docs/store-listing.md",
+    "tests/sample-payload.json",
+    "tests/test-lead-scoring.test.mjs"
+  ]
+}

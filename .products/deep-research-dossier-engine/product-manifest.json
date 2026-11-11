@@ -1,0 +1,33 @@
+{
+  "name": "deep-research-dossier-engine",
+  "version": "1.0.0",
+  "title": "Multi-Agent Deep Research & Competitive Dossier Engine",
+  "description": "Production n8n workflow system that executes autonomous multi-source market and competitor research, validates citations, extracts financial/pricing metrics, and generates executive briefing dossiers.",
+  "author": "Deepak Bagada Systems",
+  "category": "workflow-automation",
+  "platforms": ["n8n", "Make.com", "Docker"],
+  "pricing": {
+    "us": {
+      "solo": 129,
+      "agency": 249,
+      "white_label": 497
+    },
+    "india": {
+      "solo": 1999,
+      "agency": 4499,
+      "white_label": 8499
+    }
+  },
+  "deliverables": [
+    "workflows/main-automation.json",
+    "workflows/error-handler-subflow.json",
+    ".env.example",
+    "docker-compose.yml",
+    "docs/research-dossier.md",
+    "docs/system-architecture.md",
+    "docs/tutorial-guide.md",
+    "docs/store-listing.md",
+    "tests/sample-payload.json",
+    "tests/test-research-synthesis.test.mjs"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "fullstack-agentic-coding-vault",
+  "version": "1.0.0",
+  "description": "Full-Stack AI Coding Guardrails & Agent Skill Pack",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/skill-validation.test.mjs"
+  },
+  "keywords": ["cursorrules", "claude-code", "agentic-coding", "nextjs", "antigravity", "skills"],
+  "author": "Deepak Bagada Systems",
+  "license": "Commercial"
+}

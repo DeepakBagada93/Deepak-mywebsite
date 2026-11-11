@@ -1,0 +1,19 @@
+---
+description: Next.js App Router, SSR, and Server Action Engineering Rules
+globs: ["app/**/*", "components/**/*", "actions/**/*", "*.tsx", "*.ts"]
+---
+
+# Next.js Full-Stack Guardrails
+
+1. **Server vs. Client Component Segregation:**
+   - Always default to Server Components.
+   - Extract interactive logic into dedicated `'use client'` leaf components.
+   - Never import server-only secrets into files evaluated by the client bundle.
+
+2. **Data Fetching & Cache Integrity:**
+   - Use `cache()`, `unstable_cache()`, or Next.js `fetch({ next: { revalidate: ... } })` intentionally.
+   - Avoid waterfall network requests; use `Promise.all()` for parallel resource fetching.
+
+3. **Type Safety & Schema Validation:**
+   - Every Server Action must accept typed arguments validated with Zod.
+   - Always return predictable response structures: `{ success: boolean, data?: T, error?: string }`.

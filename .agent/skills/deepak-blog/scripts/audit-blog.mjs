@@ -181,6 +181,14 @@ if (!body || body.trim().length < 200) {
   else if (internal.length > 5) add("WARN", "Internal links 3-5", `${internal.length} links — OK but ensure relevance`);
   else add("PASS", "Internal links 3-5", `${internal.length} links: ${internal.join(", ")}`);
 
+  // Zero /public/ crawl-waste guardrail
+  const publicLinks = links.filter(h => h.includes("/public/"));
+  if (publicLinks.length > 0 || /href=["'][^"']*\/public\//.test(body) || /\[[^\]]*\]\([^)]*\/public\//.test(body)) {
+    add("FAIL", "Zero /public/ links", `Found /public/ in links: ${publicLinks.join(", ") || "raw link"} — BANNED. Causes GSC "Alternate page with proper canonical tag" bloat. Use clean root paths.`);
+  } else {
+    add("PASS", "Zero /public/ links", "All internal links are clean root-relative paths");
+  }
+
   // Product Monetization Bridge (Selling Deepak Bagada digital products or services)
   const hasProductLink = links.some(h => h.startsWith("/products"));
   const hasProductMention = /product|toolkit|bundle|download|commercial license|\/products\//i.test(body);

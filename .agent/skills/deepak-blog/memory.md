@@ -4176,3 +4176,134 @@
   - Words: 1441
   - Scheduled Slot: `06:30 PM IST (Phase 2)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Top AI Consultant in Gujarat: 2026 Enterprise Cost Guide**
+  - Slug: `top-ai-consultant-gujarat-2026-enterprise-cost-guide`
+  - Tag: `AI DEV`
+  - Published: `2026-11-08 06:30:00`
+  - Words: 1615
+  - Scheduled Slot: `06:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **PydanticAI vs LangGraph: 5 Key Benchmark Showdowns 2026**
+  - Slug: `pydantic-ai-vs-langgraph-5-benchmark-showdowns-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-11-08 09:30:00`
+  - Words: 1421
+  - Scheduled Slot: `09:30 AM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Gemini 2.0 Flash vs Claude 3.5 Haiku: 2026 Agent Benchmark**
+  - Slug: `gemini-2-flash-vs-claude-3-5-haiku-2026-agent-benchmark`
+  - Tag: `BENCHMARKS`
+  - Published: `2026-11-08 12:30:00`
+  - Words: 1299
+  - Scheduled Slot: `12:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 15 Image Compression: Sub-10ms WebAssembly 2026**
+  - Slug: `nextjs-15-image-compression-sub-10ms-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-08 15:30:00`
+  - Words: 1425
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why LLM Function Calling Fails: The ₹18K Schema Leak 2026**
+  - Slug: `why-llm-function-calling-fails-18k-schema-leak-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-08 18:30:00`
+  - Words: 1598
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 15 Client PDF Splitter: Sub-10ms WebAssembly 2026**
+  - Slug: `nextjs-15-client-pdf-splitter-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-09 15:30:00`
+  - Words: 1408
+  - Scheduled Slot: `15:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why We Migrated from AWS to VPS: The ₹45K Monthly Cut 2026**
+  - Slug: `why-we-migrated-aws-to-vps-45k-monthly-cut-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-09 18:30:00`
+  - Words: 1391
+  - Scheduled Slot: `06:30 PM IST (Phase 2)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+### November 11, 2026 — Phase 3 (Day 51 · 7 Dispatches Scheduled)
+
+- **Agentic AI in Ahmedabad: 2026 Enterprise Cost Guide**
+  - Slug: `agentic-ai-development-ahmedabad-cost-guide-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-11 06:30:00`
+  - Slot: `06:30 AM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: agentic ai development services in ahmedabad)
+
+- **FastMCP & LangGraph: Build a 7-Agent Swarm in 2026**
+  - Slug: `fastmcp-langgraph-multi-agent-swarm-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-11 08:45:00`
+  - Slot: `08:45 AM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: fastmcp langgraph multi-agent swarm)
+
+- **Claude 3.7 Sonnet vs DeepSeek R1: 7 Agent Tests 2026**
+  - Slug: `claude-3-7-sonnet-vs-deepseek-r1-agent-benchmark-2026`
+  - Tag: `BENCHMARKS`
+  - Scheduled: `2026-11-11 11:15:00`
+  - Slot: `11:15 AM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: claude 3.7 sonnet vs deepseek r1 benchmark)
+
+- **AI Agentic Commerce: Autonomous UPI Checkout in 2026**
+  - Slug: `ai-agentic-commerce-upi-cashfree-saas-india-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-11 13:45:00`
+  - Slot: `01:45 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: ai agentic commerce autonomous upi checkout)
+
+- **Next.js 15 Client PDF Compressor: WebAssembly 2026**
+  - Slug: `nextjs-15-client-pdf-compressor-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Scheduled: `2026-11-11 16:00:00`
+  - Slot: `04:00 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: nextjs 15 client side pdf compressor webassembly)
+
+- **Vibe Coding at Scale: Cursor 2.0 & Claude Code 2026**
+  - Slug: `vibe-coding-cursor-claude-code-multi-repo-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-11 18:30:00`
+  - Slot: `06:30 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: vibe coding cursor claude code multi repo)
+
+- **Why We Killed Kubernetes: Monolith Saves ₹62K in 2026**
+  - Slug: `why-we-killed-kubernetes-microservices-monolith-2026`
+  - Tag: `MY STORY`
+  - Scheduled: `2026-11-11 21:00:00`
+  - Slot: `09:00 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: why we killed kubernetes microservices monolith)
+
+- **Next.js 15 Client PDF Compressor: WebAssembly 2026**
+  - Slug: `nextjs-15-client-pdf-compressor-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-11 16:00:00`
+  - Words: 1358
+  - Scheduled Slot: `04:00 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Vibe Coding at Scale: Cursor 2.0 & Claude Code 2026**
+  - Slug: `vibe-coding-cursor-claude-code-multi-repo-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-11-11 18:30:00`
+  - Words: 1427
+  - Scheduled Slot: `06:30 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why We Killed Kubernetes: Monolith Saves ₹62K in 2026**
+  - Slug: `why-we-killed-kubernetes-microservices-monolith-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-11 21:00:00`
+  - Words: 1384
+  - Scheduled Slot: `09:00 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB

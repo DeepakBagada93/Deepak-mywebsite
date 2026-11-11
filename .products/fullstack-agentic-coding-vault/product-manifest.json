@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-agentic-coding-vault",
+  "version": "1.0.0",
+  "title": "Full-Stack AI Coding Guardrails & Agent Skill Pack",
+  "description": "Enterprise-grade AI coding skill pack and rules vault for Cursor, Claude Code, and Antigravity. Enforces Next.js App Router hygiene, strict TDD, zero unrequested refactors, and database migration safety locks.",
+  "author": "Deepak Bagada Systems",
+  "category": "ai-skills",
+  "platforms": ["Cursor", "Claude Code", "Antigravity", "Windsurf"],
+  "pricing": {
+    "us": {
+      "solo": 97,
+      "agency": 197,
+      "white_label": 397
+    },
+    "india": {
+      "solo": 1499,
+      "agency": 3499,
+      "white_label": 6999
+    }
+  },
+  "deliverables": [
+    "skills/fullstack-agentic-coding-vault/SKILL.md",
+    "rules/nextjs-fullstack-guardrails.mdc",
+    "rules/clean-architecture-tdd.mdc",
+    "rules/database-safety-migrations.mdc",
+    "docs/research-dossier.md",
+    "docs/product-spec.md",
+    "docs/tutorial-guide.md",
+    "docs/store-listing.md",
+    "tests/skill-validation.test.mjs"
+  ]
+}

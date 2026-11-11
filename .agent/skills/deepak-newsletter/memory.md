@@ -675,3 +675,61 @@
 - Email audit: 7/7 PASS. Dry run: 7 would send, 0 skipped, 0 failed.
 - **No live send.** 6 of 7 are generic company inboxes; only `yasemin@alchemycharge.com.au` is a named personal mailbox. Australia consent gate still applies.
 - Follow-up if approved: 2026-11-06 (7 days). Cooldown until 2026-11-13.
+
+---
+
+## 2026-11-10 — GEO Visibility OS · fresh agency batch (58)
+
+### Audience note
+- No list of 100 purchasers exists. `product_orders`: 5 SUCCESS rows / 2 unique emails, both internal test addresses.
+- Built a **new** batch instead: uncontacted AI Automation DB agency profiles, person-shaped mailboxes only, no purchased or scraped-personal data.
+- Leads: `research/geo-2026-11-10/leads-raw.json` → `-enriched.json` (59) → `-audit.md` (57 clean, 2 mx_missing; `kuhnic.ai` re-checked and patched to mx=true).
+- Excluded India (USD product config), free-mail domains, role/generic inboxes, and duplicate domains.
+
+### Campaign
+- Product: GEO Visibility OS · $99 USD (was $149) · config `products/geo-visibility-os.json`.
+- Emails: `campaigns/2026-11-10-geo-visibility/` (59 HTML + TXT + manifest).
+- Email audit: **59/59 PASS**.
+- Dry run: 58 would send, 1 skipped (no MX).
+- Live send: 5s throttle · `--allow-non-metro --allow-generic --min-score=60` · **58 sent, 0 skipped, 0 failed**.
+- Sent log: `.agent/skills/deepak-newsletter/campaigns/2026-11-10-geo-visibility-os-sent.json`.
+- Send log: `campaigns/2026-11-10-geo-visibility/send.log`.
+
+### Brevo result (at report time)
+- requests 58 · delivered 57 · hard bounces 1 (`keith@wireup-ai.com`, Gmail 550 no such user) · opens 3 · unique opens 3 · clicks 2 · unique clicks 1 · spam 0.
+- Bounce rate 1.7% — above the 1.5% target. `keith@wireup-ai.com` suppressed (status unsubscribed).
+
+### Deliverability debt (fix before next batch)
+- Brevo `/v3/senders/domains` is **empty** — `saasnext.in` has no DKIM/SPF record and no DMARC. Sending relies on Brevo's shared signing. Add Brevo DKIM + SPF (`include:spf.brevo.com`) + DMARC `p=none` on the Vercel DNS before the next cold batch.
+
+### Follow-up
+- Watch replies/bounces 24–48h. Product non-opener follow-up 2026-11-17 (7 days).
+- Do not re-contact before 2026-11-24 (14 days). Do not send GEO Visibility OS to the same company twice in 30 days.
+
+---
+
+## 2026-11-10 — Mumbai GEO Visibility OS · top 50 (INR) — LIVE
+
+### Audience
+- Selected the 50 best Mumbai contacts from the two Mumbai solo batches (`research/leads-2026-10-26-mumbai-solo-enriched.json` + `research/leads-2026-10-27-mumbai-solo-batch2-enriched.json`), deduped by email and company domain.
+- Ranking: GEO-fit niches first (SEO, digital, web, marketing, content, brand, growth, ecommerce), then top company-domain creative leads. Excluded CA, HR, accounting, nutrition and coaching from the fill.
+- 12 company-domain + 38 free mailboxes (Gmail).
+- Leads: `research/mumbai-geo-2026-11-10/leads.json` → `leads-audit.md` (50 clean, 0 failed, 38 free-email warnings).
+- Cooldown: last contacted 26–27 Oct with Global Client Hunter OS; 14-day gap met (different product).
+
+### Campaign
+- Product: GEO Visibility OS · ₹2,499 (was ₹4,999) · config `products/geo-visibility-os-in.json`.
+- Emails: `campaigns/2026-11-10-mumbai-geo/` (50 HTML + TXT + manifest + audit).
+- Email audit: **50/50 PASS**.
+- Dry run: 50 would send, 0 skipped, 0 failed.
+- Live send: 5s throttle · `--min-score=65` · **50 sent, 0 failed**.
+- Sent log: `campaigns/2026-11-10-mumbai-geo/sent.json` (kept separate from the global GEO log).
+- Send log: `campaigns/2026-11-10-mumbai-geo/send.log`.
+
+### Brevo result (at report time)
+- requests 50 · delivered 49 · blocked 1 (`ram01siingh4656@gmail.com`) · hard bounces 0 · spam 0.
+- Blocked address suppressed (status unsubscribed).
+
+### Follow-up
+- Watch replies 24–48h. Non-opener follow-up 2026-11-17.
+- Cooldown until 2026-11-24. Do not send GEO Visibility OS to the same company twice in 30 days.

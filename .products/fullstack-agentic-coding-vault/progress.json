@@ -1,0 +1,25 @@
+{
+  "productSlug": "fullstack-agentic-coding-vault",
+  "title": "Full-Stack AI Coding Guardrails & Agent Skill Pack",
+  "version": "1.0.0",
+  "currentStage": "completed",
+  "stages": {
+    "stage_0_discovery": "completed",
+    "stage_1_research": "completed",
+    "stage_2_spec": "completed",
+    "stage_3_skills_and_rules": "completed",
+    "stage_4_tutorial": "completed",
+    "stage_5_store_listing": "completed",
+    "stage_6_qa_and_packaging": "completed"
+  },
+  "decisions": [
+    {
+      "date": "2026-11-10",
+      "decision": "Packaged unified multi-agent skill architecture supporting Claude Code (SKILL.md), Cursor Rules (.mdc), Windsurf, and Antigravity."
+    },
+    {
+      "date": "2026-11-10",
+      "decision": "Enforced strict zero-hallucination guardrails forbidding destructive DB alterations without manual approval tokens."
+    }
+  ]
+}

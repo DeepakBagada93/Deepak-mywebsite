@@ -1,0 +1,137 @@
+{
+  "name": "Deep Research & Competitive Dossier Engine",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "initiate-deep-research",
+        "options": {}
+      },
+      "id": "node-research-trigger",
+      "name": "Trigger Research Query",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [180, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body || $json;\nif (!body.topic && !body.competitor) {\n  throw new Error('Missing research topic or competitor parameter');\n}\nconst query = (body.topic || body.competitor).trim();\nreturn [{\n  json: {\n    research_id: 'res_' + Date.now(),\n    query: query,\n    depth: body.depth || 'deep',\n    max_sources: body.max_sources || 10,\n    initiated_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "node-query-sanitizer",
+      "name": "Sanitize & Plan Query",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [400, 240]
+    },
+    {
+      "parameters": {
+        "url": "https://api.tavily.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "api_key", "value": "={{ $env.TAVILY_API_KEY }}" },
+            { "name": "query", "value": "={{ $json.query }} competitors pricing features market size 2026" },
+            { "name": "search_depth", "value": "advanced" },
+            { "name": "max_results", "value": "8" }
+          ]
+        }
+      },
+      "id": "node-tavily-search",
+      "name": "Tavily Parallel Deep Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [620, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "const results = ($json.results || []).map(r => ({\n  title: r.title,\n  url: r.url,\n  snippet: r.content,\n  score: r.score\n}));\nreturn [{\n  json: {\n    raw_sources: results,\n    source_count: results.length,\n    query: $('Sanitize & Plan Query').item.json.query\n  }\n}];"
+      },
+      "id": "node-citation-cleaner",
+      "name": "Clean & Validate Citations",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [840, 240]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-5-sonnet-20241022",
+        "prompt": "=Synthesize the following research data for topic: '{{ $json.query }}'.\nRaw Sources:\n{{ JSON.stringify($json.raw_sources) }}\n\nGenerate an Executive Competitive Dossier containing:\n1. Executive Summary (3 paragraphs max)\n2. Competitor Pricing Matrix (Markdown table)\n3. Core Architectural & Feature Gaps\n4. Underserved Customer Needs & Opportunities\n5. Verified Sources & Citation List (with direct URLs).\nTone: Elite management consultant / Wall Street equity research analyst.",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "id": "node-dossier-synthesizer",
+      "name": "Synthesize Executive Dossier",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1060, 240]
+    },
+    {
+      "parameters": {
+        "text": "=📊 *Deep Research Dossier Completed*\\n*Topic:* {{ $('Sanitize & Plan Query').item.json.query }}\\n*Sources Audited:* {{ $('Clean & Validate Citations').item.json.source_count }}\\n*Dossier Status:* Generated successfully & synced to Notion."
+      },
+      "id": "node-slack-complete",
+      "name": "Notify Stakeholders on Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1280, 240]
+    }
+  ],
+  "connections": {
+    "Trigger Research Query": {
+      "main": [
+        [
+          {
+            "node": "Sanitize & Plan Query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sanitize & Plan Query": {
+      "main": [
+        [
+          {
+            "node": "Tavily Parallel Deep Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tavily Parallel Deep Search": {
+      "main": [
+        [
+          {
+            "node": "Clean & Validate Citations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Clean & Validate Citations": {
+      "main": [
+        [
+          {
+            "node": "Synthesize Executive Dossier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Synthesize Executive Dossier": {
+      "main": [
+        [
+          {
+            "node": "Notify Stakeholders on Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

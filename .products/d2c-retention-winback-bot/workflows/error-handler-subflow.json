@@ -1,0 +1,40 @@
+{
+  "name": "D2C Retention Error Handler Subflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "d2c-retention-error-handler",
+        "options": {}
+      },
+      "id": "node-d2c-err-trigger",
+      "name": "Error Trigger Ingestion",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 260]
+    },
+    {
+      "parameters": {
+        "text": "=⚠️ *D2C Win-Back Dispatch Incident*\\n*Error:* {{ $json.execution ? $json.execution.error.message : 'Webhook dispatch timeout' }}\\n*Timestamp:* {{ new Date().toISOString() }}"
+      },
+      "id": "node-d2c-slack-alert",
+      "name": "Send Ops Team Slack Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [440, 260]
+    }
+  ],
+  "connections": {
+    "Error Trigger Ingestion": {
+      "main": [
+        [
+          {
+            "node": "Send Ops Team Slack Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

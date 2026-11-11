@@ -80,6 +80,8 @@ const PRODUCT_PRICES = {
   'Global Client Hunter OS': 999,
   'Content Repurpose Engine': 899,
   'India Offer & Pricing Kit': 699,
+  'GEO Visibility OS': 2499,
+  'AI Code Security Sentinel': 1999,
 };
 
 const args = process.argv.slice(2);

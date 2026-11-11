@@ -1,0 +1,131 @@
+{
+  "name": "D2C Autonomous Retention & Win-Back Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "d2c-abandoned-checkout",
+        "options": {}
+      },
+      "id": "node-abandoned-cart-webhook",
+      "name": "Shopify/Stripe Checkout Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [180, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body || $json;\nif (!body.email && !body.phone) {\n  throw new Error('Invalid cart payload: Missing customer contact details');\n}\nconst cartValue = parseFloat(body.total_price || body.cart_value || 0);\nconst items = (body.line_items || []).map(item => item.title || item.name).join(', ');\n\nreturn [{\n  json: {\n    checkout_id: body.id || 'chk_' + Date.now(),\n    customer_name: (body.customer ? body.customer.first_name : body.name) || 'there',\n    email: (body.email || '').toLowerCase().trim(),\n    phone: (body.phone || '').trim(),\n    cart_value: cartValue,\n    items_summary: items || 'your cart items',\n    is_high_value: cartValue >= 75,\n    discount_tier: cartValue >= 100 ? 'VIP20' : 'SAVE10',\n    discount_percentage: cartValue >= 100 ? 20 : 10\n  }\n}];"
+      },
+      "id": "node-cart-evaluator",
+      "name": "Cart Value & Tier Evaluator",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [400, 240]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-5-sonnet-20241022",
+        "prompt": "=Write an ultra-high-converting, personalized 3-sentence SMS/WhatsApp recovery message to {{ $json.customer_name }}.\nThey left {{ $json.items_summary }} (Cart total: ${{ $json.cart_value }}) in their checkout.\nExclusive incentive: Coupon code {{ $json.discount_tier }} for {{ $json.discount_percentage }}% off valid for the next 4 hours.\nTone: Friendly, direct, urgent, non-pushy.",
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "id": "node-winback-copywriter",
+      "name": "Generate AI Dynamic Recovery Copy",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [620, 240]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.is_high_value }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-cart-tier-split",
+      "name": "Is High Value VIP Cart?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [840, 240]
+    },
+    {
+      "parameters": {
+        "text": "=💰 *VIP Abandoned Checkout ($75+)*\\n*Customer:* {{ $('Cart Value & Tier Evaluator').item.json.customer_name }}\\n*Value:* ${{ $('Cart Value & Tier Evaluator').item.json.cart_value }}\\n*Items:* {{ $('Cart Value & Tier Evaluator').item.json.items_summary }}\\n*Recovery Action:* Dispatched VIP dynamic WhatsApp + Email offer with code {{ $('Cart Value & Tier Evaluator').item.json.discount_tier }}."
+      },
+      "id": "node-vip-slack-alert",
+      "name": "Alert Store Operations on Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1080, 160]
+    },
+    {
+      "parameters": {
+        "text": "=🛒 *Standard Cart Recovery Queued*\\n*Value:* ${{ $('Cart Value & Tier Evaluator').item.json.cart_value }}"
+      },
+      "id": "node-standard-log",
+      "name": "Log Standard Recovery",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1080, 320]
+    }
+  ],
+  "connections": {
+    "Shopify/Stripe Checkout Webhook": {
+      "main": [
+        [
+          {
+            "node": "Cart Value & Tier Evaluator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cart Value & Tier Evaluator": {
+      "main": [
+        [
+          {
+            "node": "Generate AI Dynamic Recovery Copy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate AI Dynamic Recovery Copy": {
+      "main": [
+        [
+          {
+            "node": "Is High Value VIP Cart?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is High Value VIP Cart?": {
+      "main": [
+        [
+          {
+            "node": "Alert Store Operations on Slack",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log Standard Recovery",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

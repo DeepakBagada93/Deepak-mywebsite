@@ -117,4 +117,24 @@ return [
         'title' => 'AI Code Security Sentinel: Pre-Commit OWASP Scanner | Deepak',
         'description' => 'Stop shipping AI-generated vulnerabilities. Catch secret leaks, prompt injections, and OWASP flaws in under 2 seconds with zero dependencies and 100% offline execution.',
     ],
+    'ai-sdr-inbound-closer' => [
+        'title' => 'Autonomous AI SDR & Inbound Lead Closer: n8n Lead Booking | Deepak',
+        'description' => 'Self-hosted n8n AI SDR system that enriches lead data, scores buying intent, writes 4-sentence outreach, and routes meeting links in under 60 seconds.',
+    ],
+    'fullstack-agentic-coding-vault' => [
+        'title' => 'Full-Stack AI Coding Guardrails & Skill Pack: Cursor Rules | Deepak',
+        'description' => 'Drop-in .cursorrules and SKILL.md vault for Next.js, TypeScript, PostgreSQL and TDD. Stop AI coding agents from hallucinating and breaking code.',
+    ],
+    'deep-research-dossier-engine' => [
+        'title' => 'Deep Research & Dossier Engine: n8n Multi-Agent AI | Deepak',
+        'description' => 'Autonomous n8n multi-agent research engine that searches live sources, validates citations, analyzes competitor pricing, and synthesizes executive dossiers.',
+    ],
+    'd2c-retention-winback-bot' => [
+        'title' => 'D2C Retention & Win-Back Bot: Shopify Cart Recovery | Deepak',
+        'description' => 'Self-hosted n8n cart recovery and customer churn engine for Shopify, WooCommerce and Stripe. Recovers 15%-28% of abandoned carts via WhatsApp & email.',
+    ],
+    'ai-invoice-recon-sentinel' => [
+        'title' => 'AI Invoice Recon Sentinel: Automated Bookkeeper n8n | Deepak',
+        'description' => 'Autonomous financial automation system powered by n8n and Vision OCR. Parses B2B invoices, validates GST/tax compliance, and matches bank transactions.',
+    ],
 ];

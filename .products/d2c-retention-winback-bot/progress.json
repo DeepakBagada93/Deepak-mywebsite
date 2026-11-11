@@ -1,0 +1,26 @@
+{
+  "productSlug": "d2c-retention-winback-bot",
+  "title": "D2C / E-Commerce Autonomous Retention & Win-Back Bot",
+  "version": "1.0.0",
+  "currentStage": "completed",
+  "stages": {
+    "stage_0_discovery": "completed",
+    "stage_1_research": "completed",
+    "stage_2_architecture": "completed",
+    "stage_3_workflows": "completed",
+    "stage_4_environment": "completed",
+    "stage_5_tutorial": "completed",
+    "stage_6_store_listing": "completed",
+    "stage_7_qa_and_packaging": "completed"
+  },
+  "decisions": [
+    {
+      "date": "2026-11-10",
+      "decision": "Built multi-channel event listener for Shopify/Stripe/WooCommerce abandoned checkouts and high-churn risk events."
+    },
+    {
+      "date": "2026-11-10",
+      "decision": "Engineered dynamic tiered discount code generation and WhatsApp / SMS dispatch with zero recurring Klaviyo/Omnisend seat overages."
+    }
+  ]
+}

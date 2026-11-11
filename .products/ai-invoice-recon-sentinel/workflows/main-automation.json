@@ -1,0 +1,127 @@
+{
+  "name": "AI Invoice Recon Sentinel",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ingest-invoice-receipt",
+        "options": {}
+      },
+      "id": "node-invoice-webhook",
+      "name": "Ingest Invoice / Receipt",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [180, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body || $json;\nif (!body.vendor && !body.raw_text && !body.invoice_number) {\n  throw new Error('Invalid invoice payload: Missing key invoice descriptors');\n}\nconst total = parseFloat(body.total_amount || 0);\nconst tax = parseFloat(body.tax_amount || 0);\nconst net = total - tax;\n\nreturn [{\n  json: {\n    invoice_id: body.id || 'inv_' + Date.now(),\n    vendor: (body.vendor || 'Unknown Vendor').trim(),\n    invoice_number: body.invoice_number || 'INV-NA',\n    invoice_date: body.invoice_date || new Date().toISOString().split('T')[0],\n    total_amount: total,\n    tax_amount: tax,\n    net_amount: Math.round(net * 100) / 100,\n    currency: (body.currency || 'USD').toUpperCase(),\n    tax_rate_percent: total > 0 ? Math.round((tax / net) * 100) : 0,\n    status: 'PARSED'\n  }\n}];"
+      },
+      "id": "node-invoice-parser",
+      "name": "Parse & Normalize Invoice",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [400, 240]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Tax compliance & audit checks\nconst inv = $json;\nconst anomalies = [];\n\nif (inv.total_amount <= 0) {\n  anomalies.push('Zero or negative total amount');\n}\nif (inv.currency === 'INR' && inv.tax_rate_percent !== 18 && inv.tax_rate_percent !== 0 && inv.tax_rate_percent !== 12 && inv.tax_rate_percent !== 28) {\n  anomalies.push('Non-standard GST rate detected: ' + inv.tax_rate_percent + '%');\n}\nif (inv.currency === 'USD' && inv.total_amount > 2500) {\n  anomalies.push('High value transaction requires manual controller sign-off');\n}\n\nreturn [{\n  json: {\n    ...inv,\n    has_anomalies: anomalies.length > 0,\n    anomalies: anomalies,\n    reconciled: anomalies.length === 0\n  }\n}];"
+      },
+      "id": "node-audit-rules",
+      "name": "Audit & Tax Compliance Engine",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 240]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.has_anomalies }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-anomaly-router",
+      "name": "Are There Anomalies?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [840, 240]
+    },
+    {
+      "parameters": {
+        "text": "=⚠️ *Invoice Audit Flag Alert*\\n*Vendor:* {{ $json.vendor }}\\n*Invoice:* #{{ $json.invoice_number }}\\n*Total:* {{ $json.currency }} {{ $json.total_amount }}\\n*Anomalies Detected:* {{ $json.anomalies.join(', ') }}\\n*Action:* Held for manual approval before ledger sync."
+      },
+      "id": "node-slack-flag",
+      "name": "Alert Finance on Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1080, 160]
+    },
+    {
+      "parameters": {
+        "text": "=✅ *Invoice Reconciled & Approved*\\n*Vendor:* {{ $json.vendor }}\\n*Amount:* {{ $json.currency }} {{ $json.total_amount }}\\n*Status:* Syncing to general ledger."
+      },
+      "id": "node-slack-success",
+      "name": "Post to General Ledger Sync",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1080, 320]
+    }
+  ],
+  "connections": {
+    "Ingest Invoice / Receipt": {
+      "main": [
+        [
+          {
+            "node": "Parse & Normalize Invoice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse & Normalize Invoice": {
+      "main": [
+        [
+          {
+            "node": "Audit & Tax Compliance Engine",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audit & Tax Compliance Engine": {
+      "main": [
+        [
+          {
+            "node": "Are There Anomalies?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Are There Anomalies?": {
+      "main": [
+        [
+          {
+            "node": "Alert Finance on Slack",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Post to General Ledger Sync",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+---
+description: Clean Architecture & Test-Driven Verification Guardrails
+globs: ["src/**/*", "lib/**/*", "services/**/*", "tests/**/*"]
+---
+
+# Clean Architecture & TDD Guardrails
+
+1. **Separation of Concerns:**
+   - Business domain logic must never directly couple with HTTP request/response handlers or raw database drivers.
+   - Use Repository or Service patterns to encapsulate persistence.
+
+2. **Test-First Verification:**
+   - Any refactoring must be preceded by an audit of existing tests.
+   - New endpoints or business functions require corresponding test cases covering edge cases (null inputs, empty arrays, rate-limit triggers).
+   - Ensure tests are deterministic and do not depend on active internet connectivity unless explicitly mocked.

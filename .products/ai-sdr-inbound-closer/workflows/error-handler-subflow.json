@@ -1,0 +1,61 @@
+{
+  "name": "AI SDR Error Handler & Dead Letter Subflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ai-sdr-error-handler",
+        "options": {}
+      },
+      "id": "node-error-trigger",
+      "name": "Error Trigger Ingestion",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 260]
+    },
+    {
+      "parameters": {
+        "jsCode": "const execution = $json;\nreturn [{\n  json: {\n    incident_id: 'inc_' + Date.now(),\n    workflow_name: execution.workflow ? execution.workflow.name : 'ai-sdr-inbound-closer',\n    failed_at: new Date().toISOString(),\n    error_message: execution.execution ? execution.execution.error.message : 'Unknown execution failure',\n    payload_snippet: execution.execution ? JSON.stringify(execution.execution.data).slice(0, 500) : 'N/A'\n  }\n}];"
+      },
+      "id": "node-error-formatter",
+      "name": "Format Incident Details",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [420, 260]
+    },
+    {
+      "parameters": {
+        "text": "=🚨 *CRITICAL: AI SDR Execution Failure*\\n*Incident ID:* {{ $json.incident_id }}\\n*Workflow:* {{ $json.workflow_name }}\\n*Error:* {{ $json.error_message }}\\n*Timestamp:* {{ $json.failed_at }}\\n*Action:* Retrying automatically in 120s or check n8n execution console."
+      },
+      "id": "node-alert-discord",
+      "name": "Send Discord/Slack Admin Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [640, 260]
+    }
+  ],
+  "connections": {
+    "Error Trigger Ingestion": {
+      "main": [
+        [
+          {
+            "node": "Format Incident Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Incident Details": {
+      "main": [
+        [
+          {
+            "node": "Send Discord/Slack Admin Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
