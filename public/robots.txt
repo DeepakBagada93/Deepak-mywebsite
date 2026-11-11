@@ -1,9 +1,28 @@
 User-agent: *
 Allow: /
+# Block legacy paths & checkout/private URLs from crawl budget waste
+Disallow: /public/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /bootstrap/
+Disallow: /products/track
+Disallow: /products/checkout
+Disallow: /products/return
+Disallow: /download/
+Disallow: /newsletter/
 
 # Google & Image Search Bots (for AI Overviews & Image Snippets)
 User-agent: Googlebot
 Allow: /
+Disallow: /public/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /bootstrap/
+Disallow: /products/track
+Disallow: /products/checkout
+Disallow: /products/return
+Disallow: /download/
+Disallow: /newsletter/
 
 # Google AdSense & AdsBot
 User-agent: Mediapartners-Google

@@ -11,6 +11,38 @@
     RewriteCond %{THE_REQUEST} ^[A-Z]+\s/+public(?:/|\s|\?)
     RewriteRule ^(.*)$ /$1 [L,R=301]
 
+    # =========================================================================
+    # GSC 404 Consolidation Map — Permanent 301 Redirects to Canonical Pillars
+    # Eliminates 404 dead links, consolidates PageRank, and relieves database load.
+    # =========================================================================
+    RewriteRule ^journal/upi-autopay-credit-on-upi-1lakh-2026/?$ /journal/upi-autopay-credit-on-upi-saas-billing-2026 [L,R=301]
+    RewriteRule ^journal/gujarat-100cr-automation-anywhere-ai-skills-2026/?$ /journal/gujarat-sme-automation-whatsapp-upi-n8n-2026 [L,R=301]
+    RewriteRule ^journal/voice-ai-gujarati-hindi-2026-fresh/?$ /journal/voice-ai-vernacular-gujarat-hindi-2026 [L,R=301]
+    RewriteRule ^journal/ama-oia-msme-conclave-2026-produce-smartly/?$ /journal/ai-automation-indian-smes-2026-roi-30days [L,R=301]
+    RewriteRule ^journal/gujarat-msme-ai-readiness-22to4-hours-playbook-2026/?$ /journal/day-life-gujarat-ai-developer-timestamps-playbook-2026 [L,R=301]
+    RewriteRule ^journal/website-cost-junagadh-gujarat-2026-breakdown/?$ /journal/website-cost-gujarat-2026-honest-breakdown [L,R=301]
+    RewriteRule ^journal/gidc-offline-erp-faktry-8999-gujarat-2026/?$ /journal/gujarat-sme-automation-whatsapp-upi-n8n-2026 [L,R=301]
+    RewriteRule ^journal/google-ai-overviews-2b-ctr-cited-2026-fresh/?$ /journal/google-ai-overviews-55pct-india-2026-rank-guide [L,R=301]
+    RewriteRule ^journal/google-ai-overviews-48pct-2b-users-2026/?$ /journal/rank-google-ai-overviews-perplexity-2026 [L,R=301]
+    RewriteRule ^journal/gujarat-ai-automation-cost-6-workflows-payback-2026/?$ /journal/ai-automation-gujarat-sme-workflows-2026 [L,R=301]
+    RewriteRule ^journal/indiaai-38k-gpus-bharatgen-2026-fresh/?$ /journal/indiaai-mission-38k-gpus-bharatgen-sarvam-2026 [L,R=301]
+    RewriteRule ^journal/kantar-235m-ai-searches-mahabharat-job-hugging-2026/?$ /journal/day-life-ai-developer-gujarat-routine-ledger-2026 [L,R=301]
+    RewriteRule ^journal/laravel-13-ai-sdk-pgvector-semantic-2026-fresh/?$ /journal/laravel-13-ai-sdk-pgvector-semantic-search-2026 [L,R=301]
+    RewriteRule ^journal/mcp-stateless-2026-scaling-agents/?$ /journal/mcp-tool-result-caching-agent-cost [L,R=301]
+    RewriteRule ^products/live-payment-verification-kit/?$ /products [L,R=301]
+    RewriteRule ^products/live-verification-pack.*$ /products [L,R=301]
+
+    # Legacy Pure-PHP Endpoints & Feeds
+    RewriteRule ^journal\.php$ /journal [L,R=301]
+    RewriteRule ^services?\.php$ /services [L,R=301]
+    RewriteRule ^sitemap\.php$ /sitemap.xml [L,R=301]
+    RewriteRule ^about\.php$ /about [L,R=301]
+    RewriteRule ^contact\.php$ /contact [L,R=301]
+    RewriteRule ^terms\.php$ /terms [L,R=301]
+    RewriteRule ^privacy(-policy)?\.php$ /privacy-policy [L,R=301]
+    RewriteRule ^(blog|posts|articles)/?$ /journal [L,R=301]
+    RewriteRule ^(feed|rss|atom\.xml)/?$ /sitemap.xml [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

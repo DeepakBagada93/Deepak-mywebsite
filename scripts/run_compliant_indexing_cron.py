@@ -146,7 +146,11 @@ def fetch_sitemap_urls():
             xml_data = response.read()
         root = ET.fromstring(xml_data)
         urls = [elem.text.strip() for elem in root.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc") if elem.text]
-        return urls
+        # Filter out any accidental legacy /public/ paths
+        clean_urls = [u for u in urls if "/public/" not in u]
+        if len(clean_urls) < len(urls):
+            log_message(f"⚠️ Filtered out {len(urls) - len(clean_urls)} legacy /public/ URLs from sitemap rotation")
+        return clean_urls
     except Exception as e:
         log_message(f"✗ Failed to read sitemap at {SITEMAP_URL}: {e}")
         return []
