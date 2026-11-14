@@ -285,12 +285,28 @@
         });
     }
 
-    /* ---------- Mobile navigation menu ---------- */
+    /* ---------- Navbar Sticky Glassmorphism Shadow on Scroll ---------- */
+    const masthead = $("#masthead");
+    if (masthead) {
+        let lastScrolled = false;
+        const updateMastheadScroll = () => {
+            const scrolled = window.scrollY > 10;
+            if (scrolled !== lastScrolled) {
+                lastScrolled = scrolled;
+                masthead.classList.toggle("is-scrolled", scrolled);
+            }
+        };
+        window.addEventListener("scroll", updateMastheadScroll, { passive: true });
+        updateMastheadScroll();
+    }
+
+    /* ---------- Mobile navigation menu (Doc Style) ---------- */
     const burger = $("#burger");
     const mmenu = $("#mmenu");
+    let toggleMenu = () => {};
     if (burger && mmenu) {
         const mmenuClose = $("#mmenu-close");
-        const toggleMenu = (force) => {
+        toggleMenu = (force) => {
             const open = force !== undefined ? force : !mmenu.classList.contains("is-open");
             if (open) {
                 mmenu.style.display = "flex";
@@ -298,12 +314,12 @@
                 mmenu.offsetHeight;
                 mmenu.classList.add("is-open");
                 burger.setAttribute("aria-expanded", "true");
-                burger.textContent = "Close";
+                burger.classList.add("is-active");
                 lockScroll();
             } else {
                 mmenu.classList.remove("is-open");
                 burger.setAttribute("aria-expanded", "false");
-                burger.textContent = "Menu";
+                burger.classList.remove("is-active");
                 unlockScroll();
                 setTimeout(() => {
                     if (!mmenu.classList.contains("is-open")) {
@@ -318,7 +334,7 @@
             mmenuClose.addEventListener("click", () => toggleMenu(false));
         }
 
-        // Close menu on any link click inside mmenu
+        // Close menu on any link click inside mmenu (except sub-buttons or search)
         mmenu.addEventListener("click", (e) => {
             const link = e.target.closest("a");
             if (link) {
@@ -354,7 +370,223 @@
         });
     }
 
-    /* ---------- Desktop Floating Tools Popover ---------- */
+    /* ==========================================================================
+       Documentation Command Palette & Global Search Modal (⌘K / / / Trigger)
+       ========================================================================== */
+    const docSearchModal = $("#doc-search-modal");
+    if (docSearchModal) {
+        const searchInput = $("#doc-search-input");
+        const searchResults = $("#doc-search-results");
+        const searchBackdrop = $("#doc-search-backdrop");
+        const searchCloseBtn = $("#doc-search-close");
+        const searchCountEl = $("#doc-search-count");
+        const searchTriggers = [
+            $("#doc-search-trigger"),
+            $("#doc-search-trigger-mobile"),
+            $("#mmenu-search-trigger")
+        ].filter(Boolean);
+
+        let searchData = [];
+        try {
+            const rawData = $("#doc-search-data");
+            if (rawData) {
+                searchData = JSON.parse(rawData.textContent || "[]");
+            }
+        } catch (err) {
+            console.error("Failed to parse doc search index:", err);
+        }
+
+        let currentFilter = "all";
+        let currentSelectedIndex = 0;
+        let currentResultsList = [];
+
+        const renderResults = () => {
+            if (!searchResults) return;
+            const query = (searchInput ? searchInput.value : "").trim().toLowerCase();
+
+            currentResultsList = searchData.filter((item) => {
+                if (currentFilter !== "all" && item.type !== currentFilter) {
+                    return false;
+                }
+                if (!query) return true;
+                const matchTitle = (item.title || "").toLowerCase().includes(query);
+                const matchDesc = (item.desc || "").toLowerCase().includes(query);
+                const matchCategory = (item.category || "").toLowerCase().includes(query);
+                const matchKeywords = (item.keywords || "").toLowerCase().includes(query);
+                return matchTitle || matchDesc || matchCategory || matchKeywords;
+            });
+
+            if (currentResultsList.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="doc-search-empty">
+                        <span class="doc-search-empty__icon">🔍</span>
+                        <p class="doc-search-empty__title">No documentation or tools found</p>
+                        <p class="doc-search-empty__hint">Try searching for "PDF", "GST", "Image", "Agents", "LangGraph", or "Store"</p>
+                    </div>
+                `;
+                if (searchCountEl) searchCountEl.textContent = "0 items found";
+                return;
+            }
+
+            if (currentSelectedIndex >= currentResultsList.length) {
+                currentSelectedIndex = 0;
+            }
+
+            if (searchCountEl) {
+                searchCountEl.textContent = `${currentResultsList.length} items found`;
+            }
+
+            let html = "";
+            currentResultsList.forEach((item, index) => {
+                const isSelected = index === currentSelectedIndex;
+                const icon = item.icon || "📄";
+                const badge = item.badge || "Doc";
+                html += `
+                    <a href="${item.url}" class="doc-search-item ${isSelected ? "is-selected" : ""}" data-index="${index}" role="option" aria-selected="${isSelected}">
+                        <div class="doc-search-item-icon" aria-hidden="true">${icon}</div>
+                        <div class="doc-search-item-info">
+                            <div class="doc-search-item-title">
+                                <span>${item.title}</span>
+                                <span class="doc-search-item-tag mono">${badge}</span>
+                            </div>
+                            <div class="doc-search-item-desc">${item.desc}</div>
+                        </div>
+                        <span class="doc-search-item-arrow" aria-hidden="true">↵</span>
+                    </a>
+                `;
+            });
+            searchResults.innerHTML = html;
+
+            const activeEl = searchResults.querySelector(".doc-search-item.is-selected");
+            if (activeEl) {
+                activeEl.scrollIntoView({ block: "nearest" });
+            }
+        };
+
+        const openSearch = () => {
+            if (mmenu && mmenu.classList.contains("is-open")) {
+                toggleMenu(false);
+            }
+            docSearchModal.style.display = "flex";
+            docSearchModal.offsetHeight;
+            docSearchModal.classList.add("is-open");
+            lockScroll();
+            if (searchInput) {
+                searchInput.value = "";
+                searchInput.focus();
+            }
+            currentSelectedIndex = 0;
+            renderResults();
+        };
+
+        const closeSearch = () => {
+            docSearchModal.classList.remove("is-open");
+            unlockScroll();
+            setTimeout(() => {
+                if (!docSearchModal.classList.contains("is-open")) {
+                    docSearchModal.style.display = "none";
+                }
+            }, 180);
+        };
+
+        searchTriggers.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                openSearch();
+            });
+        });
+
+        if (searchBackdrop) {
+            searchBackdrop.addEventListener("click", closeSearch);
+        }
+        if (searchCloseBtn) {
+            searchCloseBtn.addEventListener("click", closeSearch);
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener("input", () => {
+                currentSelectedIndex = 0;
+                renderResults();
+            });
+
+            searchInput.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowDown") {
+                    e.preventDefault();
+                    if (currentResultsList.length > 0) {
+                        currentSelectedIndex = (currentSelectedIndex + 1) % currentResultsList.length;
+                        renderResults();
+                    }
+                } else if (e.key === "ArrowUp") {
+                    e.preventDefault();
+                    if (currentResultsList.length > 0) {
+                        currentSelectedIndex = (currentSelectedIndex - 1 + currentResultsList.length) % currentResultsList.length;
+                        renderResults();
+                    }
+                } else if (e.key === "Enter") {
+                    e.preventDefault();
+                    if (currentResultsList[currentSelectedIndex]) {
+                        window.location.href = currentResultsList[currentSelectedIndex].url;
+                    }
+                } else if (e.key === "Escape") {
+                    e.preventDefault();
+                    closeSearch();
+                }
+            });
+        }
+
+        $$(".doc-search-filter-btn").forEach((chip) => {
+            chip.addEventListener("click", () => {
+                $$(".doc-search-filter-btn").forEach((c) => c.classList.remove("is-active"));
+                chip.classList.add("is-active");
+                currentFilter = chip.getAttribute("data-filter") || "all";
+                currentSelectedIndex = 0;
+                renderResults();
+                if (searchInput) searchInput.focus();
+            });
+        });
+
+        searchResults.addEventListener("click", (e) => {
+            const item = e.target.closest(".doc-search-item");
+            if (item) {
+                closeSearch();
+            }
+        });
+
+        searchResults.addEventListener("mousemove", (e) => {
+            const item = e.target.closest(".doc-search-item");
+            if (item) {
+                const idx = parseInt(item.getAttribute("data-index"), 10);
+                if (!isNaN(idx) && idx !== currentSelectedIndex) {
+                    currentSelectedIndex = idx;
+                    $$(".doc-search-item").forEach((el, i) => {
+                        el.classList.toggle("is-selected", i === currentSelectedIndex);
+                    });
+                }
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+                e.preventDefault();
+                if (docSearchModal.classList.contains("is-open")) {
+                    closeSearch();
+                } else {
+                    openSearch();
+                }
+            } else if (e.key === "/" && !docSearchModal.classList.contains("is-open")) {
+                const tag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
+                if (tag !== "input" && tag !== "textarea" && !document.activeElement.isContentEditable) {
+                    e.preventDefault();
+                    openSearch();
+                }
+            } else if (e.key === "Escape" && docSearchModal.classList.contains("is-open")) {
+                e.preventDefault();
+                closeSearch();
+            }
+        });
+    }
+
+    /* ---------- Desktop Floating Tools Popover (Stripe/Doc Style) ---------- */
     const toolsTrigger = $("#tools-trigger");
     const toolsPopover = $("#tools-popover");
     const toolsPopoverClose = $("#tools-popover-close");
@@ -414,6 +646,30 @@
                 closePopover();
             }
         });
+
+        // Desktop hover with debounce
+        if (toolsNavItem && window.matchMedia("(pointer: fine)").matches) {
+            let hoverTimer;
+            toolsNavItem.addEventListener("mouseenter", () => {
+                if (window.innerWidth > 1024) {
+                    clearTimeout(hoverTimer);
+                    openPopover();
+                }
+            });
+            toolsNavItem.addEventListener("mouseleave", () => {
+                if (window.innerWidth > 1024) {
+                    hoverTimer = setTimeout(closePopover, 200);
+                }
+            });
+            toolsPopover.addEventListener("mouseenter", () => {
+                clearTimeout(hoverTimer);
+            });
+            toolsPopover.addEventListener("mouseleave", () => {
+                if (window.innerWidth > 1024) {
+                    hoverTimer = setTimeout(closePopover, 200);
+                }
+            });
+        }
 
         // Close on resize
         window.addEventListener("resize", () => {

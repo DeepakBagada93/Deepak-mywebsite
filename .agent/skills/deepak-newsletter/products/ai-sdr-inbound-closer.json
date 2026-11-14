@@ -1,0 +1,47 @@
+{
+  "slug": "ai-sdr-inbound-closer",
+  "name": "Autonomous AI SDR & Inbound Lead Closer",
+  "tagline": "Turn every inbound lead into a booked discovery call in under 60 seconds — without paying $1,500/month for AI SDR SaaS.",
+  "outcome": "Ingest inbound leads from any form or webhook, qualify budgets with deterministic ICP scoring, generate personalized 4-sentence peer replies via Claude 3.5 Sonnet, and auto-book calls in under 60 seconds.",
+  "outcome_short": "qualify and book inbound leads in under 60 seconds",
+  "pain_short": "inbound leads going cold while you are in delivery",
+  "pain_points": [
+    "90% of high-intent inbound leads go cold within 1 hour while founders are in meetings or teams are shipping client work.",
+    "Human SDRs cost $4,000–$6,000/month and take 90 days to ramp.",
+    "Closed AI SDR platforms charge $1,000+/month on locked annual contracts with punitive per-lead overage fees."
+  ],
+  "price_label": "$147 USD",
+  "compare_label": "$247 USD",
+  "price_usd": 147,
+  "compare_usd": 247,
+  "price_inr": 2499,
+  "compare_inr": 4499,
+  "price_note": "One-time · lifetime commercial license · turnkey n8n + Docker + Claude 3.5 Sonnet stack",
+  "proof_bullets": [
+    "Production n8n workflow JSON: webhook ingestion, ICP qualification, Claude response, auto-booking",
+    "Sub-60s speed-to-lead: drops calendar links while the prospect is still on your website",
+    "Deterministic ICP scoring engine: filters tire-kickers and prioritizes high-budget enterprise leads",
+    "PostgreSQL dead-letter queue: zero lost leads during API blips with instant Slack alerts",
+    "Self-hosted Docker Compose stack: complete data privacy, zero recurring monthly SaaS fees"
+  ],
+  "features": [
+    { "label": "Deliverables", "value": "n8n workflows + Docker Compose + Make blueprint" },
+    { "label": "License", "value": "Commercial — unlimited client deployments" },
+    { "label": "Format", "value": "ZIP · workflows, schemas, test suite, manual" },
+    { "label": "Updates", "value": "12 months included" }
+  ],
+  "bonus": "Production PostgreSQL schema, environment secrets isolation, mock test suite, and step-by-step deployment guide included.",
+  "guarantee": "Deploy it on your n8n or Make instance. If it doesn't qualify and alert your inbound leads reliably within 15 minutes of setup, reply within 30 days for an unconditional refund.",
+  "cta_url": "https://deepakbagada.in/products/ai-sdr-inbound-closer",
+  "cta_label": "Get Autonomous AI SDR & Closer — {{PRICE}}",
+  "ps": "Reply with your current inbound form stack (Typeform, Webflow, WordPress, Tally) and I will show you the exact webhook mapping.",
+  "preheader": "A self-hosted, turnkey n8n AI SDR system that books discovery calls in under 60s — $147 once, no SaaS fees.",
+  "subject_variants": [
+    "{{COMPANY_SHORT}}: book inbound leads in 60s without SaaS fees",
+    "{{COMPANY_SHORT}}: turn inbound leads into booked calls in 60s",
+    "The turnkey n8n AI SDR for high-intent client leads",
+    "{{CITY}} agencies: qualify and book leads in 60 seconds",
+    "A $147 turnkey AI SDR system for {{COMPANY_SHORT}}"
+  ],
+  "audience_cities": ["Melbourne", "Sydney", "Perth", "Brisbane", "Australia", "United States", "India"]
+}

@@ -15,6 +15,11 @@ description: >
 ### (10 Trending Open-Source Dispatches Loop · High-CTR Symbols Edition · Zero Git Push Needed)
 
 > [!IMPORTANT]
+> **MANDATORY 30-DAY MASTER PLAN BINDING (`30-DAY-GROWTH-TO-1M-VIEWS-PLAN.md`)**:
+> Whenever this skill is invoked, coordinate with [30-DAY-GROWTH-TO-1M-VIEWS-PLAN.md](file:///Users/deepakbagada/saasnext%20project/my-website/30-DAY-GROWTH-TO-1M-VIEWS-PLAN.md):
+> - **Week 3 (Days 15–21 | Nov 26 – Dec 02)**: Execute the Open-Source Hub Surge by publishing 10 architecture blueprints and curated repositories.
+> - Every library item must cross-link to relevant `/journal/*` articles, interactive utilities under `/tools/*`, and commercial digital products (`/products/*`).
+>
 > **CORE ARCHITECTURE: 10 TRENDING OPEN-SOURCE DISPATCHES — STRICT ONE-BY-ONE CLOSED LOOP**:
 > When invoked, this skill executes a strict sequential loop across **10 trending open-source dispatches**:
 > - **Flagship Skill Pages** (`/library/{slug}`): Full production documentation (1,200–2,000 words, architecture diagram, runnable code, audit score, trade-offs).
@@ -114,6 +119,9 @@ Any occurrence of the following phrases triggers an **instant FAIL** during the 
 
 ### 4. 🖼️ Strict Image Alt Tag Protocol
 * Every diagram, architecture graphic, or screenshot MUST have rich descriptive alt text (≥5 words). Empty or generic alt tags fail audit.
+
+### 5. 🔗 Internal Link Mesh & Commercial Monetization Bridge
+* Every skill page and blueprint MUST cross-link to at least 1 related journal article (`/journal/*`), 1 interactive utility (`/tools/*`), and a contextual digital product (`/products/*`) or client advisory (`/#contact`). Never write `/public/` in any URL path.
 
 ---
 

@@ -30,6 +30,7 @@ $options = getopt('', [
     'body-file::',
     'date::',
     'skip-live-audit::',
+    'syndicate-devto',
 ]);
 
 $title = '';
@@ -277,6 +278,16 @@ if (file_exists($indexingScript)) {
         echo "  ✓ Google Indexing API: Submitted {$liveUrl} successfully!\n";
     } else {
         echo "  ⚠️ Google Indexing API notice: " . implode(" ", array_slice($idxOut, -1)) . "\n";
+    }
+}
+
+// ─── Step 6: Dev.to Syndication (High-DA Backlink) ───────────────────────────
+if (isset($options['syndicate-devto'])) {
+    echo "⏳ [6/6] Syndicating flagship post to Dev.to (DA 92 Backlink)...\n";
+    $devtoScript = __DIR__ . '/syndicate-to-devto.php';
+    if (file_exists($devtoScript)) {
+        $devtoCmd = 'php ' . escapeshellarg($devtoScript) . ' --slug=' . escapeshellarg($cleanSlug);
+        passthru($devtoCmd, $devtoCode);
     }
 }
 

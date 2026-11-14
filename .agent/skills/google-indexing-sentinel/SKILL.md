@@ -13,6 +13,11 @@ description: >
 ### (100% Indexing Health · Daily Quota Protection · Zero 429 Errors · Crawl Budget Defense · Content Rescue Protocol · Anti-Deletion Guard)
 
 > [!IMPORTANT]
+> **MANDATORY 30-DAY MASTER PLAN BINDING (`30-DAY-GROWTH-TO-1M-VIEWS-PLAN.md`)**:
+> Whenever this skill is invoked, coordinate with [30-DAY-GROWTH-TO-1M-VIEWS-PLAN.md](file:///Users/deepakbagada/saasnext%20project/my-website/30-DAY-GROWTH-TO-1M-VIEWS-PLAN.md):
+> - **Week 1 (Days 1–7)**: Execute Indexing Batches 1–3 (80 URLs/day) via `sentinel.py`, run `--rescue` for unindexed URLs, and verify sitemap synchronization (`--sitemap`).
+> - **Week 2–4**: Maintain daily 80-URL rotation to index new journal dispatches, library additions, and product pages with strict 190/day quota protection.
+>
 > **CORE MISSION & ARCHITECTURAL GUARDRAILS**:
 > 1. **Zero 429 Errors**: Google Indexing API enforces a hard ceiling of **200 publish requests/day per project**. This sentinel enforces a safe local counter buffer (max 190/day) and automatically halts before hitting Google's rate limiter.
 > 2. **HTTP 200 Preflight Gate**: Never notify Google about a URL without verifying it responds with HTTP 200. Submitting 404s damages site crawl quality scores in Google Search Console.
@@ -83,6 +88,58 @@ When analyzing Google Search Console Page Indexing reports, execute these exact 
   1. Extract dead URLs.
   2. Create a permanent 301 redirect map in `public/.htaccess` routing each dead slug to its parent hub (e.g., `/journal`, `/tools`, or `/products`).
   3. Never allow 404s to accumulate.
+
+---
+
+## ⚡ The 5-Day Content Refresh & Discovered URL Recovery Plan (Nov 13 – Nov 17, 2026)
+### (Data Ingestion: `indexing 9 nov` & 13 Nov GSC Drilldown · Anti-Deletion Guard · Systematic Content & Authority Upgrades)
+
+Based on the Search Console drilldown in `indexing 9 nov` (Nov 13 update showing affected URLs dropping from 201 to 187), the following 5-day structured plan addresses unindexed/discovered URLs through content updates, internal link equity, and compliant API rotation rather than destructive page deletions:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│                       5-DAY DISCOVERED URL RECOVERY & CONTENT REFRESH                       │
+├─────────┬──────────────┬───────────────────────────────────────────┬────────────────────────┤
+│ Day     │ Date         │ Content Refresh & Backlink Focus          │ Indexing & API Action  │
+├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
+│ Day 1   │ Nov 13, 2026 │ Pillar Content Refresh & Dev.to DA 92     │ GSC Sitemap Ping (665) │
+│ (Today) │              │ Syndication (AI Expert + PydanticAI)      │ Quota ceiling audit    │
+├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
+│ Day 2   │ Nov 14, 2026 │ Product Catalog & Storefront Links        │ Batch 1 (80 Discovered)│
+│         │              │ (/products/agent-context-architect, MCP)  │ Indexing API rotation  │
+├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
+│ Day 3   │ Nov 15, 2026 │ Free Developer Tools Flywheel             │ Batch 2 (80 Discovered)│
+│         │              │ (/tools/* utility callouts in articles)   │ Indexing API rotation  │
+├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
+│ Day 4   │ Nov 16, 2026 │ Internal Link Rescue Protocol             │ Batch 3 (Remaining Q)  │
+│         │              │ (sentinel.py --rescue on pending pages)   │ Indexing API rotation  │
+├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
+│ Day 5   │ Nov 17, 2026 │ Full GSC URL Inspection Re-Audit          │ 50-URL Inspection Audit│
+│         │              │ Confirm >95% indexation pass rate         │ Resubmit sitemap.xml   │
+└─────────┴──────────────┴───────────────────────────────────────────┴────────────────────────┘
+```
+
+- **Day 1 (Nov 13, 2026 — COMPLETED)**:
+  - Ingested Nov 13 GSC Drilldown (`https___deepakbagada.in_-Coverage-Drilldown-2026-11-13 - Chart.csv`).
+  - Confirmed 0-deletion safety policy.
+  - Published and syndicated 2 high-value technical articles to Dev.to establishing DA 92 backlinks with verified canonical tags.
+  - Submitted all 665 URLs to Google Search Console via automated sitemap ping.
+- **Day 2 (Nov 14, 2026)**:
+  - Refresh `/products/*` detail pages with updated FAQ schema and clear ROI proof.
+  - Inject contextual internal link bridges from indexed journal articles to `/products/agent-context-architect` and `/products/mcp-server-launch-kit`.
+  - Execute `run_compliant_indexing_cron.py --batch-size=80` for Batch 1.
+- **Day 3 (Nov 15, 2026)**:
+  - Audit client-side developer tools (`/tools/pdf-compress`, `/tools/markdown-table-generator`).
+  - Inject interactive tool recommendation cards into discovered journal articles to crush bounce rate below 40%.
+  - Execute `run_compliant_indexing_cron.py --batch-size=80` for Batch 2.
+- **Day 4 (Nov 16, 2026)**:
+  - Run `sentinel.py --rescue` to map any remaining unindexed backlog to top-ranking pillar articles.
+  - Inject 2–3 contextual anchor text links per pillar article to pass link equity.
+  - Execute `run_compliant_indexing_cron.py` for remaining discovered queue.
+- **Day 5 (Nov 17, 2026)**:
+  - Run `sentinel.py --audit` across a 50-URL representative sample in Google Search Console.
+  - Verify >95% indexed pass rate across products, tools, and journal dispatches.
+  - Re-ping fresh `sitemap.xml` and lock automated daily 80-URL rotation.
 
 ---
 

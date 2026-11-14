@@ -4307,3 +4307,96 @@
   - Words: 1384
   - Scheduled Slot: `09:00 PM IST (Phase 3)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+- **Best AI Expert in India: Production Proof & 2026 Costs**
+  - Slug: `best-ai-expert-in-india-production-costs-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-13 06:30:00`
+  - Slot: `06:30 AM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: best ai expert in india)
+
+- **pgvector vs Pinecone: Real-World 10M Latency & Cost 2026**
+  - Slug: `pgvector-vs-pinecone-10m-latency-cost-showdown-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-13 08:45:00`
+  - Slot: `08:45 AM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: pgvector vs pinecone)
+
+- **Valkey vs Redis: 100K QPS Agent Queue Benchmarks 2026**
+  - Slug: `valkey-vs-redis-agent-queue-benchmarks-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-13 11:15:00`
+  - Slot: `11:15 AM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: valkey vs redis)
+
+- **LangGraph vs Mastra: Stateful Checkpointer Benchmark 2026**
+  - Slug: `langgraph-vs-mastra-stateful-checkpointer-benchmark-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-13 13:45:00`
+  - Slot: `01:45 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: langgraph vs mastra)
+
+- **Next.js 15 Client WebP Converter: WebAssembly in 2026**
+  - Slug: `nextjs-15-client-webp-converter-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Scheduled: `2026-11-13 16:00:00`
+  - Slot: `04:00 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: nextjs 15 client side webp converter)
+
+- **Why Monolithic LLM Wrappers Bleed ₹12K: The Valkey Fix**
+  - Slug: `why-monolithic-llm-wrappers-bleed-valkey-fix-2026`
+  - Tag: `MY STORY`
+  - Scheduled: `2026-11-13 18:30:00`
+  - Slot: `06:30 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: why monolithic llm wrappers bleed)
+
+- **AI & ML Services Bhavnagar: 2026 Enterprise Cost Guide**
+  - Slug: `ai-ml-services-bhavnagar-enterprise-cost-guide-2026`
+  - Tag: `AI DEV`
+  - Scheduled: `2026-11-13 21:00:00`
+  - Slot: `09:00 PM IST (Phase 3)`
+  - Status: Scheduled in MySQL scheduled_posts (GSC: ai & ml services bhavnagar)
+
+- **Best AI Expert in India: Production Proof & 2026 Costs**
+  - Slug: `best-ai-expert-in-india-production-costs-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-11-13 06:30:00`
+  - Words: 1578
+  - Scheduled Slot: `06:30 AM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+  - **Dev.to Syndication (DA 92 Backlink)**: Published to https://dev.to/deepak_bagada_f7dd47d64ee/best-ai-expert-in-india-production-proof-2026-costs-2dhc with canonical tag pointing to `https://deepakbagada.in/journal/best-ai-expert-in-india-production-costs-2026`
+
+  - **Dev.to Syndication (DA 92 Backlink)**: Published to https://dev.to/deepak_bagada_f7dd47d64ee/pydanticai-vs-langgraph-5-key-benchmark-showdowns-2026-255e with canonical tag pointing to `https://deepakbagada.in/journal/pydantic-ai-vs-langgraph-5-benchmark-showdowns-2026`
+
+- **Valkey vs Redis: 100K QPS Agent Queue Benchmarks 2026**
+  - Slug: `valkey-vs-redis-agent-queue-benchmarks-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-11-13 11:15:00`
+  - Words: 1450
+  - Scheduled Slot: `11:15 AM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 15 Client WebP Converter: WebAssembly in 2026**
+  - Slug: `nextjs-15-client-webp-converter-webassembly-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-13 16:00:00`
+  - Words: 1427
+  - Scheduled Slot: `04:00 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why Monolithic LLM Wrappers Bleed ₹12K: The Valkey Fix**
+  - Slug: `why-monolithic-llm-wrappers-bleed-valkey-fix-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-13 18:30:00`
+  - Words: 1501
+  - Scheduled Slot: `06:30 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **AI & ML Services Bhavnagar: 2026 Enterprise Cost Guide**
+  - Slug: `ai-ml-services-bhavnagar-enterprise-cost-guide-2026`
+  - Tag: `AI DEV`
+  - Published: `2026-11-13 21:00:00`
+  - Words: 1529
+  - Scheduled Slot: `09:00 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
