@@ -6,11 +6,11 @@
 
 return [
     [
-        'title'        => 'Why Multi-Agent Swarms Fail on Step 12: The Valkey Fix',
-        'slug'         => 'why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026',
-        'tag'          => 'MY STORY',
-        'excerpt'      => 'Why autonomous multi-agent swarms fail at step 12: how we eliminated state desync and API timeout loops using Valkey checkpoints and strict Pydantic schemas.',
-        'body'         => <<<'BODY'
+        'title' => 'Why Multi-Agent Swarms Fail on Step 12: The Valkey Fix',
+        'slug' => 'why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026',
+        'tag' => 'MY STORY',
+        'excerpt' => 'Why autonomous multi-agent swarms fail at step 12: how we eliminated state desync and API timeout loops using Valkey checkpoints and strict Pydantic schemas.',
+        'body' => <<<'BODY'
 Multi-agent swarms frequently experience catastrophic state desynchronization and unrecoverable execution loops around step 12 of complex multi-hop workflows due to memory context degradation and uncheckpointed transient network timeouts.
 
 **Quick Answer**: Multi-agent swarms fail at step 12 because in-memory graph state exceeds model attention limits while transient API timeouts cause irreversible node desync. By persisting state checkpoints after every node transition into an open-source Valkey key-value store and enforcing strict Pydantic schema validation, engineering teams achieve 100% deterministic crash recovery and cut retry token costs by 74%.
@@ -230,11 +230,11 @@ BODY,
     ],
 
     [
-        'title'        => 'Next.js 15 Client JWT Decoder: Zero-Server Privacy in 2026',
-        'slug'         => 'nextjs-15-client-jwt-decoder-web-crypto-2026',
-        'tag'          => 'WEB DEV',
-        'excerpt'      => 'Build a zero-server Next.js 15 client JWT decoder with Web Crypto API: parse claims, verify RS256 signatures in sub-4ms, and guarantee complete user privacy.',
-        'body'         => <<<'BODY'
+        'title' => 'Next.js 15 Client JWT Decoder: Zero-Server Privacy in 2026',
+        'slug' => 'nextjs-15-client-jwt-decoder-web-crypto-2026',
+        'tag' => 'WEB DEV',
+        'excerpt' => 'Build a zero-server Next.js 15 client JWT decoder with Web Crypto API: parse claims, verify RS256 signatures in sub-4ms, and guarantee complete user privacy.',
+        'body' => <<<'BODY'
 A client-side JWT decoder in Next.js 15 is a browser-native utility that parses, decodes, and validates JSON Web Tokens using standard Web APIs without transmitting sensitive authentication tokens or session claims to a remote server.
 
 **Quick Answer**: In 2026, building a client-side JWT decoder in Next.js 15 using the native Web Crypto API and `window.atob` executes in sub-4ms per token with zero server egress costs. By performing base64url decoding and signature verification entirely within the user's browser, web platforms eliminate server token logging risks and guarantee 100% privacy compliance.
@@ -518,11 +518,11 @@ BODY,
     ],
 
     [
-        'title'        => 'DeepSeek R1 Quantization: Run 671B Locally in 2026',
-        'slug'         => 'deepseek-r1-quantization-run-locally-2026',
-        'tag'          => 'AI NEWS',
-        'excerpt'      => 'DeepSeek R1 quantization guide for 2026: run the 671B MoE model locally on Apple Silicon M4 Max and dual RTX 4090s with sub-450ms time-to-first-token latency.',
-        'body'         => <<<'BODY'
+        'title' => 'DeepSeek R1 Quantization: Run 671B Locally in 2026',
+        'slug' => 'deepseek-r1-quantization-run-locally-2026',
+        'tag' => 'AI NEWS',
+        'excerpt' => 'DeepSeek R1 quantization guide for 2026: run the 671B MoE model locally on Apple Silicon M4 Max and dual RTX 4090s with sub-450ms time-to-first-token latency.',
+        'body' => <<<'BODY'
 DeepSeek R1 quantization is the mathematical process of compressing the 671-billion parameter Mixture-of-Experts (MoE) model into low-precision numerical formats (such as 4-bit AWQ, GGUF, or FP8) to enable local inference on workstation-class hardware.
 
 **Quick Answer**: In 2026, running quantized DeepSeek R1 locally on Apple Silicon (M4 Max 128GB) or dual NVIDIA RTX 4090 GPUs delivers sub-450ms Time-to-First-Token (TTFT) and 18 tokens/sec generation speeds. Quantizing the active 37-billion parameter routing pathways cuts VRAM requirements from 1.3TB down to 72GB while preserving 96.4% of full-precision reasoning accuracy on coding and math benchmarks.

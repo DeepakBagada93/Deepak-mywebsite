@@ -201,11 +201,11 @@ if ($returnPos === -1) {
 $escapedTitle = addcslashes($title, "'");
 $escapedExcerpt = addcslashes($excerpt, "'");
 $postEntry = "    [\n" .
-    "        'title'        => '{$escapedTitle}',\n" .
-    "        'slug'         => '{$cleanSlug}',\n" .
-    "        'tag'          => '{$tag}',\n" .
-    "        'excerpt'      => '{$escapedExcerpt}',\n" .
-    "        'body'         => <<<'BODY'\n" .
+    "        'title' => '{$escapedTitle}',\n" .
+    "        'slug' => '{$cleanSlug}',\n" .
+    "        'tag' => '{$tag}',\n" .
+    "        'excerpt' => '{$escapedExcerpt}',\n" .
+    "        'body' => <<<'BODY'\n" .
     $body . "\n" .
     "BODY,\n" .
     "        'published_at' => '{$date}',\n" .

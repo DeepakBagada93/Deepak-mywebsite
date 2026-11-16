@@ -256,11 +256,11 @@ foreach ($duePosts as $p) {
             $escapedTag = addcslashes($category, "'");
 
             $newEntry = "    [\n"
-                ."        'title'        => '{$escapedTitle}',\n"
-                ."        'slug'         => '{$p->slug}',\n"
-                ."        'tag'          => '{$escapedTag}',\n"
-                ."        'excerpt'      => '{$escapedExcerpt}',\n"
-                ."        'body'         => <<<'BODY'\n"
+                ."        'title' => '{$escapedTitle}',\n"
+                ."        'slug' => '{$p->slug}',\n"
+                ."        'tag' => '{$escapedTag}',\n"
+                ."        'excerpt' => '{$escapedExcerpt}',\n"
+                ."        'body' => <<<'BODY'\n"
                 .$cleanContent."\n"
                 ."BODY,\n"
                 ."        'published_at' => '{$slotAt}',\n"
