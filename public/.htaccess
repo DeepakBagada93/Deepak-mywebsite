@@ -14,7 +14,32 @@
     # =========================================================================
     # GSC 404 Consolidation Map — Permanent 301 Redirects to Canonical Pillars
     # Eliminates 404 dead links, consolidates PageRank, and relieves database load.
+    # Updated: Nov 16, 2026 (Coverage Drilldown 49/49 Dead URLs Fully Mapped)
     # =========================================================================
+    RewriteRule ^journal/website-developer-gujarat-cost-hire-2026-fresh/?$ /journal/hire-website-developer-gujarat-2026 [L,R=301]
+    RewriteRule ^journal/womens-cricket-ipl-fantasy-2026/?$ /journal [L,R=301]
+    RewriteRule ^journal/bhajan-clubbing-coffee-rave-india-2026/?$ /journal [L,R=301]
+    RewriteRule ^journal/science-backed-beauty-protein-india-2026/?$ /journal [L,R=301]
+    RewriteRule ^journal/job-hugging-micro-retirement-burnout-india-2026/?$ /journal [L,R=301]
+    RewriteRule ^journal/whatsapp-first-india-98-opens-4200cr-2026-fresh/?$ /journal/whatsapp-first-india-ecommerce-2026-playbook [L,R=301]
+    RewriteRule ^journal/quick-commerce-10-minute-delivery-vs-kirana-2026/?$ /journal [L,R=301]
+    RewriteRule ^journal/example/?$ /journal [L,R=301]
+    RewriteRule ^journal/claude-30x-gemini-gains-india-ai-app-battle-2026/?$ /journal/claude-3-7-sonnet-hybrid-reasoning-india-2026 [L,R=301]
+    RewriteRule ^journal/junagadh-stack-shipping-from-tier-3/?$ /journal/tier-3-developer-stack-shipping-global-clients-2026 [L,R=301]
+    RewriteRule ^journal/fresh-content-3x-cited-quarterly-refresh-2026/?$ /journal/google-ai-overviews-traffic-recovery-aeo-playbook-2026 [L,R=301]
+    RewriteRule ^journal/token-crisis-finops-2026-fresh/?$ /journal/slm-vs-llm-small-language-models-gujarat-sme-cost-2026 [L,R=301]
+    RewriteRule ^journal/agentic-governance-audit-logs-hitl-2026-fresh/?$ /journal/agentic-governance-audit-logs-hitl-2026 [L,R=301]
+    RewriteRule ^journal/multi-agent-system-architecture/?$ /journal/multi-agent-orchestration-crewai-langgraph-2026 [L,R=301]
+    RewriteRule ^ai-tools-india-2026/?$ /journal/ai-tools-india-2026 [L,R=301]
+    RewriteRule ^quick-commerce-india/?$ /journal [L,R=301]
+    RewriteRule ^parental-control-india/?$ /journal [L,R=301]
+    RewriteRule ^freelancing-india-2026/?$ /journal [L,R=301]
+    RewriteRule ^ghar-baithe-paise-kaise-kamaye-ai-se/?$ /journal [L,R=301]
+    RewriteRule ^services/ai-consulting/?$ /services/ai-development [L,R=301]
+    RewriteRule ^services/ai-agent-development/?$ /services/ai-development [L,R=301]
+    RewriteRule ^services/automation/?$ /services/enterprise-automation [L,R=301]
+    RewriteRule ^checkout/?$ /products [L,R=301]
+    RewriteRule ^products/verify/?$ /products [L,R=301]
     RewriteRule ^journal/upi-autopay-credit-on-upi-1lakh-2026/?$ /journal/upi-autopay-credit-on-upi-saas-billing-2026 [L,R=301]
     RewriteRule ^journal/gujarat-100cr-automation-anywhere-ai-skills-2026/?$ /journal/gujarat-sme-automation-whatsapp-upi-n8n-2026 [L,R=301]
     RewriteRule ^journal/voice-ai-gujarati-hindi-2026-fresh/?$ /journal/voice-ai-vernacular-gujarat-hindi-2026 [L,R=301]

@@ -115,14 +115,14 @@ return [
     ],
     'ai-code-security-sentinel' => [
         'title' => 'AI Code Security Sentinel: Pre-Commit OWASP Scanner | Deepak',
-        'description' => 'Stop shipping AI-generated vulnerabilities. Catch secret leaks, prompt injections, and OWASP flaws in under 2 seconds with zero dependencies and 100% offline execution.',
+        'description' => 'Catch secret leaks, prompt injections and OWASP flaws in under 2 seconds. 100% offline pre-commit scanner for AI coding agents. Instant download India.',
     ],
     'ai-sdr-inbound-closer' => [
-        'title' => 'Autonomous AI SDR & Inbound Lead Closer: n8n Lead Booking | Deepak',
+        'title' => 'Autonomous AI SDR & Inbound Closer: n8n Booking | Deepak',
         'description' => 'Self-hosted n8n AI SDR system that enriches lead data, scores buying intent, writes 4-sentence outreach, and routes meeting links in under 60 seconds.',
     ],
     'fullstack-agentic-coding-vault' => [
-        'title' => 'Full-Stack AI Coding Guardrails & Skill Pack: Cursor Rules | Deepak',
+        'title' => 'Full-Stack AI Coding Guardrails: Cursor Rules | Deepak',
         'description' => 'Drop-in .cursorrules and SKILL.md vault for Next.js, TypeScript, PostgreSQL and TDD. Stop AI coding agents from hallucinating and breaking code.',
     ],
     'deep-research-dossier-engine' => [

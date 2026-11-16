@@ -18,5 +18,25 @@
         "canonical_url": "https://deepakbagada.in/journal/pydantic-ai-vs-langgraph-5-benchmark-showdowns-2026",
         "published_at": "2026-11-13T08:28:17+05:30",
         "status": "published"
+    },
+    {
+        "slug": "why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026",
+        "title": "Why Multi-Agent Swarms Fail on Step 12: The Valkey Fix",
+        "tag": "MY STORY",
+        "devto_id": 5043125,
+        "devto_url": "https://dev.to/deepak_bagada_f7dd47d64ee/why-multi-agent-swarms-fail-on-step-12-the-valkey-fix-4o8b",
+        "canonical_url": "https://deepakbagada.in/journal/why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026",
+        "published_at": "2026-11-16T00:20:10+05:30",
+        "status": "published"
+    },
+    {
+        "slug": "valkey-vs-redis-agent-queue-benchmarks-2026",
+        "title": "Valkey vs Redis: 100K QPS Agent Queue Benchmarks 2026",
+        "tag": "AI DEV",
+        "devto_id": 5043128,
+        "devto_url": "https://dev.to/deepak_bagada_f7dd47d64ee/valkey-vs-redis-100k-qps-agent-queue-benchmarks-2026-3g23",
+        "canonical_url": "https://deepakbagada.in/journal/valkey-vs-redis-agent-queue-benchmarks-2026",
+        "published_at": "2026-11-16T00:20:31+05:30",
+        "status": "published"
     }
 ]

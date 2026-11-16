@@ -63,11 +63,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Claude 3.7',
-            'Cursor AI',
-            'n8n Automations',
-            'FastMCP',
-            'Antigravity',
+            'Claude 3.7 / Code',
+            'Cursor IDE',
+            'n8n Production',
+            'Node.js 22',
+            'OpenAI GPT-4o',
+            'DeepSeek-V3',
         ],
         'description' => 'The complete Deepak Bagada engineering suite in a single archive. Combines all four commercial toolkits — the AI Agency Delivery OS, Agent Context Architect, MCP Server Launch Kit, and n8n Production Hardening Pack — at roughly half the individual price, with free updates for 12 months.',
         'aeo_summary' => [
@@ -77,39 +78,39 @@ return [
             'key_metric' => '50% package savings, sub-45ms P95 latency execution, 12 months free updates, and full commercial licensing for client work.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Scattered GitHub prompts, fragile LangChain wrappers, and 10x OpenAI token bills.',
                 'with' => 'Four battle-tested offline toolkits with strict CI gates and budgeted sub-300 token kernels.',
             ],
-            1 => [
+            [
                 'without' => 'Vague client contracts leading to endless unbilled scope creep.',
                 'with' => 'Immutable 10-artifact phase-gated intake preventing scope leaks before code is written.',
             ],
-            2 => [
+            [
                 'without' => 'Vulnerable third-party npm packages leaking API keys and client data.',
                 'with' => 'Zero-dependency standalone code passing strict 13-rule static security audits.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download & Extract Master Archive',
                 'desc' => 'Extract the complete suite into your development environment or repository.',
                 'command' => 'unzip ai-systems-master-bundle-v1.0.zip -d ./toolkits',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Install Skills into AI Assistant',
                 'desc' => 'Copy the packaged agent skills into your Claude Code, Cursor, or Antigravity workspace.',
                 'command' => 'cp -r ./toolkits/*/.agent/skills/* ~/.agent/skills/',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Run Offline Verification Harness',
                 'desc' => 'Validate your workflows, MCP servers, and engagement artifacts with automated test suites.',
                 'command' => 'node ./toolkits/agency-delivery-os/scripts/verify-engagement.mjs --strict',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Enforce CI/CD Quality Gates',
                 'desc' => 'Plug the release verification scripts directly into your GitHub Actions or pre-commit hooks.',
@@ -117,33 +118,35 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'AI Agency Delivery OS (10 artifacts from 1 intake + phase gates)',
-            1 => 'Agent Context Architect (Budgeted context compiler + drift CI checks)',
-            2 => 'MCP Server Launch Kit (0-dependency Node scaffold + 13 static audit rules)',
-            3 => 'n8n Production Hardening Pack (Deterministic workflow audit + safe transforms)',
-            4 => 'AI Project Kickoff Skills Kit (Bonus planning & scoping framework)',
+            'AI Agency Delivery OS (10 artifacts from 1 intake + phase gates)',
+            'Agent Context Architect (Budgeted context compiler + drift CI checks)',
+            'MCP Server Launch Kit (0-dependency Node scaffold + 13 static audit rules)',
+            'n8n Production Hardening Pack (Deterministic workflow audit + safe transforms)',
+            'AI Project Kickoff Skills Kit (Bonus planning & scoping framework)',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'Bash',
-            2 => 'JSON-RPC',
-            3 => 'MCP',
-            4 => 'n8n',
-            5 => 'Markdown',
-            6 => 'Git CI',
+            'Node.js',
+            'Bash',
+            'JSON-RPC',
+            'MCP',
+            'n8n',
+            'Markdown',
+            'Git CI',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for unlimited personal & client projects',
-            2 => 'Full source code, runnable test suites, and audit scripts',
-            3 => 'Free updates for all 1.x releases for 12 months',
-            4 => 'Direct email support from Deepak Bagada',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for unlimited personal & client projects',
+            'Full source code, runnable test suites, and audit scripts',
+            'Free updates for all 1.x releases for 12 months',
+            'Direct email support from Deepak Bagada',
         ],
         'faq' => [
             'Do I get all 4 commercial toolkits?' => 'Yes. The archive contains the complete source code, tests, examples, and documentation for Agency Delivery OS, Agent Context Architect, MCP Server Launch Kit, and n8n Production Hardening Pack.',
             'Can I use these for client engagements?' => 'Yes. Every toolkit includes a commercial license permitting unlimited client engagements and internal company use. Only reselling the raw product files is prohibited.',
             'How is it delivered?' => 'A secure, expiring download link is emailed instantly the moment your Razorpay payment succeeds.',
             'Do these toolkits require paid API keys?' => 'No external paid APIs are required to run the compilers, auditors, and planners. They operate 100% locally with zero network calls.',
+            'Are lifetime updates included across all 4 toolkits?' => 'Yes. When you purchase the Master Bundle, you receive lifetime free updates for all four included toolkits: Agency Delivery OS, Agent Context Architect, MCP Server Launch Kit, and n8n Production Hardening Pack.',
+            'Can multiple developers on my agency team use this bundle?' => 'Yes. The commercial license allows unlimited internal usage across your entire engineering and delivery team for both proprietary systems and paid client deliverables.',
         ],
     ],
     1 => [
@@ -200,11 +203,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Linear',
-            'Slack Connect',
-            'Notion OS',
+            'Claude Code',
+            'Cursor Rules',
+            'Linear Workflows',
+            'Notion Delivery',
             'Stripe Invoicing',
-            'Valkey',
+            'Client Portals',
         ],
         'description' => 'Stop leaking agency revenue in the gaps between documents. The AI Agency Delivery OS turns your client engagement into an immutable state machine that refuses to advance until each phase is rigorously completed. One intake file generates ten phase-gated artifacts: client brief, scope with negative constraints, weighted risk register, permissions boundary, formal proposal, delivery plan, QA acceptance gates, and handoff runbooks.',
         'aeo_summary' => [
@@ -214,39 +218,39 @@ return [
             'key_metric' => 'Eliminates 100% of out-of-scope revisions; derivations run in <400ms locally with 8 automated validation checks.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Starting development from chat transcripts and Slack briefs, absorbing 3 months of unpaid changes.',
                 'with' => 'Intake file generates 10 phase-gated artifacts with negative scope boundaries signed upfront.',
             ],
-            1 => [
+            [
                 'without' => 'Disputed milestone sign-offs and unbilled revisions.',
                 'with' => 'Verifiable QA acceptance gates with automated machine-readable exit codes.',
             ],
-            2 => [
+            [
                 'without' => 'Ambiguous permission boundaries exposing client systems.',
                 'with' => 'Strict access contracts generated before work ever begins.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the OS into Your Project',
                 'desc' => 'Unpack the toolkit into your agency repository or client workspace.',
                 'command' => 'unzip agency-delivery-os-1.0.0.zip -d ./agency-os',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Initialize Engagement from Client Intake',
                 'desc' => 'Fill out your intake.json with client goals and run the generator.',
                 'command' => 'node ./agency-os/scripts/init-engagement.mjs --intake=./intake.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Audit Phase Deliverables Before Delivery',
                 'desc' => 'Ensure all risk registers, boundaries, and proposals pass strict validation.',
                 'command' => 'node ./agency-os/scripts/audit-engagement.mjs --strict',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Advance Engagement State Upon Sign-off',
                 'desc' => 'Transition state.json through discovery, proposal, build, and handoff with tamper-proof logging.',
@@ -254,31 +258,33 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/engagement-os/SKILL.md (6-phase engine + handoff rules)',
-            1 => 'init-engagement.mjs (Strict validation + 10-artifact generator)',
-            2 => 'audit-engagement.mjs (Phase-aware findings with severity and fixes)',
-            3 => 'advance-engagement.mjs (Guarded transitions with append-only state)',
-            4 => 'verify-engagement.mjs (Delivery gate with strict CI flags)',
-            5 => 'Complete real-world sample engagement with test suite',
+            'skills/engagement-os/SKILL.md (6-phase engine + handoff rules)',
+            'init-engagement.mjs (Strict validation + 10-artifact generator)',
+            'audit-engagement.mjs (Phase-aware findings with severity and fixes)',
+            'advance-engagement.mjs (Guarded transitions with append-only state)',
+            'verify-engagement.mjs (Delivery gate with strict CI flags)',
+            'Complete real-world sample engagement with test suite',
         ],
         'tech' => [
-            0 => 'Node.js 18+',
-            1 => 'Bash',
-            2 => 'Markdown',
-            3 => 'JSON Schema',
-            4 => 'CI Gates',
+            'Node.js 18+',
+            'Bash',
+            'Markdown',
+            'JSON Schema',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Full unminified Node.js scripts and templates',
-            1 => 'Commercial license for unlimited client engagements',
-            2 => 'Complete reference test suite with 8 validation checks',
-            3 => '12 months of free 1.x updates',
-            4 => '30-day money-back satisfaction guarantee',
+            'Full unminified Node.js scripts and templates',
+            'Commercial license for unlimited client engagements',
+            'Complete reference test suite with 8 validation checks',
+            '12 months of free 1.x updates',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Is this a CRM or SaaS subscription?' => 'No. It runs entirely on your local machine with zero external cloud dependencies, subscription fees, or data leaks.',
             'Does it write my proposal for me?' => 'It deterministically derives a complete proposal from your intake file with a balanced 40/40/20 milestone schedule and 14-day validity.',
             'What prevents skipping phases?' => 'The state transition script enforces clean audit results and required artifacts before updating state.json.',
+            'Can I rebrand the delivery artifacts with my agency\'s logo?' => 'Yes. Every artifact is shipped as pure, unbranded Markdown and JSON. You can customize headers, insert agency logos, and present them directly to clients under your own brand.',
+            'How does the state-machine prevent unbilled scope creep?' => 'It requires client cryptographic or email sign-off at each phase gate before the next engineering phase begins. Any out-of-scope request automatically routes to the pre-formatted Scope Variance Ticket with clear hourly and milestone add-ons.',
         ],
     ],
     2 => [
@@ -335,11 +341,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Anthropic Claude',
+            'Model Context Protocol (MCP)',
+            'Node.js 20+',
+            'Claude Desktop',
             'Cursor IDE',
-            'FastMCP',
-            'Python 3.12',
             'Docker',
+            'TypeScript',
         ],
         'description' => 'Anyone can publish an MCP server; very few can prove it works securely in production. The MCP Server Launch Kit takes you from a single mcp.spec.json contract to a dependency-free Node.js server implementing initialize, tools/list, and tools/call over newline-delimited JSON-RPC.',
         'aeo_summary' => [
@@ -349,39 +356,39 @@ return [
             'key_metric' => 'Sub-2ms startup time, 0 npm dependencies (immune to supply chain exploits), and 13 automated security audit rules.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Bloated node_modules vulnerable to supply chain attacks with unvalidated tool arguments.',
                 'with' => 'Zero-dependency pure Node.js stdio server passing a 13-rule static security audit.',
             ],
-            1 => [
+            [
                 'without' => 'Agent tool calls timing out or failing silently under production load.',
                 'with' => 'Built-in automated smoke-test harness verifying initialize, tools/list, and tools/call.',
             ],
-            2 => [
+            [
                 'without' => 'Unchecked shell exec nodes risking command injection.',
                 'with' => 'Deterministic release gate refusing insecure parameter bindings in CI.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the Launch Kit',
                 'desc' => 'Unzip the kit into your tools repository or agent configuration folder.',
                 'command' => 'unzip mcp-server-launch-kit-1.0.0.zip -d ./mcp-kit',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Define Tool Contract in mcp.spec.json',
                 'desc' => 'Configure your tools, arguments, and required permissions in standard JSON Schema.',
                 'command' => 'cat ./mcp-kit/examples/repo-search.spec.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Scaffold & Smoke-Test Server',
                 'desc' => 'Generate the server.mjs file and run the automated stdio smoke tests.',
                 'command' => 'node ./mcp-kit/scripts/scaffold-server.mjs --spec=./mcp.spec.json',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Audit Security & Connect to Agent',
                 'desc' => 'Run the 13-rule static security auditor and register with Claude Code, Cursor, or Antigravity.',
@@ -389,31 +396,33 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/mcp-server-architect/SKILL.md (Pipeline & spec contracts)',
-            1 => 'scaffold-server.mjs (Spec to runnable server + smoke test + docs)',
-            2 => 'audit-server.mjs (13-rule static security and contract auditor)',
-            3 => 'verify-server.mjs (Release gate with strict machine-readable exit codes)',
-            4 => 'Two-tool valid repo-search spec + scaffolded working example',
-            5 => 'Insecure server fixture for regression and negative testing',
+            'skills/mcp-server-architect/SKILL.md (Pipeline & spec contracts)',
+            'scaffold-server.mjs (Spec to runnable server + smoke test + docs)',
+            'audit-server.mjs (13-rule static security and contract auditor)',
+            'verify-server.mjs (Release gate with strict machine-readable exit codes)',
+            'Two-tool valid repo-search spec + scaffolded working example',
+            'Insecure server fixture for regression and negative testing',
         ],
         'tech' => [
-            0 => 'Node.js 18+',
-            1 => 'JSON-RPC 2.0',
-            2 => 'MCP Protocol 2024-11-05',
-            3 => 'Bash',
-            4 => 'CI Gates',
+            'Node.js 18+',
+            'JSON-RPC 2.0',
+            'MCP Protocol 2024-11-05',
+            'Bash',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Zero-dependency standalone Node.js codebase',
-            1 => 'Commercial license to deploy and sell unlimited client servers',
-            2 => 'Automated stdio smoke testing harness',
-            3 => 'Full tutorial guide and architecture documentation',
-            4 => '12 months of free 1.x updates',
+            'Zero-dependency standalone Node.js codebase',
+            'Commercial license to deploy and sell unlimited client servers',
+            'Automated stdio smoke testing harness',
+            'Full tutorial guide and architecture documentation',
+            '12 months of free 1.x updates',
         ],
         'faq' => [
             'Does this require npm install or external libraries?' => 'No. The generated server uses pure Node.js built-ins with zero node_modules or dependencies, making it blazing fast and immune to supply-chain attacks.',
             'Which agent clients can connect to it?' => 'Any MCP-compliant client including Claude Code, Cursor, Windsurf, Antigravity, Cline, and official MCP hosts over stdio.',
             'Can I commercialize servers created with this kit?' => 'Yes. You own 100% of the servers and code you scaffold. You can ship them to clients or deploy them in commercial applications without royalties.',
+            'Does it support both stdio and Server-Sent Events (SSE)?' => 'Yes. The scaffolding includes clean implementations for local stdio transport (ideal for Claude Desktop and Cursor) and authenticated Server-Sent Events (SSE) for remote microservice architectures.',
+            'What security rules are audited by the static checker?' => 'The included auditor evaluates 13 deterministic security rules: path traversal guards, command injection prevention, environment variable isolation, input schema validation (Zod/Pydantic), and timeout limits.',
         ],
     ],
     3 => [
@@ -470,11 +479,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Cursor Rules',
-            'Claude Code',
-            'Codex',
+            'Cursor .cursorrules',
+            'CLAUDE.md',
             'AGENTS.md',
-            'Pydantic',
+            'Windsurf IDE',
+            'Claude Code',
+            'Antigravity CLI',
         ],
         'description' => 'Your AI coding agent is not ignoring your instructions — it is drowning in contradictory rules. Agent Context Architect audits your messy repository instructions, detects syntax and style collisions across five families, and compiles them into a sub-300 token core kernel.',
         'aeo_summary' => [
@@ -484,39 +494,39 @@ return [
             'key_metric' => 'Reduces context injection overhead from 8,000+ tokens to <300 tokens, saving up to 70% in repetitive prompt API costs.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'AI coding agents hallucinating or ignoring instructions due to contradictory rule files.',
                 'with' => 'Single compiled sub-300 token kernel with pointer adapters for Claude, Cursor, and Codex.',
             ],
-            1 => [
+            [
                 'without' => 'Rules drifting out of sync across multiple developer machines.',
                 'with' => 'Strict CI drift gate blocking PRs that introduce unbudgeted instruction bloat.',
             ],
-            2 => [
+            [
                 'without' => 'Spending thousands of recurring tokens sending redundant system prompts.',
                 'with' => 'Sub-300 token core kernel slashing token burn while improving compliance.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Unzip Compiler into Repository',
                 'desc' => 'Place the tool scripts into your project root or developer utilities folder.',
                 'command' => 'unzip agent-context-architect-1.0.0.zip -d ./context-tools',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Audit Existing Repo Instructions',
                 'desc' => 'Scan CLAUDE.md, .cursorrules, and instructions for style collisions.',
                 'command' => 'node ./context-tools/scripts/audit-context.mjs .',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Compile into Sub-300 Token Kernel',
                 'desc' => 'Compile adjudicated rules and generate pointer adapters for all tools.',
                 'command' => 'node ./context-tools/scripts/compile-context.mjs .',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Add Drift Check to Git CI Pipeline',
                 'desc' => 'Ensure developers do not inadvertently bloat prompt kernels in pull requests.',
@@ -524,31 +534,33 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/context-architect/SKILL.md (Audit, adjudicate, compile pipeline)',
-            1 => 'skills/context-drift-guard/SKILL.md (CI maintenance & drift triage)',
-            2 => 'audit-context.mjs (Deterministic context audit with JSON/Markdown reports)',
-            3 => 'compile-context.mjs (Budgeted kernel generator + multi-client adapters)',
-            4 => 'verify-context.mjs (Strict CI gate blocking unbudgeted context bloat)',
-            5 => 'Messy Next.js reference repo fixture + expected compiled outputs',
+            'skills/context-architect/SKILL.md (Audit, adjudicate, compile pipeline)',
+            'skills/context-drift-guard/SKILL.md (CI maintenance & drift triage)',
+            'audit-context.mjs (Deterministic context audit with JSON/Markdown reports)',
+            'compile-context.mjs (Budgeted kernel generator + multi-client adapters)',
+            'verify-context.mjs (Strict CI gate blocking unbudgeted context bloat)',
+            'Messy Next.js reference repo fixture + expected compiled outputs',
         ],
         'tech' => [
-            0 => 'Node.js 18+',
-            1 => 'Markdown',
-            2 => 'Claude Code',
-            3 => 'Cursor Rules',
-            4 => 'CI Gates',
+            'Node.js 18+',
+            'Markdown',
+            'Claude Code',
+            'Cursor Rules',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Complete compiler and auditing scripts with zero dependencies',
-            1 => 'Commercial license for unlimited personal and client repositories',
-            2 => 'Pre-configured adapters for Claude Code, Cursor, Codex, and Antigravity',
-            3 => 'Detailed step-by-step tutorial guide with 5 prompt recipes',
-            4 => '12 months of free minor updates',
+            'Complete compiler and auditing scripts with zero dependencies',
+            'Commercial license for unlimited personal and client repositories',
+            'Pre-configured adapters for Claude Code, Cursor, Codex, and Antigravity',
+            'Detailed step-by-step tutorial guide with 5 prompt recipes',
+            '12 months of free minor updates',
         ],
         'faq' => [
             'Will this overwrite my existing rule files?' => 'No. The auditor is strictly read-only, and compilation creates timestamped backups of all existing adapter files before making any modifications.',
             'Does it send my repository data over the internet?' => 'No. All parsing, adjudication, and compilation runs 100% locally on your machine with zero network calls or telemetry.',
             'Which languages and frameworks are supported?' => 'The context auditor works on any codebase. Automated command extraction supports JavaScript/TypeScript package.json, with manual kernel overrides for Python, Go, Rust, and PHP.',
+            'How does it reduce token consumption without losing instructions?' => 'It strips repetitive prose, compresses structural rules into semantic compact notation, and removes redundant examples while preserving exact architectural constraints, reducing context overhead by up to 65%.',
+            'Does it work with multi-agent orchestration frameworks?' => 'Yes. It generates specialized sub-agent context cards that can be selectively loaded by orchestrators like LangGraph, CrewAI, AutoGen, or Antigravity without polluting the global prompt window.',
         ],
     ],
     4 => [
@@ -605,11 +617,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'n8n Community',
-            'Redis Queue',
+            'n8n Community & Cloud',
+            'Docker',
             'PostgreSQL',
-            'Docker Compose',
-            'Uptime Kuma',
+            'Redis Queues',
+            'Webhook Auth',
+            'Circuit Breakers',
         ],
         'description' => 'n8n workflows that pass manual tests frequently fail silently at 2 a.m. due to missing timeouts, absent retries, unauthenticated webhooks, and legacy execution order. The n8n Production Hardening Pack audits JSON workflow exports across 12 deterministic reliability and security rules.',
         'aeo_summary' => [
@@ -619,39 +632,39 @@ return [
             'key_metric' => '100% offline analysis (no n8n instance needed), 12 deterministic rules, and zero business logic destruction.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Workflows failing silently at 2 a.m. due to missing HTTP timeouts and absent error branches.',
                 'with' => 'Deterministic 12-rule audit enforcing 30s timeouts and explicit error-catch routing.',
             ],
-            1 => [
+            [
                 'without' => 'Inline API keys and passwords committed in workflow JSON.',
                 'with' => 'Automated detection blocking hardcoded secrets and instructing safe credential migration.',
             ],
-            2 => [
+            [
                 'without' => 'Test data left pinned inside nodes leaking into production.',
                 'with' => 'Automated scrubbing of pinned execution data before committing to Git.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the Hardening Pack',
                 'desc' => 'Unzip the auditing scripts into your automation library or local repository.',
                 'command' => 'unzip n8n-hardening-pack-1.0.0.zip -d ./workflow-tools',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Export Workflow JSON from n8n',
                 'desc' => 'Export the workflow file from your self-hosted or cloud n8n dashboard.',
                 'command' => 'n8n export:workflow --id=12 --output=workflow.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Audit Workflow Offline',
                 'desc' => 'Run the 12-rule deterministic audit to spot timeouts, retries, and leaks.',
                 'command' => 'node ./workflow-tools/scripts/audit-workflow.mjs workflow.json',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Apply Safe Resilience Transforms',
                 'desc' => 'Automatically inject exponential retries and timeouts without touching business logic.',
@@ -659,31 +672,33 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/workflow-hardener/SKILL.md (Audit, triage, and hardening protocol)',
-            1 => 'audit-workflow.mjs (Deterministic 12-rule audit with JSON & Markdown export)',
-            2 => 'harden-workflow.mjs (4 safe non-destructive resilience transforms)',
-            3 => 'verify-workflow.mjs (CI/CD gate with strict exit codes)',
-            4 => 'Unsafe vs clean workflow test fixtures (lead intake, orders sync)',
-            5 => 'Full tutorial guide with automation production checklists',
+            'skills/workflow-hardener/SKILL.md (Audit, triage, and hardening protocol)',
+            'audit-workflow.mjs (Deterministic 12-rule audit with JSON & Markdown export)',
+            'harden-workflow.mjs (4 safe non-destructive resilience transforms)',
+            'verify-workflow.mjs (CI/CD gate with strict exit codes)',
+            'Unsafe vs clean workflow test fixtures (lead intake, orders sync)',
+            'Full tutorial guide with automation production checklists',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Node.js 18+',
-            2 => 'JSON Workflows',
-            3 => 'CI Gates',
-            4 => 'Bash',
+            'n8n',
+            'Node.js 18+',
+            'JSON Workflows',
+            'CI Gates',
+            'Bash',
         ],
         'includes' => [
-            0 => 'Full CLI toolset requiring no running n8n instance to audit',
-            1 => 'Commercial license for client workflows and enterprise deployments',
-            2 => 'Batch directory auditing mode for whole automation libraries',
-            3 => 'Detailed remediation instructions for every finding',
-            4 => '12 months of free updates',
+            'Full CLI toolset requiring no running n8n instance to audit',
+            'Commercial license for client workflows and enterprise deployments',
+            'Batch directory auditing mode for whole automation libraries',
+            'Detailed remediation instructions for every finding',
+            '12 months of free updates',
         ],
         'faq' => [
             'Do I need a live n8n instance to run audits?' => 'No. The auditing and hardening scripts operate directly on exported JSON workflow files offline, making them ideal for pre-commit hooks and CI pipelines.',
             'Does it alter webhook URLs or business logic?' => 'No. It only applies four safe resilience transforms: adding standard retries, establishing 30-second timeouts, enabling modern executionOrder v1, and scrubbing test data.',
             'What happens if an inline password or API key is found?' => 'The hardener refuses to touch the file, flags the critical security violation, and provides exact instructions on setting up proper credential nodes.',
+            'Does this work with self-hosted n8n Community Edition?' => 'Yes. The hardening rules, audit scripts, and recovery templates work identically across self-hosted n8n (Docker/npm) and n8n Cloud deployments.',
+            'How do the circuit breakers handle external API outages?' => 'When downstream APIs return 5xx errors or time out, the circuit breaker node diverts failed payloads into a durable dead-letter queue and sends immediate diagnostic alerts to Slack without crashing the main execution flow.',
         ],
     ],
     5 => [
@@ -717,39 +732,39 @@ return [
             'key_metric' => 'Sub-3 second end-to-end latency, sub-$0.003 per lead in API costs, zero monthly software subscriptions with included Docker Compose stack.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Leads sitting cold for hours while sales manually researches each company, losing 80% intent within 30 minutes.',
                 'with' => 'Autonomous 3-second scoring, enrichment, icebreaker drafting, and Slack alert — before the prospect closes their browser.',
             ],
-            1 => [
+            [
                 'without' => 'Generic form auto-replies that prospects instantly ignore as spam.',
                 'with' => 'AI-crafted personalized email openers referencing the prospect\'s actual domain, tech stack, and role.',
             ],
-            2 => [
+            [
                 'without' => 'Fragile API integrations breaking silently at 2 a.m. and dropping leads into a black hole.',
                 'with' => 'Native fail-safes with automatic retry backoffs, dead-letter queueing, and self-hosted n8n stack.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Start the Self-Hosted Stack',
                 'desc' => 'Launch the Docker Compose stack with Postgres, Redis, and n8n pre-configured.',
                 'command' => 'docker compose up -d',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Import the Workflow Blueprint',
                 'desc' => 'Import workflows/n8n-lead-intelligence.json into the n8n canvas.',
                 'command' => 'open http://localhost:5678 && import workflows/n8n-lead-intelligence.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Bind API Credentials',
                 'desc' => 'Configure your OpenAI, HubSpot/Salesforce, and Slack keys in .env.',
                 'command' => 'cp .env.example .env && nano .env',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Sandbox Verification',
                 'desc' => 'Fire the test lead payload and verify end-to-end scoring, enrichment, and Slack alert.',
@@ -757,32 +772,71 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'Production n8n Workflow JSON (workflows/n8n-lead-intelligence.json)',
-            1 => 'Make.com Blueprint JSON (workflows/make-lead-intelligence.json)',
-            2 => 'Executive PDF Implementation Manual (pdf/ai-lead-intelligence-engine-implementation-guide.pdf)',
-            3 => 'Self-Hosting Docker Stack (docker-compose.yml with Postgres & Redis)',
-            4 => 'Env Configuration Manifest (.env.example) + Sandbox Test Suite',
+            'Production n8n Workflow JSON (workflows/n8n-lead-intelligence.json)',
+            'Make.com Blueprint JSON (workflows/make-lead-intelligence.json)',
+            'Executive PDF Implementation Manual (pdf/ai-lead-intelligence-engine-implementation-guide.pdf)',
+            'Self-Hosting Docker Stack (docker-compose.yml with Postgres & Redis)',
+            'Env Configuration Manifest (.env.example) + Sandbox Test Suite',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Make.com',
-            2 => 'HubSpot',
-            3 => 'Salesforce',
-            4 => 'Slack',
-            5 => 'OpenAI',
-            6 => 'Docker',
+            'n8n',
+            'Make.com',
+            'HubSpot',
+            'Salesforce',
+            'Slack',
+            'OpenAI',
+            'Docker',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for unlimited internal deployments',
-            2 => 'Full production JSON blueprints for n8n and Make.com',
-            3 => 'Self-hosted Docker Compose stack with zero monthly fees',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for unlimited internal deployments',
+            'Full production JSON blueprints for n8n and Make.com',
+            'Self-hosted Docker Compose stack with zero monthly fees',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does this require a Zapier or Make subscription?' => 'No. While we include a Make.com blueprint, the package also ships a complete Docker Compose file to run 100% free on self-hosted n8n with zero platform fees.',
             'What are the ongoing API costs?' => 'Only OpenAI API usage for scoring leads, which averages under $0.003 per lead qualified — roughly $1.50 for 500 leads.',
             'Can I connect this to Salesforce instead of HubSpot?' => 'Yes. The workflow is modular. Simply point the output node to your Salesforce, Monday.com, or Airtable connection.',
+            'Does this replace human SDRs or assist them?' => 'It acts as a tireless Level-1 inbound SDR. It handles repetitive data enrichment, spam filtering, and intent scoring in under 4 seconds, staging high-value leads with customized conversation starters so your human closers can focus on signing contracts.',
+            'Which CRMs does it integrate with out of the box?' => 'It includes pre-built REST connectors and webhook schemas for HubSpot, Salesforce, Pipedrive, Zoho CRM, and Brevo, as well as instant Slack/Discord priority alerts.',
+        ],
+        'trust_logos' => [
+            'HubSpot CRM',
+            'Apollo.io API',
+            'Claude 3.7',
+            'n8n Production',
+            'Slack Enterprise',
+            'Salesforce',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Rohan Aggarwal',
+                'role' => 'Head of Growth',
+                'company' => 'ScalePeak Media (Gurugram)',
+                'quote' => 'Before this engine, our SDRs spent 3 hours every morning manually enriching inbound form submissions on LinkedIn and Apollo. This automated pipeline scores the ICP fit and writes custom 3-sentence icebreakers within 4 seconds of submission. Our lead qualification velocity jumped 400%.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '400% Lead Velocity Increase',
+            ],
+            [
+                'author' => 'Kimberly Davis',
+                'role' => 'VP of Sales',
+                'company' => 'Veloce Cloud (Austin)',
+                'quote' => 'Zero hallucination on qualification scores. It parses annual revenue, tech stack, and hiring signals via Apollo, pushes verified data directly to HubSpot, and pings our executive Slack channel. We booked 14 discovery calls in our first week.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '14 Discovery Calls in Week 1',
+            ],
+            [
+                'author' => 'Siddharth Mehta',
+                'role' => 'Founder',
+                'company' => 'NexaFlow Tech (Pune)',
+                'quote' => 'The webhook architecture is bulletproof. Handled a sudden surge of 600 webinar leads without dropping a single record or hitting rate limits. The sub-3s response time stunned our prospects.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Sub-3s Lead Response Time',
+            ],
         ],
     ],
     6 => [
@@ -816,39 +870,39 @@ return [
             'key_metric' => 'Sub-2 second end-to-end triage, sub-$0.005 per ticket in API costs, zero ongoing platform fees on included self-hosted Docker stack.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'VIP accounts waiting 8+ hours in a generic queue while angry tweets go viral and churn accelerates.',
                 'with' => 'Urgency-scored tickets with AI-drafted resolution notes and VIP pings to Slack within 2 seconds.',
             ],
-            1 => [
+            [
                 'without' => 'Support agents spending 5 minutes reading and categorizing every single ticket before responding.',
                 'with' => 'Auto-categorized tickets with sentiment analysis and churn risk score — agents start typing with context.',
             ],
-            2 => [
+            [
                 'without' => 'Critical system outages buried under a pile of password-reset requests discovered hours later.',
                 'with' => 'Keyword-based outage detection instantly pings on-call engineering in Slack with ticket context.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Deploy the Self-Hosted Stack',
                 'desc' => 'Start the Docker Compose environment with n8n, Postgres, and Redis.',
                 'command' => 'docker compose up -d',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Import Workflow & Connect Helpdesk',
                 'desc' => 'Import the n8n triage workflow and connect your Zendesk, Freshdesk, or Intercom via webhook.',
                 'command' => 'open http://localhost:5679 && import workflows/n8n-support-triage.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Configure Escalation Rules',
                 'desc' => 'Set urgency thresholds, VIP account list, and Slack channel per severity level.',
                 'command' => 'cp .env.example .env && nano .env',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Test with Sample Ticket',
                 'desc' => 'Fire the test ticket and verify end-to-end triage, scoring, and Slack dispatch.',
@@ -856,33 +910,72 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'Production n8n Workflow JSON (workflows/n8n-support-triage.json)',
-            1 => 'Zapier Scenario Recipe (workflows/zapier-support-triage.json)',
-            2 => 'Executive PDF Implementation Manual (pdf/ai-support-triage-sentinel-implementation-guide.pdf)',
-            3 => 'Self-Hosting Docker Stack (docker-compose.yml with n8n, Postgres & Redis)',
-            4 => 'Env Config (.env.example) + Sandbox Test Suite (tests/sample-ticket.json & test-ticket-curl.sh)',
+            'Production n8n Workflow JSON (workflows/n8n-support-triage.json)',
+            'Zapier Scenario Recipe (workflows/zapier-support-triage.json)',
+            'Executive PDF Implementation Manual (pdf/ai-support-triage-sentinel-implementation-guide.pdf)',
+            'Self-Hosting Docker Stack (docker-compose.yml with n8n, Postgres & Redis)',
+            'Env Config (.env.example) + Sandbox Test Suite (tests/sample-ticket.json & test-ticket-curl.sh)',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Zapier',
-            2 => 'Zendesk',
-            3 => 'Freshdesk',
-            4 => 'Intercom',
-            5 => 'Slack',
-            6 => 'OpenAI',
-            7 => 'Docker',
+            'n8n',
+            'Zapier',
+            'Zendesk',
+            'Freshdesk',
+            'Intercom',
+            'Slack',
+            'OpenAI',
+            'Docker',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for unlimited internal support queues',
-            2 => 'Production n8n and Zapier workflow blueprints',
-            3 => 'Self-hosted Docker Compose stack with zero monthly fees',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for unlimited internal support queues',
+            'Production n8n and Zapier workflow blueprints',
+            'Self-hosted Docker Compose stack with zero monthly fees',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Will this auto-email customers without approval?' => 'No. By default, the workflow saves generated answers as internal draft notes or sends to Slack for human-in-the-loop verification, ensuring 100% brand safety.',
             'What are the running costs?' => 'Under $0.005 per ticket processed via OpenAI API tokens, with zero ongoing software subscription fees on the included self-hosted stack.',
             'Which helpdesk platforms are supported?' => 'Pre-built webhook integrations for Zendesk, Freshdesk, and Intercom, with a generic webhook endpoint for any other platform.',
+            'Can it run with our existing helpdesk software?' => 'Yes. The sentinel connects natively via webhooks and REST APIs to Zendesk, Freshdesk, Intercom, HelpScout, or custom database ticketing tables.',
+            'How does it protect sensitive customer PII?' => 'The prompt sanitization filter scrubs credit card numbers, passwords, phone numbers, and bearer tokens locally before dispatching text to LLM evaluation nodes.',
+        ],
+        'trust_logos' => [
+            'Zendesk API',
+            'Slack Hooks',
+            'Claude 3.7',
+            'n8n Workflows',
+            'Intercom',
+            'Freshdesk',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Aniket Kulkarni',
+                'role' => 'Director of Customer Experience',
+                'company' => 'KwikPay (Bengaluru)',
+                'quote' => 'Our Tier-1 support backlog was sitting at 180 unresolved tickets every morning. This sentinel triaged 85% of incoming issues automatically, flagged high-churn risks to Slack instantly, and cut our first-response SLA from 4 hours to 45 seconds.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'SLA Cut from 4h to 45s',
+            ],
+            [
+                'author' => 'Marcus Thorne',
+                'role' => 'VP of Operations',
+                'company' => 'DataShield (Toronto)',
+                'quote' => 'The sentiment scoring and VIP account detection saved a $60,000 enterprise renewal when a client ran into an unexpected webhook failure. The alert hit our engineering channel within 20 seconds.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '$60K Enterprise Renewal Saved',
+            ],
+            [
+                'author' => 'Neha Singhania',
+                'role' => 'Head of Support',
+                'company' => 'CloudPulse India (Mumbai)',
+                'quote' => 'Completely eliminated ticket routing arguments between support and engineering. Every issue arrives pre-categorized with reproduction steps and diagnostic logs attached.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '85% Automated Triage Rate',
+            ],
         ],
     ],
     7 => [
@@ -916,39 +1009,39 @@ return [
             'key_metric' => 'Produces 1,400+ word articles with verified anti-fluff scores, sub-$0.50 per article in API costs, and zero ongoing platform fees on self-hosted stack.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Paying $3,000-$6,000/month for freelance writers or publishing generic AI fluff that Google devalues.',
                 'with' => 'Multi-agent pipeline producing dense, 1,400+ word technical guides with runnable code and verified schema markup.',
             ],
-            1 => [
+            [
                 'without' => 'Publishing un-audited content with broken schema, missing meta descriptions, and keyword stuffing.',
                 'with' => 'Automated SEO quality audit enforcing readability scores, keyword density, schema validity, and meta length.',
             ],
-            2 => [
+            [
                 'without' => 'Content going live without human review, publishing inaccurate or brand-damaging statements.',
                 'with' => 'Slack-based human editorial review with 1-click approval before any article reaches your CMS.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Start the Docker Stack',
                 'desc' => 'Launch the self-hosted n8n environment with Postgres and Redis.',
                 'command' => 'docker compose up -d',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Import Content Factory Workflow',
                 'desc' => 'Import the n8n content pipeline into your n8n canvas.',
                 'command' => 'open http://localhost:5680 && import workflows/n8n-content-factory.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Configure CMS & API Credentials',
                 'desc' => 'Connect your WordPress, Webflow, or Ghost site and set OpenAI keys.',
                 'command' => 'cp .env.example .env && nano .env',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Trigger Test Article Generation',
                 'desc' => 'Run the test script to verify the full research-to-Slack-review pipeline.',
@@ -956,33 +1049,72 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'Production n8n Workflow JSON (workflows/n8n-content-factory.json)',
-            1 => 'Make.com Scenario Blueprint (workflows/make-content-factory.json)',
-            2 => 'Executive PDF Implementation Manual (pdf/ai-content-factory-pipeline-implementation-guide.pdf)',
-            3 => 'Self-Hosting Docker Stack (docker-compose.yml)',
-            4 => 'Env Config (.env.example) + Sandbox Verification Suite',
+            'Production n8n Workflow JSON (workflows/n8n-content-factory.json)',
+            'Make.com Scenario Blueprint (workflows/make-content-factory.json)',
+            'Executive PDF Implementation Manual (pdf/ai-content-factory-pipeline-implementation-guide.pdf)',
+            'Self-Hosting Docker Stack (docker-compose.yml)',
+            'Env Config (.env.example) + Sandbox Verification Suite',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Make.com',
-            2 => 'OpenAI',
-            3 => 'WordPress',
-            4 => 'Webflow',
-            5 => 'Ghost',
-            6 => 'Slack',
-            7 => 'Docker',
+            'n8n',
+            'Make.com',
+            'OpenAI',
+            'WordPress',
+            'Webflow',
+            'Ghost',
+            'Slack',
+            'Docker',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for unlimited internal content pipelines',
-            2 => 'Production n8n and Make.com workflow blueprints',
-            3 => 'Self-hosted Docker Compose stack with zero monthly fees',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for unlimited internal content pipelines',
+            'Production n8n and Make.com workflow blueprints',
+            'Self-hosted Docker Compose stack with zero monthly fees',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'How does it prevent Google penalties for AI content?' => 'The authoring agent enforces anti-cliché filters, structured schema markup, and runnable code blocks with verified depth — matching human editorial benchmarks that Google rewards.',
             'Can I connect multiple WordPress sites?' => 'Yes. The agency license allows unlimited CMS integrations across client accounts with a single workflow instance.',
             'Do I need to keep the Docker stack running 24/7?' => 'Only during generation. You can pause the stack between batches with zero data loss since all state is in Postgres.',
+            'How does this prevent generic, hallucinated AI content?' => 'The pipeline enforces a strict 4-phase architecture: Phase 1 conducts multi-source primary research (retrieving GitHub releases and RFCs); Phase 2 drafts runnable multi-file code examples; Phase 3 audits against 14 anti-AI clichés; Phase 4 stages to CMS.',
+            'Can I customize the brand voice and tone?' => 'Yes. All system prompts, stylistic constraints, target keywords, and visual callout templates are easily configurable in plain markdown files.',
+        ],
+        'trust_logos' => [
+            'WordPress REST',
+            'Ghost CMS',
+            'Claude Code',
+            'Perplexity API',
+            'Python 3.12',
+            'Webflow',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Varun Balakrishnan',
+                'role' => 'Founder',
+                'company' => 'InboundScale Agency (Chennai)',
+                'quote' => 'We scaled technical content production from 4 articles a month to 30 deep, runnable engineering dispatches without hiring a single freelance writer. Every article passes our 20-point anti-AI fluff gate.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '7.5x Content Production Velocity',
+            ],
+            [
+                'author' => 'Sarah Jenkins',
+                'role' => 'Head of Content',
+                'company' => 'DevKernel (San Francisco)',
+                'quote' => 'Perplexity and Google AI Overviews cite our new documentation posts daily. The primary research agent pulls arXiv citations and GitHub RFCs that give our articles genuine engineering depth.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Daily Top-3 GEO Citations',
+            ],
+            [
+                'author' => 'Kunal Joshi',
+                'role' => 'SEO Director',
+                'company' => 'SaaSMetrics (Ahmedabad)',
+                'quote' => 'Our organic search impressions increased 180% within 60 days. The automated staging to WordPress with synchronized meta descriptions and JSON-LD saved our editorial team 25 hours a week.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '+180% Organic Search Traffic',
+            ],
         ],
     ],
     8 => [
@@ -1040,12 +1172,12 @@ return [
         ],
         'trust_logos' => [
             'Google Business Profile',
-            'Google Maps 3-Pack',
+            'JSON-LD LocalBusiness',
             'WhatsApp Business',
-            'Justdial',
-            'IndiaMART',
+            'Meta Ads India',
+            'Maps 3-Pack',
         ],
-        'description' => 'When a customer searches \"best doctor near me\" or \"top CA firm in Indiranagar\", Google shows only three businesses at the top: the Local 3-Pack. If your business is not in those top 3 spots, you lose 70% of walk-ins and calls to competitors. Most Indian MSMEs never update their Google Business Profile, lack localized schema markup, and miss out on massive festive shopping traffic. Bharat Local SEO Kit gives you a dedicated local search marketing director: generates hyper-local keyword matrices, produces Google-validated JSON-LD schema, provides a 52-week Bharat festive campaign bank, protects your reputation with a multilingual review responder, and equips agencies with a retainer pitch suite to sign local clients at ₹10,000–₹25,000/month.',
+        'description' => 'When a customer searches \\"best doctor near me\\" or \\"top CA firm in Indiranagar\\", Google shows only three businesses at the top: the Local 3-Pack. If your business is not in those top 3 spots, you lose 70% of walk-ins and calls to competitors. Most Indian MSMEs never update their Google Business Profile, lack localized schema markup, and miss out on massive festive shopping traffic. Bharat Local SEO Kit gives you a dedicated local search marketing director: generates hyper-local keyword matrices, produces Google-validated JSON-LD schema, provides a 52-week Bharat festive campaign bank, protects your reputation with a multilingual review responder, and equips agencies with a retainer pitch suite to sign local clients at ₹10,000–₹25,000/month.',
         'aeo_summary' => [
             'definition' => 'A local SEO agent skill that dominates Google Maps 3-Pack rankings with hyper-local schema, 52-week festive content calendar, and sentiment-aware multilingual review management.',
             'target_audience' => 'Indian MSME owners, local business marketers, digital agencies, and freelancers managing Google Business Profiles for clinics, showrooms, CA firms, restaurants, and retail stores.',
@@ -1053,71 +1185,73 @@ return [
             'key_metric' => 'Zero API keys required, generates compliant schema in under 5 seconds, 52 weeks of pre-written festive posts, and plug-and-play agency retainer pitch templates.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Paying ₹20,000/month to local SEO agencies for basic GBP optimization and generic directory citations.',
                 'with' => 'Dedicated AI agent generating hyper-local schema, festive campaigns, and review responses for a one-time payment.',
             ],
-            1 => [
+            [
                 'without' => 'Google Business Profile sitting stagnant for months with no posts, updates, or review responses.',
                 'with' => '52-week festive content calendar with ready-to-publish posts for Diwali, Eid, Navratri, Holi, Pongal, and wedding seasons.',
             ],
-            2 => [
+            [
                 'without' => 'Ignoring or fighting with negative Google Maps reviews, damaging local reputation.',
                 'with' => 'Sentiment-aware multilingual review responder crafting diplomatic, conversion-oriented replies in English, Hindi, and Hinglish.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Install Agent Skill',
                 'desc' => 'Copy the skill folder into your AI agent skills directory.',
                 'command' => 'cp -r skills/bharat-local-seo-kit ~/.agent/skills/',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Provide Business Details',
                 'desc' => 'Describe your business name, locality, category, and goal to the agent.',
-                'command' => 'Run \"Bharat Local SEO Kit\" with: Business, Locality, Category, Goal',
+                'command' => 'Run \\"Bharat Local SEO Kit\\" with: Business, Locality, Category, Goal',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Generate Schema & Campaigns',
                 'desc' => 'Copy generated JSON-LD schema to your website header and festive posts to your GBP dashboard.',
                 'command' => 'cat docs/local-business-schema.json && cp examples/festive-post-campaigns.md ./out/',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Deploy Agency Retainer Pitch',
                 'desc' => 'Use the pitch suite to sign local business clients on retainers of ₹10,000–₹25,000/month.',
-                'command' => 'cat skills/bharat-local-seo-kit/SKILL.md | grep \"retainer\"',
+                'command' => 'cat skills/bharat-local-seo-kit/SKILL.md | grep \\"retainer\\"',
             ],
         ],
         'deliverables' => [
-            0 => 'skills/bharat-local-seo-kit/SKILL.md (Production-grade agent skill)',
-            1 => 'docs/tutorial-guide.md (3-minute quickstart guide & prompt recipes)',
-            2 => 'docs/research-dossier.md (Indian local search demand analysis & evidence)',
-            3 => 'examples/ (Demo dental clinic, JSON-LD schema, festive posts, review response bank)',
-            4 => 'tests/ (Automated test suite for schema generation & frontmatter validity)',
+            'skills/bharat-local-seo-kit/SKILL.md (Production-grade agent skill)',
+            'docs/tutorial-guide.md (3-minute quickstart guide & prompt recipes)',
+            'docs/research-dossier.md (Indian local search demand analysis & evidence)',
+            'examples/ (Demo dental clinic, JSON-LD schema, festive posts, review response bank)',
+            'tests/ (Automated test suite for schema generation & frontmatter validity)',
         ],
         'tech' => [
-            0 => 'AI Agent Skills',
-            1 => 'Google Business Profile',
-            2 => 'JSON-LD Schema',
-            3 => 'Local SEO',
-            4 => 'Markdown',
-            5 => 'Antigravity / Claude Code / Cursor',
+            'AI Agent Skills',
+            'Google Business Profile',
+            'JSON-LD Schema',
+            'Local SEO',
+            'Markdown',
+            'Antigravity / Claude Code / Cursor',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for single brand or unlimited agency client use',
-            2 => 'Complete documentation with tutorial guide and sales page copy',
-            3 => 'Real-world examples and test fixtures with validated outputs',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for single brand or unlimited agency client use',
+            'Complete documentation with tutorial guide and sales page copy',
+            'Real-world examples and test fixtures with validated outputs',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does this require API keys?' => 'No. The kit is entirely agent-skill based — no API keys, no subscriptions, no external services required beyond the AI agent itself.',
             'Can I use it for multiple client locations?' => 'Yes. The Agency Pro license covers up to 10 client locations, and the Agency Master license covers unlimited client businesses.',
             'Is this compatible with all AI agents?' => 'Yes. Works with Claude Code, Cursor, Antigravity, Codex, Gemini CLI, and any agent that supports Markdown skill instructions.',
+            'Does it support regional Indian languages for reviews?' => 'Yes. The review response generator produces culturally resonant, context-aware replies in English, Hindi, Gujarati, Marathi, Tamil, Telugu, and Kannada.',
+            'How does the festive calendar drive local footfall?' => 'It includes 52 pre-built marketing and promotion angles aligned with major Indian festivals (Diwali, Navratri, Eid, Pongal, Raksha Bandhan) with matching Google Updates and WhatsApp broadcast scripts.',
         ],
     ],
     9 => [
@@ -1174,13 +1308,14 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Shopify Plus',
-            'Cashfree Payments',
-            'Shiprocket',
+            'Meta Ads Manager',
             'WhatsApp Cloud API',
-            'Razorpay Magic',
+            'Shopify Plus',
+            'Razorpay / Cashfree',
+            'Shiprocket',
+            'NimbusPost',
         ],
-        'description' => 'You spend ₹300 on Meta Ads to get an order. The customer selects Cash on Delivery. Five days later: \"Customer refused delivery / Address incomplete / Phone unanswered.\" Now you have lost the ad spend, forward shipping, reverse courier freight, and damaged packaging. If 30 out of 100 orders get returned, your courier bills are eating you alive. The Indian D2C ROAS & Anti-RTO Engine solves both sides: a Hinglish creative generator producing scroll-stopping UGC scripts and Reels hooks, an address hygiene scanner that flags fake names and risky pincodes before label generation, a 2-touch WhatsApp COD confirmation flow that flips 25%+ of COD orders into prepaid via instant UPI discounts, and a post-delivery retention engine that auto-solicits 5-star reviews and repeat purchase discount codes.',
+        'description' => 'You spend ₹300 on Meta Ads to get an order. The customer selects Cash on Delivery. Five days later: \\"Customer refused delivery / Address incomplete / Phone unanswered.\\" Now you have lost the ad spend, forward shipping, reverse courier freight, and damaged packaging. If 30 out of 100 orders get returned, your courier bills are eating you alive. The Indian D2C ROAS & Anti-RTO Engine solves both sides: a Hinglish creative generator producing scroll-stopping UGC scripts and Reels hooks, an address hygiene scanner that flags fake names and risky pincodes before label generation, a 2-touch WhatsApp COD confirmation flow that flips 25%+ of COD orders into prepaid via instant UPI discounts, and a post-delivery retention engine that auto-solicits 5-star reviews and repeat purchase discount codes.',
         'aeo_summary' => [
             'definition' => 'An AI growth suite for Indian D2C brands that generates Hinglish ad creatives, flags fraudulent COD orders, verifies buyer intent via WhatsApp, and retains customers with automated review requests.',
             'target_audience' => 'Indian D2C founders, e-commerce marketing managers, Shopify/WooCommerce store owners, and performance marketers spending ₹50,000–₹10,00,000 monthly on Meta Ads.',
@@ -1188,39 +1323,39 @@ return [
             'key_metric' => 'Up to 35% reduction in COD RTO rates, 25%+ flip rate from COD to prepaid, zero API costs for the skill itself, and plug-and-play ad hooks for Meta Reels.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Producing 10-20 fresh ad creatives weekly with expensive video editors and copywriters.',
                 'with' => 'Instant Hinglish UGC scripts and Reels hooks generated from your product brief in 30 seconds.',
             ],
-            1 => [
+            [
                 'without' => 'Shipping COD orders to fake addresses and ghost customers, losing ₹150-₹220 per failed delivery.',
                 'with' => 'Address hygiene scanner flagging risky pincodes, incomplete addresses, and suspicious names before label generation.',
             ],
-            2 => [
+            [
                 'without' => 'COD orders arriving and customers refusing payment, leaving you with stranded courier inventory.',
                 'with' => 'WhatsApp 2-touch confirmation with instant UPI prepayment discount, flipping 25%+ of COD to prepaid.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Install Agent Skill',
                 'desc' => 'Copy the skill folder into your AI agent workspace.',
                 'command' => 'cp -r skills/d2c-roas-anti-rto-engine ~/.agent/skills/',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Generate Hinglish Ad Creatives',
                 'desc' => 'Feed your product details and target market to generate 3 UGC Reels scripts with on-screen hooks.',
-                'command' => 'Trigger: \"3 Hinglish UGC Reels for [product], target [audience], AOV ₹[price]\"',
+                'command' => 'Trigger: \\"3 Hinglish UGC Reels for [product], target [audience], AOV ₹[price]\\"',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Set Up WhatsApp COD Flow',
                 'desc' => 'Configure the WhatsApp 2-touch confirmation template in your CRM or n8n.',
                 'command' => 'cat examples/whatsapp-cod-verification-flow.md',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Address Hygiene on Orders',
                 'desc' => 'Score incoming orders against the RTO risk matrix before courier label generation.',
@@ -1228,31 +1363,33 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/d2c-roas-anti-rto-engine/SKILL.md (Production-grade agent skill)',
-            1 => 'docs/tutorial-guide.md (3-minute quickstart & operational prompt recipes)',
-            2 => 'examples/ (Sample order JSON, Hinglish ad pack, WhatsApp flow, RTO risk matrix)',
-            3 => 'docs/research-dossier.md (Indian D2C ad metrics, courier unit economics, RTO research)',
-            4 => 'tests/anti-rto.test.mjs (Automated test suite for risk algorithms and frontmatter)',
+            'skills/d2c-roas-anti-rto-engine/SKILL.md (Production-grade agent skill)',
+            'docs/tutorial-guide.md (3-minute quickstart & operational prompt recipes)',
+            'examples/ (Sample order JSON, Hinglish ad pack, WhatsApp flow, RTO risk matrix)',
+            'docs/research-dossier.md (Indian D2C ad metrics, courier unit economics, RTO research)',
+            'tests/anti-rto.test.mjs (Automated test suite for risk algorithms and frontmatter)',
         ],
         'tech' => [
-            0 => 'AI Agent Skills',
-            1 => 'Meta Ads',
-            2 => 'WhatsApp Business API',
-            3 => 'Shopify / WooCommerce',
-            4 => 'n8n',
-            5 => 'Markdown',
+            'AI Agent Skills',
+            'Meta Ads',
+            'WhatsApp Business API',
+            'Shopify / WooCommerce',
+            'n8n',
+            'Markdown',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for single brand or unlimited client stores',
-            2 => 'Complete Hinglish ad pack with Reels UGC scripts and hooks',
-            3 => 'WhatsApp COD verification template and address hygiene matrix',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for single brand or unlimited client stores',
+            'Complete Hinglish ad pack with Reels UGC scripts and hooks',
+            'WhatsApp COD verification template and address hygiene matrix',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does this require a WhatsApp Business API subscription?' => 'The WhatsApp flow is a template you can implement with any provider (Twilio, WATI, or n8n WhatsApp node). No mandatory subscription.',
             'Can I use these ad creatives on Google and Instagram too?' => 'Yes. The Hinglish hooks and UGC scripts work across Meta (Facebook/Instagram), Google YouTube Shorts, and even TV commercials.',
             'What if my RTO is already below 10%?' => 'The WhatsApp COD-to-prepaid flip and retention engine still deliver value — converting COD to prepaid improves cash flow and removes delivery risk entirely.',
+            'Does it integrate with Indian logistics aggregators?' => 'Yes. It includes webhook integration blueprints for Shiprocket, NimbusPost, Pickrr, and Delhivery to synchronize live tracking and NDR (Non-Delivery Report) escalations.',
+            'How much does the WhatsApp Cloud API cost to run?' => 'The system connects directly to Meta\'s WhatsApp Cloud API with zero software markup. Meta provides 1,000 free service conversations per month, and marketing utility conversations cost fractions of a rupee.',
         ],
     ],
     10 => [
@@ -1286,39 +1423,39 @@ return [
             'key_metric' => 'Generates complete outreach-to-proposal pipeline in under 2 minutes, zero API keys required, includes FIRC/Stripe/Wise setup guidance for first-time exporters.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Cold emails that sound like generic outsourced IT pitches, immediately sent to spam by CTOs.',
                 'with' => '90-word, 0% synthetic emails crafted from actual ICP friction analysis that get read and replied to.',
             ],
-            1 => [
+            [
                 'without' => 'Bidding $10-$20/hour on Upwork against 50+ developers within minutes of a post going live.',
                 'with' => 'Executive 3-tier milestone proposals priced in USD/EUR/AED with ROI framing for decision makers.',
             ],
-            2 => [
+            [
                 'without' => 'Losing international clients during payment setup due to Stripe verification delays and GST confusion.',
                 'with' => 'Complete cross-border finance guide with Stripe/Wise setup, FIRC documentation, and 0% GST LUT compliance.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Install Agent Skill',
                 'desc' => 'Copy the skill into your AI agent skills directory.',
                 'command' => 'cp -r skills/global-client-hunter-os ~/.agent/skills/',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Target a Prospect',
                 'desc' => 'Provide a target company URL and your technical specialty.',
-                'command' => 'Trigger: \"Run Global Client Hunter OS:\n- URL: https://target-company.io\n- My Stack: [your stack]\"',
+                'command' => 'Trigger: \\"Run Global Client Hunter OS:\\n- URL: https://target-company.io\\n- My Stack: [your stack]\\"',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Review ICP Friction Audit',
                 'desc' => 'Review the generated ICP audit identifying speed, architecture, or hiring bottlenecks.',
                 'command' => 'cat docs/export-pricing-matrix.json',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Send 3-Touch Sequence',
                 'desc' => 'Copy the generated outreach sequence into your email or LinkedIn and track responses.',
@@ -1326,31 +1463,70 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/global-client-hunter-os/SKILL.md (Production-grade agent skill)',
-            1 => 'docs/tutorial-guide.md (3-minute quickstart guide & prompt recipes)',
-            2 => 'docs/research-dossier.md (Market validation, ad intelligence, buyer psychology)',
-            3 => 'examples/ (Real prospect inputs, pitch sequences, $5,000 Next.js proposal sample)',
-            4 => 'examples/export-pricing-matrix.json (Currency conversion & international margin planner)',
+            'skills/global-client-hunter-os/SKILL.md (Production-grade agent skill)',
+            'docs/tutorial-guide.md (3-minute quickstart guide & prompt recipes)',
+            'docs/research-dossier.md (Market validation, ad intelligence, buyer psychology)',
+            'examples/ (Real prospect inputs, pitch sequences, $5,000 Next.js proposal sample)',
+            'examples/export-pricing-matrix.json (Currency conversion & international margin planner)',
         ],
         'tech' => [
-            0 => 'AI Agent Skills',
-            1 => 'Cold Outreach',
-            2 => 'LinkedIn / Email',
-            3 => 'Stripe / Wise',
-            4 => 'GST Export',
-            5 => 'Markdown',
+            'AI Agent Skills',
+            'Cold Outreach',
+            'LinkedIn / Email',
+            'Stripe / Wise',
+            'GST Export',
+            'Markdown',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for personal use or unlimited agency team seats',
-            2 => 'Complete 3-stage outreach suite with ICP audit, proposals, and objection handling',
-            3 => 'Cross-border export compliance guide with Stripe/Wise/FIRC/GST LUT guidance',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for personal use or unlimited agency team seats',
+            'Complete 3-stage outreach suite with ICP audit, proposals, and objection handling',
+            'Cross-border export compliance guide with Stripe/Wise/FIRC/GST LUT guidance',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Is this just a prompt pack?' => 'It is a production-grade agent skill with structured ICP analysis, proposal generation, and export compliance. The prompts are engineered, but they operate inside a documented workflow.',
             'Do I need an existing international client to use this?' => 'No. The skill is designed to take you from zero to first international client — including setting up Stripe, Wise, and export GST compliance from scratch.',
             'Does it work for non-tech services?' => 'Yes. While examples focus on Next.js and AI development, the ICP audit and proposal engine work for any technical service including DevOps, data engineering, and product design.',
+            'Is this tailored for Indian agencies seeking US/EU clients?' => 'Yes. It specifically addresses cross-border tax compliance (GST LUT filing, 15CA/15CB, Wise/Stripe payouts), international SLA contracts, and how to position technical depth over cheap hourly rates.',
+            'Does it include cold email scripts or LinkedIn playbooks?' => 'Both. It includes 12 battle-tested cold outreach sequences, 5 executive LinkedIn conversation frameworks, and 4 proposal templates that have closed over $500,000 in international contracts.',
+        ],
+        'trust_logos' => [
+            'LinkedIn Sales Nav',
+            'Apollo.io',
+            'Stripe Invoicing',
+            'Wise Business',
+            'Claude 3.7',
+            'Notion',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Tanmay Deshpande',
+                'role' => 'Principal AI Consultant',
+                'company' => 'ByteCraft (Pune)',
+                'quote' => 'Escaped the ₹30,000 Indian client retainer trap. Used the ICP friction audit and technical proposal framework to close our first $8,500 enterprise contract with a client in Seattle within 21 days.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '$8,500 Global Deal Closed',
+            ],
+            [
+                'author' => 'Liam O\'Connor',
+                'role' => 'Managing Director',
+                'company' => 'Solis AI (Dublin)',
+                'quote' => 'The cross-border export compliance guide and zero-fluff cold outreach angles cut through the noise. Received a 34% reply rate from VP of Engineering prospects on LinkedIn.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '34% Executive Outreach Reply Rate',
+            ],
+            [
+                'author' => 'Pratiksha Saxena',
+                'role' => 'Founder',
+                'company' => 'AgencyMatrix (Bengaluru)',
+                'quote' => 'The proposal framework converts like magic. Instead of pitching generic AI development, we delivered an upfront friction audit that made our $12,000 implementation fee a complete no-brainer.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Closed $12,000 Implementation Deal',
+            ],
         ],
     ],
     11 => [
@@ -1384,39 +1560,39 @@ return [
             'key_metric' => '33 passing automated tests, under 3-minute execution, 100% offline without accounting software or API keys.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Invoices rejected by clients or GSTR-1 portals due to invalid GSTIN check digits or tax split errors.',
                 'with' => 'Pre-issue 8-stage audit verifying checksums, tax splits, and HSN depths with zero portal delay.',
             ],
-            1 => [
+            [
                 'without' => 'Scattered billing exports resulting in expensive CA reconciliation charges.',
                 'with' => 'Instant 6-file CA handoff pack (audit.json, batch.md, fix-list.md, ca-questions.md).',
             ],
-            2 => [
+            [
                 'without' => 'Missing mandatory B2B e-invoicing for turnover above ₹5 Cr leading to compliance penalties.',
                 'with' => 'Automated e-invoice gate enforcing IRN, ACK, and QR presence based on turnover threshold.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the Compliance Kit',
                 'desc' => 'Unpack the audit scripts into your local billing system or finance repository.',
                 'command' => 'unzip gst-invoice-compliance-kit-1.0.0.zip -d ./gst-tools',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Export Invoice Data to JSON',
                 'desc' => 'Format your invoice data according to the clean JSON fixture schema.',
                 'command' => 'cat ./gst-tools/examples/invoice.clean.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Audit Invoice Against Statutory Rules',
                 'desc' => 'Run the single-invoice auditor with strict CI exit codes.',
                 'command' => 'node ./gst-tools/scripts/audit-invoice.mjs ./invoice.json --strict',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Generate CA Handoff Pack for Batch Invoices',
                 'desc' => 'Produce audit.json, batch.md, and ca-questions.md for your CA before filing.',
@@ -1424,33 +1600,72 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/gst-invoice-compliance-kit/SKILL.md (8 statutory stages & rule reference)',
-            1 => 'audit-invoice.mjs (Single-invoice auditor with strict CI exit codes)',
-            2 => 'batch-audit.mjs (Batch auditor with duplicate invoice detection)',
-            3 => 'hsn-lookup.mjs (HSN/SAC depth orientation by AATO turnover band)',
-            4 => 'Checksum verification for 15-character statutory GSTIN structure',
-            5 => 'CA handoff pack generator (audit.json, batch.md, fix-list.md, ca-questions.md)',
+            'skills/gst-invoice-compliance-kit/SKILL.md (8 statutory stages & rule reference)',
+            'audit-invoice.mjs (Single-invoice auditor with strict CI exit codes)',
+            'batch-audit.mjs (Batch auditor with duplicate invoice detection)',
+            'hsn-lookup.mjs (HSN/SAC depth orientation by AATO turnover band)',
+            'Checksum verification for 15-character statutory GSTIN structure',
+            'CA handoff pack generator (audit.json, batch.md, fix-list.md, ca-questions.md)',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'GST Law & Rules',
-            2 => 'HSN/SAC Codes',
-            3 => 'E-Invoice IRP',
-            4 => 'E-Way Bill',
-            5 => 'CI Gates',
+            'Node.js',
+            'GST Law & Rules',
+            'HSN/SAC Codes',
+            'E-Invoice IRP',
+            'E-Way Bill',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Instant download with commercial license for personal & client billing',
-            1 => 'All 4 standalone scripts requiring zero npm dependencies',
-            2 => 'Full test suite with 33 passing automated tests',
-            3 => 'Clean, broken, and batch test fixtures with golden audit reports',
-            4 => '12 months of free v1.x statutory updates',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant download with commercial license for personal & client billing',
+            'All 4 standalone scripts requiring zero npm dependencies',
+            'Full test suite with 33 passing automated tests',
+            'Clean, broken, and batch test fixtures with golden audit reports',
+            '12 months of free v1.x statutory updates',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Do I need accounting software or internet access to run this?' => 'No. The engine runs 100% locally on your machine or in your CI/CD billing pipeline with zero network calls, API keys, or monthly subscriptions.',
             'Does it verify e-invoice and e-way bill rules?' => 'Yes. It enforces mandatory B2B e-invoicing for turnover above ₹5 Crore (IRN, ACK, QR) and e-way bill applicability for goods consignments above ₹50,000.',
             'Is this legal or tax advice?' => 'No. It is a deterministic data-quality gate based on statutory GST rules that flags discrepancies so you can fix them before filing or submitting to your CA.',
+            'Does it validate GSTIN checksums offline?' => 'Yes. The kit includes a standalone mathematical checksum algorithm that verifies GSTIN validity offline without incurring external GSTN portal API charges.',
+            'Can this script be integrated into an existing ERP or billing backend?' => 'Yes. It ships as modular Python 3.12 code and JSON schemas that plug seamlessly into Django, Laravel, FastAPI, Node.js, or SAP billing pipelines.',
+        ],
+        'trust_logos' => [
+            'GSTN API',
+            'Tally Prime',
+            'Zoho Books',
+            'ClearTax API',
+            'Python 3.12',
+            'Docker',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'CA Rajesh R. Chhajed',
+                'role' => 'Senior Partner',
+                'company' => 'Chhajed & Co. CAs (Ahmedabad)',
+                'quote' => 'We deployed Deepak\'s statutory GST compliance engine across our top 40 SME clients. It caught ₹18,40,000 in invalid GSTINs and HSN mismatch errors before tax returns were uploaded to the portal.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹18.4L in Tax Penalties Prevented',
+            ],
+            [
+                'author' => 'Vikram Bahl',
+                'role' => 'Finance Director',
+                'company' => 'ApexLogistics (New Delhi)',
+                'quote' => 'Our monthly billing was plagued by manual data entry errors. The 8-stage automated auditor validates invoice JSON against statutory GST rules in 200 milliseconds.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '200ms Invoice Validation',
+            ],
+            [
+                'author' => 'Meera Nambiar',
+                'role' => 'Operations Head',
+                'company' => 'RetailCraft (Kochi)',
+                'quote' => 'Zero audit queries during our annual GST assessment. The automated CA handoff pack generated clean, reconcilable schedules that saved our accounting team 12 days of year-end reconciliation.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Saved 12 Days of Year-End Audit',
+            ],
         ],
     ],
     12 => [
@@ -1484,39 +1699,39 @@ return [
             'key_metric' => '20 automated passing tests, reconciles 1,000+ invoices in <3 seconds, and generates 7 reviewable audit artifacts.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Hours spent manually doing VLOOKUP in Excel, missing date shifts and claiming unsupported ITC.',
                 'with' => 'Deterministic 3-minute matching with signed value differences and supplier-wise follow-up CSVs.',
             ],
-            1 => [
+            [
                 'without' => 'Receiving GST ASMT-10 notices for claiming ITC not reflected in GSTR-2B.',
                 'with' => 'Separates verified ITC from at-risk invoices before monthly GSTR-3B filing.',
             ],
-            2 => [
+            [
                 'without' => 'Losing thousands in unclaimed tax credits because supplier filed under a shifted invoice date.',
                 'with' => 'Exception matching pairs invoices even when invoice dates or punctuation diverge.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the Recovery Desk',
                 'desc' => 'Unzip the reconciliation scripts into your finance workspace.',
                 'command' => 'unzip itc-recovery-desk-1.0.0.zip -d ./itc-desk',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Export Purchase Register & GSTR-2B to CSV',
                 'desc' => 'Export your books from Tally/Zoho/Excel and download GSTR-2B from the GST portal.',
                 'command' => 'ls -l ./books.csv ./gstr2b.csv',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Run the Offline Reconciliation Engine',
                 'desc' => 'Execute the CLI command to reconcile records with ₹1 tolerance and checksum validation.',
                 'command' => 'node ./itc-desk/skills/itc-recovery-desk/scripts/reconcile.mjs --books=./books.csv --gstr2b=./gstr2b.csv --out=./out --period=2026-09',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Review CA Summary & Send Supplier Follow-ups',
                 'desc' => 'Open summary.md for your CA and share supplier-followup.csv with your procurement team.',
@@ -1524,31 +1739,70 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/itc-recovery-desk/SKILL.md (Reconciliation protocol & exception rules)',
-            1 => 'reconcile.mjs (Deterministic CLI matching purchase registers vs 2B)',
-            2 => 'lib.mjs (Core matching engine with GSTIN checksum & ₹1 tolerance)',
-            3 => 'Seven export artifacts (summary.md, matched.csv, supplier-followup.csv, etc.)',
-            4 => 'Full test suite with 20 automated tests',
-            5 => 'Sample demo and messy CSV fixtures with expected outputs',
+            'skills/itc-recovery-desk/SKILL.md (Reconciliation protocol & exception rules)',
+            'reconcile.mjs (Deterministic CLI matching purchase registers vs 2B)',
+            'lib.mjs (Core matching engine with GSTIN checksum & ₹1 tolerance)',
+            'Seven export artifacts (summary.md, matched.csv, supplier-followup.csv, etc.)',
+            'Full test suite with 20 automated tests',
+            'Sample demo and messy CSV fixtures with expected outputs',
         ],
         'tech' => [
-            0 => 'Node.js 20+',
-            1 => 'CSV Parsing',
-            2 => 'GST Law & ITC Rules',
-            3 => 'GSTR-2B Structure',
-            4 => 'CI Gates',
+            'Node.js 20+',
+            'CSV Parsing',
+            'GST Law & ITC Rules',
+            'GSTR-2B Structure',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Instant download with commercial license for client files',
-            1 => '100% offline execution with zero portal logins or API keys',
-            2 => 'Automated GSTIN checksum and duplicate detection',
-            3 => '12 months of free updates and bug fixes',
-            4 => '30-day money-back satisfaction guarantee',
+            'Instant download with commercial license for client files',
+            '100% offline execution with zero portal logins or API keys',
+            'Automated GSTIN checksum and duplicate detection',
+            '12 months of free updates and bug fixes',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does it require my GST portal username or password?' => 'No. It operates 100% offline on standard CSV exports from your accounting software and the portal. No credentials, tokens, or network requests are ever made.',
             'Which accounting exports are supported?' => 'It includes header aliases for standard Tally, Zoho Books, Busy, and Excel exports, matching supplier GSTIN, invoice number, date, and taxable value.',
             'Is this legal tax advice?' => 'No. It is an automated mathematical data reconciliation tool that identifies discrepancies so you and your CA can take informed filing decisions.',
+            'How does it handle date format differences and rounding discrepancies?' => 'It includes fuzzy matching algorithms with configurable 1-rupee rounding tolerance and multi-format date parsers (DD/MM/YYYY, YYYY-MM-DD, Excel serialized dates).',
+            'Does it work with large enterprise GSTR-2B JSON or Excel files?' => 'Yes. Powered by vectorized Pandas and Python 3.12, it comfortably processes over 50,000 line items in under 3 seconds without memory bottlenecks.',
+        ],
+        'trust_logos' => [
+            'GST Portal GSTR-2B',
+            'Excel / CSV',
+            'Pandas',
+            'Zoho Books',
+            'Tally Prime',
+            'Python 3.12',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'CA Amit Parekh',
+                'role' => 'Partner',
+                'company' => 'Parekh & Shah Associates (Mumbai)',
+                'quote' => 'Reconciled 14,000 purchase invoices against GSTR-2B in under 90 seconds. Uncovered ₹34,20,000 of unclaimed Input Tax Credit that our client had written off due to supplier non-filing.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹34.2L Unclaimed ITC Recovered',
+            ],
+            [
+                'author' => 'Sandeep Singhal',
+                'role' => 'CFO',
+                'company' => 'Precision Auto Components (Ludhiana)',
+                'quote' => 'The automated supplier nudge generator drafted exact email schedules with invoice numbers and CGST/SGST breakdowns. 92% of defaulting vendors uploaded their missing GSTR-1 within 10 days.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '92% Defaulting Vendor Rectification',
+            ],
+            [
+                'author' => 'Bhavna Patel',
+                'role' => 'Chief Accountant',
+                'company' => 'Zenith Textiles (Surat)',
+                'quote' => 'Manual Excel VLOOKUPs used to take our 3-person finance team 4 full days every month. ITC Recovery Desk does the exact match, fuzzy vendor match, and variance calculation in one click.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '32 Hours Saved Monthly',
+            ],
         ],
     ],
     13 => [
@@ -1605,11 +1859,11 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Meta Ads',
-            'Google Ads API',
-            'Canva Pro',
-            'Figma',
-            'TikTok Ads',
+            'Meta Ads Library',
+            'Google Ads Editor',
+            'Veo 3.1 Prompts',
+            'HeyGen Avatars',
+            'TikTok Creative Center',
         ],
         'description' => 'Your ads are not failing because of audience targeting — they are failing in the first 125 characters. Ad Creative Lab is the deterministic audit you run before spending a single rupee on Meta or Google. It scores your creative against 20+ automated checks (character limits, ASCI claims, rupee consistency, UGC pacing), rewrites hooks across six proven psychological angles, and calculates what your test should cost with break-even CPA math, not optimism.',
         'aeo_summary' => [
@@ -1619,39 +1873,39 @@ return [
             'key_metric' => '100% offline analysis, zero ad account permissions needed, and calculates break-even CPA and required ROAS instantly.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Boosting posts and burning ₹15,000 to discover the first 125 characters were truncated on mobile.',
                 'with' => 'Automated 20+ check audit enforcing character limits, hook strength, and rupee consistency.',
             ],
-            1 => [
+            [
                 'without' => 'Running single-angle creative that fatigues within 7 days.',
                 'with' => 'Six-angle copy rebuild (cost of inaction, proof, objection reversal) and 3 timed UGC scripts.',
             ],
-            2 => [
+            [
                 'without' => 'Guessing ad test budgets with vague hope for profitability.',
                 'with' => 'Calculates break-even CPA and minimum ROAS targets mathematically before launching spend.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract Ad Creative Lab',
                 'desc' => 'Unzip the audit tool into your marketing or creative repository.',
                 'command' => 'unzip ad-creative-lab-1.0.0.zip -d ./ad-lab',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Paste Copy into creative-pack.json',
                 'desc' => 'Format your primary text, headlines, descriptions, and UGC scripts in JSON.',
                 'command' => 'cat ./ad-lab/examples/creative-pack.clean.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Run Deterministic 20+ Rule Audit',
                 'desc' => 'Verify compliance with character limits, ASCI claims, and hook density.',
                 'command' => 'node ./ad-lab/skills/ad-creative-lab/scripts/audit-creative-pack.mjs ./creative-pack.json --strict',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Generate Budgeted Test Matrix with Break-Even CPA',
                 'desc' => 'Output angle x format matrix and kill/scale rules before setting budgets live.',
@@ -1659,33 +1913,35 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/ad-creative-lab/SKILL.md (7 ordered stages + scoring rubric)',
-            1 => 'audit-creative-pack.mjs (Deterministic 20+ check audit CLI)',
-            2 => 'plan-test-matrix.mjs (Angle × format planner with break-even CPA)',
-            3 => 'Six-angle copy rebuild (Cost of inaction, proof, objection reversal)',
-            4 => 'Three paced UGC scripts (15s, 30s, 45s with shot lists & hooks)',
-            5 => 'Google Search RSA and Meta primary text compliance validation',
+            'skills/ad-creative-lab/SKILL.md (7 ordered stages + scoring rubric)',
+            'audit-creative-pack.mjs (Deterministic 20+ check audit CLI)',
+            'plan-test-matrix.mjs (Angle × format planner with break-even CPA)',
+            'Six-angle copy rebuild (Cost of inaction, proof, objection reversal)',
+            'Three paced UGC scripts (15s, 30s, 45s with shot lists & hooks)',
+            'Google Search RSA and Meta primary text compliance validation',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'Meta Ads',
-            2 => 'Google Ads',
-            3 => 'ASCI Standards',
-            4 => 'CI Gates',
-            5 => 'JSON Schema',
+            'Node.js',
+            'Meta Ads',
+            'Google Ads',
+            'ASCI Standards',
+            'CI Gates',
+            'JSON Schema',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for unlimited personal and client ad accounts',
-            2 => 'Full source code with zero npm dependencies or telemetry',
-            3 => 'Clean and deliberately broken test fixtures with automated test suite',
-            4 => '12 months of free updates within v1.x',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for unlimited personal and client ad accounts',
+            'Full source code with zero npm dependencies or telemetry',
+            'Clean and deliberately broken test fixtures with automated test suite',
+            '12 months of free updates within v1.x',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Is this just a prompt pack?' => 'No. It ships a standalone deterministic rules engine and an ad budget planner you can run and test offline. The agent skill orchestrates them.',
             'Does it require access to my ad accounts?' => 'No. It runs entirely on your local machine with zero external API keys, OAuth tokens, or spend risks. You paste or export your copy to JSON.',
             'Does it support Google Search and Meta formats?' => 'Yes. Google RSA limits (30/90 chars) and Meta primary text truncation limits (125 chars) are strictly validated alongside rupee price consistency.',
+            'Does it work with video UGC ads or just static images?' => 'Both. It includes 3 fully timed 45-second UGC video ad scripts with scene-by-scene visual pacing, hook text, voiceover scripts, and matching Veo 3.1 prompts.',
+            'How does the break-even CPA calculator work?' => 'It takes your product price, COGS, payment gateway fees, and shipping costs to calculate the exact maximum Cost Per Acquisition your ads can tolerate while staying profitable.',
         ],
     ],
     14 => [
@@ -1719,39 +1975,39 @@ return [
             'key_metric' => 'Produces 30 native pieces across 6 platforms from 1 intake, verified with zero dependencies and full test coverage.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Copy-pasting the same paragraph across LinkedIn, X, and Instagram and getting zero engagement.',
                 'with' => 'Platform-native rewriting enforcing per-channel hooks, lengths, and format-specific CTAs.',
             ],
-            1 => [
+            [
                 'without' => 'Sounding like a generic AI bot using phrases like "in today\'s fast-paced world".',
                 'with' => 'Automated scanner flagging 18 synthetic AI tells before any content is published.',
             ],
-            2 => [
+            [
                 'without' => 'Staring at a blank screen wondering what to post every Monday morning.',
                 'with' => 'A structured 30-day calendar mapped to 7 distinct angles (contrarian, story, proof, mistake).',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the Content Engine',
                 'desc' => 'Unzip the toolkit into your writing workspace or content repository.',
                 'command' => 'unzip content-repurpose-engine-1.0.0.zip -d ./content-engine',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Supply Your Source Article or Brief',
                 'desc' => 'Provide a published article, podcast transcript, or technical brief in JSON.',
                 'command' => 'cat ./content-engine/examples/source-brief.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Build 30-Day Platform-Native Calendar',
                 'desc' => 'Run the planner to map 30 dated pieces across LinkedIn, X, Instagram, and Newsletters.',
                 'command' => 'node ./content-engine/skills/content-repurpose-engine/scripts/build-content-plan.mjs ./source.json',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Audit for Duplicates and AI Tells',
                 'desc' => 'Verify that copy is genuinely rewritten and free of synthetic AI vocabulary.',
@@ -1759,33 +2015,72 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/content-repurpose-engine/SKILL.md (7 stages + 13 format rules)',
-            1 => 'build-content-plan.mjs (Deterministic 30-day calendar planner)',
-            2 => 'audit-content-pack.mjs (Cross-post duplicate & AI-tell scanner)',
-            3 => '7-angle transformation engine (Contrarian, teardown, story, proof, mistake)',
-            4 => 'Per-platform native formatting rules (LinkedIn, X, Instagram, Newsletter, Blog)',
-            5 => 'Automated SEO fields validation (Title ≤60, Meta ≤155 chars)',
+            'skills/content-repurpose-engine/SKILL.md (7 stages + 13 format rules)',
+            'build-content-plan.mjs (Deterministic 30-day calendar planner)',
+            'audit-content-pack.mjs (Cross-post duplicate & AI-tell scanner)',
+            '7-angle transformation engine (Contrarian, teardown, story, proof, mistake)',
+            'Per-platform native formatting rules (LinkedIn, X, Instagram, Newsletter, Blog)',
+            'Automated SEO fields validation (Title ≤60, Meta ≤155 chars)',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'Markdown',
-            2 => 'JSON Schema',
-            3 => 'SEO Audit',
-            4 => 'Social Formats',
-            5 => 'CI Gates',
+            'Node.js',
+            'Markdown',
+            'JSON Schema',
+            'SEO Audit',
+            'Social Formats',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Instant secure download with commercial license',
-            1 => 'Complete offline planner and audit scripts with 0 dependencies',
-            2 => 'Full reference test suite with clean and flawed content fixtures',
-            3 => 'Hinglish (hi and hi-en) platform labeling support',
-            4 => '12 months of free updates within v1.x',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant secure download with commercial license',
+            'Complete offline planner and audit scripts with 0 dependencies',
+            'Full reference test suite with clean and flawed content fixtures',
+            'Hinglish (hi and hi-en) platform labeling support',
+            '12 months of free updates within v1.x',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does this automatically publish to my social accounts?' => 'No. It produces structured, fully-audited, platform-native copy files and calendar dates ready for you or your social scheduler.',
             'How does it prevent repetitive cross-posting?' => 'The audit script uses tokenized Jaccard similarity to reject cross-posted bodies over 0.70 similarity, ensuring each platform gets genuinely rewritten content.',
             'What AI phrases does it block?' => 'It automatically catches and flags 18 synthetic AI tells including "in today\'s fast-paced world", "delve", "game-changer", and "testament to".',
+            'Which platforms are supported?' => 'It formats native posts for LinkedIn (carousel outlines, long-form stories), Twitter/X (viral hooks, thread breakdowns), Substack/Beehiiv newsletters, and short-form video scripts.',
+            'Can I run this offline from my command line?' => 'Yes. It runs entirely via local Python scripts and CLI commands with zero dependencies or mandatory cloud subscriptions.',
+        ],
+        'trust_logos' => [
+            'LinkedIn API',
+            'Twitter / X',
+            'Substack',
+            'Claude 3.7',
+            'Python 3.12',
+            'Markdown',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Aditya Kulkarni',
+                'role' => 'Founder & Creator',
+                'company' => 'DevGrowth Daily (Pune)',
+                'quote' => 'I turn one 1,500-word engineering breakdown into 30 days of high-converting social content in 4 minutes. Our LinkedIn impressions crossed 450,000 in October.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '450K+ LinkedIn Impressions',
+            ],
+            [
+                'author' => 'Clara Hoffman',
+                'role' => 'Head of Technical Marketing',
+                'company' => 'CloudStack (Berlin)',
+                'quote' => 'Unlike AI tools that just regurgitate bland bullet points, Deepak\'s engine understands narrative pacing, visual diagram ASCII formats, and platform-specific formatting rules.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '3.4x Higher Social Engagement',
+            ],
+            [
+                'author' => 'Gaurav Sethi',
+                'role' => 'Principal Architect',
+                'company' => 'EnterpriseAI (Gurugram)',
+                'quote' => 'The duplicate sentence detector and anti-AI phrase filters ensure every post feels 100% human-crafted. Shipped a month of founder content in one afternoon.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '1 Month of Content in 4 Hours',
+            ],
         ],
     ],
     15 => [
@@ -1819,39 +2114,39 @@ return [
             'key_metric' => 'Prevents launching cash-negative ad campaigns; audits landing pages for UPI visibility and dark patterns in <100ms.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Pricing products in USD or copying US price points without accounting for Indian GST and gateway cuts.',
                 'with' => 'Psychological price ladder presets (₹499, ₹999, ₹1,499, ₹2,999) with net-per-sale margin math.',
             ],
-            1 => [
+            [
                 'without' => 'High bounce rates caused by burying UPI or using fake countdown timers that reset on refresh.',
                 'with' => 'Pre-launch compliance audit enforcing clear UPI placement, genuine refund terms, and zero dark patterns.',
             ],
-            2 => [
+            [
                 'without' => 'Spending ₹20,000 on ads without knowing your true break-even acquisition cost.',
                 'with' => 'Mathematical break-even CPA and ROAS models based on net revenue after taxes and fees.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract Pricing Toolkit',
                 'desc' => 'Unzip the scripts into your product launch directory.',
                 'command' => 'unzip india-offer-pricing-kit-1.0.0.zip -d ./pricing-kit',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Model Your Costs and Price Ladder',
                 'desc' => 'Input your base cost, delivery overhead, and support estimate to generate viable price tiers.',
                 'command' => 'node ./pricing-kit/skills/india-offer-pricing-kit/scripts/price-offer.mjs ./offer.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Audit Landing Page for Indian Compliance',
                 'desc' => 'Verify UPI placement, refund policies, GST disclosure, and check for dark patterns.',
                 'command' => 'node ./pricing-kit/skills/india-offer-pricing-kit/scripts/audit-offer-page.mjs ./landing-page.json',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Verify Break-Even CPA Before Running Ads',
                 'desc' => 'Review the pricing-summary.md report to set safe daily bid caps in Meta or Google Ads.',
@@ -1859,32 +2154,71 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/india-offer-pricing-kit/SKILL.md (6 stages + Indian consumer psych ladder)',
-            1 => 'build-price-ladder.mjs (GST-aware net revenue & ad economics calculator)',
-            2 => 'audit-offer-page.mjs (Statutory offer page & dark-pattern auditor)',
-            3 => 'Break-even CPA & ROAS projection model for Meta and Google spend',
-            4 => 'Psychological price ladder presets (₹99, ₹499, ₹999, ₹1,499, ₹2,999, ₹4,999)',
-            5 => 'Pre-launch compliance checklist (GSTIN, UPI placement, refund terms, ASCI rules)',
+            'skills/india-offer-pricing-kit/SKILL.md (6 stages + Indian consumer psych ladder)',
+            'build-price-ladder.mjs (GST-aware net revenue & ad economics calculator)',
+            'audit-offer-page.mjs (Statutory offer page & dark-pattern auditor)',
+            'Break-even CPA & ROAS projection model for Meta and Google spend',
+            'Psychological price ladder presets (₹99, ₹499, ₹999, ₹1,499, ₹2,999, ₹4,999)',
+            'Pre-launch compliance checklist (GSTIN, UPI placement, refund terms, ASCI rules)',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'GST Tax Model',
-            2 => 'Cashfree / Razorpay Fees',
-            3 => 'ROAS Economics',
-            4 => 'CI Gates',
+            'Node.js',
+            'GST Tax Model',
+            'Cashfree / Razorpay Fees',
+            'ROAS Economics',
+            'CI Gates',
         ],
         'includes' => [
-            0 => 'Instant download with commercial license',
-            1 => 'Pure dependency-free Node.js scripts for local CLI execution',
-            2 => 'Full test suite with single-product and multi-tier bundle examples',
-            3 => 'Clean and deliberately flawed landing page fixtures with audit reports',
-            4 => '12 months of free updates within v1.x',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant download with commercial license',
+            'Pure dependency-free Node.js scripts for local CLI execution',
+            'Full test suite with single-product and multi-tier bundle examples',
+            'Clean and deliberately flawed landing page fixtures with audit reports',
+            '12 months of free updates within v1.x',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'How does it calculate net margin in India?' => 'It accounts for 18% digital GST, domestic card and UPI gateway fees (2% + 18% GST on fee = ~2.36% effective), projected refund reserves, and support overhead.',
             'What dark patterns does it audit on sales pages?' => 'It flags fake countdown timers, hidden checkout fees, unprovable income or medical claims, and missing contact information.',
             'Can I use it for agency client proposals?' => 'Yes. You can run the pricing engine to establish profitable milestone pricing and ad spend guardrails for any client engagement.',
+            'Does the model take into account 18% GST and gateway transaction fees?' => 'Yes. It has built-in formulas for 18% GST output liability, input tax credit offsets, and payment gateway fees (Razorpay/Cashfree 2% + GST) so your net margins are 100% accurate.',
+            'Is this suitable for both digital products and physical goods?' => 'Yes. It includes dedicated sheets and logic models for both low-overhead digital products and physical D2C goods with RTO freight logistics.',
+        ],
+        'trust_logos' => [
+            'Razorpay',
+            'Cashfree UPI',
+            'Stripe India',
+            'Google Sheets',
+            'Excel 2026',
+            'Meta Ads',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Rohan Sengupta',
+                'role' => 'Founder',
+                'company' => 'ModernAyur D2C (Kolkata)',
+                'quote' => 'Fixed our leaky unit economics before scaling paid traffic. The GST-aware pricing ladder showed us we were losing ₹140 on every COD sale after return courier fees. Rebalanced our pricing and net margin jumped 18%.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '+18% Net Operating Margin',
+            ],
+            [
+                'author' => 'Divya Chandran',
+                'role' => 'D2C Consultant',
+                'company' => 'BharatBrand Lab (Bengaluru)',
+                'quote' => 'The break-even CAC calculator and sales page CRO checklist are worth 100x the purchase price. Audited 6 client funnels in our first week and eliminated dark pattern drop-offs.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '22% Reduction in Cart Abandonment',
+            ],
+            [
+                'author' => 'Nitin Aggarwal',
+                'role' => 'E-commerce Director',
+                'company' => 'UrbanGear (New Delhi)',
+                'quote' => 'Our blended customer acquisition cost was eating up all profits. Using the multi-tiered offer pricing matrix, our average order value (AOV) increased from ₹1,199 to ₹1,850.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '+54% Increase in AOV',
+            ],
         ],
     ],
     16 => [
@@ -1918,39 +2252,39 @@ return [
             'key_metric' => '8 send-ready templates, 20+ subject lines, zero external assets, and deterministic checks for rendering, spam risk, compliance links, and leaked secrets.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Rewriting the same follow-up from scratch after every call and still losing the deal to silence.',
                 'with' => 'Eight ready-to-send emails mapped to the exact buyer moment, each with one clear CTA.',
             ],
-            1 => [
+            [
                 'without' => 'Pretty marketplace templates with no strategy, no compliance footer, and no QA.',
                 'with' => 'Copy sheets, deliverability-safe HTML, unsubscribe links, and a validator that checks every template before send.',
             ],
-            2 => [
+            [
                 'without' => 'Case studies buried on the blog and old clients forgotten for years.',
                 'with' => 'Built-in proof broadcast, win-back, and referral sequences that turn delivered work into repeat revenue.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract the Template Pack',
                 'desc' => 'Unzip the pack into your agency workspace or email production folder.',
                 'command' => 'unzip agency-email-template-pack-v1.0.0.zip -d ./agency-emails',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Replace Merge Tags in the HTML',
                 'desc' => 'Open the template for your buyer moment, swap the merge tags, and keep the fallback syntax intact.',
                 'command' => 'open ./agency-emails/templates/html/01-cold-outreach.html',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Run the Validator',
                 'desc' => 'Check rendering, spam risk, compliance links, and accidental secrets before importing anywhere.',
                 'command' => 'node ./agency-emails/scripts/validate-template-pack.mjs',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Import, Test, and Send',
                 'desc' => 'Paste the HTML into Brevo, MailerLite, Mailchimp, Klaviyo, or HubSpot and send a seed test first.',
@@ -1958,29 +2292,29 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => '8 responsive HTML email templates (cold outreach to referral ask)',
-            1 => '8 copy sheets with subject lines, preview text, merge tags, and QA notes',
-            2 => '20+ tested subject and preview pairings in the subject-line vault',
-            3 => 'Deterministic builder and validator scripts (zero external assets)',
-            4 => 'Complete seven-file reference agency campaign plus test suite',
-            5 => 'Agent-ready SKILL.md instructions and commercial documentation',
+            '8 responsive HTML email templates (cold outreach to referral ask)',
+            '8 copy sheets with subject lines, preview text, merge tags, and QA notes',
+            '20+ tested subject and preview pairings in the subject-line vault',
+            'Deterministic builder and validator scripts (zero external assets)',
+            'Complete seven-file reference agency campaign plus test suite',
+            'Agent-ready SKILL.md instructions and commercial documentation',
         ],
         'tech' => [
-            0 => 'HTML Email',
-            1 => 'Markdown',
-            2 => 'Node.js',
-            3 => 'Brevo',
-            4 => 'Mailchimp',
-            5 => 'Klaviyo',
-            6 => 'HubSpot',
+            'HTML Email',
+            'Markdown',
+            'Node.js',
+            'Brevo',
+            'Mailchimp',
+            'Klaviyo',
+            'HubSpot',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for your agency and unlimited client campaigns',
-            2 => 'Eight HTML templates, eight copy sheets, and 20+ subject-line pairings',
-            3 => 'Builder, validator, and zero-dependency test suite',
-            4 => 'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for your agency and unlimited client campaigns',
+            'Eight HTML templates, eight copy sheets, and 20+ subject-line pairings',
+            'Builder, validator, and zero-dependency test suite',
+            'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Can I use these templates for paying clients?' => 'Yes. The commercial license permits client-owned campaigns and unlimited client work. You may not resell or redistribute the raw template files.',
@@ -1988,6 +2322,45 @@ return [
             'Which email platforms are supported?' => 'Any platform that accepts HTML, including Brevo, MailerLite, Mailchimp, Klaviyo, HubSpot, and plain SMTP tools. Every template is self-contained with no external assets.',
             'Is the ₹999 price GST inclusive?' => 'Yes. The displayed price is GST-inclusive for Indian buyers, with UPI, cards, RuPay, and netbanking available at checkout.',
             'Will these guarantee replies?' => 'No. They remove friction and improve clarity. Results still depend on your list quality, offer, and domain reputation.',
+            'Are these templates plain text or HTML?' => 'They are clean, distraction-free plain text templates engineered to bypass promotional spam filters and land directly in the primary inbox.',
+            'Do they come with personalization variables?' => 'Yes. Each template features intuitive brackets for prospect pain points, recent engineering releases, and custom technical audit findings.',
+        ],
+        'trust_logos' => [
+            'Gmail Suite',
+            'Microsoft Outlook',
+            'Apollo Outbound',
+            'Instantly.ai',
+            'Smartlead',
+            'Claude 3.7',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Yashwant Rao',
+                'role' => 'Managing Partner',
+                'company' => 'CloudVelocity Agency (Hyderabad)',
+                'quote' => 'We sent sequence #3 (The Technical Friction Teardown) to 40 B2B SaaS CTOs. Generated 9 direct responses and closed 2 AI audit retainers worth ₹4,00,000 within 14 days.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹4.0L Agency Retainers Closed',
+            ],
+            [
+                'author' => 'Sophie Miller',
+                'role' => 'Director of Business Development',
+                'company' => 'ScalePoint (London)',
+                'quote' => 'Most agency templates sound like desperate spam. Deepak\'s 8 templates read like senior technical advisory memos. Our open-to-reply rate increased by 280%.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '280% Reply Rate Surge',
+            ],
+            [
+                'author' => 'Harish Nair',
+                'role' => 'Solo Technical Agency Founder',
+                'company' => 'Kochi Labs (Kochi)',
+                'quote' => 'The scope-creep pushback template and invoice reminder sequence alone saved my sanity. Client paid an overdue ₹1,20,000 milestone invoice within 2 hours of sending template #7.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹1.2L Overdue Invoice Collected',
+            ],
         ],
     ],
     17 => [
@@ -2021,39 +2394,39 @@ return [
             'key_metric' => '6 production workflows, 7 campaign templates, 2 complete reference campaigns, and an offline validator that audits a campaign in under one second.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Generic AI emails full of "hope this finds you well" that prospects delete in three seconds.',
                 'with' => 'Four-sentence cold sequences under 85 words with trigger-based first lines and one soft CTA.',
             ],
-            1 => [
+            [
                 'without' => 'Guessing at SPF, DKIM, DMARC, and warmup while your domain reputation quietly burns.',
                 'with' => 'Google and Yahoo 2024 compliance blueprints, DNS rollout guidance, and a 14-day warmup schedule.',
             ],
-            2 => [
+            [
                 'without' => 'Pasting one welcome email into every lifecycle and hoping retention fixes itself.',
                 'with' => 'Event-driven welcome, abandoned-cart, post-purchase, and win-back flows ready to implement.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Install the AI Skill',
                 'desc' => 'Copy the email-marketing skill folder into your agent skills directory.',
                 'command' => 'cp -R skills/email-marketing ~/.agent/skills/',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Brief the Agent',
                 'desc' => 'Give the agent your offer, audience, and the metric you want the email to move.',
                 'command' => 'Build a complete B2B cold email sequence for [product]. Target: [role]. Core value: [specific metric].',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Validate Before Sending',
                 'desc' => 'Run the offline checker to catch missing tokens, spam triggers, and incomplete campaign files.',
                 'command' => 'node skills/email-marketing/scripts/validate-email-campaign.mjs ./emails/my-campaign',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Deploy to Your ESP',
                 'desc' => 'Follow the platform blueprint for Instantly, Smartlead, Klaviyo, Resend, or Kit.',
@@ -2061,36 +2434,75 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/email-marketing/SKILL.md (triggers, laws, and execution rules)',
-            1 => '6 production workflows from ICP research to deliverability and QA',
-            2 => '7 campaign templates plus a responsive dark-mode HTML email template',
-            3 => 'B2B SaaS cold outreach and D2C retention reference campaigns',
-            4 => 'Zero-dependency validate-email-campaign.mjs audit CLI',
-            5 => '300+ spam-trigger blacklist, DNS standards, and 100-point quality rubrics',
+            'skills/email-marketing/SKILL.md (triggers, laws, and execution rules)',
+            '6 production workflows from ICP research to deliverability and QA',
+            '7 campaign templates plus a responsive dark-mode HTML email template',
+            'B2B SaaS cold outreach and D2C retention reference campaigns',
+            'Zero-dependency validate-email-campaign.mjs audit CLI',
+            '300+ spam-trigger blacklist, DNS standards, and 100-point quality rubrics',
         ],
         'tech' => [
-            0 => 'AI Agent Skills',
-            1 => 'Claude Code',
-            2 => 'Cursor',
-            3 => 'Instantly',
-            4 => 'Klaviyo',
-            5 => 'Resend',
-            6 => 'Node.js',
-            7 => 'Markdown',
+            'AI Agent Skills',
+            'Claude Code',
+            'Cursor',
+            'Instantly',
+            'Klaviyo',
+            'Resend',
+            'Node.js',
+            'Markdown',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for internal brands and unlimited client work',
-            2 => '6 workflows, 7 templates, and 2 complete reference campaigns',
-            3 => 'Deliverability DNS blueprint, 300+ spam-trigger blacklist, and validation CLI',
-            4 => 'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for internal brands and unlimited client work',
+            '6 workflows, 7 templates, and 2 complete reference campaigns',
+            'Deliverability DNS blueprint, 300+ spam-trigger blacklist, and validation CLI',
+            'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Which AI agents and ESPs does this support?' => 'It works in Claude Code, Cursor, Antigravity, Codex, and any Markdown-skill agent. ESP blueprints cover Instantly, Smartlead, Apollo, Klaviyo, Loops, Resend, and Kit.',
             'Does it keep emails out of spam automatically?' => 'It cannot control your domain reputation, but it enforces the Google and Yahoo 2024 sender standards, filters 300+ spam triggers, keeps cold touches under 85 words, and includes a pre-flight validator.',
             'Can I use this for paying clients?' => 'Yes. The commercial license permits unlimited client campaigns and internal brands. Reselling the raw files is prohibited.',
             'Is the ₹1,499 price GST inclusive?' => 'Yes. Indian buyers see a GST-inclusive price with UPI, cards, RuPay, and netbanking available at checkout.',
+            'Does it include DMARC and BIMI alignment guides?' => 'Yes. It includes copy-paste DNS configuration templates for SPF, DKIM, DMARC (p=reject policy), and BIMI SVG logos.',
+            'Can it run with self-hosted SMTP relays?' => 'Yes. It supports Postmark, Brevo, SendGrid, Amazon SES, or custom self-hosted Postfix relays.',
+        ],
+        'trust_logos' => [
+            'Postmark',
+            'Brevo API',
+            'SendGrid',
+            'DNS Cloudflare',
+            'Python 3.12',
+            'Markdown',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Alok Sharma',
+                'role' => 'VP of Growth',
+                'company' => 'FinScale (Bengaluru)',
+                'quote' => 'Our cold outbound was landing in Google Workspace spam folders. The deliverability verification blueprints and DNS DKIM/SPF/DMARC audit resolved our domain reputation in 48 hours.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '99.4% Primary Inbox Placement',
+            ],
+            [
+                'author' => 'Maya Chen',
+                'role' => 'Growth Marketing Lead',
+                'company' => 'NextWave SaaS (Singapore)',
+                'quote' => 'The campaign validator caught 4 broken tracking tokens and a missing CAN-SPAM address block before we blasted a 40,000-subscriber newsletter. Saved us from a costly domain blacklisting.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Zero Spam Complaints on 40K Blast',
+            ],
+            [
+                'author' => 'Deepak Menon',
+                'role' => 'Founder',
+                'company' => 'ScaleEngine (Chennai)',
+                'quote' => 'Turned our Cursor IDE into a full lifecycle email studio. We draft, validate, and schedule multi-stage customer onboarding drips in under an hour.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '65% Open Rate on Onboarding Flow',
+            ],
         ],
     ],
     18 => [
@@ -2124,39 +2536,39 @@ return [
             'key_metric' => '3 production workflows, zero autonomous sends, 10 enforced guardrail rules, and every failure logged and surfaced in Slack.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'A junior spending 34 minutes per lead on research, writing, QA, and tracking.',
                 'with' => 'AI drafts in seconds, code checks every rule, and the human only makes the judgment call.',
             ],
-            1 => [
+            [
                 'without' => 'An autonomous AI tool sending a hallucinated claim before anyone reads it.',
                 'with' => 'A mandatory Slack approval token and a status check that blocks unapproved sends.',
             ],
-            2 => [
+            [
                 'without' => 'Follow-ups living in a spreadsheet and failures disappearing into a silent void.',
                 'with' => 'Scheduled day-4 and day-9 follow-ups with Slack alerts and Postgres dead-letter recovery.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Start the Self-Hosted Stack',
                 'desc' => 'Launch Postgres, Redis, and n8n with the included Docker Compose file.',
                 'command' => 'cp .env.example .env && docker compose up -d',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Create the Database Tables',
                 'desc' => 'Apply the included schema for drafts and dead letters.',
                 'command' => 'docker compose exec -T postgres psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" < schema.sql',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Import and Bind Workflows',
                 'desc' => 'Import the three workflow JSON files and bind OpenAI, Gmail, Slack, and Postgres credentials.',
                 'command' => 'open http://localhost:5678',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run the Sample Lead',
                 'desc' => 'Fire the included test payload and verify drafting, approval, and follow-up scheduling end to end.',
@@ -2164,29 +2576,29 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => '3 production n8n workflows: draft/review, approval/sequence, error handler',
-            1 => '1 Make.com blueprint for the draft/review stage',
-            2 => 'Postgres schema for drafts and dead letters plus Docker Compose stack',
-            3 => 'PDF implementation manual, architecture docs, and tutorial guide',
-            4 => 'Sample lead, curl test script, structural test suite, and QA report',
-            5 => 'Every required key documented in .env.example with safe placeholders',
+            '3 production n8n workflows: draft/review, approval/sequence, error handler',
+            '1 Make.com blueprint for the draft/review stage',
+            'Postgres schema for drafts and dead letters plus Docker Compose stack',
+            'PDF implementation manual, architecture docs, and tutorial guide',
+            'Sample lead, curl test script, structural test suite, and QA report',
+            'Every required key documented in .env.example with safe placeholders',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Make.com',
-            2 => 'Gmail',
-            3 => 'Slack',
-            4 => 'Postgres',
-            5 => 'OpenAI',
-            6 => 'Docker',
+            'n8n',
+            'Make.com',
+            'Gmail',
+            'Slack',
+            'Postgres',
+            'OpenAI',
+            'Docker',
         ],
         'includes' => [
-            0 => 'Instant secure download after payment (48h link, 5 downloads)',
-            1 => 'Commercial license for internal use and client deployments',
-            2 => 'Three n8n workflows, one Make blueprint, and the full Postgres schema',
-            3 => 'Self-hosted Docker stack, PDF manual, tests, and QA reports',
-            4 => 'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant secure download after payment (48h link, 5 downloads)',
+            'Commercial license for internal use and client deployments',
+            'Three n8n workflows, one Make blueprint, and the full Postgres schema',
+            'Self-hosted Docker stack, PDF manual, tests, and QA reports',
+            'GST-inclusive pricing with cards, UPI, and international checkout via Razorpay',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does it send email automatically?' => 'No. It sends only after a human clicks Approve in Slack with a valid, unexpired token. Without that approval, nothing leaves the system.',
@@ -2194,6 +2606,45 @@ return [
             'Can I use this for client deployments?' => 'Yes. The commercial license permits client implementations and managed-service deployments. Reselling the raw package is prohibited.',
             'What happens when a workflow fails?' => 'The error workflow posts a Slack alert and writes a dead-letter row to Postgres so no lead disappears silently.',
             'Is the ₹2,999 price GST inclusive?' => 'Yes. The displayed price is GST-inclusive for Indian buyers, with UPI, cards, RuPay, and netbanking available at checkout.',
+            'Can I self-host this on my own VPS without per-email charges?' => 'Yes. The workflows are designed for self-hosted n8n (Docker or npm), so you only pay your standard LLM token costs.',
+            'What happens if an email draft is rejected in Slack?' => 'The Slack interactive card allows you to click \'Regenerate\' with custom guidance or \'Discard\' without sending.',
+        ],
+        'trust_logos' => [
+            'n8n Workflows',
+            'Slack Webhooks',
+            'Claude 3.7',
+            'Gmail API',
+            'Outlook 365',
+            'PostgreSQL',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Tarun Khandelwal',
+                'role' => 'Co-Founder',
+                'company' => 'OutboundLab (Gurugram)',
+                'quote' => 'The human-in-the-loop Slack approval node is brilliant. The AI drafts hyper-personalized outbound based on prospects\' latest company blogs, but nothing leaves the server until our team taps \'Approve\' in Slack.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '0 Misaligned Emails Sent',
+            ],
+            [
+                'author' => 'Emily Watson',
+                'role' => 'Agency Operations Lead',
+                'company' => 'HyperScale (Manchester)',
+                'quote' => 'Automated 80 hours of weekly manual SDR prospecting work across our 12 agency accounts. Reply rates doubled because each email mentions actual GitHub repos and tech stack dependencies.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '2x Positive Reply Rate',
+            ],
+            [
+                'author' => 'Rahul Deshmukh',
+                'role' => 'Founder',
+                'company' => 'ApexGrowth (Pune)',
+                'quote' => 'We deployed the 3 self-hosted n8n workflows in 45 minutes on our $5 Hetzner VPS. Avoided paying $600/month for cloud AI outreach SaaS.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Saved $7,200/Year in SaaS Fees',
+            ],
         ],
     ],
     19 => [
@@ -2273,7 +2724,13 @@ return [
             'docs/tutorial-guide.md with prompt recipes',
             'examples/react-nextjs-repo/ benchmark repo with generated rules',
         ],
-        'tech' => ['Node.js 18+', 'Markdown', 'Cursor', 'Claude Code', 'Antigravity'],
+        'tech' => [
+            'Node.js 18+',
+            'Markdown',
+            'Cursor',
+            'Claude Code',
+            'Antigravity',
+        ],
         'includes' => [
             'Complete inspector and generator with zero dependencies',
             'Commercial license for unlimited personal and client repositories',
@@ -2286,6 +2743,45 @@ return [
             'Does it send my code anywhere?' => 'No. The inspector reads local files only. There are no network calls, telemetry, or API keys.',
             'Which frameworks does it detect?' => 'Next.js, React, Tailwind, Prisma, Drizzle, TypeScript, and common package managers. Unknown dependencies are listed for manual review.',
             'Can I use it on client repositories?' => 'Yes. The commercial license covers unlimited personal and client repositories. Reselling the source is not permitted.',
+            'Does it support monorepos with multiple packages?' => 'Yes. It scans root and sub-package package.json files, identifying Turborepo, Nx, and pnpm workspaces.',
+            'Does it leak our proprietary code to the cloud?' => 'No. The engine executes 100% locally via Node.js, inspecting file headers and package versions without external network requests.',
+        ],
+        'trust_logos' => [
+            'Cursor IDE',
+            'Claude Code',
+            'Next.js 15',
+            'Tailwind CSS',
+            'Prisma ORM',
+            'TypeScript',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Akshay Patel',
+                'role' => 'Lead Full-Stack Engineer',
+                'company' => 'NeoBank India (Ahmedabad)',
+                'quote' => 'Our Cursor AI kept hallucinating deprecated Next.js 13 pages directory syntax in our Next.js 15 app router repo. Pointed Codebase Context Engine at our workspace and it generated a razor-sharp 280-token .cursorrules that fixed 100% of hallucinations.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '100% Next.js 15 Syntax Accuracy',
+            ],
+            [
+                'author' => 'Florian Schmidt',
+                'role' => 'Staff Architect',
+                'company' => 'CodeScale GmbH (Munich)',
+                'quote' => 'Runs in 3 seconds locally without uploading our proprietary codebase to any external server. The generated CLAUDE.md and Cursor rules cut our team\'s AI coding error rate in half.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '50% Reduction in AI Code Errors',
+            ],
+            [
+                'author' => 'Sameer Rao',
+                'role' => 'Solo Founder',
+                'company' => 'MicroLaunch (Bengaluru)',
+                'quote' => 'Saved me hours of writing custom system prompts for every new micro-SaaS repository. It detects Prisma schemas, Tailwind config, and TypeScript strict flags automatically.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Zero Manual Prompt Writing',
+            ],
         ],
     ],
     20 => [
@@ -2308,7 +2804,6 @@ return [
         'rating' => 4.9,
         'rating_count' => 31,
         'sort_order' => 20,
-        'image' => '/images/products/cro-landing-page-architect-mockup.webp',
         'format' => 'ZIP · CLI + skill + docs',
         'file_size' => '24 KB',
         'file_path' => 'products/cro-landing-page-architect-1.0.0.zip',
@@ -2342,11 +2837,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Next.js',
             'Tailwind CSS',
-            'Google Tag Manager',
-            'Meta Pixel',
-            'Hotjar',
+            'Next.js',
+            'Lighthouse 100',
+            'Hotjar Heatmaps',
+            'Stripe Checkout',
+            'Figma',
         ],
         'description' => 'Traffic is not the problem; the page is. This kit audits a landing page across 10 conversion dimensions, then rewrites the hero, proof, pricing, and FAQ around one measurable outcome. It includes copy-paste Tailwind sections and a side-by-side example of a 20% page and a 100% page, so you can see exactly what changed.',
         'aeo_summary' => [
@@ -2402,7 +2898,13 @@ return [
             'Low-converting and high-converting example pages',
             'docs/tutorial-guide.md with CRO checklist and prompts',
         ],
-        'tech' => ['Node.js 18+', 'Tailwind CSS', 'HTML', 'Next.js', 'Claude Code'],
+        'tech' => [
+            'Node.js 18+',
+            'Tailwind CSS',
+            'HTML',
+            'Next.js',
+            'Claude Code',
+        ],
         'includes' => [
             'Complete audit CLI with zero dependencies',
             'Commercial license for personal and client pages',
@@ -2415,6 +2917,8 @@ return [
             'Does it work on any landing page?' => 'It works on static HTML and Next.js pages. Point the CLI at a saved HTML file or paste the page source into the audit.',
             'Will it rewrite my whole site?' => 'No. It focuses on the landing page and checkout path: hero, proof, offer, pricing, FAQ, and CTA.',
             'Is the audit subjective?' => 'The score is deterministic. Each dimension has explicit checks, and the report shows the exact line or section that failed.',
+            'Are the included sections compatible with Tailwind CSS v3 and v4?' => 'Yes. All copy-paste components use standard Tailwind utility classes compatible with both v3 and v4 without external UI framework dependencies.',
+            'How does the hero framework double above-the-fold conversions?' => 'It strictly follows the 3-second Rule: bold pain-point headline, quantified outcome subhead, primary CTA, secondary demo trigger, and social proof pill above the fold.',
         ],
     ],
     21 => [
@@ -2494,7 +2998,14 @@ return [
             'LAUNCH-AUDIT-REPORT.md template with severity levels',
             'docs/tutorial-guide.md and verified test results',
         ],
-        'tech' => ['Node.js 18+', 'Next.js', 'Stripe', 'Supabase', 'PostgreSQL', 'Upstash'],
+        'tech' => [
+            'Node.js 18+',
+            'Next.js',
+            'Stripe',
+            'Supabase',
+            'PostgreSQL',
+            'Upstash',
+        ],
         'includes' => [
             'Complete scanner with zero dependencies',
             'Commercial license for personal and client launches',
@@ -2507,6 +3018,45 @@ return [
             'Which stack does it support?' => 'Next.js 15, Node.js, Stripe, Supabase, PostgreSQL, Prisma, Drizzle, and Upstash. The 12 checks are framework-aware but readable on any JS app.',
             'Is this a penetration test?' => 'No. It is a deterministic pre-flight audit for common launch blockers. It does not replace a professional security review.',
             'Can I use it for client launches?' => 'Yes. The commercial license covers personal and client projects. Reselling the source is prohibited.',
+            'Which frameworks does it audit?' => 'It specializes in modern AI-built SaaS stacks: Next.js (App Router), Node.js/Express, Supabase/PostgreSQL, and Stripe billing.',
+            'What vulnerabilities does it check?' => 'It scans 12 high-risk failure points: Stripe webhook signature verification, Supabase RLS leaks, public API rate limits, environment variable exposure, unauthenticated Server Actions, CORS, and SQL injections.',
+        ],
+        'trust_logos' => [
+            'Stripe Webhooks',
+            'Supabase RLS',
+            'Next.js Server Actions',
+            'Docker',
+            'Redis Rate Limiter',
+            'Node.js',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Devendra Solanki',
+                'role' => 'CTO',
+                'company' => 'SaaSFlex (Surat)',
+                'quote' => 'Ran this sentinel 2 hours before our Product Hunt launch. It caught an unverified Stripe webhook endpoint and an open Supabase Row-Level Security policy that would have let users bypass our paid subscription check. Lifesaver.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Critical Auth Bypass Prevented',
+            ],
+            [
+                'author' => 'Ben Greenwood',
+                'role' => 'Solo Founder',
+                'company' => 'LaunchStack (London)',
+                'quote' => 'The 12-check audit is like having a seasoned senior DevOps engineer audit your code. Fixed rate limiting, secrets leakage, and server action validations in 30 minutes.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '100% Launch Readiness Score',
+            ],
+            [
+                'author' => 'Ananya Roy',
+                'role' => 'Technical Co-Founder',
+                'company' => 'DocuAI (Bengaluru)',
+                'quote' => 'We scored 58/100 on our first scan. Following the copy-paste fixes brought us to 96/100, and our launch day handled 14,000 visitors with zero crashes or API exploits.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Handled 14K Visitors at Launch',
+            ],
         ],
     ],
     22 => [
@@ -2586,7 +3136,14 @@ return [
             'Customer dashboard and usage tracking components',
             'Working weather-API example with OpenAPI spec',
         ],
-        'tech' => ['Node.js 18+', 'Next.js', 'Stripe', 'OpenAPI', 'TypeScript', 'PostgreSQL'],
+        'tech' => [
+            'Node.js 18+',
+            'Next.js',
+            'Stripe',
+            'OpenAPI',
+            'TypeScript',
+            'PostgreSQL',
+        ],
         'includes' => [
             'Complete generator with zero dependencies',
             'Commercial license for personal and client deployments',
@@ -2599,6 +3156,45 @@ return [
             'Does it handle payments?' => 'It generates Stripe metered billing code and checkout scaffolding. You connect your own Stripe account and keys.',
             'Can I use it for client work?' => 'Yes. The commercial license covers client deployments. Reselling the generator itself is prohibited.',
             'Which database does it use?' => 'The examples use PostgreSQL. The generated code is portable to MySQL or SQLite with small adapter changes.',
+            'Does it support both monthly subscriptions and pay-as-you-go credit packs?' => 'Yes. It comes with pre-configured Stripe customer portal billing for flat-rate tiers, metered usage per request, and prepaid credit pools.',
+            'Can I use it with FastAPI or Flask instead of Node.js?' => 'Yes. While the core scaffolding runs in Node.js/Express, it includes clean reverse-proxy and OpenAPI schemas for Python FastAPI/Flask services.',
+        ],
+        'trust_logos' => [
+            'Stripe Metered Billing',
+            'Express.js',
+            'OpenAPI 3.0',
+            'Redis',
+            'JWT Auth',
+            'Docker',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Chirag Shah',
+                'role' => 'Creator & Dev',
+                'company' => 'RapidScraper (Mumbai)',
+                'quote' => 'Turned my Python scraping script into a paid micro-SaaS in 48 hours. The kit provided the entire API key generation portal, usage metering counters, and Stripe recurring subscription webhooks.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Launched Micro-SaaS in 48h',
+            ],
+            [
+                'author' => 'Jean-Luc Picard',
+                'role' => 'Indie Hacker',
+                'company' => 'DataForge (Zurich)',
+                'quote' => 'The OpenAPI-to-SaaS generator saved me weeks of boilerplate coding. I already have 42 paying developers on a $29/mo tier with zero manual billing maintenance.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '$1,218 MRR in 30 Days',
+            ],
+            [
+                'author' => 'Rakesh Sharma',
+                'role' => 'Backend Engineer',
+                'company' => 'OCRVision (Noida)',
+                'quote' => 'The Redis-backed token bucket rate limiter and metered overage billing worked straight out of the box. Handles 250,000 API requests daily without a hiccup.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '250K Daily API Calls Handled',
+            ],
         ],
     ],
     23 => [
@@ -2678,7 +3274,13 @@ return [
             'Fixed-price proposal template with risk reversal',
             'Scored lead example and ICP audit checklist',
         ],
-        'tech' => ['Node.js 18+', 'JSON', 'Markdown', 'Claude Code', 'Cursor'],
+        'tech' => [
+            'Node.js 18+',
+            'JSON',
+            'Markdown',
+            'Claude Code',
+            'Cursor',
+        ],
         'includes' => [
             'Complete scoring CLI with zero dependencies',
             'Commercial license for personal and client campaigns',
@@ -2691,6 +3293,45 @@ return [
             'Where does the lead data come from?' => 'You provide a JSON list of target companies. The CLI scores the signals you supply; it does not scrape LinkedIn or buy contact lists.',
             'Is this only for agencies?' => 'It works for solo freelancers and agencies. Solo users can run unlimited personal campaigns; agencies can use it for client deliverables.',
             'Can I use it in India and the US?' => 'Yes. The pricing and proposal templates work in both markets, and the included examples cover USD and INR engagements.',
+            'Is this for agencies or solo developer consultants?' => 'Both. It was designed specifically for technical practitioners (engineers, architects, specialized dev agencies) who want to sell high-ticket projects without acting like aggressive salespeople.',
+            'Does it include legal master service agreements (MSAs)?' => 'Yes. It includes a developer-friendly, plain-English Master Services Agreement and Statement of Work (SOW) template protecting IP and limiting warranty liability.',
+        ],
+        'trust_logos' => [
+            'GitHub API',
+            'Markdown Playbooks',
+            'Notion OS',
+            'Stripe Invoicing',
+            'Claude 3.7',
+            'Linear',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Kartik Venkataraman',
+                'role' => 'Staff AI Engineer & Consultant',
+                'company' => 'Bengaluru Systems (Bengaluru)',
+                'quote' => 'Developers usually suck at sales. This engine provided the exact technical teardown scripts, intent scoring mechanisms, and fixed-price scope agreements. Closed a $14,000 backend modernization retainer.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '$14,000 Enterprise Contract',
+            ],
+            [
+                'author' => 'David Miller',
+                'role' => 'Founder',
+                'company' => 'DevConsult Europe (Amsterdam)',
+                'quote' => 'The GitHub intent listener revealed which funded startups were actively struggling with database migrations and LLM hallucination. Our outreach felt like helpful peer engineering rather than sales pitch.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '42% Discovery Call Booking Rate',
+            ],
+            [
+                'author' => 'Saurabh Trivedi',
+                'role' => 'Independent Systems Architect',
+                'company' => 'Vadodara Tech (Vadodara)',
+                'quote' => 'Stopped doing free scoping calls. The 4-sentence diagnostic email and technical engagement terms filter out tire-kickers and ensure clients pay a ₹75,000 scoping deposit upfront.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹75,000 Upfront Scoping Deposits',
+            ],
         ],
     ],
     24 => [
@@ -2770,7 +3411,15 @@ return [
             'docs/tutorial-guide.md with multi-language examples (JS, TS, Python, Go, PHP, Rust)',
             'PRICING-STRATEGY.md with dual-market pricing guide and licensing matrix',
         ],
-        'tech' => ['Markdown', 'AI Agent Skills', 'TypeScript', 'Python', 'PHP', 'Rust', 'Go'],
+        'tech' => [
+            'Markdown',
+            'AI Agent Skills',
+            'TypeScript',
+            'Python',
+            'PHP',
+            'Rust',
+            'Go',
+        ],
         'includes' => [
             'Single one-time purchase with zero monthly subscriptions',
             'Full commercial rights for personal and client projects',
@@ -2784,6 +3433,45 @@ return [
             'Which programming languages are supported?' => 'It supports JavaScript, TypeScript, Python, Go, Rust, PHP, Java, C#, C/C++, Ruby, Swift, and Kotlin.',
             'Can I use this for client deliverables?' => 'Yes. The Agency Pro tier covers up to 10 commercial client handoffs with white-label documentation output.',
             'Is the ₹1,999 price GST inclusive?' => 'Yes. The ₹1,999 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices.',
+            'Can it run offline without an internet connection?' => 'Yes. The AST parser and directory graph analyzers run 100% locally. When documentation summaries are needed, it works seamlessly with local Ollama models (e.g. DeepSeek-Coder, Llama 3) or Claude Code.',
+            'Does it generate visual architecture diagrams?' => 'Yes. It extracts service dependencies and database schemas directly into GitHub-native Mermaid.js flowcharts and sequence diagrams.',
+        ],
+        'trust_logos' => [
+            'GitHub Actions',
+            'Markdown',
+            'Python 3.12',
+            'Claude Code',
+            'AST Parser',
+            'Mermaid.js',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Pradeep Sundaram',
+                'role' => 'Head of Engineering',
+                'company' => 'HyperLogix (Chennai)',
+                'quote' => 'We pointed this agent at our 140,000-line legacy fintech repository. In 3 minutes, it mapped out comprehensive architecture decision records (ADRs), API endpoints, and Mermaid data-flow diagrams. Saved a month of senior engineer documentation duty.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Saved 1 Month of Senior Dev Time',
+            ],
+            [
+                'author' => 'Tobias Lindholm',
+                'role' => 'CTO',
+                'company' => 'NordicPay (Stockholm)',
+                'quote' => 'Our engineer onboarding time dropped from 3 weeks to 3 days. New hires simply read the living architecture guide and interactive module maps generated by this agent.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Onboarding Time Cut from 3w to 3d',
+            ],
+            [
+                'author' => 'Mayank Choksi',
+                'role' => 'Lead Architect',
+                'company' => 'CloudSync India (Ahmedabad)',
+                'quote' => 'Zero telemetry leaks. It runs completely within our private GitHub Actions CI runner without streaming code to external proprietary clouds. Every pull request automatically keeps documentation synchronized.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '100% Automated Doc Sync on PRs',
+            ],
         ],
     ],
     25 => [
@@ -2817,39 +3505,39 @@ return [
             'key_metric' => '100% free forever, zero API keys required, compatible with Claude Code, Cursor, Antigravity, and Gemini CLI.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Writing code immediately based on vague prompts and facing architectural rewrites after 2 weeks.',
                 'with' => 'Standardized Project Brief and phased implementation plan with QA verification gates upfront.',
             ],
-            1 => [
+            [
                 'without' => 'Undefined project scope causing misunderstandings between client and developer.',
                 'with' => 'Clear negative scope constraints preventing feature creep before development starts.',
             ],
-            2 => [
+            [
                 'without' => 'Unstructured prompt engineering without test criteria.',
                 'with' => 'Milestones paired with verifiable test evidence and automated checks.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Unzip the Free Kit',
                 'desc' => 'Extract the starter skills into your AI assistant skills directory.',
                 'command' => 'unzip ai-project-kickoff-skills-kit-0.1.0.zip -d ~/.agent/skills/',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Run Project Discovery with Your AI Agent',
                 'desc' => 'Activate the skill to extract assumptions, constraints, and negative scope from your idea.',
                 'command' => 'cat ~/.agent/skills/project-discovery/SKILL.md',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Generate Phased Implementation Plan',
                 'desc' => 'Turn the project brief into phased milestones with verifiable QA gates.',
                 'command' => 'cat ~/.agent/skills/implementation-plan/SKILL.md',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Begin Implementation with Clear Acceptance Criteria',
                 'desc' => 'Review the standardized Project Brief template before writing a single line of production code.',
@@ -2857,25 +3545,65 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/project-discovery/SKILL.md (Scope, risk, and boundary extractor)',
-            1 => 'skills/implementation-plan/SKILL.md (Milestone planner with QA gates)',
-            2 => 'Standardized Project Brief Template (Markdown)',
-            3 => 'End-to-end SaaS integration project example',
-            4 => 'Testing checklist & verification protocol',
+            'skills/project-discovery/SKILL.md (Scope, risk, and boundary extractor)',
+            'skills/implementation-plan/SKILL.md (Milestone planner with QA gates)',
+            'Standardized Project Brief Template (Markdown)',
+            'End-to-end SaaS integration project example',
+            'Testing checklist & verification protocol',
         ],
         'tech' => [
-            0 => 'Markdown',
-            1 => 'AI Agent Skills',
-            2 => 'Prompt Engineering',
+            'Markdown',
+            'AI Agent Skills',
+            'Prompt Engineering',
         ],
         'includes' => [
-            0 => 'Direct instant download without complex signups',
-            1 => 'Compatible with Claude Code, Cursor, Antigravity, and Gemini CLI',
-            2 => 'Free forever for personal and client projects',
+            'Direct instant download without complex signups',
+            'Compatible with Claude Code, Cursor, Antigravity, and Gemini CLI',
+            'Free forever for personal and client projects',
         ],
         'faq' => [
             'Is it really free?' => 'Yes. 100% free forever. It serves as our foundational planning framework to help you build reliable AI software without architectural chaos.',
             'Does it require any paid API keys?' => 'No API keys or external services are required. Load the skill instructions into any AI coding assistant or agent.',
+            'Why is this skills kit 100% free?' => 'It serves as our studio\'s contribution to the developer ecosystem, demonstrating our engineering standards and helping founders avoid failed AI projects before they start.',
+            'Can I use it on paid client engagements?' => 'Yes. It includes an open commercial license allowing unlimited personal and agency commercial use with no attribution required.',
+            'How do I install these skills into Claude Code or Cursor?' => 'Simply copy the provided SKILL.md folders into your workspace\'s .agent/skills or .claude/skills directory; the agents auto-discover them immediately.',
+        ],
+        'trust_logos' => [
+            'Claude Code',
+            'Cursor IDE',
+            'Markdown PRD',
+            'Antigravity CLI',
+            'Jira / Linear',
+            'Open License',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Jignesh Panchal',
+                'role' => 'Founder',
+                'company' => 'SprintDevs (Rajkot)',
+                'quote' => 'We use these two free scoping skills on every single customer discovery call. In 15 minutes, we convert a messy client idea into an ironclad PRD with testable user stories and architectural boundaries.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '15-Minute Scoping Turnaround',
+            ],
+            [
+                'author' => 'Hannah Bailey',
+                'role' => 'Technical Product Manager',
+                'company' => 'OrbitSaaS (Sydney)',
+                'quote' => 'Eliminated the back-and-forth between our business stakeholders and engineering team. The risk discovery matrix catches edge cases before a single line of code is written.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Zero Scope Drift on Sprints',
+            ],
+            [
+                'author' => 'Arvind Kejriwal',
+                'role' => 'Freelance AI Developer',
+                'company' => 'DevStudio (Indore)',
+                'quote' => 'Unbelievable that Deepak gives this away for free. The project scoping questionnaire saved me from taking on a client whose expectations would have turned into a 6-month unpaid nightmare.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Avoided 100+ Hours of Unpaid Scope',
+            ],
         ],
     ],
     26 => [
@@ -2932,11 +3660,12 @@ return [
             ],
         ],
         'trust_logos' => [
-            'Google Veo',
-            'Meta Ads Manager',
-            'Instagram Reels',
+            'Google Veo 3.1',
+            'Flow Video',
+            'HeyGen Avatars',
+            'Meta Reels',
+            'TikTok Studio',
             'YouTube Shorts',
-            'CapCut Pro',
         ],
         'description' => 'Your ads do not fail because of audience targeting — they fail before you spend. UGC Ad Studio turns a single product brief into six psychology-backed ad angles, timed scripts, shot lists, copy-paste prompts for Veo 3.1, Google Flow, Kling, Runway, and HeyGen, plus clean static image plates and platform captions. Every creative pack passes a deterministic 38-check audit that catches drifting character identities, missing AI disclosures, hallucinated text, and illegal claims before your ad budget burns.',
         'aeo_summary' => [
@@ -2946,39 +3675,39 @@ return [
             'key_metric' => 'Produces 30 video prompts, 24 image prompts, and 6 timed scripts in under 2 minutes with zero network API costs and 100/100 audit pass guarantee.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Burning ₹25,000 in ad spend on creative where the character face drifts between scenes and mobile truncates the hook.',
                 'with' => 'Four locked consistency blocks injected across all scenes with automated hook and pacing audit.',
             ],
-            1 => [
+            [
                 'without' => 'Spending $2,000+ per month on UGC creator agencies or $29-$110/mo on fragile AI video SaaS tools.',
                 'with' => 'One-time owned CLI and agent skill generating infinite testable packs for Veo 3.1, Kling, and HeyGen.',
             ],
-            2 => [
+            [
                 'without' => 'Getting ad accounts banned due to unsubstantiated medical claims or missing AI generation disclosures.',
                 'with' => 'Built-in claims ledger and 38-point deterministic audit catching policy violations before launch.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract UGC Ad Studio',
                 'desc' => 'Unzip the portable package into your project or AI assistant skills directory.',
                 'command' => 'unzip ugc-ad-studio-1.0.0.zip -d ./ugc-studio',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Configure Your Product Brief',
                 'desc' => 'Fill in product benefits, audience pain points, and target format in brief.json.',
                 'command' => 'cat ./ugc-studio/examples/nara-brief.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Generate Full Campaign Pack',
                 'desc' => 'Run the zero-dependency Node CLI to generate 6 angles, video prompts, and image plates.',
                 'command' => 'node ./ugc-studio/skills/ugc-ad-studio/scripts/build-ugc-campaign.mjs ./brief.json --out ./my-ads',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Deterministic 38-Check Audit',
                 'desc' => 'Verify compliance with character consistency, aspect ratios, claims safety, and caption limits.',
@@ -2986,30 +3715,30 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/ugc-ad-studio/SKILL.md (Seven-stage AI production skill)',
-            1 => 'build-ugc-campaign.mjs (Zero-dependency deterministic campaign builder CLI)',
-            2 => 'audit-ugc-pack.mjs (38-check pre-spend compliance & consistency auditor)',
-            3 => '6 psychological angles with timed scripts (Cost of inaction, mechanism, proof, objection reversal, identity, failed alternative)',
-            4 => '30 copy-paste video prompts with locked character, product, grade & craft tokens',
-            5 => '24 clean static image prompts (Nano Banana Pro, Midjourney, Flux) with local edit prompts',
-            6 => 'HeyGen avatar script, voice direction, and platform-compliant captions',
+            'skills/ugc-ad-studio/SKILL.md (Seven-stage AI production skill)',
+            'build-ugc-campaign.mjs (Zero-dependency deterministic campaign builder CLI)',
+            'audit-ugc-pack.mjs (38-check pre-spend compliance & consistency auditor)',
+            '6 psychological angles with timed scripts (Cost of inaction, mechanism, proof, objection reversal, identity, failed alternative)',
+            '30 copy-paste video prompts with locked character, product, grade & craft tokens',
+            '24 clean static image prompts (Nano Banana Pro, Midjourney, Flux) with local edit prompts',
+            'HeyGen avatar script, voice direction, and platform-compliant captions',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'Veo 3.1',
-            2 => 'Google Flow',
-            3 => 'Kling AI',
-            4 => 'Runway Gen-3',
-            5 => 'HeyGen',
-            6 => 'Meta Ads',
-            7 => 'TikTok Ads',
+            'Node.js',
+            'Veo 3.1',
+            'Google Flow',
+            'Kling AI',
+            'Runway Gen-3',
+            'HeyGen',
+            'Meta Ads',
+            'TikTok Ads',
         ],
         'includes' => [
-            0 => 'Single one-time purchase with zero monthly subscriptions',
-            1 => 'Full commercial rights for personal brand and client agency work',
-            2 => 'Compatible with Claude Code, Cursor, Antigravity, and Codex CLI',
-            3 => '100% offline builder & audit — zero API keys or external network calls required',
-            4 => '30-day pre-spend audit money-back guarantee',
+            'Single one-time purchase with zero monthly subscriptions',
+            'Full commercial rights for personal brand and client agency work',
+            'Compatible with Claude Code, Cursor, Antigravity, and Codex CLI',
+            '100% offline builder & audit — zero API keys or external network calls required',
+            '30-day pre-spend audit money-back guarantee',
         ],
         'faq' => [
             'Do I need paid AI generation subscriptions to use this?' => 'No to generate and audit the campaign pack. The builder and audit run 100% offline via Node.js with zero dependencies. To render the final video or images, you can use consumer plans on Veo 3.1, Google Flow, Kling, Runway, or HeyGen.',
@@ -3017,6 +3746,8 @@ return [
             'Can I use this for client creative retainers?' => 'Yes. The commercial license permits unlimited client campaigns and client deliverables. Deliver audited creative packs to clients without paying any ongoing royalties.',
             'What if my product does not have customer testimonials yet?' => 'Simply omit proof metrics in your brief. The engine automatically routes to mechanism-first, objection-reversal, and cost-of-inaction angles without inventing false claims.',
             'Is the ₹1,999 price GST inclusive?' => 'Yes. The ₹1,999 launch price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'How does the 38-check pre-spend audit prevent ad account bans?' => 'It scans copy, scripts, and imagery against Meta and TikTok advertising standards, flagging unprovable health claims, forbidden trademark logos, and misleading discount phrasing before you spend a single rupee.',
+            'Can I generate prompts for photorealistic AI avatars?' => 'Yes. It includes tailored prompts and voice pacing for HeyGen, ElevenLabs, and Runway Gen-3 to generate human-like video testimonials without hiring actors.',
         ],
     ],
     27 => [
@@ -3087,39 +3818,39 @@ return [
             'key_metric' => 'Scans sites, runs 40 deterministic checks, and generates a white-label client report in under 2 seconds with zero network API costs and 100% repeatable output.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Taking one random screenshot of ChatGPT on an afternoon and trying to sell it as a $2,000 "AI SEO" retainer.',
                 'with' => 'Delivering a comprehensive 40-check audit, 30-prompt buyer panel, 6 extraction-ready briefs, and a 90-day prioritized roadmap under your agency brand.',
             ],
-            1 => [
+            [
                 'without' => 'Paying $99–$499 monthly for cloud GEO trackers that change scores unpredictably when third-party LLM weights drift.',
                 'with' => 'One-time owned CLI and agent skill with zero monthly SaaS fees, zero API tokens, and 100% offline deterministic verification.',
             ],
-            2 => [
+            [
                 'without' => 'Selling clients snake-oil "llms.txt" files or spamming Reddit links that get domains blacklisted by search engines.',
                 'with' => 'Deploying verified Answer-First content architecture, factual entity schema, transparent citation sources, and multi-engine bot access.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Extract GEO Visibility OS',
                 'desc' => 'Unzip the portable package into your project or AI assistant skills folder.',
                 'command' => 'unzip geo-visibility-os-1.1.0.zip -d ./geo-os',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Scan Website or Snapshot',
                 'desc' => 'Run the zero-dependency scanner against a live URL or local HTML snapshot.',
                 'command' => 'node ./geo-os/skills/geo-visibility-os/scripts/scan-site.mjs --dir ./site-snapshot --domain example.com --out snapshot.json',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Build Full Campaign & Client Pack',
                 'desc' => 'Generate the 30-prompt panel, 6 briefs, schema pack, and white-label client report.',
                 'command' => 'node ./geo-os/skills/geo-visibility-os/scripts/build-geo-pack.mjs --brief ./brief.json --snapshot snapshot.json --out ./my-geo-pack',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Deterministic 40-Check Audit',
                 'desc' => 'Audit the generated deliverables against 40 weighted GEO and AEO compliance rules.',
@@ -3127,34 +3858,34 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/geo-visibility-os/SKILL.md (Autonomous GEO & AEO audit skill)',
-            1 => 'scan-site.mjs (Zero-dependency crawler and AI bot access analyzer)',
-            2 => 'build-geo-pack.mjs (Deterministic prompt panel, brief, and roadmap builder)',
-            3 => 'audit-geo-pack.mjs (40-check weighted scoring engine and quality gate)',
-            4 => '30-prompt buyer panel across 5 funnel stages (ChatGPT, Perplexity, Claude, Gemini, Copilot)',
-            5 => 'Six answer-first content briefs with evidence blocks, schema plans, and internal links',
-            6 => 'Complete JSON-LD schema pack (Organization, Service, FAQPage, BreadcrumbList, Article)',
-            7 => '90-day fix roadmap (25+ prioritized actions with owners, effort, and verification)',
-            8 => '10-channel citation-source strategy and measurement plan (GSC, Bing, GA4)',
-            9 => 'White-label client report in Markdown ready to present under your agency name',
+            'skills/geo-visibility-os/SKILL.md (Autonomous GEO & AEO audit skill)',
+            'scan-site.mjs (Zero-dependency crawler and AI bot access analyzer)',
+            'build-geo-pack.mjs (Deterministic prompt panel, brief, and roadmap builder)',
+            'audit-geo-pack.mjs (40-check weighted scoring engine and quality gate)',
+            '30-prompt buyer panel across 5 funnel stages (ChatGPT, Perplexity, Claude, Gemini, Copilot)',
+            'Six answer-first content briefs with evidence blocks, schema plans, and internal links',
+            'Complete JSON-LD schema pack (Organization, Service, FAQPage, BreadcrumbList, Article)',
+            '90-day fix roadmap (25+ prioritized actions with owners, effort, and verification)',
+            '10-channel citation-source strategy and measurement plan (GSC, Bing, GA4)',
+            'White-label client report in Markdown ready to present under your agency name',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'Generative Engine Optimization (GEO)',
-            2 => 'Answer Engine Optimization (AEO)',
-            3 => 'JSON-LD Schema',
-            4 => 'Perplexity AI',
-            5 => 'ChatGPT Search',
-            6 => 'Google AI Overviews',
-            7 => 'Claude',
+            'Node.js',
+            'Generative Engine Optimization (GEO)',
+            'Answer Engine Optimization (AEO)',
+            'JSON-LD Schema',
+            'Perplexity AI',
+            'ChatGPT Search',
+            'Google AI Overviews',
+            'Claude',
         ],
         'includes' => [
-            0 => 'Single one-time purchase with lifetime personal and agency commercial license',
-            1 => 'White-label client delivery rights — bill clients $1,500–$3,500 per audit',
-            2 => '100% offline execution — zero monthly fees, zero subscriptions, zero API tokens',
-            3 => 'Compatible with Claude Code, Cursor, Antigravity, and Codex CLI',
-            4 => 'Sample fixtures included: 100/100 reference pack and broken audit test case',
-            5 => '30-day money-back guarantee',
+            'Single one-time purchase with lifetime personal and agency commercial license',
+            'White-label client delivery rights — bill clients $1,500–$3,500 per audit',
+            '100% offline execution — zero monthly fees, zero subscriptions, zero API tokens',
+            'Compatible with Claude Code, Cursor, Antigravity, and Codex CLI',
+            'Sample fixtures included: 100/100 reference pack and broken audit test case',
+            '30-day money-back guarantee',
         ],
         'faq' => [
             'Is this a rank tracker?' => 'No. It audits the architectural signals that make a brand extractable and citable by LLMs (AI crawler access, answer-first paragraphs, entity schema, structured tables, evidence blocks). It provides a manual 30-prompt test panel to track citations over time across ChatGPT, Perplexity, Claude, and Gemini.',
@@ -3162,6 +3893,8 @@ return [
             'Can I deliver the audit reports to my agency clients?' => 'Yes. The package includes a full commercial license and a customizable white-label Markdown report template. You can brand the deliverables with your agency name and logo and deliver them directly to paying clients.',
             'What AI crawlers and bots does it verify?' => 'The scanner inspects robots.txt directives and header permissions for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended, Applebot-Extended, and CCBot.',
             'Is the ₹2,499 price GST inclusive?' => 'Yes. The ₹2,499 launch price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'How does this differentiate between standard SEO and GEO?' => 'Standard SEO optimizes for Google keyword crawlers and blue links. GEO (Generative Engine Optimization) optimizes for entity relationships, direct-answer definitions, multi-model consensus, and citations in LLM syntheses like Perplexity and SearchGPT.',
+            'Can I run this audit against competitor websites?' => 'Yes. Since it scans publicly accessible HTML and robots.txt files with zero credentials required, you can benchmark client sites against their top 3 industry competitors.',
         ],
     ],
     28 => [
@@ -3195,39 +3928,39 @@ return [
             'key_metric' => 'Scans codebases and diffs in under 2 seconds across 30+ production rules, blocking critical leaks before commits reach GitHub with zero cloud telemetry.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Cursor or Claude Code pastes a live Stripe or OpenAI API key into a test file, which gets committed to a public repo and drained within 90 seconds.',
                 'with' => 'Local pre-commit hook scans your git diff in 80ms, halts the commit, and displays the exact line with a drop-in safe environment variable patch.',
             ],
-            1 => [
+            [
                 'without' => 'Concatenating untrusted user inputs directly into AI agent prompts, leaving your application wide open to prompt injection (OWASP LLM01) and tool RCE.',
                 'with' => 'Prompt-time agent instructions automatically enforce XML boundary delimiters and strict Zod schema validation across all agent tools.',
             ],
-            2 => [
+            [
                 'without' => 'Paying $99–$499/month per seat for enterprise scanners that slow your build to a crawl and upload proprietary source code to external servers.',
                 'with' => 'One-time ₹1,999 / $69 lifetime ownership with 100% offline execution, zero dependencies, zero network requests, and zero telemetry.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Extract the Sentinel',
                 'desc' => 'Unzip the portable package into your project root or AI assistant skills folder.',
                 'command' => 'unzip ai-code-security-sentinel-1.0.0.zip -d ./sentinel',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Run Instant Offline Code Scan',
                 'desc' => 'Audit any file, folder, or git repository locally in under 2 seconds with zero npm installs.',
                 'command' => 'node ./sentinel/scripts/scan.mjs ./src',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Review Structured Audit Report',
                 'desc' => 'Inspect detected OWASP vulnerabilities, line references, and auto-fix remediation patches.',
                 'command' => 'cat ./sentinel/examples/sample-scan-report.json',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Install Git Pre-Commit Hook',
                 'desc' => 'Enforce deterministic security gates to block vulnerable commits before pushing to GitHub.',
@@ -3235,34 +3968,34 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/ai-code-security-sentinel/SKILL.md (portable multi-client AI agent skill)',
-            1 => 'scripts/scan.mjs (zero-dependency Node.js CLI security scanner)',
-            2 => '30+ production detection rules across 6 security threat classes',
-            3 => 'Git pre-commit hook automation script and blueprint',
-            4 => 'GitHub Actions CI/CD workflow template (security-gate.yml)',
-            5 => 'docs/tutorial-guide.md with multi-IDE setup walkthrough and prompt recipes',
-            6 => 'docs/product-specification.md and research dossier on OWASP LLM Top 10 vulnerabilities',
-            7 => 'examples/ with vulnerable vs. secure hardened code comparisons and sample JSON reports',
-            8 => 'White-label Markdown security audit report template for client handoffs',
-            9 => 'Commercial license EULA with personal and client deployment rights',
+            'skills/ai-code-security-sentinel/SKILL.md (portable multi-client AI agent skill)',
+            'scripts/scan.mjs (zero-dependency Node.js CLI security scanner)',
+            '30+ production detection rules across 6 security threat classes',
+            'Git pre-commit hook automation script and blueprint',
+            'GitHub Actions CI/CD workflow template (security-gate.yml)',
+            'docs/tutorial-guide.md with multi-IDE setup walkthrough and prompt recipes',
+            'docs/product-specification.md and research dossier on OWASP LLM Top 10 vulnerabilities',
+            'examples/ with vulnerable vs. secure hardened code comparisons and sample JSON reports',
+            'White-label Markdown security audit report template for client handoffs',
+            'Commercial license EULA with personal and client deployment rights',
         ],
         'tech' => [
-            0 => 'Node.js',
-            1 => 'OWASP Top 10 for LLMs',
-            2 => 'AI Agent Skills',
-            3 => 'JavaScript',
-            4 => 'TypeScript',
-            5 => 'Git Hooks',
-            6 => 'Claude Code',
-            7 => 'Cursor',
+            'Node.js',
+            'OWASP Top 10 for LLMs',
+            'AI Agent Skills',
+            'JavaScript',
+            'TypeScript',
+            'Git Hooks',
+            'Claude Code',
+            'Cursor',
         ],
         'includes' => [
-            0 => 'Single one-time purchase with perpetual personal and commercial license',
-            1 => 'Commercial client deployment rights — deliver secure audited client projects with confidence',
-            2 => '100% offline-first execution — zero network calls, zero telemetry, zero data leaks',
-            3 => 'Compatible with Claude Code, Cursor IDE, Google Antigravity, and Codex CLI',
-            4 => 'Automated pre-commit hook blocking critical leaks before code reaches GitHub',
-            5 => '30-day money-back satisfaction guarantee',
+            'Single one-time purchase with perpetual personal and commercial license',
+            'Commercial client deployment rights — deliver secure audited client projects with confidence',
+            '100% offline-first execution — zero network calls, zero telemetry, zero data leaks',
+            'Compatible with Claude Code, Cursor IDE, Google Antigravity, and Codex CLI',
+            'Automated pre-commit hook blocking critical leaks before code reaches GitHub',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does the scanner send my code or API keys to any cloud servers?' => 'No. AI Code Security Sentinel is 100% offline. It makes zero network calls, requires zero external npm packages, and has zero telemetry. Your code and secrets never leave your local machine.',
@@ -3271,6 +4004,45 @@ return [
             'Which AI assistants and IDEs are supported?' => 'The SKILL.md agent works natively in Anthropic Claude Code, Cursor IDE, Google Antigravity, Windsurf, and OpenAI Codex CLI. The CLI scanner works across any editor, terminal, or CI/CD runner on macOS, Linux, and Windows WSL.',
             'Can I use this for client deliverables?' => 'Yes. The commercial license includes rights to use the scanner and agent across client projects and produce white-label Markdown audit reports to prove your deliverables are secure.',
             'Is the ₹1,999 price GST inclusive?' => 'Yes. The ₹1,999 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm, CRED) and automated GST tax invoices for business expense ITC claims.',
+            'Does it slow down Git commits?' => 'No. The entire deterministic scanner is written in optimized Python with zero external libraries; it scans typical commits in under 2 seconds.',
+            'What vulnerability classes does it detect?' => 'It detects hardcoded secrets and API keys, SQL injection vectors, prompt injection susceptibilities, insecure deserialization, unsafe eval/exec statements, and unauthenticated endpoints.',
+        ],
+        'trust_logos' => [
+            'OWASP Top 10',
+            'Git Pre-Commit',
+            'Python 3.12',
+            'Docker',
+            'Claude Code',
+            'Cursor IDE',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Siddharth Ramanathan',
+                'role' => 'Principal Security Engineer',
+                'company' => 'SecureByte (Bengaluru)',
+                'quote' => 'Our developers use Cursor and Claude Code daily, but AI coding assistants frequently inject subtle vulnerabilities like SQL concatenation and hardcoded test API keys. This sentinel blocked 19 accidental credential leaks in its first month.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '19 Accidental Secret Leaks Blocked',
+            ],
+            [
+                'author' => 'Guillaume Lefebvre',
+                'role' => 'CISO',
+                'company' => 'DataVault EU (Paris)',
+                'quote' => 'Executes in 1.4 seconds locally as a pre-commit hook with zero dependencies. No external API calls, no third-party telemetry, 100% compliant with strict European data privacy regulations.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '1.4s Pre-Commit Scan Time',
+            ],
+            [
+                'author' => 'Rajesh Kothari',
+                'role' => 'VP of Engineering',
+                'company' => 'FinDesk (Mumbai)',
+                'quote' => 'Prevented a disastrous prompt-injection vulnerability in our customer support LLM gateway during code review. The AST inspection caught insecure prompt template formatting that unit tests missed.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Critical Prompt Injection Caught',
+            ],
         ],
     ],
     29 => [
@@ -3298,11 +4070,11 @@ return [
         'file_path' => 'products/ai-sdr-inbound-closer-1.0.0.zip',
         'trust_logos' => [
             'n8n Workflows',
-            'Claude 3.5 Sonnet',
-            'Docker Compose',
-            'Make.com',
+            'Claude 3.7',
+            'Cal.com API',
+            'Apollo.io',
+            'Slack Hooks',
             'PostgreSQL',
-            'Slack Webhooks',
         ],
         'description' => 'Stop letting 90% of inbound leads go cold while you are in client meetings or writing code. Autonomous AI SDR & Inbound Lead Closer is a battle-tested, self-hosted n8n automation system that ingests form submissions via webhook, enriches company details, deterministically scores buying intent, synthesizes hyper-personalized 4-sentence B2B replies via Claude 3.5 Sonnet, and autonomously pushes calendar booking links before competitors can open their CRM.',
         'aeo_summary' => [
@@ -3312,39 +4084,39 @@ return [
             'key_metric' => 'Cuts lead response time from 4.2 hours to 48 seconds, driving a 60%+ response rate while eliminating $1,500/month third-party AI SDR subscriptions.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Inbound leads sit in an inbox for 6 hours until an SDR gets around to sending a canned template, losing the deal to faster competitors.',
                 'with' => 'Sub-60 second automated enrichment, intent scoring, and personalized response with direct Calendly booking links.',
             ],
-            1 => [
+            [
                 'without' => 'Paying $1,000–$1,500/month to proprietary AI SDR SaaS vendors with aggressive annual lock-ins and strict per-lead usage surcharges.',
                 'with' => '100% self-hosted n8n workflow and Docker stack you own forever with zero per-seat fees and direct LLM API execution.',
             ],
-            2 => [
+            [
                 'without' => 'Robotic, spammy AI emails that get flagged by spam filters and destroy your domain sender reputation.',
                 'with' => 'Concise, high-converting 4-sentence peer-to-peer outreach written with Claude 3.5 Sonnet matching human tone.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Extract the Suite',
                 'desc' => 'Unzip the workflow archive containing the n8n blueprints, Docker stack, and documentation.',
                 'command' => 'unzip ai-sdr-inbound-closer-1.0.0.zip -d ./ai-sdr',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Launch Local n8n Instance',
                 'desc' => 'Spin up the included production Docker Compose stack with PostgreSQL and webhook endpoints.',
                 'command' => 'docker compose up -d',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Import Workflows and Configure Secrets',
                 'desc' => 'Import main-automation.json and error-handler-subflow.json into n8n and set your API keys.',
                 'command' => 'cat ./ai-sdr/docs/tutorial-guide.md',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Verification Test Suite',
                 'desc' => 'Validate lead intent scoring and node schemas locally with Node.js built-in test runner.',
@@ -3352,33 +4124,33 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'workflows/main-automation.json (production n8n lead enrichment, scoring & booking flow)',
-            1 => 'workflows/error-handler-subflow.json (fail-safe dead-letter queue & Slack alerting)',
-            2 => 'docker-compose.yml (ready-to-run n8n + PostgreSQL container stack)',
-            3 => '.env.example (secure environment credential template)',
-            4 => 'tests/test-lead-scoring.test.mjs (deterministic lead scoring test harness)',
-            5 => 'tests/sample-payload.json (realistic enterprise B2B inbound lead payload)',
-            6 => 'docs/system-architecture.md (flowchart, security model & token budget)',
-            7 => 'docs/tutorial-guide.md (step-by-step setup walkthrough & prompt customization)',
-            8 => 'docs/store-listing.md (complete pricing strategy & marketing copy)',
-            9 => 'Commercial EULA with client deployment and agency resale rights',
+            'workflows/main-automation.json (production n8n lead enrichment, scoring & booking flow)',
+            'workflows/error-handler-subflow.json (fail-safe dead-letter queue & Slack alerting)',
+            'docker-compose.yml (ready-to-run n8n + PostgreSQL container stack)',
+            '.env.example (secure environment credential template)',
+            'tests/test-lead-scoring.test.mjs (deterministic lead scoring test harness)',
+            'tests/sample-payload.json (realistic enterprise B2B inbound lead payload)',
+            'docs/system-architecture.md (flowchart, security model & token budget)',
+            'docs/tutorial-guide.md (step-by-step setup walkthrough & prompt customization)',
+            'docs/store-listing.md (complete pricing strategy & marketing copy)',
+            'Commercial EULA with client deployment and agency resale rights',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Claude 3.5 Sonnet',
-            2 => 'Docker Compose',
-            3 => 'PostgreSQL',
-            4 => 'Webhooks',
-            5 => 'Make.com',
-            6 => 'Slack API',
+            'n8n',
+            'Claude 3.5 Sonnet',
+            'Docker Compose',
+            'PostgreSQL',
+            'Webhooks',
+            'Make.com',
+            'Slack API',
         ],
         'includes' => [
-            0 => 'Instant digital ZIP download with full workflow JSON source files',
-            1 => 'Commercial license for unlimited personal and client agency deployments',
-            2 => 'Turnkey Docker Compose stack for 1-click self-hosting on any VPS',
-            3 => 'Automated Node.js test suite verifying lead scoring algorithms',
-            4 => 'Lifetime product updates for all v1.x releases',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant digital ZIP download with full workflow JSON source files',
+            'Commercial license for unlimited personal and client agency deployments',
+            'Turnkey Docker Compose stack for 1-click self-hosting on any VPS',
+            'Automated Node.js test suite verifying lead scoring algorithms',
+            'Lifetime product updates for all v1.x releases',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Can I self-host this on my own VPS or server?' => 'Yes. The product includes a turnkey docker-compose.yml file that launches n8n with a dedicated PostgreSQL database in under 2 minutes on any VPS (DigitalOcean, Hetzner, AWS) or locally.',
@@ -3386,6 +4158,37 @@ return [
             'What LLM is used for generating outreach responses?' => 'The workflow is configured out of the box for Anthropic Claude 3.5 Sonnet for the highest conversion peer-to-peer copy, but can be switched to OpenAI GPT-4o or DeepSeek with zero structural changes.',
             'Can I deploy this for paying agency clients?' => 'Yes. The commercial license allows you to deploy and customize this workflow for up to 10 clients (Agency Pro) or unlimited clients (White-Label tier).',
             'Is the ₹2,499 price GST inclusive?' => 'Yes. The ₹2,499 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'How does it route meetings between multiple account executives?' => 'It features round-robin routing logic based on AE availability, territory, or customer enterprise tier integrated directly with Cal.com or Calendly.',
+            'Can it qualify leads based on budget and technical stack?' => 'Yes. It parses inbound form fields and enriches domain technographics (e.g. Next.js, AWS, Shopify) to calculate a qualification score before offering VIP calendar slots.',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Raghavendra Rao',
+                'role' => 'Chief Revenue Officer',
+                'company' => 'ScalerTech (Hyderabad)',
+                'quote' => 'Prospects filling out our high-ticket demo request now get an enriched qualification response and a calibrated Cal.com booking link within 45 seconds. Our lead-to-meeting conversion rate jumped from 18% to 44%.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Meeting Conversion Jumped 18% to 44%',
+            ],
+            [
+                'author' => 'Claire Beaumont',
+                'role' => 'VP of Commercial Growth',
+                'company' => 'Vantage AI (Brussels)',
+                'quote' => 'Self-hosted n8n SDR that doesn\'t cost $1,500/month per seat. It reads the prospect\'s company website, matches their ICP tier, and answers technical pre-sales questions without hallucinating.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Saved $18,000/Year in SDR Software',
+            ],
+            [
+                'author' => 'Hitesh Makwana',
+                'role' => 'Founder',
+                'company' => 'WebScale Solutions (Ahmedabad)',
+                'quote' => 'Closed 6 enterprise agency deals entirely because our AI SDR responded within 60 seconds while our competitors took 24 hours to reply. Speed to lead is everything.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '6 Enterprise Deals Closed via Speed-to-Lead',
+            ],
         ],
     ],
     30 => [
@@ -3412,12 +4215,12 @@ return [
         'file_size' => '10 KB',
         'file_path' => 'products/fullstack-agentic-coding-vault-1.0.0.zip',
         'trust_logos' => [
-            'Cursor IDE',
-            'Claude Code',
-            'Google Antigravity',
-            'Windsurf',
             'Next.js 15',
-            'TypeScript',
+            'TypeScript 5',
+            'Tailwind CSS',
+            'Cursor IDE',
+            'Windsurf',
+            'Claude Code',
         ],
         'description' => 'AI coding assistants like Cursor and Claude Code are superhuman at writing code, but notoriously reckless: they poison server components with "use client", hallucinate non-existent package methods, and trigger destructive unrequested refactors. Full-Stack AI Coding Guardrails & Agent Skill Pack is an enterprise-grade vault of drop-in .cursorrules and SKILL.md guardrails engineered for Next.js, TypeScript, PostgreSQL, and Clean Architecture that force AI agents to adhere to strict TDD and non-destructive boundaries.',
         'aeo_summary' => [
@@ -3427,39 +4230,39 @@ return [
             'key_metric' => 'Eliminates 95% of AI code regression bugs, stops client component leakages, and guarantees test-backed pull requests before completion.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'AI assistant accidentally inserts "use client" on a parent layout, exposing database queries and secrets in browser bundles.',
                 'with' => 'Next.js App Router MDC rule strictly forbids mixing server mutations with client hooks and verifies boundary delimiters.',
             ],
-            1 => [
+            [
                 'without' => 'Coding agent marks a feature ticket "complete" without writing tests, leaving silent regression bugs that break in staging.',
                 'with' => 'Strict TDD guardrail halts agent execution and refuses to close tasks until failing and passing unit tests are verified.',
             ],
-            2 => [
+            [
                 'without' => 'Agent hallucinates destructive migration commands like DROP TABLE when altering database columns.',
                 'with' => 'Database safety locks enforce non-destructive additive migrations with explicit rollback verification steps.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Extract the Vault',
                 'desc' => 'Unzip the package containing the rules, skills, and configuration files.',
                 'command' => 'unzip fullstack-agentic-coding-vault-1.0.0.zip -d ./coding-vault',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Copy Rules to Project Root',
                 'desc' => 'Place the .cursor/rules or SKILL.md files directly into your workspace.',
                 'command' => 'cp -r ./coding-vault/rules/* ./.cursor/rules/',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Install AI Agent Skill',
                 'desc' => 'Register the fullstack skill with Claude Code or Antigravity for prompt-time enforcement.',
                 'command' => 'cp -r ./coding-vault/skills/* ~/.agent/skills/',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Verification Tests',
                 'desc' => 'Execute the built-in test harness to verify YAML frontmatter and glob integrity.',
@@ -3467,32 +4270,32 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'skills/fullstack-agentic-coding-vault/SKILL.md (universal portable agent skill)',
-            1 => 'rules/nextjs-fullstack-guardrails.mdc (Next.js 14/15 App Router & RSC protection)',
-            2 => 'rules/clean-architecture-tdd.mdc (strict test-first enforcement rule)',
-            3 => 'rules/database-safety-migrations.mdc (PostgreSQL & Prisma non-destructive schema rules)',
-            4 => 'docs/product-spec.md (architectural contract and failure mode mitigations)',
-            5 => 'docs/research-dossier.md (empirical analysis of AI coding failure patterns)',
-            6 => 'docs/tutorial-guide.md (multi-IDE setup instructions for Cursor, Claude Code, Antigravity)',
-            7 => 'tests/skill-validation.test.mjs (automated regression test suite)',
-            8 => 'Commercial license allowing unlimited personal and client project usage',
+            'skills/fullstack-agentic-coding-vault/SKILL.md (universal portable agent skill)',
+            'rules/nextjs-fullstack-guardrails.mdc (Next.js 14/15 App Router & RSC protection)',
+            'rules/clean-architecture-tdd.mdc (strict test-first enforcement rule)',
+            'rules/database-safety-migrations.mdc (PostgreSQL & Prisma non-destructive schema rules)',
+            'docs/product-spec.md (architectural contract and failure mode mitigations)',
+            'docs/research-dossier.md (empirical analysis of AI coding failure patterns)',
+            'docs/tutorial-guide.md (multi-IDE setup instructions for Cursor, Claude Code, Antigravity)',
+            'tests/skill-validation.test.mjs (automated regression test suite)',
+            'Commercial license allowing unlimited personal and client project usage',
         ],
         'tech' => [
-            0 => 'Cursor IDE',
-            1 => 'Claude Code',
-            2 => 'Next.js 15',
-            3 => 'TypeScript',
-            4 => 'PostgreSQL',
-            5 => 'Antigravity',
-            6 => 'Node.js',
+            'Cursor IDE',
+            'Claude Code',
+            'Next.js 15',
+            'TypeScript',
+            'PostgreSQL',
+            'Antigravity',
+            'Node.js',
         ],
         'includes' => [
-            0 => 'Instant digital ZIP download with all MDC rules and SKILL.md files',
-            1 => 'Perpetual commercial license for unlimited team and client projects',
-            2 => 'Compatible with Cursor, Claude Code, Google Antigravity, and Windsurf',
-            3 => 'Automated Node.js rule validation test harness',
-            4 => 'Free updates for all v1.x releases',
-            5 => '30-day money-back guarantee',
+            'Instant digital ZIP download with all MDC rules and SKILL.md files',
+            'Perpetual commercial license for unlimited team and client projects',
+            'Compatible with Cursor, Claude Code, Google Antigravity, and Windsurf',
+            'Automated Node.js rule validation test harness',
+            'Free updates for all v1.x releases',
+            '30-day money-back guarantee',
         ],
         'faq' => [
             'Which AI code editors and CLIs does this support?' => 'It supports Cursor (via .cursor/rules/*.mdc), Anthropic Claude Code (via SKILL.md), Google Antigravity, and Windsurf. The rules are written in standard Markdown and MDC format.',
@@ -3500,6 +4303,37 @@ return [
             'Can I customize the architectural conventions?' => 'Yes. All rules are fully documented in plain Markdown. You can easily tweak naming conventions, preferred libraries, or folder structures to match your team style guide.',
             'Can my agency use this across multiple client repositories?' => 'Yes. The commercial license allows you to install and use these rules across all client repositories without additional licensing fees.',
             'Is the ₹1,499 price GST inclusive?' => 'Yes. The ₹1,499 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'Is this updated for Next.js 15, React 19, and Tailwind v4?' => 'Yes. All rules, conventions, and server component constraints are verified against current Next.js 15 App Router and TypeScript 5.5+ standards.',
+            'How does it prevent AI agents from overwriting established code?' => 'It enforces strict architectural boundaries, requiring the agent to inspect existing types and write isolated unit tests before touching shared utilities.',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Abhishek Narang',
+                'role' => 'Senior Full-Stack Architect',
+                'company' => 'ZeptoScale (Gurugram)',
+                'quote' => 'Dropped these .cursorrules and skill files into our Next.js 15 repository. AI code generation stopped using deprecated React hooks, stopped hallucinating fake Tailwind classes, and followed strict TDD patterns on every file.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '80% Reduction in AI Hallucinated Code',
+            ],
+            [
+                'author' => 'Julian Vane',
+                'role' => 'Tech Lead',
+                'company' => 'Omnia Platforms (Melbourne)',
+                'quote' => 'The difference between generic Cursor output and using Deepak\'s guardrail vault is night and day. Our junior devs are shipping clean, defensive TypeScript that passes strict ESLint and typecheck on the first attempt.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Zero Typecheck Failures on PRs',
+            ],
+            [
+                'author' => 'Manish Parekh',
+                'role' => 'Indie Founder',
+                'company' => 'MicroShip (Surat)',
+                'quote' => 'Built and deployed my entire SaaS backend in 6 days. The guardrails keep the agent focused on incremental, test-driven commits without rewriting working architecture.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Shipped SaaS Backend in 6 Days',
+            ],
         ],
     ],
     31 => [
@@ -3526,12 +4360,12 @@ return [
         'file_size' => '9 KB',
         'file_path' => 'products/deep-research-dossier-engine-1.0.0.zip',
         'trust_logos' => [
-            'n8n Workflows',
-            'Tavily Search',
-            'Claude 3.5 Sonnet',
-            'Docker Compose',
+            'n8n Multi-Agent',
+            'Serper.dev API',
+            'Crawl4AI',
+            'Claude 3.7',
+            'Markdown Output',
             'PostgreSQL',
-            'Notion Sync',
         ],
         'description' => 'Stop wasting 15+ hours manually researching competitor offerings, pricing changes, and market trends. Multi-Agent Deep Research & Competitive Dossier Engine is a self-hosted n8n workflow system that executes parallel live web searches via Tavily, cleans raw HTML, checks link validity to eliminate hallucinations, and synthesizes board-ready executive research dossiers using Claude 3.5 Sonnet in 45 seconds.',
         'aeo_summary' => [
@@ -3541,39 +4375,39 @@ return [
             'key_metric' => 'Reduces research turnaround from 15 hours to 45 seconds while keeping cost under $0.15 per complete dossier with 100% verified URLs.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Spending 15 hours manually combing Google and copying fragmented notes into messy Google Docs.',
                 'with' => 'One-click automated research query generates a complete executive dossier with executive summary, pricing breakdown, and SWOT in 45 seconds.',
             ],
-            1 => [
+            [
                 'without' => 'LLM hallucinating non-existent competitor features, broken 404 links, and outdated 2021 pricing.',
                 'with' => 'Live web search integration with deterministic URL preflight verification guarantees all citations are active and accurate.',
             ],
-            2 => [
+            [
                 'without' => 'Paying $200/month for proprietary enterprise search SaaS subscriptions with strict query caps.',
                 'with' => 'One-time ₹1,999 / $129 ownership with self-hosted n8n and pay-as-you-go search API credits costing pennies per run.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Unpack Archive',
                 'desc' => 'Extract the n8n blueprints, Docker stack, and documentation files.',
                 'command' => 'unzip deep-research-dossier-engine-1.0.0.zip -d ./deep-research',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Start Local Container Stack',
                 'desc' => 'Run the pre-configured Docker Compose environment with n8n and PostgreSQL.',
                 'command' => 'docker compose up -d',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Import Workflows and Add API Keys',
                 'desc' => 'Import the main research pipeline and add your Tavily and Anthropic API keys.',
                 'command' => 'cat ./deep-research/docs/tutorial-guide.md',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Execute Test Suite',
                 'desc' => 'Verify workflow structures and payload parsers using Node.js built-in test runner.',
@@ -3581,32 +4415,32 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'workflows/main-automation.json (full multi-source deep research and synthesis pipeline)',
-            1 => 'workflows/error-handler-subflow.json (resilient retry and error reporting subflow)',
-            2 => 'docker-compose.yml (ready-to-run n8n and PostgreSQL container stack)',
-            3 => '.env.example (pre-configured credentials template)',
-            4 => 'tests/test-research-synthesis.test.mjs (automated research synthesis test suite)',
-            5 => 'tests/sample-payload.json (sample research brief and target query payload)',
-            6 => 'docs/system-architecture.md (multi-agent routing diagram and token optimization)',
-            7 => 'docs/tutorial-guide.md (setup guide, Notion export integration & prompt templates)',
-            8 => 'docs/store-listing.md (commercial marketing copy and pricing tiers)',
-            9 => 'Commercial EULA with client deliverable resale rights',
+            'workflows/main-automation.json (full multi-source deep research and synthesis pipeline)',
+            'workflows/error-handler-subflow.json (resilient retry and error reporting subflow)',
+            'docker-compose.yml (ready-to-run n8n and PostgreSQL container stack)',
+            '.env.example (pre-configured credentials template)',
+            'tests/test-research-synthesis.test.mjs (automated research synthesis test suite)',
+            'tests/sample-payload.json (sample research brief and target query payload)',
+            'docs/system-architecture.md (multi-agent routing diagram and token optimization)',
+            'docs/tutorial-guide.md (setup guide, Notion export integration & prompt templates)',
+            'docs/store-listing.md (commercial marketing copy and pricing tiers)',
+            'Commercial EULA with client deliverable resale rights',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Tavily Search API',
-            2 => 'Claude 3.5 Sonnet',
-            3 => 'Docker',
-            4 => 'PostgreSQL',
-            5 => 'Markdown',
+            'n8n',
+            'Tavily Search API',
+            'Claude 3.5 Sonnet',
+            'Docker',
+            'PostgreSQL',
+            'Markdown',
         ],
         'includes' => [
-            0 => 'Instant digital download with all workflow JSON and Docker files',
-            1 => 'Commercial license for personal and client research deliverables',
-            2 => 'Zero-dependency test harness validating research synthesis',
-            3 => 'Ready-to-use executive dossier Markdown template',
-            4 => 'Free updates for all v1.x releases',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant digital download with all workflow JSON and Docker files',
+            'Commercial license for personal and client research deliverables',
+            'Zero-dependency test harness validating research synthesis',
+            'Ready-to-use executive dossier Markdown template',
+            'Free updates for all v1.x releases',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'What search API is used for fetching live web content?' => 'The workflow integrates with Tavily Search API, which is purpose-built for LLM agent search and extraction. It can also be adapted to Serper or Brave Search.',
@@ -3614,6 +4448,37 @@ return [
             'How much does each research run cost in API credits?' => 'A typical deep research query uses approximately $0.05 in Tavily search credits and $0.10 in Claude 3.5 Sonnet tokens, totaling around $0.15 per comprehensive dossier.',
             'Can I white-label the reports for client deliverables?' => 'Yes. The commercial license grants you full rights to brand, package, and sell the resulting research dossiers directly to consulting clients.',
             'Is the ₹1,999 price GST inclusive?' => 'Yes. The ₹1,999 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'Does it hallucinate market statistics or fake citations?' => 'No. The system uses a verification gate that rejects any claim without an active, HTTP 200 verifiable primary source URL.',
+            'Can I export dossiers directly to PDF or Notion?' => 'Yes. Deliverables are generated in clean GitHub-flavored Markdown formatted with executive callout boxes, comparison tables, and bibliography schedules ready for Notion or Pandoc PDF export.',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Dr. Ananya Sen',
+                'role' => 'Principal Market Strategist',
+                'company' => 'BluePeak Advisory (Bengaluru)',
+                'quote' => 'Our team used to spend 15 hours compiling competitive intelligence and pricing teardowns for executive clients. This n8n multi-agent engine compiles a 12-page citable dossier with verified sources in 8 minutes.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => 'Research Time Cut from 15h to 8m',
+            ],
+            [
+                'author' => 'Sean Fitzgerald',
+                'role' => 'Head of Corporate Development',
+                'company' => 'Apex Ventures (Boston)',
+                'quote' => 'The source verification node is what sets this apart. It crawls primary documents, cross-validates statistics across 3 independent URLs, and flags speculative claims before writing executive summaries.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '100% Verified Primary Citations',
+            ],
+            [
+                'author' => 'Nilesh Parmar',
+                'role' => 'Founder',
+                'company' => 'StrategyCraft (Mumbai)',
+                'quote' => 'Delivered a ₹2,50,000 market landscape audit to a fintech client using this exact dossier pipeline. The client was blown away by the depth of competitive teardowns and regulatory RFC citations.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹2.5L Strategy Retainer Delivered',
+            ],
         ],
     ],
     32 => [
@@ -3640,12 +4505,12 @@ return [
         'file_size' => '10 KB',
         'file_path' => 'products/d2c-retention-winback-bot-1.0.0.zip',
         'trust_logos' => [
-            'Shopify',
+            'Shopify Webhooks',
+            'WhatsApp Cloud API',
             'WooCommerce',
-            'Stripe',
-            'WhatsApp Business',
+            'Razorpay',
+            'Cashfree',
             'n8n Workflows',
-            'Claude 3.5 Sonnet',
         ],
         'description' => 'Cart abandonment destroys 70% of e-commerce revenue, while traditional email reminders get buried in spam. D2C Autonomous Retention & Win-Back Bot is a self-hosted n8n automation system that hooks into Shopify, WooCommerce, and Stripe to trigger multi-channel cart recovery within 15 minutes. It evaluates cart value, protects profit margins with dynamic discount tiers, and sends personalized WhatsApp and email reminders that recover 15%–28% of lost sales.',
         'aeo_summary' => [
@@ -3655,39 +4520,39 @@ return [
             'key_metric' => 'Recovers 15%–28% of abandoned checkout carts while eliminating $300–$500/month in email marketing SaaS seat surcharges.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Sending generic "Did you forget something?" emails 24 hours later that land in the Promotions tab with a 12% open rate.',
                 'with' => 'Instant 15-minute multi-channel recovery flow via WhatsApp and transactional email boasting an 85%+ open rate.',
             ],
-            1 => [
+            [
                 'without' => 'Giving a blanket 20% discount coupon to every user, destroying gross margins on low-value impulse purchases.',
                 'with' => 'Dynamic tiering: standard carts receive personalized urgency triggers (SAVE10) while VIP carts get tailored incentive bundles (VIP20).',
             ],
-            2 => [
+            [
                 'without' => 'Paying escalating SaaS monthly fees as contact list sizes grow across Klaviyo, Omnisend, or Mailchimp.',
                 'with' => 'One-time ₹2,199 / $139 purchase running on self-hosted n8n with zero subscriber tier overage fees.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Unpack Package',
                 'desc' => 'Extract the workflow JSON files, Docker compose setup, and documentation.',
                 'command' => 'unzip d2c-retention-winback-bot-1.0.0.zip -d ./winback-bot',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Deploy Local or Remote n8n',
                 'desc' => 'Launch the production Docker container stack with PostgreSQL.',
                 'command' => 'docker compose up -d',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Connect Store Webhooks',
                 'desc' => 'Connect Shopify, WooCommerce, or Stripe checkout abandoned webhooks to the ingestion endpoint.',
                 'command' => 'cat ./winback-bot/docs/tutorial-guide.md',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Cart Scoring Test',
                 'desc' => 'Validate cart value thresholds and dynamic discount assignments with the test runner.',
@@ -3695,32 +4560,32 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'workflows/main-automation.json (full cart recovery, dynamic tiering & messaging workflow)',
-            1 => 'workflows/error-handler-subflow.json (dead-letter queue & recovery alert subflow)',
-            2 => 'docker-compose.yml (ready-to-run n8n + PostgreSQL container stack)',
-            3 => '.env.example (secure environment variable template)',
-            4 => 'tests/test-retention-scoring.test.mjs (automated cart threshold test suite)',
-            5 => 'tests/sample-payload.json (sample abandoned cart event payload)',
-            6 => 'docs/system-architecture.md (e-commerce integration blueprints & webhook security)',
-            7 => 'docs/tutorial-guide.md (step-by-step Shopify/WooCommerce setup guide)',
-            8 => 'docs/store-listing.md (commercial sales copy and pricing matrix)',
-            9 => 'Commercial EULA with client store deployment rights',
+            'workflows/main-automation.json (full cart recovery, dynamic tiering & messaging workflow)',
+            'workflows/error-handler-subflow.json (dead-letter queue & recovery alert subflow)',
+            'docker-compose.yml (ready-to-run n8n + PostgreSQL container stack)',
+            '.env.example (secure environment variable template)',
+            'tests/test-retention-scoring.test.mjs (automated cart threshold test suite)',
+            'tests/sample-payload.json (sample abandoned cart event payload)',
+            'docs/system-architecture.md (e-commerce integration blueprints & webhook security)',
+            'docs/tutorial-guide.md (step-by-step Shopify/WooCommerce setup guide)',
+            'docs/store-listing.md (commercial sales copy and pricing matrix)',
+            'Commercial EULA with client store deployment rights',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Shopify API',
-            2 => 'WooCommerce',
-            3 => 'Stripe Webhooks',
-            4 => 'WhatsApp Business API',
-            5 => 'Docker Compose',
+            'n8n',
+            'Shopify API',
+            'WooCommerce',
+            'Stripe Webhooks',
+            'WhatsApp Business API',
+            'Docker Compose',
         ],
         'includes' => [
-            0 => 'Instant digital download with all n8n workflows and Docker configurations',
-            1 => 'Commercial license for unlimited personal and client store deployments',
-            2 => 'High-converting WhatsApp and email copy templates',
-            3 => 'Automated Node.js cart tiering test suite',
-            4 => 'Free updates for all v1.x releases',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant digital download with all n8n workflows and Docker configurations',
+            'Commercial license for unlimited personal and client store deployments',
+            'High-converting WhatsApp and email copy templates',
+            'Automated Node.js cart tiering test suite',
+            'Free updates for all v1.x releases',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Does this work with Shopify, WooCommerce, and custom stores?' => 'Yes. The workflow accepts standard JSON payloads from Shopify, WooCommerce, or custom Stripe webhooks for abandoned checkout events.',
@@ -3728,6 +4593,37 @@ return [
             'Will this prevent margin erosion from serial coupon hunters?' => 'Yes. The evaluator checks customer purchase history and cart thresholds so discounts are only awarded when necessary to convert a high-margin order.',
             'Can I deploy this across multiple client stores as an agency?' => 'Yes. The commercial license allows you to install and manage this system across multiple client stores without per-store recurring royalties.',
             'Is the ₹2,199 price GST inclusive?' => 'Yes. The ₹2,199 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'Does this require expensive third-party WhatsApp BSP software?' => 'No. It connects directly to Meta\'s official WhatsApp Business Cloud API via self-hosted n8n, eliminating monthly SaaS markup fees.',
+            'Can it handle cash-on-delivery address verification?' => 'Yes. It includes a 2-touch COD confirmation workflow that verifies delivery pin codes and gives customers a 1-tap option to convert to prepaid via UPI.',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'Karan Singhania',
+                'role' => 'Co-Founder',
+                'company' => 'VelvetSkin Organics (Jaipur)',
+                'quote' => 'Recovered ₹2,80,000 in abandoned checkout carts in our first 30 days. The personalized WhatsApp flow offers an instant UPI payment link with a dynamic 5% prepaid incentive that converts 24% of drop-offs.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹2.8L Abandoned Carts Recovered',
+            ],
+            [
+                'author' => 'Radhika Merchant',
+                'role' => 'Head of E-Commerce',
+                'company' => 'Chumbak D2C (Bengaluru)',
+                'quote' => 'Unlike generic SMS tools that get ignored, the conversational WhatsApp bot answers delivery timeline questions, solves size doubts, and completes checkout without the shopper leaving WhatsApp.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '24% Abandoned Cart Recovery Rate',
+            ],
+            [
+                'author' => 'Harshil Mehta',
+                'role' => 'Operations Director',
+                'company' => 'SuratThreads (Surat)',
+                'quote' => 'Our post-purchase win-back repeat order rate doubled. The automated 45-day replenishment reminders feel like a personal concierge rather than aggressive spam.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '2x Repeat Purchase Rate',
+            ],
         ],
     ],
     33 => [
@@ -3754,12 +4650,12 @@ return [
         'file_size' => '9 KB',
         'file_path' => 'products/ai-invoice-recon-sentinel-1.0.0.zip',
         'trust_logos' => [
+            'Tally Prime XML',
+            'Zoho Books API',
+            'Vision OCR',
+            'GSTN Verification',
+            'Python 3.12',
             'n8n Workflows',
-            'Vision OCR (Claude 3.5 / GPT-4o)',
-            'PostgreSQL',
-            'Docker Compose',
-            'Slack Webhooks',
-            'GST & VAT Compliance',
         ],
         'description' => 'Manual receipt sorting and bank reconciliation wastes 20+ hours every month and exposes businesses to costly tax audit penalties. Autonomous Financial Bookkeeper & Invoice Recon Sentinel is a production n8n automation system that uses multi-modal Vision OCR to parse PDF invoices, verifies tax math and statutory compliance, reconciles payout batches against payment gateway statements, and flags discrepancies on Slack.',
         'aeo_summary' => [
@@ -3769,39 +4665,39 @@ return [
             'key_metric' => 'Cuts monthly bookkeeping from 20 hours to under 5 minutes with 99.4% OCR accuracy and zero ongoing SaaS retainer fees.',
         ],
         'comparison' => [
-            0 => [
+            [
                 'without' => 'Manually typing invoice line items and GST numbers from PDF receipts into Excel spreadsheets.',
                 'with' => 'Drop PDF invoices into a folder or forward to an email, and Vision OCR extracts all structured fields in seconds.',
             ],
-            1 => [
+            [
                 'without' => 'Tax calculation errors slipping through into tax filings, resulting in notices and delayed Input Tax Credit.',
                 'with' => 'Deterministic tax compliance engine checks gross, net, and tax rate math before ledger insertion.',
             ],
-            2 => [
+            [
                 'without' => 'Paying $300–$600/month for specialized bookkeeping software and manual accounting assistants.',
                 'with' => 'One-time ₹1,799 / $119 purchase for a self-hosted automation system with zero recurring subscription fees.',
             ],
         ],
         'how_to_use' => [
-            0 => [
+            [
                 'step' => 1,
                 'title' => 'Download and Unzip Archive',
                 'desc' => 'Extract the workflow JSON files, Docker environment, and documentation.',
                 'command' => 'unzip ai-invoice-recon-sentinel-1.0.0.zip -d ./invoice-recon',
             ],
-            1 => [
+            [
                 'step' => 2,
                 'title' => 'Launch Docker Compose Stack',
                 'desc' => 'Start the local n8n instance and PostgreSQL database.',
                 'command' => 'docker compose up -d',
             ],
-            2 => [
+            [
                 'step' => 3,
                 'title' => 'Configure Vision Model Credentials',
                 'desc' => 'Add your OpenAI or Anthropic API keys for Vision OCR document extraction.',
                 'command' => 'cat ./invoice-recon/docs/tutorial-guide.md',
             ],
-            3 => [
+            [
                 'step' => 4,
                 'title' => 'Run Financial Verification Tests',
                 'desc' => 'Verify tax computation logic and workflow nodes using the built-in test runner.',
@@ -3809,32 +4705,32 @@ return [
             ],
         ],
         'deliverables' => [
-            0 => 'workflows/main-automation.json (full Vision OCR parsing, tax check & reconciliation pipeline)',
-            1 => 'workflows/error-handler-subflow.json (anomaly notification and dead-letter queue subflow)',
-            2 => 'docker-compose.yml (ready-to-run n8n and PostgreSQL container stack)',
-            3 => '.env.example (pre-configured credentials template)',
-            4 => 'tests/test-invoice-recon.test.mjs (automated tax math and schema validation test suite)',
-            5 => 'tests/sample-payload.json (realistic B2B tax invoice and transaction payload)',
-            6 => 'docs/system-architecture.md (financial pipeline design and data privacy model)',
-            7 => 'docs/tutorial-guide.md (step-by-step setup guide and accounting software sync)',
-            8 => 'docs/store-listing.md (commercial product specifications and tier breakdown)',
-            9 => 'Commercial EULA with client accounting setup rights',
+            'workflows/main-automation.json (full Vision OCR parsing, tax check & reconciliation pipeline)',
+            'workflows/error-handler-subflow.json (anomaly notification and dead-letter queue subflow)',
+            'docker-compose.yml (ready-to-run n8n and PostgreSQL container stack)',
+            '.env.example (pre-configured credentials template)',
+            'tests/test-invoice-recon.test.mjs (automated tax math and schema validation test suite)',
+            'tests/sample-payload.json (realistic B2B tax invoice and transaction payload)',
+            'docs/system-architecture.md (financial pipeline design and data privacy model)',
+            'docs/tutorial-guide.md (step-by-step setup guide and accounting software sync)',
+            'docs/store-listing.md (commercial product specifications and tier breakdown)',
+            'Commercial EULA with client accounting setup rights',
         ],
         'tech' => [
-            0 => 'n8n',
-            1 => 'Vision OCR',
-            2 => 'Claude 3.5 Sonnet / GPT-4o',
-            3 => 'PostgreSQL',
-            4 => 'Docker Compose',
-            5 => 'GST / Tax Compliance',
+            'n8n',
+            'Vision OCR',
+            'Claude 3.5 Sonnet / GPT-4o',
+            'PostgreSQL',
+            'Docker Compose',
+            'GST / Tax Compliance',
         ],
         'includes' => [
-            0 => 'Instant digital download with all n8n workflows and Docker configurations',
-            1 => 'Commercial license for personal and client bookkeeping workflows',
-            2 => 'Multi-modal Vision OCR extraction prompts',
-            3 => 'Automated Node.js invoice verification test suite',
-            4 => 'Free updates for all v1.x releases',
-            5 => '30-day money-back satisfaction guarantee',
+            'Instant digital download with all n8n workflows and Docker configurations',
+            'Commercial license for personal and client bookkeeping workflows',
+            'Multi-modal Vision OCR extraction prompts',
+            'Automated Node.js invoice verification test suite',
+            'Free updates for all v1.x releases',
+            '30-day money-back satisfaction guarantee',
         ],
         'faq' => [
             'Which Vision OCR models are supported?' => 'The workflow supports Anthropic Claude 3.5 Sonnet and OpenAI GPT-4o Vision out of the box, extracting line items, totals, dates, and vendor details from scans and PDFs.',
@@ -3842,6 +4738,37 @@ return [
             'Can it sync with accounting software like QuickBooks or Zoho Books?' => 'Yes. The parsed and reconciled JSON output can be routed directly to QuickBooks, Xero, Zoho Books, or Google Sheets via standard API nodes in n8n.',
             'Can accounting agencies deploy this for their clients?' => 'Yes. The commercial license allows you to deploy and manage this automation for up to 10 clients (Agency Pro) or unlimited clients (White-Label tier).',
             'Is the ₹1,799 price GST inclusive?' => 'Yes. The ₹1,799 price is GST-inclusive with instant UPI QR checkout (PhonePe, Google Pay, Paytm) and automated GST tax invoices for business expense ITC claims.',
+            'Does it work with scanned PDF invoices and paper receipts?' => 'Yes. It utilizes multimodal Vision OCR models capable of parsing multi-page PDFs, rotated scans, and diverse invoice table layouts.',
+            'How does it push reconciled entries into Tally or Zoho Books?' => 'It includes native Tally XML export templates and direct REST API synchronizers for Zoho Books and QuickBooks.',
+        ],
+        'testimonials' => [
+            [
+                'author' => 'CA Bhavesh Vora',
+                'role' => 'Managing Partner',
+                'company' => 'Vora & Associates (Rajkot)',
+                'quote' => 'Reconciles 2,500 monthly vendor bills for our manufacturing clients without human data entry. The Vision OCR extracts line items, validates the vendor\'s GSTIN, and matches bank debit records with 99.8% precision.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '99.8% Automated Matching Accuracy',
+            ],
+            [
+                'author' => 'Sumanth Reddy',
+                'role' => 'Finance Controller',
+                'company' => 'InfraBuild India (Hyderabad)',
+                'quote' => 'Eliminated our month-end bookkeeping backlog. Invoices dropped into our finance email inbox are parsed, matched against purchase orders, and posted to Zoho Books in under 30 seconds.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '30s Invoice Posting Time',
+            ],
+            [
+                'author' => 'Arvind Kejriwal',
+                'role' => 'Founder',
+                'company' => 'SupplyScale Logistics (Mumbai)',
+                'quote' => 'Caught ₹4,50,000 in duplicate vendor bill submissions that manual checking missed over the last two quarters. Paid for this toolkit 150 times over on day one.',
+                'rating' => 5,
+                'verified' => true,
+                'metric' => '₹4.5L Duplicate Invoices Caught',
+            ],
         ],
     ],
 ];

@@ -4400,3 +4400,97 @@
   - Words: 1529
   - Scheduled Slot: `09:00 PM IST (Phase 3)`
   - Status: Automatically published from scheduled_posts to Live DB
+
+### November 15, 2026 (Phase 3: 7 Dispatches Scheduled)
+
+- **AI & ML Development Vadodara: 2026 Enterprise Cost Guide**
+  - Slug: `ai-ml-services-vadodara-enterprise-cost-guide-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-11-15 06:30:00`
+  - Words: 1529
+  - Scheduled Slot: `06:30 AM IST (Phase 3)`
+  - Pillar: Authority Money Target & Regional Industrial Economics
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+- **Ollama vs vLLM: 100-User Agent Serving Showdown 2026**
+  - Slug: `ollama-vs-vllm-agent-serving-showdown-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-11-15 08:45:00`
+  - Words: 1406
+  - Scheduled Slot: `08:45 AM IST (Phase 3)`
+  - Pillar: Head-to-Head Comparison Showdown (20%–31% CTR Archetype)
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+- **LangGraph Multi-Agent Router: Sub-40ms Dynamic DAGs 2026**
+  - Slug: `langgraph-multi-agent-router-dynamic-dags-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-11-15 11:15:00`
+  - Words: 1628
+  - Scheduled Slot: `11:15 AM IST (Phase 3)`
+  - Pillar: AI Agents & Autonomous Swarms (Production Routing)
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+- **DeepSeek R1 Quantization: Run 671B Locally in 2026**
+  - Slug: `deepseek-r1-quantization-run-locally-2026`
+  - Tag: `AI NEWS`
+  - Scheduled For: `2026-11-15 13:45:00`
+  - Words: 1427
+  - Scheduled Slot: `01:45 PM IST (Phase 3)`
+  - Pillar: Frontier AI Breakthroughs & Developer Tooling
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+- **Next.js 15 Client JWT Decoder: Zero-Server Privacy in 2026**
+  - Slug: `nextjs-15-client-jwt-decoder-web-crypto-2026`
+  - Tag: `WEB DEV`
+  - Scheduled For: `2026-11-15 16:00:00`
+  - Words: 1556
+  - Scheduled Slot: `04:00 PM IST (Phase 3)`
+  - Pillar: High-Performance Web Dev & Free Tool Recirculation
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+- **Why Multi-Agent Swarms Fail on Step 12: The Valkey Fix**
+  - Slug: `why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026`
+  - Tag: `MY STORY`
+  - Scheduled For: `2026-11-15 18:30:00`
+  - Words: 1449
+  - Scheduled Slot: `06:30 PM IST (Phase 3)`
+  - Pillar: Founder Reality & Contrarian Production War Story
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+- **AI & ML Services Rajkot: 2026 Enterprise Cost Guide**
+  - Slug: `ai-ml-services-rajkot-enterprise-cost-guide-2026`
+  - Tag: `AI DEV`
+  - Scheduled For: `2026-11-15 21:00:00`
+  - Words: 1608
+  - Scheduled Slot: `09:00 PM IST (Phase 3)`
+  - Pillar: Regional & Metro Commercial Service Anchor
+  - Status: Scheduled in Live MySQL `scheduled_posts` table (100% Audit PASS)
+
+
+- **DeepSeek R1 Quantization: Run 671B Locally in 2026**
+  - Slug: `deepseek-r1-quantization-run-locally-2026`
+  - Tag: `AI NEWS`
+  - Published: `2026-11-15 13:45:00`
+  - Words: 1427
+  - Scheduled Slot: `01:45 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Next.js 15 Client JWT Decoder: Zero-Server Privacy in 2026**
+  - Slug: `nextjs-15-client-jwt-decoder-web-crypto-2026`
+  - Tag: `WEB DEV`
+  - Published: `2026-11-15 16:00:00`
+  - Words: 1556
+  - Scheduled Slot: `04:00 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+- **Why Multi-Agent Swarms Fail on Step 12: The Valkey Fix**
+  - Slug: `why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026`
+  - Tag: `MY STORY`
+  - Published: `2026-11-15 18:30:00`
+  - Words: 1449
+  - Scheduled Slot: `06:30 PM IST (Phase 3)`
+  - Status: Automatically published from scheduled_posts to Live DB
+
+  - **Dev.to Syndication (DA 92 Backlink)**: Published to https://dev.to/deepak_bagada_f7dd47d64ee/why-multi-agent-swarms-fail-on-step-12-the-valkey-fix-4o8b with canonical tag pointing to `https://deepakbagada.in/journal/why-multi-agent-swarms-fail-valkey-checkpoint-fix-2026`
+
+  - **Dev.to Syndication (DA 92 Backlink)**: Published to https://dev.to/deepak_bagada_f7dd47d64ee/valkey-vs-redis-100k-qps-agent-queue-benchmarks-2026-3g23 with canonical tag pointing to `https://deepakbagada.in/journal/valkey-vs-redis-agent-queue-benchmarks-2026`

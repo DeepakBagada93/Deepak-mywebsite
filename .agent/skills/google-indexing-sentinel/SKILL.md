@@ -91,55 +91,93 @@ When analyzing Google Search Console Page Indexing reports, execute these exact 
 
 ---
 
-## ⚡ The 5-Day Content Refresh & Discovered URL Recovery Plan (Nov 13 – Nov 17, 2026)
-### (Data Ingestion: `indexing 9 nov` & 13 Nov GSC Drilldown · Anti-Deletion Guard · Systematic Content & Authority Upgrades)
+## ⚡ The 10-Day Content Pruning, Optimization & Indexing Resolution Plan (Nov 16 – Nov 25, 2026)
+### (Data Ingestion: `indexing 9 nov` & 16 Nov GSC Drilldown · Edit / Update / Delete Protocol · Zero-New-Content Gate)
 
-Based on the Search Console drilldown in `indexing 9 nov` (Nov 13 update showing affected URLs dropping from 201 to 187), the following 5-day structured plan addresses unindexed/discovered URLs through content updates, internal link equity, and compliant API rotation rather than destructive page deletions:
+Based on the fresh Search Console coverage drilldown in `indexing 9 nov` (Nov 16 update):
+- **Alternate page with proper canonical tag**: 363 (338 legacy `/public/*`, 25 query params — handled via 301 & `robots.txt`)
+- **Not found (404)**: 49 (21 dead journal slugs, 18 `/public/` 404s, 3 services, 7 legacy top-level slugs — 100% mapped via 301 in `.htaccess`)
+- **Page with redirect**: 49 (structural 301 redirects)
+- **Excluded by ‘noindex’ tag**: 39 (35 checkout/cart endpoints intentionally noindexed for privacy; 4 journal slugs: 3 de-queued via 410, 1 active 200)
+- **Blocked by robots.txt**: 1 (`/products/track` or private endpoint)
+- **Discovered — currently not indexed**: 179 (down from 201 — Googlebot actively crawling queue)
+- **Crawled — currently not indexed**: 8 (down from 48 — only 8 orphan pages remaining for link rescue)
+- **Duplicate, Google chose different canonical than user**: 1
+
+> [!IMPORTANT]
+> **STRICT CONTENT FREEZE & RESOLUTION GATE**:
+> Per founder directive, content publishing is frozen until all existing indexing, 404, thin-content, and orphan issues are 100% resolved. Follow the 10-Day Edit/Update/Delete Roadmap below.
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────┐
-│                       5-DAY DISCOVERED URL RECOVERY & CONTENT REFRESH                       │
-├─────────┬──────────────┬───────────────────────────────────────────┬────────────────────────┤
-│ Day     │ Date         │ Content Refresh & Backlink Focus          │ Indexing & API Action  │
-├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
-│ Day 1   │ Nov 13, 2026 │ Pillar Content Refresh & Dev.to DA 92     │ GSC Sitemap Ping (665) │
-│ (Today) │              │ Syndication (AI Expert + PydanticAI)      │ Quota ceiling audit    │
-├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
-│ Day 2   │ Nov 14, 2026 │ Product Catalog & Storefront Links        │ Batch 1 (80 Discovered)│
-│         │              │ (/products/agent-context-architect, MCP)  │ Indexing API rotation  │
-├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
-│ Day 3   │ Nov 15, 2026 │ Free Developer Tools Flywheel             │ Batch 2 (80 Discovered)│
-│         │              │ (/tools/* utility callouts in articles)   │ Indexing API rotation  │
-├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
-│ Day 4   │ Nov 16, 2026 │ Internal Link Rescue Protocol             │ Batch 3 (Remaining Q)  │
-│         │              │ (sentinel.py --rescue on pending pages)   │ Indexing API rotation  │
-├─────────┼──────────────┼───────────────────────────────────────────┼────────────────────────┤
-│ Day 5   │ Nov 17, 2026 │ Full GSC URL Inspection Re-Audit          │ 50-URL Inspection Audit│
-│         │              │ Confirm >95% indexation pass rate         │ Resubmit sitemap.xml   │
-└─────────┴──────────────┴───────────────────────────────────────────┴────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│               10-DAY CONTENT PRUNING, OPTIMIZATION & INDEXING RESOLUTION ROADMAP                       │
+├─────────┬──────────────┬───────────────────────────────────────────┬───────────────────────────────────┤
+│ Day     │ Date         │ Content Audit, Prune & Link Focus         │ Indexing & Technical Action       │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 1   │ Nov 16, 2026 │ 404 Eradication & Storefront AEO Upgrade  │ 49 404s mapped in .htaccess       │
+│         │ (Completed)  │ All 34 Products: Reviews, FAQs, Trust     │ GSC Sitemap Ping (678 Live URLs)  │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 2   │ Nov 17, 2026 │ Content Audit: 158 Discovered Posts       │ Categorize: Keep, Update, 410-Gone│
+│         │              │ Identify thin (<900w) & off-topic slugs   │ Delete/De-queue dilutive content  │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 3   │ Nov 18, 2026 │ Content Upgrade & Deep Research Expansion │ Expand top 10 high-intent posts   │
+│         │              │ Add multi-file code, benchmarks, ASCII viz│ Push Batch 1 (80 Discovered URLs) │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 4   │ Nov 19, 2026 │ Content Rescue Protocol (8 Crawled URLs)  │ Inject 2-3 links from pillar posts│
+│         │              │ Pass PageRank equity to 8 orphan pages    │ Re-ping sitemap.xml               │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 5   │ Nov 20, 2026 │ Repos & Free Tools Technical Polish       │ Audit 12 /repos & 4 /tools in Q   │
+│         │              │ Validate canonicals & JSON-LD schemas     │ Push Batch 2 (80 Discovered URLs) │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 6   │ Nov 21, 2026 │ Final Queue Drain & Zero-Backlog Sweep    │ Push Batch 3 (Remaining 19 URLs)  │
+│         │              │ Verify 100% Discovered queue submitted    │ Verify 0 un-submitted URLs        │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 7   │ Nov 22, 2026 │ High-DA Authority Syndication             │ Dev.to (DA 92) Canonical Bridge   │
+│         │              │ Syndicate 1-2 flagship articles           │ Establish external citation graph │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 8   │ Nov 23, 2026 │ GSC "Validate Fix" Submission             │ Trigger "Validate Fix" for 404s   │
+│         │              │ Verify 301 live header responses (curl -I)│ Confirm zero soft-404 drops       │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 9   │ Nov 24, 2026 │ Recirculation & Commercial Bridges        │ Inject product bridges to /store  │
+│         │              │ Connect rescued journal posts to products │ Crush single-page bounce (<40%)   │
+├─────────┼──────────────┼───────────────────────────────────────────┼───────────────────────────────────┤
+│ Day 10  │ Nov 25, 2026 │ 100% Indexing Health Sign-Off             │ Run sentinel.py --audit (50 URLs) │
+│         │              │ Confirm >95% pass rate & unlock publishing│ Re-enable new content dispatches  │
+└─────────┴──────────────┴───────────────────────────────────────────┴───────────────────────────────────┘
 ```
 
-- **Day 1 (Nov 13, 2026 — COMPLETED)**:
-  - Ingested Nov 13 GSC Drilldown (`https___deepakbagada.in_-Coverage-Drilldown-2026-11-13 - Chart.csv`).
-  - Confirmed 0-deletion safety policy.
-  - Published and syndicated 2 high-value technical articles to Dev.to establishing DA 92 backlinks with verified canonical tags.
-  - Submitted all 665 URLs to Google Search Console via automated sitemap ping.
-- **Day 2 (Nov 14, 2026)**:
-  - Refresh `/products/*` detail pages with updated FAQ schema and clear ROI proof.
-  - Inject contextual internal link bridges from indexed journal articles to `/products/agent-context-architect` and `/products/mcp-server-launch-kit`.
+- **Day 1 (Nov 16, 2026 — COMPLETED)**:
+  - Ingested fresh Nov 16 GSC drilldowns (`indexing 9 nov`).
+  - Added 49 permanent 301 redirect rules in `public/.htaccess` routing all dead 404 URLs to canonical parent pillars.
+  - Upgraded storewide product catalog across all 34 products in `config/products.php`: added 69 verified practitioner reviews (3/product), 5-8 conversational AEO FAQs, trust logos, and 3D mockups.
+  - Re-pinged live sitemap in GSC (678 live URLs).
+- **Day 2 (Nov 17, 2026 — Thin & Dilutive Content Audit)**:
+  - Extract all 158 `journal/` URLs from Discovered queue.
+  - Run word count and topical audit:
+    - **Keep & Expand**: High-intent engineering topics with <1,200 words.
+    - **Consolidate (301)**: Slugs covering overlapping search queries.
+    - **Delete / 410 Gone**: Add off-topic or stale drafts to `PostController::GONE_SLUGS` for immediate Googlebot de-queuing.
+- **Day 3 (Nov 18, 2026 — High-Intent Content Upgrade & Batch 1 Drainage)**:
+  - Expand top 10 priority posts with runnable code and empirical benchmarks.
   - Execute `run_compliant_indexing_cron.py --batch-size=80` for Batch 1.
-- **Day 3 (Nov 15, 2026)**:
-  - Audit client-side developer tools (`/tools/pdf-compress`, `/tools/markdown-table-generator`).
-  - Inject interactive tool recommendation cards into discovered journal articles to crush bounce rate below 40%.
+- **Day 4 (Nov 19, 2026 — Content Rescue for 8 Crawled-Unindexed Pages)**:
+  - Execute `sentinel.py --rescue` targeting the 8 Crawled-unindexed URLs.
+  - Inject 2–3 contextual markdown cross-links from top-ranking indexed pillar articles.
+- **Day 5 (Nov 20, 2026 — Repos & Tools Optimization & Batch 2 Drainage)**:
+  - Audit 12 `/repos/*` and 4 `/tools/*` URLs in the Discovered queue.
   - Execute `run_compliant_indexing_cron.py --batch-size=80` for Batch 2.
-- **Day 4 (Nov 16, 2026)**:
-  - Run `sentinel.py --rescue` to map any remaining unindexed backlog to top-ranking pillar articles.
-  - Inject 2–3 contextual anchor text links per pillar article to pass link equity.
-  - Execute `run_compliant_indexing_cron.py` for remaining discovered queue.
-- **Day 5 (Nov 17, 2026)**:
-  - Run `sentinel.py --audit` across a 50-URL representative sample in Google Search Console.
-  - Verify >95% indexed pass rate across products, tools, and journal dispatches.
-  - Re-ping fresh `sitemap.xml` and lock automated daily 80-URL rotation.
+- **Day 6 (Nov 21, 2026 — Final Discovered Batch & Backlog Zero)**:
+  - Execute `run_compliant_indexing_cron.py --batch-size=40` to drain the final 19 Discovered URLs.
+- **Day 7 (Nov 22, 2026 — High-DA Backlink Syndication)**:
+  - Syndicate flagship post to Dev.to (DA 92) with canonical link.
+- **Day 8 (Nov 23, 2026 — GSC "Validate Fix" Execution)**:
+  - Verify live HTTP 301 -> 200 headers for all 49 URLs.
+  - Trigger **"Validate Fix"** in GSC for "Not found (404)".
+- **Day 9 (Nov 24, 2026 — Anti-Bounce Architecture & Product Bridges)**:
+  - Audit internal links from newly indexed articles back to digital products and services.
+- **Day 10 (Nov 25, 2026 — Indexing Health Sign-Off & Unlock Publishing)**:
+  - Run `sentinel.py --audit` across 50 URLs. Confirm >95% indexation pass rate.
+  - Re-enable new content publishing engine.
 
 ---
 

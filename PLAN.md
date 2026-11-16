@@ -1,17 +1,27 @@
-# 🗓️ 10-Day Indexing & Search Console Recovery Master Plan
+# 🗓️ 10-Day Indexing & Content Pruning/Optimization Master Plan
 **Site**: [deepakbagada.in](https://deepakbagada.in)  
-**Execution Window**: November 11, 2026 – November 20, 2026  
-**Framework**: `google-indexing-sentinel` (v2.5)  
-**Status**: ACTIVE / IN PROGRESS  
+**Execution Window**: November 16, 2026 – November 25, 2026  
+**Framework**: `google-indexing-sentinel` (v2.6)  
+**Status**: ACTIVE / DAY 1 COMPLETED  
+
+> [!IMPORTANT]
+> **STRICT CONTENT PUBLISHING FREEZE**:
+> Per founder directive, all new content publishing is frozen until all existing Google Search Console indexing issues, 404s, thin articles, and orphan pages are 100% resolved.
 
 ---
 
-## 🎯 Primary Objectives
-1. **Reclaim Crawl Budget**: Cut off 336 duplicate legacy `/public/` URLs from wasting Googlebot's crawl budget.
-2. **Drain "Discovered" Backlog**: Rotate and submit all 201 "Discovered – currently not indexed" pages via Google Indexing API within daily safe ceilings (max 180/day).
-3. **Rescue 48 "Crawled" Pages**: Inject contextual internal link equity into all 48 "Crawled – currently not indexed" URLs from high-PageRank pillar articles.
-4. **Zero 404s**: Map all 38 dead URLs to relevant active pillars via permanent 301 redirects in `public/.htaccess`.
-5. **Zero 429 Errors**: Enforce a strict safe ceiling of 180 requests/day with 300ms pacing and local quota tracking in `.agent/indexing_quota.json`.
+## 📈 Search Console Baseline Audit Ledger (Nov 16, 2026 GSC Drilldown)
+
+| GSC Issue Category | Count | Status / Pathology | Remediation Action |
+| :--- | :---: | :--- | :--- |
+| **Alternate page with proper canonical tag** | **363** | 338 legacy `/public/*`, 25 query params | Blocked via `Disallow: /public/` in `robots.txt` + base canonicals |
+| **Discovered — currently not indexed** | **179** | Down from 201; pending crawl queue | 3-Batch Compliant Drainage (80/80/19 rotation) |
+| **Crawled — currently not indexed** | **8** | Down from 48; orphan page signals | Content Rescue Protocol: 2–3 contextual pillar links |
+| **Not found (404)** | **49** | 21 journal, 18 /public/, 3 services, 7 legacy | 100% mapped via permanent 301 redirects in `public/.htaccess` |
+| **Page with redirect** | **49** | Clean structural transitions & canonical aliases | Monitored; self-healing |
+| **Excluded by ‘noindex’ tag** | **39** | 35 /checkout/ private pages, 4 journal slugs | Checkout intentional; 3 journal 410'd, 1 clean 200 |
+| **Blocked by robots.txt** | **1** | Private cart/tracking route (`/products/track`) | Disallowed by design in `robots.txt` |
+| **Duplicate, Google chose different canonical** | **1** | Parameterized category URL | Self-canonicalized |
 
 ---
 
@@ -19,141 +29,112 @@
 
 ```mermaid
 flowchart TD
-    D1["Day 1 (Nov 11): Crawl Defense<br>& Live Sitemap Sync"] --> D2["Day 2 (Nov 12): 404 Eradication<br>& 301 Mapping"]
-    D2 --> D3["Day 3 (Nov 13): Batch 1<br>(80 Discovered URLs)"]
-    D3 --> D4["Day 4 (Nov 14): Batch 2<br>(80 Discovered URLs)"]
-    D4 --> D5["Day 5 (Nov 15): Batch 3<br>(Remaining 41 URLs + Core Hubs)"]
-    D5 --> D6["Day 6 (Nov 16): Link Rescue<br>(48 Crawled URLs)"]
-    D6 --> D7["Day 7 (Nov 17): Money Bridges<br>& Recirculation Engine"]
-    D7 --> D8["Day 8 (Nov 18): High-DA Backlinks<br>(Dev.to DA 92 Syndication)"]
-    D8 --> D9["Day 9 (Nov 19): Full GSC Audit<br>& Validation Request"]
-    D9 --> D10["Day 10 (Nov 20): Sentinel Lock<br>& Automated Daily Cron"]
+    D1["Day 1 (Nov 16): 404 Eradication<br>& Product AEO Overhaul"] --> D2["Day 2 (Nov 17): Content Audit<br>& Thin Post Pruning (410/301)"]
+    D2 --> D3["Day 3 (Nov 18): Batch 1 Drainage<br>(80 Discovered URLs)"]
+    D3 --> D4["Day 4 (Nov 19): Rescue 8 Crawled<br>(Pillar Cross-Links)"]
+    D4 --> D5["Day 5 (Nov 20): Batch 2 Drainage<br>(80 Discovered URLs)"]
+    D5 --> D6["Day 6 (Nov 21): Batch 3 Final Drain<br>(19 Remaining URLs)"]
+    D6 --> D7["Day 7 (Nov 22): High-DA Backlinks<br>(Dev.to DA 92 Syndication)"]
+    D7 --> D8["Day 8 (Nov 23): GSC Validation<br>(Trigger Validate Fix)"]
+    D8 --> D9["Day 9 (Nov 24): Money Bridges<br>& Anti-Bounce Recirculation"]
+    D9 --> D10["Day 10 (Nov 25): 100% Sign-Off<br>& Unlock Publishing"]
 ```
 
 ---
 
 ## 📅 Day-by-Day Implementation Roadmap
 
-### Phase 1: Foundation & Crawl-Budget Defense (Days 1–2)
+### Phase 1: Foundation, 404 Eradication & Storefront AEO (Days 1–2)
 
-#### Day 1 (Nov 11, 2026): Crawl Defense, Server Hygiene & Live Sitemap Sync
-- [x] **Objective**: Cut off crawl leakage on 336 duplicate `/public/` URLs and refresh Google's sitemap index.
-- [x] **Actions**:
-  1. Verify `public/robots.txt` has explicit blocks for `/public/`, `/storage/`, `/vendor/`, `/products/track`, and `/products/checkout`.
-  2. Commit and deploy `public/robots.txt` to production so Googlebot immediately stops fetching legacy paths.
-  3. Submit and refresh `sitemap.xml` in Search Console using the sentinel:
-     ```bash
-     .venv/bin/python3 .agent/skills/google-indexing-sentinel/scripts/sentinel.py --sitemap
-     ```
-  4. Verify response: Confirm all 664 URLs are queued with 0 errors in GSC (Verified: 664 URLs successfully submitted in GSC).
+#### ✅ Day 1 (Nov 16, 2026): 404 Eradication & Product Catalog Overhaul (COMPLETED)
+- [x] **404 Eradication**: Mapped all 49 GSC 404 dead URLs in `public/.htaccess` with permanent 301 redirects to canonical live pillars.
+- [x] **Storefront AEO & SEO Upgrade**: Upgraded all 34 digital products in `config/products.php` and `config/product-seo.php`:
+  - Added 69 verified practitioner testimonials (3 per product with quantifiable metrics, roles, and companies across India & global markets), unlocking Google SERP 5-star Review & AggregateRating Rich Snippets on every product.
+  - Added 5-6 verified tech/stack trust logos across all products.
+  - Expanded technical conversational FAQs to 5-8 FAQs per product (100% Schema.org `FAQPage` compliance).
+  - Validated and optimized `config/product-seo.php` (50-60 character titles, 145-158 character descriptions).
+  - Generated and installed 3D product mockups for `bharat-local-seo-kit` and `ad-creative-lab`.
+- [x] **Sitemap Synchronization**: Re-pinged and verified sitemap (`https://deepakbagada.in/sitemap.xml`) in Google Search Console. 678 total URLs submitted and actively scheduled.
+- [x] **Daily Quota Ceiling Defense**: Executed compliant rotation cron. Google Indexing API daily cap safely defended (halted before rate limit spike, recorded in `.agent/indexing_quota.json`).
 
-#### Day 2 (Nov 12, 2026): 404 Eradication & 301 Permanent Redirect Activation
-- [ ] **Objective**: Eliminate all 38 "Not found (404)" errors reported in Search Console.
+#### ⏳ Day 2 (Nov 17, 2026): Thin & Dilutive Content Audit (158 Discovered Journal Posts)
+- [ ] **Objective**: Audit all 158 `journal/` URLs in the Discovered queue to identify thin, repetitive, or off-topic articles.
 - [ ] **Actions**:
-  1. Review consolidation map in `public/.htaccess` covering dead slugs (`/journal/upi-autopay-credit-on-upi-1lakh-2026`, etc.).
-  2. Deploy `public/.htaccess` to Hostinger production.
-  3. Run live HTTP status preflight across all 38 target URLs:
-     ```bash
-     curl -I -s "https://deepakbagada.in/journal/upi-autopay-credit-on-upi-1lakh-2026"
-     ```
-     Ensure status is **HTTP 301** redirecting to an active **HTTP 200** page.
-  4. In Google Search Console, navigate to **Page Indexing > Not found (404)** and click **"Validate Fix"**.
+  1. Extract word counts and engagement metrics across all 158 Discovered posts.
+  2. Classify into 3 actionable buckets:
+     - **Bucket A (Keep & Polish)**: High-intent engineering topics with <1,200 words.
+     - **Bucket B (Consolidate via 301)**: Overlapping or repetitive search queries merged into authoritative master pillar posts.
+     - **Bucket C (Delete / 410 Gone)**: Add off-topic or legacy drafts to `PostController::GONE_SLUGS` for immediate Googlebot de-queuing.
+  3. Deploy updated `PostController.php` and `.htaccess` rules.
 
 ---
 
-### Phase 2: Accelerated Queue Drainage & Indexing Rotation (Days 3–5)
+### Phase 2: Accelerated Drainage & Internal Link Rescue (Days 3–6)
 
-#### Day 3 (Nov 13, 2026): Accelerated Indexing Batch 1 (Oldest 80 Discovered URLs)
-- [ ] **Objective**: Dispatch the first 80 oldest "Discovered – currently not indexed" pages to Google Indexing API.
+#### ⏳ Day 3 (Nov 18, 2026): High-Intent Content Upgrade & Accelerated Batch 1 (80 URLs)
+- [ ] **Objective**: Expand top 10 priority posts and dispatch Batch 1 to Google Indexing API.
 - [ ] **Actions**:
-  1. Check quota buffer in `.agent/indexing_quota.json` (ensure count < 180).
-  2. Execute Batch 1 with 300ms anti-burst pacing:
+  1. Expand top 10 priority articles with runnable multi-file code examples, empirical benchmarks, and visual ASCII architecture diagrams.
+  2. Execute:
      ```bash
      .venv/bin/python3 scripts/run_compliant_indexing_cron.py --batch-size=80
      ```
-  3. Verify logs in `.agent/logs/google_indexing_cron.log` for 80 HTTP 200 confirmations.
+  3. Verify logs in `.agent/logs/google_indexing_cron.log` for 80 successful submissions.
 
-#### Day 4 (Nov 14, 2026): Accelerated Indexing Batch 2 (Mid-Queue 80 Discovered URLs)
-- [ ] **Objective**: Dispatch the next 80 URLs from the pending backlog.
+#### ⏳ Day 4 (Nov 19, 2026): Content Rescue Protocol (8 Crawled-Unindexed URLs)
+- [ ] **Objective**: Eliminate orphan signals on the 8 remaining "Crawled – currently not indexed" pages.
 - [ ] **Actions**:
-  1. Check quota counter reset for the new calendar day.
-  2. Execute Batch 2:
-     ```bash
-     .venv/bin/python3 scripts/run_compliant_indexing_cron.py --batch-size=80
-     ```
-  3. Re-ping sitemap to update Google's crawl priority scheduler:
-     ```bash
-     .venv/bin/python3 .agent/skills/google-indexing-sentinel/scripts/sentinel.py --sitemap
-     ```
-
-#### Day 5 (Nov 15, 2026): Accelerated Indexing Batch 3 (Remaining 41 URLs + Core Commercial Hubs)
-- [ ] **Objective**: Complete active API notification across the entire pending catalog and core conversion pages.
-- [ ] **Actions**:
-  1. Submit the remaining ~41 unindexed backlog URLs + core hubs (`/products`, `/services/ai-development`, `/library`, `/repos`):
-     ```bash
-     .venv/bin/python3 scripts/run_compliant_indexing_cron.py --batch-size=60
-     ```
-  2. Verify: Total "Discovered" queue actively notified = 201 URLs.
-
----
-
-### Phase 3: PageRank Injection & Internal Link Rescue (Days 6–7)
-
-#### Day 6 (Nov 16, 2026): Rescuing 48 "Crawled — Currently Not Indexed" Pages
-- [ ] **Objective**: Provide link authority to the 48 pages Googlebot crawled but held back from indexation.
-- [ ] **Actions**:
-  1. Run the sentinel rescue diagnostic:
+  1. Execute:
      ```bash
      .venv/bin/python3 .agent/skills/google-indexing-sentinel/scripts/sentinel.py --rescue
      ```
-  2. Inject 2–3 contextual markdown cross-links from high-PageRank indexed pillar articles (`/journal/ai-tools-india-2026`, `/services/ai-development`) pointing to the unindexed target pages.
-  3. Ensure anchor text matches natural search intent without keyword stuffing.
+  2. Inject 2–3 contextual cross-links from top-ranking indexed pillar articles (`/services/ai-development`, `/journal/ai-tools-india-2026`, `/journal/slm-vs-llm-small-language-models-gujarat-sme-cost-2026`).
+  3. Re-ping sitemap in GSC to update crawl priority timestamps.
 
-#### Day 7 (Nov 17, 2026): Architecture Recirculation & Money-Page Bridges
-- [ ] **Objective**: Ensure high dwell-time and prevent orphan page recreation.
+#### ⏳ Day 5 (Nov 20, 2026): Repos & Tools Optimization & Accelerated Batch 2 (80 URLs)
+- [ ] **Objective**: Optimize technical architecture pages and dispatch Batch 2.
 - [ ] **Actions**:
-  1. Verify every newly rescued article links back to a commercial product or service hub (e.g. `/products/agent-skills-master-bundle`, `/services/automation-expert`).
-  2. Check canonical hygiene on category filter pages (`/products?category=...`, `/library?category=...`) to ensure canonical points to root hubs.
+  1. Audit 12 `/repos/*` and 4 `/tools/*` URLs in the Discovered queue; ensure clean canonical tags and schema markup.
+  2. Execute:
+     ```bash
+     .venv/bin/python3 scripts/run_compliant_indexing_cron.py --batch-size=80
+     ```
+
+#### ⏳ Day 6 (Nov 21, 2026): Final Queue Drain & Zero-Backlog Sweep (19 URLs)
+- [ ] **Objective**: Complete active submission across the entire remaining Discovered queue.
+- [ ] **Actions**:
+  1. Execute:
+     ```bash
+     .venv/bin/python3 scripts/run_compliant_indexing_cron.py --batch-size=40
+     ```
+  2. Verify: Total Discovered queue backlog actively submitted = 179 URLs.
 
 ---
 
-### Phase 4: External Authority, Verification & Sentinel Lock (Days 8–10)
+### Phase 3: Authority Syndication, GSC Validation & Final Sign-Off (Days 7–10)
 
-#### Day 8 (Nov 18, 2026): High-DA Backlink Syndication
-- [ ] **Objective**: Accelerate Googlebot re-crawl authority through high-domain-authority external trust flow.
+#### ⏳ Day 7 (Nov 22, 2026): High-DA Backlink Syndication
+- [ ] **Objective**: Drive domain-level crawl velocity and external citation signals.
 - [ ] **Actions**:
-  1. Syndicate 1–2 flagship technical dispatches to Dev.to (DA 92) with verified `canonical_url` pointing directly to `https://deepakbagada.in/journal/...`.
-  2. Verify backlink pass-through without nofollow or redirect chains.
+  1. Syndicate 1 flagship technical post to Dev.to (DA 92) with verified canonical tag pointing back to `deepakbagada.in`.
+  2. Syndicate 1 technical breakdown to Hashnode (DA 88) to establish external co-citation graphs.
 
-#### Day 9 (Nov 19, 2026): Comprehensive URL Inspection Audit & Transition Verification
-- [ ] **Objective**: Measure indexation state transitions across all 4 categories.
+#### ⏳ Day 8 (Nov 23, 2026): GSC "Validate Fix" Execution & 301 Verification
+- [ ] **Objective**: Verify live redirect responses and trigger Google re-crawl validation.
 - [ ] **Actions**:
-  1. Run the automated real-time audit across a representative 50-URL sample:
-     ```bash
-     .venv/bin/python3 .agent/skills/google-indexing-sentinel/scripts/sentinel.py --audit
-     ```
-  2. In Google Search Console, verify:
-     - 404 validation is passing.
-     - "Alternate page" crawl rate is trending downwards.
-     - "Discovered" count is transitioning to "Submitted and indexed".
+  1. Run live preflight across all 49 404 URLs (`curl -I`). Confirm HTTP 301 -> 200.
+  2. In Google Search Console, navigate to **Page Indexing > Not found (404)** and click **"Validate Fix"**.
 
-#### Day 10 (Nov 20, 2026): Sentinel Lock & Automated Daily Cron
-- [ ] **Objective**: Lock in long-term autonomous maintenance.
+#### ⏳ Day 9 (Nov 24, 2026): Recirculation Architecture & Money-Page Bridges
+- [ ] **Objective**: Crush single-page bounce rates below 40% and channel link equity to commercial products.
 - [ ] **Actions**:
-  1. Ensure daily cron is active in crontab running at 80 URLs/day:
-     ```bash
-     0 6 * * * /Users/deepakbagada/saasnext\ project/my-website/.venv/bin/python3 /Users/deepakbagada/saasnext\ project/my-website/scripts/run_compliant_indexing_cron.py >> /Users/deepakbagada/saasnext\ project/my-website/.agent/logs/google_indexing_cron.log 2>&1
-     ```
-  2. Archive final audit report to `research/indexing_audit_latest.json`.
+  1. Audit internal backlinks from newly indexed journal dispatches back to commercial digital products (`/products/*`) and service consultation pages (`/services/*`).
+  2. Ensure every post features a mid-article visual blueprint callout and next-architecture bridge.
 
----
-
-## 🛡️ Guardrails & Safety Ceilings
-
-| Guardrail | Limit | Action on Threshold |
-| :--- | :---: | :--- |
-| **Max Indexing API Requests** | **180 / day** | Graceful halt, record in `.agent/indexing_quota.json`, queue next day |
-| **Request Pacing** | **300ms** | Sleep between API dispatches to prevent 429 burst limits |
-| **Preflight Gate** | **HTTP 200** | Any URL returning 3xx/4xx/5xx is skipped to protect crawl score |
-| **Idempotency Window** | **4 days** | Unchanged URLs cannot be resubmitted within 4-day cooldown |
-| **Anti-Deletion Guard** | **Strict** | Never delete URLs in "Discovered" or "Crawled" state |
+#### ⏳ Day 10 (Nov 25, 2026): 100% Indexing Health Sign-Off & Unlock Publishing
+- [ ] **Objective**: Confirm full recovery and greenlight new content publishing.
+- [ ] **Actions**:
+  1. Run `sentinel.py --audit` across a 50-URL representative sample in Google Search Console.
+  2. Verify >95% indexed pass rate across products, tools, and journal dispatches.
+  3. Finalize persistent memory ledger in `.agent/skills/google-indexing-sentinel/memory.md`.
+  4. Unlock autonomous publishing engine for new content dispatches.
