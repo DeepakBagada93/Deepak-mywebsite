@@ -111,4 +111,15 @@ class ToolsTest extends TestCase
     {
         $this->get('/tools/category/not-a-category')->assertStatus(404);
     }
+
+    public function test_tool_page_renders_rich_json_ld_schema(): void
+    {
+        $response = $this->get('/tools/pdf-merge');
+
+        $response->assertStatus(200);
+        $response->assertSee('"@type":"WebApplication"', false);
+        $response->assertSee('"@type":"HowTo"', false);
+        $response->assertSee('"@type":"FAQPage"', false);
+        $response->assertSee('"@type":"BreadcrumbList"', false);
+    }
 }

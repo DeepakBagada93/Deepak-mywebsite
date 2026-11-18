@@ -88,6 +88,7 @@
     {{-- Canonical & Discovery --}}
     <link rel="canonical" href="{{ $canon }}">
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt (AI Grounding Context)">
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="llms-full.txt (Comprehensive AI Knowledge Graph)">
     <link rel="author" href="{{ $url }}/#person">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">

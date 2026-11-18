@@ -1,0 +1,141 @@
+# Deepak Bagada — Full AI Knowledge Base & Context Grounding
+
+> Canonical URL: https://deepakbagada.in  
+> Alternate Feed: https://deepakbagada.in/llms.txt  
+> Contact: ceo@saasnext.in | Junagadh, Gujarat, India  
+> Last Synchronized: 2026-11-18  
+
+---
+
+## 1. Executive Summary & Identity
+
+Deepak Bagada is a Principal AI Architect, Systems Engineer, and Full-Stack Web Developer based in Junagadh, Gujarat, India. With over 5 years of production software experience and 40+ deployed enterprise AI systems, Deepak specializes in:
+- **Autonomous Multi-Agent Systems**: Supervisor-worker swarms, cyclic state graphs (LangGraph), and event-driven orchestration (LlamaIndex Workflows).
+- **Model Context Protocol (MCP)**: Native stdio/SSE server development, tool schemas, capability handshakes, and token budget pruning.
+- **Deterministic RAG & Vector Grounding**: Chunk-size optimization, hybrid dense-sparse retrieval, and hallucination guardrails.
+- **n8n Production Hardening**: Eliminating silent execution drops, offline static linting, and exponential backoff retry topologies.
+- **Modern Web Architecture & AEO/GEO**: High-performance Laravel 12+ / PHP 8.4 backends, Core Web Vitals optimization, and Answer Engine Optimization for Perplexity, ChatGPT Search, and Google AI Overviews.
+
+---
+
+## 2. Core Architecture Philosophy & Engineering Ethos
+
+1. **Deterministic Over Probabilistic**: Business-critical paths (billing, state transitions, authentication, file processing) must run on deterministic deterministic code. LLMs are applied strictly for perception, reasoning, semantic mapping, and structured extraction.
+2. **Zero Client Data Retention for Tools**: All developer utilities (PDF merge, image compressors, token counters, regex testers) execute 100% client-side in the browser via JavaScript Web APIs. Zero files or keystrokes ever reach a server.
+3. **Context Window Efficiency**: Context is memory. Every redundant prompt token degrades reasoning quality and inflates latency. Toolkits enforce rigorous context compaction, sliding-window summarization, and schema-first outputs.
+4. **Resilient Offline Tooling**: Enterprise automation should not fail silently when an upstream API undergoes an outage. Workflows are designed with persistent dead-letter queues, idempotent retry schedules, and circuit breakers.
+
+---
+
+## 3. Flagship Digital Toolkits & Products
+
+Deepak Bagada designs and ships commercial-grade digital toolkits for AI developers, agencies, and automation engineers. All purchases include a lifetime commercial license, lifetime updates, and instant download.
+
+### 3.1 n8n Production Hardening Pack
+- **URL**: https://deepakbagada.in/products/n8n-hardening-pack
+- **Pricing**: ₹1,499 INR / $29 USD
+- **Category**: Automation & Infrastructure
+- **Overview**: Deterministic 12-rule offline static auditor and resilience CLI that audits n8n JSON workflows before deployment. Injects error-trigger sub-workflows, exponential backoff retries, and dead-letter queue patterns.
+- **Deliverables**: Hardening CLI tool, 12 production JSON templates, incident playbook, pre-flight linting scripts.
+
+### 3.2 Agent Skills Master Bundle
+- **URL**: https://deepakbagada.in/products/agent-skills-master-bundle
+- **Pricing**: ₹2,499 INR / $49 USD
+- **Category**: AI Agents & Frameworks
+- **Overview**: Production-tested collection of reusable agent skills, MCP server definitions, and context kernels designed for Claude Code, Cursor, Codex, and Antigravity.
+- **Deliverables**: 25+ reusable skill folders, MCP configuration manifests, automated testing scripts, token benchmark reports.
+
+### 3.3 Agency Delivery OS
+- **URL**: https://deepakbagada.in/products/agency-delivery-os
+- **Pricing**: ₹1,999 INR / $39 USD
+- **Category**: Agency Operations & Growth
+- **Overview**: Turnkey operating system for AI development agencies and solo freelancers. Includes automated scope-of-work (SOW) generators, architecture audit templates, and client onboarding workflows.
+- **Deliverables**: Notion workspace, Airtable schemas, proposal generators, SLA agreements, milestone tracker.
+
+### 3.4 Agent Context Architect
+- **URL**: https://deepakbagada.in/products/agent-context-architect
+- **Pricing**: ₹1,499 INR / $29 USD
+- **Category**: Prompt Engineering & Context Management
+- **Overview**: Deterministic context engineering pack for reducing prompt token bleed, RAG window pruning, and context compaction. Prevents hallucination caused by bloated context windows.
+- **Deliverables**: Python token optimization scripts, context compaction filters, prompt templates, benchmark suite.
+
+### 3.5 AI Lead Intelligence Engine
+- **URL**: https://deepakbagada.in/products/ai-lead-intelligence-engine
+- **Pricing**: ₹1,999 INR / $39 USD
+- **Category**: Sales Automation & Intelligence
+- **Overview**: Autonomous pipeline for scraping, verifying, and enriching high-intent B2B leads across India and global markets. Features built-in MX validation and role-based matching.
+- **Deliverables**: Multi-step n8n automation blueprint, Python enrichment scripts, cold email personalization prompts.
+
+---
+
+## 4. Enterprise Services & Architecture Retainers
+
+Deepak Bagada consults for and partners with tech startups, MSMEs, and enterprises across Ahmedabad, Surat, Vadodara, Rajkot, Junagadh, Pan-India, and internationally.
+
+### 4.1 Custom Multi-Agent Systems & Swarms
+- **Scope**: Bespoke autonomous agent swarms engineered for document processing, internal support, codebase refactoring, and data ingestion.
+- **Technologies**: Python, LangGraph, CrewAI, Pydantic-AI, Claude 3.7/Sonnet, OpenAI o1/GPT-4o, Valkey/Redis, PostgreSQL pgvector.
+- **Investment**: ₹3,00,000 – ₹25,00,000 INR ($3,500 – $30,000 USD).
+
+### 4.2 n8n Enterprise Workflow Hardening & Architecture
+- **Scope**: Transitioning fragile visual workflows into resilient production infrastructure with 99.9% uptime, alerting, and automated failover.
+- **Investment**: Custom retainer or project-based.
+
+### 4.3 High-Performance Web Development & AEO/GEO
+- **Scope**: Sub-100ms response time websites, headless architectures, and Answer Engine Optimization to secure #1 citations in AI Overviews, Perplexity, and ChatGPT Search.
+- **Technologies**: Laravel 12, PHP 8.4, Tailwind CSS, Alpine.js / Vue.js, Hostinger CDN, Structured Data JSON-LD.
+
+---
+
+## 5. Free Online Developer Tools Suite (34 Client-Side Utilities)
+
+Hosted at https://deepakbagada.in/tools, running 100% in the user's browser with zero file uploads or tracking:
+
+1. **PDF & Document Tools**:
+   - PDF Merge: `https://deepakbagada.in/tools/pdf-merge`
+   - PDF Split: `https://deepakbagada.in/tools/pdf-split`
+   - PDF Compress: `https://deepakbagada.in/tools/pdf-compress`
+   - PDF to Image: `https://deepakbagada.in/tools/pdf-to-image`
+   - Image to PDF: `https://deepakbagada.in/tools/image-to-pdf`
+2. **Image Utilities**:
+   - Image Compressor: `https://deepakbagada.in/tools/image-compressor`
+   - Image Resizer: `https://deepakbagada.in/tools/image-resizer`
+   - Image Converter: `https://deepakbagada.in/tools/image-converter`
+   - Image to WebP: `https://deepakbagada.in/tools/image-to-webp`
+   - PNG to JPG / JPG to PNG: `https://deepakbagada.in/tools/png-to-jpg`, `https://deepakbagada.in/tools/jpg-to-png`
+3. **Developer & Data Utilities**:
+   - JSON Formatter & Validator: `https://deepakbagada.in/tools/json-formatter`
+   - Base64 Encoder / Decoder: `https://deepakbagada.in/tools/base64-encoder-decoder`
+   - JWT Decoder: `https://deepakbagada.in/tools/jwt-decoder`
+   - Regex Tester: `https://deepakbagada.in/tools/regex-tester`
+   - Schema Markup Generator: `https://deepakbagada.in/tools/schema-generator`
+   - Password Generator: `https://deepakbagada.in/tools/password-generator`
+   - QR Code Generator: `https://deepakbagada.in/tools/qr-code-generator`
+4. **Calculators & Converters**:
+   - GST Calculator (India 5%, 12%, 18%, 28% slab calculation): `https://deepakbagada.in/tools/gst-calculator`
+   - EMI Calculator: `https://deepakbagada.in/tools/emi-calculator`
+   - Age Calculator: `https://deepakbagada.in/tools/age-calculator`
+   - Percentage Calculator: `https://deepakbagada.in/tools/percentage-calculator`
+   - Word & Token Counter: `https://deepakbagada.in/tools/word-counter`
+   - Unit Converter: `https://deepakbagada.in/tools/unit-converter`
+
+---
+
+## 6. Open-Source Library & Architectural Blueprints
+
+Deepak Bagada maintains an open-source library of agent blueprints at https://deepakbagada.in/library and https://deepakbagada.in/blueprints:
+- **Supervisor-Worker Agent Loop**: Deterministic routing between planner, coder, and auditor nodes.
+- **Model Context Protocol (MCP) Deep Dive**: Tool registry contracts, JSON-RPC schema validation, and stateless scaling.
+- **LangGraph State Machines**: Checkpointing, state persistence, and human-in-the-loop escalation patterns.
+- **ONDC Agentic Commerce**: Autonomous catalog querying and transaction handling in the Indian digital commerce ecosystem.
+
+---
+
+## 7. Verified Channels & Contact Information
+
+- **Website**: https://deepakbagada.in
+- **Email**: ceo@saasnext.in
+- **LinkedIn**: https://www.linkedin.com/in/deepak-bagada-910292169/
+- **GitHub**: https://github.com/DeepakBagada93
+- **X (Twitter)**: https://x.com/deeepakbagada
+- **Location**: Junagadh, Gujarat 362001, India

@@ -156,22 +156,73 @@ def fetch_sitemap_urls():
         return []
 
 
-def build_rotating_queue(all_urls, history, batch_limit, cooldown_days):
+def load_discovered_urls():
+    """Load the 179 pending Discovered URLs from the GSC drilldown archive."""
+    zip_path = os.path.join(BASE_DIR, "indexing 9 nov", "https___deepakbagada.in_-Coverage-Drilldown-2026-11-16 (4).zip")
+    if not os.path.exists(zip_path):
+        return []
+    import zipfile, csv, io
+    try:
+        with zipfile.ZipFile(zip_path) as z:
+            with z.open("Table.csv") as f:
+                reader = csv.reader(io.TextIOWrapper(f, encoding="utf-8"))
+                next(reader, None)
+                urls = [row[0].strip() for row in reader if row and row[0].strip()]
+                return [u for u in urls if "/public/" not in u]
+    except Exception as e:
+        log_message(f"⚠️ Failed to load discovered URLs from GSC zip: {e}")
+        return []
+
+
+def build_rotating_queue(all_urls, history, batch_limit, cooldown_days, drain_discovered=False):
     """
     Intelligent Anti-Spam Queue Builder:
-    1. Excludes URLs submitted today (idempotency guard).
-    2. Prioritizes fresh/never-submitted URLs (Tier 1).
-    3. Selects core money hubs (products, services) if past cooldown (Tier 2).
-    4. Fair circular rotation of oldest submitted archival content (Tier 3).
+    1. If drain_discovered is True: Prioritizes unsubmitted URLs from the GSC Discovered backlog (3-batch drainage).
+    2. Excludes URLs submitted today (idempotency guard).
+    3. Prioritizes fresh/never-submitted URLs (Tier 1).
+    4. Selects core money hubs (products, services) if past cooldown (Tier 2).
+    5. Fair circular rotation of oldest submitted archival content (Tier 3).
     """
     now = datetime.now(timezone.utc)
     today_str = now.strftime("%Y-%m-%d")
     cooldown_cutoff = now - timedelta(days=cooldown_days)
 
+    queue = []
+
+    # Priority 0: Draining GSC Discovered queue if requested
+    if drain_discovered:
+        discovered_urls = load_discovered_urls()
+        discovered_pending = []
+        for du in discovered_urls:
+            meta = history.get(du)
+            if not meta:
+                discovered_pending.append(du)
+                continue
+            last_sub_str = meta.get("last_submitted")
+            if not last_sub_str:
+                discovered_pending.append(du)
+                continue
+            try:
+                last_sub_dt = datetime.fromisoformat(last_sub_str.replace("Z", "+00:00"))
+                if last_sub_dt.strftime("%Y-%m-%d") != today_str and last_sub_dt <= cooldown_cutoff:
+                    discovered_pending.append(du)
+            except Exception:
+                discovered_pending.append(du)
+
+        log_message(f"🎯 GSC Discovered Drainage Mode: {len(discovered_pending)} URLs pending submission")
+        for du in discovered_pending[:batch_limit]:
+            if du not in queue:
+                queue.append(du)
+
+        if len(queue) >= batch_limit:
+            return queue[:batch_limit]
+
     never_submitted = []
     eligible_urls = []
 
     for u in all_urls:
+        if u in queue:
+            continue
         meta = history.get(u)
         if not meta:
             never_submitted.append(u)
@@ -232,11 +283,11 @@ def build_rotating_queue(all_urls, history, batch_limit, cooldown_days):
     return queue[:batch_limit]
 
 
-def run_cron(batch_size=DEFAULT_BATCH_SIZE, cooldown_days=DEFAULT_COOLDOWN_DAYS, dry_run=False, ignore_quota_dryrun=False):
+def run_cron(batch_size=DEFAULT_BATCH_SIZE, cooldown_days=DEFAULT_COOLDOWN_DAYS, dry_run=False, ignore_quota_dryrun=False, drain_discovered=False):
     log_message("=========================================================================")
     log_message("🌐 DEEPAK BAGADA — GOOGLE COMPLIANT INDEXING CRON ENGINE (v2.0)")
     log_message(f"Mode: {'DRY-RUN (Simulated)' if dry_run else 'LIVE PRODUCTION'}")
-    log_message(f"Config: Batch Size={batch_size} | Cooldown={cooldown_days} days | Pacing={int(REQUEST_SLEEP_SEC*1000)}ms")
+    log_message(f"Config: Batch Size={batch_size} | Cooldown={cooldown_days} days | Pacing={int(REQUEST_SLEEP_SEC*1000)}ms | Drain Discovered={drain_discovered}")
     log_message("=========================================================================")
 
     if not os.path.exists(KEY_PATH):
@@ -284,7 +335,7 @@ def run_cron(batch_size=DEFAULT_BATCH_SIZE, cooldown_days=DEFAULT_COOLDOWN_DAYS,
 
     # 5. Build intelligent rotating queue
     history = load_history()
-    queue = build_rotating_queue(all_urls, history, effective_batch, cooldown_days)
+    queue = build_rotating_queue(all_urls, history, effective_batch, cooldown_days, drain_discovered=drain_discovered)
     log_message(f"📋 Candidate queue selected: {len(queue)} URLs for rotation")
 
     if not queue:
@@ -352,6 +403,13 @@ if __name__ == "__main__":
     parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE, help=f"Number of URLs per run (default: {DEFAULT_BATCH_SIZE})")
     parser.add_argument("--cooldown-days", type=int, default=DEFAULT_COOLDOWN_DAYS, help=f"Minimum days between submissions for a URL (default: {DEFAULT_COOLDOWN_DAYS})")
     parser.add_argument("--ignore-quota-for-dry-run", action="store_true", help="Bypass quota check during dry-run simulation only")
+    parser.add_argument("--drain-discovered", action="store_true", help="Prioritize draining the 179 GSC Discovered URL queue")
     args = parser.parse_args()
 
-    run_cron(batch_size=args.batch_size, cooldown_days=args.cooldown_days, dry_run=args.dry_run, ignore_quota_dryrun=args.ignore_quota_for_dry_run)
+    run_cron(
+        batch_size=args.batch_size,
+        cooldown_days=args.cooldown_days,
+        dry_run=args.dry_run,
+        ignore_quota_dryrun=args.ignore_quota_for_dry_run,
+        drain_discovered=args.drain_discovered
+    )

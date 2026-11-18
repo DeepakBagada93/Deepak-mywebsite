@@ -87,4 +87,31 @@ class CanonicalSeoTest extends TestCase
             ->assertStatus(200)
             ->assertSee('<link rel="canonical" href="https://deepakbagada.in/library?page=2">', false);
     }
+
+    public function test_legacy_service_and_checkout_redirects(): void
+    {
+        $this->get('/services/ai-consulting')
+            ->assertStatus(301)
+            ->assertRedirect('/services/ai-development');
+
+        $this->get('/services/ai-agent-development')
+            ->assertStatus(301)
+            ->assertRedirect('/services/ai-development');
+
+        $this->get('/services/automation')
+            ->assertStatus(301)
+            ->assertRedirect('/services/automation-expert');
+
+        $this->get('/checkout')
+            ->assertStatus(301)
+            ->assertRedirect('/products');
+
+        $this->get('/products/verify')
+            ->assertStatus(301)
+            ->assertRedirect(route('products.index'));
+
+        $this->get('/llms-full.txt')
+            ->assertStatus(200)
+            ->assertHeader('Content-Type', 'text/plain; charset=utf-8');
+    }
 }

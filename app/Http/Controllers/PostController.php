@@ -87,41 +87,58 @@ class PostController extends Controller
         return view('journal.index', compact('site', 'posts', 'head'));
     }
 
-    public function show(Post $post)
+    public function show(string|Post $slug)
     {
+        $site = config('site');
+        $url = rtrim($site['url'], '/');
+
+        $slugStr = $slug instanceof Post ? $slug->slug : (string) $slug;
+        $slugStr = rtrim(trim($slugStr), '/');
+
+        // Automatic fresh-suffix redirect (consolidates -fresh into canonical post)
+        if (str_ends_with($slugStr, '-fresh')) {
+            $baseSlug = substr($slugStr, 0, -6);
+            $candidate = Post::published()->where('slug', $baseSlug)->first();
+            if ($candidate) {
+                return redirect($url.'/journal/'.$candidate->slug, 301);
+            }
+        }
+
         // Off-topic slugs dilute topical authority: 410 Gone de-queues them
         // faster than a 404. This runs before every other guard so the slugs
         // can never be served, indexed, or soft-404'd.
-        abort_if(in_array($post->slug, self::GONE_SLUGS, true), 410);
-
-        // Future-dated rows are scheduled, not published — 404 until the slot arrives.
-        abort_unless($post->date && $post->date <= now(), 404);
-
-        $site = config('site');
-        $url = rtrim($site['url'], '/');
-        $canonical = $url.'/journal/'.$post->slug;
-        $portraitUrl = $url.'/images/about-portrait.png';
-
-        // AdSense low-value guard: thin posts (<900 words) get noindex until expanded.
-        // WordCount mirrors the JS auditor (strip_tags undercounts code/tables by ~70%).
-        $wordCount = WordCount::count($post->content);
-        $isThin = $wordCount < 900;
+        abort_if(in_array($slugStr, self::GONE_SLUGS, true), 410);
 
         // Duplicate-variant guard: slugs like *-variant-12 / *-v8 are near-duplicates
         // of a canonical post. When the base slug exists as a published post,
         // 301 to it so link equity consolidates instead of splitting; orphan
         // variants have no unique value, so 410 Gone de-queues them (a 200 +
         // canonical-to-index keeps them in "Alternate page" reports forever).
-        $isVariant = Post::isVariantSlug($post->slug);
+        $isVariant = Post::isVariantSlug($slugStr);
         if ($isVariant) {
-            $baseSlug = Post::baseSlugFor($post->slug);
+            $baseSlug = Post::baseSlugFor($slugStr);
             $canonicalPost = Post::published()->where('slug', $baseSlug)->first();
-            if ($canonicalPost && $canonicalPost->id !== $post->id) {
+            if ($canonicalPost && $canonicalPost->slug !== $slugStr) {
                 return redirect($url.'/journal/'.$canonicalPost->slug, 301);
             }
 
             abort(410);
         }
+
+        $post = $slug instanceof Post ? $slug : Post::where('slug', $slugStr)->first();
+        if (! $post) {
+            abort(404);
+        }
+
+        // Future-dated rows are scheduled, not published — 404 until the slot arrives.
+        abort_unless($post->date && $post->date <= now(), 404);
+
+        $canonical = $url.'/journal/'.$post->slug;
+        $portraitUrl = $url.'/images/about-portrait.png';
+
+        // AdSense low-value guard: thin posts (<900 words) get noindex until expanded.
+        $wordCount = WordCount::count($post->content);
+        $isThin = $wordCount < 900;
 
         $related = Post::published()->canonical()
             ->where('id', '!=', $post->id)
@@ -175,6 +192,10 @@ class PostController extends Controller
                             'image' => $portraitUrl,
                         ],
                         'mainEntityOfPage' => $canonical,
+                        'speakable' => [
+                            '@type' => 'SpeakableSpecification',
+                            'cssSelector' => ['.article__title', '.article__body > p:first-of-type'],
+                        ],
                         'image' => [
                             '@type' => 'ImageObject',
                             'url' => $portraitUrl,

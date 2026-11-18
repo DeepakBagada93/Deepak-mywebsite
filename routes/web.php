@@ -20,11 +20,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PortfolioController::class, 'index'])->name('home');
 
+// 301 Redirects for Legacy Services & High-Intent Queries (Resolves GSC 404s)
+Route::redirect('/services/ai-consulting', '/services/ai-development', 301);
+Route::redirect('/services/ai-agent-development', '/services/ai-development', 301);
+Route::redirect('/services/automation', '/services/automation-expert', 301);
+
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
 
 Route::get('/journal', [PostController::class, 'index'])->name('journal.index');
-Route::get('/journal/{post:slug}', [PostController::class, 'show'])->name('journal.show');
+Route::get('/journal/{slug}', [PostController::class, 'show'])->name('journal.show');
 
 Route::prefix('library')->group(function () {
     Route::get('/', [SkillController::class, 'index'])->name('library.index');
@@ -60,11 +65,34 @@ Route::prefix('products')->group(function () {
     Route::post('/checkout', [OrderController::class, 'initiate'])
         ->middleware('throttle:20,1')
         ->name('products.checkout');
+    Route::get('/verify', fn () => redirect()->route('products.index', [], 301));
     Route::post('/verify', [OrderController::class, 'verifyPayment'])
         ->middleware('throttle:30,1')
         ->name('products.verify');
     Route::get('/{slug}/checkout', [OrderController::class, 'showCheckout'])->name('products.checkout.single');
     Route::get('/{slug}', [ProductController::class, 'show'])->name('products.show');
+});
+
+// Consolidated Checkout & Legacy Redirects (Resolves GSC 404s)
+Route::redirect('/checkout', '/products', 301);
+Route::redirect('/quick-commerce-india', '/journal', 301);
+Route::redirect('/parental-control-india', '/journal', 301);
+Route::redirect('/freelancing-india-2026', '/journal', 301);
+Route::redirect('/ghar-baithe-paise-kaise-kamaye-ai-se', '/journal', 301);
+Route::redirect('/ai-tools-india-2026', '/tools', 301);
+
+// Legacy /public/ path normalizer (eliminates GSC crawl pollution)
+Route::get('/public/{any}', function (string $any) {
+    return redirect('/'.ltrim($any, '/'), 301);
+})->where('any', '.*');
+
+// Extended llms-full.txt grounding endpoint
+Route::get('/llms-full.txt', function () {
+    $path = public_path('llms-full.txt');
+    if (file_exists($path)) {
+        return response()->file($path, ['Content-Type' => 'text/plain; charset=utf-8']);
+    }
+    abort(404);
 });
 
 Route::get('/download/{token}', [DownloadController::class, 'show'])
